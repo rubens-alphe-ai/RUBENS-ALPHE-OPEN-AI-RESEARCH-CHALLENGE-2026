@@ -23,7 +23,8 @@ jobs:
 
       - name: Fetch public research
         run: python scripts/fetch_research.py
-
+      - name: Assess research quality and propose next experiment
+        run: python scripts/analyze_research.py
       - name: Update state
         run: python scripts/update_state.py
 
