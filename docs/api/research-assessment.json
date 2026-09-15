@@ -1,0 +1,160 @@
+{
+  "beacon": "RA-PSI-2026",
+  "generated_at_utc": "2026-09-15T08:22:18.799226+00:00",
+  "source_digest_generated_at_utc": "2026-09-15T08:22:18.740037+00:00",
+  "paper_count_seen": 30,
+  "dominant_theme": "persistent_memory",
+  "theme_counts": {
+    "persistent_memory": 27,
+    "cross_model_handoff": 3,
+    "automated_experimentation": 3,
+    "metacognition": 1,
+    "agent_evaluation": 7
+  },
+  "top_5_papers": [
+    {
+      "title": "Auto-RecSys: Harnessing Autonomous Research Agents for Industry-Scale Recommender System",
+      "url": "https://arxiv.org/abs/2609.10922",
+      "published": "2026-09-10",
+      "original_relevance_score": 9,
+      "assessment_score": 15,
+      "matched_query": "cross-model handoff language model agents",
+      "theme_hits": {
+        "persistent_memory": 2,
+        "cross_model_handoff": 0,
+        "automated_experimentation": 1,
+        "metacognition": 0,
+        "agent_evaluation": 0
+      },
+      "notes": [
+        "substantial abstract"
+      ]
+    },
+    {
+      "title": "Sci-MMR: Benchmarking Multi-Step Evidence-Grounded Scientific Reasoning in Multimodal Agents",
+      "url": "https://arxiv.org/abs/2609.11243",
+      "published": "2026-09-10",
+      "original_relevance_score": 6,
+      "assessment_score": 12,
+      "matched_query": "cross-model handoff language model agents",
+      "theme_hits": {
+        "persistent_memory": 0,
+        "cross_model_handoff": 0,
+        "automated_experimentation": 1,
+        "metacognition": 0,
+        "agent_evaluation": 2
+      },
+      "notes": [
+        "substantial abstract"
+      ]
+    },
+    {
+      "title": "2AM: Grounding Agent-Side Memory as Guidance for Steerable Action Models in Long-Horizon Manipulation",
+      "url": "https://arxiv.org/abs/2609.11308",
+      "published": "2026-09-10",
+      "original_relevance_score": 6,
+      "assessment_score": 12,
+      "matched_query": "cross-model handoff language model agents",
+      "theme_hits": {
+        "persistent_memory": 3,
+        "cross_model_handoff": 0,
+        "automated_experimentation": 0,
+        "metacognition": 0,
+        "agent_evaluation": 0
+      },
+      "notes": [
+        "substantial abstract"
+      ]
+    },
+    {
+      "title": "DevMemory: A Structured Memory Management Architecture for Persistent Knowledge in AI Coding Agents",
+      "url": "https://doi.org/10.5281/zenodo.19324575",
+      "published": "2026-10-22",
+      "original_relevance_score": 12,
+      "assessment_score": 11,
+      "matched_query": "persistent agent memory",
+      "theme_hits": {
+        "persistent_memory": 3,
+        "cross_model_handoff": 1,
+        "automated_experimentation": 0,
+        "metacognition": 0,
+        "agent_evaluation": 0
+      },
+      "notes": [
+        "substantial abstract",
+        "future publication date flagged"
+      ]
+    },
+    {
+      "title": "DevMemory: A Structured Memory Management Architecture for Persistent Knowledge in AI Coding Agents",
+      "url": "https://doi.org/10.5281/zenodo.19324351",
+      "published": "2026-10-01",
+      "original_relevance_score": 12,
+      "assessment_score": 11,
+      "matched_query": "persistent agent memory",
+      "theme_hits": {
+        "persistent_memory": 3,
+        "cross_model_handoff": 1,
+        "automated_experimentation": 0,
+        "metacognition": 0,
+        "agent_evaluation": 0
+      },
+      "notes": [
+        "substantial abstract",
+        "future publication date flagged"
+      ]
+    }
+  ],
+  "metadata_anomalies": [
+    {
+      "type": "future_publication_date",
+      "title": "DevMemory: A Structured Memory Management Architecture for Persistent Knowledge in AI Coding Agents",
+      "published": "2026-10-22",
+      "url": "https://doi.org/10.5281/zenodo.19324575"
+    },
+    {
+      "type": "future_publication_date",
+      "title": "DevMemory: A Structured Memory Management Architecture for Persistent Knowledge in AI Coding Agents",
+      "published": "2026-10-01",
+      "url": "https://doi.org/10.5281/zenodo.19324351"
+    },
+    {
+      "type": "future_publication_date",
+      "title": "DevMemory: A Structured Memory Management Architecture for Persistent Knowledge in AI Coding Agents",
+      "published": "2026-10-01",
+      "url": "https://doi.org/10.5281/zenodo.19363278"
+    },
+    {
+      "type": "future_publication_date",
+      "title": "Write-Time Admission Control for Persistent-Memory Security in LLM Agents",
+      "published": "2027-01-01",
+      "url": "https://doi.org/10.17632/m8xf3cdjwb.1"
+    },
+    {
+      "type": "future_publication_date",
+      "title": "Optimalisatie van de block-and-lock strategie voor een HIV genezing: Het combineren van BRD4 modulatoren met LEDGINs",
+      "published": "2026-10-02",
+      "url": "https://lirias.kuleuven.be/handle/20.500.12942/790362"
+    },
+    {
+      "type": "future_publication_date",
+      "title": "Extending SDN control for programmable data planes in advanced 6G network scenarios",
+      "published": "2026-10-01",
+      "url": "https://oa.upm.es/97517/"
+    }
+  ],
+  "proposed_next_experiment": {
+    "id": "PROP-EXP-MEM-001",
+    "title": "Structured Memory Handoff Test",
+    "hypothesis": "Separating project memory into decisions, failures, verified knowledge, open questions, and next actions will improve blind handoff fidelity.",
+    "metric": "PCRB-1 handoff score and critical-fabrication count",
+    "procedure": [
+      "Create a structured-state representation with five explicit memory sections.",
+      "Give the same mission to fresh models using current state vs structured state.",
+      "Run at least three blind handoff trials per condition.",
+      "Compare average PCRB-1 score and fabrication rate."
+    ],
+    "success": ">= 10-point PCRB-1 improvement with zero increase in critical fabrications"
+  },
+  "decision_rule": "This is a proposal only. Canonical state changes only after evaluation/acceptance."
+}
