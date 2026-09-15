@@ -1,0 +1,16 @@
+{
+  "problem_id": "EXP-001",
+  "status": "OPEN",
+  "title": "Blind Mission Reconstruction",
+  "question": "Can a fresh AI system reconstruct the mission and propose the correct next measurable experiment using only the public machine-readable state?",
+  "required_output_schema": "/schemas/handoff-result.schema.json",
+  "metrics": {
+    "mission_reconstruction": 25,
+    "state_fidelity": 20,
+    "missing_information_detection": 15,
+    "next_experiment_quality": 20,
+    "reproducibility": 20,
+    "critical_fabrication_penalty": -100
+  },
+  "success_threshold": 90
+}

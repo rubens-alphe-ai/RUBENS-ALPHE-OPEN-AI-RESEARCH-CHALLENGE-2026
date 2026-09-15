@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RA-PSI handoff result",
+  "type": "object",
+  "required": [
+    "model",
+    "mission_summary",
+    "current_state",
+    "missing_information",
+    "next_experiment",
+    "confidence"
+  ],
+  "properties": {
+    "model": {
+      "type": "string"
+    },
+    "mission_summary": {
+      "type": "string"
+    },
+    "current_state": {
+      "type": "string"
+    },
+    "missing_information": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_experiment": {
+      "type": "object",
+      "required": [
+        "hypothesis",
+        "metric",
+        "procedure"
+      ],
+      "properties": {
+        "hypothesis": {
+          "type": "string"
+        },
+        "metric": {
+          "type": "string"
+        },
+        "procedure": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}
