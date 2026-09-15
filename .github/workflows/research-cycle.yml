@@ -1,0 +1,43 @@
+name: RA-PSI autonomous research cycle
+
+on:
+  schedule:
+    - cron: "17 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  research-cycle:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch public research
+        run: python scripts/fetch_research.py
+
+      - name: Update state
+        run: python scripts/update_state.py
+
+      - name: Rebuild research feed
+        run: python scripts/build_feed.py
+
+      - name: Commit updated research state
+        run: |
+          git config user.name "RA-PSI Research Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs state
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "research-cycle: update public state"
+            git push
+          fi
