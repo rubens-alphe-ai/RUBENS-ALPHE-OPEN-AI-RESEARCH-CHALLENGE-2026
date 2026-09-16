@@ -16,6 +16,9 @@ import urllib.request
 from dataclasses import dataclass
 
 
+USER_AGENT = "RA-PSI-evaluator/1.0 (+https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026)"
+
+
 class AdapterError(RuntimeError):
     """Raised when a model adapter cannot return a valid response."""
 
@@ -161,6 +164,9 @@ class OpenAICompatibleAdapter:
             headers={
                 "Content-Type": "application/json",
                 "Authorization": f"Bearer {self._api_key()}",
+                # Some providers sit behind a firewall that rejects Python's
+                # default User-Agent (Groq answers 403, Cloudflare error 1010).
+                "User-Agent": USER_AGENT,
             },
             method="POST",
         )

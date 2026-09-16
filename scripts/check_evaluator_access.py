@@ -23,6 +23,9 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from model_adapter import USER_AGENT  # noqa: E402
+
 
 def models_url(endpoint: str) -> str:
     base = endpoint.rstrip("/")
@@ -42,13 +45,24 @@ def check(entry: dict) -> dict:
         return {**result, "status": "EMPTY_KEY_FILE", "key_file": str(key_path)}
     result["key_length"] = len(key)
 
-    request = urllib.request.Request(models_url(entry["endpoint"]), headers={"Authorization": "Bearer " + key})
+    request = urllib.request.Request(
+        models_url(entry["endpoint"]),
+        # Without an explicit User-Agent, Groq's firewall answers 403 (error 1010)
+        # to a perfectly valid key, which looks exactly like a rejected key.
+        headers={"Authorization": "Bearer " + key, "User-Agent": USER_AGENT},
+    )
     try:
         with urllib.request.urlopen(request, timeout=30) as response:
             payload = json.load(response)
     except urllib.error.HTTPError as exc:
-        status = "KEY_REJECTED" if exc.code in (401, 403) else "HTTP_%d" % exc.code
-        return {**result, "status": status}
+        body = exc.read()[:200].decode("utf-8", "replace").replace(key, "<key>")
+        if exc.code == 401:
+            status = "KEY_REJECTED"
+        elif exc.code == 403:
+            status = "FORBIDDEN"  # key refused, or a firewall block; see detail
+        else:
+            status = "HTTP_%d" % exc.code
+        return {**result, "status": status, "detail": body.strip()}
     except (urllib.error.URLError, OSError, json.JSONDecodeError) as exc:
         return {**result, "status": "UNREACHABLE", "error": str(exc)[:200]}
 
