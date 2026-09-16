@@ -97,7 +97,8 @@ def call(entry: dict, prompt: str, max_tokens: int) -> tuple[str, str]:
     # They are retried with growing pauses; any other error is raised at once.
     import time
 
-    transient = ("HTTP 429", "HTTP 502", "HTTP 503", "HTTP 504", "timed out", "provider request failed")
+    transient = ("HTTP 429", "HTTP 502", "HTTP 503", "HTTP 504", "timed out", "provider request failed",
+                 '"code": 429', '"code": 502', '"code": 503', "rate-limited")
     delays = (20, 45, 90, 150, 240)
     for attempt in range(len(delays) + 1):
         try:

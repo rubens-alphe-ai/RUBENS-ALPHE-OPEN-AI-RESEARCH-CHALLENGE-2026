@@ -188,10 +188,21 @@ class OpenAICompatibleAdapter:
         self.last_served_model = str(payload.get("model") or self.config.model)
         choices = payload.get("choices") or []
         if not choices:
-            raise AdapterError("provider response contained no choices")
+            # Gateways such as OpenRouter can return HTTP 200 with the real
+            # failure in an "error" object; surface it instead of hiding it.
+            error = payload.get("error")
+            raise AdapterError(
+                "provider response contained no choices: %s" % json.dumps(error)[:400]
+                if error else "provider response contained no choices"
+            )
         choice = choices[0]
-        content = (choice.get("message") or {}).get("content")
+        message = choice.get("message") or {}
+        content = message.get("content")
         if not isinstance(content, str) or not content.strip():
+            if message.get("reasoning"):
+                raise AdapterError(
+                    "model returned only reasoning and no answer; raise max_tokens or lower reasoning effort"
+                )
             raise AdapterError("provider response did not contain non-empty message.content")
         if choice.get("finish_reason") == "length":
             raise AdapterError(
