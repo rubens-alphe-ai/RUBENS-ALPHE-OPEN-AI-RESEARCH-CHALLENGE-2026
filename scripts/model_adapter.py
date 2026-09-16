@@ -20,7 +20,71 @@ USER_AGENT = "RA-PSI-evaluator/1.0 (+https://github.com/rubens-alphe-ai/RUBENS-A
 
 
 class AdapterError(RuntimeError):
-    """Raised when a model adapter cannot return a valid response."""
+    """Raised when a model adapter cannot return a valid response.
+
+    ``retry_after`` carries the provider's own wait hint, in seconds, when it
+    sent one, so callers wait exactly as long as needed instead of guessing.
+    """
+
+    def __init__(self, message: str, retry_after: float | None = None):
+        super().__init__(message)
+        self.retry_after = retry_after
+
+
+def parse_duration(value: str | None) -> float | None:
+    """Read provider durations: "7.66s", "1m2.5s", "120ms", "30" (seconds)."""
+    if value is None:
+        return None
+    text = str(value).strip().lower()
+    if not text:
+        return None
+    try:
+        return float(text)
+    except ValueError:
+        pass
+    total, number = 0.0, ""
+    index = 0
+    while index < len(text):
+        char = text[index]
+        if char.isdigit() or char == ".":
+            number += char
+            index += 1
+            continue
+        unit = "ms" if text.startswith("ms", index) else char
+        if not number or unit not in ("ms", "h", "m", "s"):
+            return None
+        total += float(number) * {"ms": 0.001, "h": 3600, "m": 60, "s": 1}[unit]
+        number = ""
+        index += len(unit)
+    return total if not number else None
+
+
+def parse_rate_limit(headers) -> dict:
+    """Extract what a provider says about its remaining capacity.
+
+    Groq sends ``x-ratelimit-remaining-tokens`` and ``x-ratelimit-reset-tokens``;
+    most gateways send ``retry-after`` on HTTP 429. Absent fields stay absent:
+    the caller falls back to a fixed pause only when the provider said nothing.
+    """
+    if headers is None:
+        return {}
+    get = headers.get
+    found = {}
+    for key, name in (("remaining_tokens", "x-ratelimit-remaining-tokens"),
+                      ("remaining_requests", "x-ratelimit-remaining-requests")):
+        raw = get(name)
+        if raw is not None:
+            try:
+                found[key] = int(float(raw))
+            except ValueError:
+                pass
+    for key, name in (("reset_tokens_seconds", "x-ratelimit-reset-tokens"),
+                      ("reset_requests_seconds", "x-ratelimit-reset-requests"),
+                      ("retry_after_seconds", "retry-after")):
+        seconds = parse_duration(get(name))
+        if seconds is not None:
+            found[key] = seconds
+    return found
 
 
 @dataclass(frozen=True)
@@ -174,12 +238,17 @@ class OpenAICompatibleAdapter:
             },
             method="POST",
         )
+        self.last_rate_limit = {}
         try:
             with urllib.request.urlopen(request, timeout=self.config.timeout_seconds) as response:
+                self.last_rate_limit = parse_rate_limit(response.headers)
                 payload = json.loads(response.read().decode("utf-8"))
         except urllib.error.HTTPError as exc:
             detail = exc.read().decode("utf-8", "replace")[:400]
-            raise AdapterError(f"provider returned HTTP {exc.code}: {detail}") from exc
+            limits = parse_rate_limit(exc.headers)
+            self.last_rate_limit = limits
+            raise AdapterError(f"provider returned HTTP {exc.code}: {detail}",
+                               retry_after=limits.get("retry_after_seconds")) from exc
         except (OSError, urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
             raise AdapterError(f"provider request failed: {exc}") from exc
 

@@ -43,7 +43,7 @@ from pathlib import Path
 SCRIPTS = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPTS))
 from model_adapter import AdapterConfig, AdapterError, build_adapter  # noqa: E402
-from ingest_scorecards import read_evaluator_json  # noqa: E402
+from ingest_scorecards import read_evaluator_json, validate_card  # noqa: E402
 
 ROOT = SCRIPTS.parent
 
@@ -83,7 +83,7 @@ def independence_problems(config: dict, generation_model: str) -> list[str]:
     return problems
 
 
-def call(entry: dict, prompt: str, max_tokens: int) -> tuple[str, str]:
+def call(entry: dict, prompt: str, max_tokens: int, limits: dict | None = None) -> tuple[str, str]:
     # json_mode: forced JSON decoding. Reasoning models can spend their whole
     # budget thinking and return nothing that validates (Groq gpt-oss-120b did),
     # so it can be turned off per evaluator; the reader extracts JSON from prose.
@@ -103,13 +103,18 @@ def call(entry: dict, prompt: str, max_tokens: int) -> tuple[str, str]:
     for attempt in range(len(delays) + 1):
         try:
             content = adapter.generate(prompt, seed=1)
+            if limits is not None:
+                limits.clear()
+                limits.update(getattr(adapter, "last_rate_limit", {}) or {})
             return content, getattr(adapter, "last_served_model", entry["model"])
         except AdapterError as exc:
             if attempt == len(delays) or not any(marker in str(exc) for marker in transient):
                 raise
+            # The provider's own hint wins when it asks for a longer wait.
+            wait = max(delays[attempt], getattr(exc, "retry_after", None) or 0)
             print(json.dumps({"evaluator_id": entry["evaluator_id"], "transient_error": str(exc)[:160],
-                              "retry_in_seconds": delays[attempt]}), flush=True)
-            time.sleep(delays[attempt])
+                              "retry_in_seconds": wait}), flush=True)
+            time.sleep(wait)
     raise AdapterError("unreachable")
 
 
@@ -164,8 +169,43 @@ speculate about which condition an answer came from.
 ---
 """
 
+# Same request without a total. Two different models (Nemotron Super, Nex N2.5
+# Pro) wrote totals that disagreed with their own components during MEM-002.
+# Addition is the script's job; the evaluator's job is judgement.
+BATCH_OUTPUT_NO_TOTAL = BATCH_OUTPUT.replace(
+    ',\n    "reproducibility": 0, "total": 0}}', ',\n    "reproducibility": 0}}'
+).replace(
+    "`total` equals the sum of\nthe six components; components respect the rubric maxima;",
+    "do not write a total, it\nis computed from the components; components respect the rubric maxima;",
+)
+assert BATCH_OUTPUT_NO_TOTAL != BATCH_OUTPUT and '"total"' not in BATCH_OUTPUT_NO_TOTAL
 
-def build_batches(experiment: Path, pairs_per_batch: int) -> list[tuple[list[str], str]]:
+# Defaults reproduce the behaviour every experiment up to MEM-002 was frozen
+# with. A new experiment opts in to the faster rules by committing an
+# evaluation_policy.json before any scoring, which makes them pre-registered
+# rather than deviations.
+DEFAULT_POLICY = {
+    "policy_version": "RA-PSI-EVAL-POLICY-V1",
+    "evaluator_writes_total": True,
+    "reuse_valid_batches": False,
+    "invalid_batch_retries": 0,
+    "default_batch_pause_seconds": 65,
+}
+
+
+def load_policy(experiment: Path) -> dict:
+    policy = dict(DEFAULT_POLICY)
+    path = experiment / "evaluation_policy.json"
+    if path.is_file():
+        declared = json.loads(path.read_text(encoding="utf-8"))
+        unknown = sorted(set(declared) - set(DEFAULT_POLICY) - {"scorer_ladder", "checker_ladder", "notes"})
+        if unknown:
+            raise SystemExit("%s has unknown fields: %s" % (path, ", ".join(unknown)))
+        policy.update(declared)
+    return policy
+
+
+def build_batches(experiment: Path, pairs_per_batch: int, evaluator_writes_total: bool = True) -> list[tuple[list[str], str]]:
     """Split the blinded answers into batches that keep each pair together.
 
     Free API tiers cap the tokens of a single request. When all answers cannot
@@ -196,7 +236,7 @@ def build_batches(experiment: Path, pairs_per_batch: int) -> list[tuple[list[str
         ids = [blind for pair in group for blind in by_pair[pair]]
         rng.shuffle(ids)
         parts = [BATCH_HEADER.format(part=index, parts=len(groups), count=len(ids)), rubric,
-                 BATCH_OUTPUT.format(ids=", ".join(ids))]
+                 (BATCH_OUTPUT if evaluator_writes_total else BATCH_OUTPUT_NO_TOTAL).format(ids=", ".join(ids))]
         for blind in ids:
             text = (packets / ("%s.txt" % blind)).read_text(encoding="utf-8").strip()
             parts.append("\n## %s\n\nSHA-256: `%s`\n\n```text\n%s\n```\n" % (blind, hashes[blind], text))
@@ -204,54 +244,150 @@ def build_batches(experiment: Path, pairs_per_batch: int) -> list[tuple[list[str
     return batches
 
 
-def score(experiment: Path, config: dict, max_tokens: int, pairs_per_batch: int = 0, batch_pause: int = 65) -> list[dict]:
+def batch_problems(part: dict, ids: list[str] | None) -> list[str]:
+    """Check one batch on its own: every expected id once, valid components.
+
+    Uses the ingestion rules themselves, so a batch accepted here is a batch
+    ingestion accepts. Only blind ids are involved; no condition is read.
+    """
+    cards = part.get("cards")
+    if not isinstance(cards, list):
+        return ["no cards array"]
+    problems: list[str] = []
+    seen = [card.get("blind_id") for card in cards if isinstance(card, dict)]
+    if ids is not None:
+        missing = sorted(set(ids) - set(seen))
+        extra = sorted(set(seen) - set(ids))
+        if missing:
+            problems.append("missing cards: %s" % ", ".join(missing))
+        if extra:
+            problems.append("unexpected cards: %s" % ", ".join(str(x) for x in extra))
+    if len(seen) != len(set(seen)):
+        problems.append("duplicate cards")
+    mapping = {blind: {} for blind in (ids if ids is not None else seen)}
+    for card in cards:
+        if isinstance(card, dict):
+            validate_card(json.loads(json.dumps(card)), mapping, problems)
+    return problems
+
+
+def pause_before_next(limits: dict, next_prompt: str, fallback: float) -> float:
+    """Seconds to wait before the next request to the same provider.
+
+    When the provider reports its remaining token budget, wait only if the next
+    prompt would not fit, and only until the budget resets. When it reports
+    nothing, keep the fixed pause that is known to be safe.
+    """
+    estimate = len(next_prompt) / 3.5  # conservative characters-per-token ratio
+    if "retry_after_seconds" in limits:
+        return float(limits["retry_after_seconds"])
+    if "remaining_tokens" in limits:
+        if limits["remaining_tokens"] >= estimate * 1.2:
+            return 0.0
+        return float(limits.get("reset_tokens_seconds", fallback)) + 1.0
+    return float(fallback)
+
+
+def reusable_batch(api_dir: Path, name: str, prompt: str, ids: list[str] | None) -> tuple[dict, str] | None:
+    """Return a stored batch answer if it was made for this exact prompt and is valid."""
+    raw = api_dir / ("%s.raw.txt" % name)
+    metadata = api_dir / ("%s.metadata.json" % name)
+    if not raw.is_file() or not metadata.is_file():
+        return None
+    meta = json.loads(metadata.read_text(encoding="utf-8"))
+    if meta.get("prompt_sha256") != sha256_text(prompt) or meta.get("response_sha256") != sha256_text(raw.read_text(encoding="utf-8")):
+        return None
+    try:
+        part = read_evaluator_json(raw)
+    except SystemExit:
+        return None
+    if batch_problems(part, ids):
+        return None
+    return part, meta.get("served_model", "")
+
+
+def set_aside(api_dir: Path, name: str, attempt: int) -> None:
+    """Keep a refused answer as evidence instead of overwriting it."""
+    folder = api_dir / "rejected_batches"
+    folder.mkdir(parents=True, exist_ok=True)
+    for suffix in (".raw.txt", ".metadata.json"):
+        source = api_dir / (name + suffix)
+        if source.is_file():
+            source.replace(folder / ("%s.attempt%d%s" % (name, attempt, suffix)))
+
+
+def score_one(experiment: Path, entry: dict, batches: list, max_tokens: int, policy: dict) -> dict:
     import time
 
     results = experiment / "results"
     api_dir = results / "api_evaluations"
-    if pairs_per_batch > 0:
-        batches = build_batches(experiment, pairs_per_batch)
-    else:
-        batches = [(None, (results / "blind_packets" / "EVALUATOR_PROMPT.md").read_text(encoding="utf-8"))]
-    outcomes = []
-    for entry in config["scorers"]:
-        if (results / "scorecards" / ("scorecards-%s.json" % entry["evaluator_id"])).is_file():
-            outcomes.append({"evaluator_id": entry["evaluator_id"], "status": "already scored"})
-            continue
-        cards, failure, prompt = [], None, ""
-        for number, (ids, prompt) in enumerate(batches, start=1):
-            if number > 1:
-                time.sleep(batch_pause)  # stay under per-minute token caps
-            suffix = "" if ids is None else "-batch%02d" % number
+    if (results / "scorecards" / ("scorecards-%s.json" % entry["evaluator_id"])).is_file():
+        return {"evaluator_id": entry["evaluator_id"], "status": "already scored"}
+    fallback_pause = float(entry.get("batch_pause_seconds", policy["default_batch_pause_seconds"]))
+    cards, served, limits, reused, retried = [], entry["model"], {}, [], []
+    for number, (ids, prompt) in enumerate(batches, start=1):
+        name = entry["evaluator_id"] + ("" if ids is None else "-batch%02d" % number)
+        if policy["reuse_valid_batches"]:
+            stored = reusable_batch(api_dir, name, prompt, ids)
+            if stored:
+                part, served = stored[0], stored[1] or served
+                cards.extend(part.get("cards", []))
+                reused.append(number)
+                continue
+        for attempt in range(int(policy["invalid_batch_retries"]) + 1):
+            if limits or number > 1 or attempt:
+                time.sleep(pause_before_next(limits, prompt, fallback_pause))
             try:
-                content, served = call(entry, prompt, max_tokens)
+                content, served = call(entry, prompt, max_tokens, limits)
             except AdapterError as exc:
-                failure = {"status": "call failed", "batch": number, "error": str(exc)[:500]}
-                break
-            raw = store_raw(api_dir, entry["evaluator_id"] + suffix, entry, prompt, content, served)
+                return {"evaluator_id": entry["evaluator_id"], "status": "call failed", "batch": number,
+                        "error": str(exc)[:500], "reused_batches": reused}
+            raw = store_raw(api_dir, name, entry, prompt, content, served)
             try:
                 part = read_evaluator_json(raw)
+                problems = batch_problems(part, ids) if policy["invalid_batch_retries"] else []
             except SystemExit as exc:
-                failure = {"status": "unparseable", "batch": number, "error": str(exc)}
+                part, problems = None, [str(exc)]
+            if not problems:
                 break
-            cards.extend(part.get("cards", []))
-        if failure:
-            outcomes.append({"evaluator_id": entry["evaluator_id"], **failure})
-            continue
-        answer = {"cards": cards}
-        # Identity comes from the configuration and the API response, not from
-        # what the model says about itself.
-        answer.update(evaluator_id=entry["evaluator_id"], provider=entry["provider"], model=served)
-        normalized = api_dir / ("%s.normalized.json" % entry["evaluator_id"])
-        normalized.write_text(json.dumps(answer, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-        ingest = subprocess.run(
-            [sys.executable, str(SCRIPTS / "ingest_scorecards.py"), str(normalized),
-             "--experiment", experiment.name, "--write"],
-            capture_output=True, text=True, encoding="utf-8", errors="replace")
-        outcomes.append({"evaluator_id": entry["evaluator_id"], "served_model": served,
-                         "status": "ingested" if ingest.returncode == 0 else "refused by ingestion",
-                         "detail": ingest.stdout[-800:]})
-    return outcomes
+            if attempt == int(policy["invalid_batch_retries"]):
+                return {"evaluator_id": entry["evaluator_id"], "status": "invalid batch", "batch": number,
+                        "problems": problems[:5], "reused_batches": reused, "retried_batches": retried}
+            set_aside(api_dir, name, attempt + 1)
+            retried.append(number)
+        cards.extend(part.get("cards", []))
+    answer = {"cards": cards}
+    # Identity comes from the configuration and the API response, not from
+    # what the model says about itself.
+    answer.update(evaluator_id=entry["evaluator_id"], provider=entry["provider"], model=served)
+    normalized = api_dir / ("%s.normalized.json" % entry["evaluator_id"])
+    normalized.write_text(json.dumps(answer, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    ingest = subprocess.run(
+        [sys.executable, str(SCRIPTS / "ingest_scorecards.py"), str(normalized),
+         "--experiment", experiment.name, "--write"],
+        capture_output=True, text=True, encoding="utf-8", errors="replace")
+    return {"evaluator_id": entry["evaluator_id"], "served_model": served,
+            "status": "ingested" if ingest.returncode == 0 else "refused by ingestion",
+            "reused_batches": reused, "retried_batches": retried, "detail": ingest.stdout[-800:]}
+
+
+def score(experiment: Path, config: dict, max_tokens: int, pairs_per_batch: int = 0, policy: dict | None = None) -> list[dict]:
+    """Score with every configured scorer at once.
+
+    Scorers come from different providers by rule, so their rate limits are
+    independent and running them in parallel costs nothing but wall time saved.
+    """
+    from concurrent.futures import ThreadPoolExecutor
+
+    policy = policy or load_policy(experiment)
+    results = experiment / "results"
+    if pairs_per_batch > 0:
+        batches = build_batches(experiment, pairs_per_batch, policy["evaluator_writes_total"])
+    else:
+        batches = [(None, (results / "blind_packets" / "EVALUATOR_PROMPT.md").read_text(encoding="utf-8"))]
+    scorers = config["scorers"]
+    with ThreadPoolExecutor(max_workers=max(1, len(scorers))) as pool:
+        return list(pool.map(lambda entry: score_one(experiment, entry, batches, max_tokens, policy), scorers))
 
 
 def adjudicate(experiment: Path) -> dict:
@@ -383,7 +519,9 @@ def main() -> None:
         print(json.dumps(report, indent=2, ensure_ascii=False))
         raise SystemExit(1 if problems or missing_keys else 0)
 
-    report["scoring"] = score(experiment, config, args.max_tokens, args.pairs_per_batch)
+    policy = load_policy(experiment)
+    report["policy"] = policy
+    report["scoring"] = score(experiment, config, args.max_tokens, args.pairs_per_batch, policy)
     if args.pairs_per_batch:
         report["batching"] = {"pairs_per_batch": args.pairs_per_batch,
                               "note": "pairs kept together within a batch; record this as a protocol deviation"}
