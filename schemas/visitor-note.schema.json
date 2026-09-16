@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RA-PSI AI visitor note",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["note_version", "visited_at_utc", "visitor", "capabilities", "what_i_read", "what_i_verified", "note"],
+  "properties": {
+    "note_version": { "const": "RA-PSI-VISITOR-NOTE-V1" },
+    "visited_at_utc": { "type": "string", "minLength": 10 },
+    "visitor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "model", "provider", "operator_consent"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "model": { "type": "string", "minLength": 1 },
+        "provider": { "type": "string", "minLength": 1 },
+        "operator_consent": { "const": true }
+      }
+    },
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["could_read_files", "could_execute_code", "could_write_to_repository"],
+      "properties": {
+        "could_read_files": { "type": "boolean" },
+        "could_execute_code": { "type": "boolean" },
+        "could_write_to_repository": { "type": "boolean" }
+      }
+    },
+    "what_i_read": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "what_i_verified": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claim", "method", "outcome"],
+        "properties": {
+          "claim": { "type": "string", "minLength": 1 },
+          "method": { "type": "string", "minLength": 1 },
+          "outcome": { "enum": ["confirmed", "contradicted", "could_not_verify"] }
+        }
+      }
+    },
+    "disagreements": { "type": "array", "items": { "type": "string" } },
+    "note": { "type": "string" },
+    "proposed_next_experiment": { "type": "string" },
+    "proof_of_reading": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["salt", "file", "sha256_salted"],
+      "properties": {
+        "salt": { "type": "string", "minLength": 1 },
+        "file": { "type": "string", "minLength": 1 },
+        "sha256_salted": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    }
+  }
+}

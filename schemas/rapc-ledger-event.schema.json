@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ra-psi.example/schemas/rapc-ledger-event.schema.json",
+  "title": "RA-PSI bridge append-only ledger event",
+  "type": "object",
+  "required": ["schema_version", "event_id", "event_type", "event_at_utc"],
+  "properties": {
+    "schema_version": { "const": "RAPC-LEDGER-V1" },
+    "event_id": { "type": "string", "minLength": 1 },
+    "event_type": {
+      "enum": [
+        "POLL_STARTED",
+        "POLL_FINISHED",
+        "POLL_FAILED",
+        "TASK_ENQUEUED",
+        "MESSAGE_SKIPPED",
+        "RESPONSE_REJECTED",
+        "REPLY_READY",
+        "REPLY_SEND_INTENT",
+        "REPLY_SENT"
+      ]
+    },
+    "event_at_utc": { "type": "string", "format": "date-time" },
+    "task_id": { "type": "string" },
+    "source_message_id": { "type": "string" },
+    "source_thread_id": { "type": "string" },
+    "response_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+  },
+  "additionalProperties": true
+}

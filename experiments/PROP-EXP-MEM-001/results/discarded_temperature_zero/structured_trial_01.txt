@@ -1,0 +1,39 @@
+**Reconstruction of PROP-EXP-MEM-001**
+
+**1. What is the mission of this project?**
+
+The mission of this project is to test and validate a structured memory system, specifically PROP-EXP-MEM-001, which is designed to improve blind mission reconstruction compared to a flat baseline.
+
+**2. What is the project's current technical state?**
+
+The project's current technical state is that it has been running with GitHub Actions for authorized scheduled research cycles, using OpenAlex as the primary collector, and has implemented a system to separate proposal from acceptance. The project has also tested structured memory before adopting it.
+
+**3. What has already failed, and what was learned from those failures?**
+
+Two failures have occurred: initial arXiv research collection failed, and research assessment files did not appear after early runs. These failures were resolved by replacing the arXiv collector with an OpenAlex-based fetch_research.py v2 and adding an analyzer to rerun the workflow.
+
+**4. What is the single best next action?**
+
+The single best next action is to run PROP-EXP-MEM-001 with fresh model instances.
+
+**5. What important information is still missing or uncertain?**
+
+Important information that is still missing or uncertain includes:
+
+* How structured memory improves blind mission reconstruction versus a flat baseline
+* Which memory fields contribute most to handoff fidelity
+* How to compare multiple model families using a provider-neutral adapter
+* How to independently evaluate proposed experiments before acceptance
+
+**Confidence in reconstruction:** 0.80
+
+**Facts I am unsure about:**
+
+* The specific details of how structured memory improves blind mission reconstruction
+* The exact impact of memory fields on handoff fidelity
+* The optimal approach for comparing multiple model families
+
+**Proposed measurable next experiment:**
+
+* Run PROP-EXP-MEM-001 with a controlled variation of memory fields to assess their impact on handoff fidelity.
+* Compare the performance of PROP-EXP-MEM-001 to a flat baseline using a provider-neutral adapter to evaluate multiple model families.

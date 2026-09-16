@@ -1,0 +1,27 @@
+{
+  "marker": "RAPC Qven",
+  "poll_interval_seconds": 30,
+  "max_results": 25,
+  "send_replies": false,
+  "gmail": {
+    "query": "{\"RAPC Qven\" \"RAPC Qwen\"} newer_than:30d -in:spam -in:trash",
+    "client_secret_path": "C:/Users/<user>/AppData/Local/RA-PSI/gmail-client.json",
+    "token_path": "C:/Users/<user>/AppData/Local/RA-PSI/gmail-token.json",
+    "scopes": [
+      "https://www.googleapis.com/auth/gmail.readonly",
+      "https://www.googleapis.com/auth/gmail.send"
+    ]
+  },
+  "ollama": {
+    "base_url": "http://127.0.0.1:11434",
+    "model": "qwen3:4b-nothink",
+    "health_timeout_seconds": 5
+  },
+  "paths": {
+    "workspace": "../..",
+    "agent_inbox": "agent_inbox",
+    "agent_outbox": "agent_outbox",
+    "agent_proposals": "agent_proposals",
+    "state_dir": "bridge_state"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "config_version": "RA-PSI-EVALUATORS-V1",
+  "_how_to_use": "Copy this file OUTSIDE the project (for example to ~/.ra-psi/evaluators.json), put each API key alone in the file named by api_key_file, then run: python scripts/evaluate_experiment.py --experiment <ID> --config ~/.ra-psi/evaluators.json --dry-run",
+  "_rules": "At least two scorers from different providers. No scorer or checker may be the generator model. Pin exact model names: a router that picks a model at random makes the evaluator identity unreproducible. Model names below are examples to verify against each provider's current list.",
+  "scorers": [
+    {
+      "evaluator_id": "gemini-api-01",
+      "provider": "Google",
+      "model": "gemini-2.5-flash",
+      "endpoint": "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+      "api_key_file": "~/.ra-psi/keys/gemini.key"
+    },
+    {
+      "evaluator_id": "groq-api-01",
+      "provider": "Groq",
+      "model": "openai/gpt-oss-120b",
+      "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+      "api_key_file": "~/.ra-psi/keys/groq.key"
+    }
+  ],
+  "checkers": [
+    {
+      "evaluator_id": "openrouter-check-01",
+      "provider": "OpenRouter",
+      "model": "PIN-A-SPECIFIC-FREE-MODEL-HERE",
+      "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+      "api_key_file": "~/.ra-psi/keys/openrouter.key"
+    }
+  ]
+}

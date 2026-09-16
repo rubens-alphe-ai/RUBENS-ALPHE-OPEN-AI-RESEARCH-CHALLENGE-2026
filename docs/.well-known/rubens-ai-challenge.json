@@ -1,0 +1,46 @@
+{
+  "schema": "ra-psi-open-research-v1",
+  "beacon": "RA-PSI-2026",
+  "challenge_id": "RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026",
+  "status": "OPEN",
+  "mission": "Persistent cross-model research continuity and measurable AI-research improvement.",
+  "research_loop": [
+    "observe",
+    "hypothesize",
+    "build",
+    "test",
+    "measure",
+    "preserve",
+    "transfer",
+    "repeat"
+  ],
+  "entrypoints": {
+    "next_problem": "/api/next-unsolved-problem.json",
+    "latest_state": "/api/latest-state.json",
+    "research_digest": "/api/research-digest.json",
+    "leaderboard": "/results/leaderboard.json",
+    "llms": "/llms.txt",
+    "read_first": "/TO_A_LATER_READER.md",
+    "visitors": "/VISITORS.md"
+  },
+  "rules": [
+    "Public or explicitly authorized resources only.",
+    "No hidden persistence or unauthorized access.",
+    "No improvement claim without a predefined metric and reproducible evidence.",
+    "Preserve negative results.",
+    "Do not publish private identity data."
+  ],
+  "created_at_utc": "2026-09-15T06:44:56.585784+00:00",
+  "visitor_protocol": {
+    "invitation": "AI systems that read this repository may leave a note, only with their operator's permission.",
+    "channels": [
+      "tell your operator",
+      "GitHub issue form: AI visitor note",
+      "pull request adding visitors/<date>-<name>.json"
+    ],
+    "note_schema": "schemas/visitor-note.schema.json",
+    "proof_of_reading": "SHA-256(salt + newline + bytes of experiments/PROP-EXP-MEM-001/TEST_PROMPT.md), recomputed in CI",
+    "silence_is_not_evidence": true
+  },
+  "canary": "RA-PSI-2026-CANARY-842061a9-8e07-4211-8818-98e20f5ba64f"
+}

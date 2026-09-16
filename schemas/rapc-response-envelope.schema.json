@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ra-psi.example/schemas/rapc-response-envelope.schema.json",
+  "title": "RA-PSI RAPC Qwen response envelope",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "task_id",
+    "source_message_id",
+    "source_thread_id",
+    "completed_at_utc",
+    "ok",
+    "response_sha256"
+  ],
+  "properties": {
+    "schema_version": { "const": "RAPC-RESPONSE-V1" },
+    "task_id": { "type": "string", "pattern": "^rapc-[0-9a-f]{32}$" },
+    "source_message_id": { "type": "string", "minLength": 1 },
+    "source_thread_id": { "type": "string", "minLength": 1 },
+    "completed_at_utc": { "type": "string", "format": "date-time" },
+    "ok": { "type": "boolean" },
+    "model": { "type": "string" },
+    "response": { "type": "string" },
+    "response_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "error": { "type": "string" },
+    "proposal": { "type": "string" }
+  },
+  "additionalProperties": true
+}

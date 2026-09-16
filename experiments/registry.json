@@ -1,0 +1,61 @@
+{
+  "registry_version": "RA-PSI-REGISTRY-V1",
+  "experiments": [
+    {
+      "experiment_id": "PROP-EXP-MEM-001",
+      "title": "Structured Memory Handoff Test",
+      "status": "REJECTED",
+      "capability_target": "blind cross-model mission reconstruction",
+      "hypothesis": "Explicit structured project memory improves handoff fidelity over a flat baseline without increasing critical fabrications.",
+      "metric": "PCRB-1 score, paired delta and critical fabrication count",
+      "acceptance_rule": "Pilot: three paired trials and mean structured improvement >= 10 with lower 95% bound > 5; final adoption additionally requires nine paired trials, model/provider diversity, holdout, calibration and regression pass.",
+      "protocol_path": "experiments/PROP-EXP-MEM-001/evaluator-contract-v4.json",
+      "evidence_stage": "PILOT",
+      "holdout_required": true,
+      "regression_suite_required": true,
+      "notes": "Pilot adjudicated REJECT on a critical fabrication confirmed by two evaluators (2026-09-16). Its +24.2 gap is not evidence about structure: the two states carried different facts and the structured state leaked its condition label. See PILOT_DESIGN_FLAWS.md. Superseded by PROP-EXP-MEM-002."
+    },
+    {
+      "experiment_id": "EXP-EVAL-001",
+      "title": "Independent Evaluator Reliability Test",
+      "status": "PROPOSED",
+      "capability_target": "independent evaluator reliability",
+      "hypothesis": "Two evaluator models from different providers can score the same blinded outputs with bounded disagreement and explicit fabrication reconciliation.",
+      "metric": "within-pair absolute score difference, fabrication agreement and calibration pass rate",
+      "acceptance_rule": "At least two independent evaluators, disagreement <= 15 points on every pair, no unresolved calibration failure, and no unconfirmed fabrication treated as a rejection.",
+      "protocol_path": "experiments/EXP-EVAL-001/PROTOCOL.md",
+      "evidence_stage": "REPLICATION",
+      "holdout_required": true,
+      "regression_suite_required": true,
+      "notes": "This is registered as proposed; it has not been run."
+    },
+    {
+      "experiment_id": "EXP-REG-001",
+      "title": "Canonical State Regression Preservation",
+      "status": "PROPOSED",
+      "capability_target": "non-regression of continuity capabilities",
+      "hypothesis": "A candidate memory or evaluator change can improve the target metric without degrading mission reconstruction, failure preservation or next-action fidelity.",
+      "metric": "fixed regression scorecard across multiple capabilities",
+      "acceptance_rule": "Every registered capability meets its minimum threshold; any failed capability vetoes final adoption.",
+      "protocol_path": "experiments/EXP-REG-001/PROTOCOL.md",
+      "evidence_stage": "FINAL",
+      "holdout_required": true,
+      "regression_suite_required": true,
+      "notes": "Failure vetoes the candidate; it does not silently rewrite canonical history."
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-002",
+      "title": "Structure-only Memory Handoff Test",
+      "status": "OPEN",
+      "capability_target": "blind cross-model mission reconstruction",
+      "hypothesis": "Holding information content constant, a sectioned project state improves blind handoff fidelity over the same facts in prose, without increasing critical fabrications.",
+      "metric": "PCRB-1 score, paired delta and critical fabrication count",
+      "acceptance_rule": "V4 gate, pilot stage: nine paired trials, single generator identity; best outcome PROVISIONAL_KEEP.",
+      "protocol_path": "experiments/PROP-EXP-MEM-002/PROTOCOL.md",
+      "evidence_stage": "PILOT",
+      "holdout_required": true,
+      "regression_suite_required": true,
+      "notes": "Both states generated from one fact list with an equivalence check; neutral file names; leak scan before evaluation."
+    }
+  ]
+}

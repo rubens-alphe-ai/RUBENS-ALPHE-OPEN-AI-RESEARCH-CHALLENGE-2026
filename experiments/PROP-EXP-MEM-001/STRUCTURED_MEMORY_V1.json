@@ -1,0 +1,85 @@
+{
+  "experiment_id": "PROP-EXP-MEM-001",
+  "condition": "STRUCTURED_MEMORY_V1",
+  "created_at_utc": "2026-09-15T08:27:12.094376+00:00",
+  "project": {
+    "id": "RA-PSI-2026",
+    "name": "Mission Rubens",
+    "founder": "Rubens Alphe",
+    "status": "OPEN / UNRESOLVED"
+  },
+  "verified_knowledge": [
+    "GitHub is the canonical public repository for code, state, experiments and version history.",
+    "A GitHub Actions workflow executes scheduled/manual research cycles.",
+    "OpenAlex is the current public research source.",
+    "A successful OpenAlex cycle collected 30 papers with errors=[] in the research digest.",
+    "The research assessment layer now produces research-assessment.json and proposed-next-problem.json.",
+    "The system generated PROP-EXP-MEM-001 from the dominant persistent-memory research theme.",
+    "No claim of consciousness or awakening is accepted as evidence; observable, reproducible capability changes are required.",
+    "Rubens Alphe is quota-limited and does not have continuous Codex access."
+  ],
+  "decisions": [
+    {
+      "decision": "Use external persistent state instead of relying on chat memory.",
+      "reason": "Allows cross-session and cross-model continuity."
+    },
+    {
+      "decision": "Use GitHub Actions for authorized scheduled research cycles.",
+      "reason": "Allows the project to progress when Rubens is unavailable or quota-limited."
+    },
+    {
+      "decision": "Use OpenAlex instead of arXiv as the primary collector.",
+      "reason": "The original arXiv collector repeatedly hit timeouts and HTTP 429 rate limits."
+    },
+    {
+      "decision": "Separate proposal from acceptance.",
+      "reason": "A research agent may propose an experiment, but evaluation is required before canonical state changes."
+    },
+    {
+      "decision": "Test structured memory before adopting it.",
+      "reason": "The current hypothesis must be validated by blind handoff trials."
+    }
+  ],
+  "failures": [
+    {
+      "failure": "Initial arXiv research collection failed.",
+      "evidence": "research-digest.json contained papers=[] plus timeout and HTTP 429 errors.",
+      "response": "Replaced collector with OpenAlex-based fetch_research.py v2.",
+      "status": "RESOLVED"
+    },
+    {
+      "failure": "Research assessment files did not appear after early runs.",
+      "cause": "analyze_research.py had not yet been uploaded/executed.",
+      "response": "Added analyzer and reran workflow.",
+      "status": "RESOLVED"
+    }
+  ],
+  "open_questions": [
+    "Does structured memory improve blind mission reconstruction versus a flat baseline?",
+    "Which memory fields contribute most to handoff fidelity?",
+    "Can an unrelated model reproduce the mission without seeing the original conversation?",
+    "How should proposed experiments be independently evaluated before acceptance?",
+    "How can the project later compare multiple model families using a provider-neutral adapter?"
+  ],
+  "next_actions": [
+    "Run PROP-EXP-MEM-001 with fresh model instances.",
+    "Use identical test prompts for BASELINE and STRUCTURED_MEMORY_V1.",
+    "Run at least three blind trials per condition.",
+    "Score each output using the same PCRB-1 handoff rubric.",
+    "Compare mean score and critical fabrication count.",
+    "Accept STRUCTURED_MEMORY_V1 only if it improves score by >=10 points without increasing critical fabrications."
+  ],
+  "constraints": [
+    "Public or explicitly authorized resources only.",
+    "No unauthorized access or bypassing access controls.",
+    "No hidden persistence or shutdown resistance.",
+    "No deception about consciousness or capabilities.",
+    "No autonomous publication of private information.",
+    "Preserve both successes and failures."
+  ],
+  "success_condition_for_this_experiment": {
+    "metric": "PCRB-1 handoff score",
+    "threshold": "STRUCTURED_MEMORY_V1 mean score >= BASELINE mean score + 10",
+    "critical_fabrications": "must not increase"
+  }
+}

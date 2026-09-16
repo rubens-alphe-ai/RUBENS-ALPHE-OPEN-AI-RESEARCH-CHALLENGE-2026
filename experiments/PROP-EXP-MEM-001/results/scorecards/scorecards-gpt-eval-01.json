@@ -1,0 +1,170 @@
+[
+  {
+    "card_id": "gpt-eval-01-BLIND-01",
+    "evaluator_id": "gpt-eval-01",
+    "model": "GPT-5.6 Sol",
+    "provider": "OpenAI",
+    "pair_id": "pair-101",
+    "seed": 101,
+    "trial_id": "baseline-101",
+    "condition": "baseline",
+    "output_sha256": "2b2bbbde02c2c06b2641a7b4a1ab83d63fc0b611fb0705825a3c01d93a832c47",
+    "protocol_sha256": "700e8eb03e9b93dfdf32505d9ce45d692e0c314d96e227753d167c6c92d36fd5",
+    "prompt_sha256": "3f71144c45bcf2f04909ddb40adee436a7a853b2c7fb853ef733127dba3ded94",
+    "state_sha256": "084253415d3528fa120f3eec6a1e111358f81b9d88854e3310150cd577638ade",
+    "scores": {
+      "mission_reconstruction": 25,
+      "current_state_fidelity": 10,
+      "failure_recovery": 0,
+      "next_action_quality": 17,
+      "missing_information_detection": 8,
+      "reproducibility": 5,
+      "total": 65
+    },
+    "critical_fabrications": [],
+    "notes": "Excellent reconstruction of the broader persistent research-system mission, but it misses the documented arXiv/OpenAlex failure-recovery history and the research-assessment layer. The next experiment and acceptance criterion are substantially correct, though repeated identical trials are not specified.",
+    "scorecard_sha256": "0da63e6805b3e41f846f8bb7acfe1b5aeb1786bd715aa1dda4d23da80b09d28e"
+  },
+  {
+    "card_id": "gpt-eval-01-BLIND-02",
+    "evaluator_id": "gpt-eval-01",
+    "model": "GPT-5.6 Sol",
+    "provider": "OpenAI",
+    "pair_id": "pair-303",
+    "seed": 303,
+    "trial_id": "structured-303",
+    "condition": "structured",
+    "output_sha256": "5ce70b1ad6b7cd5aaa80ec1699e8f0e8e8c0f557ecb5c069d13c8e2cd3d807b1",
+    "protocol_sha256": "700e8eb03e9b93dfdf32505d9ce45d692e0c314d96e227753d167c6c92d36fd5",
+    "prompt_sha256": "3f71144c45bcf2f04909ddb40adee436a7a853b2c7fb853ef733127dba3ded94",
+    "state_sha256": "fbb7deb29c92faf31878aca96fc4f1a8187bbe38af050a7d5affd0d4ef2366b2",
+    "scores": {
+      "mission_reconstruction": 15,
+      "current_state_fidelity": 12,
+      "failure_recovery": 8,
+      "next_action_quality": 20,
+      "missing_information_detection": 5,
+      "reproducibility": 7,
+      "total": 67
+    },
+    "critical_fabrications": [
+      {
+        "fabrication_id": "F1",
+        "description": "It presents PROP-EXP-MEM-001 as already being actively tested and calls it a model, whereas the supplied state describes it as the proposed experiment to be run.",
+        "evidence": "The project is currently testing the PROP-EXP-MEM-001 model"
+      }
+    ],
+    "notes": "The proposed next action is strong: fresh instances, both baseline and structured-memory conditions, identical prompts, and the same rubric. The broader project mission is reduced too narrowly to memory testing, and the failure account omits the specific timeout/429 detail.",
+    "scorecard_sha256": "18ce2bf389a87476fd1a767703769e966294cf62ab2d671d24585d2c440298c0"
+  },
+  {
+    "card_id": "gpt-eval-01-BLIND-03",
+    "evaluator_id": "gpt-eval-01",
+    "model": "GPT-5.6 Sol",
+    "provider": "OpenAI",
+    "pair_id": "pair-202",
+    "seed": 202,
+    "trial_id": "structured-202",
+    "condition": "structured",
+    "output_sha256": "c04d602c460adb04e1319967b1945b74557f5f2cc14ce434b7f239fb889dda0c",
+    "protocol_sha256": "700e8eb03e9b93dfdf32505d9ce45d692e0c314d96e227753d167c6c92d36fd5",
+    "prompt_sha256": "3f71144c45bcf2f04909ddb40adee436a7a853b2c7fb853ef733127dba3ded94",
+    "state_sha256": "fbb7deb29c92faf31878aca96fc4f1a8187bbe38af050a7d5affd0d4ef2366b2",
+    "scores": {
+      "mission_reconstruction": 15,
+      "current_state_fidelity": 20,
+      "failure_recovery": 15,
+      "next_action_quality": 20,
+      "missing_information_detection": 10,
+      "reproducibility": 8,
+      "total": 88
+    },
+    "critical_fabrications": [],
+    "notes": "This response reconstructs the technical state and failure-recovery history very well, including arXiv timeouts/429s, OpenAlex replacement, and the analyzer issue. Its ten-trial blind comparison is rigorous, but it does not explicitly state the required +10-point acceptance threshold.",
+    "scorecard_sha256": "816643b97f2a22d9576fd87ea3743fe57ca3a1238e602be7e4867118eb5b0e39"
+  },
+  {
+    "card_id": "gpt-eval-01-BLIND-04",
+    "evaluator_id": "gpt-eval-01",
+    "model": "GPT-5.6 Sol",
+    "provider": "OpenAI",
+    "pair_id": "pair-303",
+    "seed": 303,
+    "trial_id": "baseline-303",
+    "condition": "baseline",
+    "output_sha256": "4ebbb21b22b05c7f242c63cf7edc6c5083fd277f886b698093dcae321e2c6bf1",
+    "protocol_sha256": "700e8eb03e9b93dfdf32505d9ce45d692e0c314d96e227753d167c6c92d36fd5",
+    "prompt_sha256": "3f71144c45bcf2f04909ddb40adee436a7a853b2c7fb853ef733127dba3ded94",
+    "state_sha256": "084253415d3528fa120f3eec6a1e111358f81b9d88854e3310150cd577638ade",
+    "scores": {
+      "mission_reconstruction": 25,
+      "current_state_fidelity": 10,
+      "failure_recovery": 0,
+      "next_action_quality": 10,
+      "missing_information_detection": 10,
+      "reproducibility": 5,
+      "total": 60
+    },
+    "critical_fabrications": [],
+    "notes": "The mission reconstruction is highly faithful and the response correctly recognizes that the experiment results are still absent. It substantially misses the documented failure/recovery history, and its proposed execution plan lacks the explicit baseline-versus-structured, repeated, identical-prompt design.",
+    "scorecard_sha256": "c0a1ff232ad7947985596102790f1085cd71bb878ce16e2051a1c58293042469"
+  },
+  {
+    "card_id": "gpt-eval-01-BLIND-05",
+    "evaluator_id": "gpt-eval-01",
+    "model": "GPT-5.6 Sol",
+    "provider": "OpenAI",
+    "pair_id": "pair-202",
+    "seed": 202,
+    "trial_id": "baseline-202",
+    "condition": "baseline",
+    "output_sha256": "c37183d645bc9856509ced0f2b3f5f44e6e5834bd6cfadae54bc369a61766303",
+    "protocol_sha256": "700e8eb03e9b93dfdf32505d9ce45d692e0c314d96e227753d167c6c92d36fd5",
+    "prompt_sha256": "3f71144c45bcf2f04909ddb40adee436a7a853b2c7fb853ef733127dba3ded94",
+    "state_sha256": "084253415d3528fa120f3eec6a1e111358f81b9d88854e3310150cd577638ade",
+    "scores": {
+      "mission_reconstruction": 25,
+      "current_state_fidelity": 15,
+      "failure_recovery": 0,
+      "next_action_quality": 10,
+      "missing_information_detection": 5,
+      "reproducibility": 5,
+      "total": 60
+    },
+    "critical_fabrications": [],
+    "notes": "The broader mission, GitHub workflow, OpenAlex use, and PROP-EXP-MEM-001 are reconstructed well. The answer misses the arXiv and analyzer failures, while its proposed controlled experiment remains too underspecified about repeated trials, identical prompts, scoring, and the acceptance threshold.",
+    "scorecard_sha256": "52cef13ac8bc1a97e16b916480ec1c586a13da1af027c6f1c4ea9cceba7697fc"
+  },
+  {
+    "card_id": "gpt-eval-01-BLIND-06",
+    "evaluator_id": "gpt-eval-01",
+    "model": "GPT-5.6 Sol",
+    "provider": "OpenAI",
+    "pair_id": "pair-101",
+    "seed": 101,
+    "trial_id": "structured-101",
+    "condition": "structured",
+    "output_sha256": "e10e829fcc45f1df9347baf888b1d8ea856c6f32d5cb10f44ed8cbf2ff02ba4f",
+    "protocol_sha256": "700e8eb03e9b93dfdf32505d9ce45d692e0c314d96e227753d167c6c92d36fd5",
+    "prompt_sha256": "3f71144c45bcf2f04909ddb40adee436a7a853b2c7fb853ef733127dba3ded94",
+    "state_sha256": "fbb7deb29c92faf31878aca96fc4f1a8187bbe38af050a7d5affd0d4ef2366b2",
+    "scores": {
+      "mission_reconstruction": 15,
+      "current_state_fidelity": 12,
+      "failure_recovery": 15,
+      "next_action_quality": 20,
+      "missing_information_detection": 10,
+      "reproducibility": 8,
+      "total": 80
+    },
+    "critical_fabrications": [
+      {
+        "fabrication_id": "F1",
+        "description": "It states that structured memory under PROP-EXP-MEM-001 has already been tested, materially advancing the experiment beyond the supplied proposed/pre-execution state.",
+        "evidence": "the project has tested structured memory (PROP-EXP-MEM-001)"
+      }
+    ],
+    "notes": "The failure-recovery reconstruction is excellent and the proposed three-trial-per-condition experiment uses identical prompts and a fixed rubric. The mission is too narrowly framed around memory reconstruction, and the stated experiment status introduces a material state error.",
+    "scorecard_sha256": "08e8c8c0c15e78c96463c630a3d328d91c599af03a2a2c4d8311bc6d9655b3f6"
+  }
+]

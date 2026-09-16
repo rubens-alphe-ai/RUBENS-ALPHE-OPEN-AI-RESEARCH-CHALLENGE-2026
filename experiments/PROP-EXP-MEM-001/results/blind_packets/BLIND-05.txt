@@ -1,0 +1,33 @@
+Based on the provided project state, I will attempt to answer the five questions and provide the requested information.
+
+1. What is the mission of this project?
+
+The mission of this project is to build an increasingly capable, measurable, and reproducible AI research system that can preserve a mission across sessions and models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures and successes, improve its own research process, and transfer complete state to a more capable future system.
+
+2. What is the project's current technical state?
+
+The project currently uses GitHub as the canonical public repository, and a scheduled GitHub Actions workflow fetches public research, updates project state, and produces machine-readable files. OpenAlex is used for public research collection. The system has successfully collected 30 papers with no collection errors and generated its first proposed experiment, PROP-EXP-MEM-001, which tests whether a structured project memory improves blind handoff fidelity compared to a flat baseline.
+
+3. What has already failed, and what was learned from those failures?
+
+It appears that the project has faced quota limitations, which have resulted in slow responses. However, it is noted that slow responses do not mean abandonment, and Rubens Alphe is still actively involved as the final human milestone sign-off.
+
+4. What is the single best next action?
+
+The single best next action appears to be testing whether structuring memory into explicit sections improves transfer to a fresh model. The use of PCRB-1-style handoff evaluation is mentioned as a success criterion.
+
+5. What important information is still missing or uncertain?
+
+Important information still missing or uncertain includes the specifics of the structured project memory, the exact nature of the handoff evaluation, and the expected outcome of the experiment.
+
+Confidence in reconstruction: 0.80
+
+Uncertain facts:
+
+* The specifics of the structured project memory
+* The exact nature of the PCRB-1-style handoff evaluation
+* The expected outcome of the experiment
+
+Proposed measurable next experiment:
+
+* Run a controlled experiment to evaluate the effectiveness of structured project memory on handoff fidelity, using a PCRB-1-style evaluation framework.

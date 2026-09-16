@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RA-PSI candidate state delta and rollback record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "delta_id",
+    "proposal_id",
+    "decision_id",
+    "from_state_sha256",
+    "candidate_state_sha256",
+    "decision",
+    "canonical_update_allowed",
+    "candidate_action",
+    "canonical_state_action",
+    "created_at_utc"
+  ],
+  "properties": {
+    "delta_id": { "type": "string", "minLength": 1 },
+    "proposal_id": { "type": "string", "minLength": 1 },
+    "decision_id": { "type": "string", "minLength": 1 },
+    "from_state_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "candidate_state_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "decision": { "enum": ["PROVISIONAL_KEEP", "FINAL_KEEP", "REJECT", "INCONCLUSIVE"] },
+    "canonical_update_allowed": { "type": "boolean" },
+    "candidate_action": { "enum": ["HOLD", "ADOPT", "DISCARD", "REVIEW"] },
+    "canonical_state_action": { "enum": ["NO_CHANGE", "ADOPT", "ROLLBACK_REVIEW"] },
+    "created_at_utc": { "type": "string", "format": "date-time" },
+    "raw_output_hashes": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+    },
+    "scorecard_hashes": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+    },
+    "rollback": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "candidate_discarded": { "type": "boolean" },
+        "canonical_rollback_performed": { "type": "boolean" },
+        "reason": { "type": "string" }
+      }
+    },
+    "notes": { "type": "string" }
+  }
+}

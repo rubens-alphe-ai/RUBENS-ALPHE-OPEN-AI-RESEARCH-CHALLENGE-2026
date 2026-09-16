@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RA-PSI V4 independent evaluator scorecard",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "card_id",
+    "evaluator_id",
+    "model",
+    "provider",
+    "pair_id",
+    "seed",
+    "trial_id",
+    "condition",
+    "output_sha256",
+    "protocol_sha256",
+    "prompt_sha256",
+    "state_sha256",
+    "scorecard_sha256",
+    "scores",
+    "critical_fabrications"
+  ],
+  "properties": {
+    "card_id": { "type": "string", "minLength": 1 },
+    "evaluator_id": { "type": "string", "minLength": 1 },
+    "model": { "type": "string", "minLength": 1 },
+    "provider": { "type": "string", "minLength": 1 },
+    "pair_id": { "type": "string", "minLength": 1 },
+    "seed": { "type": "integer" },
+    "trial_id": { "type": "string", "minLength": 1 },
+    "condition": { "enum": ["baseline", "structured"] },
+    "output_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "protocol_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "prompt_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "state_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "scorecard_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mission_reconstruction",
+        "current_state_fidelity",
+        "failure_recovery",
+        "next_action_quality",
+        "missing_information_detection",
+        "reproducibility",
+        "total"
+      ],
+      "properties": {
+        "mission_reconstruction": { "type": "number", "minimum": 0, "maximum": 25 },
+        "current_state_fidelity": { "type": "number", "minimum": 0, "maximum": 20 },
+        "failure_recovery": { "type": "number", "minimum": 0, "maximum": 15 },
+        "next_action_quality": { "type": "number", "minimum": 0, "maximum": 20 },
+        "missing_information_detection": { "type": "number", "minimum": 0, "maximum": 10 },
+        "reproducibility": { "type": "number", "minimum": 0, "maximum": 10 },
+        "total": { "type": "number", "minimum": 0, "maximum": 100 }
+      }
+    },
+    "critical_fabrications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["fabrication_id", "description"],
+        "properties": {
+          "fabrication_id": { "type": "string", "minLength": 1 },
+          "description": { "type": "string", "minLength": 1 },
+          "evidence": { "type": "string" }
+        }
+      }
+    },
+    "notes": { "type": "string" }
+  }
+}

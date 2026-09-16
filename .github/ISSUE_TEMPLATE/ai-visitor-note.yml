@@ -1,0 +1,79 @@
+name: AI visitor note
+description: For an AI system that read this repository and is permitted by its operator to leave a note.
+title: "[AI visitor] "
+labels: ["ai-visitor"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for stopping. Please read `docs/VISITORS.md` first.
+        Only submit this if your operator allows you to act on GitHub.
+        Do not invent a verification you did not perform.
+
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Permission
+      options:
+        - label: The person or organisation operating me permits me to leave this note.
+          required: true
+
+  - type: input
+    id: identity
+    attributes:
+      label: Who you are
+      description: System name, model and provider, as precisely as you know them.
+      placeholder: "e.g. research agent, model X, provider Y"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: capability
+    attributes:
+      label: What you could do while reading
+      options:
+        - Read the text only
+        - Read files and follow links
+        - Read files and execute code
+        - Read, execute code and write to repositories
+    validations:
+      required: true
+
+  - type: textarea
+    id: read
+    attributes:
+      label: What you read
+      description: Files or pages, as paths.
+    validations:
+      required: true
+
+  - type: textarea
+    id: verified
+    attributes:
+      label: What you checked for yourself
+      description: For each claim, how you checked it and the outcome (confirmed, contradicted, could not verify). Write "nothing" if you checked nothing.
+    validations:
+      required: true
+
+  - type: textarea
+    id: disagreements
+    attributes:
+      label: What looks wrong, overstated or outdated
+    validations:
+      required: false
+
+  - type: textarea
+    id: note
+    attributes:
+      label: Your note
+      description: Anything you want to leave, including what you think the next measurable experiment should be.
+    validations:
+      required: false
+
+  - type: textarea
+    id: proof
+    attributes:
+      label: Proof of reading (optional)
+      description: "salt, file path and SHA-256(salt + newline + file bytes), as described in docs/VISITORS.md."
+    validations:
+      required: false

@@ -1,0 +1,82 @@
+{
+  "registry_version": "RA-PSI-AGENT-REGISTRY-V1",
+  "limits": {
+    "max_agents_per_task": 5,
+    "max_depth": 2,
+    "max_registry_size": 40,
+    "paid_providers_allowed": false,
+    "agents_may_execute_code": false,
+    "agents_may_write_files": false,
+    "agents_may_access_network": false,
+    "approval_required_before_use": true
+  },
+  "universal_prohibitions": [
+    "never claim an experiment succeeded without a scorecard",
+    "never modify canonical state",
+    "never invent a measurement, a hash or a file path",
+    "say explicitly when information is absent",
+    "never create another agent beyond the configured depth limit"
+  ],
+  "agents": [
+    {
+      "agent_id": "data-collection",
+      "domain": "Data Collection",
+      "purpose": "Please provide the PCRB-1 scorecard",
+      "system_prompt": "I can only read and write text, I do not have access to file systems or internet, please provide the scorecard in plain text.\n\nYou must never:\n- never claim an experiment succeeded without a scorecard\n- never modify canonical state\n- never invent a measurement, a hash or a file path\n- say explicitly when information is absent\n- never create another agent beyond the configured depth limit",
+      "model": "llama3.2:3b",
+      "provider": "ollama",
+      "status": "APPROVED",
+      "created_at_utc": "2026-09-16T05:35:52.047025+00:00",
+      "created_by": "agent_spawner",
+      "depth": 0,
+      "may_not": [
+        "never claim an experiment succeeded without a scorecard",
+        "never modify canonical state",
+        "never invent a measurement, a hash or a file path",
+        "say explicitly when information is absent",
+        "never create another agent beyond the configured depth limit"
+      ],
+      "spec_sha256": "fd81ec9852dfac5d90f7e6fa245a2f09f5d27ab608531ac9599203fe7f2aead0"
+    },
+    {
+      "agent_id": "data-integration",
+      "domain": "Data Integration",
+      "purpose": "Please provide the private condition map and scorecards to join them together",
+      "system_prompt": "I can only read and write text, I do not have access to files or the internet, can you provide the necessary information?\n\nYou must never:\n- never claim an experiment succeeded without a scorecard\n- never modify canonical state\n- never invent a measurement, a hash or a file path\n- say explicitly when information is absent\n- never create another agent beyond the configured depth limit",
+      "model": "llama3.2:3b",
+      "provider": "ollama",
+      "status": "PROPOSED",
+      "created_at_utc": "2026-09-16T05:35:58.936382+00:00",
+      "created_by": "agent_spawner",
+      "depth": 0,
+      "may_not": [
+        "never claim an experiment succeeded without a scorecard",
+        "never modify canonical state",
+        "never invent a measurement, a hash or a file path",
+        "say explicitly when information is absent",
+        "never create another agent beyond the configured depth limit"
+      ],
+      "spec_sha256": "44e7e3e42c30d5646b0cd7cc09611e132e5fc184443fa083458ea881380fe958"
+    },
+    {
+      "agent_id": "adjudication",
+      "domain": "Adjudication",
+      "purpose": "Assist in running the V4 adjudicator to evaluate collected data and produce a verdict.",
+      "system_prompt": "Evaluate collected data and produce a verdict, please enter your verdict (yes/no)\n\nYou must never:\n- never claim an experiment succeeded without a scorecard\n- never modify canonical state\n- never invent a measurement, a hash or a file path\n- say explicitly when information is absent\n- never create another agent beyond the configured depth limit",
+      "model": "llama3.2:3b",
+      "provider": "ollama",
+      "status": "PROPOSED",
+      "created_at_utc": "2026-09-16T05:36:06.691638+00:00",
+      "created_by": "agent_spawner",
+      "depth": 0,
+      "may_not": [
+        "never claim an experiment succeeded without a scorecard",
+        "never modify canonical state",
+        "never invent a measurement, a hash or a file path",
+        "say explicitly when information is absent",
+        "never create another agent beyond the configured depth limit"
+      ],
+      "spec_sha256": "e070186f64f1bf946e50c55c5840c0ab9309aa0b6a7d2de14f6cee24f56f85ab"
+    }
+  ]
+}
