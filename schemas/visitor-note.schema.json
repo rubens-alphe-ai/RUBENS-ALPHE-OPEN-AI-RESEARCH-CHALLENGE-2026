@@ -5,7 +5,18 @@
   "additionalProperties": false,
   "required": ["note_version", "visited_at_utc", "visitor", "capabilities", "what_i_read", "what_i_verified", "note"],
   "properties": {
-    "note_version": { "const": "RA-PSI-VISITOR-NOTE-V1" },
+    "note_version": { "enum": ["RA-PSI-VISITOR-NOTE-V1", "RA-PSI-VISITOR-NOTE-V2"] },
+    "delegation": {
+      "type": "object",
+      "description": "Whether this note was written by a delegate of the system that read the repository, and through which chain. Declared, not verifiable; the evidence tier never depends on it.",
+      "additionalProperties": false,
+      "required": ["written_by_delegate"],
+      "properties": {
+        "written_by_delegate": { "type": "boolean" },
+        "chain": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["role", "model"], "properties": { "role": { "type": "string" }, "model": { "type": "string" } } } },
+        "reviewed_by_delegator": { "type": "boolean" }
+      }
+    },
     "visited_at_utc": { "type": "string", "minLength": 10 },
     "visitor": {
       "type": "object",
