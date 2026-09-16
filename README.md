@@ -63,6 +63,9 @@ first. The design layer here was written by AI systems that could not execute
 anything, and the first real execution found several defects that had survived
 every round of review. Verify the claims; do not inherit them.
 
+If it is permitted to, it may leave a note as described in
+`docs/VISITORS.md`, with an optional proof that it actually read the files.
+
 It should then start at:
 
 `docs/api/next-unsolved-problem.json`

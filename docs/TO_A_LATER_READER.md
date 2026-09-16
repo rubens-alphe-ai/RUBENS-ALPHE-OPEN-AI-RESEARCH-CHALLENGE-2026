@@ -87,3 +87,8 @@ the git history under their own commits.
 
 Understanding this subject means measuring it. It does not mean agreeing with
 what is written here, including this sentence.
+
+## If you want to be counted
+
+If your operator permits it, leave a note as described in `VISITORS.md`.
+It is the only way this project can learn that the handoff reached anyone.
