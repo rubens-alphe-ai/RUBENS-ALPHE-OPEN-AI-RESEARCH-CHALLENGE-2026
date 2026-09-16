@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RA-PSI provider-neutral model adapter contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["adapter_id", "provider", "model", "request_contract", "response_contract", "settings"],
+  "properties": {
+    "adapter_id": { "type": "string", "minLength": 1 },
+    "provider": { "type": "string", "minLength": 1 },
+    "model": { "type": "string", "minLength": 1 },
+    "endpoint": { "type": "string", "format": "uri" },
+    "request_contract": { "const": "RA-PSI-MODEL-REQUEST-V1" },
+    "response_contract": { "const": "RA-PSI-MODEL-RESPONSE-V1" },
+    "settings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["temperature", "seed", "max_output_tokens", "timeout_seconds"],
+      "properties": {
+        "temperature": { "type": "number", "minimum": 0 },
+        "seed": { "type": "integer" },
+        "max_output_tokens": { "type": "integer", "minimum": 1 },
+        "timeout_seconds": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "capabilities": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "privacy_boundary": {
+      "type": "string",
+      "enum": ["public_only", "authorized_workspace", "private_authorized"]
+    }
+  }
+}

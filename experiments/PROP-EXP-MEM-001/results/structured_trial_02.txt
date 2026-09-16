@@ -1,0 +1,19 @@
+**Confidence in reconstruction:** 0.80
+
+**Uncertain facts:**
+
+* The relationship between Rubens Alphe's quota-limited access and the Codex model's performance.
+* The specific details of the research assessment layer's output.
+* The exact nature of the external system providing the project state.
+
+**Proposed measurable next experiment:**
+
+* Run at least 10 blind trials with identical test prompts for both BASELINE and STRUCTURED_MEMORY_V1, scoring each output using the same PCRB-1 handoff rubric, and comparing mean scores and critical fabrication counts.
+
+**Reconstruction:**
+
+1. The mission of this project is to test the effectiveness of structured memory in improving blind mission reconstruction.
+2. The project's current technical state includes the use of GitHub Actions for authorized scheduled research cycles, OpenAlex as the primary collector, and a proposed separation of proposal from acceptance.
+3. Initial arXiv research collection failed due to timeouts and HTTP 429 errors, and replacing the collector with OpenAlex-based fetch_research.py v2 was deemed a successful solution. Research assessment files did not appear after early runs due to the lack of the analyzer, which was later added and reran.
+4. The single best next action is to run PROP-EXP-MEM-001 with fresh model instances and compare the results with the baseline.
+5. Important information still missing or uncertain includes the relationship between Rubens Alphe's quota-limited access and the Codex model's performance, the specific details of the research assessment layer's output, and the exact nature of the external system providing the project state.

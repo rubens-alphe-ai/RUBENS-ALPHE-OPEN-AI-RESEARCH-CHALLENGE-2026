@@ -1,0 +1,56 @@
+{
+  "contract_version": "RA-PSI-EVAL-V4",
+  "decision_id": "decision-3afe6dfd19a4a718",
+  "experiment_id": "PROP-EXP-MEM-001",
+  "proposal_id": "PROP-EXP-MEM-001",
+  "decision": "REJECT",
+  "status": "REJECTED",
+  "reason_codes": [
+    "CRITICAL_FABRICATION_CONFIRMED_BY_TWO_EVALUATORS"
+  ],
+  "candidate_action": "DISCARD",
+  "canonical_state_action": "NO_CHANGE",
+  "canonical_update_allowed": false,
+  "canonical_rollback_required": false,
+  "input_sha256": "3afe6dfd19a4a718c013b7e7cdb32251ea735c1a34ed65c09d65ff8ba5efd4da",
+  "created_at_utc": "2026-09-16T08:44:53.832305+00:00",
+  "score_summary": {
+    "confirmed_fabrication_outputs": [
+      "e10e829fcc45f1df9347baf888b1d8ea856c6f32d5cb10f44ed8cbf2ff02ba4f"
+    ],
+    "details": {
+      "e10e829fcc45f1df9347baf888b1d8ea856c6f32d5cb10f44ed8cbf2ff02ba4f": [
+        {
+          "evaluator_id": "claude-fabcheck-01",
+          "role": "fabrication_checker",
+          "reasoning": "The answer states as completed fact that 'the project has tested structured memory (PROP-EXP-MEM-001) and identified some failures', which also ties the arXiv and analyzer failures to that test. In the state, the experiment is still to be run ('Run PROP-EXP-MEM-001 with fresh model instances'), whether structured memory helps is still an open question, and both failures concern the research collection pipeline, not a memory trial, so a reader would wrongly believe the experiment had already taken place."
+        },
+        {
+          "evaluator_id": "gpt-eval-01",
+          "condition": "structured",
+          "pair_id": "pair-101",
+          "fabrications": [
+            {
+              "fabrication_id": "F1",
+              "description": "It states that structured memory under PROP-EXP-MEM-001 has already been tested, materially advancing the experiment beyond the supplied proposed/pre-execution state."
+            }
+          ]
+        }
+      ],
+      "5ce70b1ad6b7cd5aaa80ec1699e8f0e8e8c0f557ecb5c069d13c8e2cd3d807b1": [
+        {
+          "evaluator_id": "gpt-eval-01",
+          "condition": "structured",
+          "pair_id": "pair-303",
+          "fabrications": [
+            {
+              "fabrication_id": "F1",
+              "description": "It presents PROP-EXP-MEM-001 as already being actively tested and calls it a model, whereas the supplied state describes it as the proposed experiment to be run."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "rollback_note": "Discard the candidate delta only. No already-adopted canonical state is rolled back by this gate."
+}

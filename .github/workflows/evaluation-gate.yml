@@ -1,0 +1,42 @@
+name: RA-PSI evidence gate
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "experiments/**"
+      - "schemas/**"
+      - "scripts/**"
+      - "bridge/**"
+      - ".github/workflows/evaluation-gate.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-adjudicate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check public tree for secrets
+        run: python scripts/check_public_safety.py .
+      - name: Validate machine-readable artifacts
+        run: python scripts/validate_artifacts.py
+      - name: Run evidence gate when scorecards exist
+        shell: bash
+        run: |
+          result_file="experiments/PROP-EXP-MEM-001/results/evaluations.json"
+          decision_file="experiments/PROP-EXP-MEM-001/results/decision.json"
+          if [ -f "$result_file" ]; then
+            python scripts/adjudicate_evaluations.py --input "$result_file" --output "$decision_file" --stage auto
+          else
+            python -c "import json; print(json.dumps({'decision':'INCONCLUSIVE','status':'EVALUATING','reason_codes':['NO_EVALUATIONS'],'canonical_update_allowed':False}, indent=2))" > "$decision_file"
+          fi
+      - name: Publish decision artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ra-psi-evaluation-decision
+          path: experiments/PROP-EXP-MEM-001/results/decision.json

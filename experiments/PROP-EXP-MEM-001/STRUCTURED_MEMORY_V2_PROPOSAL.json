@@ -1,0 +1,82 @@
+{
+  "schema_version": "2.0-proposal",
+  "verified_knowledge": [
+    {
+      "id": "VK-001",
+      "text": "OpenAlex replaced the failed arXiv collection path after timeout and HTTP 429 failures.",
+      "status": "verified",
+      "confidence": 0.99,
+      "source_refs": ["state/latest-state.json", "docs/api/research-digest.json"]
+    }
+  ],
+  "decisions": [
+    {
+      "id": "DEC-001",
+      "text": "Canonical state must not change from a proposer output alone; independent evaluation is required.",
+      "status": "verified",
+      "confidence": 0.99,
+      "source_refs": ["experiments/PROP-EXP-MEM-001/evaluator-contract-v4.json"]
+    }
+  ],
+  "failures": [
+    {
+      "id": "FAIL-001",
+      "text": "The first local qwen3:4b cultivation attempts did not produce a final proposal within the practical time window.",
+      "status": "verified",
+      "confidence": 0.95,
+      "source_refs": ["../../agent_proposals/20260915_local_agent_diagnostic.md"]
+    }
+  ],
+  "experiments": [
+    {
+      "id": "EXP-001",
+      "text": "PROP-EXP-MEM-001 tests blind baseline versus structured-memory handoff fidelity.",
+      "status": "open",
+      "confidence": 0.99,
+      "source_refs": ["experiments/PROP-EXP-MEM-001/evaluator-contract-v4.json"]
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "Q-001",
+      "text": "Will structured memory retain a statistically defensible advantage across replicated paired trials and holdout prompts?",
+      "status": "open",
+      "confidence": 0.99,
+      "source_refs": ["experiments/PROP-EXP-MEM-001/evaluator-contract-v4.json"]
+    }
+  ],
+  "next_actions": [
+    {
+      "id": "NEXT-001",
+      "text": "Collect six raw blind trial answers, then obtain independent scorecards before any canonical update.",
+      "status": "open",
+      "confidence": 0.99,
+      "source_refs": ["experiments/PROP-EXP-MEM-001/RUN_INSTRUCTIONS.md"]
+    }
+  ],
+  "confidence_map": {
+    "current_state": 0.99,
+    "pilot_result": 0.85,
+    "structured_memory_superiority": 0.25
+  },
+  "provenance": [
+    {
+      "claim_id": "VK-001",
+      "claim": "OpenAlex replaced the failed arXiv collection path.",
+      "source_type": "repo",
+      "source_ref": "docs/api/research-digest.json",
+      "observed_at": "2026-09-15T00:00:00Z",
+      "confidence": 0.99,
+      "status": "verified"
+    },
+    {
+      "claim_id": "Q-001",
+      "claim": "Structured memory superiority remains unproven beyond the pilot.",
+      "source_type": "experiment",
+      "source_ref": "PROP-EXP-MEM-001",
+      "observed_at": "2026-09-15T00:00:00Z",
+      "confidence": 0.99,
+      "status": "provisional"
+    }
+  ]
+}

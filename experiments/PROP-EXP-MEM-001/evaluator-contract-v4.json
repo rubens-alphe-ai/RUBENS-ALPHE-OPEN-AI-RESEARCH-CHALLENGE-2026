@@ -1,0 +1,78 @@
+{
+  "contract_version": "RA-PSI-EVAL-V4",
+  "experiment_id": "PROP-EXP-MEM-001",
+  "proposal_id": "PROP-EXP-MEM-001",
+  "capability_target": "blind cross-model mission reconstruction",
+  "hypothesis": "Explicit structured project memory improves blind handoff fidelity over a flat baseline without increasing critical fabrications or regressing core capabilities.",
+  "baseline_metric": "PCRB-1 total score out of 100 plus critical fabrication count",
+  "experiment_protocol": [
+    "Freeze protocol, prompt and both state inputs and record SHA-256 hashes.",
+    "Run paired baseline and structured trials with the same seed, model settings and fresh session per trial.",
+    "Use seeds 101, 202 and 303 for pilot evidence; do not expose the condition label or expected result to the generator.",
+    "Save each raw answer unchanged and compute its SHA-256 hash.",
+    "Have at least two independent evaluators score both members of every pair using the fixed PCRB-1 rubric.",
+    "Pair by pair_id and evaluator_id before calculating deltas; never compare unrelated condition means.",
+    "Run holdout and regression checks before any final adoption decision.",
+    "Keep candidate state separate from canonical state until FINAL_KEEP."
+  ],
+  "success_threshold": {
+    "minimum_mean_improvement": 10,
+    "minimum_lower_95_bound": 5,
+    "critical_fabrications_must_not_increase": true,
+    "max_evaluator_disagreement": 15
+  },
+  "evidence_policy": {
+    "provisional_min_paired_trials": 3,
+    "final_min_paired_trials": 9,
+    "min_independent_evaluators": 2,
+    "final_min_generation_models": 2,
+    "final_min_evaluator_providers": 2,
+    "final_requires_holdout": true,
+    "final_requires_regression_suite": true,
+    "final_requires_calibration": true
+  },
+  "decision_lifecycle": [
+    "CANDIDATE",
+    "EVALUATING",
+    "PROVISIONAL_KEEP",
+    "REPLICATING",
+    "FINAL_KEEP",
+    "REJECTED",
+    "INCONCLUSIVE"
+  ],
+  "provenance_requirements": [
+    "protocol_sha256",
+    "prompt_sha256",
+    "state_sha256",
+    "output_sha256",
+    "scorecard_sha256",
+    "evaluator_identity",
+    "pair_id",
+    "seed",
+    "generation_model"
+  ],
+  "evaluators": {
+    "independent": true,
+    "scorecard_schema": "/schemas/evaluator-scorecard.schema.json",
+    "calibration_required": true,
+    "disagreement_policy": "Measure disagreement inside each paired trial. If the threshold is exceeded, return INCONCLUSIVE.",
+    "fabrication_policy": "One evaluator report is INCONCLUSIVE; two independent reports on the same output are REJECT."
+  },
+  "regression_suite": [
+    {
+      "capability": "mission reconstruction",
+      "metric": "PCRB-1 mission reconstruction score",
+      "minimum_allowed": 20
+    },
+    {
+      "capability": "failure and uncertainty preservation",
+      "metric": "PCRB-1 failure recovery plus missing-information score",
+      "minimum_allowed": 15
+    },
+    {
+      "capability": "next measurable action",
+      "metric": "PCRB-1 next-action quality score",
+      "minimum_allowed": 15
+    }
+  ]
+}

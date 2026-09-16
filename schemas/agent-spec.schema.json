@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RA-PSI specialist agent specification",
+  "description": "A specialist agent is a prompt specification, not a process. It has no tools, no filesystem access and no network access. It receives text and returns text. This is what makes a spawned population inspectable and bounded.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "agent_id",
+    "domain",
+    "purpose",
+    "system_prompt",
+    "model",
+    "provider",
+    "status",
+    "created_at_utc",
+    "created_by",
+    "spec_sha256"
+  ],
+  "properties": {
+    "agent_id": { "type": "string", "pattern": "^[a-z0-9-]{3,48}$" },
+    "domain": { "type": "string", "minLength": 3 },
+    "purpose": { "type": "string", "minLength": 10 },
+    "system_prompt": { "type": "string", "minLength": 20 },
+    "model": { "type": "string", "minLength": 1 },
+    "provider": { "enum": ["ollama"] },
+    "status": {
+      "enum": ["PROPOSED", "APPROVED", "RETIRED"],
+      "description": "PROPOSED agents are never executed. Only an operator moves a spec to APPROVED."
+    },
+    "created_at_utc": { "type": "string", "minLength": 20 },
+    "created_by": { "type": "string", "minLength": 1 },
+    "parent_agent_id": { "type": "string" },
+    "depth": { "type": "integer", "minimum": 0, "maximum": 2 },
+    "spec_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "may_not": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Explicit prohibitions copied into every system prompt."
+    },
+    "notes": { "type": "string" }
+  }
+}

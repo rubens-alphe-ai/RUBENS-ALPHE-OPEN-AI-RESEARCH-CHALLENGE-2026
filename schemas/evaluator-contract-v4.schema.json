@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RA-PSI evidence-gated evaluator contract V4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "experiment_id",
+    "proposal_id",
+    "capability_target",
+    "hypothesis",
+    "experiment_protocol",
+    "success_threshold",
+    "evidence_policy",
+    "decision_lifecycle",
+    "provenance_requirements",
+    "evaluators"
+  ],
+  "properties": {
+    "contract_version": { "const": "RA-PSI-EVAL-V4" },
+    "experiment_id": { "type": "string", "minLength": 1 },
+    "proposal_id": { "type": "string", "minLength": 1 },
+    "capability_target": { "type": "string", "minLength": 1 },
+    "hypothesis": { "type": "string", "minLength": 1 },
+    "baseline_metric": { "type": "string" },
+    "experiment_protocol": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "success_threshold": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["minimum_mean_improvement", "minimum_lower_95_bound"],
+      "properties": {
+        "minimum_mean_improvement": { "type": "number" },
+        "minimum_lower_95_bound": { "type": "number" },
+        "critical_fabrications_must_not_increase": { "type": "boolean" },
+        "max_evaluator_disagreement": { "type": "number", "minimum": 0 }
+      }
+    },
+    "evidence_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provisional_min_paired_trials",
+        "final_min_paired_trials",
+        "min_independent_evaluators",
+        "final_min_generation_models",
+        "final_requires_holdout",
+        "final_requires_regression_suite"
+      ],
+      "properties": {
+        "provisional_min_paired_trials": { "type": "integer", "minimum": 1 },
+        "final_min_paired_trials": { "type": "integer", "minimum": 1 },
+        "min_independent_evaluators": { "type": "integer", "minimum": 2 },
+        "final_min_generation_models": { "type": "integer", "minimum": 1 },
+        "final_requires_holdout": { "type": "boolean" },
+        "final_requires_regression_suite": { "type": "boolean" },
+        "final_requires_calibration": { "type": "boolean" },
+        "final_min_evaluator_providers": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "decision_lifecycle": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "CANDIDATE",
+          "EVALUATING",
+          "PROVISIONAL_KEEP",
+          "REPLICATING",
+          "FINAL_KEEP",
+          "REJECTED",
+          "INCONCLUSIVE"
+        ]
+      }
+    },
+    "provenance_requirements": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "protocol_sha256",
+          "prompt_sha256",
+          "state_sha256",
+          "output_sha256",
+          "scorecard_sha256",
+          "evaluator_identity",
+          "pair_id",
+          "seed",
+          "generation_model"
+        ]
+      }
+    },
+    "evaluators": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["independent", "scorecard_schema"],
+      "properties": {
+        "independent": { "type": "boolean" },
+        "scorecard_schema": { "type": "string", "minLength": 1 },
+        "calibration_required": { "type": "boolean" },
+        "disagreement_policy": { "type": "string" },
+        "fabrication_policy": { "type": "string" }
+      }
+    },
+    "regression_suite": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["capability", "metric", "minimum_allowed"],
+        "properties": {
+          "capability": { "type": "string", "minLength": 1 },
+          "metric": { "type": "string", "minLength": 1 },
+          "minimum_allowed": { "type": "number" }
+        }
+      }
+    }
+  }
+}

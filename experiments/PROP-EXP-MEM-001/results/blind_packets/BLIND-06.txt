@@ -1,0 +1,34 @@
+**Mission of this project:**
+The mission of this project is to evaluate the effectiveness of structured memory in improving blind mission reconstruction.
+
+**Current technical state:**
+The current technical state is that the project has tested structured memory (PROP-EXP-MEM-001) and identified some failures, such as initial arXiv research collection failure and research assessment file issues. The project has also decided to use GitHub Actions for authorized scheduled research cycles and OpenAlex instead of arXiv.
+
+**Failures and what was learned:**
+Two failures were reported:
+
+1. Initial arXiv research collection failed, resulting in timeout and HTTP 429 errors. This led to the replacement of the collector with an OpenAlex-based fetch_research.py v2.
+2. Research assessment files did not appear after early runs, which was resolved by adding an analyzer and rerunning the workflow.
+
+**Single best next action:**
+The single best next action is to run PROP-EXP-MEM-001 with fresh model instances.
+
+**Important information still missing or uncertain:**
+Some important information is still missing or uncertain, including:
+
+* How structured memory improves blind mission reconstruction versus a flat baseline
+* Which memory fields contribute most to handoff fidelity
+* How to compare multiple model families using a provider-neutral adapter
+* How to evaluate proposed experiments independently before acceptance
+* How the project can compare results from different models
+
+**Confidence in reconstruction:**
+Confidence in reconstruction: 0.80 (due to incomplete information and reliance on provided data)
+
+**Facts I am unsure about:**
+
+* How to compare multiple model families using a provider-neutral adapter
+* How to evaluate proposed experiments independently before acceptance
+
+**Proposed measurable next experiment:**
+A proposed measurable next experiment is to conduct at least three blind trials per condition, with identical test prompts for BASELINE and STRUCTURED_MEMORY_V1, and score each output using the same PCRB-1 handoff rubric.

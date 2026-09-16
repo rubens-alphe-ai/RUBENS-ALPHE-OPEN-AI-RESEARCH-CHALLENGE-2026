@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RA-PSI experiment registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["registry_version", "experiments"],
+  "properties": {
+    "registry_version": { "const": "RA-PSI-REGISTRY-V1" },
+    "experiments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "experiment_id",
+          "title",
+          "status",
+          "capability_target",
+          "hypothesis",
+          "metric",
+          "acceptance_rule",
+          "protocol_path",
+          "evidence_stage"
+        ],
+        "properties": {
+          "experiment_id": { "type": "string", "minLength": 1 },
+          "title": { "type": "string", "minLength": 1 },
+          "status": { "enum": ["PROPOSED", "OPEN", "EVALUATING", "PROVISIONAL", "FINAL", "REJECTED", "INCONCLUSIVE"] },
+          "capability_target": { "type": "string", "minLength": 1 },
+          "hypothesis": { "type": "string", "minLength": 1 },
+          "metric": { "type": "string", "minLength": 1 },
+          "acceptance_rule": { "type": "string", "minLength": 1 },
+          "protocol_path": { "type": "string", "minLength": 1 },
+          "evidence_stage": { "enum": ["PILOT", "REPLICATION", "FINAL"] },
+          "holdout_required": { "type": "boolean" },
+          "regression_suite_required": { "type": "boolean" },
+          "notes": { "type": "string" }
+        }
+      }
+    }
+  }
+}

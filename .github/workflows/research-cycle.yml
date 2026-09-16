@@ -21,6 +21,13 @@ jobs:
         with:
           python-version: "3.12"
 
+      # Safety and structure gates run before anything touches state: a cycle
+      # that would publish a secret or a malformed artifact stops here.
+      - name: Check public tree for secrets
+        run: python scripts/check_public_safety.py .
+      - name: Validate project artifacts
+        run: python scripts/validate_artifacts.py
+
       - name: Fetch public research
         run: python scripts/fetch_research.py
       - name: Assess research quality and propose next experiment
