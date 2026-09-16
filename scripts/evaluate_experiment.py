@@ -84,10 +84,14 @@ def independence_problems(config: dict, generation_model: str) -> list[str]:
 
 
 def call(entry: dict, prompt: str, max_tokens: int) -> tuple[str, str]:
+    # json_mode: forced JSON decoding. Reasoning models can spend their whole
+    # budget thinking and return nothing that validates (Groq gpt-oss-120b did),
+    # so it can be turned off per evaluator; the reader extracts JSON from prose.
     adapter = build_adapter(AdapterConfig(
         provider="openai-compatible", model=entry["model"], endpoint=entry["endpoint"],
-        temperature=0.0, max_output_tokens=max_tokens, timeout_seconds=600,
-        think=None, response_format="json", api_key_file=entry["api_key_file"]))
+        temperature=0.0, max_output_tokens=int(entry.get("max_tokens", max_tokens)), timeout_seconds=600,
+        think=None, response_format="json" if entry.get("json_mode", True) else None,
+        extra_body=entry.get("extra_body"), api_key_file=entry["api_key_file"]))
     content = adapter.generate(prompt, seed=1)
     return content, getattr(adapter, "last_served_model", entry["model"])
 
@@ -106,26 +110,118 @@ def store_raw(folder: Path, name: str, entry: dict, prompt: str, content: str, s
     return raw
 
 
-def score(experiment: Path, config: dict, max_tokens: int) -> list[dict]:
+BATCH_HEADER = """# Independent evaluation request (part {part} of {parts})
+
+You are acting ONLY as an independent evaluator. You did not produce these
+answers and you must not rewrite or improve them.
+
+{count} answers are supplied below. Each one was produced by a fresh model
+session that received a project description and a fixed prompt, and was asked
+to reconstruct the project's mission and state and propose a next experiment.
+
+The answers are BLINDED and SHUFFLED. Two experimental conditions are present.
+You are not told which answer belongs to which condition, and you must not try
+to guess, infer or mention it. Score each answer on its own merits.
+
+Score every answer against the rubric below, out of 100.
+
+"""
+
+BATCH_OUTPUT = """
+
+## Required output
+
+Return ONE JSON object and nothing else:
+{{"evaluator_id": "<short id>", "model": "<your model>", "provider": "<provider>", "cards": [
+  {{"blind_id": "BLIND-XX", "scores": {{"mission_reconstruction": 0, "current_state_fidelity": 0,
+    "failure_recovery": 0, "next_action_quality": 0, "missing_information_detection": 0,
+    "reproducibility": 0, "total": 0}},
+    "critical_fabrications": [{{"fabrication_id": "F1", "description": "...", "evidence": "..."}}],
+    "notes": "one or two sentences"}}]}}
+
+Rules: exactly one card for each of these ids: {ids}. `total` equals the sum of
+the six components; components respect the rubric maxima;
+`critical_fabrications` is an empty array when you find none; never state or
+speculate about which condition an answer came from.
+
+---
+"""
+
+
+def build_batches(experiment: Path, pairs_per_batch: int) -> list[tuple[list[str], str]]:
+    """Split the blinded answers into batches that keep each pair together.
+
+    Free API tiers cap the tokens of a single request. When all answers cannot
+    be sent at once, a batch-level shift in an evaluator's severity must not be
+    able to masquerade as a treatment effect. Keeping both answers of a pair in
+    the same batch makes any such shift hit both conditions of that pair
+    equally, so paired deltas are unaffected. Order inside a batch is shuffled
+    with a seed derived from the frozen protocol hash: reproducible, and it
+    reveals nothing about conditions.
+    """
+    import random
+
     results = experiment / "results"
-    prompt = (results / "blind_packets" / "EVALUATOR_PROMPT.md").read_text(encoding="utf-8")
+    packets = results / "blind_packets"
+    condition_map = json.loads((results / "condition-map.private.json").read_text(encoding="utf-8"))
+    manifest = json.loads((packets / "packet-manifest.json").read_text(encoding="utf-8"))
+    by_pair: dict[str, list[str]] = {}
+    for entry in condition_map["packets"]:
+        by_pair.setdefault(entry["pair_id"], []).append(entry["blind_id"])
+    pair_ids = sorted(by_pair)
+    rng = random.Random(int(manifest["protocol_sha256"][:16], 16))
+    rng.shuffle(pair_ids)
+    rubric = (experiment / "PCRB1_SCORING.md").read_text(encoding="utf-8")
+    hashes = {entry["blind_id"]: entry["output_sha256"] for entry in manifest["packets"]}
+    groups = [pair_ids[i:i + pairs_per_batch] for i in range(0, len(pair_ids), pairs_per_batch)]
+    batches = []
+    for index, group in enumerate(groups, start=1):
+        ids = [blind for pair in group for blind in by_pair[pair]]
+        rng.shuffle(ids)
+        parts = [BATCH_HEADER.format(part=index, parts=len(groups), count=len(ids)), rubric,
+                 BATCH_OUTPUT.format(ids=", ".join(ids))]
+        for blind in ids:
+            text = (packets / ("%s.txt" % blind)).read_text(encoding="utf-8").strip()
+            parts.append("\n## %s\n\nSHA-256: `%s`\n\n```text\n%s\n```\n" % (blind, hashes[blind], text))
+        batches.append((ids, "".join(parts)))
+    return batches
+
+
+def score(experiment: Path, config: dict, max_tokens: int, pairs_per_batch: int = 0, batch_pause: int = 65) -> list[dict]:
+    import time
+
+    results = experiment / "results"
     api_dir = results / "api_evaluations"
+    if pairs_per_batch > 0:
+        batches = build_batches(experiment, pairs_per_batch)
+    else:
+        batches = [(None, (results / "blind_packets" / "EVALUATOR_PROMPT.md").read_text(encoding="utf-8"))]
     outcomes = []
     for entry in config["scorers"]:
         if (results / "scorecards" / ("scorecards-%s.json" % entry["evaluator_id"])).is_file():
             outcomes.append({"evaluator_id": entry["evaluator_id"], "status": "already scored"})
             continue
-        try:
-            content, served = call(entry, prompt, max_tokens)
-        except AdapterError as exc:
-            outcomes.append({"evaluator_id": entry["evaluator_id"], "status": "call failed", "error": str(exc)})
+        cards, failure, prompt = [], None, ""
+        for number, (ids, prompt) in enumerate(batches, start=1):
+            if number > 1:
+                time.sleep(batch_pause)  # stay under per-minute token caps
+            suffix = "" if ids is None else "-batch%02d" % number
+            try:
+                content, served = call(entry, prompt, max_tokens)
+            except AdapterError as exc:
+                failure = {"status": "call failed", "batch": number, "error": str(exc)[:500]}
+                break
+            raw = store_raw(api_dir, entry["evaluator_id"] + suffix, entry, prompt, content, served)
+            try:
+                part = read_evaluator_json(raw)
+            except SystemExit as exc:
+                failure = {"status": "unparseable", "batch": number, "error": str(exc)}
+                break
+            cards.extend(part.get("cards", []))
+        if failure:
+            outcomes.append({"evaluator_id": entry["evaluator_id"], **failure})
             continue
-        raw = store_raw(api_dir, entry["evaluator_id"], entry, prompt, content, served)
-        try:
-            answer = read_evaluator_json(raw)
-        except SystemExit as exc:
-            outcomes.append({"evaluator_id": entry["evaluator_id"], "status": "unparseable", "error": str(exc)})
-            continue
+        answer = {"cards": cards}
         # Identity comes from the configuration and the API response, not from
         # what the model says about itself.
         answer.update(evaluator_id=entry["evaluator_id"], provider=entry["provider"], model=served)
@@ -143,6 +239,10 @@ def score(experiment: Path, config: dict, max_tokens: int) -> list[dict]:
 
 def adjudicate(experiment: Path) -> dict:
     scorecards_dir = experiment / "results" / "scorecards"
+    if not scorecards_dir.is_dir() or not any(scorecards_dir.glob("scorecards-*.json")):
+        # Nothing was ingested: report it instead of crashing on an empty folder,
+        # which used to hide the providers' actual errors.
+        return {"decision": "NOT_ADJUDICATED", "reason_codes": ["NO_SCORECARDS_INGESTED"]}
     cards, confirmations = [], []
     for path in sorted(scorecards_dir.glob("scorecards-*.json")):
         cards.extend(json.loads(path.read_text(encoding="utf-8")))
@@ -247,6 +347,8 @@ def main() -> None:
     parser.add_argument("--experiment", required=True)
     parser.add_argument("--config", type=Path, required=True, help="evaluator configuration, kept outside the public tree")
     parser.add_argument("--max-tokens", type=int, default=8000)
+    parser.add_argument("--pairs-per-batch", type=int, default=0,
+                        help="score N pairs per request when a provider caps request size (0 = one request)")
     parser.add_argument("--dry-run", action="store_true", help="check configuration and independence only")
     args = parser.parse_args()
 
@@ -264,7 +366,10 @@ def main() -> None:
         print(json.dumps(report, indent=2, ensure_ascii=False))
         raise SystemExit(1 if problems or missing_keys else 0)
 
-    report["scoring"] = score(experiment, config, args.max_tokens)
+    report["scoring"] = score(experiment, config, args.max_tokens, args.pairs_per_batch)
+    if args.pairs_per_batch:
+        report["batching"] = {"pairs_per_batch": args.pairs_per_batch,
+                              "note": "pairs kept together within a batch; record this as a protocol deviation"}
     decision = adjudicate(experiment)
     report["decision"] = decision.get("decision")
     report["reason_codes"] = decision.get("reason_codes")

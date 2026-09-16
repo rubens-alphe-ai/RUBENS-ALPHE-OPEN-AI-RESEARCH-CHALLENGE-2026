@@ -33,6 +33,8 @@ class AdapterConfig:
     timeout_seconds: int = 300
     think: bool | None = False
     response_format: str | None = None
+    # Provider-specific request fields, for example {"reasoning_effort": "low"}.
+    extra_body: dict | None = None
     api_key_env: str = ""
     api_key_file: str = ""
 
@@ -158,6 +160,8 @@ class OpenAICompatibleAdapter:
         }
         if self.config.response_format == "json":
             request_body["response_format"] = {"type": "json_object"}
+        if self.config.extra_body:
+            request_body.update(self.config.extra_body)
         request = urllib.request.Request(
             self.config.endpoint,
             data=json.dumps(request_body).encode("utf-8"),
