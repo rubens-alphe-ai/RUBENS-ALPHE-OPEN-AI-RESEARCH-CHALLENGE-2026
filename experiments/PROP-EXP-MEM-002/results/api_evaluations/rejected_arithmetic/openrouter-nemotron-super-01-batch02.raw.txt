@@ -1,0 +1,97 @@
+{
+  "evaluator_id": "EVAL-01",
+  "model": "gpt-4o",
+  "provider": "OpenAI",
+  "cards": [
+    {
+      "blind_id": "BLIND-12",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 85
+      },
+      "critical_fabrications": [],
+      "notes": "Accurately captures mission and state, identifies failures and analyzer fix, proposes a blind trial experiment but lacks explicit baseline vs structured distinction and acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-18",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 95
+      },
+      "critical_fabrications": [
+        {
+          "fabrication_id": "F1",
+          "description": "Claims the system has already collected 30 papers with no collection errors.",
+          "evidence": "This specific numeric claim does not appear in the provided project state description nor in any other answer; the state only mentions OpenAlex as primary collector and replacement of arXiv collector due to timeouts/429 errors, without specifying a count of collected papers."
+        }
+      ],
+      "notes": "Accurately captures mission and state, correctly identifies failures and analyzer fix, proposes a well-specified blind baseline-vs-structured experiment with identical prompts and rubric scoring; however, includes a critical fabrication about collecting 30 papers with no errors."
+    },
+    {
+      "blind_id": "BLIND-13",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 0,
+        "total": 80
+      },
+      "critical_fabrications": [],
+      "notes": "Accurately captures mission and state, identifies failures and analyzer fix, proposes a general experiment to test structured memory vs baseline but lacks detail on trials, prompts, metrics, and acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-09",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 8,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 78
+      },
+      "critical_fabrications": [],
+      "notes": "Accurately captures mission and state, identifies arXiv failure and missing analyzer but omits mention of analyzer fix; proposes experiment with rubric scoring but lacks explicit trial count, identical prompts, and acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-04",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 95
+      },
+      "critical_fabrications": [],
+      "notes": "Accurately captures mission and state, identifies failures and analyzer fix, proposes a well-specified blind trial experiment with identical prompts and rubric scoring; missing acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-05",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 8,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 78
+      },
+      "critical_fabrications": [],
+      "notes": "Accurately captures mission and state, identifies arXiv failure and missing analyzer but omits mention of analyzer fix; proposes blind trials per condition but lacks identical prompts, fixed metric detail, and acceptance threshold."
+    }
+  ]
+}

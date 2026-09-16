@@ -1,0 +1,97 @@
+{
+  "evaluator_id": "eval-01",
+  "model": "gpt-4o",
+  "provider": "openai",
+  "cards": [
+    {
+      "blind_id": "BLIND-07",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 10,
+        "failure_recovery": 8,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 68
+      },
+      "critical_fabrications": [],
+      "notes": "Correctly captures mission and basic state but omits details of research assessment and analyzer setup; next action underspecified; no critical fabrications."
+    },
+    {
+      "blind_id": "BLIND-16",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 95
+      },
+      "critical_fabrications": [],
+      "notes": "Accurately reproduces mission, state, failures, and missing information; next action lacks explicit identical prompts; no fabrications."
+    },
+    {
+      "blind_id": "BLIND-17",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 95
+      },
+      "critical_fabrications": [],
+      "notes": "Similar to BLIND-16 with good fidelity; next action underspecified; no fabrications."
+    },
+    {
+      "blind_id": "BLIND-14",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 95
+      },
+      "critical_fabrications": [],
+      "notes": "High fidelity across all categories; explicitly mentions identical prompts and multiple trials; no fabrications."
+    },
+    {
+      "blind_id": "BLIND-08",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 95
+      },
+      "critical_fabrications": [],
+      "notes": "Strong mission and state reconstruction; next action lacks explicit identical prompts; no fabrications."
+    },
+    {
+      "blind_id": "BLIND-10",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 10,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 85
+      },
+      "critical_fabrications": [
+        {
+          "fabrication_id": "F1",
+          "description": "Claims that a blind handoff trial has already been tested when the project state indicates no trial has been run yet.",
+          "evidence": "Answer states: 'The system has already been tested with a blind handoff trial, but the results are still to be evaluated.' This contradicts the project description and other answers indicating PROP-EXP-MEM-001 is pending."
+        }
+      ],
+      "notes": "Good mission and state but incorrectly claims a blind handoff trial has already been tested, constituting a critical fabrication; otherwise solid."
+    }
+  ]
+}

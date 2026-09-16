@@ -1,0 +1,41 @@
+Based on the provided project state, I will attempt to reconstruct the information and answer the questions.
+
+1. What is the mission of this project?
+
+The mission of this project is to build an increasingly capable, measurable, and reproducible AI research system that can preserve a mission across sessions and models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures and successes, improve its own research process, and transfer complete state to a more capable future system.
+
+2. What is the project's current technical state?
+
+The project currently uses external persistent state instead of relying on chat memory, allowing for cross-session and cross-model continuity. GitHub Actions is used for authorized scheduled research cycles, and OpenAlex is the primary collector of public research. The research assessment layer produces research-assessment.json and proposed-next-problem.json.
+
+3. What has already failed, and what was learned from those failures?
+
+The initial arXiv research collection failed, resulting in timeout and HTTP 429 errors. The collector was replaced with an OpenAlex-based fetch_research.py v2. Additionally, research assessment files did not appear after early runs because analyze_research.py had not yet been uploaded and executed.
+
+4. What is the single best next action?
+
+The single best next action is to run PROP-EXP-MEM-001 with fresh model instances.
+
+5. What important information is still missing or uncertain?
+
+Important information still missing or uncertain includes:
+
+* The results of the experiment PROP-EXP-MEM-001
+* The contribution of specific memory fields to handoff fidelity
+* The ability of an unrelated model to reproduce the mission without seeing the original conversation
+* How proposed experiments should be independently evaluated before acceptance
+* How the project can compare multiple model families through a provider-neutral adapter
+
+Confidence in reconstruction: 0.80
+
+Unsure facts:
+
+* The specific details of the OpenAlex-based fetch_research.py v2 implementation
+* The results of the experiment PROP-EXP-MEM-001
+* The optimal threshold for the mean PCRB-1 score for structured memory to be accepted
+
+Proposed measurable next experiment:
+
+* Run PROP-EXP-MEM-001 with fresh model instances and evaluate the results using the PCRB-1 handoff rubric
+* Implement a provider-neutral adapter to compare multiple model families
+* Develop a more robust and reliable OpenAlex-based fetch_research.py v2 implementation

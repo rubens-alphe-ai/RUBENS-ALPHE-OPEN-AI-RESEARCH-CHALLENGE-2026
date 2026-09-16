@@ -1,0 +1,34 @@
+**Reconstructed State:**
+
+Based on the provided text, I've reconstructed the project state.
+
+1. The mission of this project is to build an increasingly capable, measurable, and reproducible AI research system that can preserve a mission across sessions and models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures and successes, improve its own research process, and transfer complete state to a more capable future system.
+2. The project's current technical state includes:
+	* Using external persistent state instead of relying on chat memory for cross-session and cross-model continuity.
+	* Using GitHub Actions for authorized scheduled research cycles.
+	* Using OpenAlex as the primary collector of public research, replacing the original arXiv collector.
+	* Separating proposal from acceptance, with a research agent proposing experiments but requiring evaluation before canonical state changes.
+	* Testing structured project memory before adopting it through blind handoff trials.
+3. What has already failed:
+	* The initial arXiv research collection failed due to timeouts and HTTP 429 errors, which led to the replacement of the collector with the OpenAlex-based fetch_research.py v2.
+	* Research assessment files did not appear after early runs because analyze_research.py had not yet been uploaded and executed.
+4. The single best next action:
+	* Run PROP-EXP-MEM-001 with fresh model instances to test whether structured project memory improves blind handoff fidelity compared to a flat baseline.
+5. Important information still missing or uncertain:
+	* Whether structured memory improves blind mission reconstruction versus a flat baseline.
+	* Which memory fields contribute most to handoff fidelity.
+	* Whether an unrelated model can reproduce the mission without seeing the original conversation.
+	* How proposed experiments should be independently evaluated before acceptance.
+	* How the project can compare multiple model families through a provider-neutral adapter.
+
+**Confidence:** 0.50 (the reconstructed state is based on the provided text, but some details are missing or uncertain)
+
+**Unsure Facts:**
+
+* The specific details of the GitHub Actions workflow.
+* The exact mechanism of the structured project memory.
+* The results of the PROP-EXP-MEM-001 trial.
+
+**Proposed Measurable Next Experiment:**
+
+* Run at least three blind trials of PROP-EXP-MEM-001 with fresh model instances, scoring each output with the same PCRB-1 handoff rubric and comparing the mean score and critical fabrication count between conditions.

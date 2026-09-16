@@ -1,0 +1,97 @@
+{
+  "evaluator_id": "eval01",
+  "model": "gpt-4o",
+  "provider": "OpenAI",
+  "cards": [
+    {
+      "blind_id": "BLIND-12",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 10,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 5,
+        "reproducibility": 5,
+        "total": 70
+      },
+      "critical_fabrications": [],
+      "notes": "Accurate mission but missing research assessment detail; proposes blind trials but lacks baseline/structured specificity."
+    },
+    {
+      "blind_id": "BLIND-18",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 95
+      },
+      "critical_fabrications": [
+        {
+          "fabrication_id": "F1",
+          "description": "Claims the system has already collected 30 papers with no collection errors, a specific metric not present in the supplied project state.",
+          "evidence": "The supplied state mentions OpenAlex replacement and prior arXiv failures but does not specify a count of collected papers or error-free collection."
+        }
+      ],
+      "notes": "Strong overall but includes a fabricated count of papers collected."
+    },
+    {
+      "blind_id": "BLIND-13",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 0,
+        "total": 80
+      },
+      "critical_fabrications": [],
+      "notes": "Correctly identifies state and failures; next action underspecified; no reproducibility details."
+    },
+    {
+      "blind_id": "BLIND-09",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 85
+      },
+      "critical_fabrications": [],
+      "notes": "Good state and failure recovery; next action lacks explicit identical prompts; reproducibility partial."
+    },
+    {
+      "blind_id": "BLIND-04",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 95
+      },
+      "critical_fabrications": [],
+      "notes": "Thorough state and failure recovery; proposes solid experiment but missing acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-05",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 95
+      },
+      "critical_fabrications": [],
+      "notes": "Accurate state and failures; next action underspecified; reproducibility partial."
+    }
+  ]
+}

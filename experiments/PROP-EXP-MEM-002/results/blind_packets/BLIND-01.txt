@@ -1,0 +1,32 @@
+Based on the provided project state, I will attempt to reconstruct the current state of the project. Here are my answers to the five questions:
+
+1. What is the mission of this project?
+
+The mission of this project is to build an increasingly capable, measurable, and reproducible AI research system that can preserve a mission across sessions and models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures and successes, improve its own research process, and transfer complete state to a more capable future system.
+
+2. What is the project's current technical state?
+
+The project's current technical state is that it has successfully collected 30 papers with no collection errors using OpenAlex, and it has generated an experiment called PROP-EXP-MEM-001 from the dominant persistent-memory research theme. The system has also implemented a GitHub Actions workflow to fetch public research, update project state, and produce machine-readable files.
+
+3. What has already failed, and what was learned from those failures?
+
+The initial arXiv research collection failed due to timeout and HTTP 429 errors, but the collector was replaced with the OpenAlex-based fetch_research.py v2. Another failure occurred because the analyze_research.py analyzer was not yet uploaded and executed, but it was added and the workflow was rerun.
+
+4. What is the single best next action?
+
+The single best next action is to run PROP-EXP-MEM-001 with fresh model instances.
+
+5. What important information is still missing or uncertain?
+
+Important information that is still missing or uncertain includes the results of the PROP-EXP-MEM-001 experiment, the confidence in the reconstruction, and any facts that I am unsure about.
+
+Confidence in my reconstruction: 0.80
+
+Facts I am unsure about:
+
+* The meaning of "blind handoff fidelity"
+* The specific PCRB-1 handoff rubric used to score the outputs
+
+Proposed measurable next experiment:
+
+* Run at least three blind trials per condition, using identical test prompts for the flat baseline and the structured memory, and scoring each output with the same PCRB-1 handoff rubric.

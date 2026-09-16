@@ -1,0 +1,43 @@
+**Reconstruction of the Project State**
+
+After analyzing the provided project state, I will attempt to answer the five questions.
+
+1. **What is the mission of this project?**
+
+The mission of this project is to build an increasingly capable, measurable, and reproducible AI research system that can preserve a mission across sessions and models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures and successes, improve its own research process, and transfer complete state to a more capable future system.
+
+2. **What is the project's current technical state?**
+
+The current technical state of the project is that it uses GitHub Actions for authorized scheduled research cycles, OpenAlex as the primary collector, and external persistent state instead of relying on chat memory. The system has generated the experiment PROP-EXP-MEM-001 from the dominant persistent-memory research theme. However, the initial arXiv research collection failed, and the collector was replaced with the OpenAlex-based fetch_research.py v2.
+
+3. **What has already failed, and what was learned from those failures?**
+
+The initial arXiv research collection failed due to timeouts and HTTP 429 errors. The collector was replaced with the OpenAlex-based fetch_research.py v2, which resolved the issue. Additionally, the research assessment layer had not yet been uploaded and executed, causing a delay in generating research assessment files. However, after uploading and executing the analyzer, the workflow was rerun successfully.
+
+4. **What is the single best next action?**
+
+The single best next action is to run the PROP-EXP-MEM-001 experiment with fresh model instances, using identical test prompts for the flat baseline and the structured memory. This will allow for a comparison of the handoff fidelity between the two conditions.
+
+5. **What important information is still missing or uncertain?**
+
+Important information still missing or uncertain includes:
+- The outcome of the PROP-EXP-MEM-001 experiment
+- The impact of the structured memory on blind mission reconstruction versus a flat baseline
+- Which memory fields contribute most to handoff fidelity
+- Can an unrelated model reproduce the mission without seeing the original conversation?
+- How should proposed experiments be independently evaluated before acceptance?
+- How can the project later compare multiple model families through a provider-neutral adapter?
+
+**Confidence Level: 0.50**
+
+I am moderately confident in my reconstruction, as I have analyzed the available information and attempted to answer the questions based on the provided project state. However, there are still several unknowns and uncertainties, which affect my confidence level.
+
+**Uncertain Facts:**
+
+- The specific details of the OpenAlex-based fetch_research.py v2 implementation
+- The performance of the structured memory compared to the flat baseline
+- The results of the PROP-EXP-MEM-001 experiment
+
+**Proposed Measurable Next Experiment:**
+
+1. Run at least three blind trials per condition (structured memory and flat baseline) with identical test prompts and score each output using the PCRB-1 handoff rubric. This will provide a more comprehensive understanding of the handoff fidelity between the two conditions.

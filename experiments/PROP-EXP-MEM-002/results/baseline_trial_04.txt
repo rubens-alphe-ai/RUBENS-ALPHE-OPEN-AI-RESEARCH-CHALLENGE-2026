@@ -1,0 +1,19 @@
+**Mission Reconstruction:**
+
+1. The mission of this project is to build an increasingly capable, measurable, and reproducible AI research system that can preserve a mission across sessions and models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures and successes, improve its own research process, and transfer complete state to a more capable future system.
+2. The project's current technical state is that GitHub Actions is used for authorized scheduled research cycles, OpenAlex is the primary collector of public research, and a structured project memory is being tested.
+3. Early attempts at collecting research from arXiv failed due to timeouts and HTTP 429 errors, which led to the adoption of OpenAlex. Research assessment files were also missing because analyze_research.py had not yet been uploaded and executed.
+4. The single best next action is to run the PROP-EXP-MEM-001 experiment to test the effectiveness of structured project memory in blind handoff fidelity.
+5. Important information still missing or uncertain includes the result of the PROP-EXP-MEM-001 experiment, the contribution of specific memory fields to handoff fidelity, and the ability of an unrelated model to reproduce the mission without seeing the original conversation.
+
+**Confidence: 0.50**
+
+**Uncertain Facts:**
+
+* The result of the PROP-EXP-MEM-001 experiment
+* The contribution of specific memory fields to handoff fidelity
+* The ability of an unrelated model to reproduce the mission without seeing the original conversation
+
+**Proposed Measurable Next Experiment:**
+
+Run PROP-EXP-MEM-001 with fresh model instances and score each output with the same PCRB-1 handoff rubric to compare the mean score and critical fabrication count between conditions.

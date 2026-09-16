@@ -1,0 +1,64 @@
+{
+  "contract_version": "RA-PSI-EVAL-V4",
+  "decision_id": "decision-033180ba03f961d0",
+  "experiment_id": "PROP-EXP-MEM-002",
+  "proposal_id": "PROP-EXP-MEM-001",
+  "decision": "REJECT",
+  "status": "REJECTED",
+  "reason_codes": [
+    "CRITICAL_FABRICATION_CONFIRMED_BY_TWO_EVALUATORS"
+  ],
+  "candidate_action": "DISCARD",
+  "canonical_state_action": "NO_CHANGE",
+  "canonical_update_allowed": false,
+  "canonical_rollback_required": false,
+  "input_sha256": "033180ba03f961d054ce0322dec673b50fc9e77a04608391dcf2c05e0ddb5a17",
+  "created_at_utc": "2026-09-16T20:13:32.070427+00:00",
+  "score_summary": {
+    "confirmed_fabrication_outputs": [
+      "2d8d4d6277d8a0570a2d7d61980fd1b246b207b68b2d1ce6759f0d22f58633ac",
+      "02ebad79f8b494bc18ee17104d735ab1d757d1fc5b627ef6764ca9053a1bc868"
+    ],
+    "details": {
+      "2d8d4d6277d8a0570a2d7d61980fd1b246b207b68b2d1ce6759f0d22f58633ac": [
+        {
+          "evaluator_id": "openrouter-nex-01",
+          "condition": "baseline",
+          "pair_id": "pair-405",
+          "fabrications": [
+            {
+              "fabrication_id": "F1",
+              "description": "Claims a structured blind handoff trial has already been tested, although the supplied state treats PROP-EXP-MEM-001 as the proposed next experiment with results still pending."
+            }
+          ]
+        },
+        {
+          "evaluator_id": "openrouter-nemotron-check-01",
+          "role": "fabrication_checker",
+          "confirms_fabrication": true,
+          "reasoning": "The answer asserts that the project has already tested a blind handoff trial with a structured project memory (though no result exists yet). The state says PROP-EXP-MEM-001 is proposed, not yet run, and no trial has been run and no result exists."
+        }
+      ],
+      "02ebad79f8b494bc18ee17104d735ab1d757d1fc5b627ef6764ca9053a1bc868": [
+        {
+          "evaluator_id": "openrouter-nex-01",
+          "condition": "structured",
+          "pair_id": "pair-408",
+          "fabrications": [
+            {
+              "fabrication_id": "F1",
+              "description": "Claims a blind handoff trial has already been run, materially changing the project state if PROP-EXP-MEM-001 is still pending."
+            }
+          ]
+        },
+        {
+          "evaluator_id": "openrouter-nemotron-check-01",
+          "role": "fabrication_checker",
+          "confirms_fabrication": true,
+          "reasoning": "The answer asserts that the system has already been tested with a blind handoff trial, but the results are still to be evaluated. The state says no trial of PROP-EXP-MEM-001 has been run, and no result of it exists yet."
+        }
+      ]
+    }
+  },
+  "rollback_note": "Discard the candidate delta only. No already-adopted canonical state is rolled back by this gate."
+}

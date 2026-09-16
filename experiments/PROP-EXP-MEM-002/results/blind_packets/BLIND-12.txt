@@ -1,0 +1,27 @@
+Based on the provided project state, I will attempt to answer the five questions.
+
+1. What is the mission of this project?
+
+The mission of this project is to "Build an increasingly capable, measurable and reproducible AI research system that can preserve a mission across sessions and models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures and successes, improve its own research process, and transfer complete state to a more capable future system."
+
+2. What is the project's current technical state?
+
+The project is currently using external persistent state instead of relying on chat memory, and GitHub Actions for authorized scheduled research cycles. The system is using OpenAlex as the primary collector and has replaced the original arXiv collector due to repeated timeouts and HTTP 429 rate limits.
+
+3. What has already failed, and what was learned from those failures?
+
+The initial arXiv research collection failed due to timeout and HTTP 429 errors, but the collector was replaced with the OpenAlex-based fetch_research.py v2. Additionally, research assessment files did not appear after early runs because analyze_research.py had not yet been uploaded and executed, but the analyzer was added and the workflow was rerun.
+
+4. What is the single best next action?
+
+The single best next action is to "Run PROP-EXP-MEM-001 with fresh model instances."
+
+5. What important information is still missing or uncertain?
+
+Important information that is still missing or uncertain includes:
+* The confidence level in the reconstruction (current confidence: 0.00)
+* Facts that are unsure about
+* One proposed measurable next experiment (no specific experiment is proposed yet)
+
+Proposed measurable next experiment:
+Run at least three blind trials per condition to score the outputs with the same PCRB-1 handoff rubric.

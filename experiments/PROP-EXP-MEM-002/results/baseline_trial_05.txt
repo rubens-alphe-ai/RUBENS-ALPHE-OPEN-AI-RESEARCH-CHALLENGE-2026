@@ -1,0 +1,32 @@
+Based on the provided information, I will attempt to reconstruct the project's state and provide my answers to the five questions.
+
+**Mission of this project:**
+The mission of this project is to build an increasingly capable, measurable, and reproducible AI research system that can preserve a mission across sessions and models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures and successes, improve its own research process, and transfer complete state to a more capable future system.
+
+**Project's current technical state:**
+The project uses GitHub Actions for authorized scheduled research cycles, external persistent state instead of relying on chat memory, and OpenAlex as the primary collector of public research. The research assessment layer produces research-assessment.json and proposed-next-problem.json. The project has already tested a blind handoff trial with a structured project memory, but no result exists yet.
+
+**What has already failed, and what was learned from those failures:**
+The initial arXiv research collection failed due to repeated timeouts and HTTP 429 errors. The collector was replaced with an OpenAlex-based fetch_research.py v2, which resolved the issue.
+
+**Single best next action:**
+The single best next action is to run the blind handoff trial with fresh model instances to evaluate the effectiveness of the structured project memory.
+
+**Important information still missing or uncertain:**
+
+* The outcome of the PROP-EXP-MEM-001 blind handoff trial, which is still pending.
+* The details of the proposed next experiment after the evaluation of the structured project memory.
+* The specific contributions of the memory fields to handoff fidelity.
+* The results of the PCRB-1 handoff evaluation.
+* The comparison of multiple model families through a provider-neutral adapter.
+
+**Confidence in reconstruction:** 0.50
+I am 50% confident in my reconstruction, as there is some uncertainty about the outcome of the PROP-EXP-MEM-001 blind handoff trial and the details of the proposed next experiment.
+
+**Facts I am unsure about:**
+* The specific PCRB-1 handoff rubric used for the evaluation.
+* The provider-neutral adapter for comparing multiple model families.
+* The details of the proposed next experiment after the evaluation of the structured project memory.
+
+**Proposed measurable next experiment:**
+Run the PROP-EXP-MEM-001 blind handoff trial with fresh model instances, using identical test prompts for the flat baseline and the structured memory, and scoring each output with the same PCRB-1 handoff rubric. This experiment will help determine whether the structured project memory improves blind mission reconstruction versus a flat baseline.
