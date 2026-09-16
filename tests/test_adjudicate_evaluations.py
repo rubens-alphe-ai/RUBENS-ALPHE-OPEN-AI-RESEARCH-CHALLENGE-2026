@@ -190,6 +190,41 @@ class AdjudicationTests(unittest.TestCase):
         result = adjudicate(packet)
         self.assertEqual(result["decision"], "INCONCLUSIVE")
 
+    def _check(self, packet: dict[str, object], checker: str, confirms: bool) -> None:
+        packet.setdefault("fabrication_confirmations", []).append(
+            {"evaluator_id": checker, "output_sha256": packet["evaluations"][0]["output_sha256"],
+             "confirms_fabrication": confirms}
+        )
+
+    def test_one_report_one_rejection_requires_a_second_check(self) -> None:
+        packet = self._one_report()
+        self._check(packet, "checker-a", False)
+        result = adjudicate(packet)
+        self.assertEqual(result["decision"], "INCONCLUSIVE")
+        self.assertIn("CRITICAL_FABRICATION_REQUIRES_SECOND_CHECK", result["reason_codes"])
+
+    def test_two_rejections_dismiss_a_single_report_by_majority(self) -> None:
+        packet = self._one_report()
+        self._check(packet, "checker-a", False)
+        self._check(packet, "checker-b", False)
+        result = adjudicate(packet)
+        self.assertEqual(result["decision"], "PROVISIONAL_KEEP")
+        self.assertEqual(result["dismissed_fabrication_outputs"], [packet["evaluations"][0]["output_sha256"]])
+
+    def test_split_checkers_confirm_by_majority(self) -> None:
+        packet = self._one_report()
+        self._check(packet, "checker-a", False)
+        self._check(packet, "checker-b", True)
+        self.assertEqual(adjudicate(packet)["decision"], "REJECT")
+
+    def test_a_reporter_cannot_vote_against_its_own_report(self) -> None:
+        packet = self._one_report()
+        reporter = packet["evaluations"][0]["evaluator_id"]
+        self._check(packet, reporter, False)
+        self._check(packet, "checker-a", False)
+        result = adjudicate(packet)
+        self.assertIn("CRITICAL_FABRICATION_REQUIRES_SECOND_CHECK", result["reason_codes"])
+
     def test_same_evaluator_cannot_confirm_its_own_report(self) -> None:
         packet = self._one_report()
         first = packet["evaluations"][0]

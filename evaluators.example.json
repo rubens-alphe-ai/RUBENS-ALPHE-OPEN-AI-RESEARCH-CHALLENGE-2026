@@ -1,7 +1,7 @@
 {
   "config_version": "RA-PSI-EVALUATORS-V1",
   "_how_to_use": "Copy this file OUTSIDE the project (for example to ~/.ra-psi/evaluators.json), put each API key alone in the file named by api_key_file, then run: python scripts/evaluate_experiment.py --experiment <ID> --config ~/.ra-psi/evaluators.json --dry-run",
-  "_rules": "At least two scorers from different providers. No scorer or checker may be the generator model. Pin exact model names: a router that picks a model at random makes the evaluator identity unreproducible. Model names below are examples to verify against each provider's current list.",
+  "_rules": "At least two scorers from different providers. No scorer or checker may be the generator model. Pin exact model names: a router that picks a model at random makes the evaluator identity unreproducible. Model names below are examples to verify against each provider's current list. Configure at least two checkers from providers other than the scorers: a split between a reporter and the first checker calls a second one, and the majority decides.",
   "scorers": [
     {
       "evaluator_id": "gemini-api-01",
@@ -25,6 +25,13 @@
       "model": "PIN-A-SPECIFIC-FREE-MODEL-HERE",
       "endpoint": "https://openrouter.ai/api/v1/chat/completions",
       "api_key_file": "~/.ra-psi/keys/openrouter.key"
+    },
+    {
+      "evaluator_id": "mistral-check-01",
+      "provider": "Mistral",
+      "model": "PIN-A-SPECIFIC-MODEL-HERE",
+      "endpoint": "https://api.mistral.ai/v1/chat/completions",
+      "api_key_file": "~/.ra-psi/keys/mistral.key"
     }
   ]
 }
