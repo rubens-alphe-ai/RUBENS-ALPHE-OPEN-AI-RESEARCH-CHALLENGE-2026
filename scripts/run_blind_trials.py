@@ -11,6 +11,8 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import sys
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -32,6 +34,62 @@ def prompt_for(root: Path, trial: dict[str, object], prompt_path: Path) -> str:
     # Deliberately provide only the state and the fixed prompt.  Do not add the
     # condition label, prior answers, scores or expected result.
     return state_path.read_text(encoding="utf-8") + "\n\n" + prompt_path.read_text(encoding="utf-8")
+
+
+TRANSIENT_MARKERS = ("HTTP Error 500", "HTTP Error 502", "HTTP Error 503", "timed out", "Connection refused", "Connection reset")
+
+
+def free_memory_mb() -> int | None:
+    """Free physical memory in MB, or None when it cannot be measured."""
+    try:
+        if sys.platform == "win32":
+            import ctypes
+
+            class MemoryStatus(ctypes.Structure):
+                _fields_ = [("dwLength", ctypes.c_ulong), ("dwMemoryLoad", ctypes.c_ulong),
+                            ("ullTotalPhys", ctypes.c_ulonglong), ("ullAvailPhys", ctypes.c_ulonglong),
+                            ("ullTotalPageFile", ctypes.c_ulonglong), ("ullAvailPageFile", ctypes.c_ulonglong),
+                            ("ullTotalVirtual", ctypes.c_ulonglong), ("ullAvailVirtual", ctypes.c_ulonglong),
+                            ("ullAvailExtendedVirtual", ctypes.c_ulonglong)]
+
+            status = MemoryStatus()
+            status.dwLength = ctypes.sizeof(MemoryStatus)
+            ctypes.windll.kernel32.GlobalMemoryStatusEx(ctypes.byref(status))
+            return int(status.ullAvailPhys // (1024 * 1024))
+        with open("/proc/meminfo", encoding="utf-8") as handle:
+            for line in handle:
+                if line.startswith("MemAvailable:"):
+                    return int(line.split()[1]) // 1024
+    except Exception:
+        return None
+    return None
+
+
+def generate_with_retries(adapter, prompt: str, seed: int, args: argparse.Namespace) -> str:
+    """Retry transient model failures instead of leaving a gap for a human.
+
+    On 2026-09-16 one trial failed with HTTP 500 when free memory fell to
+    123 MB, and the series needed a manual resume. Transient errors are now
+    retried after waiting for memory to recover; a non-transient error, or the
+    last retry, still raises and is recorded as before.
+    """
+    for attempt in range(args.retries + 1):
+        available = free_memory_mb()
+        waited = 0
+        while available is not None and available < args.min_free_mb and waited < args.memory_wait_seconds:
+            print(json.dumps({"waiting_for_memory_mb": args.min_free_mb, "free_mb": available}))
+            time.sleep(15)
+            waited += 15
+            available = free_memory_mb()
+        try:
+            return adapter.generate(prompt, seed)
+        except AdapterError as exc:
+            if attempt == args.retries or not any(marker in str(exc) for marker in TRANSIENT_MARKERS):
+                raise
+            delay = 20 * (attempt + 1)
+            print(json.dumps({"transient_error": str(exc), "retry_in_seconds": delay, "attempt": attempt + 1}))
+            time.sleep(delay)
+    raise AdapterError("unreachable")
 
 
 def run(args: argparse.Namespace) -> int:
@@ -76,7 +134,7 @@ def run(args: argparse.Namespace) -> int:
         stale_error = output_path.with_suffix(".error.json")
         prompt = prompt_for(root, trial, prompt_path)
         try:
-            content = adapter.generate(prompt, int(trial["seed"]))
+            content = generate_with_retries(adapter, prompt, int(trial["seed"]), args)
         except AdapterError as exc:
             error_path = output_path.with_suffix(".error.json")
             error_path.write_text(
@@ -168,6 +226,9 @@ def main() -> None:
     )
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--overwrite", action="store_true")
+    parser.add_argument("--retries", type=int, default=3, help="retries for transient model errors")
+    parser.add_argument("--min-free-mb", type=int, default=400, help="wait for this much free memory before each call")
+    parser.add_argument("--memory-wait-seconds", type=int, default=300)
     parser.add_argument(
         "--resume",
         action="store_true",

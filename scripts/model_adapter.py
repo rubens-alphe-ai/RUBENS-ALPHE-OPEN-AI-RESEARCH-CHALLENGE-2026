@@ -153,6 +153,8 @@ class OpenAICompatibleAdapter:
             # label, not as a reproducibility guarantee.
             "seed": seed,
         }
+        if self.config.response_format == "json":
+            request_body["response_format"] = {"type": "json_object"}
         request = urllib.request.Request(
             self.config.endpoint,
             data=json.dumps(request_body).encode("utf-8"),
@@ -171,6 +173,9 @@ class OpenAICompatibleAdapter:
         except (OSError, urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
             raise AdapterError(f"provider request failed: {exc}") from exc
 
+        # The model that actually answered can differ from the one requested
+        # (aliases, routers, silent upgrades). Provenance records the served one.
+        self.last_served_model = str(payload.get("model") or self.config.model)
         choices = payload.get("choices") or []
         if not choices:
             raise AdapterError("provider response contained no choices")
