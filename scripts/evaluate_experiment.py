@@ -92,8 +92,24 @@ def call(entry: dict, prompt: str, max_tokens: int) -> tuple[str, str]:
         temperature=0.0, max_output_tokens=int(entry.get("max_tokens", max_tokens)), timeout_seconds=600,
         think=None, response_format="json" if entry.get("json_mode", True) else None,
         extra_body=entry.get("extra_body"), api_key_file=entry["api_key_file"]))
-    content = adapter.generate(prompt, seed=1)
-    return content, getattr(adapter, "last_served_model", entry["model"])
+    # Free tiers share capacity: "temporarily rate-limited upstream" (429),
+    # gateway errors and read timeouts are routine and pass within minutes.
+    # They are retried with growing pauses; any other error is raised at once.
+    import time
+
+    transient = ("HTTP 429", "HTTP 502", "HTTP 503", "HTTP 504", "timed out", "provider request failed")
+    delays = (20, 45, 90, 150, 240)
+    for attempt in range(len(delays) + 1):
+        try:
+            content = adapter.generate(prompt, seed=1)
+            return content, getattr(adapter, "last_served_model", entry["model"])
+        except AdapterError as exc:
+            if attempt == len(delays) or not any(marker in str(exc) for marker in transient):
+                raise
+            print(json.dumps({"evaluator_id": entry["evaluator_id"], "transient_error": str(exc)[:160],
+                              "retry_in_seconds": delays[attempt]}), flush=True)
+            time.sleep(delays[attempt])
+    raise AdapterError("unreachable")
 
 
 def store_raw(folder: Path, name: str, entry: dict, prompt: str, content: str, served: str) -> Path:
