@@ -7,6 +7,7 @@ on:
       - "experiments/**"
       - "schemas/**"
       - "scripts/**"
+      - "tests/**"
       - "bridge/**"
       - ".github/workflows/evaluation-gate.yml"
 
@@ -23,6 +24,8 @@ jobs:
           python-version: "3.12"
       - name: Check public tree for secrets
         run: python scripts/check_public_safety.py .
+      - name: Unit tests, including published-hash integrity
+        run: python -m unittest discover -s tests
       - name: Validate machine-readable artifacts
         run: python scripts/validate_artifacts.py
       - name: Run evidence gate when scorecards exist

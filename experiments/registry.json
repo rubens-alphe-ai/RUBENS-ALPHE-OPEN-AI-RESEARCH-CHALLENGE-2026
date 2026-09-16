@@ -56,6 +56,20 @@
       "holdout_required": true,
       "regression_suite_required": true,
       "notes": "Adjudicated REJECT on 2026-09-16: one critical fabrication confirmed in each condition. Hypothesis not supported: structured scored lower for both scorers (-4.4 and -2.1 mean paired delta, not significant). See RESULT.md. Followed by PROP-EXP-MEM-003."
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-003",
+      "title": "Structure-only Handoff with a Capable Generator",
+      "status": "OPEN",
+      "capability_target": "blind cross-model mission reconstruction",
+      "hypothesis": "Holding information content constant, a sectioned project state improves blind handoff fidelity over the same facts in prose, without increasing critical fabrications, for a capable hosted generator.",
+      "metric": "PCRB-2 score (components only, totals computed), paired delta and confirmed critical fabrications per condition",
+      "acceptance_rule": "V4 gate, pilot stage, ADR-004 options: thirty pairs; REJECT if structured has more confirmed fabrications, mean improvement < 10 or lower 95% bound <= 5; INCONCLUSIVE if scorers disagree by > 15 on more than 20% of pairs; best outcome PROVISIONAL_KEEP.",
+      "protocol_path": "experiments/PROP-EXP-MEM-003/PROTOCOL.md",
+      "evidence_stage": "PILOT",
+      "holdout_required": true,
+      "regression_suite_required": true,
+      "notes": "Same inputs as MEM-002; generator qwen/qwen3.8-27b on Groq; pre-registered scorer and checker ladders; runs unattended through scripts/run_experiment.py."
     }
   ]
 }

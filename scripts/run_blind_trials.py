@@ -36,7 +36,10 @@ def prompt_for(root: Path, trial: dict[str, object], prompt_path: Path) -> str:
     return state_path.read_text(encoding="utf-8") + "\n\n" + prompt_path.read_text(encoding="utf-8")
 
 
-TRANSIENT_MARKERS = ("HTTP Error 500", "HTTP Error 502", "HTTP Error 503", "timed out", "Connection refused", "Connection reset")
+# The OpenAI-compatible adapter reports "provider returned HTTP 429"; free API
+# tiers answer 429 routinely and say how long to wait.
+TRANSIENT_MARKERS = ("HTTP Error 500", "HTTP Error 502", "HTTP Error 503", "timed out", "Connection refused", "Connection reset",
+                     "HTTP 429", "HTTP 500", "HTTP 502", "HTTP 503", "provider request failed", "rate-limited")
 
 
 def free_memory_mb() -> int | None:
@@ -74,7 +77,8 @@ def generate_with_retries(adapter, prompt: str, seed: int, args: argparse.Namesp
     last retry, still raises and is recorded as before.
     """
     for attempt in range(args.retries + 1):
-        available = free_memory_mb()
+        # Memory only matters when the model runs on this machine.
+        available = free_memory_mb() if args.provider == "ollama" else None
         waited = 0
         while available is not None and available < args.min_free_mb and waited < args.memory_wait_seconds:
             print(json.dumps({"waiting_for_memory_mb": args.min_free_mb, "free_mb": available}))
@@ -86,7 +90,7 @@ def generate_with_retries(adapter, prompt: str, seed: int, args: argparse.Namesp
         except AdapterError as exc:
             if attempt == args.retries or not any(marker in str(exc) for marker in TRANSIENT_MARKERS):
                 raise
-            delay = 20 * (attempt + 1)
+            delay = max(20 * (attempt + 1), getattr(exc, "retry_after", None) or 0)
             print(json.dumps({"transient_error": str(exc), "retry_in_seconds": delay, "attempt": attempt + 1}))
             time.sleep(delay)
     raise AdapterError("unreachable")
@@ -114,6 +118,7 @@ def run(args: argparse.Namespace) -> int:
         think=args.think,
         api_key_env=args.api_key_env,
         api_key_file=args.api_key_file,
+        extra_body=getattr(args, "extra_body", None),
     )
 
     if args.dry_run:

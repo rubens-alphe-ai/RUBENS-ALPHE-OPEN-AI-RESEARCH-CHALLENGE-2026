@@ -1,0 +1,96 @@
+name: Run experiment (unattended)
+
+# Runs a pre-registered experiment end to end on GitHub's machines, so nothing
+# depends on the owner's PC being awake. Results come back as a pull request;
+# merging stays the owner's decision.
+#
+# One-time setup by the owner (Settings > Secrets and variables > Actions):
+#   GROQ_API_KEY, OPENROUTER_API_KEY  - evaluator and generator keys
+#   RA_PSI_MAP_PASSPHRASE             - encrypts the private condition map
+# Keys never appear in the repository or in logs.
+
+on:
+  workflow_dispatch:
+    inputs:
+      experiment:
+        description: "Experiment id, e.g. PROP-EXP-MEM-003"
+        required: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: run-${{ github.event.inputs.experiment }}
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    env:
+      EXPERIMENT: ${{ github.event.inputs.experiment }}
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      MAP_PASSPHRASE: ${{ secrets.RA_PSI_MAP_PASSPHRASE }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refuse to start without the required secrets or a pre-registered policy
+        shell: bash
+        run: |
+          case "$EXPERIMENT" in PROP-EXP-*) ;; *) echo "invalid experiment id"; exit 1;; esac
+          test -f "experiments/$EXPERIMENT/evaluation_policy.json" || { echo "no evaluation_policy.json"; exit 1; }
+          for name in GROQ_API_KEY OPENROUTER_API_KEY MAP_PASSPHRASE; do
+            if [ -z "${!name}" ]; then echo "missing secret for $name"; exit 1; fi
+          done
+
+      - name: Tests and public-safety scan
+        run: |
+          python -m unittest discover -s tests
+          python scripts/check_public_safety.py .
+
+      - name: Run the experiment
+        shell: bash
+        run: |
+          printf '%s' '{"keys": {"groq": {"api_key_env": "GROQ_API_KEY"}, "openrouter": {"api_key_env": "OPENROUTER_API_KEY"}}}' > "$RUNNER_TEMP/run-config.json"
+          # Full output names conditions next to output hashes; it is kept
+          # out of the public log and stored encrypted with the condition map.
+          set +e
+          python scripts/run_experiment.py --experiment "$EXPERIMENT" --config "$RUNNER_TEMP/run-config.json" > "$RUNNER_TEMP/run.log" 2>&1
+          echo "exit code $?"
+          python -c "import json,sys; r=json.load(open(sys.argv[1])); print(r['status']); [print(s['step'], s['status']) for s in r['steps']]" "experiments/$EXPERIMENT/results/run-report.json" || true
+
+      - name: Encrypt private files
+        shell: bash
+        run: |
+          results="experiments/$EXPERIMENT/results"
+          for file in "$results/condition-map.private.json" "$RUNNER_TEMP/run.log"; do
+            if [ -f "$file" ]; then
+              target="$results/$(basename "$file").enc"
+              openssl enc -aes-256-cbc -pbkdf2 -iter 200000 -salt -pass env:MAP_PASSPHRASE -in "$file" -out "$target"
+            fi
+          done
+          rm -f "$results/condition-map.private.json"
+
+      - name: Commit results to a branch and open a pull request
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          branch="runs/${EXPERIMENT}-${GITHUB_RUN_ID}"
+          git config user.name "ra-psi-runner"
+          git config user.email "ra-psi-runner@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add "experiments/$EXPERIMENT"
+          python scripts/check_public_safety.py .
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          status=$(python -c "import json; print(json.load(open('experiments/$EXPERIMENT/results/run-report.json'))['status'])")
+          git commit -m "$EXPERIMENT unattended run $GITHUB_RUN_ID: $status"
+          git push origin "$branch"
+          gh pr create --base main --head "$branch" \
+            --title "$EXPERIMENT run $GITHUB_RUN_ID: $status" \
+            --body "Unattended run from workflow run $GITHUB_RUN_ID. See experiments/$EXPERIMENT/results/run-report.json. The condition map and full log are encrypted (.enc); decrypt with RA_PSI_MAP_PASSPHRASE. Merge only after review."

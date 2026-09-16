@@ -1,0 +1,54 @@
+{
+  "policy_version": "RA-PSI-EVAL-POLICY-V1",
+  "notes": "Pre-registered with PROTOCOL.md before any trial. Every rule here is the protocol; applying it is not a deviation.",
+  "generation": {
+    "provider": "openai-compatible",
+    "model": "qwen/qwen3.8-27b",
+    "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+    "key": "groq",
+    "temperature": 0.8,
+    "max_output_tokens": 1000,
+    "timeout_seconds": 300,
+    "extra_body": {"reasoning_effort": "none"},
+    "seeds": [501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512, 513, 514, 515,
+              516, 517, 518, 519, 520, 521, 522, 523, 524, 525, 526, 527, 528, 529, 530],
+    "baseline_state": "STATE_A.txt",
+    "structured_state": "STATE_B.json",
+    "protocol": "PROTOCOL.md"
+  },
+  "rubric": "PCRB2_SCORING.md",
+  "evaluator_writes_total": false,
+  "pairs_per_batch": 2,
+  "reuse_valid_batches": true,
+  "invalid_batch_retries": 1,
+  "default_batch_pause_seconds": 20,
+  "scorer_ladder": [
+    {"evaluator_id": "groq-gpt-oss-120b", "provider": "Groq", "model": "openai/gpt-oss-120b",
+     "endpoint": "https://api.groq.com/openai/v1/chat/completions", "key": "groq",
+     "json_mode": false, "max_tokens": 3000, "extra_body": {"reasoning_effort": "low"}},
+    {"evaluator_id": "openrouter-nex-n2.5-pro", "provider": "OpenRouter", "model": "nex-agi/nex-n2.5-pro:free",
+     "endpoint": "https://openrouter.ai/api/v1/chat/completions", "key": "openrouter",
+     "json_mode": false, "max_tokens": 16000},
+    {"evaluator_id": "openrouter-nemotron-super", "provider": "OpenRouter", "model": "nvidia/nemotron-3-super-120b-a12b:free",
+     "endpoint": "https://openrouter.ai/api/v1/chat/completions", "key": "openrouter",
+     "json_mode": false, "max_tokens": 16000},
+    {"evaluator_id": "openrouter-glm-5.2", "provider": "OpenRouter", "model": "z-ai/glm-5.2:free",
+     "endpoint": "https://openrouter.ai/api/v1/chat/completions", "key": "openrouter",
+     "json_mode": false, "max_tokens": 16000}
+  ],
+  "checker_ladder": [
+    {"evaluator_id": "check-nemotron-super", "provider": "OpenRouter", "model": "nvidia/nemotron-3-super-120b-a12b:free",
+     "endpoint": "https://openrouter.ai/api/v1/chat/completions", "key": "openrouter",
+     "json_mode": false, "max_tokens": 16000},
+    {"evaluator_id": "check-glm-5.2", "provider": "OpenRouter", "model": "z-ai/glm-5.2:free",
+     "endpoint": "https://openrouter.ai/api/v1/chat/completions", "key": "openrouter",
+     "json_mode": false, "max_tokens": 16000},
+    {"evaluator_id": "check-groq-gpt-oss-20b", "provider": "Groq", "model": "openai/gpt-oss-20b",
+     "endpoint": "https://api.groq.com/openai/v1/chat/completions", "key": "groq",
+     "json_mode": false, "max_tokens": 3000, "extra_body": {"reasoning_effort": "low"}}
+  ],
+  "evidence_policy": {
+    "fabrication_rule": "comparative",
+    "max_disagreeing_pair_fraction": 0.2
+  }
+}
