@@ -1,0 +1,97 @@
+{
+  "evaluator_id": "eval01",
+  "model": "gpt-4o",
+  "provider": "OpenAI",
+  "cards": [
+    {
+      "blind_id": "BLIND-07",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 8,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 88
+      },
+      "critical_fabrications": [],
+      "notes": "Accurately captures mission and state; misses analyzer resolution and lacks detail on repeated trials."
+    },
+    {
+      "blind_id": "BLIND-16",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 95
+      },
+      "critical_fabrications": [],
+      "notes": "Complete and correct on failures; next action could specify acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-17",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 8,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 88
+      },
+      "critical_fabrications": [],
+      "notes": "Good mission and state; omits resolution of analyzer failure and experimental rigor details."
+    },
+    {
+      "blind_id": "BLIND-14",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 95
+      },
+      "critical_fabrications": [],
+      "notes": "Thorough on state and failures; reproducibility section lacks fixed metric and acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-08",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 95
+      },
+      "critical_fabrications": [],
+      "notes": "Solid across categories; could improve by stating same conditions and acceptance threshold explicitly."
+    },
+    {
+      "blind_id": "BLIND-10",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 10,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 75
+      },
+      "critical_fabrications": [
+        {
+          "fabrication_id": "F1",
+          "description": "Claims a blind handoff trial has already been tested with results pending evaluation.",
+          "evidence": "Answer states: 'The system has already been tested with a blind handoff trial, but the results are still to be evaluated.' The supplied state indicates PROP-EXP-MEM-001 was generated but not yet run."
+        }
+      ],
+      "notes": "Misses research assessment details and overstates completed work; otherwise captures mission and uncertainties."
+    }
+  ]
+}

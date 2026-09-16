@@ -1,0 +1,16 @@
+{
+  "policy_version": "RA-PSI-EVAL-POLICY-V1",
+  "notes": "Copy to experiments/<ID>/evaluation_policy.json and commit it before any trial. Everything here is then pre-registered: using it is the protocol, not a deviation. Without this file an experiment keeps the rules MEM-001 and MEM-002 were frozen with.",
+  "evaluator_writes_total": false,
+  "reuse_valid_batches": true,
+  "invalid_batch_retries": 1,
+  "default_batch_pause_seconds": 20,
+  "scorer_ladder": [
+    {"provider": "Groq", "model": "openai/gpt-oss-120b"},
+    {"provider": "OpenRouter", "model": "nex-agi/nex-n2.5-pro:free"},
+    {"provider": "OpenRouter", "model": "nvidia/nemotron-3-super-120b-a12b:free"}
+  ],
+  "checker_ladder": [
+    {"provider": "OpenRouter", "model": "nvidia/nemotron-3-super-120b-a12b:free"}
+  ]
+}

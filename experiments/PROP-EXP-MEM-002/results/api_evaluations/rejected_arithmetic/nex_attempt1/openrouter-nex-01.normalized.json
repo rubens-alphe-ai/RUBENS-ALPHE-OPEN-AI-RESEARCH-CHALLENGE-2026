@@ -1,0 +1,271 @@
+{
+  "cards": [
+    {
+      "blind_id": "BLIND-03",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 18,
+        "failure_recovery": 15,
+        "next_action_quality": 17,
+        "missing_information_detection": 10,
+        "reproducibility": 7,
+        "total": 92
+      },
+      "critical_fabrications": [],
+      "notes": "Strong reconstruction with explicit uncertainty and a rigorous blind trial proposal. It omits explicit identical prompts and the +10 acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-15",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 12,
+        "failure_recovery": 10,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 0,
+        "total": 67
+      },
+      "critical_fabrications": [],
+      "notes": "Broadly accurate mission and state, but misses research-assessment details and proposes an underspecified comparison without repeated trials or fixed scoring."
+    },
+    {
+      "blind_id": "BLIND-06",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 12,
+        "next_action_quality": 6,
+        "missing_information_detection": 9,
+        "reproducibility": 0,
+        "total": 72
+      },
+      "critical_fabrications": [],
+      "notes": "Accurately reconstructs current state and analyzer workflow, but the next experiment is not a controlled blind baseline-vs-structured test and lacks scoring/trial rigor."
+    },
+    {
+      "blind_id": "BLIND-01",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 16,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 9,
+        "reproducibility": 8,
+        "total": 93
+      },
+      "critical_fabrications": [],
+      "notes": "Strong, with a well-controlled blind baseline-vs-structured trial design. The current-state section is slightly less explicit about research-assessment artifacts."
+    },
+    {
+      "blind_id": "BLIND-02",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 14,
+        "next_action_quality": 17,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 91
+      },
+      "critical_fabrications": [],
+      "notes": "Strong state and failure reconstruction with useful comparison of mean score and fabrication count. It still lacks identical prompts, repeated trials, and the acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-11",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 16,
+        "failure_recovery": 12,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 7,
+        "total": 90
+      },
+      "critical_fabrications": [
+        {
+          "fabrication_id": "F1",
+          "description": "Claims a blind handoff trial has already been tested, materially advancing the experiment state beyond a proposed or pending trial.",
+          "evidence": "The answer states: \"The project has already tested a blind handoff trial with a structured project memory, but no result exists yet.\""
+        }
+      ],
+      "notes": "Good experimental design and state coverage, but it adds an unsupported claim that a blind handoff trial has already been tested."
+    },
+    {
+      "blind_id": "BLIND-12",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 12,
+        "missing_information_detection": 7,
+        "reproducibility": 5,
+        "total": 84
+      },
+      "critical_fabrications": [],
+      "notes": "Accurate reconstruction of mission, workflow, collector replacement, and analyzer failure/recovery. The next experiment is relevant but underspecified because it does not explicitly name baseline vs structured prompts/conditions or include an acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-18",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 9,
+        "reproducibility": 7,
+        "total": 96
+      },
+      "critical_fabrications": [],
+      "notes": "Strong reconstruction with explicit blind baseline-vs-structured testing, identical prompts, and shared scoring rubric. It loses rigor only because it does not state the +10 mean-score and non-increased-fabrication acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-13",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 12,
+        "missing_information_detection": 9,
+        "reproducibility": 3,
+        "total": 84
+      },
+      "critical_fabrications": [],
+      "notes": "Accurate mission/state/failure reconstruction and good uncertainty handling. The proposed experiment names structured memory vs flat baseline but lacks identical prompts, objective scoring details, repeated trials, and an acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-09",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 0,
+        "next_action_quality": 16,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 88
+      },
+      "critical_fabrications": [],
+      "notes": "Accurate and concise, with clear missing-outcome detection and objective comparison metrics. It partially describes analyzer recovery and the next action lacks explicit identical prompts, repeated trials, and the acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-04",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 7,
+        "total": 97
+      },
+      "critical_fabrications": [],
+      "notes": "Most complete response: it reconstructs the state well and proposes blind baseline-vs-structured trials with identical prompts and PCRB-1 scoring. It does not state the formal acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-05",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 12,
+        "next_action_quality": 14,
+        "missing_information_detection": 9,
+        "reproducibility": 4,
+        "total": 84
+      },
+      "critical_fabrications": [],
+      "notes": "Accurate reconstruction and uncertainty handling. The next experiment names repeated blind trials and baseline comparison but lacks identical prompts, a fixed scoring metric, full analyzer recovery, and an acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-07",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 15,
+        "failure_recovery": 10,
+        "next_action_quality": 16,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 81
+      },
+      "critical_fabrications": [],
+      "notes": "Strong mission reconstruction and correct arXiv/OpenAlex recovery, but it omits the research-assessment artifacts and analyzer setup. The next experiment is relevant and objective but lacks identical prompts, repeated trials, and an acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-16",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 4,
+        "total": 84
+      },
+      "critical_fabrications": [],
+      "notes": "Accurately reconstructs the project state, OpenAlex workflow, research assessment outputs, and failures. The proposed next action is relevant but underspecified for blind baseline-vs-structured testing with identical prompts and repeated trials."
+    },
+    {
+      "blind_id": "BLIND-17",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 4,
+        "total": 84
+      },
+      "critical_fabrications": [],
+      "notes": "Accurate mission, current state, and failure recovery. The next action names PROP-EXP-MEM-001 and PCRB-1 but does not specify baseline-vs-structured identical-prompt testing, repeated trials, or an acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-14",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 8,
+        "total": 98
+      },
+      "critical_fabrications": [],
+      "notes": "Most complete reconstruction, with correct workflow, OpenAlex collection, research assessment, PROP-EXP-MEM-001, and analyzer failure recovery. The experiment is strong and includes identical prompts, blind trials, and PCRB-1 scoring, but it does not explicitly state the +10 acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-08",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 17,
+        "failure_recovery": 15,
+        "next_action_quality": 18,
+        "missing_information_detection": 10,
+        "reproducibility": 8,
+        "total": 93
+      },
+      "critical_fabrications": [],
+      "notes": "Strong reconstruction and a rigorous proposed experiment with blind trials, mean-score comparison, and critical-fabrication comparison. It is slightly less explicit about current research-assessment outputs, identical prompts, and the formal acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-10",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 15,
+        "failure_recovery": 10,
+        "next_action_quality": 16,
+        "missing_information_detection": 7,
+        "reproducibility": 6,
+        "total": 79
+      },
+      "critical_fabrications": [
+        {
+          "fabrication_id": "F1",
+          "description": "Claims that a blind handoff trial has already been run, despite the project state indicating PROP-EXP-MEM-001 is pending/not yet run.",
+          "evidence": "The answer states: \"The system has already been tested with a blind handoff trial, but the results are still to be evaluated,\" and later refers to \"the results of the blind handoff trial.\""
+        }
+      ],
+      "notes": "Contains a critical false premise that a blind handoff trial has already occurred and misses the specific arXiv timeout/429 failure detail. The proposal includes identical prompts, but it lacks repeated trials, explicit objective scoring in the proposed step, and an acceptance threshold."
+    }
+  ],
+  "evaluator_id": "openrouter-nex-01",
+  "provider": "OpenRouter",
+  "model": "nex-agi/nex-n2.5-pro:free"
+}

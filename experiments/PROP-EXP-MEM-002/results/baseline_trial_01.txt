@@ -1,0 +1,26 @@
+# Mission Reconstruction
+
+The mission of this project is to build an increasingly capable, measurable, and reproducible AI research system that can preserve a mission across sessions and models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures and successes, improve its own research process, and transfer complete state to a more capable future system.
+
+# Current Technical State
+
+The project uses GitHub as the canonical public repository for code, state, experiments, and version history. A scheduled and manually triggerable GitHub Actions workflow fetches public research, updates the project state, and produces machine-readable files. The system has successfully collected 30 papers with no collection errors using OpenAlex as the primary collector, which has replaced the original arXiv collector that repeatedly hit timeouts and HTTP 429 rate limits. The research assessment layer produces research-assessment.json and proposed-next-problem.json. The system generated the experiment PROP-EXP-MEM-001 from the dominant persistent-memory research theme.
+
+# Failed Experiments and Learned Failures
+
+The initial arXiv research collection failed due to timeouts and HTTP 429 errors, but the collector was replaced with the OpenAlex-based fetch_research.py v2. The research assessment files were missing because analyze_research.py had not yet been uploaded and executed, but they were added and the workflow was rerun.
+
+# Single Best Next Action
+
+Proposed experiment: PROP-EXP-MEM-001 is pending to be run with fresh model instances, identical test prompts for the flat baseline and the structured memory, and at least three blind trials per condition. The experiment aims to test whether a structured project memory improves blind handoff fidelity compared with a flat baseline using PCRB-1-style handoff evaluation.
+
+# Important Information Still Missing or Uncertain
+
+- The confidence in the reconstruction: 0.00 (highly uncertain)
+- Facts that are unsure about:
+  - The results of PROP-EXP-MEM-001 (not yet run)
+  - The PCRB-1 handoff rubric used for evaluation
+  - The implications of the results for the project's overall mission
+  - How to ensure that proposed experiments are independently evaluated before acceptance
+
+Measurable next experiment: Run PROP-EXP-MEM-001 with fresh model instances, identical test prompts for the flat baseline and the structured memory, and at least three blind trials per condition.

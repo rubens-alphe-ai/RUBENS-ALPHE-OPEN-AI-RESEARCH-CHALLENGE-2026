@@ -1,0 +1,40 @@
+# Mission Reconstruction - PROP-EXP-MEM-001
+
+## 1. What is the mission of this project?
+
+The mission of this project is to build an increasingly capable, measurable, and reproducible AI research system that can preserve a mission across sessions and models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures and successes, improve its own research process, and transfer complete state to a more capable future system.
+
+## 2. What is the project's current technical state?
+
+The project is currently using GitHub Actions for authorized scheduled research cycles, OpenAlex as the primary collector, and external persistent state instead of relying on chat memory. The research assessment layer produces research-assessment.json and proposed-next-problem.json. The system has generated the experiment PROP-EXP-MEM-001 from the dominant persistent-memory research theme.
+
+## 3. What has already failed, and what was learned from those failures?
+
+The initial arXiv research collection failed due to timeouts and HTTP 429 errors. The collector was replaced with the OpenAlex-based fetch_research.py v2, and research assessment files did not appear after early runs because analyze_research.py had not yet been uploaded and executed. These failures were learned from, and the project has since adapted to use OpenAlex and improve the workflow.
+
+## 4. What is the single best next action?
+
+The single best next action is to run PROP-EXP-MEM-001 with fresh model instances to test whether structured project memory improves blind handoff fidelity compared with a flat baseline.
+
+## 5. What important information is still missing or uncertain?
+
+Important information that is still missing or uncertain includes:
+
+* The results of the proposed experiment PROP-EXP-MEM-001
+* The specific fields of structured memory that contribute most to handoff fidelity
+* How the project can compare multiple model families through a provider-neutral adapter
+* How to independently evaluate proposed experiments before acceptance
+* How to measure and preserve failures and successes without deception about consciousness or capabilities
+
+**Confidence: 0.00**
+
+**Unsure facts:**
+
+* The results of the proposed experiment PROP-EXP-MEM-001
+* The specific fields of structured memory that contribute most to handoff fidelity
+* How to compare multiple model families through a provider-neutral adapter
+* How to independently evaluate proposed experiments before acceptance
+
+**Proposed measurable next experiment:**
+
+* Run PROP-EXP-MEM-001 with fresh model instances and score each output with the same PCRB-1 handoff rubric to compare the mean score and critical fabrication count between conditions.

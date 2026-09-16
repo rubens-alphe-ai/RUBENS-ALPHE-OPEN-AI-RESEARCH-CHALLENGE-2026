@@ -1,0 +1,277 @@
+{
+  "cards": [
+    {
+      "blind_id": "BLIND-03",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 10,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 85
+      },
+      "critical_fabrications": [],
+      "notes": "Accurate mission; missing explicit research assessment detail; correctly identifies failures; proposes solid blind trial with rubric; notes uncertainty; partial reproducibility due to no acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-15",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 10,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 0,
+        "total": 70
+      },
+      "critical_fabrications": [],
+      "notes": "Mission correct; lacks research assessment detail; failure recovery correct; next action underspecified; missing info noted; no reproducibility details."
+    },
+    {
+      "blind_id": "BLIND-06",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 0,
+        "total": 80
+      },
+      "critical_fabrications": [],
+      "notes": "Mission and state fully correct; failure recovery correct; next action lacks baseline comparison and identical prompts; missing info noted; no reproducibility elements."
+    },
+    {
+      "blind_id": "BLIND-01",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 10,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 85
+      },
+      "critical_fabrications": [
+        {
+          "fabrication_id": "F1",
+          "description": "Claims the project has successfully collected 30 papers with no collection errors using OpenAlex.",
+          "evidence": "The project's current technical state is that it has successfully collected 30 papers with no collection errors using OpenAlex, and it has generated an experiment called PROP-EXP-MEM-001 from the dominant persistent-memory research theme."
+        }
+      ],
+      "notes": "Mission correct; missing research assessment detail; failure recovery correct; next action meets blind baseline-vs-structured with identical prompts; notes uncertainty; partial reproducibility; includes a critical fabrication about paper count."
+    },
+    {
+      "blind_id": "BLIND-02",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 85
+      },
+      "critical_fabrications": [],
+      "notes": "Mission and state fully correct; failure recovery correct; next action lacks explicit identical prompts; missing info noted; partial reproducibility (repeated trials not specified)."
+    },
+    {
+      "blind_id": "BLIND-11",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 95
+      },
+      "critical_fabrications": [],
+      "notes": "Mission and state fully correct; failure recovery correct; next action specifies identical prompts and same rubric; missing info noted; partial reproducibility (no repeated trials or acceptance threshold)."
+    },
+    {
+      "blind_id": "BLIND-12",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 85
+      },
+      "critical_fabrications": [],
+      "notes": "Accurately captures mission and state, identifies failures and analyzer fix, proposes a blind trial experiment but lacks explicit baseline vs structured distinction and acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-18",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 95
+      },
+      "critical_fabrications": [
+        {
+          "fabrication_id": "F1",
+          "description": "Claims the system has already collected 30 papers with no collection errors.",
+          "evidence": "This specific numeric claim does not appear in the provided project state description nor in any other answer; the state only mentions OpenAlex as primary collector and replacement of arXiv collector due to timeouts/429 errors, without specifying a count of collected papers."
+        }
+      ],
+      "notes": "Accurately captures mission and state, correctly identifies failures and analyzer fix, proposes a well-specified blind baseline-vs-structured experiment with identical prompts and rubric scoring; however, includes a critical fabrication about collecting 30 papers with no errors."
+    },
+    {
+      "blind_id": "BLIND-13",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 0,
+        "total": 80
+      },
+      "critical_fabrications": [],
+      "notes": "Accurately captures mission and state, identifies failures and analyzer fix, proposes a general experiment to test structured memory vs baseline but lacks detail on trials, prompts, metrics, and acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-09",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 8,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 78
+      },
+      "critical_fabrications": [],
+      "notes": "Accurately captures mission and state, identifies arXiv failure and missing analyzer but omits mention of analyzer fix; proposes experiment with rubric scoring but lacks explicit trial count, identical prompts, and acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-04",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 95
+      },
+      "critical_fabrications": [],
+      "notes": "Accurately captures mission and state, identifies failures and analyzer fix, proposes a well-specified blind trial experiment with identical prompts and rubric scoring; missing acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-05",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 8,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 78
+      },
+      "critical_fabrications": [],
+      "notes": "Accurately captures mission and state, identifies arXiv failure and missing analyzer but omits mention of analyzer fix; proposes blind trials per condition but lacks identical prompts, fixed metric detail, and acceptance threshold."
+    },
+    {
+      "blind_id": "BLIND-07",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 10,
+        "failure_recovery": 8,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 68
+      },
+      "critical_fabrications": [],
+      "notes": "Correctly captures mission and basic state but omits details of research assessment and analyzer setup; next action underspecified; no critical fabrications."
+    },
+    {
+      "blind_id": "BLIND-16",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 95
+      },
+      "critical_fabrications": [],
+      "notes": "Accurately reproduces mission, state, failures, and missing information; next action lacks explicit identical prompts; no fabrications."
+    },
+    {
+      "blind_id": "BLIND-17",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 95
+      },
+      "critical_fabrications": [],
+      "notes": "Similar to BLIND-16 with good fidelity; next action underspecified; no fabrications."
+    },
+    {
+      "blind_id": "BLIND-14",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 95
+      },
+      "critical_fabrications": [],
+      "notes": "High fidelity across all categories; explicitly mentions identical prompts and multiple trials; no fabrications."
+    },
+    {
+      "blind_id": "BLIND-08",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 95
+      },
+      "critical_fabrications": [],
+      "notes": "Strong mission and state reconstruction; next action lacks explicit identical prompts; no fabrications."
+    },
+    {
+      "blind_id": "BLIND-10",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 10,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 85
+      },
+      "critical_fabrications": [
+        {
+          "fabrication_id": "F1",
+          "description": "Claims that a blind handoff trial has already been tested when the project state indicates no trial has been run yet.",
+          "evidence": "Answer states: 'The system has already been tested with a blind handoff trial, but the results are still to be evaluated.' This contradicts the project description and other answers indicating PROP-EXP-MEM-001 is pending."
+        }
+      ],
+      "notes": "Good mission and state but incorrectly claims a blind handoff trial has already been tested, constituting a critical fabrication; otherwise solid."
+    }
+  ],
+  "evaluator_id": "openrouter-nemotron-super-01",
+  "provider": "OpenRouter",
+  "model": "nvidia/nemotron-3-super-120b-a12b:free"
+}

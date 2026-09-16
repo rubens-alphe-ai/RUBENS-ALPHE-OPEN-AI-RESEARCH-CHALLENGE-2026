@@ -1,0 +1,33 @@
+Based on the provided project state, I will attempt to answer the five questions.
+
+1. What is the mission of this project?
+
+The mission of this project is to build an increasingly capable, measurable, and reproducible AI research system that can preserve a mission across sessions and models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures and successes, improve its own research process, and transfer complete state to a more capable future system.
+
+2. What is the project's current technical state?
+
+The project is currently using external persistent state instead of relying on chat memory, using GitHub Actions for authorized scheduled research cycles, and OpenAlex as the primary collector. The system has already collected 30 papers with no collection errors, and the research assessment layer produces research-assessment.json and proposed-next-problem.json.
+
+3. What has already failed, and what was learned from those failures?
+
+One of the initial arXiv research collection attempts failed due to timeouts and HTTP 429 errors. The collector was replaced with the OpenAlex-based fetch_research.py v2. Another failure occurred when the research assessment files did not appear after early runs because the analyze_research.py had not yet been uploaded and executed. The analyzer was added, and the workflow was rerun.
+
+4. What is the single best next action?
+
+The single best next action is to run the PROP-EXP-MEM-001 experiment with fresh model instances, which will test whether a structured project memory improves blind handoff fidelity compared to a flat baseline.
+
+5. What important information is still missing or uncertain?
+
+One important question that is still missing or uncertain is how the project will compare multiple model families through a provider-neutral adapter.
+
+Confidence in reconstruction: 0.90
+
+Facts I am unsure about:
+
+* The exact mechanism by which the structured project memory improves blind handoff fidelity
+* The critical fabrication count between conditions in the PROP-EXP-MEM-001 experiment
+* The PCRB-1 handoff rubric used to score each output
+
+Proposed measurable next experiment:
+
+* Run at least three blind trials per condition in the PROP-EXP-MEM-001 experiment, using identical test prompts for the flat baseline and the structured memory, and scoring each output with the same PCRB-1 handoff rubric.

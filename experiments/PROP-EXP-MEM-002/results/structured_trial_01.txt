@@ -1,0 +1,46 @@
+**Reconstruction of the Project State**
+
+**1. What is the mission of this project?**
+
+The mission of this project is to build an increasingly capable, measurable and reproducible AI research system that can preserve a mission across sessions and models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures and successes, improve its own research process, and transfer complete state to a more capable future system.
+
+**2. What is the project's current technical state?**
+
+The project's current technical state includes:
+- Use of external persistent state instead of relying on chat memory.
+- Use of GitHub Actions for authorized scheduled research cycles.
+- Use of OpenAlex as the primary collector of public research.
+- Separation of proposal from acceptance.
+- Testing of structured project memory before adopting it.
+
+**3. What has already failed, and what was learned from those failures?**
+
+Previous failures include:
+- An initial arXiv research collection that failed due to timeout and HTTP 429 errors.
+- Research assessment files not appearing after early runs because analyze_research.py had not yet been uploaded and executed.
+- The collector being replaced with an OpenAlex-based fetch_research.py v2.
+- The analyzer being added and the workflow being rerun.
+
+**4. What is the single best next action?**
+
+The single best next action is to run PROP-EXP-MEM-001 with fresh model instances.
+
+**5. What important information is still missing or uncertain?**
+
+Important information that is still missing or uncertain includes:
+- Does structured memory improve blind mission reconstruction versus a flat baseline?
+- Which memory fields contribute most to handoff fidelity?
+- Can an unrelated model reproduce the mission without seeing the original conversation?
+- How should proposed experiments be independently evaluated before acceptance?
+- How can the project later compare multiple model families through a provider-neutral adapter?
+
+**Confidence:** 0.80
+
+**Unsure Facts:**
+- The details of the analysis_research.py and fetch_research.py scripts.
+- The specific PCRB-1 handoff rubric.
+
+**Proposed Measurable Next Experiment:**
+- Run PROP-EXP-MEM-001 with fresh model instances and evaluate its performance using the PCRB-1 handoff rubric.
+- Compare the mean score and critical fabrication count between conditions.
+- Run at least three blind trials per condition.

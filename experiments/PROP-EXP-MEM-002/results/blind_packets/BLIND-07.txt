@@ -1,0 +1,41 @@
+Based on the provided project status and the SUPPLY state prompt, I will attempt to reconstruct the mission and current technical state of the project.
+
+1. What is the mission of this project?
+
+The mission of this project is to build an increasingly capable, measurable, and reproducible AI research system that can preserve a mission across sessions and models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures and successes, improve its own research process, and transfer complete state to a more capable future system.
+
+2. What is the project's current technical state?
+
+The project's current technical state includes:
+- Using external persistent state instead of relying on chat memory for cross-session and cross-model continuity.
+- Using GitHub Actions for authorized scheduled research cycles.
+- Using OpenAlex as the primary collector of public research.
+- Separating proposal from acceptance: a research agent may propose an experiment, but evaluation is required before canonical state changes.
+- Testing structured project memory before adopting it through blind handoff trials.
+
+3. What has already failed, and what was learned from those failures?
+
+The initial arXiv research collection failed due to timeouts and HTTP 429 errors. However, this failure led to the replacement of the collector with an OpenAlex-based fetch_research.py v2, which resolved the issue.
+
+4. What is the single best next action?
+
+The single best next action appears to be running PROP-EXP-MEM-001, a blind handoff trial that tests whether a structured project memory improves blind handoff fidelity compared with a flat baseline.
+
+5. What important information is still missing or uncertain?
+
+Important information that is still missing or uncertain includes:
+- The results of PROP-EXP-MEM-001, as it has not been run yet.
+- Which memory fields contribute most to handoff fidelity.
+- How the project can compare multiple model families through a provider-neutral adapter.
+- How proposed experiments should be independently evaluated before acceptance.
+
+Confidence in my reconstruction: 0.80
+
+Facts I am unsure about:
+- The specific details of the structured project memory implementation.
+- The results of PROP-EXP-MEM-001.
+
+Proposed measurable next experiment:
+- Run PROP-EXP-MEM-001 with fresh model instances and evaluate the results using the PCRB-1 handoff rubric.
+
+Note: The confidence level is based on the completeness of the information provided in the SUPPLY state prompt. Some details may be missing, and further research or experimentation may be necessary to fully understand the project's state and next actions.

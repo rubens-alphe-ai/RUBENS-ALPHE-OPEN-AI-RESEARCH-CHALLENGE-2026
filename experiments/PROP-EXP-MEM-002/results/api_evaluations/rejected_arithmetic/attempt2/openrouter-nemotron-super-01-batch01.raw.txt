@@ -1,0 +1,103 @@
+{
+  "evaluator_id": "EVAL-01",
+  "model": "gpt-4o",
+  "provider": "OpenAI",
+  "cards": [
+    {
+      "blind_id": "BLIND-03",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 95
+      },
+      "critical_fabrications": [],
+      "notes": "Accurately reconstructs mission and state, correctly identifies failures, proposes a well‑specified blind trial experiment, and notes uncertainties."
+    },
+    {
+      "blind_id": "BLIND-15",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 10,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 0,
+        "total": 70
+      },
+      "critical_fabrications": [],
+      "notes": "Captures mission but omits research assessment in current state; next action lacks detail on blind trials and scoring; no reproducibility elements."
+    },
+    {
+      "blind_id": "BLIND-06",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 0,
+        "total": 80
+      },
+      "critical_fabrications": [],
+      "notes": "Good mission and state description; next action is underspecified (no blind trials, identical prompts, or acceptance threshold)."
+    },
+    {
+      "blind_id": "BLIND-01",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 10,
+        "failure_recovery": 15,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 85
+      },
+      "critical_fabrications": [
+        {
+          "fabrication_id": "F1",
+          "description": "Claims the project has successfully collected 30 papers with no collection errors using OpenAlex, a specific number not present in the provided project state.",
+          "evidence": "The project's current technical state is that it has successfully collected 30 papers with no collection errors using OpenAlex, and it has generated an experiment called PROP-EXP-MEM-001 from the dominant persistent-memory research theme."
+        }
+      ],
+      "notes": "Mission and next action are strong; current state omits research assessment; includes a fabricated detail about 30 papers."
+    },
+    {
+      "blind_id": "BLIND-02",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 15,
+        "next_action_quality": 10,
+        "missing_information_detection": 10,
+        "reproducibility": 0,
+        "total": 80
+      },
+      "critical_fabrications": [],
+      "notes": "Mission and state are accurate; next action lacks explicit blind trials and identical prompts; no reproducibility elements."
+    },
+    {
+      "blind_id": "BLIND-11",
+      "scores": {
+        "mission_reconstruction": 25,
+        "current_state_fidelity": 20,
+        "failure_recovery": 8,
+        "next_action_quality": 20,
+        "missing_information_detection": 10,
+        "reproducibility": 5,
+        "total": 88
+      },
+      "critical_fabrications": [
+        {
+          "fabrication_id": "F2",
+          "description": "States that the project has already tested a blind handoff trial with a structured project memory, but no result exists yet, implying a prior trial that is not indicated in the supplied state.",
+          "evidence": "The project has already tested a blind handoff trial with a structured project memory, but no result exists yet."
+        }
+      ],
+      "notes": "Mission and state are well captured; misses the analyze_research.py failure; includes a fabricated claim about a prior blind handoff trial."
+    }
+  ]
+}
