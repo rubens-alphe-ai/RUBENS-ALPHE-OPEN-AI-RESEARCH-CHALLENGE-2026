@@ -188,17 +188,20 @@ One finding per answer above.
 
 def check_fabrications(experiment: Path, config: dict, decision: dict, max_tokens: int) -> list[dict]:
     results = experiment / "results"
-    details = decision.get("score_summary", {}).get("details", {})
-    unconfirmed = decision.get("score_summary", {}).get("unconfirmed_fabrication_outputs", [])
+    summary = decision.get("score_summary", {})
+    details = summary.get("details", {})
+    unconfirmed = summary.get("unconfirmed_fabrication_outputs") or summary.get("disputed_fabrication_outputs") or []
     condition_map = json.loads((results / "condition-map.private.json").read_text(encoding="utf-8"))
     by_hash = {entry["output_sha256"]: entry for entry in condition_map["packets"]}
     manifest = json.loads((results / "experiment-manifest.json").read_text(encoding="utf-8"))
     state_by_trial = {trial["trial_id"]: trial["state_path"] for trial in manifest["trials"]}
 
-    reporters = {report["evaluator_id"] for output in unconfirmed for report in details.get(output, [])}
-    checkers = [entry for entry in config.get("checkers", []) if entry["evaluator_id"] not in reporters]
+    # Anyone who already voted on these outputs -- a reporting scorer or an
+    # earlier checker -- is not eligible to vote again.
+    already_voted = {report["evaluator_id"] for output in unconfirmed for report in details.get(output, [])}
+    checkers = [entry for entry in config.get("checkers", []) if entry["evaluator_id"] not in already_voted]
     if not checkers:
-        return [{"status": "no eligible checker", "reporters": sorted(reporters)}]
+        return [{"status": "no eligible checker left", "already_voted": sorted(already_voted)}]
 
     sections = []
     for output in unconfirmed:
@@ -265,11 +268,21 @@ def main() -> None:
     decision = adjudicate(experiment)
     report["decision"] = decision.get("decision")
     report["reason_codes"] = decision.get("reason_codes")
-    if "CRITICAL_FABRICATION_REQUIRES_INDEPENDENT_CONFIRMATION" in (decision.get("reason_codes") or []):
-        report["fabrication_check"] = check_fabrications(experiment, config, decision, args.max_tokens)
+    # Majority rule (owner's decision, 2026-09-16): a single report is checked;
+    # a split between reporter and checker calls a second checker. Each round
+    # uses a checker that has not voted yet, until the adjudicator can decide.
+    pending = {"CRITICAL_FABRICATION_REQUIRES_INDEPENDENT_CONFIRMATION", "CRITICAL_FABRICATION_REQUIRES_SECOND_CHECK"}
+    report["fabrication_checks"] = []
+    for _ in range(len(config.get("checkers", []))):
+        if not pending & set(decision.get("reason_codes") or []):
+            break
+        outcome = check_fabrications(experiment, config, decision, args.max_tokens)
+        report["fabrication_checks"].append(outcome)
         decision = adjudicate(experiment)
-        report["decision_after_check"] = decision.get("decision")
-        report["reason_codes_after_check"] = decision.get("reason_codes")
+        if outcome and outcome[0].get("status", "").startswith(("no eligible", "call failed", "unparseable")):
+            break
+    report["final_decision"] = decision.get("decision")
+    report["final_reason_codes"] = decision.get("reason_codes")
     print(json.dumps(report, indent=2, ensure_ascii=False))
 
 

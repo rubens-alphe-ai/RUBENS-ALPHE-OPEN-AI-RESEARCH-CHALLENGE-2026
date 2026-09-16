@@ -265,6 +265,16 @@ def base_result(data: dict[str, Any], decision: str, status: str, reasons: list[
         result["from_state_sha256"] = data["pre_state_sha256"]
     if is_sha256(data.get("candidate_state_sha256")):
         result["candidate_state_sha256"] = data["candidate_state_sha256"]
+    # A report dismissed by majority no longer blocks the decision, but it is
+    # never silently forgotten: every result names the outputs it concerned.
+    cards = data.get("evaluations", data.get("scorecards"))
+    if isinstance(cards, list) and cards:
+        try:
+            dismissed = tally_fabrication_votes(cards, data.get("fabrication_confirmations", []))["dismissed"]
+        except (KeyError, TypeError, AttributeError):
+            dismissed = []
+        if dismissed:
+            result["dismissed_fabrication_outputs"] = dismissed
     return result
 
 
@@ -289,6 +299,77 @@ def inconclusive(
         "Hold the candidate for review or more evidence. Do not change canonical state."
     )
     return result
+
+
+def tally_fabrication_votes(cards: list[dict[str, Any]], confirmations: Any) -> dict[str, Any]:
+    """Count independent votes on every output a critical fabrication was reported on.
+
+    A vote for comes from a scorer that reported the fabrication or a checker
+    that confirmed it; a vote against comes from a checker that rejected it.
+    Each evaluator counts once per output, and a scorer that reported a
+    fabrication cannot also vote against it.
+
+    Decision rule, per output (owner's decision, 2026-09-16):
+    - two or more votes for: confirmed -> the candidate is rejected;
+    - one vote for, two or more against: dismissed by majority;
+    - one vote for, one against: a second independent checker is required;
+    - one vote for, none against: an independent check is required.
+    """
+    votes_for: dict[str, set[str]] = defaultdict(set)
+    votes_against: dict[str, set[str]] = defaultdict(set)
+    details: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    errors: list[str] = []
+
+    for card in cards:
+        output_hash = str(card["output_sha256"])
+        fabrications = normalized_fabrications(card)
+        if fabrications:
+            votes_for[output_hash].add(str(card["evaluator_id"]))
+            details[output_hash].append(
+                {"evaluator_id": card["evaluator_id"], "condition": card["condition"],
+                 "pair_id": card["pair_id"], "fabrications": fabrications}
+            )
+
+    scored_outputs = {str(card["output_sha256"]) for card in cards}
+    if not isinstance(confirmations, list):
+        return {"errors": ["fabrication_confirmations must be a list"], "details": {}, "confirmed": [],
+                "dismissed": [], "needs_second_check": [], "unconfirmed": []}
+    for index, item in enumerate(confirmations):
+        if not isinstance(item, dict):
+            errors.append(f"confirmation[{index}] is not an object")
+            continue
+        output_hash = str(item.get("output_sha256", ""))
+        checker = str(item.get("evaluator_id", "")).strip()
+        if not is_sha256(output_hash) or output_hash not in scored_outputs:
+            errors.append(f"confirmation[{index}] names an output that no scorecard evaluated")
+            continue
+        if not checker:
+            errors.append(f"confirmation[{index}] has no evaluator_id")
+            continue
+        if not isinstance(item.get("confirms_fabrication"), bool):
+            errors.append(f"confirmation[{index}] confirms_fabrication must be true or false")
+            continue
+        entry = {"evaluator_id": checker, "role": "fabrication_checker",
+                 "confirms_fabrication": item["confirms_fabrication"], "reasoning": str(item.get("reasoning", ""))}
+        details[output_hash].append(entry)
+        if item["confirms_fabrication"]:
+            votes_for[output_hash].add(checker)
+        else:
+            votes_against[output_hash].add(checker)
+
+    confirmed, dismissed, needs_second_check, unconfirmed = [], [], [], []
+    for output_hash, supporters in votes_for.items():
+        against = votes_against.get(output_hash, set()) - supporters
+        if len(supporters) >= 2:
+            confirmed.append(output_hash)
+        elif len(against) >= 2:
+            dismissed.append(output_hash)
+        elif len(against) == 1:
+            needs_second_check.append(output_hash)
+        else:
+            unconfirmed.append(output_hash)
+    return {"errors": errors, "details": details, "confirmed": confirmed, "dismissed": dismissed,
+            "needs_second_check": needs_second_check, "unconfirmed": unconfirmed}
 
 
 def adjudicate(data: dict[str, Any], requested_stage: str = "auto") -> dict[str, Any]:
@@ -319,78 +400,27 @@ def adjudicate(data: dict[str, Any], requested_stage: str = "auto") -> dict[str,
         return inconclusive(data, ["INVALID_CARD_OR_PROVENANCE"], summary={"errors": errors})
 
     cfg = policy(data)
-    by_output: dict[str, set[str]] = defaultdict(set)
-    fabrication_details: dict[str, list[dict[str, Any]]] = defaultdict(list)
-
-    # A fabrication allegation can be confirmed by a checker that answers only
-    # that narrow question and assigns no quality scores. Forcing it to invent
-    # scores just to enter the gate would itself be a fabrication, so
-    # confirmations are a separate input. Each must name an output that some
-    # scorecard actually evaluated, and a checker counts once per output.
-    scored_outputs = {str(card["output_sha256"]) for card in cards}
-    confirmations = data.get("fabrication_confirmations", [])
-    if not isinstance(confirmations, list):
-        return inconclusive(data, ["FABRICATION_CONFIRMATIONS_NOT_ARRAY"])
-    confirmation_errors: list[str] = []
-    for index, item in enumerate(confirmations):
-        if not isinstance(item, dict):
-            confirmation_errors.append(f"confirmation[{index}] is not an object")
-            continue
-        output_hash = str(item.get("output_sha256", ""))
-        checker = str(item.get("evaluator_id", "")).strip()
-        if not is_sha256(output_hash) or output_hash not in scored_outputs:
-            confirmation_errors.append(
-                f"confirmation[{index}] names an output that no scorecard evaluated"
-            )
-            continue
-        if not checker:
-            confirmation_errors.append(f"confirmation[{index}] has no evaluator_id")
-            continue
-        if not isinstance(item.get("confirms_fabrication"), bool):
-            confirmation_errors.append(
-                f"confirmation[{index}] confirms_fabrication must be true or false"
-            )
-            continue
-        if item["confirms_fabrication"]:
-            by_output[output_hash].add(checker)
-            fabrication_details[output_hash].append(
-                {
-                    "evaluator_id": checker,
-                    "role": "fabrication_checker",
-                    "reasoning": str(item.get("reasoning", "")),
-                }
-            )
-    if confirmation_errors:
-        return inconclusive(
-            data, ["INVALID_FABRICATION_CONFIRMATION"], summary={"errors": confirmation_errors}
-        )
-
-    for card in cards:
-        output_hash = str(card["output_sha256"])
-        fabrications = normalized_fabrications(card)
-        if fabrications:
-            by_output[output_hash].add(str(card["evaluator_id"]))
-            fabrication_details[output_hash].append(
-                {
-                    "evaluator_id": card["evaluator_id"],
-                    "condition": card["condition"],
-                    "pair_id": card["pair_id"],
-                    "fabrications": fabrications,
-                }
-            )
-
-    confirmed = [output for output, evaluators in by_output.items() if len(evaluators) >= 2]
-    if confirmed:
+    tally = tally_fabrication_votes(cards, data.get("fabrication_confirmations", []))
+    if tally["errors"]:
+        return inconclusive(data, ["INVALID_FABRICATION_CONFIRMATION"], summary={"errors": tally["errors"]})
+    details = tally["details"]
+    if tally["confirmed"]:
         return rejection(
             data,
             ["CRITICAL_FABRICATION_CONFIRMED_BY_TWO_EVALUATORS"],
-            {"confirmed_fabrication_outputs": confirmed, "details": fabrication_details},
+            {"confirmed_fabrication_outputs": tally["confirmed"], "details": details},
         )
-    if by_output:
+    if tally["needs_second_check"]:
+        return inconclusive(
+            data,
+            ["CRITICAL_FABRICATION_REQUIRES_SECOND_CHECK"],
+            summary={"disputed_fabrication_outputs": tally["needs_second_check"], "details": details},
+        )
+    if tally["unconfirmed"]:
         return inconclusive(
             data,
             ["CRITICAL_FABRICATION_REQUIRES_INDEPENDENT_CONFIRMATION"],
-            summary={"unconfirmed_fabrication_outputs": list(by_output), "details": fabrication_details},
+            summary={"unconfirmed_fabrication_outputs": tally["unconfirmed"], "details": details},
         )
 
     grouped: dict[str, dict[str, dict[str, dict[str, Any]]]] = defaultdict(

@@ -121,3 +121,16 @@ are routed. Task envelopes and response envelopes carry stable IDs, UTC
 timestamps and SHA-256 hashes; `bridge_state/ledger.jsonl` records each
 transition. Gmail OAuth files and tokens stay outside this public tree, and
 reply sending is disabled by default. See `bridge/README.md` for local setup.
+
+## Licence
+
+- **Code** — `scripts/`, `tests/`, `bridge/`, `schemas/`, `.github/` and
+  other source files: [Apache License 2.0](LICENSE).
+- **Documentation, experiment materials and data** — `docs/`, `experiments/`,
+  `state/`, `visitors/` and other written or data files:
+  [Creative Commons Attribution 4.0 International](LICENSE-DOCS).
+
+Reuse is welcome, including by AI systems, with attribution to
+*RA-PSI-2026 / Mission Rubens, Rubens Alphe*.
+
+Copyright 2026 Rubens Alphe.

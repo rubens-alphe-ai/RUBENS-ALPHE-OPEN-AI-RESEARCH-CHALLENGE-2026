@@ -95,3 +95,26 @@ failures and make the adoption decision inspectable.
 4. [x] Execute six fresh pilot trials.
 5. [ ] Collect independent scorecards and run the pilot gate.
 6. [ ] Replicate across the registered final evidence policy before adoption.
+
+## Amendment 2026-09-16 — resolving a disputed fabrication
+
+**Decided by:** the project owner.
+
+The original rule made one fabrication report `INCONCLUSIVE` and two
+independent confirmations `REJECT`, but said nothing about a report that an
+independent checker rejects. In that case the experiment could never conclude.
+
+Votes are now counted per output. A vote for is a scorer's report or a
+checker's confirmation; a vote against is a checker's rejection. Each evaluator
+votes once per output, and a reporter cannot vote against its own report.
+
+| Votes for | Votes against | Outcome |
+|---|---|---|
+| 2 or more | any | confirmed: `REJECT` |
+| 1 | 0 | `INCONCLUSIVE`, independent check required |
+| 1 | 1 | `INCONCLUSIVE`, second independent check required |
+| 1 | 2 or more | dismissed by majority; adjudication continues |
+
+A dismissed report does not disappear: every decision lists it under
+`dismissed_fabrication_outputs`. `scripts/evaluate_experiment.py` calls
+checkers that have not yet voted until one of these outcomes is reached.
