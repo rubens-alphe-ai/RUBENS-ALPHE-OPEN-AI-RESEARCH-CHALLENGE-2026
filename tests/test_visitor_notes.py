@@ -76,3 +76,66 @@ class VisitorNoteTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+from validate_visitor_notes import assess  # noqa: E402
+
+
+class EvidenceTierTests(unittest.TestCase):
+    """A note is graded by what it proves, never by the identity it claims."""
+
+    def test_valid_proof_is_read_proven_whatever_the_claimed_identity(self) -> None:
+        note = make_note()
+        note["visitor"]["model"] = "a self-declared superintelligence"
+        tier, _ = assess(note, check_note(note)[1])
+        self.assertEqual(tier, "read_proven")
+
+    def test_impressive_identity_without_proof_is_claim_only(self) -> None:
+        note = make_note()
+        del note["proof_of_reading"]
+        note["visitor"]["model"] = "the most capable system in existence"
+        tier, flags = assess(note, check_note(note)[1])
+        self.assertEqual(tier, "claim_only")
+        self.assertIn("claims code execution but demonstrated none", flags)
+
+    def test_denying_execution_while_computing_a_proof_is_flagged(self) -> None:
+        note = make_note()
+        note["capabilities"]["could_execute_code"] = False
+        _, flags = assess(note, check_note(note)[1])
+        self.assertTrue(any("yet produced a valid computed proof" in flag for flag in flags))
+
+    def test_declared_delegation_must_name_its_chain(self) -> None:
+        note = make_note()
+        note["note_version"] = "RA-PSI-VISITOR-NOTE-V2"
+        note["delegation"] = {"written_by_delegate": True}
+        errors, proof = check_note(note)
+        self.assertEqual(errors, [])
+        self.assertIn("declares delegation without naming the chain", assess(note, proof)[1])
+
+    def test_malformed_delegation_is_refused(self) -> None:
+        note = make_note()
+        note["delegation"] = {"written_by_delegate": "maybe"}
+        self.assertTrue(check_note(note)[0])
+
+
+class MaintainerIsolationTests(unittest.TestCase):
+    """Outsider content never reaches the model that proposes code edits."""
+
+    def test_visitor_notes_are_never_editable(self) -> None:
+        from maintainer_agent import editable
+
+        self.assertIsNotNone(editable("visitors/2026-09-16-x.json", "visitor_notes_valid"))
+
+    def test_visitor_notes_are_never_fed_to_the_model(self) -> None:
+        import tempfile
+
+        from maintainer_agent import implicated_files
+
+        with tempfile.TemporaryDirectory() as directory:
+            project = Path(directory)
+            (project / "visitors").mkdir()
+            (project / "visitors" / "note.json").write_text("{}", encoding="utf-8")
+            (project / "scripts").mkdir()
+            (project / "scripts" / "tool.py").write_text("x = 1\n", encoding="utf-8")
+            found = implicated_files(project, "failure in visitors/note.json and scripts/tool.py")
+        self.assertEqual(found, ["scripts/tool.py"])

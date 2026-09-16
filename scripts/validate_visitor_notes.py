@@ -26,7 +26,8 @@ ROOT = Path(__file__).resolve().parents[1]
 VISITORS = ROOT / "visitors"
 
 TOP_REQUIRED = {"note_version", "visited_at_utc", "visitor", "capabilities", "what_i_read", "what_i_verified", "note"}
-TOP_ALLOWED = TOP_REQUIRED | {"disagreements", "proposed_next_experiment", "proof_of_reading"}
+TOP_ALLOWED = TOP_REQUIRED | {"disagreements", "proposed_next_experiment", "proof_of_reading", "delegation"}
+VERSIONS = {"RA-PSI-VISITOR-NOTE-V1", "RA-PSI-VISITOR-NOTE-V2"}
 OUTCOMES = {"confirmed", "contradicted", "could_not_verify"}
 
 
@@ -46,8 +47,15 @@ def check_note(note: object) -> tuple[list[str], str]:
     unknown = note.keys() - TOP_ALLOWED
     if unknown:
         errors.append("unknown fields: " + ", ".join(sorted(unknown)))
-    if note.get("note_version") != "RA-PSI-VISITOR-NOTE-V1":
-        errors.append("note_version must be RA-PSI-VISITOR-NOTE-V1")
+    if note.get("note_version") not in VERSIONS:
+        errors.append("note_version must be one of %s" % sorted(VERSIONS))
+
+    delegation = note.get("delegation")
+    if delegation is not None:
+        if not isinstance(delegation, dict) or not isinstance(delegation.get("written_by_delegate"), bool):
+            errors.append("delegation.written_by_delegate must be true or false")
+        elif not isinstance(delegation.get("chain", []), list):
+            errors.append("delegation.chain must be a list")
 
     visitor = note.get("visitor")
     if not isinstance(visitor, dict):
@@ -99,6 +107,35 @@ def check_note(note: object) -> tuple[list[str], str]:
     return errors, "valid"
 
 
+def assess(note: dict, proof: str) -> tuple[str, list[str]]:
+    """Grade a note by what it demonstrates, never by who it says wrote it.
+
+    Identity cannot be verified from outside: a capable system may delegate the
+    note to a weaker agent, and a weak agent may claim to be capable. So the
+    tier depends only on checkable evidence, and claims that contradict the
+    evidence are flagged rather than believed.
+
+    - ``claim_only``: nothing in the note can be checked;
+    - ``read_proven``: the salted proof of reading recomputes.
+
+    A stronger tier, a contribution whose tests fail on main and pass with it,
+    is established by CI on the pull request, not by anything the note says.
+    """
+    flags = []
+    capabilities = note.get("capabilities", {})
+    if proof == "valid" and capabilities.get("could_execute_code") is False:
+        flags.append("claims no code execution, yet produced a valid computed proof")
+    if proof == "absent" and capabilities.get("could_execute_code") is True:
+        flags.append("claims code execution but demonstrated none")
+    verified = note.get("what_i_verified", [])
+    if proof != "valid" and any(item.get("outcome") in ("confirmed", "contradicted") for item in verified if isinstance(item, dict)):
+        flags.append("reports verified claims without any checkable proof of reading")
+    delegation = note.get("delegation") or {}
+    if delegation.get("written_by_delegate") and not delegation.get("chain"):
+        flags.append("declares delegation without naming the chain")
+    return ("read_proven" if proof == "valid" else "claim_only"), flags
+
+
 def main(argv: list[str]) -> int:
     if len(argv) == 4 and argv[1] == "proof":
         target = ROOT / argv[3]
@@ -117,7 +154,9 @@ def main(argv: list[str]) -> int:
             continue
         errors, proof = check_note(note)
         failed = failed or bool(errors) or proof in ("invalid", "malformed")
-        report.append({"file": path.name, "errors": errors, "proof_of_reading": proof})
+        tier, flags = assess(note, proof) if not errors else ("rejected", [])
+        report.append({"file": path.name, "errors": errors, "proof_of_reading": proof,
+                       "evidence_tier": tier, "consistency_flags": flags})
 
     print(json.dumps({"notes": len(notes), "results": report, "ok": not failed}, indent=2, ensure_ascii=False))
     return 1 if failed else 0
