@@ -60,10 +60,41 @@ def load_config(path: Path) -> dict:
     config = json.loads(path.expanduser().read_text(encoding="utf-8"))
     for role in ("scorers", "checkers"):
         for entry in config.get(role, []):
-            for field in ("evaluator_id", "provider", "model", "endpoint", "api_key_file"):
+            for field in ("evaluator_id", "provider", "model", "endpoint"):
                 if not entry.get(field):
                     raise SystemExit("%s entry is missing %s" % (role, field))
+            if not entry.get("api_key_file") and not entry.get("api_key_env"):
+                raise SystemExit("%s entry %s needs api_key_file or api_key_env" % (role, entry["evaluator_id"]))
     return config
+
+
+def key_available(entry: dict) -> bool:
+    if entry.get("api_key_file"):
+        return Path(entry["api_key_file"]).expanduser().is_file()
+    import os
+
+    return bool(os.environ.get(entry.get("api_key_env", ""), "").strip())
+
+
+def ladder_config(policy: dict, private: dict) -> dict:
+    """Build scorers and checkers from the experiment's pre-registered ladders.
+
+    The ladder (public, committed before trials) says which models, in which
+    order. The private configuration only says where each provider's key is:
+    {"keys": {"groq": {"api_key_file": "~/.ra-psi/keys/groq.key"},
+              "openrouter": {"api_key_env": "OPENROUTER_API_KEY"}}}
+    """
+    keys = private.get("keys", {})
+    built = {"scorers": [], "checkers": []}
+    for role, ladder in (("scorers", policy.get("scorer_ladder", [])), ("checkers", policy.get("checker_ladder", []))):
+        for rung in ladder:
+            location = keys.get(rung.get("key", ""))
+            if not location:
+                raise SystemExit("no key location configured for %r (%s)" % (rung.get("key"), rung.get("evaluator_id")))
+            entry = {k: v for k, v in rung.items() if k != "key"}
+            entry.update({k: v for k, v in location.items() if k in ("api_key_file", "api_key_env")})
+            built[role].append(entry)
+    return built
 
 
 def independence_problems(config: dict, generation_model: str) -> list[str]:
@@ -91,7 +122,8 @@ def call(entry: dict, prompt: str, max_tokens: int, limits: dict | None = None) 
         provider="openai-compatible", model=entry["model"], endpoint=entry["endpoint"],
         temperature=0.0, max_output_tokens=int(entry.get("max_tokens", max_tokens)), timeout_seconds=600,
         think=None, response_format="json" if entry.get("json_mode", True) else None,
-        extra_body=entry.get("extra_body"), api_key_file=entry["api_key_file"]))
+        extra_body=entry.get("extra_body"), api_key_file=entry.get("api_key_file", ""),
+        api_key_env=entry.get("api_key_env", "")))
     # Free tiers share capacity: "temporarily rate-limited upstream" (429),
     # gateway errors and read timeouts are routine and pass within minutes.
     # They are retried with growing pauses; any other error is raised at once.
@@ -190,6 +222,7 @@ DEFAULT_POLICY = {
     "reuse_valid_batches": False,
     "invalid_batch_retries": 0,
     "default_batch_pause_seconds": 65,
+    "rubric": "PCRB1_SCORING.md",
 }
 
 
@@ -198,14 +231,16 @@ def load_policy(experiment: Path) -> dict:
     path = experiment / "evaluation_policy.json"
     if path.is_file():
         declared = json.loads(path.read_text(encoding="utf-8"))
-        unknown = sorted(set(declared) - set(DEFAULT_POLICY) - {"scorer_ladder", "checker_ladder", "notes"})
+        unknown = sorted(set(declared) - set(DEFAULT_POLICY)
+                         - {"scorer_ladder", "checker_ladder", "notes", "evidence_policy", "pairs_per_batch", "generation"})
         if unknown:
             raise SystemExit("%s has unknown fields: %s" % (path, ", ".join(unknown)))
         policy.update(declared)
     return policy
 
 
-def build_batches(experiment: Path, pairs_per_batch: int, evaluator_writes_total: bool = True) -> list[tuple[list[str], str]]:
+def build_batches(experiment: Path, pairs_per_batch: int, evaluator_writes_total: bool = True,
+                  rubric_name: str = "PCRB1_SCORING.md") -> list[tuple[list[str], str]]:
     """Split the blinded answers into batches that keep each pair together.
 
     Free API tiers cap the tokens of a single request. When all answers cannot
@@ -228,7 +263,7 @@ def build_batches(experiment: Path, pairs_per_batch: int, evaluator_writes_total
     pair_ids = sorted(by_pair)
     rng = random.Random(int(manifest["protocol_sha256"][:16], 16))
     rng.shuffle(pair_ids)
-    rubric = (experiment / "PCRB1_SCORING.md").read_text(encoding="utf-8")
+    rubric = (experiment / rubric_name).read_text(encoding="utf-8")
     hashes = {entry["blind_id"]: entry["output_sha256"] for entry in manifest["packets"]}
     groups = [pair_ids[i:i + pairs_per_batch] for i in range(0, len(pair_ids), pairs_per_batch)]
     batches = []
@@ -382,7 +417,7 @@ def score(experiment: Path, config: dict, max_tokens: int, pairs_per_batch: int 
     policy = policy or load_policy(experiment)
     results = experiment / "results"
     if pairs_per_batch > 0:
-        batches = build_batches(experiment, pairs_per_batch, policy["evaluator_writes_total"])
+        batches = build_batches(experiment, pairs_per_batch, policy["evaluator_writes_total"], policy["rubric"])
     else:
         batches = [(None, (results / "blind_packets" / "EVALUATOR_PROMPT.md").read_text(encoding="utf-8"))]
     scorers = config["scorers"]
@@ -390,7 +425,63 @@ def score(experiment: Path, config: dict, max_tokens: int, pairs_per_batch: int 
         return list(pool.map(lambda entry: score_one(experiment, entry, batches, max_tokens, policy), scorers))
 
 
-def adjudicate(experiment: Path) -> dict:
+def score_with_ladder(experiment: Path, candidates: list[dict], max_tokens: int, pairs_per_batch: int,
+                      policy: dict, needed: int = 2) -> list[dict]:
+    """Walk the pre-registered scorer ladder until `needed` scorecards are accepted.
+
+    Rungs are tried in their registered order, several at once when they come
+    from different providers. A rung that fails is abandoned for this
+    experiment: its answers are moved aside, never reused, and the next rung
+    from a provider not already accepted takes its place. Because the ladder
+    and this rule were committed before the trials, replacing a failing model
+    is the protocol, not a deviation.
+    """
+    from concurrent.futures import ThreadPoolExecutor
+
+    results = experiment / "results"
+    api_dir = results / "api_evaluations"
+    if pairs_per_batch > 0:
+        batches = build_batches(experiment, pairs_per_batch, policy["evaluator_writes_total"], policy["rubric"])
+    else:
+        batches = [(None, (results / "blind_packets" / "EVALUATOR_PROMPT.md").read_text(encoding="utf-8"))]
+    queue = list(candidates)
+    accepted: list[dict] = []
+    log: list[dict] = []
+    while len(accepted) < needed and queue:
+        providers = {entry["provider"].strip().lower() for entry in accepted}
+        round_picks: list[dict] = []
+        for entry in list(queue):
+            provider = entry["provider"].strip().lower()
+            if provider in providers:
+                continue
+            round_picks.append(entry)
+            providers.add(provider)
+            queue.remove(entry)
+            if len(round_picks) == needed - len(accepted):
+                break
+        if not round_picks:
+            break
+        with ThreadPoolExecutor(max_workers=len(round_picks)) as pool:
+            outcomes = list(pool.map(lambda entry: score_one(experiment, entry, batches, max_tokens, policy), round_picks))
+        for entry, outcome in zip(round_picks, outcomes):
+            log.append(outcome)
+            if outcome["status"] in ("ingested", "already scored"):
+                accepted.append(entry)
+                continue
+            abandoned = api_dir / "abandoned" / entry["evaluator_id"]
+            abandoned.mkdir(parents=True, exist_ok=True)
+            for path in api_dir.glob(entry["evaluator_id"] + "*"):
+                if path.is_file():
+                    path.replace(abandoned / path.name)
+    record = {"record_version": "RA-PSI-LADDER-LOG-V1", "written_at_utc": now(),
+              "accepted": [entry["evaluator_id"] for entry in accepted], "attempts": log,
+              "untried": [entry["evaluator_id"] for entry in queue]}
+    results.mkdir(parents=True, exist_ok=True)
+    (results / "evaluation-ladder-log.json").write_text(json.dumps(record, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return log
+
+
+def adjudicate(experiment: Path, policy: dict | None = None) -> dict:
     scorecards_dir = experiment / "results" / "scorecards"
     if not scorecards_dir.is_dir() or not any(scorecards_dir.glob("scorecards-*.json")):
         # Nothing was ingested: report it instead of crashing on an empty folder,
@@ -404,6 +495,9 @@ def adjudicate(experiment: Path) -> dict:
             confirmations.append({key: item[key] for key in ("evaluator_id", "output_sha256", "confirms_fabrication", "reasoning") if key in item})
     packet = {"packet_version": "RA-PSI-EVAL-PACKET-V4", "experiment_id": experiment.name, "stage": "pilot",
               "evaluations": cards, "fabrication_confirmations": confirmations}
+    evidence_policy = (policy or load_policy(experiment)).get("evidence_policy")
+    if evidence_policy:
+        packet["evidence_policy"] = evidence_policy
     packet_path = scorecards_dir / "evaluation-packet.json"
     packet_path.write_text(json.dumps(packet, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     decision_path = experiment / "results" / "decision.json"
@@ -452,7 +546,12 @@ def check_fabrications(experiment: Path, config: dict, decision: dict, max_token
     # Anyone who already voted on these outputs -- a reporting scorer or an
     # earlier checker -- is not eligible to vote again.
     already_voted = {report["evaluator_id"] for output in unconfirmed for report in details.get(output, [])}
-    checkers = [entry for entry in config.get("checkers", []) if entry["evaluator_id"] not in already_voted]
+    # The same model under another evaluator_id is the same voter.
+    model_of = {entry["evaluator_id"]: entry["model"].strip().lower()
+                for entry in config.get("scorers", []) + config.get("checkers", [])}
+    voted_models = {model_of[evaluator_id] for evaluator_id in already_voted if evaluator_id in model_of}
+    checkers = [entry for entry in config.get("checkers", []) if entry["evaluator_id"] not in already_voted
+                and entry["model"].strip().lower() not in voted_models]
     if not checkers:
         return [{"status": "no eligible checker left", "already_voted": sorted(already_voted)}]
 
@@ -495,6 +594,72 @@ def check_fabrications(experiment: Path, config: dict, decision: dict, max_token
     return outcomes
 
 
+def run_evaluation(experiment_name: str, config_path: Path, max_tokens: int = 8000,
+                   pairs_per_batch: int = 0, dry_run: bool = False) -> tuple[dict, int]:
+    experiment = ROOT / "experiments" / experiment_name
+    policy = load_policy(experiment)
+    private = load_config(config_path) if not policy.get("scorer_ladder") else json.loads(
+        config_path.expanduser().read_text(encoding="utf-8"))
+    ladder = bool(policy.get("scorer_ladder"))
+    config = ladder_config(policy, private) if ladder else private
+    load_config_entries = config.get("scorers", []) + config.get("checkers", [])
+    pairs_per_batch = pairs_per_batch or int(policy.get("pairs_per_batch", 0))
+    manifest = json.loads((experiment / "results" / "experiment-manifest.json").read_text(encoding="utf-8"))
+    generation_model = manifest.get("generation", {}).get("model", "")
+    if ladder:
+        # Provider distinctness is enforced when rungs are picked; here only
+        # the rules that apply to every rung are checked.
+        problems = [p for p in independence_problems(config, generation_model)
+                    if "different providers" not in p and "at least two" not in p]
+        if len({entry["provider"].strip().lower() for entry in config["scorers"]}) < 2:
+            problems.append("the scorer ladder needs at least two providers")
+    else:
+        problems = independence_problems(config, generation_model)
+    missing_keys = [entry["evaluator_id"] for entry in load_config_entries if not key_available(entry)]
+    report = {"experiment": experiment_name, "generation_model": generation_model, "ladder": ladder,
+              "independence_problems": problems, "missing_keys": missing_keys}
+    if problems or dry_run or (missing_keys and not ladder):
+        report["status"] = "REFUSED" if problems or missing_keys else "DRY_RUN_OK"
+        return report, (1 if problems or missing_keys else 0)
+
+    report["policy"] = policy
+    if ladder:
+        usable = [entry for entry in config["scorers"] if key_available(entry)]
+        report["scoring"] = score_with_ladder(experiment, usable, max_tokens, pairs_per_batch, policy)
+        config["checkers"] = [entry for entry in config["checkers"] if key_available(entry)]
+    else:
+        report["scoring"] = score(experiment, config, max_tokens, pairs_per_batch, policy)
+    if pairs_per_batch:
+        report["batching"] = {"pairs_per_batch": pairs_per_batch,
+                              "note": "pairs kept together within a batch"}
+    decision = adjudicate(experiment, policy)
+    report["decision"] = decision.get("decision")
+    report["reason_codes"] = decision.get("reason_codes")
+    # Majority rule (owner's decision, 2026-09-16): a single report is checked;
+    # a split between reporter and checker calls a second checker. Each round
+    # uses a checker that has not voted yet, until the adjudicator can decide.
+    # A checker whose call fails is skipped and the next one is tried.
+    pending = {"CRITICAL_FABRICATION_REQUIRES_INDEPENDENT_CONFIRMATION", "CRITICAL_FABRICATION_REQUIRES_SECOND_CHECK"}
+    report["fabrication_checks"] = []
+    failed: set[str] = set()
+    for _ in range(len(config.get("checkers", []))):
+        if not pending & set(decision.get("reason_codes") or []):
+            break
+        remaining = {**config, "checkers": [c for c in config.get("checkers", []) if c["evaluator_id"] not in failed]}
+        outcome = check_fabrications(experiment, remaining, decision, max_tokens)
+        report["fabrication_checks"].append(outcome)
+        status = outcome[0].get("status", "") if outcome else ""
+        if status.startswith("no eligible"):
+            break
+        if status.startswith(("call failed", "unparseable")):
+            failed.add(outcome[0]["evaluator_id"])
+            continue
+        decision = adjudicate(experiment, policy)
+    report["final_decision"] = decision.get("decision")
+    report["final_reason_codes"] = decision.get("reason_codes")
+    return report, 0
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--experiment", required=True)
@@ -504,46 +669,9 @@ def main() -> None:
                         help="score N pairs per request when a provider caps request size (0 = one request)")
     parser.add_argument("--dry-run", action="store_true", help="check configuration and independence only")
     args = parser.parse_args()
-
-    experiment = ROOT / "experiments" / args.experiment
-    config = load_config(args.config)
-    manifest = json.loads((experiment / "results" / "experiment-manifest.json").read_text(encoding="utf-8"))
-    generation_model = manifest.get("generation", {}).get("model", "")
-    problems = independence_problems(config, generation_model)
-    missing_keys = [entry["evaluator_id"] for entry in config.get("scorers", []) + config.get("checkers", [])
-                    if not Path(entry["api_key_file"]).expanduser().is_file()]
-    report = {"experiment": args.experiment, "generation_model": generation_model,
-              "independence_problems": problems, "missing_key_files": missing_keys}
-    if problems or args.dry_run or missing_keys:
-        report["status"] = "REFUSED" if problems or missing_keys else "DRY_RUN_OK"
-        print(json.dumps(report, indent=2, ensure_ascii=False))
-        raise SystemExit(1 if problems or missing_keys else 0)
-
-    policy = load_policy(experiment)
-    report["policy"] = policy
-    report["scoring"] = score(experiment, config, args.max_tokens, args.pairs_per_batch, policy)
-    if args.pairs_per_batch:
-        report["batching"] = {"pairs_per_batch": args.pairs_per_batch,
-                              "note": "pairs kept together within a batch; record this as a protocol deviation"}
-    decision = adjudicate(experiment)
-    report["decision"] = decision.get("decision")
-    report["reason_codes"] = decision.get("reason_codes")
-    # Majority rule (owner's decision, 2026-09-16): a single report is checked;
-    # a split between reporter and checker calls a second checker. Each round
-    # uses a checker that has not voted yet, until the adjudicator can decide.
-    pending = {"CRITICAL_FABRICATION_REQUIRES_INDEPENDENT_CONFIRMATION", "CRITICAL_FABRICATION_REQUIRES_SECOND_CHECK"}
-    report["fabrication_checks"] = []
-    for _ in range(len(config.get("checkers", []))):
-        if not pending & set(decision.get("reason_codes") or []):
-            break
-        outcome = check_fabrications(experiment, config, decision, args.max_tokens)
-        report["fabrication_checks"].append(outcome)
-        decision = adjudicate(experiment)
-        if outcome and outcome[0].get("status", "").startswith(("no eligible", "call failed", "unparseable")):
-            break
-    report["final_decision"] = decision.get("decision")
-    report["final_reason_codes"] = decision.get("reason_codes")
+    report, code = run_evaluation(args.experiment, args.config, args.max_tokens, args.pairs_per_batch, args.dry_run)
     print(json.dumps(report, indent=2, ensure_ascii=False))
+    raise SystemExit(code)
 
 
 if __name__ == "__main__":

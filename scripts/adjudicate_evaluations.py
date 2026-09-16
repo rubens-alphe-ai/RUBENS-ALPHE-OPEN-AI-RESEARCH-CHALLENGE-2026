@@ -224,6 +224,14 @@ def policy(data: dict[str, Any]) -> dict[str, Any]:
         "max_evaluator_disagreement": float(
             data.get("max_evaluator_disagreement", 15.0)
         ),
+        # ADR-004. "any": a confirmed fabrication in either condition rejects
+        # the candidate (V4 behaviour). "comparative": it rejects only when the
+        # structured condition has more confirmed fabrications than baseline,
+        # which is the acceptance rule PCRB-1 itself states.
+        "fabrication_rule": str(configured.get("fabrication_rule", "any")),
+        # ADR-004. Share of pairs allowed to exceed max_evaluator_disagreement
+        # before the whole experiment is inconclusive. 0 keeps V4 behaviour.
+        "max_disagreeing_pair_fraction": float(configured.get("max_disagreeing_pair_fraction", 0.0)),
     }
 
 
@@ -400,16 +408,24 @@ def adjudicate(data: dict[str, Any], requested_stage: str = "auto") -> dict[str,
         return inconclusive(data, ["INVALID_CARD_OR_PROVENANCE"], summary={"errors": errors})
 
     cfg = policy(data)
+    if cfg["fabrication_rule"] not in {"any", "comparative"}:
+        return inconclusive(data, ["UNKNOWN_FABRICATION_RULE"])
     tally = tally_fabrication_votes(cards, data.get("fabrication_confirmations", []))
     if tally["errors"]:
         return inconclusive(data, ["INVALID_FABRICATION_CONFIRMATION"], summary={"errors": tally["errors"]})
     details = tally["details"]
-    if tally["confirmed"]:
+    condition_of = {str(card["output_sha256"]): str(card["condition"]) for card in cards}
+    confirmed_by_condition = {"baseline": 0, "structured": 0}
+    for output_hash in tally["confirmed"]:
+        confirmed_by_condition[condition_of[output_hash]] += 1
+    if tally["confirmed"] and cfg["fabrication_rule"] == "any":
         return rejection(
             data,
             ["CRITICAL_FABRICATION_CONFIRMED_BY_TWO_EVALUATORS"],
             {"confirmed_fabrication_outputs": tally["confirmed"], "details": details},
         )
+    # Under the comparative rule every report must still be resolved first: an
+    # unresolved report could change either count.
     if tally["needs_second_check"]:
         return inconclusive(
             data,
@@ -422,6 +438,12 @@ def adjudicate(data: dict[str, Any], requested_stage: str = "auto") -> dict[str,
             ["CRITICAL_FABRICATION_REQUIRES_INDEPENDENT_CONFIRMATION"],
             summary={"unconfirmed_fabrication_outputs": tally["unconfirmed"], "details": details},
         )
+    fabrication_summary = {"fabrication_rule": cfg["fabrication_rule"],
+                           "confirmed_fabrications_by_condition": confirmed_by_condition,
+                           "confirmed_fabrication_outputs": tally["confirmed"]}
+    if confirmed_by_condition["structured"] > confirmed_by_condition["baseline"]:
+        return rejection(data, ["STRUCTURED_CONDITION_HAS_MORE_CONFIRMED_FABRICATIONS"],
+                         {**fabrication_summary, "details": details})
 
     grouped: dict[str, dict[str, dict[str, dict[str, Any]]]] = defaultdict(
         lambda: defaultdict(dict)
@@ -434,6 +456,7 @@ def adjudicate(data: dict[str, Any], requested_stage: str = "auto") -> dict[str,
     all_evaluator_ids: set[str] = set()
     evaluator_fingerprints: set[tuple[str, str]] = set()
 
+    disagreeing_pairs: set[str] = set()
     for pair_id in sorted(grouped):
         pair = grouped[pair_id]
         baseline = pair.get("baseline", {})
@@ -465,9 +488,11 @@ def adjudicate(data: dict[str, Any], requested_stage: str = "auto") -> dict[str,
             condition_means[condition] = sum(values) / len(values)
             disagreement[condition] = max(values) - min(values)
             if disagreement[condition] > cfg["max_evaluator_disagreement"]:
-                pair_problems.append(
-                    f"{pair_id}:{condition}:evaluator_disagreement_{disagreement[condition]:g}"
-                )
+                disagreeing_pairs.add(pair_id)
+                if cfg["max_disagreeing_pair_fraction"] <= 0:
+                    pair_problems.append(
+                        f"{pair_id}:{condition}:evaluator_disagreement_{disagreement[condition]:g}"
+                    )
 
         pair_results.append(
             {
@@ -485,7 +510,17 @@ def adjudicate(data: dict[str, Any], requested_stage: str = "auto") -> dict[str,
         "pair_problems": pair_problems,
         "evaluator_count": len(all_evaluator_ids),
         "evaluator_provider_model_count": len(evaluator_fingerprints),
+        "confirmed_fabrications_by_condition": confirmed_by_condition,
+        "fabrication_rule": cfg["fabrication_rule"],
+        "disagreeing_pairs": sorted(disagreeing_pairs),
     }
+    if cfg["max_disagreeing_pair_fraction"] > 0 and pair_results:
+        # Disagreeing pairs stay in the analysis (their score is the evaluators'
+        # mean); only a larger share than pre-registered makes it inconclusive.
+        if len(disagreeing_pairs) / len(pair_results) > cfg["max_disagreeing_pair_fraction"]:
+            pair_problems.append(
+                "evaluator_disagreement_in_%d_of_%d_pairs" % (len(disagreeing_pairs), len(pair_results))
+            )
     if pair_problems:
         return inconclusive(data, ["INCOMPLETE_OR_DISAGREEING_PAIRS"], summary=summary)
 
