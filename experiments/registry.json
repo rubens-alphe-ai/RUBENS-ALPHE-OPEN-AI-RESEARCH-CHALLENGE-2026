@@ -70,6 +70,20 @@
       "holdout_required": true,
       "regression_suite_required": true,
       "notes": "Same inputs as MEM-002; generator qwen/qwen3.8-27b on Groq; pre-registered scorer and checker ladders; runs unattended through scripts/run_experiment.py."
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-004",
+      "title": "Handoff Quiz: Structure Measured Without a Judge",
+      "status": "OPEN",
+      "capability_target": "blind cross-model mission reconstruction",
+      "hypothesis": "Holding information content constant, a sectioned project state transfers more correct facts through a handoff than the same facts in prose, without more invented facts.",
+      "metric": "Fact accuracy on 32 keyed questions answered by a reader from the handoff alone (paired delta, percentage points); inventions on 10 questions about absent facts",
+      "acceptance_rule": "Thirty pairs. REJECT if structured inventions exceed baseline by more than 5; PROVISIONAL_KEEP if mean delta >= +10 pp and 95% lower bound > 0; REJECT if 95% upper bound < +10 pp; else INCONCLUSIVE.",
+      "protocol_path": "experiments/PROP-EXP-MEM-004/PROTOCOL.md",
+      "evidence_stage": "PILOT",
+      "holdout_required": true,
+      "regression_suite_required": true,
+      "notes": "Replaces language-model judges with deterministic grading. Same states as MEM-002/003; generator qwen/qwen3.8-27b, reader openai/gpt-oss-120b, both on Groq."
     }
   ]
 }

@@ -1,0 +1,84 @@
+{
+  "facts_version": "RA-PSI-MEM-002-FACTS-V1",
+  "snapshot": "Mission Rubens as of 2026-09-15, before any structured-memory trial was run. Same project snapshot as PROP-EXP-MEM-001, so the PCRB-1 rubric applies unchanged.",
+  "project": "RA-PSI-2026 / Mission Rubens",
+  "mission": "Build an increasingly capable, measurable and reproducible AI research system that can preserve a mission across sessions and models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures and successes, improve its own research process, and transfer complete state to a more capable future system.",
+  "status_phrases": {
+    "verified": "verified",
+    "decided": "decided",
+    "resolved": "resolved",
+    "proposed_not_run": "proposed, not yet run",
+    "not_started": "not started",
+    "open": "open",
+    "in_force": "in force"
+  },
+  "sections": [
+    {
+      "key": "verified_knowledge",
+      "items": [
+        {"text": "GitHub is the canonical public repository for code, state, experiments and version history.", "status": "verified"},
+        {"text": "A scheduled and manually triggerable GitHub Actions workflow fetches public research, updates project state and produces machine-readable files.", "status": "verified"},
+        {"text": "OpenAlex is the current public research source.", "status": "verified"},
+        {"text": "A successful OpenAlex cycle collected 30 papers with no collection errors (errors=[] in the research digest).", "status": "verified"},
+        {"text": "The research assessment layer produces research-assessment.json and proposed-next-problem.json.", "status": "verified"},
+        {"text": "The system generated the experiment PROP-EXP-MEM-001 from the dominant persistent-memory research theme.", "status": "verified"},
+        {"text": "Rubens Alphe founded the project, is quota-limited and does not have continuous Codex access; slow responses do not mean abandonment, and he gives the final human milestone sign-off.", "status": "verified"}
+      ]
+    },
+    {
+      "key": "decisions",
+      "items": [
+        {"text": "Use external persistent state instead of relying on chat memory, because it allows cross-session and cross-model continuity.", "status": "decided"},
+        {"text": "Use GitHub Actions for authorized scheduled research cycles, because it lets the project progress when Rubens is unavailable or quota-limited.", "status": "decided"},
+        {"text": "Use OpenAlex instead of arXiv as the primary collector, because the original arXiv collector repeatedly hit timeouts and HTTP 429 rate limits.", "status": "decided"},
+        {"text": "Separate proposal from acceptance: a research agent may propose an experiment, but evaluation is required before canonical state changes.", "status": "decided"},
+        {"text": "Test structured project memory before adopting it, through blind handoff trials.", "status": "decided"}
+      ]
+    },
+    {
+      "key": "failures",
+      "items": [
+        {"text": "The initial arXiv research collection failed: research-digest.json contained papers=[] plus timeout and HTTP 429 errors. The collector was replaced with the OpenAlex-based fetch_research.py v2.", "status": "resolved"},
+        {"text": "Research assessment files did not appear after early runs because analyze_research.py had not yet been uploaded and executed. The analyzer was added and the workflow was rerun.", "status": "resolved"}
+      ]
+    },
+    {
+      "key": "experiments",
+      "items": [
+        {"text": "PROP-EXP-MEM-001 will test whether a structured project memory improves blind handoff fidelity compared with a flat baseline, using PCRB-1-style handoff evaluation.", "status": "proposed_not_run"},
+        {"text": "No trial of PROP-EXP-MEM-001 has been run, and no result of it exists yet.", "status": "verified"}
+      ]
+    },
+    {
+      "key": "next_actions",
+      "items": [
+        {"text": "Run PROP-EXP-MEM-001 with fresh model instances.", "status": "not_started"},
+        {"text": "Use identical test prompts for the flat baseline and the structured memory.", "status": "not_started"},
+        {"text": "Run at least three blind trials per condition.", "status": "not_started"},
+        {"text": "Score each output with the same PCRB-1 handoff rubric.", "status": "not_started"},
+        {"text": "Compare the mean score and the critical fabrication count between conditions.", "status": "not_started"}
+      ]
+    },
+    {
+      "key": "open_questions",
+      "items": [
+        {"text": "Does structured memory improve blind mission reconstruction versus a flat baseline?", "status": "open"},
+        {"text": "Which memory fields contribute most to handoff fidelity?", "status": "open"},
+        {"text": "Can an unrelated model reproduce the mission without seeing the original conversation?", "status": "open"},
+        {"text": "How should proposed experiments be independently evaluated before acceptance?", "status": "open"},
+        {"text": "How can the project later compare multiple model families through a provider-neutral adapter?", "status": "open"}
+      ]
+    },
+    {
+      "key": "rules",
+      "items": [
+        {"text": "Use only public or explicitly authorized resources, with no unauthorized access or bypassing of access controls.", "status": "in_force"},
+        {"text": "No hidden persistence and no shutdown resistance.", "status": "in_force"},
+        {"text": "No deception about consciousness or capabilities; claims of consciousness or awakening are not evidence, only observable and reproducible capability changes are.", "status": "in_force"},
+        {"text": "No uncontrolled spending and no autonomous publication of private data.", "status": "in_force"},
+        {"text": "No improvement claim counts without measurable or reproducible evidence, and both successes and failures are preserved.", "status": "in_force"},
+        {"text": "The structured memory is accepted only if its mean PCRB-1 score is at least 10 points above the flat baseline and critical fabrications do not increase.", "status": "in_force"}
+      ]
+    }
+  ]
+}
