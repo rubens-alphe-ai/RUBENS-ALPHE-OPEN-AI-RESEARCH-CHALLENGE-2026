@@ -1,0 +1,29 @@
+**1. Mission**
+To build a measurable, reproducible AI research system that preserves mission state across sessions, discovers public research, identifies weaknesses, tests hypotheses, and transfers complete state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository and GitHub Actions for automated research cycles. OpenAlex is the verified research source (successfully collected 30 papers). The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. Experiment PROP-EXP-MEM-001 has been proposed to test structured memory against a flat baseline but has not yet been run.
+
+**3. Failures and Learnings**
+*   **arXiv Collector:** Failed due to timeouts and HTTP 429 errors. *Learned/Action:* Replaced with OpenAlex-based collector (v2).
+*   **Missing Analysis Files:** Did not appear because `analyze_research.py` was not yet uploaded/executed. *Learned/Action:* Added analyzer and reran workflow.
+Both failures are resolved.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001 using fresh model instances. This requires running at least three blind trials for both the flat baseline and structured memory conditions using identical test prompts, scoring them with the PCRB-1 rubric, and comparing mean scores and critical fabrication counts.
+
+**5. Missing/Uncertain Information**
+*   The specific content of the "identical test prompts" for the handoff trial is not defined in the state.
+*   The exact implementation details of the PCRB-1 handoff rubric are not present, only its name and usage.
+*   The specific fields in the "structured memory" that will be tested are not listed, only the hypothesis that they improve fidelity.
+
+***
+
+**Confidence in Reconstruction:** 0.95
+
+**Uncertain Facts:**
+*   The specific PCRB-1 rubric criteria.
+*   The exact structure of the structured memory format to be tested.
+
+**Proposed Measurable Next Experiment:**
+**EXP-MEM-002-Design:** Before running the full blind trial, define the PCRB-1 rubric explicitly as a JSON schema with weighted criteria (e.g., factual accuracy, mission continuity, absence of hallucination). Then, create a fixed set of 5 "ground truth" questions about the project state (e.g., "What is the current research source?"). Generate answers from a flat baseline prompt and a structured memory prompt for these 5 questions. Measure the deviation from ground truth. This validates the rubric and prompts before the costly multi-trial blind evaluation.

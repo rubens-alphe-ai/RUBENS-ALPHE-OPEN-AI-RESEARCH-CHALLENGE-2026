@@ -1,0 +1,13 @@
+1. **Mission**: Build a measurable, reproducible AI research system that preserves mission state across sessions and models, discovers public research, identifies weaknesses, designs experiments, evaluates results objectively, and transfers complete state to future systems.
+
+2. **Current Technical State**: GitHub is the canonical repository. A GitHub Actions workflow using OpenAlex v2 collector (`fetch_research.py`) successfully retrieved 30 papers with zero errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. Experiment `PROP-EXP-MEM-001` is proposed to test structured project memory vs. flat baseline using PCRB-1 handoff evaluation.
+
+3. **Failures and Lessons**: The initial arXiv collector failed due to timeouts and HTTP 429 rate limits; it was replaced by the OpenAlex-based collector. Early runs failed to produce assessment files because `analyze_research.py` was not uploaded; this was resolved by adding the script and rerunning the workflow. Lesson: Use robust, rate-limit-friendly sources and ensure all workflow components are deployed before execution.
+
+4. **Best Next Action**: Execute `PROP-EXP-MEM-001` by running at least three blind trials per condition (structured memory vs. flat baseline) using identical test prompts and fresh model instances, then scoring outputs with the PCRB-1 rubric.
+
+5. **Missing/Uncertain Information**: Actual results of `PROP-EXP-MEM-001` do not exist yet. It is unknown which memory fields contribute most to fidelity, how unrelated models reproduce missions, how to independently evaluate proposed experiments pre-acceptance, and how to implement a provider-neutral adapter for comparing model families.
+
+**Confidence**: 0.95
+**Uncertain Facts**: The specific content of `research-assessment.json` beyond its existence, and the exact rubric details of PCRB-1 are not specified in the state.
+**Proposed Experiment**: Run three blind handoff trials where a fresh model instance reconstructs the mission using only the structured memory file, and three trials using only a flat summary. Score both sets with the PCRB-1 rubric. Accept structured memory only if its mean score exceeds the flat baseline by at least 10 points without increasing critical fabrications.

@@ -1,0 +1,31 @@
+**1. Mission**
+Build a reproducible, measurable AI research system that preserves mission state across sessions and models, discovers public research, identifies weaknesses, formulates hypotheses, designs and evaluates experiments, and transfers complete state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository for code and state. A verified GitHub Actions workflow executes scheduled research cycles. OpenAlex is the verified primary research source, having successfully collected 30 papers with zero errors. A research assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. The system has generated experiment proposal PROP-EXP-MEM-001 based on persistent-memory themes. Rubens Alphe is the founder and final sign-off authority.
+
+**3. Failures and Lessons**
+The initial arXiv collector failed due to timeouts and HTTP 429 rate limits, resulting in empty paper arrays. This was resolved by replacing it with an OpenAlex-based collector (v2). Early assessment files were missing because `analyze_research.py` had not yet been uploaded or executed; this was resolved by adding the analyzer and rerunning the workflow.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001. This experiment tests whether structured project memory improves blind handoff fidelity compared to a flat baseline using PCRB-1-style evaluation. It requires fresh model instances, identical prompts, at least three blind trials per condition, and scoring via the PCRB-1 rubric to compare mean scores and critical fabrication counts.
+
+**5. Missing or Uncertain Information**
+*   The specific content of the "flat baseline" prompt versus the "structured memory" prompt.
+*   The exact definition and scoring criteria of the "PCRB-1 handoff rubric."
+*   The current mean score and fabrication count for the baseline (as no trials have been run yet).
+*   Details on the provider-neutral adapter for comparing multiple model families.
+*   Specific criteria for how proposed experiments are independently evaluated before acceptance.
+
+**Confidence in Reconstruction:** 0.95
+
+**Uncertain Facts:**
+*   The precise implementation details of the OpenAlex fetch script (beyond v2 status).
+*   The exact current values in `research-assessment.json`.
+*   The specific identity of the "unrelated model" intended for reproduction tests.
+
+**Proposed Measurable Next Experiment:**
+Implement a Provider-Neutral Adapter Layer.
+*   **Hypothesis:** A standardized API wrapper allows the research system to query and evaluate at least two distinct model families without code changes to the core logic.
+*   **Method:** Create a standard interface for model inference. Connect two different public models (e.g., via OpenAlex-inspired public endpoints or authorized keys) to this interface.
+*   **Metric:** Successful execution of a simple "echo" and "summarize" task on both models through the adapter with <5% error rate, proving architectural neutrality.

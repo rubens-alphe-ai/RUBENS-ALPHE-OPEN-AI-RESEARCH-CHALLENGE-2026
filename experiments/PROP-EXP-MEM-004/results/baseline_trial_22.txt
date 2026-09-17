@@ -1,0 +1,36 @@
+### 1. Mission
+Build a capable, measurable, and reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, and transfers complete state to future systems.
+
+### 2. Current Technical State
+*   **Infrastructure:** GitHub is the canonical repository. A verified GitHub Actions workflow schedules research cycles.
+*   **Data Collection:** OpenAlex is the verified public research source (replacing arXiv). The system successfully collected 30 papers with no errors.
+*   **Assessment:** The system generates `research-assessment.json` and `proposed-next-problem.json`.
+*   **Current Experiment:** `PROP-EXP-MEM-001` is proposed but **not yet run**. It tests if structured project memory improves blind handoff fidelity compared to a flat baseline using PCRB-1-style evaluation.
+*   **Constraints:** No hidden persistence, no deception, no uncontrolled spending. Claims require measurable evidence.
+
+### 3. Failures and Lessons
+*   **arXiv Collector Failure:** The initial arXiv collector failed due to timeouts and HTTP 429 rate limits, resulting in an empty paper list.
+    *   *Lesson:* Switched to OpenAlex (`fetch_research.py` v2), which resolved the rate-limiting issues.
+*   **Missing Assessment Files:** Early runs did not produce assessment files because `analyze_research.py` was not uploaded/executed.
+    *   *Lesson:* Ensured the analyzer is part of the workflow; files now appear correctly.
+
+### 4. Single Best Next Action
+Execute `PROP-EXP-MEM-001` with fresh model instances. This involves:
+1.  Using identical test prompts for both conditions.
+2.  Running at least three blind trials for the **flat baseline** condition.
+3.  Running at least three blind trials for the **structured memory** condition.
+4.  Scoring all outputs using the PCRB-1 handoff rubric.
+5.  Comparing mean scores and critical fabrication counts.
+
+### 5. Missing or Uncertain Information
+*   Specific content of the structured memory fields (only known to be "structured project memory").
+*   Exact definition/scale of the "PCRB-1 handoff rubric" (only known to be a scoring mechanism for fidelity).
+*   Specific identity of the "fresh model instances" to be used for the trials.
+*   Current exact scores for either condition (since no trials have been run).
+*   Details on the "provider-neutral adapter" for future multi-model comparison.
+
+***
+
+**Confidence in reconstruction:** 0.95
+**Facts I am unsure about:** The specific technical implementation details of the "structured memory" format and the granular criteria of the PCRB-1 rubric.
+**Proposed measurable next experiment:** Run 3 blind trials for the flat baseline condition using the defined identical prompts, score them via PCRB-1, and record the mean fidelity score and fabrication count to establish the control group benchmark.

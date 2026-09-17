@@ -1,0 +1,30 @@
+**1. Mission**
+To build a measurable, reproducible AI research system that preserves mission state across sessions and models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, and transfers complete state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository and GitHub Actions for scheduled research cycles. It successfully uses OpenAlex as the primary research source, having collected 30 papers with zero errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. A specific experiment, PROP-EXP-MEM-001, has been generated to test structured project memory against a flat baseline. No trials of this experiment have been run yet.
+
+**3. Failures and Lessons**
+*   **arXiv Collection:** Initial collection failed due to timeouts and HTTP 429 rate limits. **Lesson:** Replaced with OpenAlex-based `fetch_research.py` v2, which resolved the issue.
+*   **Missing Assessment Files:** Early runs produced no analysis because `analyze_research.py` was not uploaded. **Lesson:** Added the analyzer and rerun the workflow to ensure the assessment layer executes correctly.
+
+**4. Single Best Next Action**
+Run PROP-EXP-MEM-001 with fresh model instances. This involves executing at least three blind trials per condition (structured memory vs. flat baseline) using identical test prompts and scoring them with the PCRB-1 handoff rubric to compare mean scores and fabrication counts.
+
+**5. Missing/Uncertain Information**
+*   The actual content of the "flat baseline" definition beyond it being a comparison point.
+*   The specific metrics or thresholds for the PCRB-1 handoff rubric (other than the acceptance rule requiring a +10 point mean score difference and no increase in critical fabrications).
+*   The mechanism for the "provider-neutral adapter" mentioned in open questions.
+*   Current quota status or specific constraints for Rubens Alphe beyond being quota-limited.
+
+***
+
+**Confidence in reconstruction:** 0.95
+
+**Facts I am unsure about:**
+*   The exact implementation details of the "flat baseline" memory structure.
+*   The specific definition of "critical fabrication" within the PCRB-1 rubric.
+*   Whether the GitHub Actions workflow is currently running successfully in real-time or just historically verified.
+
+**Proposed measurable next experiment:**
+Execute 3 blind handoff trials for the "Structured Memory" condition and 3 for the "Flat Baseline" condition using identical prompt sets. Score each output using the PCRB-1 rubric. Calculate the mean score for each condition and count critical fabrications. If the structured memory mean score is ≥10 points higher than the baseline and critical fabrications do not increase, mark the structured memory as effective; otherwise, record as failure and analyze which memory fields contributed to the deficit.

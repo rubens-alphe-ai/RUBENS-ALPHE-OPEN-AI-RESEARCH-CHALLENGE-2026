@@ -74,7 +74,7 @@
     {
       "experiment_id": "PROP-EXP-MEM-004",
       "title": "Handoff Quiz: Structure Measured Without a Judge",
-      "status": "OPEN",
+      "status": "REJECTED",
       "capability_target": "blind cross-model mission reconstruction",
       "hypothesis": "Holding information content constant, a sectioned project state transfers more correct facts through a handoff than the same facts in prose, without more invented facts.",
       "metric": "Fact accuracy on 32 keyed questions answered by a reader from the handoff alone (paired delta, percentage points); inventions on 10 questions about absent facts",
@@ -83,7 +83,7 @@
       "evidence_stage": "PILOT",
       "holdout_required": true,
       "regression_suite_required": true,
-      "notes": "Replaces language-model judges with deterministic grading. Same states as MEM-002/003; generator qwen/qwen3.8-27b, reader openai/gpt-oss-120b, both on Groq."
+      "notes": "REJECT on 2026-09-17: mean paired delta -0.9 pp, 95% CI -4.1 to +2.2 pp, zero inventions and zero wrong facts in both conditions. See RESULT.md."
     }
   ]
 }

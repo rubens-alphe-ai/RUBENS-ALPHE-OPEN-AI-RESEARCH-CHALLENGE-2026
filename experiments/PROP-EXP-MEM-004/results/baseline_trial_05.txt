@@ -1,0 +1,24 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, and transfers complete state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository. A verified GitHub Actions workflow uses OpenAlex (replacing arXiv) to fetch research; a recent cycle successfully collected 30 papers with zero errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. The system has generated experiment PROP-EXP-MEM-001 to test structured project memory against a flat baseline using PCRB-1-style handoff evaluation. This experiment is proposed but not yet run.
+
+**3. Failures and Learnings**
+The initial arXiv collector failed due to timeouts and HTTP 429 rate limits, resulting in empty paper lists. It was resolved by replacing the collector with an OpenAlex-based `fetch_research.py` v2. Early assessment files were missing because `analyze_research.py` was not uploaded/executed; this was resolved by adding the analyzer and rerunning the workflow. Learned: Use OpenAlex for stability; ensure all pipeline scripts are deployed before execution.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001 by running at least three blind trials per condition (structured memory vs. flat baseline) using fresh model instances and identical test prompts, then scoring outputs with the PCRB-1 rubric.
+
+**5. Missing/Uncertain Information**
+Specific details on which memory fields contribute most to fidelity are unknown. The method for independently evaluating proposed experiments before acceptance is an open question. The implementation details for a provider-neutral adapter to compare multiple model families are not defined. No empirical results exist for PROP-EXP-MEM-001 yet.
+
+**Confidence in Reconstruction:** 0.95
+
+**Uncertain Facts**
+- Specific metrics or thresholds for "identifiable measurable weaknesses" other than the PCRB-1 score delta.
+- Details on the "provider-neutral adapter" architecture.
+- Exact criteria for "unrelated model" selection in future trials.
+
+**Proposed Measurable Next Experiment**
+Conduct the blind handoff trial for PROP-EXP-MEM-001. Create a standardized prompt set. Run 3 trials with a flat text summary of the state and 3 trials with the structured JSON state. Score fidelity using the PCRB-1 rubric. Accept structured memory only if the mean score is ≥10 points higher than the flat baseline and critical fabrication counts do not increase.

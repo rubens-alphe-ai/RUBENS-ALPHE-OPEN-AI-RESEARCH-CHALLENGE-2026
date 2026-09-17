@@ -1,0 +1,32 @@
+**1. Mission**
+To build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research via OpenAlex, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, and transfers complete state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub for canonical state and GitHub Actions for scheduled cycles. The research collector (v2) uses OpenAlex, verified by a successful cycle collecting 30 papers with zero errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. Experiment PROP-EXP-MEM-001 is proposed but not yet run.
+
+**3. Failures and Lessons**
+*   **arXiv Collector Failure:** Initial collection failed due to timeouts and HTTP 429 errors, resulting in empty paper lists. *Lesson:* Replaced arXiv with OpenAlex for stability.
+*   **Missing Analyzers:** Assessment files failed to appear because `analyze_research.py` was not uploaded/executed. *Lesson:* Ensured the analyzer is part of the workflow before rerunning.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001 by running at least three blind trials per condition (flat baseline vs. structured memory) using identical test prompts and fresh model instances, scoring outputs with the PCRB-1 handoff rubric.
+
+**5. Missing/Uncertain Information**
+*   No trial results exist yet for PROP-EXP-MEM-001.
+*   It is unknown if structured memory meets the acceptance threshold (mean score ≥10 points above baseline, no increase in critical fabrications).
+*   The specific implementation details of the "provider-neutral adapter" for comparing model families are undefined.
+*   The specific fields contributing most to handoff fidelity are untested.
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts I am unsure about:**
+*   The specific content of the 30 collected papers (only the count and error status are verified).
+*   The exact current date/time of the last successful GitHub Actions run.
+*   The specific quota limits or response times affecting Rubens Alphe’s access.
+
+**Proposed Measurable Next Experiment:**
+**EXP-MEM-002: Field Ablation Study**
+*   **Hypothesis:** Specific fields within the structured memory (e.g., `verified_knowledge` vs. `decisions`) contribute disproportionately to handoff fidelity.
+*   **Method:** Run three additional blind trials where the structured memory is degraded by removing one specific field category at a time (keeping the rest identical to the successful structured condition from EXP-001, once it has been run).
+*   **Metric:** Compare the mean PCRB-1 score of the degraded variants against the full structured memory condition.
+*   **Success Criteria:** Identify at least one field category whose removal causes a statistically significant drop (≥5 points) in mean PCRB-1 score, or confirm that no single field is critical (drop <2 points).

@@ -1,0 +1,38 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions and models, discovers public research, identifies weaknesses, forms hypotheses, designs experiments, evaluates results objectively, and transfers complete state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository and GitHub Actions for scheduled, manually triggerable research cycles. OpenAlex is the primary research source, currently verified to collect 30 papers without errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. A specific experiment, PROP-EXP-MEM-001, has been proposed to test structured project memory against a flat baseline using PCRB-1-style blind handoff evaluation. However, no trials of this experiment have been run yet.
+
+**3. Failures and Lessons**
+*   **arXiv Collector Failure:** Initial collection via arXiv failed with timeouts and HTTP 429 errors, resulting in empty paper lists. **Lesson:** Replaced with OpenAlex-based `fetch_research.py v2`, which is now verified and stable.
+*   **Missing Assessment Files:** Early runs lacked output files because `analyze_research.py` was not implemented/uploaded. **Lesson:** The analyzer was added, and the workflow was rerun to verify functionality.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001 by running at least three blind trials per condition (flat baseline vs. structured memory) using fresh model instances and identical test prompts, then score outputs with the PCRB-1 rubric.
+
+**5. Missing or Uncertain Information**
+*   Actual results or scores from any trials of PROP-EXP-MEM-001 (none exist yet).
+*   Confirmation that fresh model instances are available for the blind trials.
+*   Details on the specific "identical test prompts" to be used.
+*   Current status of the provider-neutral adapter for comparing multiple model families (listed as open question, not in force).
+
+***
+
+**Confidence in Reconstruction:** 0.95
+
+**Uncertain Facts:**
+*   The specific content of the 30 collected papers.
+*   The exact current version of `fetch_research.py` beyond "v2".
+*   Whether the GitHub repository is public or private (assumed accessible based on "canonical public repository" rule, but no URL provided).
+
+**Proposed Measurable Next Experiment:**
+**Experiment Name:** PROP-EXP-MEM-001-Execution
+**Procedure:**
+1.  Prepare two conditions: Condition A (Flat Baseline) and Condition B (Structured Memory).
+2.  Create a standardized "Mission Reconstruction Prompt" containing only the verified knowledge and decisions from the state file.
+3.  Run 3 independent trials for Condition A and 3 for Condition B using fresh LLM instances.
+4.  Evaluate each output against the PCRB-1 Handoff Rubric (0-100 scale).
+5.  Calculate the mean score for each condition and count critical fabrications.
+**Success Criterion:** Condition B (Structured Memory) must achieve a mean PCRB-1 score at least 10 points higher than Condition A (Flat Baseline) without an increase in critical fabrications.
+**Metric:** Mean PCRB-1 Score Difference; Critical Fabrication Count.

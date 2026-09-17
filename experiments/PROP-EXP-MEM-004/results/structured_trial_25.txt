@@ -1,0 +1,29 @@
+**1. Mission**
+To build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, and transfers complete state to more capable future systems.
+
+**2. Current Technical State**
+The system uses GitHub for canonical persistence and GitHub Actions for scheduled, manually triggerable research cycles. Data collection uses OpenAlex (verified successful, 30 papers collected, no errors). An assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. The system has generated experiment PROP-EXP-MEM-001 but has not yet run it.
+
+**3. Failures and Learnings**
+*   **arXiv Collector Failure (Resolved):** Initial collection failed due to timeouts and HTTP 429 errors. *Learned:* Replaced with OpenAlex-based `fetch_research.py` v2 for stability.
+*   **Missing Assessment Files (Resolved):** Files were absent because `analyze_research.py` was not uploaded/executed. *Learned:* Added the analyzer and reran the workflow to ensure the pipeline completes.
+
+**4. Single Best Next Action**
+Run PROP-EXP-MEM-001 with fresh model instances, using identical test prompts for the flat baseline and structured memory, executing at least three blind trials per condition, and scoring outputs using the PCRB-1 handoff rubric.
+
+**5. Missing/Uncertain Information**
+*   No results exist yet for PROP-EXP-MEM-001.
+*   It is unknown whether structured memory improves blind mission reconstruction versus the flat baseline.
+*   It is unknown which specific memory fields contribute most to handoff fidelity.
+*   It is unverified if an unrelated model can reproduce the mission without seeing the original conversation.
+*   The process for independently evaluating proposed experiments before acceptance is an open question.
+*   The method for comparing multiple model families via a provider-neutral adapter is undefined.
+
+**Confidence in reconstruction:** 0.95
+
+**Uncertain Facts:**
+*   Specific details of the PCRB-1 rubric criteria are not defined in the state, only its use is mandated.
+*   The exact threshold for "critical fabrication count" acceptance is implied by the rule (must not increase) but the baseline count is not provided.
+
+**Proposed Measurable Next Experiment:**
+**PROP-EXP-MEM-001 Trial Run:** Conduct three blind handoff trials for both "Flat Baseline" and "Structured Memory" conditions using fresh model instances. Score each output using the PCRB-1 rubric. Calculate the mean score for each condition. **Acceptance Criteria:** The Structured Memory condition is accepted only if its mean PCRB-1 score is at least 10 points higher than the Flat Baseline mean, and the count of critical fabrications does not increase compared to the baseline.

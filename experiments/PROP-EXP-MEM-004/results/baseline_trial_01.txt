@@ -1,0 +1,43 @@
+### 1. Mission
+Build a measurable, reproducible AI research system capable of preserving mission state across sessions/models, discovering public research, identifying weaknesses, testing hypotheses, and transferring complete state to future capable systems.
+
+### 2. Current Technical State
+*   **Infrastructure:** GitHub is the canonical public repository. GitHub Actions workflows (scheduled and manual) successfully trigger research cycles.
+*   **Data Source:** OpenAlex is the active, verified research source. A recent cycle collected 30 papers with zero errors.
+*   **Analysis:** The system generates `research-assessment.json` and `proposed-next-problem.json`.
+*   **Active Proposal:** `PROP-EXP-MEM-001` is proposed but **not yet run**. It tests structured project memory vs. flat baseline for blind handoff fidelity using the PCRB-1 rubric.
+*   **Governance:** Rubens Alphe is the human sign-off authority. Strict separation exists between proposal and acceptance.
+
+### 3. Failures & Learnings
+*   **Failure:** Initial arXiv collector failed due to timeouts and HTTP 429 rate limits, resulting in empty paper lists.
+*   **Learning/Resolution:** Replaced arXiv with OpenAlex in `fetch_research.py` v2. This resolved collection errors.
+*   **Failure:** Early runs lacked assessment files.
+*   **Learning/Resolution:** Caused by missing `analyze_research.py`. Uploading and executing this script resolved the issue.
+
+### 4. Single Best Next Action
+Execute **PROP-EXP-MEM-001** using fresh model instances.
+*   Run at least three blind trials for both conditions (structured memory vs. flat baseline).
+*   Use identical test prompts.
+*   Score outputs using the PCRB-1 handoff rubric.
+*   Compare mean scores and critical fabrication counts.
+*   **Acceptance Criterion:** Structured memory is accepted only if its mean PCRB-1 score is ≥10 points higher than the flat baseline and critical fabrications do not increase.
+
+### 5. Missing/Uncertain Information
+*   **Experimental Results:** No trials of PROP-EXP-MEM-001 have been run; no data exists yet to determine if structured memory improves fidelity.
+*   **Provider Adapter:** The method for comparing multiple model families via a provider-neutral adapter is undefined.
+*   **Evaluation Protocol:** Specific details on how proposed experiments are independently evaluated before acceptance (beyond the general rule) are not specified in the state.
+*   **Memory Field Contribution:** Which specific memory fields impact handoff fidelity is unknown.
+
+***
+
+**Confidence in reconstruction:** 0.95
+
+**Facts unsure about:**
+*   The specific technical implementation of the "PCRB-1-style handoff evaluation" rubric (only the name and usage are provided).
+*   The exact structure of the "flat baseline" memory compared to the "structured memory."
+
+**Proposed measurable next experiment:**
+**EXP-ADAPTER-001**: Implement a provider-neutral adapter interface.
+*   **Goal:** Test if a single prompt/state format can be ingested by two different model families (e.g., GPT-4 class vs. Llama-3 class) via the adapter.
+*   **Metric:** Measure the variance in PCRB-1 scores when the *same* state file is processed by both models.
+*   **Pass Condition:** Variance in mean PCRB-1 scores between models is <5 points, proving the state file is model-agnostic and the adapter works.
