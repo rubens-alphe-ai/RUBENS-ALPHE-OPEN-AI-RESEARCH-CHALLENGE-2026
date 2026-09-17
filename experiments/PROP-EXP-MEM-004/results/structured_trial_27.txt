@@ -1,0 +1,29 @@
+**1. Mission**
+To build a measurable, reproducible AI research system that preserves mission state across sessions and models, discovers public research, identifies weaknesses, tests hypotheses via experiments, and transfers complete state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository and GitHub Actions for automated cycles. It collects public research via OpenAlex (arXiv was replaced due to failures). A verified cycle successfully collected 30 papers. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. An experiment, PROP-EXP-MEM-001, has been proposed to test structured memory vs. flat baseline for handoff fidelity. No trials of this experiment have been run yet.
+
+**3. Failures and Lessons**
+*   **arXiv Collector:** Failed due to timeouts and HTTP 429 errors. *Lesson:* Replaced with OpenAlex-based collector (v2), which is now verified to work.
+*   **Missing Assessment Files:** Initial runs lacked output because `analyze_research.py` was not executed. *Lesson:* Added the analyzer and reran the workflow; files are now verified as present.
+
+**4. Single Best Next Action**
+Run PROP-EXP-MEM-001 using fresh model instances. Specifically, execute at least three blind trials per condition (structured memory vs. flat baseline) using identical test prompts, then score outputs using the PCRB-1 handoff rubric.
+
+**5. Missing/Uncertain Information**
+*   No experimental results exist yet for PROP-EXP-MEM-001.
+*   It is unverified whether structured memory actually improves handoff fidelity (current open question).
+*   The specific contribution of individual memory fields to fidelity is unknown.
+*   The mechanism for independent evaluation of proposed experiments before acceptance is still an open question.
+*   Details on a provider-neutral adapter for comparing multiple model families are absent.
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts I am unsure about:**
+*   I cannot verify external events (e.g., if the GitHub Actions workflow has run successfully since the last state update).
+*   I do not know the specific content of the 30 collected papers, only that they were collected without error.
+*   I do not know the current quota status of the founder, Rubens Alphe, beyond the stated limitation.
+
+**Proposed Measurable Next Experiment:**
+Execute 3 blind handoff trials for the "Structured Memory" condition and 3 for the "Flat Baseline" condition using the exact same initial prompt. Score each response on the PCRB-1 rubric. Calculate the mean score for each condition and count critical fabrications. **Success Criterion:** The Structured Memory condition must have a mean PCRB-1 score at least 10 points higher than the Flat Baseline, with no increase in critical fabrications, to be accepted as the new canonical state format.

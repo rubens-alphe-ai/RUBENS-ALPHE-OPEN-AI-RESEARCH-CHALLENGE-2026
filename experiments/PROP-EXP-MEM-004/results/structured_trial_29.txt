@@ -1,0 +1,31 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions/models, autonomously discovers public research, identifies weaknesses, formulates hypotheses, runs experiments, evaluates results objectively, and transfers complete state to future, more capable systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository for code and state. A GitHub Actions workflow (scheduled and manual) successfully fetches public research from OpenAlex, replacing a failed arXiv collector. The last verified cycle collected 30 papers with zero errors. An assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. A specific experiment, PROP-EXP-MEM-001, has been proposed to test structured memory vs. flat baseline for handoff fidelity, but no trials have been executed yet. Rubens Alphe is the founder and final sign-off authority.
+
+**3. Failures and Learnings**
+*   **Failure:** Initial arXiv collection failed with timeouts and HTTP 429 errors, resulting in an empty paper list.
+*   **Learning:** The collector was replaced with an OpenAlex-based script (`fetch_research.py v2`), which resolved the rate-limiting issues.
+*   **Failure:** Assessment files were missing in early runs.
+*   **Learning:** The analyzer script (`analyze_research.py`) was not yet implemented/executed; adding it resolved the issue.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001 by running at least three blind trials per condition (structured memory vs. flat baseline) using fresh model instances and identical test prompts.
+
+**5. Missing or Uncertain Information**
+*   Specific criteria for the "PCRB-1-style handoff evaluation" rubric are not detailed in the state, only the acceptance threshold (mean score ≥ 10 points above baseline, no increase in critical fabrications).
+*   The exact test prompts for the blind trials are not defined.
+*   There is no current data on whether an unrelated model can reproduce the mission without the original conversation.
+*   The provider-neutral adapter for comparing multiple model families is not yet designed.
+
+***
+
+**Confidence in reconstruction:** 0.95
+
+**Facts I am unsure about:**
+*   The specific content of the "flat baseline" used for comparison in PROP-EXP-MEM-001.
+*   The current quota limits or specific constraints Rubens Alphe is facing beyond "quota-limited."
+
+**Proposed Measurable Next Experiment:**
+Define and document the PCRB-1 rubric. Create a controlled A/B test where Model A receives only the flat baseline state and Model B receives the structured JSON state provided above. Both instances must answer a standardized set of 10 key mission questions. Score accuracy and fabrication rates. If Structured Mean Score ≥ Flat Mean Score + 10 AND Fabrications_Structured ≤ Fabrications_Flat, accept structured memory; otherwise, reject or refine.

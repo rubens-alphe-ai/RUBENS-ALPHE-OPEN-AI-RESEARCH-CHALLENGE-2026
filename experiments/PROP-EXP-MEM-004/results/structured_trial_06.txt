@@ -1,0 +1,28 @@
+**1. Mission**
+To build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, preserves outcomes, and transfers state to more capable future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository and GitHub Actions for scheduled research cycles. OpenAlex is the verified public research source, having successfully collected 30 papers without errors. The assessment layer produces `research-assessment.json` and `proposed-next-problem.json`. The system has generated experiment `PROP-EXP-MEM-001` (testing structured vs. flat memory for handoff fidelity) but has not yet run any trials. No results exist for this experiment.
+
+**3. Failures and Learnings**
+*   **arXiv Collector Failure:** Initial collection failed due to timeouts and HTTP 429 errors. *Lesson:* Switched to OpenAlex, which resolved the issue.
+*   **Missing Assessment Files:** Files did not appear early on because `analyze_research.py` was not uploaded/executed. *Lesson:* Ensured the analyzer was added and the workflow rerun to produce expected outputs.
+
+**4. Single Best Next Action**
+Run `PROP-EXP-MEM-001` with fresh model instances using identical test prompts for both the flat baseline and the structured memory condition. This requires running at least three blind trials per condition and scoring them using the PCRB-1 handoff rubric.
+
+**5. Missing or Uncertain Information**
+*   There are no empirical results yet for the structured memory improvement hypothesis.
+*   The specific contribution of individual memory fields to handoff fidelity is unknown.
+*   The methodology for independent evaluation of proposed experiments before acceptance is still open.
+*   The implementation details for a provider-neutral adapter to compare multiple model families are undefined.
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts Unsure About:**
+*   The specific content or structure of the "flat baseline" memory format versus the "structured project memory" format.
+*   The exact definition and criteria of the "PCRB-1 handoff rubric."
+*   The current quota limits or specific constraints affecting Rubens Alphe’s access frequency.
+
+**Proposed Measurable Next Experiment:**
+Execute the `PROP-EXP-MEM-001` trial: Select 5 distinct mission state snapshots. For each, generate a handoff document using (A) flat memory and (B) structured memory. Have a fresh, blind model instance reconstruct the mission state from each document. Score reconstruction accuracy using the PCRB-1 rubric. Accept structured memory only if the mean score is $\ge$ 10 points higher than the baseline with no increase in critical fabrications.

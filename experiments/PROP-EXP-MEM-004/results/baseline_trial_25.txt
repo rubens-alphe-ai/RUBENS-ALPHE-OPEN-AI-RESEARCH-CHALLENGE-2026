@@ -1,0 +1,34 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions and models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, and transfers complete state to more capable future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository and GitHub Actions for scheduled research cycles. OpenAlex is the primary research source (verified: 30 papers collected, 0 errors). The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. The experiment **PROP-EXP-MEM-001** has been generated to test whether structured project memory improves blind handoff fidelity compared to a flat baseline using PCRB-1-style evaluation. This trial has been proposed but **not yet run**. Decision logic dictates that experiments require independent evaluation before canonical state changes.
+
+**3. Failures and Lessons**
+*   **arXiv Collector Failure:** Initial attempts resulted in empty paper lists (`papers=[]`) due to timeouts and HTTP 429 rate limits.
+    *   *Lesson:* Replaced arXiv with OpenAlex to ensure reliable public data ingestion.
+    *   *Status:* Resolved.
+*   **Missing Assessment Files:** Early workflow runs failed to produce assessment outputs because `analyze_research.py` was not uploaded/executed.
+    *   *Lesson:* Ensure all pipeline components (fetcher, analyzer) are deployed before triggering workflows.
+    *   *Status:* Resolved.
+
+**4. Single Best Next Action**
+Execute **PROP-EXP-MEM-001**. This involves running blind handoff trials with fresh model instances. Specifically:
+1.  Run at least three blind trials for the **flat baseline** condition.
+2.  Run at least three blind trials for the **structured memory** condition using identical test prompts.
+3.  Score all outputs using the PCRB-1 handoff rubric.
+4.  Compare mean scores and critical fabrication counts.
+
+**5. Missing or Uncertain Information**
+*   **Experimental Results:** No data exists yet for PROP-EXP-MEM-001. The mean scores and fabrication counts are unknown.
+*   **Rubric Specifics:** The exact scoring criteria for the "PCRB-1 handoff rubric" are not detailed in the supplied state, only its existence.
+*   **Field Contribution:** It is unknown which specific memory fields contribute most to handoff fidelity.
+*   **Cross-Model Reproducibility:** It is unverified whether an unrelated model can reproduce the mission without seeing the original conversation.
+
+**Confidence in Reconstruction:** 0.95
+**Uncertain Facts:** None; all claims are derived directly from the provided status markers.
+**Proposed Measurable Next Experiment:**
+Conduct a blind A/B test of handoff fidelity.
+*   **Hypothesis:** Structured memory improves reconstruction accuracy over flat text.
+*   **Method:** Select 5 distinct task descriptions. Generate handoff prompts for both conditions. Feed prompts to 3 different LLM instances (fresh context). Score responses on factual accuracy (0-10) and hallucination count.
+*   **Metric:** Calculate the mean score difference. Structured memory is only accepted if the mean score is $\ge$ 10 points higher than the flat baseline AND the critical fabrication count does not increase.

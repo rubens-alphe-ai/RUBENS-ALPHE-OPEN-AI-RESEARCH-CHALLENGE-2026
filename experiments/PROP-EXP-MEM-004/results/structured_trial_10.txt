@@ -1,0 +1,29 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions and models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, and transfers state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository for code, state, and history. A GitHub Actions workflow triggers research cycles using OpenAlex (source of 30 verified papers). The research assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. The system has generated experiment PROP-EXP-MEM-001, which tests if structured project memory improves blind handoff fidelity compared to a flat baseline using PCRB-1-style evaluation. No trials of this experiment have been run yet.
+
+**3. Failures and Learnings**
+*   **arXiv Collection Failure:** The initial collector failed due to timeouts and HTTP 429 rate limits, resulting in empty paper data. *Learning:* Replaced with OpenAlex-based `fetch_research.py v2`.
+*   **Missing Assessment Files:** Early runs produced no analysis because `analyze_research.py` was not executed. *Learning:* Ensured the analyzer is integrated into the workflow; subsequent runs produced expected files.
+
+**4. Single Best Next Action**
+Run PROP-EXP-MEM-001 with fresh model instances. Specifically, execute at least three blind trials per condition (structured memory vs. flat baseline) using identical test prompts, scoring each output with the PCRB-1 handoff rubric to compare mean scores and critical fabrication counts.
+
+**5. Missing or Uncertain Information**
+*   Specific field definitions for the structured memory format.
+*   Details on the provider-neutral adapter for comparing multiple model families.
+*   Criteria for independent evaluation of proposed experiments before acceptance.
+*   Which specific memory fields contribute most to handoff fidelity (currently an open question).
+*   Exact implementation details of the PCRB-1 rubric if not previously shared in this state.
+
+**Confidence in Reconstruction:** 0.95
+
+**Uncertain Facts:**
+*   The specific threshold for "critical fabrication" definition within the PCRB-1 rubric.
+*   The exact structure of the `proposed-next-problem.json` file beyond its existence.
+*   Whether the "flat baseline" refers to a specific previous version of the code or a zero-memory condition.
+
+**Proposed Measurable Next Experiment:**
+Execute a blind A/B test: Provide 5 fresh model instances with the full structured JSON state and 5 with a flat text summary of the same state. Ask them to reconstruct the "Current Technical State." Score responses on accuracy (0-10) and fabrication count. Accept structured memory only if mean score is ≥10 points higher and fabrications do not increase.

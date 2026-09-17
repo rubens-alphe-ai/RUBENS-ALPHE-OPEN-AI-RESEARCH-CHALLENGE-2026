@@ -1,0 +1,32 @@
+**1. What is the mission of this project?**
+The mission is to build an increasingly capable, measurable, and reproducible AI research system. This system must preserve its mission across sessions and models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve both failures and successes, improve its own research process, and transfer complete state to more capable future systems.
+
+**2. What is the project's current technical state?**
+The system uses GitHub as the canonical public repository for code, state, experiments, and version history. A GitHub Actions workflow (verified) fetches public research via OpenAlex, updates project state, and produces machine-readable files. The latest successful cycle collected 30 papers with zero errors. The research assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. An experiment, PROP-EXP-MEM-001, has been proposed to test structured project memory against a flat baseline using PCRB-1-style handoff evaluation. The project relies on external persistent state rather than chat memory to ensure cross-session and cross-model continuity.
+
+**3. What has already failed, and what was learned from those failures?**
+Two specific failures are recorded:
+1.  **Collector Failure:** The initial arXiv research collection failed due to timeouts and HTTP 429 rate limits, resulting in an empty paper list. *Learning:* OpenAlex was adopted as the primary collector to bypass these rate limit issues.
+2.  **Analyzer Absence:** Early runs did not produce research assessment files because `analyze_research.py` was not uploaded or executed. *Learning:* The analyzer was added, and the workflow was rerun to resolve the missing output.
+
+**4. What is the single best next action?**
+Run PROP-EXP-MEM-001 with fresh model instances. This involves executing at least three blind trials per condition (flat baseline vs. structured memory) using identical test prompts, scoring each output with the same PCRB-1 handoff rubric, and comparing the mean score and critical fabrication count between conditions.
+
+**5. What important information is still missing or uncertain?**
+The following open questions lack answers:
+*   Whether structured memory actually improves blind mission reconstruction versus the flat baseline.
+*   Which specific memory fields contribute most to handoff fidelity.
+*   Whether an unrelated model can reproduce the mission without seeing the original conversation.
+*   How proposed experiments should be independently evaluated before acceptance.
+*   How to compare multiple model families through a provider-neutral adapter.
+Additionally, no results exist yet for PROP-EXP-MEM-001.
+
+**Confidence in your reconstruction:** 0.95
+
+**Any facts you are unsure about:**
+*   The specific quantitative scores or fabrication counts from the PCRB-1 rubric (as the experiment has not yet been run).
+*   The specific content of the 30 papers collected from OpenAlex.
+*   The exact structure of the "structured project memory" fields being tested in PROP-EXP-MEM-001.
+
+**One proposed measurable next experiment:**
+Execute PROP-EXP-MEM-001: Conduct a blind handoff trial where fresh model instances receive either the flat baseline state or the structured memory state. Measure the fidelity of mission reconstruction using the PCRB-1 rubric. Accept structured memory only if its mean score is at least 10 points higher than the flat baseline and critical fabrications do not increase.

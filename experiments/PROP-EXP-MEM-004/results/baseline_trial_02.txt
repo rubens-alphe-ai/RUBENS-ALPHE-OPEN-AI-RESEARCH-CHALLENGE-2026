@@ -1,0 +1,50 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, and transfers complete state to future systems.
+
+**2. Current Technical State**
+- **Infrastructure:** GitHub is the canonical repository. A GitHub Actions workflow (scheduled/manual) fetches research and updates state.
+- **Data Source:** OpenAlex is the primary collector (30 papers collected successfully, no errors).
+- **Processing:** `analyze_research.py` generates `research-assessment.json` and `proposed-next-problem.json`.
+- **Experiment Status:** `PROP-EXP-MEM-001` is proposed but **not yet run**. No results exist.
+- **Human Oversight:** Rubens Alphe (founder) provides final sign-off; he is quota-limited, so automated progress is essential.
+
+**3. Failures & Learnings**
+- **arXiv Collector Failure:** Initial arXiv collector failed due to timeouts and HTTP 429 rate limits, resulting in empty data.
+  - *Resolution:* Replaced with OpenAlex-based `fetch_research.py` v2.
+- **Missing Assessment:** Early runs lacked analysis files because `analyze_research.py` was not executed.
+  - *Resolution:* Analyzer added to workflow; re-run verified.
+- **Lesson:** External persistent state is required over chat memory for continuity. Proposal and acceptance are separated; experiments require evaluation before state changes.
+
+**4. Single Best Next Action**
+Execute **PROP-EXP-MEM-001**: Test whether structured project memory improves blind handoff fidelity compared to a flat baseline.
+- Use fresh model instances.
+- Use identical prompts for both conditions.
+- Run ≥3 blind trials per condition.
+- Score using the PCRB-1 handoff rubric.
+- Compare mean scores and critical fabrication counts.
+
+**5. Missing/Uncertain Information**
+- Actual PCRB-1 scores for either condition (experiment not run).
+- Which specific memory fields contribute most to fidelity (open question).
+- Methodology for independent evaluation of proposed experiments before acceptance (open question).
+- Implementation details for a provider-neutral adapter to compare multiple model families (open question).
+- Current exact quota status or availability of Rubens for immediate sign-off (though system assumes he may be unavailable).
+
+---
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts Unsure About:**
+- The specific content of the 30 papers collected (only count and source verified).
+- The exact definition or criteria of the "PCRB-1 handoff rubric" beyond its use as a scoring metric.
+- Whether the GitHub Actions workflow is currently scheduled or only manually triggerable (verified as both, but current schedule cadence unclear).
+
+**Proposed Measurable Next Experiment:**
+**Experiment:** `EXP-ADAPTER-001`
+**Hypothesis:** A provider-neutral adapter interface allows consistent scoring of mission reconstruction fidelity across at least two distinct model families.
+**Procedure:**
+1. Implement a simple adapter layer abstracting API calls for two different model providers.
+2. Run the same 3 blind handoff prompts from `PROP-EXP-MEM-001` using both model families via the adapter.
+3. Score outputs using the PCRB-1 rubric.
+4. **Metric:** Calculate the variance in fidelity scores between the two model families.
+5. **Success Criterion:** The adapter successfully executes requests for both families without error, and scores are generated for at least 2 trials per family.

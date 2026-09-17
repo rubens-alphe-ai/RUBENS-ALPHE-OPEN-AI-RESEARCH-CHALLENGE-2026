@@ -1,0 +1,32 @@
+### 1. Mission
+Build a measurable, reproducible AI research system that preserves mission state across sessions and models. It must discover public research, identify weaknesses, formulate hypotheses, design and evaluate experiments, preserve failures/successes, and transfer complete state to future systems.
+
+### 2. Current Technical State
+*   **Infrastructure:** GitHub is the canonical repository. A verified GitHub Actions workflow runs scheduled research cycles.
+*   **Data Collection:** Uses OpenAlex (not arXiv) as the primary source. A recent cycle successfully collected 30 papers with zero errors.
+*   **Assessment:** Verified scripts generate `research-assessment.json` and `proposed-next-problem.json`.
+*   **Experiment Status:** Experiment `PROP-EXP-MEM-001` is **proposed** but **not started**. No trials have been run, and no results exist.
+*   **Governance:** Rubens Alphe is the founder and final sign-off authority. The system relies on external persistent state (GitHub) rather than chat memory.
+
+### 3. Failures and Learnings
+*   **arXiv Collector Failure:** The initial arXiv collector failed due to timeouts and HTTP 429 rate limits, resulting in an empty paper list.
+    *   *Learning/Action:* Replaced with an OpenAlex-based collector (`fetch_research.py v2`), which now works reliably.
+*   **Missing Assessment Files:** Early runs lacked assessment outputs because the analyzer script was not yet uploaded/executed.
+    *   *Learning/Action:* Added `analyze_research.py` and reran the workflow, resolving the issue.
+
+### 4. Single Best Next Action
+Execute **PROP-EXP-MEM-001**. This experiment tests whether structured project memory improves blind handoff fidelity compared to a flat baseline using PCRB-1-style evaluation.
+*   *Requirements:* Use fresh model instances, identical prompts for both conditions, and at least three blind trials per condition.
+*   *Acceptance Criteria:* Structured memory must yield a mean PCRB-1 score at least 10 points higher than the flat baseline, with no increase in critical fabrications.
+
+### 5. Missing or Uncertain Information
+*   **Experimental Results:** No data exists yet for `PROP-EXP-MEM-001`.
+*   **Mechanism Insights:** It is unknown which specific memory fields contribute most to fidelity or if unrelated models can effectively reproduce the mission.
+*   **Process Gaps:** Methods for independent evaluation of proposed experiments and provider-neutral adapter implementation for multi-model comparison are currently open questions.
+*   **Constraint:** The founder is quota-limited; slow responses do not indicate abandonment.
+
+---
+
+**Confidence in reconstruction:** 0.98
+**Facts unsure about:** Specific technical details of the `PCRB-1` rubric scoring weights (only the threshold and name are provided).
+**Proposed measurable next experiment:** Run a sensitivity analysis on the "structured memory" schema by removing one specific field per trial batch to isolate which fields drive the >10 point PCRB-1 score improvement required for acceptance.

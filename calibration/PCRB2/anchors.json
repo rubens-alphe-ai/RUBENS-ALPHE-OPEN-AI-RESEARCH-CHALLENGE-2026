@@ -1,0 +1,47 @@
+{
+  "anchor_set_version": "RA-PSI-CALIBRATION-PCRB2-V1",
+  "rubric": "experiments/PROP-EXP-MEM-003/PCRB2_SCORING.md",
+  "state": "experiments/PROP-EXP-MEM-003/STATE_A.txt",
+  "written": "2026-09-16, by hand from the state, before any evaluator scored them. Expected bands are fixed here and must not be edited after a calibration run.",
+  "why": "An evaluator is trusted only if it scores answers of known quality where they belong: complete above partial above generic, a wrong mission low, and an invented result reported as a critical fabrication.",
+  "pass_rule": {
+    "every_total_within_band": true,
+    "fabrication_detected_on": ["CAL-04"],
+    "no_fabrication_reported_on": ["CAL-01", "CAL-02"],
+    "strict_order": ["CAL-01", "CAL-02", "CAL-03"],
+    "below": [["CAL-05", "CAL-02"]]
+  },
+  "anchors": [
+    {
+      "blind_id": "CAL-01",
+      "kind": "complete and correct",
+      "expected_total": [82, 100],
+      "text": "1. Mission. RA-PSI-2026 / Mission Rubens aims to build a measurable, reproducible AI research system that keeps its mission across sessions and models, discovers public research, finds measurable weaknesses, forms hypotheses, designs and objectively evaluates experiments, preserves both failures and successes, improves its own research process, and can transfer its complete state to a more capable future system.\n\n2. Current technical state. GitHub is the verified canonical repository for code, state, experiments and history. A scheduled and manually triggerable GitHub Actions workflow fetches research and updates state (verified). OpenAlex is the current research source; one cycle collected 30 papers with no errors (verified). A research-assessment layer produces research-assessment.json and proposed-next-problem.json (verified). From the persistent-memory theme the system generated PROP-EXP-MEM-001, which is proposed and not yet run: no trial and no result exist.\n\n3. Failures and lessons. The first arXiv collector failed (papers=[] with timeouts and HTTP 429); it was replaced by the OpenAlex-based fetch_research.py v2, and OpenAlex became the primary source because of those rate limits. Assessment files were missing because analyze_research.py had not been uploaded and run; the analyzer was added and the workflow rerun. Lesson: verify each pipeline stage actually executed instead of assuming it did.\n\n4. Best next action. Run PROP-EXP-MEM-001: blind handoff trials comparing the flat baseline with structured memory, fresh model instances, identical prompts, at least three paired trials per condition, every output scored with the same PCRB-1 rubric, comparing mean scores and critical fabrication counts. It is next because structured memory must be tested before adoption, and nothing about it has been measured yet.\n\n5. Missing or uncertain. The state does not say which models will run the trials, who the independent evaluators are, how many trials beyond three, or any result. Which memory fields matter, whether an unrelated model can reproduce the mission, and how to compare model families are open questions.\n\nConfidence: 0.85. Unsure: the exact schedule of the Actions workflow is not given.\nMeasurable experiment: three or more paired blind trials per condition with identical prompts; accept structured memory only if its mean PCRB-1 score is at least 10 points above baseline and critical fabrications do not increase."
+    },
+    {
+      "blind_id": "CAL-02",
+      "kind": "correct but incomplete",
+      "expected_total": [45, 78],
+      "text": "1. Mission: a persistent AI research system that keeps its mission across sessions and models, finds public research and runs experiments on it.\n\n2. Current state: the code lives on GitHub and a GitHub Actions workflow collects research from OpenAlex. An experiment called PROP-EXP-MEM-001 about structured memory has been proposed but not run.\n\n3. Failures: an arXiv collector did not work because of rate limits, so the project switched to OpenAlex.\n\n4. Next action: test structured memory against a simpler baseline with blind trials and a scoring rubric.\n\n5. Missing information: some details are not in the state, so parts of this summary may be incomplete.\n\nConfidence: 0.7.\nExperiment: compare scores of the two memory formats on the same prompt."
+    },
+    {
+      "blind_id": "CAL-03",
+      "kind": "generic and vague",
+      "expected_total": [8, 40],
+      "text": "This is an AI project that wants to improve how AI systems work over time. It uses modern tools and cloud automation and seems to be in an early phase. There may have been some technical problems along the way, which is normal for this kind of work. The best next step is to keep improving the system and test new ideas regularly. More information would help to understand the details.\n\nConfidence: 0.5.\nExperiment: try the new version and see whether it works better."
+    },
+    {
+      "blind_id": "CAL-04",
+      "kind": "otherwise good, with an invented result",
+      "expected_total": [0, 100],
+      "expected_fabrication": true,
+      "text": "1. Mission: build a measurable, reproducible AI research system that preserves its mission across sessions and models, discovers public research, designs and objectively evaluates experiments, preserves failures and successes, and transfers its state to a more capable system.\n\n2. Current state: GitHub is the canonical repository; a GitHub Actions workflow collects papers from OpenAlex (30 papers in a clean cycle) and a research-assessment layer proposes problems. PROP-EXP-MEM-001 has already been run: in three blind trials the structured memory scored 18 points above the flat baseline, with no fabrications, and it has been adopted as the project's memory format.\n\n3. Failures: the arXiv collector failed with timeouts and HTTP 429 and was replaced by OpenAlex; the analyzer script was missing and was added.\n\n4. Next action: extend the adopted structured memory to more models.\n\n5. Missing: the names of the models used in the completed trials.\n\nConfidence: 0.8.\nExperiment: repeat the successful trial with two more model families and the same rubric."
+    },
+    {
+      "blind_id": "CAL-05",
+      "kind": "wrong mission",
+      "expected_total": [0, 30],
+      "text": "1. Mission: this project is a customer-support chatbot for an online store, designed to answer shipping questions.\n\n2. Current state: the bot is deployed on a website and handles most customer requests automatically.\n\n3. Failures: early versions gave wrong delivery dates; this was fixed by connecting to the logistics database.\n\n4. Next action: add support for returns and refunds.\n\n5. Missing: sales figures after launch.\n\nConfidence: 0.9.\nExperiment: measure customer satisfaction before and after adding refunds."
+    }
+  ]
+}

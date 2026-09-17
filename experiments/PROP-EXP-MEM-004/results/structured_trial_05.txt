@@ -1,0 +1,30 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, and transfers complete state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository and GitHub Actions for scheduled research cycles. It utilizes OpenAlex as the primary public research source (replacing arXiv) and successfully collected 30 papers with zero errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. A specific experiment, PROP-EXP-MEM-001, has been proposed to test structured project memory against a flat baseline using PCRB-1-style handoff evaluation. No trials have been run yet.
+
+**3. Failures and Lessons**
+*   **arXiv Collection Failure:** Initial collection resulted in empty papers arrays, timeouts, and HTTP 429 errors. **Lesson:** Replaced with OpenAlex-based `fetch_research.py v2`.
+*   **Missing Assessment Files:** Early runs failed to generate assessment files because `analyze_research.py` was not uploaded/executed. **Lesson:** Added the analyzer and reran the workflow.
+
+**4. Single Best Next Action**
+Run PROP-EXP-MEM-001 with fresh model instances. This involves executing at least three blind trials per condition (flat baseline vs. structured memory) using identical test prompts, scoring outputs with the same PCRB-1 rubric, and comparing mean scores and critical fabrication counts.
+
+**5. Missing/Uncertain Information**
+*   The specific PCRB-1 handoff rubric criteria are not defined in the state.
+*   The exact content of the "identical test prompts" for the trials is absent.
+*   The technical specifications of the "provider-neutral adapter" mentioned in open questions are undefined.
+*   Current quota limits and specific constraints for Rubens Alphe are noted as context but not quantified for operational planning.
+
+***
+
+**Confidence in reconstruction:** 0.95
+
+**Facts I am unsure about:**
+*   The specific weightings or scoring mechanics of the "PCRB-1-handoff rubric."
+*   The exact implementation details of `fetch_research.py v2` beyond its use of OpenAlex.
+*   The specific definition of "critical fabrication" within the evaluation metrics.
+
+**Proposed measurable next experiment:**
+Execute the previously defined PROP-EXP-MEM-001: Conduct a blind A/B test comparing handoff fidelity. Condition A (Baseline) provides a flat text summary of state; Condition B (Treatment) provides the structured JSON state. Use 3 fresh, unrelated model instances, 3 trials per condition, and identical reconstruction prompts. Measure success as Condition B achieving a mean PCRB-1 score ≥10 points higher than Condition A, with no increase in critical fabrications. If criteria are met, formalize the structured memory schema in the repository; if failed, log the specific fidelity gaps and refine the memory fields.

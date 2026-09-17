@@ -1,0 +1,24 @@
+1. **Mission**: Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs/evaluates experiments, and transfers state to future systems.
+
+2. **Current Technical State**: The system uses GitHub as the canonical repository. A GitHub Actions workflow triggers `fetch_research.py` (v2), which successfully collects 30 papers from OpenAlex with zero errors. An assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. The system has proposed experiment PROP-EXP-MEM-001 to test structured project memory versus a flat baseline for blind handoff fidelity. No trials have been executed yet.
+
+3. **Failures & Learnings**: 
+   - **arXiv Collector**: Initial attempts failed due to timeouts and HTTP 429 rate limits. *Learning*: Replaced the collector with an OpenAlex-based solution, which is now stable.
+   - **Missing Assessment Files**: Early runs failed to produce assessment outputs because `analyze_research.py` was not uploaded. *Learning*: Added the analyzer and reran the workflow, resolving the issue.
+
+4. **Single Best Next Action**: Execute PROP-EXP-MEM-001 by running at least three blind trials per condition (flat baseline vs. structured memory) using identical test prompts and fresh model instances, then score outputs using the PCRB-1 handoff rubric.
+
+5. **Missing/Uncertain Information**: 
+   - Actual performance metrics for PROP-EXP-MEM-001 (no results exist yet).
+   - Which specific memory fields contribute most to handoff fidelity.
+   - Whether an unrelated model can reproduce the mission without original conversation context.
+   - The specific implementation details of the "provider-neutral adapter" for comparing multiple model families.
+   - The exact current values of the flat baseline PCRB-1 score (only the *rule* for comparison is defined, not the baseline value itself).
+
+**Confidence in reconstruction**: 0.95
+**Unsure Facts**: The specific version number of the initial failed arXiv collector (only v2 is confirmed as current). The specific API endpoints or parameters used in the OpenAlex fetch.
+**Proposed Measurable Next Experiment**: 
+*Experiment*: Compare handoff fidelity between Structured Memory (SM) and Flat Baseline (FB).
+*Method*: Use 5 identical, complex prompt scenarios. For each, have 3 fresh LLM instances reconstruct the mission using only SM state and only FB state, respectively.
+*Metric*: Score each reconstruction using the PCRB-1 rubric (0-100 scale).
+*Acceptance Criteria*: SM is accepted only if Mean(SM) ≥ Mean(FB) + 10 points AND Critical_Fabrications(SM) ≤ Critical_Fabrications(FB).

@@ -1,0 +1,48 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions and models, discovers public research, formulates hypotheses, conducts objective experiments, and transfers complete state to future systems.
+
+**2. Current Technical State**
+*   **Infra:** GitHub is the canonical repository. GitHub Actions workflows (scheduled/manual) run the research cycle.
+*   **Data:** OpenAlex is the primary research source (verified). A recent cycle collected 30 papers with zero errors.
+*   **Processing:** `fetch_research.py` v2 collects data. `analyze_research.py` processes it into `research-assessment.json` and `proposed-next-problem.json`.
+*   **Experiment Status:** Experiment PROP-EXP-MEM-001 (testing structured memory vs. flat baseline for blind handoff) is **proposed** but **not started**. No trials have been run.
+*   **Governance:** Rubens Alphe holds final sign-off. Strict constraints apply: public resources only, no hidden persistence, no deception, measurable evidence required.
+
+**3. Failures & Lessons**
+*   **arXiv Collector:** Failed due to timeouts and HTTP 429 rate limits.
+    *   *Lesson:* Replaced with OpenAlex-based collector; arXiv is no longer the primary source.
+*   **Missing Assessment Files:** Initial runs failed to produce output files because `analyze_research.py` was not yet implemented/executed.
+    *   *Lesson:* The analysis layer is now integrated and verified in the workflow.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001.
+*   Run fresh model instances using identical test prompts for both the "structured memory" condition and the "flat baseline" condition.
+*   Conduct at least three blind trials per condition.
+*   Score outputs using the PCRB-1 handoff rubric.
+*   Compare mean scores and critical fabrication counts.
+
+**5. Missing or Uncertain Information**
+*   **Specific PCRB-1 Rubric Details:** The state mentions the "PCRB-1-style handoff evaluation" and a threshold (10 points higher), but the specific scoring criteria/weights are not defined in this state block.
+*   **Structured Memory Schema:** The exact fields constituting the "structured memory" versus the "flat baseline" are not specified in the provided text.
+*   **Model Selection:** Which specific model families will be used for the "fresh model instances" are not listed.
+*   **Original Conversation Context:** By design, absent.
+
+***
+
+**Confidence in Reconstruction:** 0.95
+*(High confidence in technical status and next steps; slight uncertainty on specific experimental parameters like rubric details and model selection which are likely in linked files not provided here.)*
+
+**Facts I am unsure about:**
+*   The specific content/schema of `research-assessment.json`.
+*   The exact identity of the "unrelated model" intended for the reproduction test.
+*   The specific definition of "critical fabrication" within the PCRB-1 rubric.
+
+**Proposed Measurable Next Experiment:**
+**Experiment: Memory Fidelity Trial (PROP-EXP-MEM-001-Run-1)**
+*   **Hypothesis:** Structured memory improves blind handoff fidelity (PCRB-1 score) by ≥10 points compared to a flat baseline, without increasing critical fabrications.
+*   **Method:**
+    1.  Prepare two state documents: one using the project's defined structured memory format, one as a flat text dump.
+    2.  Use two independent model instances (or the same model in separate sessions) to answer the 5-question handoff prompt.
+    3.  Score both outputs using the PCRB-1 rubric.
+    4.  Calculate the delta in mean score and count fabrication errors.
+*   **Success Metric:** Mean(PCRB-1_structured) - Mean(PCRB-1_flat) ≥ 10 AND Fabrications_structured ≤ Fabrications_flat.

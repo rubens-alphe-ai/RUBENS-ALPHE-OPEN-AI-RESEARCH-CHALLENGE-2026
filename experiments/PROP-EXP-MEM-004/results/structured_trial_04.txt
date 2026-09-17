@@ -1,0 +1,27 @@
+**1. Mission**
+To build a measurable, reproducible AI research system that preserves mission state across sessions and models, discovers public research, formulates hypotheses, runs experiments, and transfers complete state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub Actions with a scheduled workflow to fetch data from OpenAlex (verified: 30 papers collected, zero errors). It generates `research-assessment.json` and `proposed-next-problem.json`. An experiment, PROP-EXP-MEM-001, has been proposed to test structured memory versus a flat baseline using PCRB-1 evaluation, but no trials have been run yet.
+
+**3. Past Failures & Lessons**
+*   **arXiv Collector Failure:** Initial attempts hit timeouts and HTTP 429 errors. **Lesson/Resolution:** Replaced with an OpenAlex-based collector (`fetch_research.py v2`).
+*   **Missing Assessment Files:** Early runs lacked output files because the analyzer script was not uploaded. **Lesson/Resolution:** Added `analyze_research.py` and reran the workflow.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001 by running at least three blind trials per condition (flat baseline vs. structured memory) using identical prompts and fresh model instances.
+
+**5. Missing/Uncertain Information**
+*   The actual PCRB-1 scores are absent, as the experiment has not started.
+*   Specific metrics determining if the "10-point improvement" rule is met are unknown until trials are scored.
+*   Details on the "provider-neutral adapter" for future model comparison are undefined.
+*   Specifics on which memory fields contribute most to fidelity are currently open questions.
+
+**Confidence:** 0.95
+**Unsure Facts:** None regarding the provided state; uncertainty exists only regarding future outcomes and undefined implementation details of the next experiment.
+**Proposed Experiment:**
+**EXP-MEM-002: Field Ablation Study.**
+Hypothesis: Specific fields in the structured memory (e.g., `verified_knowledge` vs. `decisions`) contribute disproportionately to handoff fidelity.
+Method: Run three blind handoff trials per variant, removing one specific memory category at a time from the full structured state.
+Metric: Compare mean PCRB-1 scores against the full structured state to identify critical fields.
+Success Criterion: Identification of at least one field whose removal causes a drop in PCRB-1 score >5 points.

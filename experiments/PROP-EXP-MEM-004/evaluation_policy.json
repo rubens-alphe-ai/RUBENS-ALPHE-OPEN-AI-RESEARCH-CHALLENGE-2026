@@ -1,0 +1,36 @@
+{
+  "policy_version": "RA-PSI-EVAL-POLICY-V1",
+  "design": "handoff_quiz",
+  "notes": "Pre-registered with PROTOCOL.md and QUIZ.json before any trial. Run with scripts/run_quiz_experiment.py.",
+  "generation": {
+    "provider": "openai-compatible",
+    "model": "qwen/qwen3.8-27b",
+    "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+    "key": "groq",
+    "temperature": 0.8,
+    "max_output_tokens": 1000,
+    "timeout_seconds": 300,
+    "extra_body": {"reasoning_effort": "none"},
+    "seeds": [601, 602, 603, 604, 605, 606, 607, 608, 609, 610, 611, 612, 613, 614, 615,
+              616, 617, 618, 619, 620, 621, 622, 623, 624, 625, 626, 627, 628, 629, 630],
+    "baseline_state": "STATE_A.txt",
+    "structured_state": "STATE_B.json",
+    "protocol": "PROTOCOL.md"
+  },
+  "reader": {
+    "evaluator_id": "reader-groq-gpt-oss-120b",
+    "provider": "Groq",
+    "model": "openai/gpt-oss-120b",
+    "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+    "key": "groq",
+    "json_mode": false,
+    "max_tokens": 2500,
+    "extra_body": {"reasoning_effort": "low"}
+  },
+  "quiz": {
+    "file": "QUIZ.json",
+    "keep_min_delta_pp": 10,
+    "invention_margin": 5
+  },
+  "default_batch_pause_seconds": 20
+}

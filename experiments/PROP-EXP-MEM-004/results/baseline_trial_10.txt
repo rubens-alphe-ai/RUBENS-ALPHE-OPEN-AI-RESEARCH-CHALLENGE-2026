@@ -1,0 +1,40 @@
+**1. Mission**
+To build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs/evaluates experiments, and transfers complete state to future systems.
+
+**2. Current Technical State**
+*   **Infrastructure:** GitHub is the canonical repository; GitHub Actions runs scheduled research cycles.
+*   **Data Source:** OpenAlex replaces arXiv (due to timeouts/429 errors) and successfully collects 30 papers with zero errors.
+*   **Pipeline:** `fetch_research.py` (v2) and `analyze_research.py` are active, producing `research-assessment.json` and `proposed-next-problem.json`.
+*   **Current Focus:** Experiment PROP-EXP-MEM-001 is proposed to test if structured project memory improves blind handoff fidelity vs. a flat baseline using PCRB-1-style evaluation.
+*   **Status:** No trial of PROP-EXP-MEM-001 has been run yet.
+
+**3. Failures and Lessons**
+*   **Failure:** Initial arXiv collector failed with timeouts and HTTP 429 rate limits, resulting in empty paper lists.
+*   **Lesson:** Replaced with OpenAlex-based collector; arXiv is no longer the primary source.
+*   **Failure:** Assessment files were missing in early runs.
+*   **Lesson:** `analyze_research.py` was not uploaded/executed; the workflow was fixed by adding the analyzer and rerunning.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001: Run at least three blind trials per condition (structured memory vs. flat baseline) using fresh model instances and identical prompts, then score outputs using the PCRB-1 handoff rubric.
+
+**5. Missing/Uncertain Information**
+*   The specific content of the "flat baseline" vs. "structured memory" state files to be used in trials.
+*   The exact definition of the PCRB-1 handoff rubric.
+*   The identity of the "unrelated model" to be used for reproduction testing.
+*   Whether the "provider-neutral adapter" for comparing model families has been designed or is still conceptual.
+*   Specific details on how "independent evaluation" of proposed experiments will be implemented technically.
+
+**Confidence:** 0.95
+
+**Uncertain Facts:**
+*   The specific criteria for the PCRB-1 rubric (only the name and usage are known).
+*   The exact structure of the "structured memory" fields being tested (only the concept is known).
+*   The specific "fresh model instances" available for the blind trials.
+
+**Proposed Measurable Next Experiment:**
+Conduct the blind handoff trial for PROP-EXP-MEM-001.
+*   **Independent Variable:** State representation (Structured Memory vs. Flat Baseline).
+*   **Dependent Variables:** Mean PCRB-1 score; Critical Fabrication Count.
+*   **Conditions:** N=3 trials per condition (Total N=6).
+*   **Success Criterion:** Structured memory mean score ≥ (Flat Baseline mean + 10) AND Critical Fabrication Count ≤ Flat Baseline Count.
+*   **Control:** Identical test prompts, fresh model instances, no access to previous conversation context.

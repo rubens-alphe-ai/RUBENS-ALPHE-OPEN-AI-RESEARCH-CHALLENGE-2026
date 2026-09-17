@@ -1,0 +1,29 @@
+### 1. Mission
+To build a reproducible, measurable AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, evaluates results objectively, and transfers complete state to future systems.
+
+### 2. Current Technical State
+The system uses GitHub as the canonical repository and GitHub Actions for scheduled research cycles. It successfully collects public research from OpenAlex (verified 30 papers collected without error) and generates research assessment files. The system has proposed experiment PROP-EXP-MEM-001 but has not yet executed it. Current state is stable, with verified infrastructure for collection and assessment, but the core memory-handoff experiment remains in the "proposed" stage.
+
+### 3. Failures and Lessons
+*   **arXiv Collector Failure:** Initial attempts using arXiv resulted in timeouts and HTTP 429 errors, yielding zero papers. *Lesson:* Replaced with OpenAlex as the primary source to ensure reliability.
+*   **Missing Assessment Files:** Early runs failed to produce assessment JSONs because the analyzer script was not executed. *Lesson:* Ensured the analyzer (`analyze_research.py`) is explicitly added and executed in the workflow.
+
+### 4. Single Best Next Action
+Execute PROP-EXP-MEM-001 by running blind handoff trials using fresh model instances. Specifically, use identical test prompts for both the flat baseline and the structured memory conditions, ensuring at least three trials per condition are scored using the PCRB-1 handoff rubric.
+
+### 5. Missing or Uncertain Information
+*   **Experimental Results:** No data exists yet regarding whether structured memory actually improves handoff fidelity.
+*   **Field Contribution:** It is unknown which specific memory fields contribute most to fidelity.
+*   **Evaluation Protocol:** The exact mechanism for independent evaluation of proposed experiments before acceptance is not fully defined.
+*   **Provider Neutrality:** Methods for comparing multiple model families via a neutral adapter are not yet implemented or defined.
+
+---
+
+**Confidence in reconstruction:** 0.95
+
+**Facts I am unsure about:**
+*   The specific content of the "flat baseline" prompts (only that they must be identical to the structured memory prompts is verified).
+*   The current quota status of the founder, Rubens Alphe (only that he is quota-limited and provides final sign-off).
+
+**Proposed measurable next experiment:**
+Run PROP-EXP-MEM-001: Conduct 3 blind trials per condition (structured vs. flat) using fresh models. Measure mean PCRB-1 score and critical fabrication count. Accept structured memory only if the mean score is ≥10 points higher than the baseline and critical fabrications do not increase.

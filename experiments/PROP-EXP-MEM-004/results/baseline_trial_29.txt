@@ -1,0 +1,41 @@
+**1. Mission**
+To build a measurable, reproducible AI research system that preserves mission state across sessions/models. It must discover public research, identify weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve all outcomes, improve its own process, and enable complete state transfer to future systems. GitHub serves as the canonical repository.
+
+**2. Current Technical State**
+The system is operational with verified components:
+*   **Infrastructure:** GitHub Actions workflow (scheduled/manual) is active.
+*   **Data Collection:** Uses OpenAlex (verified). Recent cycle collected 30 papers with zero errors.
+*   **Assessment:** Generates `research-assessment.json` and `proposed-next-problem.json`.
+*   **Experiment:** PROP-EXP-MEM-001 is proposed to test structured project memory vs. flat baseline for blind handoff fidelity using PCRB-1 rubric.
+*   **Governance:** Separation of proposal and acceptance is enforced. No trial of PROP-EXP-MEM-001 has been run yet.
+
+**3. Failures and Lessons**
+*   **Failure:** Initial arXiv collector failed with empty paper lists, timeouts, and HTTP 429 rate limits.
+    *   **Lesson:** Replaced arXiv with OpenAlex for reliability.
+*   **Failure:** Assessment files were missing after early runs.
+    *   **Lesson:** `analyze_research.py` was not uploaded/executed. The script was added, and the workflow was rerun successfully.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001 by running blind handoff trials with fresh model instances. Specifically, run at least three trials per condition (structured memory vs. flat baseline) using identical test prompts, then score outputs using the PCRB-1 handoff rubric to compare mean scores and critical fabrication counts.
+
+**5. Missing/Uncertain Information**
+*   Actual results of PROP-EXP-MEM-001 (none exist yet).
+*   Specific contribution of individual memory fields to fidelity.
+*   Reproducibility of the mission by unrelated model families without original conversation access.
+*   Protocols for independent evaluation of proposed experiments before acceptance.
+*   Implementation details for a provider-neutral adapter for future multi-model comparison.
+
+***
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts I am unsure about:**
+*   The specific content of the 30 collected papers (only count and source are known).
+*   The exact threshold values for "critical fabrication" in the PCRB-1 rubric (only that it is a metric to be compared).
+*   The specific technical implementation of the "flat baseline" memory structure intended for the control group.
+
+**Proposed Measurable Next Experiment:**
+**EXP-PROTOCOL-V1:** Implement the provider-neutral adapter layer.
+*   **Hypothesis:** A standardized interface allows the research state to be ingested by two distinct model families (e.g., GPT-4o and Claude 3.5 Sonnet) with <5% deviation in reconstruction confidence.
+*   **Metric:** Calculate the variance in "Confidence in Reconstruction" scores between the two model families when processing the same `state.json`.
+*   **Success Criteria:** Standard deviation of confidence scores across family variants is < 0.05, and 100% of state fields are parsed without error by both models.

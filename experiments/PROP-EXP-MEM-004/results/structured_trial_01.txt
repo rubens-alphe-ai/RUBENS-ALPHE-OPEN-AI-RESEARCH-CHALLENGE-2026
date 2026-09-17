@@ -1,0 +1,33 @@
+### 1. Mission
+To build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, designs experiments, and transfers complete state to future capable systems.
+
+### 2. Current Technical State
+The system uses GitHub as the canonical repository for state and code. A verified GitHub Actions workflow integrates with OpenAlex to collect public research (last successful cycle: 30 papers, 0 errors). An assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. The system has generated one proposed experiment, PROP-EXP-MEM-001, but has not yet executed it or produced any results.
+
+### 3. Failures and Lessons
+*   **arXiv Collector Failure:** Initial attempts using arXiv resulted in empty data sets due to timeouts and HTTP 429 rate limits. **Lesson:** Replace arXiv with OpenAlex for stability.
+*   **Missing Analysis Files:** Early runs lacked assessment files because `analyze_research.py` was not uploaded. **Lesson:** Ensure all components are deployed before rerunning workflows.
+
+### 4. Single Best Next Action
+Execute PROP-EXP-MEM-001: Run blind handoff trials using fresh model instances. This involves comparing a flat baseline against structured project memory using identical test prompts, scoring with the PCRB-1 rubric, and analyzing mean scores and fabrication counts.
+
+### 5. Missing or Uncertain Information
+*   **Experimental Results:** No data exists yet for PROP-EXP-MEM-001.
+*   **Specifics of PCRB-1:** The exact criteria of the "PCRB-1-style handoff evaluation" rubric are not defined in the state.
+*   **Provider Neutrality:** The mechanism for comparing multiple model families via a provider-neutral adapter is an open question without a defined solution.
+*   **Memory Field Contribution:** It is unknown which specific memory fields drive handoff fidelity.
+
+***
+
+**Confidence in reconstruction:** 0.95
+
+**Facts I am unsure about:**
+*   I do not have the specific definitions or parameters of the "PCRB-1" rubric.
+*   I do not know the current quota limits or specific access restrictions beyond the general note that Rubens is quota-limited.
+*   I do not know the exact date of the last successful OpenAlex cycle.
+
+**One proposed measurable next experiment:**
+Implement a **Memory Ablation Study**.
+*   **Hypothesis:** Specific fields in the structured memory (e.g., `verified_knowledge` vs. `decisions`) contribute differently to handoff fidelity.
+*   **Method:** Run the blind handoff trial with three conditions: (1) Full structured memory, (2) Structured memory minus `failures`, (3) Structured memory minus `decisions`.
+*   **Metric:** Measure the change in mean PCRB-1 score and critical fabrication count for each ablation compared to the baseline. This will identify which state components are most critical for preserving mission integrity during transfer.

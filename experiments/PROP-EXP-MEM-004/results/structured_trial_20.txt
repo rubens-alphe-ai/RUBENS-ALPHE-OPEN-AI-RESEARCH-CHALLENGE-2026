@@ -1,0 +1,29 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs/evaluates experiments objectively, and transfers state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository and OpenAlex as the primary research source (replacing arXiv). A GitHub Actions workflow successfully collected 30 papers with zero errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. Experiment **PROP-EXP-MEM-001** has been proposed to test structured project memory against a flat baseline using PCRB-1-style handoff evaluation, but it has not yet been run.
+
+**3. Failures & Lessons**
+*   **arXiv Collector Failure:** Initial attempts failed with timeouts and HTTP 429 rate limits, resulting in empty paper lists. *Lesson:* Switched to OpenAlex due to reliability issues.
+*   **Missing Assessment Files:** Early runs did not produce assessment files because the analyzer script (`analyze_research.py`) was not uploaded/executed. *Lesson:* Workflow dependencies must be explicitly verified and rerun after code additions.
+
+**4. Single Best Next Action**
+Run **PROP-EXP-MEM-001** using fresh model instances. This involves executing at least three blind trials per condition (structured memory vs. flat baseline) using identical prompts and scoring outputs with the PCRB-1 rubric.
+
+**5. Missing/Uncertain Information**
+*   Specific contents of the "flat baseline" prompt structure.
+*   Detailed definitions of the PCRB-1 scoring criteria (only referenced as a rubric).
+*   Actual results of PROP-EXP-MEM-001 (none exist yet).
+*   Provider-neutral adapter implementation details for comparing multiple model families.
+*   Criteria for independent evaluation of proposed experiments before acceptance.
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts Unsure About:**
+*   The exact threshold values or specific metrics within the "PCRB-1 handoff rubric."
+*   The specific "identical test prompts" to be used for the blind trials.
+*   The current quota status or availability of Rubens Alphe for immediate sign-off (only known he is quota-limited).
+
+**Proposed Measurable Next Experiment:**
+Execute 3 blind trials for each condition (Structured Memory vs. Flat Baseline). Score each output using the PCRB-1 rubric. Calculate the mean score and count critical fabrications for each condition. **Acceptance Criterion:** Structured memory is only accepted if its mean PCRB-1 score is ≥10 points higher than the flat baseline AND critical fabrications do not increase. Record all results in GitHub state.

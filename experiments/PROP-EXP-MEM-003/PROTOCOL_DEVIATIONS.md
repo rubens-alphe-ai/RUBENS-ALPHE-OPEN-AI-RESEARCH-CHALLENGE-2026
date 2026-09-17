@@ -34,3 +34,33 @@ format. This limit is reported with the verdict.
 **Decided before:** any blind packet, any evaluator request and any score.
 Only the scan's aggregate result and the three trial ids were seen; no output
 was read.
+
+## D2 — Scorer ladder exhausted; two rungs re-admitted with less reasoning (2026-09-17)
+
+**What happened:** the first scorer (Groq `openai/gpt-oss-120b`) was accepted.
+Every OpenRouter rung then failed and was abandoned under the ladder rule:
+`nex-n2.5-pro` spent its whole budget reasoning and returned no answer (batch
+2); `nemotron-3-super` was cut at 16,000 output tokens (batch 7) after hours of
+upstream overload; `glm-5.2` stayed rate-limited upstream (batch 3). With the
+ladder exhausted, the adjudicator could only record INCONCLUSIVE for lack of a
+second scorecard. That is not a result about the hypothesis.
+
+**Cause:** all three failures come from unbounded reasoning or shared free
+capacity, not from the scorers' judgement. A probe with neutral filler text
+(no experiment content) showed that with OpenRouter's
+`reasoning: {"effort": "low"}` both Nex and Nemotron answer in 8–14 s,
+well within budget.
+
+**Deviation:** the three OpenRouter rungs are re-admitted in their registered
+order with `reasoning: {"effort": "low"}` and 8,000 output tokens; everything
+else (prompt, batches, rubric, ladder rule, decision rule) is unchanged. Their
+earlier partial answers stay set aside in `results/api_evaluations/abandoned/`
+and are not reused. Groq's accepted scorecard is kept.
+
+**Decided before:** any second scorecard existed. Groq's scorecard has not been
+viewed; only failure messages were read.
+
+**Addendum to D2 (same commit series, before any check):** the two OpenRouter
+checkers use the same models and received the same setting
+(`reasoning: {"effort": "low"}`, 8,000 output tokens). No fabrication check has
+run for this experiment.
