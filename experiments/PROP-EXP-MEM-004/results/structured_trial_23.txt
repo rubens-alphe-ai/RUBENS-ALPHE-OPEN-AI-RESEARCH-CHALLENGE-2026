@@ -1,0 +1,26 @@
+1. **Mission:** Build a measurable, reproducible AI research system that preserves mission state across sessions, autonomously discovers public research, identifies weaknesses, formulates and tests hypotheses, preserves both failures and successes, and transfers complete state to more capable future systems.
+
+2. **Current Technical State:** The system uses GitHub as the canonical repository and GitHub Actions for scheduled, triggerable research cycles. It currently uses OpenAlex as the primary public research source (having replaced arXiv). A successful cycle recently collected 30 papers without errors. The assessment layer successfully generated `research-assessment.json` and `proposed-next-problem.json`. The experiment PROP-EXP-MEM-001 has been proposed but **not yet run**.
+
+3. **Failures and Lessons:**
+*   **arXiv Collector Failure:** Initial attempts resulted in empty datasets and HTTP 429/timeout errors. *Lesson:* Replaced with OpenAlex-based `fetch_research.py` v2, which proved reliable.
+*   **Missing Assessment Files:** Early runs lacked output because `analyze_research.py` was not yet uploaded/executed. *Lesson:* Explicitly added and tested the analyzer script; workflow rerun confirmed functionality.
+
+4. **Single Best Next Action:** Execute PROP-EXP-MEM-001 by running at least three blind trials per condition (flat baseline vs. structured memory) using fresh model instances and identical test prompts, scoring them with the PCRB-1 handoff rubric.
+
+5. **Missing/Uncertain Information:**
+*   No experimental results exist yet for PROP-EXP-MEM-001.
+*   It is unverified whether structured memory actually improves handoff fidelity versus the flat baseline.
+*   Specific contributions of individual memory fields to fidelity are unknown.
+*   Reproducibility by unrelated model families via provider-neutral adapters is untested.
+
+**Confidence:** 0.95
+
+**Unsure Facts:** None regarding the provided state. The state explicitly marks the primary experiment as "not started" and "no result exists yet."
+
+**Proposed Measurable Next Experiment:**
+**EXP-MEM-002: Ablation Study on Memory Fields.**
+*   **Hypothesis:** Specific fields (e.g., `verified_knowledge`, `rules`) contribute disproportionately to handoff fidelity compared to generic logs.
+*   **Method:** Using the structured memory schema that passed (or failed) PROP-EXP-MEM-001, run blind handoff trials where specific fields are systematically removed (ablated) one at a time.
+*   **Metric:** Measure the delta in PCRB-1 mean scores and critical fabrication counts for each ablated field against the full structured memory baseline.
+*   **Acceptance Criteria:** Identify fields where removal causes a >5-point drop in PCRB-1 score, marking them as "critical" for the final canonical state schema.

@@ -1,0 +1,34 @@
+**1. Mission**
+To build an AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, runs measurable experiments, evaluates results objectively, and transfers complete state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository and GitHub Actions for scheduled cycles. It uses OpenAlex as the research source, having successfully collected 30 papers with zero errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. A specific experiment, PROP-EXP-MEM-001, has been proposed but not yet executed. The project relies on external persistent state rather than chat memory.
+
+**3. Failures and Learnings**
+*   **arXiv Collector:** Failed due to timeouts and HTTP 429 rate limits, resulting in empty paper collections. **Learned/Action:** Replaced with an OpenAlex-based collector (v2), which resolved the issue.
+*   **Missing Assessment Files:** Files did not appear because `analyze_research.py` was not uploaded/executed. **Learned/Action:** Added the analyzer and reran the workflow, resolving the gap.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001: Run blind handoff trials comparing structured project memory against a flat baseline using fresh model instances. This requires using identical test prompts, running at least three trials per condition, and scoring outputs via the PCRB-1 handoff rubric.
+
+**5. Missing or Uncertain Information**
+*   The actual results of PROP-EXP-MEM-001 (none exist yet).
+*   Which specific memory fields contribute most to handoff fidelity.
+*   How to independently evaluate proposed experiments before acceptance.
+*   The implementation details for a provider-neutral adapter for future multi-model comparisons.
+*   Whether an unrelated model can successfully reproduce the mission without seeing the original conversation (this is the core of the pending experiment, so the answer is currently unknown).
+
+***
+
+**Confidence in reconstruction:** 0.95
+
+**Facts I am unsure about:**
+*   The specific content of the "flat baseline" memory structure (only that it exists for comparison).
+*   The exact definition of the PCRB-1 handoff rubric (only that it is the scoring mechanism).
+*   The current quota status of Rubens Alphe (only that he is quota-limited).
+
+**Proposed Measurable Next Experiment:**
+Execute the three-trial blind handoff test for PROP-EXP-MEM-001. 
+*   **Independent Variable:** Memory format (Structured JSON vs. Flat Text).
+*   **Dependent Variables:** Mean PCRB-1 score and count of critical fabrications. 
+*   **Success Criteria:** Structured memory must score at least 10 points higher than the flat baseline on the mean PCRB-1 score, with no increase in critical fabrications, to be accepted into canonical state.

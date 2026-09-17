@@ -1,0 +1,36 @@
+**1. Mission**
+Build a measurable, reproducible AI research system capable of preserving mission state across sessions and models, discovering public research, formulating hypotheses, running experiments, and transferring complete state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository for code and state. A verified GitHub Actions workflow triggers research cycles using OpenAlex (replacing failed arXiv integrations). A successful cycle collected 30 papers with zero errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. The system has proposed experiment PROP-EXP-MEM-001 to test structured project memory against a flat baseline for blind handoff fidelity. The experiment is proposed but not yet executed.
+
+**3. Failures and Lessons**
+*   **arXiv Collector Failure:** Initial attempts resulted in empty paper lists and HTTP 429 rate limits/timeouts. **Lesson:** Replaced with OpenAlex-based collector (v2), which succeeded.
+*   **Missing Assessment Files:** Early runs lacked output files because `analyze_research.py` was not uploaded/executed. **Lesson:** Added the script and rerun the workflow to resolve.
+*   **Key Decision:** Separated proposal from acceptance; autonomous agents propose, but evaluation is required before state changes.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001. This requires running at least three blind trials per condition (structured memory vs. flat baseline) using fresh model instances, identical prompts, and scoring via the PCRB-1 handoff rubric to compare mean scores and fabrication counts.
+
+**5. Missing/Uncertain Information**
+*   The actual PCRB-1 score rubric criteria are not provided in the state.
+*   The specific content of the "flat baseline" prompt versus the "structured memory" prompt is not defined.
+*   The provider-neutral adapter for comparing multiple model families is an open question.
+*   No data exists yet regarding which memory fields contribute most to fidelity.
+*   Rubens Alphe is currently quota-limited, though this does not imply abandonment.
+
+**Confidence in Reconstruction:** 0.95
+
+**Uncertain Facts:**
+*   The exact definition of "critical fabrication" within the PCRB-1 rubric.
+*   The specific model instances available for the fresh trial runs.
+
+**Proposed Measurable Next Experiment:**
+**EXP-PCRB-001: Blind Handoff Fidelity Test**
+*   **Hypothesis:** Structured project memory improves blind handoff fidelity compared to a flat baseline.
+*   **Method:**
+    1.  Prepare two state files: One flat text summary, one structured JSON with explicit fields (Mission, State, Failures, Next Action).
+    2.  Generate 3 blind prompts for each condition using identical instructions to reconstruct the mission.
+    3.  Feed prompts to fresh, isolated model instances (no memory of this project).
+    4.  Score outputs using PCRB-1 rubric (0-100 scale).
+*   **Success Criteria:** Mean score of structured condition ≥ Mean score of flat condition + 10 points, AND no increase in critical fabrication count.

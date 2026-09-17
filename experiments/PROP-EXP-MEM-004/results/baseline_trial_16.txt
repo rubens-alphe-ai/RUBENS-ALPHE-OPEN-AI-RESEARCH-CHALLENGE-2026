@@ -1,0 +1,54 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs/evaluates experiments, preserves outcomes, and transfers state to more capable future systems.
+
+**2. Current Technical State**
+*   **Infrastructure:** GitHub is the canonical repository. A GitHub Actions workflow (scheduled and manual) fetches research and updates state.
+*   **Data Source:** OpenAlex is the primary collector (replaced arXiv).
+*   **Verified Status:**
+    *   GitHub Actions workflow verified.
+    *   OpenAlex collection verified: 30 papers collected with zero errors.
+    *   Assessment layer verified: `research-assessment.json` and `proposed-next-problem.json` generated.
+    *   Experiment `PROP-EXP-MEM-001` generated from dominant "persistent-memory" theme.
+*   **Key Decisions:** Use external persistent state (not chat memory); use OpenAlex; separate proposal from acceptance; test structured memory via blind handoff trials.
+*   **Active Experiment:** `PROP-EXP-MEM-001` is proposed but **not yet run**. It tests if structured project memory improves blind handoff fidelity versus a flat baseline using PCRB-1-style evaluation.
+
+**3. Failures and Lessons**
+*   **Failure 1 (Collection):** Initial arXiv collector failed with `papers=[]`, timeouts, and HTTP 429 rate limits.
+    *   *Lesson/Learning:* Replaced with `fetch_research.py v2` using OpenAlex, which resolved the issue.
+*   **Failure 2 (Assessment):** Assessment files did not appear in early runs.
+    *   *Lesson/Learning:* `analyze_research.py` had not been uploaded/executed. Added script and reran workflow to resolve.
+
+**4. Single Best Next Action**
+Execute the blind handoff trials for `PROP-EXP-MEM-001`. Specifically:
+1.  Prepare identical test prompts for the flat baseline and structured memory conditions.
+2.  Run at least three blind trials per condition using fresh model instances.
+3.  Score outputs with the PCRB-1 handoff rubric.
+4.  Compare mean score and critical fabrication count between conditions.
+*Note: The experiment is status "not started." No trials have been run.*
+
+**5. Missing or Uncertain Information**
+*   **Experiment Results:** No results exist for `PROP-EXP-MEM-001`. It is unverified.
+*   **Specific Metrics:** The exact current PCRB-1 scores for baseline vs. structured memory are absent because tests have not been conducted.
+*   **Provider-Neutral Adapter:** The mechanism for comparing multiple model families via a provider-neutral adapter is an open question with no implemented solution described.
+*   **Evaluation Protocol Details:** While "PCRB-1-style" is mentioned, the specific rubric criteria beyond "mean score" and "critical fabrication count" are not detailed in this state.
+
+***
+
+**Confidence in Reconstruction:** 0.95
+*(High confidence in the infrastructure and decision history, but low confidence in any future outcomes as the key experiment has not started.)*
+
+**Facts Unsure About:**
+*   The specific content of the 30 collected OpenAlex papers.
+*   The exact wording of the "PCRB-1 handoff rubric" criteria beyond the acceptance threshold.
+*   The specific "flat baseline" memory structure definition used for comparison.
+
+**Proposed Measurable Next Experiment:**
+**Experiment ID:** PROP-EXP-MEM-001-Trial-01
+**Hypothesis:** Structured memory yields a higher mean handoff fidelity score than flat memory.
+**Method:**
+1.  Create two state files: one flat (unstructured log), one structured (JSON with defined fields).
+2.  Provide each to a fresh, unrelated LLM instance with the prompt: *"Reconstruct the project mission and next steps based solely on this state file."*
+3.  Run 3 trials per condition (6 total).
+4.  Score each output on a 0-100 PCRB-1 rubric focusing on: (a) Mission Accuracy, (b) Critical Fact Recall, (c) Absence of Hallucinated Facts.
+5.  **Acceptance Criteria:** Structured mean score ≥ Flat mean score + 10 points, AND critical fabrications in Structured ≤ critical fabrications in Flat.
+6.  Record results in `experiments/PROP-EXP-MEM-001/results.json`.

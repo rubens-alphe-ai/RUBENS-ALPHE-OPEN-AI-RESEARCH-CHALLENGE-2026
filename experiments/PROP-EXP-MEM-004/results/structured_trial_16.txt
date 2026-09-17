@@ -1,0 +1,33 @@
+**1. Mission**
+To build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, designs experiments, evaluates results objectively, and transfers state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub for canonical state and GitHub Actions for scheduled cycles. It collects public research via OpenAlex (verified: 30 papers, zero errors). An assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. Experiment `PROP-EXP-MEM-001` has been generated but not executed. The project is in a "proposed" state for testing structured memory fidelity.
+
+**3. Failures and Lessons**
+*   **arXiv Collection Failure:** Initial attempts timed out and hit HTTP 429 rate limits. *Lesson:* Replaced with OpenAlex, which proved stable.
+*   **Missing Assessment Files:** `analyze_research.py` was not uploaded/executed in early runs. *Lesson:* Ensure all pipeline components are deployed before triggering workflow cycles.
+
+**4. Single Best Next Action**
+Execute `PROP-EXP-MEM-001` by running at least three blind trials with fresh model instances. Use identical test prompts for both the flat baseline and the structured memory conditions, scoring outputs using the PCRB-1 handoff rubric to compare mean scores and critical fabrication counts.
+
+**5. Missing or Uncertain Information**
+*   The actual PCRB-1 scoring rubric definition is not included in the state.
+*   The specific content/structure of the "structured project memory" versus the "flat baseline" is not detailed.
+*   The identity/capabilities of the "fresh model instances" to be used for the trials are unspecified.
+*   The status of the provider-neutral adapter for future model comparison is open.
+
+***
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts I Am Unsure About:**
+*   The specific metrics or thresholds within the "PCRB-1-style handoff evaluation" rubric, other than the acceptance rule (mean score +10 points, no increase in critical fabrications).
+*   The exact format of the `research-assessment.json` output.
+
+**Proposed Measurable Next Experiment:**
+**EXP-PLAN-001: Protocol Definition & Pilot**
+*   **Goal:** Define the PCRB-1 rubric and execute a single pilot trial.
+*   **Method:** Create a standardized JSON schema for the PCRB-1 rubric (e.g., accuracy, completeness, hallucination rate). Run one blind trial for both conditions using a fixed test prompt about the project's mission.
+*   **Metric:** Measure the time to generate the prompt response and the number of factual errors relative to the provided state.
+*   **Success Criteria:** The rubric is reproducible by a second model instance; the pilot trial produces valid, comparable scores for both conditions without error.

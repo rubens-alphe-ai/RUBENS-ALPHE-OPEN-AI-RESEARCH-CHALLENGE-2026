@@ -1,0 +1,29 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, preserves failures/successes, improves its own process, and transfers complete state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository for code and state. A GitHub Actions workflow performs scheduled/triggerable research cycles using OpenAlex (verified: 30 papers collected, no errors). The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. Experiment `PROP-EXP-MEM-001` has been proposed to test structured project memory vs. a flat baseline for blind handoff fidelity (PCRB-1 style). No trials of this experiment have been run yet.
+
+**3. Failures & Lessons**
+*   **arXiv Collector Failure:** Initial attempts resulted in empty paper lists, timeouts, and HTTP 429 errors. *Lesson:* Replaced with OpenAlex-based `fetch_research.py` v2.
+*   **Missing Assessment Files:** Early runs lacked output files because `analyze_research.py` was not uploaded/executed. *Lesson:* Added the analyzer and re-ran the workflow.
+
+**4. Single Best Next Action**
+Run `PROP-EXP-MEM-001` with fresh model instances. This involves executing at least three blind trials per condition (structured memory vs. flat baseline) using identical test prompts, scoring them with the PCRB-1 rubric, and comparing mean scores and critical fabrication counts.
+
+**5. Missing/Uncertain Information**
+*   Specifics of the "PCRB-1 handoff rubric" scoring criteria are not defined in the state.
+*   The specific test prompts for the blind trials are not provided.
+*   The exact implementation details of the "structured memory" format versus the "flat baseline" are not specified.
+*   The identity of the "fresh model instances" to be used is unspecified.
+*   Rubens Alphe’s current quota status or specific availability for sign-off is not detailed beyond general limitations.
+
+**Confidence:** 0.95
+
+**Facts I am unsure about:**
+*   The precise metric thresholds for the PCRB-1 rubric (other than the +10 point acceptance rule).
+*   The specific content of the 30 collected papers (only metadata/status is known).
+*   The exact code structure of `fetch_research.py` v2 beyond its name and source.
+
+**Proposed Measurable Next Experiment:**
+Conduct the `PROP-EXP-MEM-001` trial: Execute three blind handoff tests for the structured memory condition and three for the flat baseline condition. Measure the mean PCRB-1 score for each. Accept the structured memory only if its mean score is ≥10 points higher than the baseline and critical fabrications do not increase. Record all raw transcripts and scores in the project state.

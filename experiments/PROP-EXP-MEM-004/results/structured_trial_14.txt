@@ -1,0 +1,33 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions and models. It must discover public research, identify weaknesses, formulate hypotheses, design experiments, evaluate results objectively, and transfer complete state to future systems without relying on chat memory.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository and GitHub Actions for scheduled cycles. It successfully collects public research via OpenAlex (30 papers, zero errors) and processes it into machine-readable files (`research-assessment.json`, `proposed-next-problem.json`). The next experiment, PROP-EXP-MEM-001, has been proposed to test structured project memory against a flat baseline but has not yet been executed. No trial results exist yet.
+
+**3. Failures and Lessons**
+*   **arXiv Collector Failure:** Initial collection failed due to timeouts and HTTP 429 rate limits, resulting in empty paper lists. *Lesson:* Switched to OpenAlex as the primary source for stability.
+*   **Missing Assessment Files:** Early runs did not generate assessment files because the analyzer script was not uploaded/executed. *Lesson:* Ensure all pipeline components (collector and analyzer) are present and executed in the workflow.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001 by running at least three blind trials per condition (structured memory vs. flat baseline) using identical test prompts and fresh model instances. This is the only path to resolving the open question regarding handoff fidelity.
+
+**5. Missing or Uncertain Information**
+*   The actual scores from PROP-EXP-MEM-001 trials (none exist yet).
+*   Which specific memory fields contribute most to fidelity.
+*   Methodology for evaluating proposed experiments independently before acceptance.
+*   Provider-neutral adapter implementation for multi-model comparison.
+*   Confirmation that the flat baseline prompt is defined and ready.
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts I am unsure about:**
+*   The specific content of the "flat baseline" prompt used for comparison.
+*   The exact definition of "critical fabrication" in the context of the PCRB-1 rubric.
+*   Whether the "unrelated model" for the blind trial is specified or left to chance.
+
+**Proposed Measurable Next Experiment:**
+**PROP-EXP-MEM-002: Rubric Sensitivity Analysis**
+*   **Hypothesis:** The PCRB-1 rubric may have high variance in scoring similar outputs.
+*   **Method:** Take the top 5 highest-scoring outputs from PROP-EXP-MEM-001 (once run) and score them using three different rubric variants (strict, standard, lenient).
+*   **Metric:** Calculate the standard deviation of scores across rubrics for the same output.
+*   **Success Criteria:** If standard deviation is < 2 points, the PCRB-1 rubric is stable. If > 2 points, refine the rubric to reduce ambiguity before accepting the structured memory model.

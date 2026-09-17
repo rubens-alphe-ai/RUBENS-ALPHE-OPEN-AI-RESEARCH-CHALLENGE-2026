@@ -1,0 +1,29 @@
+**1. What is the mission of this project?**
+To build a measurable, reproducible AI research system that preserves mission state across sessions and models. It must discover public research, identify weaknesses, formulate hypotheses, design experiments, evaluate results objectively, and transfer complete state to future systems.
+
+**2. What is the project's current technical state?**
+The system uses GitHub as the canonical repository and GitHub Actions for scheduled research cycles. OpenAlex is the primary research source (verified: 30 papers collected, 0 errors). The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. An experiment, PROP-EXP-MEM-001, has been generated to test structured project memory against a flat baseline using PCRB-1-style evaluation. The status of this experiment is "proposed, not yet run."
+
+**3. What has already failed, and what was learned from those failures?**
+*   **arXiv Collector Failure:** Initial collection returned empty papers due to timeouts and HTTP 429 rate limits. *Learning:* Replaced with OpenAlex-based `fetch_research.py` v2.
+*   **Missing Assessment Files:** Early runs produced no assessment output because `analyze_research.py` was missing. *Learning:* Added the analyzer script and reran the workflow.
+
+**4. What is the single best next action?**
+Execute PROP-EXP-MEM-001 using fresh model instances. This requires running at least three blind trials per condition (structured memory vs. flat baseline) using identical test prompts, scoring outputs with the PCRB-1 rubric, and comparing mean scores and critical fabrication counts.
+
+**5. What important information is still missing or uncertain?**
+*   The actual results of PROP-EXP-MEM-001 (none exist yet).
+*   Whether structured memory improves blind mission reconstruction (open question).
+*   Which specific memory fields contribute most to fidelity (open question).
+*   How to implement a provider-neutral adapter for comparing multiple model families (open question).
+*   The specific content of the "blind handoff prompt" used in the trials, beyond the general instruction to use identical prompts.
+
+**Confidence in your reconstruction:** 0.95
+
+**Any facts you are unsure about:**
+*   The specific threshold metrics for "critical fabrication" beyond the requirement that they "do not increase."
+*   The exact structure of the `research-assessment.json` file.
+*   The specific identity of the "unrelated model" that will be tested for reproduction capability.
+
+**One proposed measurable next experiment:**
+Run PROP-EXP-MEM-001: Conduct 3 blind trials with a structured memory state and 3 with a flat baseline state using fresh model instances. Score all outputs on the PCRB-1 rubric. Accept structured memory only if the mean score is ≥10 points higher than the flat baseline and critical fabrications do not increase.

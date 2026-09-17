@@ -1,0 +1,26 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions and models, discovers public research, identifies weaknesses, evaluates hypotheses objectively, and transfers state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository and GitHub Actions for scheduled/triggerable workflows. It utilizes OpenAlex as the primary research source, having successfully collected 30 papers in a recent cycle with zero errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. A specific experiment, PROP-EXP-MEM-001, has been generated but not yet executed.
+
+**3. Failures and Lessons**
+The initial arXiv collector failed due to timeouts and HTTP 429 rate limits, resulting in empty paper lists. This was resolved by replacing it with an OpenAlex-based collector (v2). Additionally, assessment files were missing in early runs because the analyzer script had not yet been uploaded; this was fixed by adding the analyzer and rerunning the workflow.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001 using fresh model instances. This involves running at least three blind trials per condition using identical test prompts to compare structured project memory against a flat baseline via the PCRB-1 handoff rubric.
+
+**5. Missing/Uncertain Information**
+The actual results of PROP-EXP-MEM-001 are absent, as the experiment has not been started. Specific details on which memory fields contribute most to fidelity, how to independently evaluate proposed experiments before acceptance, and the implementation of a provider-neutral adapter for multi-model comparison are all open questions with no current data.
+
+***
+
+**Confidence in reconstruction:** 0.95
+
+**Facts uncertain:** None. The state provided is explicit and self-contained. All claims regarding status (verified, resolved, proposed, not started) are clearly defined in the input.
+
+**Proposed measurable next experiment:**
+Execute the first batch of three blind handoff trials for PROP-EXP-MEM-001.
+*   **Condition A (Flat Baseline):** Provide the model with a single unstructured text summary of the project mission and recent logs.
+*   **Condition B (Structured Memory):** Provide the model with the structured JSON state (including distinct fields for mission, verified states, decided actions, and open questions).
+*   **Measurement:** Score both outputs using the PCRB-1 rubric. Record the mean score and the count of critical fabrications (invented facts not present in the source state) for each condition. This will provide the initial data point required to test the hypothesis that structured memory improves handoff fidelity.

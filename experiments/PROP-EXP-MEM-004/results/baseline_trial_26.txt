@@ -1,0 +1,47 @@
+**1. Mission**
+To build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, improves its own process, and transfers complete state to future systems.
+
+**2. Current Technical State**
+*   **Canonical Repo:** GitHub (verified).
+*   **Automation:** GitHub Actions workflow (scheduled/manual) fetches research, updates state, and outputs machine-readable files (verified).
+*   **Source:** OpenAlex is the primary research source (verified).
+*   **Recent Success:** A cycle collected 30 papers with zero errors (verified).
+*   **Assessment Layer:** Produces `research-assessment.json` and `proposed-next-problem.json` (verified).
+*   **Active Experiment:** `PROP-EXP-MEM-001` is proposed to test structured project memory vs. flat baseline using PCRB-1 handoff evaluation. It has **not** been run yet (verified).
+*   **Key Decisions:** Use external persistent state (not chat memory); use OpenAlex over arXiv; separate proposal from acceptance; test structured memory via blind trials.
+
+**3. Failures and Lessons**
+*   **arXiv Collector Failures:** Initial attempts resulted in empty paper lists and HTTP 429/timeout errors. **Lesson:** arXiv was unstable/rate-limited; the system switched to OpenAlex, which is now verified as stable.
+*   **Missing Assessment Files:** Early runs did not produce assessment JSONs because `analyze_research.py` was not uploaded/executed. **Lesson:** Ensure all pipeline scripts are present and executed in the workflow; the issue was resolved by adding the analyzer.
+
+**4. Single Best Next Action**
+Execute **PROP-EXP-MEM-001**. Specifically:
+1.  Prepare identical test prompts for the "flat baseline" and "structured memory" conditions.
+2.  Run at least three blind trials per condition using fresh model instances.
+3.  Score outputs using the PCRB-1 handoff rubric.
+4.  Compare mean scores and critical fabrication counts.
+
+**5. Missing/Uncertain Information**
+*   **Experimental Results:** No results for `PROP-EXP-MEM-001` exist yet. It is status "proposed, not yet run."
+*   **Open Research Questions:** The specific contributions of individual memory fields to fidelity, the reproducibility of the mission by unrelated models, and the implementation details of the provider-neutral adapter are still open.
+*   **Project Lead Status:** Rubens Alphe is quota-limited and provides final sign-off; his continuous availability is not guaranteed.
+
+***
+
+**Confidence in Reconstruction:** 0.95
+
+**Uncertain Facts:**
+*   None regarding the provided state. All key statuses (verified/resolved/proposed) are explicitly defined in the input.
+
+**Proposed Measurable Next Experiment:**
+Conduct the blind handoff trials for **PROP-EXP-MEM-001**.
+*   **Hypothesis:** Structured memory improves blind mission reconstruction fidelity.
+*   **Metric:** Mean PCRB-1 handoff score.
+*   **Acceptance Criteria:** Structured memory mean score must be ≥10 points higher than the flat baseline, with no increase in critical fabrications.
+*   **Procedure:**
+    1.  Create two state files: `state_flat.json` (unstructured text) and `state_structured.json` (schema-defined).
+    2.  Input both into fresh model instances with the prompt: *"Reconstruct the mission, current state, failures, and next action from this file only."*
+    3.  Run 3 trials per condition.
+    4.  Score each trial using the PCRB-1 rubric.
+    5.  Calculate mean scores and count fabrications.
+    6.  Record results in `results/PROP-EXP-MEM-001.json`.

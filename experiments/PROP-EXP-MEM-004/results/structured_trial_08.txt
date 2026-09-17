@@ -1,0 +1,28 @@
+**1. Mission**
+To build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, and transfers complete state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository and GitHub Actions for scheduled research cycles. OpenAlex is the verified primary research source (replacing arXiv). A successful cycle collected 30 papers without errors. The research assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. Experiment **PROP-EXP-MEM-001** has been proposed to test structured project memory against a flat baseline for blind handoff fidelity, but no trials have been run yet.
+
+**3. Failures and Lessons**
+*   **arXiv Collector Failure:** Initial collection failed due to timeouts and HTTP 429 rate limits, resulting in empty paper lists. **Lesson:** Replaced with OpenAlex-based `fetch_research.py` v2.
+*   **Missing Assessment Files:** Early runs did not produce assessment files because `analyze_research.py` was not uploaded/executed. **Lesson:** Analyzer script was added and the workflow rerun successfully.
+
+**4. Single Best Next Action**
+Run **PROP-EXP-MEM-001** with fresh model instances. This involves using identical test prompts for both flat baseline and structured memory conditions, executing at least three blind trials per condition, and scoring outputs using the PCRB-1 handoff rubric to compare mean scores and critical fabrication counts.
+
+**5. Missing/Uncertain Information**
+*   No empirical data exists yet regarding whether structured memory improves handoff fidelity.
+*   It is unknown which specific memory fields contribute most to fidelity.
+*   The efficacy of provider-neutral adapters for comparing multiple model families is unverified.
+*   There is no evidence yet that an unrelated model can reproduce the mission without seeing the original conversation.
+*   The specific numerical threshold for "critical fabrication" in the PCRB-1 rubric is not defined in the state.
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts Unsure About:**
+*   The specific details of the PCRB-1 rubric scoring criteria beyond the name.
+*   The exact current quota status of the founder, Rubens Alphe, other than being "quota-limited."
+
+**Proposed Measurable Next Experiment:**
+Execute the **PROP-EXP-MEM-001** trial: Conduct 3 blind handoff trials for a "Flat Baseline" condition and 3 for a "Structured Memory" condition using identical prompts. Measure success by comparing the mean PCRB-1 score (requirement: Structured Memory ≥ Flat Baseline + 10 points) and ensuring critical fabrication counts do not increase in the Structured Memory condition.

@@ -1,0 +1,22 @@
+1. **Mission:** Build a measurable, reproducible AI research system that preserves mission state across sessions and models. It must discover public research (via OpenAlex), identify weaknesses, formulate hypotheses, design and evaluate experiments objectively, preserve both successes and failures, and enable complete state transfer to future systems.
+
+2. **Current Technical State:** The system uses GitHub as the canonical repository. A verified GitHub Actions workflow triggers `fetch_research.py` (v2, OpenAlex-based) and `analyze_research.py`. A recent successful cycle collected 30 papers with zero errors. The assessment layer has generated `research-assessment.json` and `proposed-next-problem.json`. The experiment `PROP-EXP-MEM-001` has been defined but not yet executed.
+
+3. **Failures and Lessons:** Initial collection failed using arXiv due to timeouts and HTTP 429 rate limits; this was resolved by switching the collector to OpenAlex. Early runs failed to produce assessment files because `analyze_research.py` was missing; this was resolved by uploading the analyzer and rerunning the workflow. The lesson is to rely on external persistent state rather than chat memory and to use robust, rate-limit-tolerant data sources.
+
+4. **Single Best Next Action:** Execute `PROP-EXP-MEM-001`. This requires running at least three blind trials per condition (flat baseline vs. structured memory) using identical prompts and fresh model instances. Outputs must be scored using the PCRB-1 handoff rubric to compare mean scores and critical fabrication counts.
+
+5. **Missing/Uncertain Information:** No experimental results exist yet. It is unknown whether structured memory will meet the acceptance threshold (mean score $\geq$ flat baseline + 10 points, with no increase in critical fabrications). Specific field contributions to fidelity, cross-family reproducibility, and provider-neutral adapter implementation details are absent from this state.
+
+**Confidence in reconstruction:** 0.95
+
+**Uncertain facts:**
+*   The specific content of the "identical test prompts" planned for the trial.
+*   The exact current values in `research-assessment.json` beyond the existence of the file.
+*   The specific quota limits affecting the founder, Rubens Alphe.
+
+**Proposed Measurable Next Experiment:**
+Conduct the `PROP-EXP-MEM-001` trial.
+*   **Procedure:** Select 3 distinct mission states. For each, generate a handoff summary using (A) a flat text baseline and (B) the structured project memory schema. Feed these to three different fresh model instances (blind to the original conversation).
+*   **Metric:** Score outputs using the PCRB-1 rubric.
+*   **Success Criteria:** The structured memory condition must achieve a mean PCRB-1 score at least 10 points higher than the flat baseline, with no increase in critical fabrication counts.

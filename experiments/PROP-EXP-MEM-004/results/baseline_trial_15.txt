@@ -1,0 +1,47 @@
+**1. Mission**
+To build a reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, designs experiments, and transfers state to more capable systems.
+
+**2. Current Technical State**
+*   **Repository:** GitHub is the canonical source.
+*   **Automation:** GitHub Actions workflows (scheduled/manual) fetch research and update state.
+*   **Data Source:** OpenAlex is the primary collector (replacing arXiv).
+*   **Pipeline:** Successfully collected 30 papers (no errors). Assessment layers produced `research-assessment.json` and `proposed-next-problem.json`.
+*   **Experiment Status:** `PROP-EXP-MEM-001` is generated but **not yet run**. It tests if structured memory improves blind handoff fidelity vs. a flat baseline.
+
+**3. Failures and Lessons**
+*   **arXiv Collector:** Failed due to timeouts and HTTP 429 rate limits. *Lesson:* Replaced with OpenAlex, which succeeded.
+*   **Missing Assessment Files:** Early runs lacked output because `analyze_research.py` was not uploaded/executed. *Lesson:* Added analyzer and reran workflow; issue resolved.
+
+**4. Single Best Next Action**
+Execute **PROP-EXP-MEM-001** using fresh model instances.
+*   Use identical test prompts for the flat baseline and structured memory conditions.
+*   Run at least three blind trials per condition.
+*   Score outputs using the PCRB-1 handoff rubric.
+*   Compare mean scores and critical fabrication counts.
+*   *Acceptance Criteria:* Structured memory is accepted only if its mean score is ≥10 points higher than the baseline and critical fabrications do not increase.
+
+**5. Missing/Uncertain Information**
+*   Actual results of PROP-EXP-MEM-001 (none exist yet).
+*   Which specific memory fields contribute most to fidelity (unknown until trials are scored).
+*   Reproducibility by unrelated models (open question).
+*   Methodology for independent evaluation of proposed experiments (open question).
+*   Provider-neutral adapter design for future model comparisons (open question).
+*   Specific details of the PCRB-1 rubric weights are not provided in the state, only its existence.
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts Unsure About:**
+*   The specific threshold values or weighting scheme of the "PCRB-1-style handoff rubric" beyond the 10-point delta requirement for acceptance.
+*   The exact technical specifications of `fetch_research.py v2` beyond its source (OpenAlex) and success status.
+*   The identity of the "fresh model instances" to be used for the trials (not specified in state, only that they must be fresh and blind).
+
+**Proposed Measurable Next Experiment:**
+**Trial Run 1 of PROP-EXP-MEM-001:**
+Select a single, complex project state snapshot from the current repository. Generate two handoff prompts:
+1.  **Baseline:** A flat text summary containing all mission facts.
+2.  **Structured:** A JSON/YAML object with defined fields (Mission, State, Failures, Next Action, Constraints).
+Feed both prompts to three distinct, fresh model instances without access to the original conversation or repository. Score each output against the PCRB-1 rubric. Record:
+*   Score per condition.
+*   Count of critical fabrications (inventing facts not in source state).
+*   Time taken to generate response.
+*   *Metric:* Calculate Mean Score (Structured) - Mean Score (Baseline). If ≥10 and Fabrications(Structured) ≤ Fabrications(Baseline), proceed to full trial set; otherwise, iterate on memory schema.

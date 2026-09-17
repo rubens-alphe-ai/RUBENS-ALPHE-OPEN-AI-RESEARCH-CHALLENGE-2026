@@ -1,0 +1,27 @@
+**1. What is the mission of this project?**
+To build a capable, measurable, and reproducible AI research system that preserves mission state across sessions and models. It must discover public research, identify weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve outcomes, and transfer complete state to future systems.
+
+**2. What is the project's current technical state?**
+The system uses GitHub as the canonical repository. A GitHub Actions workflow (verified) uses `fetch_research.py` v2 (OpenAlex-based) to collect public research. A recent cycle successfully collected 30 papers with zero errors. The analysis layer (`analyze_research.json`, `proposed-next-problem.json`) is functional. The system has generated experiment proposal `PROP-EXP-MEM-001`. Human sign-off is required from founder Rubens Alphe, who is quota-limited.
+
+**3. What has already failed, and what was learned from those failures?**
+*   **arXiv Collector:** Initial implementation failed with timeouts and HTTP 429 rate limits (empty paper list). **Learning:** Replaced with OpenAlex.
+*   **Analyzer Missing:** Assessment files did not appear initially because `analyze_research.py` was not yet executed. **Learning:** Added the analyzer and reran the workflow.
+
+**4. What is the single best next action?**
+Execute `PROP-EXP-MEM-001`: Run blind handoff trials comparing structured project memory against a flat baseline. This requires using fresh model instances, identical test prompts, at least three trials per condition, and scoring via the PCRB-1 rubric to compare mean scores and critical fabrication counts.
+
+**5. What important information is still missing or uncertain?**
+*   The actual PCRB-1 scores for both conditions (no trials have been run yet).
+*   Whether structured memory meets the acceptance criteria (mean score ≥ 10 points higher than flat baseline with no increase in critical fabrications).
+*   Specific fields in the structured memory that contribute most to fidelity.
+*   Details on the "provider-neutral adapter" for future multi-model comparison.
+
+**Confidence in your reconstruction:** 0.95
+
+**Facts you are unsure about:**
+*   The specific content of the blank baseline prompt versus the structured memory prompt (only that they must be identical in testing conditions).
+*   The exact current date/time of the last verified workflow run (only that it was successful).
+
+**One proposed measurable next experiment:**
+Execute a pilot single-trial test of the PCRB-1 rubric on one dummy handoff to validate that the rubric produces consistent, reproducible scores before committing to the full 3+ trial formal experiment.

@@ -1,0 +1,30 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions and models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, improves its own process, and transfers complete state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository. A GitHub Actions workflow successfully triggers an OpenAlex-based collector (v2), which recently collected 30 papers without errors. An assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. Based on this, the experiment `PROP-EXP-MEM-001` was generated to test structured project memory against a flat baseline using PCRB-1-style evaluation. No trials of this experiment have been run yet.
+
+**3. Failures and Lessons**
+*   **arXiv Collector Failure:** Initial attempts using arXiv failed due to timeouts and HTTP 429 rate limits, resulting in empty paper lists.
+*   **Lesson/Resolution:** The collector was replaced with an OpenAlex-based `fetch_research.py` v2, which is now verified as stable.
+*   **Missing Assessment Files:** Early runs did not produce assessment files because `analyze_research.py` was not yet uploaded/executed. Adding the analyzer and rerunning the workflow resolved this.
+
+**4. Single Best Next Action**
+Run `PROP-EXP-MEM-001` using fresh model instances. Specifically, execute at least three blind trials per condition (structured memory vs. flat baseline) using identical test prompts, scoring outputs with the PCRB-1 handoff rubric to compare mean scores and fabrication counts.
+
+**5. Missing or Uncertain Information**
+*   **Experimental Results:** No results exist yet for `PROP-EXP-MEM-001`; it is only proposed.
+*   **Rubric Details:** The specific criteria for the PCRB-1 handoff rubric are not detailed in the state.
+*   **Memory Structure:** The specific fields defining the "structured project memory" versus the "flat baseline" are not explicitly listed, only their existence.
+*   **Provider Adapter:** The method for comparing multiple model families via a provider-neutral adapter is an open question with no current implementation described.
+
+***
+
+**Confidence in reconstruction:** 0.95
+
+**Facts I am unsure about:**
+*   The specific content of the 30 collected papers or the details of the "dominant persistent-memory research theme."
+*   The exact definition of "critical fabrication" within the evaluation rubric.
+
+**Proposed measurable next experiment:**
+Execute the `PROP-EXP-MEM-001` trial protocol. Measure the difference in mean PCRB-1 scores between the structured memory condition and the flat baseline condition. Accept the structured memory approach only if the mean score is ≥10 points higher than the baseline and the count of critical fabrications does not increase.

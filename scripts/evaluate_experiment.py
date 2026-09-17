@@ -232,7 +232,8 @@ def load_policy(experiment: Path) -> dict:
     if path.is_file():
         declared = json.loads(path.read_text(encoding="utf-8"))
         unknown = sorted(set(declared) - set(DEFAULT_POLICY)
-                         - {"scorer_ladder", "checker_ladder", "notes", "evidence_policy", "pairs_per_batch", "generation"})
+                         - {"scorer_ladder", "checker_ladder", "notes", "evidence_policy", "pairs_per_batch", "generation",
+                            "design", "reader", "quiz"})
         if unknown:
             raise SystemExit("%s has unknown fields: %s" % (path, ", ".join(unknown)))
         policy.update(declared)

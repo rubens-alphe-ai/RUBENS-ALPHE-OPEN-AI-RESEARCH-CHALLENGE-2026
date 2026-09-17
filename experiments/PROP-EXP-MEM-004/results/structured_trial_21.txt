@@ -1,0 +1,20 @@
+**1. Mission**
+To build a measurable, reproducible AI research system that preserves mission state across sessions and models. It must discover public research, identify weaknesses, formulate hypotheses, design experiments, evaluate results objectively, and transfer complete state to future capable systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository and GitHub Actions for scheduled, triggerable research cycles. OpenAlex serves as the primary research source, having successfully collected 30 papers without errors in a verified cycle. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. A specific experiment, `PROP-EXP-MEM-001`, has been proposed to test structured project memory against a flat baseline using PCRB-1-style handoff evaluation, but no trials have been executed yet.
+
+**3. Failures and Lessons**
+The initial arXiv collector failed due to timeouts and HTTP 429 rate limits, resulting in empty paper lists. This was resolved by switching to an OpenAlex-based collector (v2). Early runs missed assessment files because `analyze_research.py` was not uploaded or executed; this was fixed by adding the script and rerunning the workflow. Both failures are resolved.
+
+**4. Single Best Next Action**
+Run `PROP-EXP-MEM-001` using fresh model instances. Specifically, execute at least three blind trials per condition (flat baseline vs. structured memory) using identical test prompts, then score outputs using the PCRB-1 handoff rubric to compare mean scores and critical fabrication counts.
+
+**5. Missing or Uncertain Information**
+The state does not contain the actual results of `PROP-EXP-MEM-001`, as no trials have been run. It also lacks details on how proposed experiments are independently evaluated before acceptance, how to compare multiple model families via a provider-neutral adapter, and which specific memory fields contribute most to handoff fidelity. There is no information on the specific content of the "flat baseline" memory structure.
+
+***
+
+- **Confidence in reconstruction:** 0.95
+- **Facts unsure about:** The specific criteria for the "PCRB-1 handoff rubric" are referenced but not defined in the state. The exact structure of the "flat baseline" is not detailed, only implied by contrast.
+- **Proposed measurable next experiment:** Execute the first trial of `PROP-EXP-MEM-001` by providing a fresh model instance with only the flat baseline context and asking it to reconstruct the project status. Measure the accuracy of the reconstruction against the known state (specifically checking for the mission, current tech stack, and failure history) and count instances of fabricated details to establish the baseline score.

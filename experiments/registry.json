@@ -70,6 +70,20 @@
       "holdout_required": true,
       "regression_suite_required": true,
       "notes": "Same inputs as MEM-002; generator qwen/qwen3.8-27b on Groq; pre-registered scorer and checker ladders; runs unattended through scripts/run_experiment.py."
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-004",
+      "title": "Handoff Quiz: Structure Measured Without a Judge",
+      "status": "REJECTED",
+      "capability_target": "blind cross-model mission reconstruction",
+      "hypothesis": "Holding information content constant, a sectioned project state transfers more correct facts through a handoff than the same facts in prose, without more invented facts.",
+      "metric": "Fact accuracy on 32 keyed questions answered by a reader from the handoff alone (paired delta, percentage points); inventions on 10 questions about absent facts",
+      "acceptance_rule": "Thirty pairs. REJECT if structured inventions exceed baseline by more than 5; PROVISIONAL_KEEP if mean delta >= +10 pp and 95% lower bound > 0; REJECT if 95% upper bound < +10 pp; else INCONCLUSIVE.",
+      "protocol_path": "experiments/PROP-EXP-MEM-004/PROTOCOL.md",
+      "evidence_stage": "PILOT",
+      "holdout_required": true,
+      "regression_suite_required": true,
+      "notes": "REJECT on 2026-09-17: mean paired delta -0.9 pp, 95% CI -4.1 to +2.2 pp, zero inventions and zero wrong facts in both conditions. See RESULT.md."
     }
   ]
 }

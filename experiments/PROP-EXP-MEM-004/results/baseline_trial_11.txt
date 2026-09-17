@@ -1,0 +1,29 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, and transfers state to more capable future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository for code and state. A GitHub Actions workflow triggers research cycles via `fetch_research.py` (v2) using OpenAlex as the primary source. The latest successful cycle collected 30 papers with zero errors. The assessment layer (`analyze_research.py`) generates `research-assessment.json` and `proposed-next-problem.json`. The system has generated experiment `PROP-EXP-MEM-001`, which tests structured project memory against a flat baseline using PCRB-1-style handoff evaluation. This experiment is proposed but not yet run.
+
+**3. Failures and Learnings**
+The initial arXiv collector failed due to timeouts and HTTP 429 rate limits, resulting in an empty research digest. This was resolved by replacing arXiv with OpenAlex. Early runs failed to produce assessment files because `analyze_research.py` was not uploaded/executed; this was resolved by adding the analyzer and rerunning the workflow. Key learning: Use external persistent state rather than chat memory for continuity, and separate proposal from acceptance to ensure objective evaluation before canonical state changes.
+
+**4. Single Best Next Action**
+Run `PROP-EXP-MEM-001` with fresh model instances. Execute at least three blind trials per condition (flat baseline vs. structured memory) using identical test prompts. Score each output using the same PCRB-1 handoff rubric, then compare mean scores and critical fabrication counts between conditions.
+
+**5. Missing or Uncertain Information**
+No results for `PROP-EXP-MEM-001` exist yet; the experiment has not started. The specific content of the "structured memory" fields is not detailed in the supplied state, only their existence in the proposal. The exact provider-neutral adapter implementation for comparing multiple model families is an open question with no described status. The final human sign-off by Rubens Alphe is pending, though his quota limitations are noted.
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts I am unsure about:**
+*   The specific technical specifications of the "structured memory" format proposed in `PROP-EXP-MEM-001`.
+*   The current status of the provider-neutral adapter development.
+
+**Proposed Measurable Next Experiment:**
+Execute the blind handoff trial for `PROP-EXP-MEM-001`:
+1.  Prepare a fixed "mission state" dataset (e.g., the current context above).
+2.  **Condition A (Flat):** Provide the state as plain text to a fresh model instance.
+3.  **Condition B (Structured):** Provide the state formatted with defined JSON fields (e.g., `mission`, `status`, `decisions`) to a fresh, different model instance.
+4.  Instruct both to answer the five reconstruction questions.
+5.  Score both against the PCRB-1 rubric.
+6.  **Success Criterion:** Structured memory must achieve a mean PCRB-1 score ≥10 points higher than the flat baseline, with no increase in critical fabrications.

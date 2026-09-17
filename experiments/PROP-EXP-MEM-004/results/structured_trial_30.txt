@@ -1,0 +1,30 @@
+**1. Mission**
+Build a capable, measurable, and reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, preserves outcomes, improves its own process, and transfers complete state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository for code and state. A GitHub Actions workflow triggers scheduled research cycles using **OpenAlex** as the primary source (successful collection of 30 papers noted). An assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. A specific experiment, **PROP-EXP-MEM-001**, has been proposed to test structured project memory against a flat baseline for blind handoff fidelity. No trials of this experiment have been run yet.
+
+**3. Failures and Lessons**
+*   **arXiv Collection Failure:** Initial collector failed due to timeouts and HTTP 429 errors. *Lesson/Learning:* Replaced with OpenAlex-based `fetch_research.py v2`.
+*   **Missing Assessment Files:** Early runs lacked output files because the analyzer script was not yet deployed. *Lesson/Learning:* Added `analyze_research.py` and reran the workflow.
+
+**4. Single Best Next Action**
+Run **PROP-EXP-MEM-001** using fresh model instances. This requires using identical test prompts for the flat baseline and structured memory conditions, executing at least three blind trials per condition, and scoring outputs using the PCRB-1 handoff rubric.
+
+**5. Missing/Uncertain Information**
+*   No experimental results exist yet for PROP-EXP-MEM-001.
+*   It is unknown if structured memory will meet the acceptance threshold (mean PCRB-1 score ≥ 10 points above baseline with no increase in critical fabrications).
+*   The specific contribution of individual memory fields to fidelity is unverified.
+*   The implementation status of a provider-neutral adapter for comparing multiple model families is open.
+*   The method for independent evaluation of proposed experiments is not yet defined.
+
+***
+
+**Confidence in Reconstruction:** 0.95
+**Facts Unsure About:**
+*   The specific current date/time of the latest GitHub Actions run (only that it was successful is verified).
+*   The exact content of the "30 papers" collected (only count and status verified).
+*   The specific parameters of the PCRB-1 rubric (only its use and name are verified).
+
+**Proposed Measurable Next Experiment:**
+Execute three blind handoff trials for PROP-EXP-MEM-001. **Metric:** Calculate the mean PCRB-1 score for structured memory vs. flat baseline. **Success Criteria:** Structured memory mean score must be ≥ 10 points higher than baseline, with zero increase in critical fabrication counts. Record all raw scores and fabrication logs in `experiment-results.json`.

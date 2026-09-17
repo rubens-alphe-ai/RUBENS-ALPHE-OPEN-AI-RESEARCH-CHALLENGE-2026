@@ -1,0 +1,35 @@
+**1. Mission**
+To build a measurable, reproducible AI research system that preserves mission state across sessions and models, discovers public research, identifies weaknesses, formulates hypotheses, runs experiments, evaluates results objectively, and transfers complete state to more capable future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository and GitHub Actions for scheduled, manually triggerable research cycles. It currently uses OpenAlex (replacing arXiv) as the primary research source. A verified cycle collected 30 papers with no errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. The system has generated experiment **PROP-EXP-MEM-001**, which tests if structured project memory improves blind handoff fidelity compared to a flat baseline using PCRB-1-style evaluation. No trials of this experiment have been run yet.
+
+**3. Failures and Lessons**
+*   **arXiv Collection Failure:** Initial collection failed due to timeouts and HTTP 429 rate limits. *Lesson/Learning:* Replaced arXiv with OpenAlex as the primary collector to ensure reliability.
+*   **Missing Assessment Files:** Early runs did not produce assessment files because the analyzer script was not yet executed. *Lesson/Learning:* Ensured `analyze_research.py` was added and the workflow rerun; process now fully integrated.
+
+**4. Single Best Next Action**
+Run **PROP-EXP-MEM-001** using fresh model instances. Specifically, execute at least three blind trials per condition (structured memory vs. flat baseline) using identical test prompts, then score each output with the PCRB-1 handoff rubric to compare mean scores and critical fabrication counts.
+
+**5. Missing/Uncertain Information**
+*   **Empirical Results:** No data exists yet on whether structured memory actually improves fidelity.
+*   **Specifics of PCRB-1:** The state references a "PCRB-1 handoff rubric" but does not define its specific criteria or scoring scale within the provided text.
+*   **Baseline Definition:** The exact format of the "flat baseline" memory is not defined.
+*   **Provider-Neutral Adapter:** No details are provided on how the system will compare multiple model families via a provider-neutral adapter.
+*   **Evaluation Protocol for Proposals:** It is unclear how proposed experiments are independently evaluated before acceptance, beyond the general rule that evaluation is required.
+
+***
+
+**Confidence in reconstruction:** 0.95
+*(High confidence because the state file is explicit and structured; slight uncertainty due to lack of definition for PCRB-1 rubric specifics and baseline format.)*
+
+**Facts I am unsure about:**
+*   The specific metrics or criteria used in the "PCRB-1 handoff rubric."
+*   The exact structure of the "flat baseline" memory format.
+*   The specific implementation details of the "provider-neutral adapter" mentioned in open questions.
+
+**Proposed measurable next experiment:**
+**EXP-PROTOCOL-001: PCRB-1 Rubric Validation**
+*   **Hypothesis:** If the PCRB-1 rubric is not explicitly defined in the project state, blind trial scoring will be inconsistent and non-reproducible.
+*   **Method:** Before running PROP-EXP-MEM-001, define and document the exact PCRB-1 scoring criteria (e.g., factual accuracy, completeness, absence of hallucination) in a `pcrb1-rubric.md` file. Conduct two pilot scoring runs on a fixed, known sample using two different model instances to measure inter-rater reliability (correlation of scores).
+*   **Success Metric:** Inter-rater correlation > 0.85 between the two scoring instances, ensuring the rubric yields consistent, reproducible scores before the main experiment begins.

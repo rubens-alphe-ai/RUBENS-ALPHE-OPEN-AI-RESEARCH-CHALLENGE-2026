@@ -1,0 +1,36 @@
+**1. Mission**
+To build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, runs experiments, and transfers state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository and GitHub Actions for automated, scheduled research cycles. It currently sources public research from OpenAlex (replacing arXiv). A recent successful cycle collected 30 papers with no errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. An experiment, PROP-EXP-MEM-001, has been proposed to test structured project memory against a flat baseline using PCRB-1 handoff evaluation, but it has not yet been executed.
+
+**3. Failures and Learnings**
+*   **arXiv Collection Failure:** Initial attempts using arXiv failed due to timeouts and HTTP 429 rate limits, resulting in empty paper lists. *Learning:* The collector was replaced with an OpenAlex-based script (`fetch_research.py` v2) which is now verified and stable.
+*   **Missing Assessment Files:** Early runs failed to produce assessment files because the analyzer script was not uploaded/executed. *Learning:* The workflow was corrected to include `analyze_research.py`, and subsequent runs are verified to produce the correct artifacts.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001. Specifically, run at least three blind trials per condition (flat baseline vs. structured memory) using fresh model instances and identical test prompts, scoring each output with the PCRB-1 handoff rubric.
+
+**5. Missing or Uncertain Information**
+*   No actual results or scores exist for PROP-EXP-MEM-001 yet.
+*   It is unverified whether structured memory actually improves fidelity (current hypothesis is unproven).
+*   The specific impact of individual memory fields on fidelity is unknown.
+*   The method for independent evaluation of proposed experiments before acceptance is still an open question.
+*   The implementation details for a provider-neutral adapter to compare multiple model families are absent.
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts I am Unsure About:**
+*   The specific threshold scores achieved in any prior informal tests (since no official trials have been run).
+*   The exact technical specifications of the "PCRB-1-style handoff evaluation" rubric beyond its name.
+
+**Proposed Measurable Next Experiment:**
+**Experiment ID:** EXP-MEM-VAL-001
+**Hypothesis:** Structured project memory yields a higher mean PCRB-1 handoff fidelity score than a flat baseline.
+**Method:**
+1.  Prepare two prompt conditions: Condition A (Flat Baseline) and Condition B (Structured Memory JSON provided above).
+2.  Use three distinct, fresh model instances for each condition (6 total runs).
+3.  Input: Ask each model to reconstruct the mission, current state, and next action solely from the provided text.
+4.  Metric: Score each response using the PCRB-1 rubric.
+5.  Success Criterion: Condition B must have a mean score at least 10 points higher than Condition A, with zero increase in critical fabrications.
+6.  Output: `experiment-results-mem-001.json` containing raw scores and statistical comparison.
