@@ -44,6 +44,11 @@ class RateLimitTests(unittest.TestCase):
     def test_wait_until_reset_when_it_does_not_fit(self) -> None:
         self.assertEqual(ev.pause_before_next({"remaining_tokens": 500, "reset_tokens_seconds": 30}, "x" * 35000, 65), 31.0)
 
+    def test_output_budget_counts_against_remaining_tokens(self) -> None:
+        limits = {"remaining_tokens": 4000, "reset_tokens_seconds": 12}
+        self.assertEqual(ev.pause_before_next(limits, "x" * 3500, 65), 0.0)
+        self.assertEqual(ev.pause_before_next(limits, "x" * 3500, 65, reserve_tokens=3000), 13.0)
+
     def test_provider_retry_after_wins(self) -> None:
         self.assertEqual(ev.pause_before_next({"retry_after_seconds": 12}, "x", 65), 12.0)
 

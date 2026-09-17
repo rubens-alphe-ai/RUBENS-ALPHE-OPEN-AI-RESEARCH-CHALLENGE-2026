@@ -84,6 +84,20 @@
       "holdout_required": true,
       "regression_suite_required": true,
       "notes": "REJECT on 2026-09-17: mean paired delta -0.9 pp, 95% CI -4.1 to +2.2 pp, zero inventions and zero wrong facts in both conditions. See RESULT.md."
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-005",
+      "title": "Handoff Checklist",
+      "status": "OPEN",
+      "capability_target": "blind cross-model mission reconstruction",
+      "hypothesis": "A short generic checklist of the state's item kinds, added after the state, increases the facts a reader recovers from the handoff without more invented facts.",
+      "metric": "Fact accuracy on 32 keyed questions from the handoff alone (paired delta, pp); inventions on 10 absent-fact questions",
+      "acceptance_rule": "Thirty pairs. REJECT if checklist inventions exceed baseline by more than 5; PROVISIONAL_KEEP if mean delta >= +5 pp and 95% lower bound > 0; REJECT if 95% upper bound < +5 pp; else INCONCLUSIVE.",
+      "protocol_path": "experiments/PROP-EXP-MEM-005/PROTOCOL.md",
+      "evidence_stage": "PILOT",
+      "holdout_required": true,
+      "regression_suite_required": true,
+      "notes": "Same generator, reader, prose state and quiz as MEM-004; the only change is the checklist."
     }
   ]
 }

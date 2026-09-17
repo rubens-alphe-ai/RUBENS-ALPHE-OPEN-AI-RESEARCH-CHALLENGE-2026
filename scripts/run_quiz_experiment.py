@@ -45,7 +45,7 @@ def read_one(entry: dict, prompt: str, ids: list[str], limits: dict, pause: floa
     """Ask the reader, parse, retry once on an unusable answer; keep every attempt."""
     record = {"attempts": []}
     for attempt in range(retries + 1):
-        time.sleep(pause_before_next(limits, prompt, pause) if limits else 0)
+        time.sleep(pause_before_next(limits, prompt, pause, int(entry.get("max_tokens", 2000))) if limits else 0)
         try:
             content, served = call(entry, prompt, int(entry.get("max_tokens", 2000)), limits)
         except AdapterError as exc:
