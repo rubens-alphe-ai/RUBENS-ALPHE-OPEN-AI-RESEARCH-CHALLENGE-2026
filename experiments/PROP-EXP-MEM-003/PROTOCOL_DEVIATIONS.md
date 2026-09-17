@@ -59,3 +59,8 @@ and are not reused. Groq's accepted scorecard is kept.
 
 **Decided before:** any second scorecard existed. Groq's scorecard has not been
 viewed; only failure messages were read.
+
+**Addendum to D2 (same commit series, before any check):** the two OpenRouter
+checkers use the same models and received the same setting
+(`reasoning: {"effort": "low"}`, 8,000 output tokens). No fabrication check has
+run for this experiment.
