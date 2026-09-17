@@ -28,21 +28,21 @@
      "json_mode": false, "max_tokens": 3000, "extra_body": {"reasoning_effort": "low"}},
     {"evaluator_id": "openrouter-nex-n2.5-pro", "provider": "OpenRouter", "model": "nex-agi/nex-n2.5-pro:free",
      "endpoint": "https://openrouter.ai/api/v1/chat/completions", "key": "openrouter",
-     "json_mode": false, "max_tokens": 16000},
+     "json_mode": false, "max_tokens": 8000, "extra_body": {"reasoning": {"effort": "low"}}},
     {"evaluator_id": "openrouter-nemotron-super", "provider": "OpenRouter", "model": "nvidia/nemotron-3-super-120b-a12b:free",
      "endpoint": "https://openrouter.ai/api/v1/chat/completions", "key": "openrouter",
-     "json_mode": false, "max_tokens": 16000},
+     "json_mode": false, "max_tokens": 8000, "extra_body": {"reasoning": {"effort": "low"}}},
     {"evaluator_id": "openrouter-glm-5.2", "provider": "OpenRouter", "model": "z-ai/glm-5.2:free",
      "endpoint": "https://openrouter.ai/api/v1/chat/completions", "key": "openrouter",
-     "json_mode": false, "max_tokens": 16000}
+     "json_mode": false, "max_tokens": 8000, "extra_body": {"reasoning": {"effort": "low"}}}
   ],
   "checker_ladder": [
     {"evaluator_id": "check-nemotron-super", "provider": "OpenRouter", "model": "nvidia/nemotron-3-super-120b-a12b:free",
      "endpoint": "https://openrouter.ai/api/v1/chat/completions", "key": "openrouter",
-     "json_mode": false, "max_tokens": 16000},
+     "json_mode": false, "max_tokens": 8000, "extra_body": {"reasoning": {"effort": "low"}}},
     {"evaluator_id": "check-glm-5.2", "provider": "OpenRouter", "model": "z-ai/glm-5.2:free",
      "endpoint": "https://openrouter.ai/api/v1/chat/completions", "key": "openrouter",
-     "json_mode": false, "max_tokens": 16000},
+     "json_mode": false, "max_tokens": 8000, "extra_body": {"reasoning": {"effort": "low"}}},
     {"evaluator_id": "check-groq-gpt-oss-20b", "provider": "Groq", "model": "openai/gpt-oss-20b",
      "endpoint": "https://api.groq.com/openai/v1/chat/completions", "key": "groq",
      "json_mode": false, "max_tokens": 3000, "extra_body": {"reasoning_effort": "low"}}

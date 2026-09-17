@@ -165,6 +165,11 @@ def run(experiment_name: str, config_path: Path) -> dict:
                             "reason_codes": evaluation.get("final_reason_codes")})
     if code != 0:
         return finish("STOPPED_EVALUATION_REFUSED")
+    ladder_log = experiment / "results" / "evaluation-ladder-log.json"
+    if ladder_log.is_file() and len(json.loads(ladder_log.read_text(encoding="utf-8"))["accepted"]) < 2:
+        # An adjudicator verdict built on fewer than two scorecards says
+        # nothing about the hypothesis; the run stopped for lack of scorers.
+        return finish("STOPPED_SCORERS_EXHAUSTED")
     return finish("DECIDED" if evaluation.get("final_decision") not in (None, "NOT_ADJUDICATED") else "NOT_ADJUDICATED")
 
 
