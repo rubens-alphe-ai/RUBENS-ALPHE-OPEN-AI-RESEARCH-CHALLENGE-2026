@@ -128,10 +128,17 @@ def run(experiment_name: str, config_path: Path) -> dict:
         shared_limits: dict = {}
         graded, failures = {}, []
 
+        give_up_after = int(policy.get("reader_give_up_after", 5))
+
         def read_trial(trial: dict) -> None:
             out = quiz_dir / ("%s.json" % trial["trial_id"])
             if out.is_file():
                 graded[trial["trial_id"]] = json.loads(out.read_text(encoding="utf-8"))
+                return
+            if len(failures) >= give_up_after:
+                # This reader has failed enough times to call it unable; the
+                # ladder's next rung reads everything again rather than finish
+                # a series nobody would trust.
                 return
             handoff = (ROOT / trial["output_path"]).read_text(encoding="utf-8")
             prompt = hq.reader_prompt(quiz, rendered, handoff)

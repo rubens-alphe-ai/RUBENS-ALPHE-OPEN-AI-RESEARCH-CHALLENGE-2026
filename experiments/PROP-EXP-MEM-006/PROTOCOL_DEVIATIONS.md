@@ -18,3 +18,10 @@ resuming never regenerates an existing output.
 
 **Decided before:** any verdict. Trials already produced are kept untouched and
 were generated one at a time; the rest are generated in parallel.
+
+**Second amendment to D1 (before any reading was graded):** the first reader
+kept returning gateway timeouts even one request at a time, after having
+answered a single probe minutes earlier. Waiting for 120 trials to exhaust
+their retries before the ladder moves on would take about eighteen hours, so
+the runner now declares a reader unable after five failed trials and hands the
+whole reading to the next rung, which is what the ladder was written for.
