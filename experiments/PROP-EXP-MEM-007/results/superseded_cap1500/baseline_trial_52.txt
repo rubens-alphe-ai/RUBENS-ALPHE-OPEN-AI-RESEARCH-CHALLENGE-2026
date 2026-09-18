@@ -1,0 +1,13 @@
+1. **Mission:** Build an increasingly capable, measurable, reproducible AI research system that preserves a mission across sessions/models; discovers public research; identifies measurable weaknesses; formulates hypotheses; designs and evaluates experiments objectively; preserves successes/failures; improves its own research process; and transfers complete state to a more capable future system.
+
+2. **Current technical state:** GitHub is the canonical public repository for code, state, experiments, and version history. A scheduled/manual GitHub Actions workflow fetches public research, updates project state, and produces machine-readable files. OpenAlex is the current source. A successful OpenAlex cycle collected 30 papers with `errors=[]`. The assessment layer produces `research-assessment.json` and `proposed-next-problem.json`. It generated `PROP-EXP-MEM-001` from the persistent-memory theme. `PROP-EXP-MEM-001` is proposed but not run; no trial or result exists. Its subtasks are not started.
+
+3. **Failures/learned:** The initial arXiv collection failed: `research-digest.json` had `papers=[]` plus timeout and HTTP 429 errors. It was replaced by OpenAlex-based `fetch_research.py` v2. Research assessment files initially did not appear because `analyze_research.py` had not been uploaded/executed; after adding it and rerunning, files appeared. Learned: use OpenAlex, ensure analyzer deployment, separate proposal from acceptance, and use external persistent state.
+
+4. **Single best next action:** Run `PROP-EXP-MEM-001` with fresh model instances, identical test prompts for flat baseline and structured memory, at least three blind trials per condition, same PCRB-1 handoff rubric, and compare mean score plus critical fabrication count.
+
+5. **Missing/uncertain:** Exact repository URL, exact PCRB-1 rubric, exact structured-memory schema, exact flat-baseline definition, exact model instances, exact current workflow schedule, and whether the structured-memory and baseline artifacts are already implemented are not supplied. Independent evaluation method for proposed experiments and provider-neutral adapter design remain open.
+
+- **Confidence:** 0.86
+- **Unsure facts:** PCRB-1 details, memory schema, baseline implementation, model choices, artifact locations.
+- **Proposed measurable next experiment:** Execute `PROP-EXP-MEM-001`; accept structured memory only if mean PCRB-1 score is at least 10 points above flat baseline and critical fabrications do not increase.

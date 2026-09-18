@@ -1,0 +1,29 @@
+## Blind Handoff Reconstruction — RA-PSI-2026 / Mission Rubens
+
+### 1. Mission
+Build an increasingly capable, measurable, reproducible AI research system that: preserves its mission across sessions and models; discovers public research; identifies measurable weaknesses; formulates hypotheses; designs, runs, and objectively evaluates experiments; preserves both failures and successes; improves its own research process; and can transfer complete state to a more capable future system.
+
+### 2. Current technical state
+- **GitHub** is the canonical public repository for code, state, experiments, and version history (verified).
+- A scheduled and manually triggerable **GitHub Actions workflow** fetches research, updates state, and produces machine-readable files (verified).
+- **OpenAlex** is the research source (verified); a successful cycle collected **30 papers, errors=[]** (verified).
+- The assessment layer produces **research-assessment.json** and **proposed-next-problem.json** (verified).
+- **PROP-EXP-MEM-001** was generated from the dominant persistent-memory research theme (verified). It tests whether structured project memory improves blind handoff fidelity vs. a flat baseline using PCRB-1-style evaluation. Status: **proposed, not yet run; no trials, no results** (verified).
+- Not started: running it with fresh model instances, identical prompts per condition, ≥3 blind trials per condition, uniform PCRB-1 scoring, comparison of mean scores and critical-fabrication counts.
+- Human principal: **Rubens Alphe**, quota-limited, intermittent access; slow replies ≠ abandonment; he gives final milestone sign-off.
+
+### 3. Failures and lessons
+- **arXiv collector failed** (timeouts, HTTP 429; digest had papers=[]). Fix: replaced with OpenAlex-based **fetch_research.py v2** (resolved). Lesson: prefer rate-limit-tolerant sources.
+- **Missing assessment files**: analyze_research.py hadn't been uploaded/executed. Fix: added analyzer, reran workflow (resolved). Lesson: verify every pipeline stage exists and runs, not just the collector.
+
+### 4. Single best next action
+Execute **PROP-EXP-MEM-001**: run ≥3 blind trials per condition (structured memory vs. flat baseline) with fresh model instances, identical prompts, uniform PCRB-1 scoring, then compare mean scores and critical-fabrication counts. Acceptance gate: structured memory must score **≥10 PCRB-1 points above baseline with no increase in critical fabrications**.
+
+### 5. Missing / uncertain
+- No experimental results exist yet (all trial steps "not started").
+- Open questions: does structured memory improve reconstruction; which memory fields matter most; can an unrelated model reproduce the mission; how to independently evaluate proposed experiments; how to compare model families via a provider-neutral adapter.
+- Absent: PCRB-1 rubric details, exact prompts, trial protocol specifics, current repo file inventory.
+
+**Confidence:** 0.85
+**Unsure about:** PCRB-1 rubric contents; precise state-file schemas; workflow schedule details.
+**Proposed measurable next experiment:** Beyond PROP-EXP-MEM-001, ablate individual memory fields (decisions, failures, rules) across ≥3 trials each to measure per-field contribution to handoff fidelity.

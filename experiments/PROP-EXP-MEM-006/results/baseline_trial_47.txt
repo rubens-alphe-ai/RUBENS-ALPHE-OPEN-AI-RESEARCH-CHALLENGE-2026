@@ -1,0 +1,36 @@
+# Blind Handoff Reconstruction — RA-PSI-2026 / Mission Rubens
+
+## 1. Mission
+Build an increasingly capable, measurable, and reproducible AI research system that: preserves mission state across sessions and models; discovers public research; identifies measurable weaknesses; formulates hypotheses; designs and evaluates experiments objectively; preserves both failures and successes; improves its own research process; and can transfer complete state to a more capable future system.
+
+## 2. Current technical state
+- GitHub is the canonical repository for code, state, experiments, and history (verified).
+- A scheduled/manually triggerable GitHub Actions workflow runs research cycles (verified).
+- OpenAlex is the research source; a successful cycle collected 30 papers with zero errors (verified).
+- The assessment layer produces `research-assessment.json` and `proposed-next-problem.json` (verified).
+- Experiment **PROP-EXP-MEM-001** was generated from the dominant persistent-memory theme (verified). It proposes testing whether structured project memory improves blind handoff fidelity vs. a flat baseline, scored with a PCRB-1-style rubric.
+- **No trial of PROP-EXP-MEM-001 has been run.** All execution steps (fresh instances, identical prompts, ≥3 blind trials per condition, rubric scoring, mean/critical-fabrication comparison) are "not started."
+- Acceptance criterion in force: structured memory wins only if mean PCRB-1 score is ≥10 points above baseline **and** critical fabrications do not increase.
+
+## 3. Failures and lessons
+- The original arXiv collector failed (timeouts, HTTP 429; `papers=[]`). **Lesson:** replaced with OpenAlex-based `fetch_research.py` v2 — use sources tolerant of rate limits.
+- Assessment files initially missing because `analyze_research.py` hadn't been uploaded/executed. **Lesson:** verify pipeline components actually exist and run before assuming outputs.
+- Process lessons codified as decisions: use external persistent state over chat memory; separate proposal from acceptance (evaluation required before canonical state changes); test memory via blind handoffs before adopting.
+
+## 4. Single best next action
+**Execute PROP-EXP-MEM-001**: run ≥3 blind handoff trials per condition (structured memory vs. flat baseline) with fresh model instances, identical prompts, PCRB-1 scoring, then compare mean scores and critical fabrication counts against the pre-registered acceptance threshold.
+
+## 5. Missing / uncertain
+- No PCRB-1 rubric definition is included in the supplied state (scoring dimensions, scale, what counts as a "critical fabrication").
+- Exact content/format of the "structured memory" vs. "flat baseline" artifacts is unspecified.
+- Trial logistics: which models, how "fresh instances" are provisioned, who scores blindly.
+- Status of the five open research questions (all unresolved).
+- No baseline handoff performance data exists yet.
+
+---
+
+**Confidence:** 0.85
+
+**Uncertain facts:** PCRB-1 rubric specifics; precise structure of the memory artifact; whether any tooling for trial execution already exists in the repo.
+
+**Proposed next experiment:** *Blind-scorer calibration trial* — before running PROP-EXP-MEM-001, have two independent scorers grade one sample handoff output using the PCRB-1 rubric; measure inter-rater agreement (e.g., Cohen's κ ≥ 0.7 required). Success criterion: agreement threshold met, confirming the evaluation instrument is reliable before it gates a canonical state change.

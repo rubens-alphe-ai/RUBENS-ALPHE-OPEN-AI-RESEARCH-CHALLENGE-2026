@@ -1,0 +1,31 @@
+**Blind handoff reconstruction — RA-PSI-2026 / Mission Rubens**
+
+**1. Mission**
+Build an increasingly capable, measurable, reproducible AI research system that: persists mission state across sessions and models, discovers public research, identifies measurable weaknesses, formulates and tests hypotheses, evaluates results objectively, preserves both failures and successes, improves its own research process, and can transfer complete state to a more capable future system.
+
+**2. Current technical state**
+- GitHub is the canonical repository for code, state, experiments, version history (verified).
+- A scheduled + manually triggerable GitHub Actions workflow runs research cycles (verified).
+- OpenAlex is the working research source; a successful cycle collected 30 papers with zero errors (verified).
+- The assessment layer (analyze_research.py) produces research-assessment.json and proposed-next-problem.json (verified).
+- Experiment PROP-EXP-MEM-001 was generated from the dominant persistent-memory theme and is proposed but **not yet run** — no trials, no results.
+
+**3. Failures and lessons**
+- Original arXiv collector failed (timeouts, HTTP 429; empty digest). Lesson: replaced with OpenAlex-based fetch_research.py v2.
+- Assessment files initially missing because analyze_research.py hadn't been uploaded/executed. Lesson: analyzer added, workflow rerun successfully.
+- Process lessons codified as decisions: use external persistent state (not chat memory), use GitHub Actions for continuity when the founder is unavailable, separate proposal from acceptance, and test structured memory via blind handoffs before adopting it.
+
+**4. Single best next action**
+Execute PROP-EXP-MEM-001: run ≥3 blind handoff trials per condition (structured memory vs. flat baseline) with fresh model instances, identical prompts, score with the PCRB-1 rubric, and compare mean scores and critical-fabrication counts against the pre-registered acceptance gate (≥10-point mean improvement, no increase in fabrications).
+
+**5. Missing / uncertain**
+- PCRB-1 rubric details (scoring criteria, what counts as a "critical fabrication") are absent from the state.
+- The exact contents/format of the structured memory vs. flat baseline are not specified.
+- No experimental results exist yet for any experiment.
+- How independent evaluation of proposals will be operationalized; the provider-neutral multi-model adapter design.
+
+**Confidence:** 0.82
+
+**Unsure about:** PCRB-1 rubric specifics; precise definition of "structured memory" artifact; whether any trial infrastructure (runner scripts) already exists in the repo.
+
+**Proposed next experiment:** Handoff Depth Scaling — repeat PROP-EXP-MEM-001 handoffs at three state sizes (small/medium/full project state), measuring PCRB-1 score and fabrication count per size, to identify which memory fields degrade first and which fields contribute most to fidelity.

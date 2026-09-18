@@ -1,0 +1,15 @@
+1. **Mission:** Build an increasingly capable, measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, finds measurable weaknesses, proposes and evaluates experiments, preserves successes/failures, improves its research process, and can transfer complete state to future systems.
+
+2. **Current technical state:** GitHub is canonical for code/state/history. GitHub Actions runs scheduled/manual research cycles. OpenAlex is the working public research source. A verified OpenAlex cycle collected 30 papers with `errors=[]`. Assessment outputs `research-assessment.json` and `proposed-next-problem.json` are produced. PROP-EXP-MEM-001 was generated from persistent-memory research but is only proposed; no trials or results exist.
+
+3. **Failures and lessons:** The initial arXiv collector failed with timeouts and HTTP 429, producing empty papers plus errors; lesson: prefer a reliable public source, so OpenAlex replaced arXiv. Assessment files initially did not appear because `analyze_research.py` had not been uploaded/executed; lesson: verify every pipeline component exists and runs. Broader learned constraints: separate proposal from acceptance, preserve failures, require measurable evidence.
+
+4. **Single best next action:** Execute PROP-EXP-MEM-001 as specified: fresh model instances, identical prompts for structured memory vs flat baseline, at least three blind trials per condition, same PCRB-1 rubric, then compare mean score and critical fabrication count. Accept structured memory only if mean PCRB-1 is ≥10 points higher and critical fabrications do not increase.
+
+5. **Missing/uncertain:** No handoff trial results exist. Exact PCRB-1 rubric operationalization, prompt text, state snapshots, scoring blind, trial randomization, statistical handling, evaluator independence, and provider-neutral adapter details are absent or unspecified. It is also unknown which memory fields drive fidelity or whether an unrelated model can reconstruct the mission without the original conversation.
+
+**Confidence:** 0.86
+
+**Unsure facts:** Whether GitHub/OpenAlex statuses remain currently green beyond the supplied snapshot; exact PCRB-1 scoring anchors; whether “10 points” is on a 100-point scale; who scores trials; whether three trials per condition is statistically adequate.
+
+**Proposed measurable next experiment:** Run PROP-EXP-MEM-001 with 3+ blind trials per arm, pre-registered prompts/rubric, frozen state snapshots, independent scoring, report mean PCRB-1 difference, critical fabrication counts, abstention/absence handling, and per-field ablation to estimate which memory fields most affect reconstruction fidelity.

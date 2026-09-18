@@ -1,0 +1,15 @@
+1. **Mission:** Build an increasingly capable, measurable, reproducible AI research system that can preserve a mission across sessions and models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures and successes, improve its own research process, and transfer complete state to a more capable future system.
+
+2. **Current technical state:** GitHub is the canonical public repository. A scheduled/manual GitHub Actions workflow fetches public research, updates project state, and produces machine-readable files. OpenAlex is the current source. A successful cycle collected 30 papers with `errors=[]`. The assessment layer produces `research-assessment.json` and `proposed-next-problem.json`. The system generated experiment **PROP-EXP-MEM-001** from the persistent-memory theme. That experiment is proposed but not run. No trial or result exists yet.
+
+3. **Failures/lessons:** The initial arXiv collector failed: `research-digest.json` had `papers=[]` plus timeout and HTTP 429 errors. It was replaced by OpenAlex-based `fetch_research.py` v2. Research assessment files initially did not appear because `analyze_research.py` had not been uploaded/executed; it was added and the workflow rerun. Both are resolved. Lesson: use OpenAlex over arXiv; external persistent state and GitHub Actions support continuity.
+
+4. **Best next action:** Run **PROP-EXP-MEM-001** with fresh model instances. Use identical test prompts for flat baseline and structured memory. Run at least three blind trials per condition. Score each output with the same PCRB-1 handoff rubric. Compare mean score and critical fabrication count between conditions.
+
+5. **Missing/uncertain:** The experiment has not started. Open questions remain: Does structured memory improve blind mission reconstruction versus flat baseline? Which memory fields contribute most? Can an unrelated model reproduce the mission without the original conversation? How should proposed experiments be independently evaluated before acceptance? How can multiple model families be compared through a provider-neutral adapter? Rubens Alphe gives final human milestone sign-off and is quota-limited.
+
+**Confidence:** 0.95
+
+**Unsure facts:** Exact PCRB-1 rubric details, exact structured-memory fields, exact flat-baseline definition, and full workflow implementation details are not supplied.
+
+**Proposed measurable next experiment:** Execute PROP-EXP-MEM-001: at least 3 blind trials per condition, identical prompts, PCRB-1 scoring. Success criterion: structured memory mean PCRB-1 score at least 10 points above flat baseline and critical fabrications do not increase.

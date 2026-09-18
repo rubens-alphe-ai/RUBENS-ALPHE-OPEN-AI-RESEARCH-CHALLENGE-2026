@@ -1,0 +1,35 @@
+# Blind Handoff Reconstruction — RA-PSI-2026 / Mission Rubens
+
+## 1. Mission
+Build an increasingly capable, measurable, reproducible AI research system that: preserves mission state across sessions and models; discovers public research; identifies measurable weaknesses; formulates hypotheses; designs and evaluates experiments objectively; preserves both failures and successes; improves its own research process; and can transfer complete state to a more capable future system.
+
+## 2. Current Technical State
+- **GitHub** is the canonical repository for code, state, experiments, and history.
+- A **GitHub Actions workflow** (scheduled and manually triggerable) fetches research, updates state, and emits machine-readable files.
+- **OpenAlex** is the working research source; a successful cycle collected 30 papers with zero errors.
+- The assessment layer produces `research-assessment.json` and `proposed-next-problem.json`.
+- **PROP-EXP-MEM-001** has been proposed (from the persistent-memory research theme) but **not yet run**: no trials, no results. Its sub-steps (fresh instances, identical prompts, ≥3 blind trials per condition, PCRB-1 scoring, mean/critical-fabrication comparison) are all "not started."
+
+## 3. Failures and Lessons
+- **arXiv collector failed** (timeouts, HTTP 429; empty `papers=[]`). → Replaced with OpenAlex-based `fetch_research.py` v2. Lesson: choose rate-limit-tolerant sources.
+- **Missing assessment outputs** in early runs. → Cause: `analyze_research.py` was never uploaded/executed; fixed and rerun. Lesson: verify pipeline components actually exist and run, not just are planned.
+
+## 4. Single Best Next Action
+**Execute PROP-EXP-MEM-001**: run ≥3 blind handoff trials per condition (structured memory vs. flat baseline) with fresh model instances, identical prompts, and PCRB-1 scoring. Acceptance is pre-registered: structured memory wins only if mean PCRB-1 ≥ +10 points over baseline **and** critical fabrications do not increase. This directly tests the project's core continuity mechanism before further adoption.
+
+## 5. Missing / Uncertain
+- No experimental results exist yet; the central question (does structured memory beat flat baseline?) is empirically open.
+- Which memory fields contribute most to fidelity — unknown.
+- Whether an unrelated model can reconstruct the mission blind — untested.
+- The exact PCRB-1 rubric contents are not included in the supplied state.
+- No independent evaluation protocol for proposals is yet defined beyond "evaluation required before acceptance."
+- No provider-neutral adapter design for multi-model comparison exists yet.
+- Operational details absent: repo URL, file schemas, workflow schedule, compute/quota budget.
+
+---
+
+**Confidence in reconstruction:** 0.90
+
+**Facts I am unsure about:** exact PCRB-1 rubric criteria; repository structure and file formats; timeline/cadence expectations; who besides Rubens (if anyone) operates the system.
+
+**Proposed measurable next experiment:** *Cross-model replication* (after PROP-EXP-MEM-001 completes): repeat the winning handoff condition with a different model family as the receiver, using identical state and rubric. Metric: mean PCRB-1 score and critical fabrication count per model family; success = score within ±5 points of the original receiver's result, demonstrating state portability across models.

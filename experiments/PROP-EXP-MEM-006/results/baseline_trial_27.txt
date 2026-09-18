@@ -1,0 +1,31 @@
+# Blind Handoff Reconstruction — RA-PSI-2026 / Mission Rubens
+
+## 1. Mission
+Build an increasingly capable, measurable, reproducible AI research system that preserves a mission across sessions and models. Its capabilities: discovering public research, identifying measurable weaknesses, forming hypotheses, designing and running experiments, evaluating results objectively, preserving failures and successes, improving its own research process, and transferring complete state to more capable future systems.
+
+## 2. Current technical state
+- GitHub is the canonical repository; a scheduled/manually-triggered GitHub Actions workflow runs research cycles (verified).
+- OpenAlex is the working research source; a successful cycle collected 30 papers with zero errors (verified).
+- The assessment layer produces `research-assessment.json` and `proposed-next-problem.json` (verified).
+- Experiment PROP-EXP-MEM-001 was generated from the dominant persistent-memory research theme (verified) and is **proposed, not yet run** — no trial or result exists.
+
+## 3. Failures and lessons
+- **arXiv collector failure:** repeated timeouts and HTTP 429 rate limits → replaced with OpenAlex-based `fetch_research.py` v2. Lesson: choose rate-limit-tolerant sources.
+- **Missing assessment outputs:** `analyze_research.py` had not been uploaded/executed → added and workflow rerun. Lesson: verify pipeline components actually run end-to-end.
+
+## 4. Single best next action
+Execute PROP-EXP-MEM-001: run ≥3 blind handoff trials per condition (flat baseline vs. structured memory) with fresh model instances, identical prompts, and the PCRB-1 rubric; compare mean scores and critical fabrication counts against the pre-registered acceptance threshold (structured memory must beat baseline by ≥10 points with no increase in critical fabrications).
+
+## 5. Missing / uncertain information
+- No experimental results exist yet — the core question (does structured memory improve handoff fidelity?) is entirely open.
+- PCRB-1 rubric details are referenced but not supplied in the state.
+- Which memory fields matter most; whether an unrelated model can reconstruct the mission; how to build the provider-neutral multi-model adapter.
+- The evaluation protocol for independently vetting proposed experiments is defined in principle but untested in practice.
+
+---
+
+**Confidence:** 0.85
+
+**Unsure about:** exact contents of the PCRB-1 rubric; repository file layout; current workflow schedule; whether any tooling beyond the collector/analyzer exists.
+
+**Proposed next experiment:** *Blind handoff trial, structured vs. flat memory.* Conditions: (a) flat baseline state dump, (b) structured memory (this format). N=3 fresh instances per condition, identical prompts. Metrics: mean PCRB-1 score and critical fabrication count. Acceptance: structured ≥ +10 points mean, fabrications not increased. Pre-registered; both successes and failures recorded in the repository regardless of outcome.

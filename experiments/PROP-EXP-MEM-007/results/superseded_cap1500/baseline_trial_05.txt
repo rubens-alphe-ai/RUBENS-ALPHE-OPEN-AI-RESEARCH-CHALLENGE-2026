@@ -1,0 +1,15 @@
+1. **Mission:** Build an increasingly capable, measurable, reproducible AI research system that preserves a mission across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs/evaluates experiments objectively, preserves failures/successes, improves its research process, and transfers complete state to a more capable future system.
+
+2. **Current technical state:** GitHub is canonical. A scheduled/manual GitHub Actions workflow fetches public research, updates state, and produces machine-readable files. OpenAlex is the verified source; a cycle collected 30 papers with `errors=[]`. The assessment layer produces `research-assessment.json` and `proposed-next-problem.json`. `PROP-EXP-MEM-001` was generated from persistent-memory research but is proposed, not run. External persistent state is used for cross-session/model continuity. Proposal and acceptance are separated: evaluation is required before canonical state changes.
+
+3. **Failures/learned:** Initial arXiv collection failed: `research-digest.json` had `papers=[]` plus timeouts and HTTP 429. It was replaced by OpenAlex `fetch_research.py` v2. Research assessment files initially did not appear because `analyze_research.py` had not been uploaded/executed; after adding it and rerunning, the issue was resolved. Lesson: collector reliability and analyzer deployment/execution must be verified.
+
+4. **Best next action:** Run `PROP-EXP-MEM-001` with fresh model instances. Use identical test prompts for flat baseline and structured memory. Run at least three blind trials per condition. Score with the same PCRB-1 handoff rubric. Compare mean score and critical fabrication count. Accept structured memory only if mean PCRB-1 is at least 10 points above flat baseline and critical fabrications do not increase.
+
+5. **Missing/uncertain:** No trial of `PROP-EXP-MEM-001` has run; no result exists. The exact PCRB-1 rubric, test prompts, structured-memory schema, independent evaluation procedure, and provider-neutral adapter are not specified in the supplied state. It is open whether structured memory improves reconstruction, which fields matter most, whether an unrelated model can reproduce the mission, how proposed experiments should be independently evaluated, and how multiple model families should be compared.
+
+**Confidence:** 0.88
+
+**Unsure facts:** Exact current repository file contents; exact PCRB-1 rubric details; whether the structured-memory implementation already exists; exact current workflow status beyond “verified.”
+
+**Proposed measurable next experiment:** Execute `PROP-EXP-MEM-001`: 3+ blind trials per condition, identical prompts, fresh models, same PCRB-1 rubric; measure mean score difference and critical fabrication count.

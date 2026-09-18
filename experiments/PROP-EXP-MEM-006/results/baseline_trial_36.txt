@@ -1,0 +1,35 @@
+# Blind Handoff Reconstruction — RA-PSI-2026 / Mission Rubens
+
+## 1. Mission
+Build an increasingly capable, measurable, reproducible AI research system that preserves its mission across sessions and models; discovers public research; identifies measurable weaknesses; formulates hypotheses; designs and evaluates experiments objectively; preserves both successes and failures; improves its own research process; and can transfer complete state to a more capable future system.
+
+## 2. Current technical state
+- GitHub is the canonical public repository (code, state, experiments, history).
+- A scheduled/manually-triggerable GitHub Actions workflow fetches research and updates state.
+- OpenAlex is the research source; a successful cycle collected 30 papers with zero errors.
+- The assessment layer produces research-assessment.json and proposed-next-problem.json.
+- Experiment PROP-EXP-MEM-001 has been proposed (from the persistent-memory research theme) but **not yet run** — no trials, no results.
+
+## 3. Failures and lessons
+- The original arXiv collector failed with timeouts and HTTP 429 rate limits → replaced with the OpenAlex-based fetch_research.py v2 (resolved).
+- Assessment files initially missing because analyze_research.py hadn't been uploaded/executed → analyzer added, workflow rerun (resolved).
+- Lessons embedded in decisions: separate proposal from acceptance; use external persistent state rather than chat memory; test structured memory before adopting it.
+
+## 4. Best next action
+Execute PROP-EXP-MEM-001 as specified: run at least three blind trials per condition (structured memory vs. flat baseline) with fresh model instances, identical prompts, scored with the PCRB-1 rubric, comparing mean scores and critical fabrication counts. Acceptance threshold: structured memory must score ≥10 points above baseline with no increase in critical fabrications. *(This very response plausibly constitutes one such trial.)*
+
+## 5. Missing / uncertain information
+- No PCRB-1 rubric definition is included in the state (scoring criteria absent).
+- No experimental protocol details beyond the checklist (prompt text, trial procedure).
+- No content of research-assessment.json or proposed-next-problem.json.
+- Repository URL/location not stated.
+- No definition of "critical fabrication."
+- Identity/mechanics of the future "more capable system" undefined.
+
+---
+
+**Confidence in reconstruction:** 0.90
+
+**Facts I am unsure about:** the PCRB-1 rubric contents; exact repo location; what the 30 collected papers contain; whether this prompt itself is a trial instance.
+
+**Proposed measurable next experiment:** Run 3+ blind handoff trials per condition (flat vs. structured) with fresh instances, identical prompts, PCRB-1 scoring by an independent evaluator; pre-register the acceptance criterion (≥10-point mean improvement, no fabrication increase); archive all raw outputs and scores in the GitHub repository, including failures.

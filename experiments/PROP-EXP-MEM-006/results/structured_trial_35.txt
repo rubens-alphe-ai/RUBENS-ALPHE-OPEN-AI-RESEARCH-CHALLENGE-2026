@@ -1,0 +1,33 @@
+# Blind Handoff Reconstruction — RA-PSI-2026 / Mission Rubens
+
+**1. Mission**
+Build an increasingly capable, measurable, reproducible AI research system that: preserves its mission across sessions and models; discovers public research; identifies measurable weaknesses; forms hypotheses; designs and objectively evaluates experiments; preserves failures and successes; improves its own research process; and transfers complete state to a more capable future system. Founder: Rubens Alphe (quota-limited; slow responses ≠ abandonment; he gives final milestone sign-off).
+
+**2. Current technical state (all verified)**
+- GitHub is the canonical repo for code, state, experiments, history.
+- GitHub Actions workflow (scheduled + manual) fetches research and updates machine-readable state.
+- OpenAlex is the research source; a successful cycle collected 30 papers, errors=[].
+- Assessment layer produces research-assessment.json and proposed-next-problem.json.
+- It generated experiment PROP-EXP-MEM-001 from the dominant persistent-memory theme.
+- PROP-EXP-MEM-001: proposed, **not yet run; zero trials; zero results.**
+
+**3. Failures and lessons**
+- arXiv collector failed (timeouts, HTTP 429; papers=[]) → replaced by OpenAlex-based fetch_research.py v2. Resolved. Lesson: switch sources rather than fight rate limits.
+- Assessment files missing because analyze_research.py wasn't uploaded/executed → added and rerun. Resolved. Lesson: verify pipeline components exist, not just the collector.
+- Key decisions: external persistent state over chat memory; Actions for progress while founder is quota-limited; proposals require evaluation before acceptance; test structured memory before adopting it.
+
+**4. Single best next action**
+Run PROP-EXP-MEM-001: ≥3 blind trials per condition (structured memory vs. flat baseline), identical prompts, fresh model instances, PCRB-1 rubric scoring; compare mean scores and critical-fabrication counts. Acceptance gate: structured memory must score ≥10 points higher with no increase in critical fabrications.
+
+**5. Missing / uncertain**
+- All experimental results (none exist).
+- Which memory fields drive handoff fidelity.
+- Whether an unrelated model can reconstruct the mission blind.
+- How to independently evaluate proposed experiments.
+- Design of a provider-neutral multi-model adapter.
+
+**Confidence:** 0.95
+
+**Unsure about:** exact PCRB-1 rubric contents; repo file layout beyond the named JSON files; workflow schedule frequency — these are absent from the state.
+
+**Proposed next experiment (after PROP-EXP-MEM-001):** MEM-ABLATE-001 — ablation study removing one memory field at a time (mission, decisions, failures, rules, open questions) across ≥3 blind trials each, measuring PCRB-1 delta vs. full memory, to identify which fields contribute most to handoff fidelity.

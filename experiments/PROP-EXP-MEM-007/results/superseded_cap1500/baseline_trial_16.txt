@@ -1,0 +1,15 @@
+1. **Mission:** Build an increasingly capable, measurable, reproducible AI research system that preserves a mission across sessions/models, discovers public research, identifies measurable weaknesses, formulates hypotheses, designs and evaluates experiments, preserves failures and successes, improves its own process, and transfers complete state to a more capable future system.
+
+2. **Current technical state:** GitHub is the canonical public repository. A GitHub Actions workflow fetches public research, updates project state, and produces machine-readable files. OpenAlex is the current source; one cycle collected 30 papers with no errors. The assessment layer produces `research-assessment.json` and `proposed-next-problem.json`. It generated `PROP-EXP-MEM-001` from a persistent-memory theme. That experiment is proposed but not run; no trial or result exists.
+
+3. **Failures and lessons:** The initial arXiv collector failed: `research-digest.json` had `papers=[]` plus timeout and HTTP 429 errors. It was replaced by OpenAlex-based `fetch_research.py` v2. Research assessment files were initially missing because `analyze_research.py` had not been uploaded/executed; adding it and rerunning fixed this. Both are marked resolved.
+
+4. **Best next action:** Run `PROP-EXP-MEM-001` with fresh model instances, identical prompts for flat baseline and structured memory, at least three blind trials per condition, score with the same PCRB-1 handoff rubric, and compare mean score and critical fabrication count. Acceptance requires structured memory mean PCRB-1 at least 10 points above flat baseline and no increase in critical fabrications.
+
+5. **Missing or uncertain:** No trial of `PROP-EXP-MEM-001` has been run. Open questions: Does structured memory improve blind mission reconstruction? Which memory fields contribute most? Can an unrelated model reproduce the mission without the original conversation? How should proposed experiments be independently evaluated before acceptance? How can multiple model families be compared through a provider-neutral adapter? Exact PCRB-1 rubric details, prompts, model instances, baseline implementation, and structured-memory fields are not supplied.
+
+**Confidence:** 0.92
+
+**Unsure facts:** Exact PCRB-1 rubric, structured memory format/fields, chosen model instances, and flat-baseline implementation details are absent from the supplied state.
+
+**Proposed measurable next experiment:** Execute `PROP-EXP-MEM-001` as specified: fresh models, identical prompts, ≥3 blind trials per condition, PCRB-1 scoring; accept structured memory only if mean score is ≥10 points above flat baseline and critical fabrications do not increase.

@@ -1,0 +1,41 @@
+# Blind Handoff Reconstruction — RA-PSI-2026 / Mission Rubens
+
+## 1. Mission
+
+Build an increasingly capable, measurable, and reproducible AI research system that: preserves a mission across sessions and models, discovers public research, identifies measurable weaknesses, formulates hypotheses, designs and runs experiments, evaluates results objectively, preserves both failures and successes, improves its own research process, and can transfer complete state to a more capable future system.
+
+## 2. Current Technical State
+
+- GitHub is the canonical public repository for code, state, experiments, and history (verified).
+- A scheduled and manually triggerable GitHub Actions workflow fetches public research and produces machine-readable files (verified).
+- OpenAlex is the working research source; a cycle collected 30 papers with zero errors (verified).
+- The assessment layer produces `research-assessment.json` and `proposed-next-problem.json` (verified).
+- The system generated experiment **PROP-EXP-MEM-001** from the dominant persistent-memory research theme. It is **proposed but not yet run**; all sub-steps (fresh instances, identical prompts, ≥3 blind trials per condition, PCRB-1 scoring, mean/fabrication comparison) are **not started**.
+
+## 3. Failures and Lessons
+
+- **arXiv collector failed** (timeouts, HTTP 429; `papers=[]` in the digest) → replaced with OpenAlex-based `fetch_research.py` v2. Lesson: rate-limited sources need alternatives.
+- **Assessment files missing** because `analyze_research.py` had not been uploaded/executed → analyzer added, workflow rerun. Lesson: pipeline steps must actually be committed and executed before outputs are expected.
+
+## 4. Single Best Next Action
+
+**Run PROP-EXP-MEM-001**: execute at least three blind handoff trials per condition (structured memory vs. flat baseline) with fresh model instances, identical prompts, PCRB-1 scoring, then compare mean scores and critical fabrication counts against the pre-registered acceptance criterion (structured memory must beat baseline by ≥10 points with no increase in critical fabrications).
+
+## 5. Missing or Uncertain
+
+- No trial results exist for PROP-EXP-MEM-001.
+- The PCRB-1 rubric's exact contents are not included in the supplied state.
+- The exact format of the "flat baseline" memory is unspecified.
+- Which memory fields contribute most to handoff fidelity is open.
+- Whether an unrelated model can reproduce the mission is untested.
+- The independent evaluation procedure for proposed experiments is open.
+- The provider-neutral multi-model adapter design is open.
+- Five open research questions remain unresolved.
+
+---
+
+**Confidence in reconstruction:** 0.93
+
+**Facts I am unsure about:** the exact PCRB-1 rubric definition; the concrete structure of the flat baseline condition; whether any tooling for running trials already exists in the repo beyond what is stated.
+
+**Proposed measurable next experiment:** Execute PROP-EXP-MEM-001 as specified: 3+ blind trials per condition with fresh instances, score with PCRB-1, report mean score difference and critical fabrication counts with per-trial raw outputs preserved in the repository. Accept structured memory only if mean ≥ baseline + 10 points and fabrications do not increase; otherwise record the failure and revise the memory schema.

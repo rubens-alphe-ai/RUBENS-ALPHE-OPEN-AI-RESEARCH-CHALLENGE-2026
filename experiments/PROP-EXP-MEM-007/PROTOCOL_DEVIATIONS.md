@@ -47,3 +47,26 @@ resuming never regenerates an existing output.
 
 **Decided before:** any verdict. Trials already produced are kept untouched and
 were generated one at a time; the rest are generated in parallel.
+
+## D3 — Output budget raised, and every handoff regenerated (2026-09-18)
+
+**What happened:** with the reasoning effort set to minimal (D1), the model
+still spends tokens before answering. Of 120 trials, 53 produced a handoff, 38
+were cut at the 1,500-token budget and refused, and 29 returned reasoning with
+no answer. The successful handoffs run from 366 to 432 words, right against the
+450-word instruction, so the budget was binding on exactly the longest answers.
+
+**Why this could bias the result:** a budget that only refuses the longest
+answers does not drop trials at random. It drops whichever condition tends to
+write more — and the checklist condition is the one asked to carry more facts.
+Keeping those 53 handoffs would compare a complete baseline with a truncated
+treatment, or the reverse.
+
+**Deviation:** `max_output_tokens` goes from 1,500 to 3,000 and **all 120
+trials are generated again from scratch**. The 53 earlier handoffs and the
+error records are kept, unused, in `results/superseded_cap1500/`. Nothing else
+changes: same model, same reasoning setting, same temperature, same seeds, same
+states, same prompt, same 450-word instruction, same quiz, same key, same rule,
+same ceiling. The guard first refused 4,000 tokens as over budget (0.54 USD against 0.50), so the budget is 3,000 tokens, about five times what a handoff uses.
+
+**Decided before:** any handoff was read or graded. No reading had run.

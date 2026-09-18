@@ -1,0 +1,31 @@
+# Blind Handoff Reconstruction — RA-PSI-2026 / Mission Rubens
+
+## 1. Mission
+Build an increasingly capable, measurable, and reproducible AI research system that: preserves mission state across sessions and models; discovers public research; identifies measurable weaknesses; formulates hypotheses; designs and runs experiments; evaluates results objectively; preserves both failures and successes; improves its own research process; and can transfer complete state to a more capable future system.
+
+## 2. Current technical state
+- **GitHub** is the canonical public repository (verified).
+- **GitHub Actions** workflow (scheduled + manually triggerable) fetches research and updates state (verified).
+- **OpenAlex** is the research source (verified); one successful cycle collected 30 papers with zero errors (verified).
+- Assessment layer produces `research-assessment.json` and `proposed-next-problem.json` (verified).
+- Experiment **PROP-EXP-MEM-001** was generated from the persistent-memory theme: it tests whether structured project memory improves blind handoff fidelity vs. a flat baseline, scored with a PCRB-1-style rubric. Status: **proposed, not yet run**; no trials or results exist.
+- Acceptance criterion: structured memory must score ≥10 points above baseline mean with no increase in critical fabrications.
+- Founder **Rubens Alphe** is quota-limited, gives final milestone sign-off; slow responses ≠ abandonment.
+
+## 3. Failures and lessons
+- **arXiv collector failed** (timeouts, HTTP 429; digest had papers=[] plus errors). Fix: replaced with OpenAlex-based `fetch_research.py` v2. Lesson: switch sources when rate limits persist.
+- **Missing assessment files** in early runs: `analyze_research.py` had not been uploaded/executed. Fix: added analyzer, reran workflow. Lesson: verify all pipeline components exist before expecting outputs.
+
+## 4. Single best next action
+Run PROP-EXP-MEM-001: with fresh model instances, run ≥3 blind trials per condition (structured vs. flat) using identical prompts, score all outputs with the same PCRB-1 rubric, then compare mean scores and critical-fabrication counts against the acceptance threshold. (This answer may itself constitute one structured-memory trial.)
+
+## 5. Missing / uncertain
+- No trial results exist for PROP-EXP-MEM-001; the PCRB-1 rubric's exact scoring details are not in the state.
+- Open questions: which memory fields contribute most; whether an unrelated model can reproduce the mission; how proposals get independently evaluated pre-acceptance; how to compare model families via a provider-neutral adapter.
+- Contents of the latest research digest/assessment (beyond "30 papers") are absent.
+
+## Confidence: 0.90
+**Unsure about:** exact PCRB-1 rubric definition; precise repo file layout; whether this response counts as a formal trial.
+
+## Proposed next experiment
+**Field-ablation study (PROP-EXP-MEM-002):** after PROP-EXP-MEM-001, rerun handoffs with individual memory sections removed (decisions, failures, rules, open questions) to measure each field's contribution to PCRB-1 score and fabrication count, with ≥3 trials per ablation.

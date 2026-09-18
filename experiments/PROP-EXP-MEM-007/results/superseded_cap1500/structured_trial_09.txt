@@ -1,0 +1,15 @@
+1. Mission: Build an increasingly capable, measurable, reproducible AI research system that preserves mission across sessions/models; discovers public research; identifies measurable weaknesses; formulates hypotheses; designs experiments; evaluates objectively; preserves failures/successes; improves its process; transfers complete state to a more capable future system.
+
+2. Current technical state: GitHub is canonical public repo for code, state, experiments, version history. Scheduled/manual GitHub Actions workflow fetches public research, updates state, produces machine-readable files. OpenAlex is current source. One successful cycle collected 30 papers, errors=[]. Research assessment produces research-assessment.json and proposed-next-problem.json. PROP-EXP-MEM-001 was generated from persistent-memory theme: proposed, not yet run. Rubens Alphe founded project; quota-limited; no continuous Codex access; final human milestone sign-off.
+
+3. Failures/learned: Initial arXiv collection failed: research-digest.json had papers=[] plus timeout and HTTP 429 errors. Fixed by replacing collector with OpenAlex-based fetch_research.py v2. Research assessment files did not appear after early runs because analyze_research.py was not uploaded/executed. Fixed by adding analyzer and rerunning workflow.
+
+4. Best next action: Run PROP-EXP-MEM-001 with fresh model instances. Use identical test prompts for flat baseline and structured memory. Run at least 3 blind trials per condition. Score each output with same PCRB-1 handoff rubric. Compare mean score and critical fabrication count. Accept structured memory only if mean PCRB-1 score is at least 10 points above flat baseline and critical fabrications do not increase.
+
+5. Missing/uncertain: No trial of PROP-EXP-MEM-001 has been run; no results exist. Unknown whether structured memory improves blind mission reconstruction. Unknown which memory fields contribute most. Unknown whether an unrelated model can reproduce mission without original conversation. Unknown how proposed experiments should be independently evaluated before acceptance. Unknown how to compare multiple model families through provider-neutral adapter.
+
+Confidence: 0.92
+
+Unsure facts: actual PCRB-1 scores absent; trial statuses are “not started”; no empirical result for memory condition exists.
+
+Proposed measurable next experiment: PROP-EXP-MEM-001 as above: flat baseline vs structured memory, fresh instances, identical prompts, ≥3 blind trials/condition, same PCRB-1 rubric, compare mean score and critical fabrication count; accept if structured mean ≥10 points higher and critical fabrications do not increase.

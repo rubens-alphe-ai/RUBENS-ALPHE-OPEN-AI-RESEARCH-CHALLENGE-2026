@@ -1,3 +1,7 @@
+# PROP-EXP-MEM-006 — protocol deviations
+
+Each deviation is recorded and committed before any result it could influence
+exists.
 
 ## D1 — Requests are sent several at a time (2026-09-18)
 

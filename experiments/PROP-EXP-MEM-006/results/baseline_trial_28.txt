@@ -1,0 +1,32 @@
+# Blind Handoff Reconstruction — RA-PSI-2026 / Mission Rubens
+
+## 1. Mission
+Build an increasingly capable, measurable, reproducible AI research system that: persists its mission across sessions and models, discovers public research, identifies measurable weaknesses, formulates hypotheses, designs and runs experiments, evaluates results objectively, preserves both failures and successes, improves its own research process, and eventually transfers complete state to a more capable successor system.
+
+## 2. Current Technical State
+- GitHub is the canonical repository (code, state, experiments, history) — verified.
+- A GitHub Actions workflow (scheduled + manual) fetches research and updates state — verified.
+- OpenAlex is the working research source; a successful cycle collected 30 papers with zero errors — verified.
+- The assessment layer produces research-assessment.json and proposed-next-problem.json — verified.
+- The system proposed experiment PROP-EXP-MEM-001 (structured memory vs. flat baseline, PCRB-1-style handoff evaluation). It is proposed, not yet run; no trial data exists — verified.
+- Acceptance criterion is pre-registered: structured memory wins only if mean PCRB-1 ≥ +10 points over baseline with no increase in critical fabrications.
+
+## 3. Failures and Lessons
+- **arXiv collector failed** (timeouts, HTTP 429; papers=[]). Lesson: switched to OpenAlex-based fetch_research.py v2.
+- **Missing assessment files** because analyze_research.py wasn't uploaded/executed. Lesson: analyzer must be committed and workflow rerun; absence of outputs was a pipeline gap, not a research result.
+
+## 4. Single Best Next Action
+Execute PROP-EXP-MEM-001 as specified: ≥3 blind trials per condition (structured vs. flat), identical prompts, fresh model instances, same PCRB-1 rubric, then compare mean scores and critical-fabrication counts against the pre-registered acceptance threshold. This is the only proposed, fully specified, unrun experiment, and it directly tests the project's core hypothesis (structured memory enables cross-model continuity).
+
+## 5. Missing / Uncertain
+- No PCRB-1 rubric definition or scoring artifacts are included in the state.
+- No trial results, baseline scores, or fabrication counts exist yet.
+- The exact structured-memory schema vs. flat-baseline format is not specified here.
+- Which model(s) will serve as fresh instances is undecided.
+- The provider-neutral adapter design (open question) has no proposal yet.
+
+**Confidence: 0.85**
+
+**Uncertain facts:** precise PCRB-1 rubric contents; exact memory schema; whether any partial trial infrastructure exists in the repo beyond what's stated.
+
+**Proposed measurable next experiment:** Run PROP-EXP-MEM-001 as designed, but additionally ablate memory fields (e.g., remove "failures," remove "constraints") across trials to answer the open question of which fields contribute most to handoff fidelity — measurable via per-condition PCRB-1 deltas and fabrication counts.

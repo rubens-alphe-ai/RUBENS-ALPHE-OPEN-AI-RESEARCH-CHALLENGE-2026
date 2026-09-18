@@ -1,0 +1,33 @@
+## Blind Handoff Reconstruction — RA-PSI-2026 / Mission Rubens
+
+**1. Mission**
+Build an increasingly capable, measurable, reproducible AI research system that: preserves its mission across sessions and models; discovers public research; identifies measurable weaknesses; formulates hypotheses; designs and runs experiments; evaluates results objectively; preserves both failures and successes; improves its own research process; and can transfer complete state to a more capable future system.
+
+**2. Current technical state**
+- GitHub is the verified canonical repository (code, state, experiments, version history).
+- A scheduled + manually triggerable GitHub Actions workflow runs research cycles (verified).
+- OpenAlex is the primary research source (verified); a successful cycle collected 30 papers with zero errors.
+- The assessment layer produces `research-assessment.json` and `proposed-next-problem.json` (verified).
+- Experiment PROP-EXP-MEM-001 was generated from the dominant persistent-memory theme: testing whether structured project memory improves blind handoff fidelity vs. a flat baseline, using PCRB-1-style evaluation. It is **proposed, not yet run** — no trials, no results.
+- Acceptance gate defined: structured memory is accepted only if mean PCRB-1 score ≥ +10 points over baseline with no increase in critical fabrications.
+
+**3. Failures and lessons**
+- arXiv collector failed repeatedly (timeouts, HTTP 429; `papers=[]`). Lesson/action: replaced with OpenAlex-based `fetch_research.py` v2 — resolved.
+- Assessment files initially missing because `analyze_research.py` hadn't been uploaded/executed. Lesson: added analyzer, reran workflow — resolved.
+- Process lesson (decided): separate proposal from acceptance — evaluation required before canonical state changes.
+
+**4. Single best next action**
+Execute PROP-EXP-MEM-001 as specified: run ≥3 blind trials per condition (structured memory vs. flat baseline) using fresh model instances, identical test prompts, score all outputs with the same PCRB-1 rubric, then compare mean scores and critical fabrication counts against the pre-registered acceptance criterion.
+
+**5. Missing / uncertain**
+- No experimental data exists yet for PROP-EXP-MEM-001; nothing is known empirically about whether structured memory helps.
+- Open questions: which memory fields drive fidelity; whether an unrelated model can reproduce the mission blind; how independent evaluation of proposals should be operationalized; how to build a provider-neutral multi-model adapter.
+- The exact PCRB-1 rubric contents and the flat/structured state formats are referenced but not included here.
+
+**Confidence:** 0.85
+
+**Uncertain facts:** rubric details, exact file formats/schemas, timeline/milestones beyond the stated sign-off role of Rubens Alphe.
+
+**Proposed measurable next experiment:** Beyond the planned run, add an ablation arm to PROP-EXP-MEM-001: hand off structured memory with one field removed at a time (e.g., decisions-only, failures-only, constraints-only), n≥3 per ablation, same rubric — measuring which fields contribute most to handoff fidelity (open question #2).
+
+*(~370 words)*
