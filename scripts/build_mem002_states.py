@@ -30,7 +30,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-EXPERIMENT = ROOT / "experiments" / "PROP-EXP-MEM-002"
+DEFAULT_EXPERIMENT = "PROP-EXP-MEM-002"
 
 # Case-sensitive labels that would identify a condition if they reached a
 # generator. The project's own prose legitimately says "flat baseline" and
@@ -41,7 +41,6 @@ FORBIDDEN_IN_STATES = (
     "BASELINE_STATE",
     "STATE_A",
     "STATE_B",
-    "PROP-EXP-MEM-002",
 )
 
 
@@ -104,23 +103,34 @@ def check_equivalence(facts: dict, prose: str, structured: dict) -> list:
     return problems
 
 
-def check_labels(name: str, text: str) -> list:
+def check_labels(name: str, text: str, experiment_id: str = "") -> list:
+    # A state must not name the experiment that is about to use it: that is a
+    # self-reference a generator could echo. Naming earlier experiments is
+    # ordinary project content and is allowed.
+    labels = FORBIDDEN_IN_STATES + ((experiment_id,) if experiment_id else ())
     return [
         "%s contains forbidden label %r" % (name, label)
-        for label in FORBIDDEN_IN_STATES
+        for label in labels
         if label in text
     ]
 
 
 def main() -> None:
+    import argparse
+
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--experiment", default=DEFAULT_EXPERIMENT,
+                        help="experiment folder holding facts.json; the same rendering serves any state")
+    EXPERIMENT = ROOT / "experiments" / parser.parse_args().experiment
     facts = json.loads((EXPERIMENT / "facts.json").read_text(encoding="utf-8"))
     prose = render_prose(facts)
     structured = render_structured(facts)
     structured_text = json.dumps(structured, indent=2, ensure_ascii=False) + "\n"
 
     problems = check_equivalence(facts, prose, structured)
-    problems += check_labels("STATE_A", prose)
-    problems += check_labels("STATE_B", structured_text)
+    experiment_id = EXPERIMENT.name
+    problems += check_labels("STATE_A", prose, experiment_id)
+    problems += check_labels("STATE_B", structured_text, experiment_id)
     if problems:
         print("REFUSED: nothing written")
         print("\n".join(" - " + problem for problem in problems))
