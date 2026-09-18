@@ -1,0 +1,27 @@
+## Blind Handoff Reconstruction — RA-PSI-2026 / Mission Rubens
+
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions and models, discovers public research, identifies weaknesses, proposes and evaluates experiments, preserves both failures and successes, improves its own research process, and can transfer complete state to future, more capable systems.
+
+**2. Current technical state**
+GitHub is verified as the canonical repository for code, state, and version history. A GitHub Actions workflow (scheduled and manually triggerable) fetches public research and updates project state. OpenAlex is the active collector; a successful cycle collected 30 papers with no errors. The assessment layer produces research-assessment.json and proposed-next-problem.json. The system generated experiment PROP-EXP-MEM-001 (persistent-memory theme), which is proposed but not yet run: no trials, no results exist. All acceptance criteria (≥3 blind trials per condition, identical prompts, PCRB-1 scoring, mean-score and fabrication comparison) are not started.
+
+**3. Failures and lessons**
+- The original arXiv collector failed repeatedly (timeouts, HTTP 429), producing an empty digest. **Lesson:** replaced with OpenAlex-based fetch_research.py v2 — choose reliable public sources.
+- Assessment files were missing because analyze_research.py hadn't been uploaded/executed. **Lesson:** verify pipeline components exist and run before assuming outputs.
+
+**4. Single best next action**
+Execute PROP-EXP-MEM-001: run ≥3 blind handoff trials per condition (structured memory vs. flat baseline) with identical prompts and fresh model instances, score with the PCRB-1 rubric, and compare mean scores and critical fabrication counts against the acceptance gate (+10 points, no fabrication increase).
+
+**5. Missing / uncertain**
+- The exact PCRB-1 rubric contents are not included in the state.
+- The flat baseline format is undefined.
+- Which model(s) will run trials and how "fresh instances" will be guaranteed.
+- The current contents of research-assessment.json / proposed-next-problem.json beyond their existence.
+- No timeline or owner assignment for the next steps.
+
+**Confidence: 0.82**
+
+**Unsure about:** the exact PCRB-1 scoring criteria; whether "structured memory" refers to this very state document format; whether any evaluation tooling already exists in the repo.
+
+**Proposed next experiment:** Handoff-Fidelity-01 — give this state and a flat-paragraph equivalent to 3 fresh model instances each; score reconstructions on factual recall (count of verified facts correctly reproduced), fabrication count (facts asserted but absent from state), and correct identification of the next action. Pre-register the acceptance threshold before running.

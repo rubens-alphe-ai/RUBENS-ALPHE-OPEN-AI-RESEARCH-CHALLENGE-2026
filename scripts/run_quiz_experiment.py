@@ -123,25 +123,38 @@ def run(experiment_name: str, config_path: Path) -> dict:
     random.Random(hq.seed_from(manifest["protocol_sha256"])).shuffle(trials)  # reading order hides pairing
     readers = reader_entries(policy, private)
     reader_used, graded = readers[0]["evaluator_id"], {}
+    workers = max(1, int(policy.get("reader_workers", 1)))
     for position, entry in enumerate(readers):
-        limits: dict = {}
+        shared_limits: dict = {}
         graded, failures = {}, []
-        for trial in trials:
+
+        def read_trial(trial: dict) -> None:
             out = quiz_dir / ("%s.json" % trial["trial_id"])
             if out.is_file():
-                record = json.loads(out.read_text(encoding="utf-8"))
-            else:
-                handoff = (ROOT / trial["output_path"]).read_text(encoding="utf-8")
-                prompt = hq.reader_prompt(quiz, rendered, handoff)
-                record = read_one(entry, prompt, ids, limits, float(policy.get("default_batch_pause_seconds", 20)), out)
-                if "answers" not in record:
-                    failures.append(trial["trial_id"])
-                    continue  # nothing stored: a later run asks again
-                record.update(trial_id=trial["trial_id"], pair_id=trial["pair_id"], condition=trial["condition"],
-                              reader_id=entry["evaluator_id"], prompt_sha256=sha256_text(prompt), read_at_utc=now(),
-                              grade=hq.grade(record["answers"], key, rendered))
-                out.write_text(json.dumps(record, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+                graded[trial["trial_id"]] = json.loads(out.read_text(encoding="utf-8"))
+                return
+            handoff = (ROOT / trial["output_path"]).read_text(encoding="utf-8")
+            prompt = hq.reader_prompt(quiz, rendered, handoff)
+            # Each worker paces itself from its own view of the provider's limits.
+            limits = shared_limits if workers == 1 else {}
+            record = read_one(entry, prompt, ids, limits, float(policy.get("default_batch_pause_seconds", 20)), out)
+            if "answers" not in record:
+                failures.append(trial["trial_id"])
+                return  # nothing stored: a later run asks again
+            record.update(trial_id=trial["trial_id"], pair_id=trial["pair_id"], condition=trial["condition"],
+                          reader_id=entry["evaluator_id"], prompt_sha256=sha256_text(prompt), read_at_utc=now(),
+                          grade=hq.grade(record["answers"], key, rendered))
+            out.write_text(json.dumps(record, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
             graded[trial["trial_id"]] = record
+
+        if workers > 1:
+            from concurrent.futures import ThreadPoolExecutor
+
+            with ThreadPoolExecutor(max_workers=workers) as pool:
+                list(pool.map(read_trial, trials))
+        else:
+            for trial in trials:
+                read_trial(trial)
         report["steps"].append({"step": "reading", "reader": entry["evaluator_id"],
                                 "status": "complete" if not failures else "incomplete",
                                 "read": len(graded), "failed": failures})

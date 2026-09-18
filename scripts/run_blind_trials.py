@@ -107,6 +107,8 @@ def run(args: argparse.Namespace) -> int:
         if args.condition == "all" or trial.get("condition") == args.condition
     ]
     prompt_path = root / "experiments" / str(manifest["experiment_id"]) / "TEST_PROMPT.md"
+    for trial in selected:
+        trial.setdefault("experiment_id", manifest["experiment_id"])
 
     config = AdapterConfig(
         provider=args.provider,
@@ -125,72 +127,93 @@ def run(args: argparse.Namespace) -> int:
         print(json.dumps({"selected_trials": selected, "dry_run": True}, indent=2, ensure_ascii=False))
         return 0
 
-    adapter = build_adapter(config)
-    for trial in selected:
-        output_path = root / str(trial["output_path"])
-        metadata_path = output_path.with_suffix(".metadata.json")
-        if output_path.exists() and not args.overwrite:
-            if args.resume:
-                # A completed raw output is frozen evidence: resuming skips it,
-                # it never regenerates it.
-                print(json.dumps({"trial_id": trial["trial_id"], "skipped": "already generated"}))
-                continue
-            raise FileExistsError(f"Refusing to overwrite existing raw output: {output_path}")
-        stale_error = output_path.with_suffix(".error.json")
-        prompt = prompt_for(root, trial, prompt_path)
-        try:
-            content = generate_with_retries(adapter, prompt, int(trial["seed"]), args)
-        except AdapterError as exc:
-            error_path = output_path.with_suffix(".error.json")
-            error_path.write_text(
-                json.dumps(
-                    {
-                        "trial_id": trial["trial_id"],
-                        "pair_id": trial["pair_id"],
-                        "condition": trial["condition"],
-                        "provider": args.provider,
-                        "model": args.model,
-                        "error": str(exc),
-                        "executed_at_utc": datetime.now(timezone.utc).isoformat(),
-                    },
-                    indent=2,
-                )
-                + "\n",
-                encoding="utf-8",
-            )
-            print(f"ERROR {trial['trial_id']}: {exc}")
-            continue
+    workers = max(1, int(getattr(args, "workers", 1)))
+    if workers > 1:
+        # Trials are stateless requests that share nothing: running them at the
+        # same time changes how long the series takes and nothing it measures.
+        # Each worker builds its own adapter, so no state is shared.
+        from concurrent.futures import ThreadPoolExecutor
 
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        output_path.write_text(content, encoding="utf-8")
-        if stale_error.exists():
-            # Keep the failed attempt as a record instead of deleting it.
-            stale_error.rename(stale_error.with_name(stale_error.name.replace(".error.json", ".failed-attempt.json")))
-        metadata = {
-            "record_version": "RA-PSI-RAW-TRIAL-V1",
-            "experiment_id": manifest["experiment_id"],
-            "trial_id": trial["trial_id"],
-            "pair_id": trial["pair_id"],
-            "seed": trial["seed"],
-            "condition": trial["condition"],
-            "provider": args.provider,
-            "model": args.model,
-            "generation_settings": {
-                "temperature": args.temperature,
-                "max_output_tokens": args.max_output_tokens,
-                "think": args.think,
-            },
-            "protocol_sha256": trial["protocol_sha256"],
-            "prompt_sha256": trial["prompt_sha256"],
-            "state_sha256": trial["state_sha256"],
-            "output_sha256": file_sha256(output_path),
-            "executed_at_utc": datetime.now(timezone.utc).isoformat(),
-            "fresh_session_required": True,
-            "scored": False,
-        }
-        metadata_path.write_text(json.dumps(metadata, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-        print(json.dumps({"trial_id": trial["trial_id"], "output_sha256": metadata["output_sha256"]}))
+        def one(trial: dict) -> None:
+            single = argparse.Namespace(**vars(args))
+            single.workers = 1
+            run_one(root, trial, prompt_path, config, single)
+
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            list(pool.map(one, selected))
+        return 0
+
+    for trial in selected:
+        run_one(root, trial, prompt_path, config, args)
     return 0
+
+
+def run_one(root: Path, trial: dict, prompt_path: Path, config: AdapterConfig, args: argparse.Namespace) -> None:
+    """One trial: a stateless request, its raw output and its metadata."""
+    adapter = build_adapter(config)
+    output_path = root / str(trial["output_path"])
+    metadata_path = output_path.with_suffix(".metadata.json")
+    if output_path.exists() and not args.overwrite:
+        if args.resume:
+            # A completed raw output is frozen evidence: resuming skips it,
+            # it never regenerates it.
+            print(json.dumps({"trial_id": trial["trial_id"], "skipped": "already generated"}), flush=True)
+            return
+        raise FileExistsError(f"Refusing to overwrite existing raw output: {output_path}")
+    stale_error = output_path.with_suffix(".error.json")
+    prompt = prompt_for(root, trial, prompt_path)
+    try:
+        content = generate_with_retries(adapter, prompt, int(trial["seed"]), args)
+    except AdapterError as exc:
+        error_path = output_path.with_suffix(".error.json")
+        error_path.write_text(
+            json.dumps(
+                {
+                    "trial_id": trial["trial_id"],
+                    "pair_id": trial["pair_id"],
+                    "condition": trial["condition"],
+                    "provider": args.provider,
+                    "model": args.model,
+                    "error": str(exc),
+                    "executed_at_utc": datetime.now(timezone.utc).isoformat(),
+                },
+                indent=2,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
+        print(f"ERROR {trial['trial_id']}: {exc}", flush=True)
+        return
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(content, encoding="utf-8")
+    if stale_error.exists():
+        # Keep the failed attempt as a record instead of deleting it.
+        stale_error.rename(stale_error.with_name(stale_error.name.replace(".error.json", ".failed-attempt.json")))
+    metadata = {
+        "record_version": "RA-PSI-RAW-TRIAL-V1",
+        "experiment_id": trial["experiment_id"],
+        "trial_id": trial["trial_id"],
+        "pair_id": trial["pair_id"],
+        "seed": trial["seed"],
+        "condition": trial["condition"],
+        "provider": args.provider,
+        "model": args.model,
+        "generation_settings": {
+            "temperature": args.temperature,
+            "max_output_tokens": args.max_output_tokens,
+            "think": args.think,
+        },
+        "protocol_sha256": trial["protocol_sha256"],
+        "prompt_sha256": trial["prompt_sha256"],
+        "state_sha256": trial["state_sha256"],
+        "output_sha256": file_sha256(output_path),
+        "executed_at_utc": datetime.now(timezone.utc).isoformat(),
+        "fresh_session_required": True,
+        "scored": False,
+    }
+    metadata_path.write_text(json.dumps(metadata, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(json.dumps({"trial_id": trial["trial_id"], "output_sha256": metadata["output_sha256"]}), flush=True)
 
 
 def main() -> None:

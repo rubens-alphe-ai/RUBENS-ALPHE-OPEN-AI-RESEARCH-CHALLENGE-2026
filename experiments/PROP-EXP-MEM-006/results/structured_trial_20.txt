@@ -1,0 +1,15 @@
+1. **Mission:** RA-PSI-2026 / Mission Rubens is building an increasingly capable, measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, finds measurable weaknesses, proposes and evaluates experiments, preserves failures/successes, improves its process, and transfers complete state to future systems.
+
+2. **Current technical state:** GitHub is the canonical public repository and is verified. A scheduled/manual GitHub Actions workflow is verified. OpenAlex is the working public research source; one cycle collected 30 papers with `errors=[]`. Assessment outputs `research-assessment.json` and `proposed-next-problem.json` are produced. The system generated **PROP-EXP-MEM-001** from the dominant persistent-memory theme. No trial of PROP-EXP-MEM-001 has been run; no results exist.
+
+3. **Failures and lessons:** The initial arXiv collector failed with timeouts and HTTP 429; it was replaced by OpenAlex `fetch_research.py v2`. Assessment files initially did not appear because `analyze_research.py` had not been uploaded/executed; adding and rerunning it resolved the issue. Learned: prefer rate-limit-tolerant public sources and ensure every workflow stage exists before expecting outputs.
+
+4. **Single best next action:** Run **PROP-EXP-MEM-001** exactly as pre-registered: fresh model instances, identical prompts for flat baseline vs structured memory, at least three blind trials per condition, same PCRB-1 rubric, compare mean score and critical fabrication count. Acceptance requires structured memory mean PCRB-1 ≥ baseline +10 and no increase in critical fabrications.
+
+5. **Missing/uncertain:** Actual trial outcomes; exact PCRB-1 rubric text; exact handoff/test prompts; precise structured-memory schema; repo URL, file paths, commit hashes; which models count as “fresh” and unrelated; randomization/blinding procedure; cost/quota limits; operational details of the future provider-neutral adapter; whether any independent evaluator exists besides the proposing agent.
+
+**Confidence:** 0.91.
+
+**Unsure facts:** I do not know repository identifiers, concrete prompt text, scoring examples, model names, timestamps beyond “verified,” or whether evaluation automation is already implemented.
+
+**Proposed measurable next experiment:** Execute PROP-EXP-MEM-001 with 3 blind trials per arm using two unrelated fresh models per arm; pre-register prompts, rubric, seeds where available, and output files in GitHub. Metrics: mean PCRB-1 per arm, critical fabrications per output, missing-fact count, and exact reproduction of constraints. Success criterion remains +10 mean PCRB-1 with non-increased critical fabrications; all raw outputs, scores, failures, and analysis code must be committed.
