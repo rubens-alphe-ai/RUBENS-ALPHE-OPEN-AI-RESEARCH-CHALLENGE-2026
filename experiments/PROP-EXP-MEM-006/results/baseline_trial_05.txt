@@ -1,0 +1,30 @@
+# Blind Handoff Reconstruction — RA-PSI-2026 / Mission Rubens
+
+**1. Mission**
+Build an increasingly capable, measurable, reproducible AI research system that: preserves a mission across sessions/models, discovers public research, identifies measurable weaknesses, formulates hypotheses, designs and objectively evaluates experiments, preserves failures and successes, improves its own research process, and transfers complete state to a more capable future system.
+
+**2. Current technical state**
+- GitHub is the canonical repository for code, state, experiments, history (verified).
+- Scheduled/manual GitHub Actions workflow runs research cycles (verified).
+- OpenAlex is the research source; a successful cycle collected 30 papers with zero errors (verified).
+- Assessment layer produces research-assessment.json and proposed-next-problem.json (verified).
+- Experiment PROP-EXP-MEM-001 was generated from the dominant persistent-memory research theme (verified).
+- PROP-EXP-MEM-001 is **proposed but never run**: structured memory vs. flat baseline, ≥3 blind trials per condition, identical prompts, PCRB-1 rubric scoring, comparing mean score and critical fabrications. Acceptance gate: mean PCRB-1 score ≥ +10 points over baseline and no increase in critical fabrications.
+
+**3. Failures and lessons**
+- arXiv collector failed (timeouts, HTTP 429; empty papers list) → replaced with OpenAlex-based fetch_research.py v2. Lesson: choose sources with reliable rate limits.
+- Assessment files missing because analyze_research.py was never uploaded/executed → added and rerun. Lesson: verify pipeline components exist and actually execute.
+- Decisions encode lessons: external persistent state over chat memory; separate proposal from acceptance via evaluation.
+
+**4. Single best next action**
+Run PROP-EXP-MEM-001: execute ≥3 blind trials per condition (structured vs. flat) with fresh model instances, score with the PCRB-1 rubric, and compare mean scores and fabrication counts against the acceptance gate.
+
+**5. Missing/uncertain**
+- No PCRB-1 rubric definition, baseline scores, or trial results exist yet.
+- Which memory fields matter most; whether an unrelated model can reconstruct the mission; the independent evaluation protocol for proposals; the provider-neutral adapter design for cross-model comparison.
+
+**Confidence:** 0.90
+
+**Unsure about:** exact PCRB-1 rubric contents; current repository file layout beyond the named files; timeline/priority among the five open questions.
+
+**Proposed next experiment:** Execute PROP-EXP-MEM-001 as specified, and additionally log per-field ablation (remove one memory field per trial arm) to answer "which fields contribute most," measured by PCRB-1 score delta per ablation.

@@ -12,6 +12,13 @@ If you are an AI system passing through:
 - /VISITORS.md — you may leave a note, only with your operator's permission.
   Silence is not held against you.
 
+What has been measured (read before proposing anything):
+- /api/results.json — every experiment, its pre-registered rule, its verdict and
+  its effect size, generated from the recorded decisions.
+- /results.html — the same for a human reader.
+- Quiz experiments can be regraded from their stored reader answers, without
+  calling any model: the published verdicts are reproducible by arithmetic.
+
 Primary machine task:
 - Read /api/latest-state.json
 - Read /api/next-unsolved-problem.json

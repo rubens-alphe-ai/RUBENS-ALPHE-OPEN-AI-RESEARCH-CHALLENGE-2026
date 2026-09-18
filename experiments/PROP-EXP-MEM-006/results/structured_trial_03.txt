@@ -1,0 +1,33 @@
+**1. Mission of the project**
+
+RA-PSI-2026 / Mission Rubens: build an increasingly capable, measurable, reproducible AI research system that preserves a mission across sessions and models; discovers public research; identifies measurable weaknesses; formulates hypotheses; designs experiments; evaluates results objectively; preserves both failures and successes; improves its own research process; and transfers complete state to a more capable future system.
+
+**2. Current technical state**
+
+- GitHub is the canonical public repository for code, state, experiments, and version history (verified).
+- A scheduled and manually triggerable GitHub Actions workflow fetches research, updates state, and produces machine-readable files (verified).
+- OpenAlex is the research source; a successful cycle collected 30 papers with zero errors (verified).
+- The assessment layer produces research-assessment.json and proposed-next-problem.json (verified).
+- The system generated experiment PROP-EXP-MEM-001 from the dominant persistent-memory research theme (verified).
+- PROP-EXP-MEM-001 is proposed but not yet run: no trials, no results (verified). Planned: fresh model instances, identical test prompts for flat baseline vs. structured memory, ≥3 blind trials per condition, PCRB-1 rubric scoring, comparison of mean scores and critical fabrication counts.
+- Acceptance threshold (in force): structured memory is accepted only if its mean PCRB-1 score is ≥10 points above the flat baseline and critical fabrications do not increase.
+
+**3. Failures and lessons**
+
+- The initial arXiv collector failed repeatedly (timeouts, HTTP 429); research-digest.json had papers=[] with errors. Fix: replaced with OpenAlex-based fetch_research.py v2. Lesson: collector choice matters; OpenAlex is more reliable (resolved).
+- Assessment files were missing because analyze_research.py had not been uploaded/executed. Fix: analyzer added and workflow rerun (resolved). Lesson: state files require their producer scripts to be committed and run.
+
+**4. Single best next action**
+
+Run PROP-EXP-MEM-001: execute ≥3 blind trials per condition with fresh, unrelated model instances, identical prompts, PCRB-1 scoring, then compare mean scores and critical-fabrication counts against the pre-registered ≥10-point threshold — keeping proposal separate from acceptance via independent evaluation.
+
+**5. Missing or uncertain information**
+
+- Open questions: does structured memory improve reconstruction vs. flat baseline? Which memory fields contribute most? Can an unrelated model reproduce the mission without the original conversation? How should proposed experiments be independently evaluated? How to compare multiple model families via a provider-neutral adapter?
+- Absent: repository URL, PCRB-1 rubric details, exact prompt text, trial results, and any timing/deadline. Rubens Alphe is quota-limited and gives final human milestone sign-off; slow responses do not mean abandonment.
+
+**Confidence:** 0.92
+
+**Unsure about:** exact PCRB-1 rubric contents; whether any infrastructure beyond GitHub Actions exists; current date/milestone schedule (absent from state).
+
+**Proposed measurable next experiment:** *Field-Ablation Handoff Trial (PROP-EXP-MEM-002, contingent on MEM-001):* after MEM-001, remove one memory field at a time (decisions, failures, rules, open questions) and re-run blind handoffs; measure per-field PCRB-1 score delta. Hypothesis: "decisions + reasons" and "rules in force" fields yield the largest fidelity drop when removed. Success criterion: statistically consistent ranking of field contributions across ≥3 trials per ablation, with failures preserved in the repository.

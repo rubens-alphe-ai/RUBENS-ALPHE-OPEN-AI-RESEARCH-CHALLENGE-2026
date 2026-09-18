@@ -1,0 +1,32 @@
+# Blind Handoff Reconstruction — RA-PSI-2026 / Mission Rubens
+
+**1. Mission**
+Build an increasingly capable, measurable, reproducible AI research system that: persists a mission across sessions and models; discovers public research; identifies measurable weaknesses; formulates hypotheses; designs and objectively evaluates experiments; preserves successes *and* failures; improves its own research process; and can transfer complete state to a future, more capable system.
+
+**2. Current technical state**
+- GitHub is the canonical repository (code, state, experiments, history) — verified.
+- A scheduled/manually-triggered GitHub Actions workflow fetches research and updates state — verified.
+- OpenAlex is the working research source; a cycle collected 30 papers with zero errors — verified.
+- The assessment layer emits `research-assessment.json` and `proposed-next-problem.json` — verified.
+- Experiment **PROP-EXP-MEM-001** (structured memory vs. flat baseline, PCRB-1-style handoff evaluation) is *proposed but not run*. No trials, no results yet.
+- Human founder Rubens Alphe is quota-limited; he gives final milestone sign-off.
+
+**3. Failures and lessons**
+- The original arXiv collector failed (timeouts, HTTP 429; empty digest). *Lesson:* replaced with OpenAlex-based `fetch_research.py` v2 — resolved.
+- Assessment files were missing early on because `analyze_research.py` hadn't been uploaded/executed. *Lesson:* adding the analyzer and rerunning fixed it — resolved.
+- Process lessons encoded as decisions: separate proposal from acceptance (evaluation before canonical state change); test structured memory via blind handoff trials before adopting it.
+
+**4. Single best next action**
+Execute PROP-EXP-MEM-001 as designed: run ≥3 blind trials per condition (structured vs. flat) with identical prompts on fresh model instances, score with the same PCRB-1 rubric, and compare mean score and critical-fabrication count. Acceptance gate: ≥10-point mean improvement and no increase in critical fabrications.
+
+**5. Missing / uncertain**
+- No PCRB-1 rubric details, trial prompts, or scoring code are present in this state (their exact form is unspecified here).
+- No quantitative results of any kind exist yet.
+- The independent evaluation procedure for proposed experiments is still an open question, as is the provider-neutral multi-model adapter design.
+- Which memory fields drive fidelity is unknown by design (that's the experiment).
+
+**Confidence:** 0.90
+
+**Unsure about:** exact PCRB-1 rubric contents; where experiment code/logs live in the repo; current state-file schema beyond what is shown.
+
+**Proposed measurable next experiment:** Run PROP-EXP-MEM-001 (n≥3 blind trials/condition, identical prompts, fixed rubric, independent scorer). Metrics: mean PCRB-1 score per condition and critical-fabrication count. Accept structured memory iff mean ≥ baseline + 10 and fabrications do not increase; log all trials, including failures, to the repo.

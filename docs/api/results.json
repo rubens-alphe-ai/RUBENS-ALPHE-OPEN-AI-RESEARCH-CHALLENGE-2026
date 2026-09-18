@@ -1,0 +1,102 @@
+{
+  "record_version": "RA-PSI-RESULTS-V1",
+  "generated_utc": "2026-09-18",
+  "note": "Generated from each experiment's decision.json; negative results included.",
+  "experiments": [
+    {
+      "experiment_id": "PROP-EXP-MEM-001",
+      "title": "Structured Memory Handoff Test",
+      "question": "Explicit structured project memory improves handoff fidelity over a flat baseline without increasing critical fabrications.",
+      "status": "REJECTED",
+      "decision": "REJECT",
+      "reason_codes": [
+        "CRITICAL_FABRICATION_CONFIRMED_BY_TWO_EVALUATORS"
+      ],
+      "protocol": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-001/evaluator-contract-v4.json",
+      "effect": {}
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-002",
+      "title": "Structure-only Memory Handoff Test",
+      "question": "Holding information content constant, a sectioned project state improves blind handoff fidelity over the same facts in prose, without increasing critical fabrications.",
+      "status": "REJECTED",
+      "decision": "REJECT",
+      "reason_codes": [
+        "CRITICAL_FABRICATION_CONFIRMED_BY_TWO_EVALUATORS"
+      ],
+      "protocol": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-002/PROTOCOL.md",
+      "effect": {},
+      "result": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-002/RESULT.md"
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-003",
+      "title": "Structure-only Handoff with a Capable Generator",
+      "question": "Holding information content constant, a sectioned project state improves blind handoff fidelity over the same facts in prose, without increasing critical fabrications, for a capable hosted generator.",
+      "status": "OPEN",
+      "decision": "NOT_DECIDED",
+      "reason_codes": [],
+      "protocol": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-003/PROTOCOL.md",
+      "effect": {}
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-004",
+      "title": "Handoff Quiz: Structure Measured Without a Judge",
+      "question": "Holding information content constant, a sectioned project state transfers more correct facts through a handoff than the same facts in prose, without more invented facts.",
+      "status": "REJECTED",
+      "decision": "REJECT",
+      "reason_codes": [
+        "IMPROVEMENT_BELOW_THRESHOLD_EXCLUDED"
+      ],
+      "protocol": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-004/PROTOCOL.md",
+      "effect": {
+        "metric": "fact accuracy, percentage points",
+        "mean_paired_delta": -0.9375,
+        "ci95": [
+          -4.123985653026708,
+          2.248985653026707
+        ],
+        "pairs": 30,
+        "inventions": {
+          "baseline": 0,
+          "structured": 0
+        }
+      },
+      "result": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-004/RESULT.md"
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-005",
+      "title": "Handoff Checklist",
+      "question": "A short generic checklist of the state's item kinds, added after the state, increases the facts a reader recovers from the handoff without more invented facts.",
+      "status": "INCONCLUSIVE",
+      "decision": "INCONCLUSIVE",
+      "reason_codes": [
+        "CONFIDENCE_INTERVAL_SPANS_THRESHOLD"
+      ],
+      "protocol": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-005/PROTOCOL.md",
+      "effect": {
+        "metric": "fact accuracy, percentage points",
+        "mean_paired_delta": 4.0625,
+        "ci95": [
+          1.4779427429917615,
+          6.647057257008239
+        ],
+        "pairs": 30,
+        "inventions": {
+          "baseline": 0,
+          "structured": 0
+        }
+      },
+      "result": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-005/RESULT.md"
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-006",
+      "title": "Handoff Checklist, Replication with Other Models",
+      "question": "The handoff checklist raises fact transfer by at least 5 points with a generator and a reader from families not used before.",
+      "status": "OPEN",
+      "decision": "NOT_DECIDED",
+      "reason_codes": [],
+      "protocol": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-006/PROTOCOL.md",
+      "effect": {}
+    }
+  ]
+}
