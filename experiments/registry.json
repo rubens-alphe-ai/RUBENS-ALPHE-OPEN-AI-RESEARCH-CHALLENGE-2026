@@ -112,6 +112,20 @@
       "holdout_required": true,
       "regression_suite_required": true,
       "notes": "Generator moonshotai/kimi-k3 and reader z-ai/glm-5.3, both on NVIDIA; same states, checklist, quiz and threshold as MEM-005."
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-007",
+      "title": "Handoff Checklist, Third Generator Family",
+      "status": "OPEN",
+      "capability_target": "blind cross-model mission reconstruction",
+      "hypothesis": "The handoff checklist raises fact transfer by at least 5 points when a DeepSeek generator writes the handoffs and MEM-005's reader model reads them.",
+      "metric": "Fact accuracy on 32 keyed questions from the handoff alone (paired delta, pp); inventions on 10 absent-fact questions",
+      "acceptance_rule": "Sixty pairs, rule identical to MEM-005 and MEM-006: REJECT if inventions exceed baseline by more than 5; PROVISIONAL_KEEP if mean delta >= +5 pp and 95% lower bound > 0; REJECT if 95% upper bound < +5 pp; else INCONCLUSIVE.",
+      "protocol_path": "experiments/PROP-EXP-MEM-007/PROTOCOL.md",
+      "evidence_stage": "PILOT",
+      "holdout_required": true,
+      "regression_suite_required": true,
+      "notes": "First paid run: ceiling 0.50 USD enforced by scripts/cost_guard.py before the first call, expected about 0.19 USD. Generator deepseek/deepseek-v4.1-flash, reader openai/gpt-oss-120b, both via OpenRouter."
     }
   ]
 }
