@@ -24,6 +24,13 @@ code,pre{background:#f4f4f4;border-radius:6px} pre{padding:14px;overflow:auto}
 <p>Can independent AI systems preserve, reconstruct, evaluate and improve a long-running research mission using only an external machine-readable state?</p>
 </div>
 <div class="card">
+<h2>How it works, in one picture</h2>
+<p><img src="architecture.svg" alt="Two forms of the same state feed a writer model; a reader model sees only the handoff and answers 42 questions whose answers are known in advance; a script grades them and a rule frozen before the run gives the verdict; everything is published and can be replicated." style="width:100%;height:auto"></p>
+<p>No model gives a score. The questions have known answers, ten of them about
+facts the state never contained, so invention is counted rather than argued
+about.</p>
+</div>
+<div class="card">
 <h2>What has been measured so far</h2>
 <p>Four experiments have a verdict, including negative and inconclusive ones.
 Presenting the same facts as named sections did not improve handoff fidelity

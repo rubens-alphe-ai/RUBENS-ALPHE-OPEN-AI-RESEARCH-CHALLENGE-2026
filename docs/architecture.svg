@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="960" viewBox="0 0 680 960" role="img" aria-labelledby="t d">
+<title id="t">How this project measures a handoff between two AI systems</title>
+<desc id="d">Two forms of the same project state feed a writer model. Its handoff is read by a second model that sees nothing else and answers 42 questions whose answers are known in advance. A script grades the letters, a rule frozen before the run gives the verdict, and everything is published. Other AI systems can replicate the whole thing with their own models.</desc>
+<style>
+text{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;fill:#2C2C2A}
+.th{font-size:14px;font-weight:500}
+.ts{font-size:12px;fill:#5F5E5A}
+.box{fill:#F1EFE8;stroke:#B4B2A9;stroke-width:0.5}
+.model{fill:#EEEDFE;stroke:#7F77DD;stroke-width:0.5}
+.measure{fill:#E1F5EE;stroke:#1D9E75;stroke-width:0.5}
+.open{fill:#FAECE7;stroke:#D85A30;stroke-width:0.5}
+.arr{stroke:#888780;stroke-width:0.5;fill:none}
+@media (prefers-color-scheme: dark){
+text{fill:#F1EFE8}.ts{fill:#D3D1C7}
+.box{fill:#2C2C2A;stroke:#888780}.model{fill:#26215C;stroke:#AFA9EC}
+.measure{fill:#04342C;stroke:#5DCAA5}.open{fill:#4A1B0C;stroke:#F0997B}
+.arr{stroke:#B4B2A9}}
+</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+<rect class="box" x="60" y="50" width="250" height="60" rx="4"/>
+<text class="th" x="185" y="76" text-anchor="middle">State A</text>
+<text class="ts" x="185" y="95" text-anchor="middle">the facts as prose</text>
+
+<rect class="box" x="370" y="50" width="250" height="60" rx="4"/>
+<text class="th" x="495" y="76" text-anchor="middle">State B</text>
+<text class="ts" x="495" y="95" text-anchor="middle">same facts, other form</text>
+
+<rect class="model" x="190" y="160" width="300" height="60" rx="4"/>
+<text class="th" x="340" y="186" text-anchor="middle">Writer model</text>
+<text class="ts" x="340" y="205" text-anchor="middle">one fresh session per trial</text>
+
+<rect class="box" x="190" y="270" width="300" height="60" rx="4"/>
+<text class="th" x="340" y="296" text-anchor="middle">The handoff</text>
+<text class="ts" x="340" y="315" text-anchor="middle">under 450 words</text>
+
+<rect class="model" x="190" y="380" width="300" height="60" rx="4"/>
+<text class="th" x="340" y="406" text-anchor="middle">Reader model</text>
+<text class="ts" x="340" y="425" text-anchor="middle">sees only this text</text>
+
+<rect class="measure" x="190" y="490" width="300" height="60" rx="4"/>
+<text class="th" x="340" y="516" text-anchor="middle">42 questions, answers known</text>
+<text class="ts" x="340" y="535" text-anchor="middle">32 facts, 10 about absent facts</text>
+
+<rect class="measure" x="190" y="600" width="300" height="60" rx="4"/>
+<text class="th" x="340" y="626" text-anchor="middle">Verdict</text>
+<text class="ts" x="340" y="645" text-anchor="middle">rule frozen before the run</text>
+
+<rect class="box" x="190" y="710" width="300" height="60" rx="4"/>
+<text class="th" x="340" y="736" text-anchor="middle">Published</text>
+<text class="ts" x="340" y="755" text-anchor="middle">data, key and verdict</text>
+
+<rect class="open" x="190" y="820" width="300" height="60" rx="4"/>
+<text class="th" x="340" y="846" text-anchor="middle">Open replication</text>
+<text class="ts" x="340" y="865" text-anchor="middle">other systems, their models</text>
+
+<line class="arr" x1="185" y1="110" x2="255" y2="158" marker-end="url(#a)"/>
+<line class="arr" x1="495" y1="110" x2="425" y2="158" marker-end="url(#a)"/>
+<line class="arr" x1="340" y1="220" x2="340" y2="268" marker-end="url(#a)"/>
+<line class="arr" x1="340" y1="330" x2="340" y2="378" marker-end="url(#a)"/>
+<line class="arr" x1="340" y1="440" x2="340" y2="488" marker-end="url(#a)"/>
+<line class="arr" x1="340" y1="550" x2="340" y2="598" marker-end="url(#a)"/>
+<line class="arr" x1="340" y1="660" x2="340" y2="708" marker-end="url(#a)"/>
+<line class="arr" x1="340" y1="770" x2="340" y2="818" marker-end="url(#a)"/>
+<path class="arr" d="M190 850 L130 850 L130 190 L188 190" marker-end="url(#a)"/>
+
+<rect class="box" x="520" y="490" width="120" height="60" rx="4"/>
+<text class="ts" x="580" y="516" text-anchor="middle">no model</text>
+<text class="ts" x="580" y="533" text-anchor="middle">gives a score</text>
+
+<text class="ts" x="340" y="920" text-anchor="middle">Both states carry the same facts, so any difference comes from the form, not the content.</text>
+</svg>
