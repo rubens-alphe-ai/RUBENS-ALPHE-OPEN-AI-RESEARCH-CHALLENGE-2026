@@ -37,8 +37,11 @@ def now() -> str:
 
 def reader_entries(policy: dict, private: dict) -> list[dict]:
     """Readers in their pre-registered order; the first one that completes is used."""
+    skip = set(policy.get("skip_readers") or ())
     entries = []
     for rung in policy.get("reader_ladder") or [policy["reader"]]:
+        if rung.get("evaluator_id") in skip:
+            continue  # declared unable, with the evidence recorded in the deviations
         reader = dict(rung)
         reader.update({k: v for k, v in rx.key_location(private, reader.pop("key")).items()
                        if k in ("api_key_file", "api_key_env")})

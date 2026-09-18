@@ -26,12 +26,23 @@ ROOT = Path(__file__).resolve().parents[1]
 USER_AGENT = "RA-PSI-cost-guard/1.0 (+https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026)"
 
 
-def fetch_json(url: str, key: str | None = None) -> dict:
+def fetch_json(url: str, key: str | None = None, attempts: int = 3) -> dict:
+    """Read JSON, retrying transport failures: a dropped connection while
+    pricing a run must not kill the run itself."""
+    import time
+
     headers = {"User-Agent": USER_AGENT}
     if key:
         headers["Authorization"] = "Bearer " + key
-    with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=60) as response:
-        return json.load(response)
+    last: Exception | None = None
+    for attempt in range(attempts):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=60) as response:
+                return json.load(response)
+        except (OSError, ValueError) as exc:
+            last = exc
+            time.sleep(5 * (attempt + 1))
+    raise RuntimeError("cannot read %s: %s" % (url, last))
 
 
 def prices(base: str = "https://openrouter.ai/api/v1") -> dict[str, dict]:
