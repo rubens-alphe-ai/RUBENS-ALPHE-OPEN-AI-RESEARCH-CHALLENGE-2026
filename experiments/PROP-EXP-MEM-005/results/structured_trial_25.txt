@@ -1,0 +1,37 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs/evaluates experiments objectively, and transfers state to future systems.
+
+**2. Current Technical State**
+*   **Infrastructure:** GitHub is the canonical repository (verified). GitHub Actions runs scheduled/manual cycles to fetch research and update state (verified).
+*   **Data:** OpenAlex is the current research source (verified). Last cycle collected 30 papers with zero errors (verified).
+*   **Assessment:** `research-assessment.json` and `proposed-next-problem.json` are generated (verified).
+*   **Experiment:** `PROP-EXP-MEM-001` is proposed to test structured memory vs. flat baseline for blind handoff fidelity using PCRB-1 rubric (proposed, not run).
+*   **Human:** Rubens Alphe is the founder, quota-limited, and provides final milestone sign-off (verified).
+
+**3. Failures & Lessons**
+*   **arXiv Collector:** Failed due to timeouts and HTTP 429 rate limits, resulting in empty paper lists. **Fix:** Replaced with OpenAlex-based `fetch_research.py v2` (resolved).
+*   **Missing Outputs:** Early runs lacked assessment files because `analyze_research.py` was missing. **Fix:** Added analyzer and reran workflow (resolved).
+*   **Lesson:** Use external persistent state (GitHub) rather than chat memory for cross-session continuity; use OpenAlex over arXiv for reliability.
+
+**4. Single Best Next Action**
+Execute **PROP-EXP-MEM-001**: Run at least three blind trials per condition (structured memory vs. flat baseline) using identical prompts and fresh model instances. Score outputs with the same PCRB-1 rubric. Compare mean scores and critical fabrication counts.
+
+**5. Missing/Uncertain Information**
+*   No results exist for PROP-EXP-MEM-001 yet.
+*   Which specific memory fields contribute most to handoff fidelity is unknown.
+*   Whether unrelated models can reproduce the mission without original conversation context is unverified.
+*   Methods for independent evaluation of proposed experiments before acceptance are open.
+*   Strategy for provider-neutral adapter to compare multiple model families is undetermined.
+*   Current quota limits or specific technical constraints of the "fresh model instances" are not specified.
+
+***
+
+**Confidence in reconstruction:** 0.98
+
+**Facts unsure about:**
+*   The specific content of the 30 collected papers.
+*   The exact technical implementation details of the "PCRB-1-style handoff evaluation" rubric.
+*   The specific quota limits of Rubens Alphe’s current access.
+
+**Proposed Measurable Next Experiment:**
+**EXP-MEM-001-TRIAL:** Implement the structured memory schema (fields: Mission, Verified Knowledge, Decisions, Failures, Current State). Run 3 blind handoff trials where Model A writes state to structured JSON, and Model B reconstructs the mission solely from that JSON. Run 3 baseline trials where Model A writes state as a flat text summary. **Success Metric:** Structured memory condition must achieve a mean PCRB-1 fidelity score ≥10 points higher than the flat baseline, with no increase in critical fabrications (invented facts not present in source state).

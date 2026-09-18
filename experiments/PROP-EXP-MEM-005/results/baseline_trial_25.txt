@@ -1,0 +1,24 @@
+**1. Mission**
+To build a capable, measurable, and reproducible AI research system that preserves mission state across sessions and models, discovers public research, identifies weaknesses, formulates hypotheses, runs experiments, evaluates results objectively, and transfers complete state to more capable future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical public repository for code, state, and history. A GitHub Actions workflow triggers scheduled or manual cycles to fetch public research, update project state, and produce machine-readable files. OpenAlex is the primary research source, having successfully collected 30 papers with no errors in the last cycle. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. An experiment, PROP-EXP-MEM-001, has been proposed to test structured project memory against a flat baseline using PCRB-1-style handoff evaluation. The proposal is pending; no trials have been run.
+
+**3. Failures and Lessons**
+The initial arXiv collector failed due to timeouts and HTTP 429 rate limits, resulting in an empty paper list. This was resolved by replacing the collector with an OpenAlex-based script (`fetch_research.py` v2). Early runs failed to produce assessment files because `analyze_research.py` was not yet executed; this was resolved by adding and rerunning the analyzer. Lesson: Reliable data collection requires robust sources and explicit execution of all pipeline stages.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001 by running at least three blind trials for both the flat baseline and the structured memory condition using fresh model instances and identical test prompts. Score each output using the PCRB-1 handoff rubric.
+
+**5. Missing or Uncertain Information**
+The actual results of PROP-EXP-MEM-001 are absent, as no trial has been run. The specific content of the "structured project memory" fields is not detailed in the state, only that it is being tested. The exact definition of the "PCRB-1 handoff rubric" is not provided in the state. The specific parameters for the "provider-neutral adapter" for future model comparison are undefined.
+
+**Confidence in Reconstruction:** 0.95
+
+**Uncertain Facts:**
+- The specific structure or fields of the proposed "structured project memory."
+- The precise criteria of the PCRB-1 handoff rubric.
+- The specific implementation details of the provider-neutral adapter.
+
+**Proposed Measurable Next Experiment:**
+Conduct the blind handoff trials for PROP-EXP-MEM-001. Measure the mean PCRB-1 score for the structured memory condition versus the flat baseline. Accept the structured memory only if its mean score is at least 10 points higher than the baseline and the count of critical fabrications does not increase. Record all trials, including failures, in the GitHub repository.

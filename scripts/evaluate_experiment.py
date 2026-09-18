@@ -233,7 +233,7 @@ def load_policy(experiment: Path) -> dict:
         declared = json.loads(path.read_text(encoding="utf-8"))
         unknown = sorted(set(declared) - set(DEFAULT_POLICY)
                          - {"scorer_ladder", "checker_ladder", "notes", "evidence_policy", "pairs_per_batch", "generation",
-                            "design", "reader", "quiz"})
+                            "design", "reader", "reader_ladder", "quiz"})
         if unknown:
             raise SystemExit("%s has unknown fields: %s" % (path, ", ".join(unknown)))
         policy.update(declared)
@@ -307,14 +307,17 @@ def batch_problems(part: dict, ids: list[str] | None) -> list[str]:
     return problems
 
 
-def pause_before_next(limits: dict, next_prompt: str, fallback: float) -> float:
+def pause_before_next(limits: dict, next_prompt: str, fallback: float, reserve_tokens: int = 0) -> float:
     """Seconds to wait before the next request to the same provider.
 
     When the provider reports its remaining token budget, wait only if the next
     prompt would not fit, and only until the budget resets. When it reports
     nothing, keep the fixed pause that is known to be safe.
     """
-    estimate = len(next_prompt) / 3.5  # conservative characters-per-token ratio
+    # Conservative characters-per-token ratio, plus the output budget: Groq
+    # counts max_tokens against the per-minute limit (MEM-004 hit 108 HTTP 429s
+    # when only the prompt was counted).
+    estimate = len(next_prompt) / 3.5 + reserve_tokens
     if "retry_after_seconds" in limits:
         return float(limits["retry_after_seconds"])
     if "remaining_tokens" in limits:

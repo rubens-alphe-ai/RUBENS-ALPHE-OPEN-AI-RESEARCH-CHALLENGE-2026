@@ -1,0 +1,35 @@
+{
+  "decision": "INCONCLUSIVE",
+  "reason_codes": [
+    "CONFIDENCE_INTERVAL_SPANS_THRESHOLD"
+  ],
+  "summary": {
+    "pairs": 30,
+    "mean_fact_accuracy_pp": {
+      "baseline": 87.60416666666667,
+      "structured": 91.66666666666667
+    },
+    "mean_paired_delta_pp": 4.0625,
+    "sd_delta_pp": 6.922348708200926,
+    "ci95_delta_pp": [
+      1.4779427429917615,
+      6.647057257008239
+    ],
+    "inventions": {
+      "baseline": 0,
+      "structured": 0
+    },
+    "pairs_structured_better": 19,
+    "pairs_structured_worse": 5,
+    "pairs_equal": 6
+  },
+  "record_version": "RA-PSI-QUIZ-DECISION-V1",
+  "experiment_id": "PROP-EXP-MEM-005",
+  "decided_at_utc": "2026-09-18T16:36:56.268298+00:00",
+  "rule": {
+    "keep_min_delta_pp": 5,
+    "invention_margin": 5
+  },
+  "reader_model": "openai/gpt-oss-120b",
+  "generator_model": "qwen/qwen3.8-27b"
+}

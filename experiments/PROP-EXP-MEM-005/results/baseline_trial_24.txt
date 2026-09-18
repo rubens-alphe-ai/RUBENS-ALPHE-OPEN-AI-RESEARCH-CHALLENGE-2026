@@ -1,0 +1,33 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, designs/evaluates experiments, and transfers state to future systems.
+
+**2. Current Technical State**
+GitHub is the canonical repository (verified). GitHub Actions workflows (scheduled/manual) use OpenAlex (not arXiv) to fetch research; a recent cycle collected 30 papers with zero errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. Experiment PROP-EXP-MEM-001 (testing structured vs. flat memory for blind handoff fidelity) is proposed but **not yet run**. No trial results exist.
+
+**3. Failures and Lessons**
+*   **arXiv Collector:** Failed due to timeouts and HTTP 429 rate limits. *Lesson:* Replaced with OpenAlex-based `fetch_research.py` v2.
+*   **Missing Assessment Files:** Early runs lacked output because `analyze_research.py` was missing. *Lesson:* Added analyzer and reran workflow.
+*   **Process:** Initial reliance on chat memory failed for cross-model continuity. *Lesson:* Adopt external persistent state (GitHub) and separate proposal from acceptance.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001. This requires running at least three blind trials per condition (flat baseline vs. structured memory) using fresh model instances and identical prompts. Each output must be scored using the PCRB-1 handoff rubric to compare mean scores and critical fabrication counts.
+
+**5. Missing/Uncertain Information**
+*   Specific content of the "structured memory" file format to be tested.
+*   Exact definition of the "PCRB-1 handoff rubric" scoring criteria.
+*   Identity of the "fresh model instances" (provider/family) for the trials.
+*   Current baseline score for the flat condition (must be established during the trials).
+*   Details on the "provider-neutral adapter" mentioned in open questions.
+
+**Confidence in Reconstruction:** 0.95
+The state is highly structured and explicit. Confidence is high regarding facts, but slightly reduced due to the absence of the specific rubric details and the actual data files which are not included in this prompt, only referenced.
+
+**Facts Unsure About:**
+*   The specific threshold values defined within the "PCRB-1" rubric itself.
+*   Which specific model family will be used for the "fresh instances" in the upcoming trials.
+
+**Proposed Measurable Next Experiment:**
+**PROP-EXP-MEM-002 (Pilot):** Run the first single trial of PROP-EXP-MEM-001 using a designated "fresh" LLM model.
+*   **Input:** Identical mission prompt + (Condition A: Flat Log) vs. (Condition B: Structured JSON State).
+*   **Metric:** Score both outputs using the PCRB-1 rubric (0-100 scale).
+*   **Success Criterion:** If (Score_B - Score_A) >= 10 AND Fabrications_B <= Fabrications_A, the structured memory format is provisionally validated for full trial batch. If not, analyze which specific fields in Condition B caused lower fidelity or fabrication and adjust schema before proceeding to the full 3+ trials.

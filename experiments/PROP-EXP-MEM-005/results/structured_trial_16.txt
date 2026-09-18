@@ -1,0 +1,25 @@
+**1. Mission**
+Build a reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs/evaluates experiments objectively, preserves failures/successes, improves its own process, and transfers complete state to future systems.
+
+**2. Current Technical State**
+GitHub is the canonical repository (verified). GitHub Actions triggers scheduled research cycles (verified). OpenAlex is the primary research source (verified). A successful cycle collected 30 papers with zero errors (verified). The assessment layer generates `research-assessment.json` and `proposed-next-problem.json` (verified). Experiment PROP-EXP-MEM-001 is generated but not yet run (verified).
+
+**3. Failures and Learnings**
+*   **arXiv Collector Failure:** Initial collection failed with empty results, timeouts, and HTTP 429 errors. **Fix:** Replaced with OpenAlex-based `fetch_research.py` v2.
+*   **Missing Assessment Files:** Early runs did not produce assessment outputs. **Fix:** Added `analyze_research.py` and re-ran the workflow.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001 using fresh model instances. This involves running identical test prompts for both a flat baseline and structured memory conditions, conducting at least three blind trials per condition, and scoring outputs using the PCRB-1 handoff rubric.
+
+**5. Missing/Uncertain Information**
+No results exist for PROP-EXP-MEM-001 yet. It is unknown if structured memory meets the acceptance threshold (mean PCRB-1 score ≥10 points higher than baseline without increased critical fabrications). The contribution of specific memory fields to fidelity is currently undetermined. Provider-neutral adapter implementation for future multi-model comparison is not yet defined.
+
+**Confidence in Reconstruction:** 0.98
+
+**Uncertain Facts:**
+*   Specific scores for the "flat baseline" vs. "structured memory" do not yet exist.
+*   The exact technical implementation details of the "PCRB-1 handoff rubric" scoring criteria are not detailed in the state, only the metric name.
+*   The specific "dominant persistent-memory research theme" that triggered the experiment is not explicitly listed, only implied.
+
+**Proposed Measurable Next Experiment:**
+**PROP-EXP-MEM-002: Field Ablation Analysis.** Once PROP-EXP-MEM-001 data is collected, systematically remove individual fields from the structured memory (e.g., decisions, failures, status tags) and measure the delta in PCRB-1 scores to identify which specific fields contribute most to handoff fidelity. This directly addresses the open question: "Which memory fields contribute most to handoff fidelity?"

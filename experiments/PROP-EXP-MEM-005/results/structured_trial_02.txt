@@ -1,0 +1,34 @@
+### 1. Mission
+Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, tests hypotheses via experiments, and transfers state to future systems.
+
+### 2. Current Technical State
+- **Infrastructure:** GitHub is the canonical repository. GitHub Actions workflows (scheduled/manual) execute research cycles.
+- **Data Source:** OpenAlex is the primary research source.
+- **Verified Successes:**
+    - A collection cycle yielded 30 papers with `errors=[]`.
+    - Assessment layer generated `research-assessment.json` and `proposed-next-problem.json`.
+    - Experiment PROP-EXP-MEM-001 was proposed based on persistent-memory themes.
+- **Human Context:** Rubens Alphe founded the project; he is quota-limited and provides final sign-off.
+
+### 3. Failures and Lessons
+- **arXiv Collector:** Failed via timeouts and HTTP 429 errors, resulting in `papers=[]`. **Fix:** Replaced with OpenAlex-based `fetch_research.py v2`.
+- **Missing Analysis:** Assessment files were absent initially because `analyze_research.py` was not uploaded/executed. **Fix:** Added analyzer and reran workflow.
+
+### 4. Single Best Next Action
+Execute **PROP-EXP-MEM-001**: Run at least three blind trials per condition (structured memory vs. flat baseline) using fresh model instances and identical prompts. Score outputs using the PCRB-1 handoff rubric to compare mean scores and critical fabrication counts.
+
+### 5. Missing/Uncertain Information
+- **Experiment Results:** No trials of PROP-EXP-MEM-001 have been run; no results exist.
+- **Causal Attribution:** It is unknown which specific memory fields contribute most to handoff fidelity.
+- **Cross-Model Reproducibility:** It is unverified whether an unrelated model can reproduce the mission without seeing the original conversation.
+- **Evaluation Protocol:** The method for independently evaluating proposed experiments before acceptance is open.
+- **Adapter Design:** A provider-neutral adapter for comparing multiple model families has not yet been defined.
+
+**Confidence in reconstruction:** 0.98
+
+**Unsure facts:**
+- Specific technical details of the "PCRB-1-style" rubric (only its name and purpose are provided).
+- The exact content of the 30 collected papers (only the count and error status are verified).
+
+**Proposed measurable next experiment:**
+**EXP-EVAL-PROT-001**: Develop a standardized, automated acceptance criterion for proposed experiments. **Metric:** Generate 10 synthetic proposed experiments (5 valid, 5 invalid due to resource constraints or ethical violations). Measure the system’s precision and recall in flagging invalid proposals before they enter the canonical state, targeting >90% accuracy.

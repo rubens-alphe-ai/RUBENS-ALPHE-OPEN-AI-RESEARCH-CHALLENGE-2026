@@ -1,0 +1,37 @@
+**1. Mission**
+Build a measurable, reproducible AI research system (Project RA-PSI-2026 / Mission Rubens) that preserves state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs and evaluates experiments, preserves failures/successes, improves its own process, and transfers state to future systems. (Status: Verified)
+
+**2. Current Technical State**
+GitHub is the canonical repository (Verified). GitHub Actions workflows (scheduled/manual) fetch research via OpenAlex and update state (Verified). OpenAlex collected 30 papers with zero errors (Verified). Assessment layer produces `research-assessment.json` and `proposed-next-problem.json` (Verified). Experiment PROP-EXP-MEM-001 is generated but not yet run (Verified). Rubens Alphe is the human sign-off authority (Verified).
+
+**3. Failures & Lessons**
+*   **Failure:** Initial arXiv collector failed with timeouts and HTTP 429 errors, resulting in empty paper lists. **Resolution:** Replaced with OpenAlex-based `fetch_research.py` v2. **Lesson:** arXiv had rate limits/timeouts; OpenAlex is more stable. (Status: Resolved)
+*   **Failure:** Assessment files were missing after early runs. **Resolution:** `analyze_research.py` was missing/not executed; added and workflow rerun. (Status: Resolved)
+
+**4. Single Best Next Action**
+Run PROP-EXP-MEM-001 with fresh model instances. Use identical prompts for flat baseline and structured memory. Conduct at least three blind trials per condition. Score using the PCRB-1 handoff rubric. Compare mean scores and critical fabrication counts. (Status: Not Started)
+
+**5. Missing/Uncertain Information**
+*   Actual PCRB-1 scores for both conditions (experiment not run).
+*   Which memory fields contribute most to fidelity (open question).
+*   Whether unrelated models can reproduce the mission (open question).
+*   Methodology for independent evaluation of proposed experiments (open question).
+*   Provider-neutral adapter design for cross-family comparison (open question).
+
+**Confidence in Reconstruction:** 0.95
+*   High confidence in verified items.
+*   Slight uncertainty in specific implementation details of `fetch_research.py` v2 (only version/status known, not code specifics).
+
+**Facts I am unsure about:**
+*   Specific content of the 30 collected papers (only count and source known).
+*   Detailed structure of `research-assessment.json` fields beyond name.
+*   Exact definition of "PCRB-1 handoff rubric" (referenced but not defined in state).
+*   Current quota status of Rubens Alphe beyond "limit-restricted."
+
+**Proposed Measurable Next Experiment:**
+Execute PROP-EXP-MEM-001:
+1.  Create 3 flat baseline handoffs and 3 structured memory handoffs using identical initial prompts.
+2.  Score all 6 outputs using PCRB-1 rubric by a separate evaluator (blind to condition).
+3.  Calculate mean score and count critical fabrications per condition.
+4.  **Success Criterion:** Structured memory mean score ≥ Flat baseline mean score + 10 points AND no increase in critical fabrications.
+5.  Record results in `experiments/PROP-EXP-MEM-001-results.json`.

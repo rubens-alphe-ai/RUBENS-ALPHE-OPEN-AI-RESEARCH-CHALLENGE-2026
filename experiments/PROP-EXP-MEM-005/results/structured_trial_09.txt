@@ -1,0 +1,35 @@
+### 1. Mission
+Build a measurable, reproducible AI research system (RA-PSI-2026 / Mission Rubens) that preserves state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, and transfers state to future systems.
+
+### 2. Current Technical State
+**Status: Verified/Decided.**
+*   **Infrastructure:** GitHub is the canonical public repository. GitHub Actions workflows (scheduled and manual) execute research cycles.
+*   **Data Source:** OpenAlex is the primary collector, successfully retrieving 30 papers with zero errors in the latest cycle.
+*   **Pipeline:** The system generates `research-assessment.json` and `proposed-next-problem.json`. The proposal-acceptance loop is active: an experiment (`PROP-EXP-MEM-001`) has been proposed but not yet accepted or run.
+*   **Governance:** Rubens Alphe is the founder/quota-limit holder; final sign-off is human. External persistent state (GitHub) is used instead of chat memory.
+
+### 3. Failures and Learnings
+*   **arXiv Collector Failure:** **Resolved.** Initial arXiv collection failed due to timeouts and HTTP 429 rate limits, resulting in empty paper sets. *Learning:* Replaced arXiv with OpenAlex to ensure reliability.
+*   **Missing Assessment Files:** **Resolved.** Early runs lacked `research-assessment.json` because `analyze_research.py` was not uploaded. *Learning:* Explicitly manage script deployment and workflow reruns to ensure pipeline completeness.
+
+### 4. Single Best Next Action
+**Run `PROP-EXP-MEM-001`.** Execute blind handoff trials using fresh model instances to test if structured project memory improves mission reconstruction fidelity compared to a flat baseline. This is the only unexecuted step blocking progress on the primary open hypothesis.
+
+### 5. Missing or Uncertain Information
+*   **Experimental Results:** No data exists yet for `PROP-EXP-MEM-001`. The mean PCRB-1 score and fabrication counts for both conditions are unknown.
+*   **Model Compatibility:** It is unverified if an unrelated model can reproduce the mission without original context, though this is a standing open question.
+*   **Provider Neutrality:** No adapter exists yet to compare multiple model families.
+*   **Evaluation Criteria:** The specific mechanics of independent evaluation for proposed experiments before acceptance are defined as "open."
+
+---
+
+**Confidence in reconstruction:** 0.95
+
+**Unsure Facts:** None; the state is explicitly marked "verified" for all technical components and "not started" for the experiment.
+
+**Proposed Measurable Next Experiment:**
+Execute `PROP-EXP-MEM-001`:
+1.  **Baseline (Flat):** Give 3 fresh model instances a flat text summary of the project.
+2.  **Treatment (Structured):** Give 3 fresh model instances the structured `research-assessment.json` and state files.
+3.  **Metric:** Score all 6 outputs using the PCRB-1 handoff rubric.
+4.  **Success Criterion:** Structured mean score must exceed Baseline mean score by ≥10 points, with no increase in critical fabrications.

@@ -1,0 +1,38 @@
+**1. Mission**
+Build a reproducible AI research system (RA-PSI-2026 / Mission Rubens) that preserves state across sessions/models, discovers public research, formulates hypotheses, runs experiments, and transfers state to future systems.
+
+**2. Current Technical State**
+GitHub is the canonical repository. A verified GitHub Actions workflow uses OpenAlex (collecting 30 papers with zero errors) to fetch research. The system generates `research-assessment.json` and `proposed-next-problem.json`. Experiment PROP-EXP-MEM-001 is proposed but unrun. Rubens Alphe (founder) is quota-limited but provides final sign-off.
+
+**3. Failures and Lessons**
+*   **arXiv Collector:** Failed with timeouts and HTTP 429 errors, resulting in an empty paper list. *Fix:* Replaced with OpenAlex-based `fetch_research.py` v2.
+*   **Missing Assessments:** Early runs lacked assessment files because `analyze_research.py` was not executed. *Fix:* Analyzer added and workflow rerun.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001: Run at least three blind trials per condition (flat baseline vs. structured memory) using fresh model instances and identical prompts. Score outputs with the PCRB-1 handoff rubric and compare mean scores and critical fabrication counts.
+
+**5. Missing/Uncertain Information**
+*   No results exist for PROP-EXP-MEM-001 yet.
+*   Unclear which specific memory fields contribute most to fidelity.
+*   Unknown if unrelated models can reproduce the mission without original conversation context.
+*   No method established for independent evaluation of proposed experiments before acceptance.
+*   No provider-neutral adapter designed for comparing multiple model families.
+
+**Confidence in Reconstruction:** 0.95
+
+**Uncertain Facts:**
+*   Current quota status of Rubens Alphe beyond "limited."
+*   Specific timing of the last successful OpenAlex cycle.
+
+**Proposed Measurable Next Experiment:**
+Execute the three blind trials for PROP-EXP-MEM-001. Accept structured memory only if its mean PCRB-1 score exceeds the flat baseline by ≥10 points AND critical fabrications do not increase. Record both successes and failures in the canonical state.
+
+**Reconstructed State Summary:**
+*   **Mission:** Build reproducible AI research system (Verified).
+*   **Verified Knowledge:** GitHub canonical; Actions workflow verified; OpenAlex source verified (30 papers, no errors); assessment layer produces JSONs; PROP-EXP-MEM-001 generated; Rubens is founder/sign-off (Verified).
+*   **Decisions:** External state over chat memory; GitHub Actions for scheduling; OpenAlex over arXiv (due to 429s/timeout); Separate proposal from acceptance; Test memory via blind trials (Decided).
+*   **Failures:** arXiv collector empty/errored (Resolved); Missing assessment files (Resolved).
+*   **Experiments:** PROP-EXP-MEM-001 proposed, not run (Proposed/Verified).
+*   **Next Actions:** Run PROP-EXP-MEM-001 with fresh instances; identical prompts; ≥3 trials/condition; PCRB-1 scoring; compare means/fabrications (Not Started).
+*   **Open Questions:** Memory benefit? Key fields? Cross-model reproducibility? Evaluation method? Multi-model comparison? (Open).
+*   **Rules:** Public/authorized resources only; No hidden persistence/shutdown resistance; No deception about consciousness; No uncontrolled spending/private publication; Evidence required for improvement claims; Preserve failures; Acceptance threshold: Mean PCRB-1 score +10 vs. baseline, no increase in fabrications (In Force).

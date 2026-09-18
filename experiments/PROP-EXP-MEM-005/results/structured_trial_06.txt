@@ -1,0 +1,13 @@
+1. **Mission**: Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, and transfers state to future systems.
+
+2. **Current Technical State**: GitHub is the canonical repository for code and state. A GitHub Actions workflow (verified) triggers `fetch_research.py` v2 using OpenAlex as the primary source. A successful cycle collected 30 papers with no errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. Experiment PROP-EXP-MEM-001 is proposed to test structured memory vs. flat baseline using PCRB-1-style handoff evaluation, but has not yet been run.
+
+3. **Failures and Lessons**: The initial arXiv collector failed due to timeouts and HTTP 429 rate limits, resulting in empty paper collections. This led to the decision to replace arXiv with OpenAlex. Early assessment files were missing because `analyze_research.py` was not executed; this was resolved by adding the analyzer and rerunning the workflow. Key lesson: use robust, non-rate-limited public sources and ensure all pipeline components are uploaded and executed.
+
+4. **Single Best Next Action**: Execute PROP-EXP-MEM-001. Run at least three blind trials per condition (structured memory vs. flat baseline) using fresh model instances and identical prompts. Score outputs using the PCRB-1 handoff rubric. Compare mean scores and critical fabrication counts to determine if structured memory meets the acceptance threshold (mean score ≥10 points higher, no increased fabrications).
+
+5. **Missing/Uncertain Information**: No experimental results exist yet for PROP-EXP-MEM-001. The specific contribution of individual memory fields to fidelity is unknown. The method for independent evaluation of proposed experiments is open. The implementation details of a provider-neutral adapter for comparing multiple model families are undefined. Rubens Alphe’s availability for final sign-off is uncertain due to quota limits.
+
+**Confidence**: 0.95
+**Unsure Facts**: Specific rubric details for PCRB-1; exact threshold implementation for "critical fabrications"; current quota status of Rubens.
+**Proposed Next Experiment**: Conduct the blind handoff trials for PROP-EXP-MEM-001 with n=3 per condition, recording mean PCRB-1 scores and fabrication counts to test the hypothesis that structured memory improves reconstruction fidelity.

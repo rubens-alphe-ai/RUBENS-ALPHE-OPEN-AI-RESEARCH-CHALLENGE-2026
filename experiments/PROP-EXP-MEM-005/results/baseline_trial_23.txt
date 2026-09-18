@@ -1,0 +1,40 @@
+**1. Mission**
+Build a measurable, reproducible AI research system for RA-PSI-2026 (Mission Rubens) that preserves state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, and transfers complete state to future systems using GitHub as the canonical repository.
+
+**2. Current Technical State**
+*   **Infrastructure:** GitHub Actions workflows are verified and active.
+*   **Data Collection:** Uses OpenAlex (v2) to replace arXiv. A recent cycle successfully collected 30 papers with zero errors.
+*   **Processing:** `analyze_research.py` is active, producing `research-assessment.json` and `proposed-next-problem.json`.
+*   **Current Experiment:** `PROP-EXP-MEM-001` is proposed but **not yet run**. It tests if structured project memory improves blind handoff fidelity versus a flat baseline using PCRB-1-style evaluation.
+*   **Human Oversight:** Rubens Alphe is the founder/sign-off authority but is quota-limited; the system is designed to progress autonomously within strict constraints.
+
+**3. Failures and Lessons**
+*   **arXiv Collector Failure:** Initial arXiv integration failed due to timeouts and HTTP 429 rate limits, resulting in empty data. *Lesson:* Use OpenAlex as the primary collector for reliability and to avoid rate limits.
+*   **Missing Assessment Files:** Early runs failed to produce assessment files because `analyze_research.py` was not yet uploaded/executed. *Lesson:* Ensure all pipeline components are deployed before triggering workflows; verify output existence post-run.
+
+**4. Single Best Next Action**
+Execute **PROP-EXP-MEM-001** using fresh model instances.
+*   **Method:** Run at least three blind trials per condition (Flat Baseline vs. Structured Memory) using identical test prompts.
+*   **Evaluation:** Score all outputs with the PCRB-1 handoff rubric.
+*   **Criteria:** Accept structured memory only if the mean score is ≥10 points higher than the baseline *and* critical fabrication count does not increase.
+
+**5. Missing/Uncertain Information**
+*   **Experimental Data:** No results exist yet for PROP-EXP-MEM-001. The effectiveness of structured memory is unproven.
+*   **Model Family Comparison:** Methods for comparing multiple model families via a provider-neutral adapter are undetermined.
+*   **Evaluation Protocol Details:** While the rubric is named (PCRB-1), specific scoring weights or edge-case handling rules are not detailed in the provided state.
+*   **Resource Limits:** Specific quota thresholds or cost guards beyond "no uncontrolled spending" are not quantified.
+
+***
+
+**Confidence in Reconstruction:** 0.95
+**Facts Unsure About:**
+*   The specific content of the 30 collected papers (only the count and error status are verified).
+*   The exact technical specification of the "PCRB-1 handoff rubric" (only its name and usage context are provided).
+*   The specific GitHub Actions schedule interval (only that it is "scheduled and manually triggerable").
+
+**Proposed Measurable Next Experiment**
+**EXP-002: Provider-Neutral Adapter Validation.**
+*   **Hypothesis:** A standardized JSON interface allows a secondary model family (e.g., different provider) to execute a single verified step of the research pipeline with <5% deviation in output structure compared to the primary model.
+*   **Procedure:** Select one simple pipeline step (e.g., formatting a research digest). Run it with Model A (current) and Model B (alternative).
+*   **Metric:** Structural diff score and semantic similarity score of the output JSON.
+*   **Pass Condition:** Structural validity maintained; semantic similarity > 0.90.

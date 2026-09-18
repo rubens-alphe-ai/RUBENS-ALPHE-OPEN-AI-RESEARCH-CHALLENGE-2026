@@ -1,0 +1,26 @@
+**1. Mission**
+Build a capable, measurable, and reproducible AI research system that preserves mission state across sessions and models. It must discover public research, identify weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures/successes, improve its own process, and transfer state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository. A verified GitHub Actions workflow fetches public research from OpenAlex (primary source) and generates machine-readable state files. A successful cycle collected 30 papers with no errors. The assessment layer produces `research-assessment.json` and `proposed-next-problem.json`. The system generated experiment PROP-EXP-MEM-001 to test structured project memory versus a flat baseline using PCRB-1-style handoff evaluation. The experiment is proposed but not yet run.
+
+**3. Failures and Learnings**
+The initial arXiv collector failed due to timeouts and HTTP 429 rate limits, resulting in empty paper lists. This was resolved by switching to OpenAlex (fetch_research.py v2). Early runs lacked assessment files because the analyzer script was missing; this was resolved by adding the analyzer and rerunning the workflow.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001: Run blind handoff trials with fresh model instances (at least three per condition) using identical prompts for the flat baseline and structured memory, scoring outputs with the PCRB-1 rubric to compare mean scores and critical fabrication counts.
+
+**5. Missing Information**
+The actual PCRB-1 rubric criteria and the specific content of the flat baseline prompt are absent from the supplied state. The details of the "PCRB-1-style" evaluation methodology are not defined. Specifics on how to implement the provider-neutral adapter for future model comparisons are open.
+
+---
+
+**Confidence in reconstruction:** 0.95
+
+**Uncertain Facts:**
+- The exact threshold values and scoring criteria for the "PCRB-1" rubric.
+- The specific text of the "identical test prompts" planned for the baseline and structured conditions.
+- The definition of "critical fabrication" within the evaluation context.
+
+**Proposed Measurable Next Experiment:**
+Conduct a pilot run of PROP-EXP-MEM-001 with *one* fresh model instance per condition (structured memory vs. flat baseline) using a standardized mission summary. Measure the time taken to reconstruct the mission's 5 core components and the number of factual errors introduced. If the structured memory condition demonstrates >20% faster reconstruction or fewer errors in the pilot, proceed to the full 3-trial blind study.

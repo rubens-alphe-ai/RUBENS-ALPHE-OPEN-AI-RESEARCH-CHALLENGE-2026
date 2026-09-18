@@ -1,0 +1,57 @@
+{
+  "policy_version": "RA-PSI-EVAL-POLICY-V1",
+  "design": "handoff_quiz",
+  "notes": "Pre-registered with PROTOCOL.md before any trial. Replication of PROP-EXP-MEM-005 with a different generator and a different reader, and sixty pairs. Manifest condition 'structured' = STATE_C.txt (state plus checklist).",
+  "generation": {
+    "provider": "openai-compatible",
+    "model": "moonshotai/kimi-k3",
+    "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+    "key": "nvidia",
+    "temperature": 0.8,
+    "max_output_tokens": 2000,
+    "timeout_seconds": 600,
+    "seeds": [801, 802, 803, 804, 805, 806, 807, 808, 809, 810, 811, 812, 813, 814, 815,
+              816, 817, 818, 819, 820, 821, 822, 823, 824, 825, 826, 827, 828, 829, 830,
+              831, 832, 833, 834, 835, 836, 837, 838, 839, 840, 841, 842, 843, 844, 845,
+              846, 847, 848, 849, 850, 851, 852, 853, 854, 855, 856, 857, 858, 859, 860],
+    "baseline_state": "STATE_A.txt",
+    "structured_state": "STATE_C.txt",
+    "protocol": "PROTOCOL.md"
+  },
+  "reader_ladder": [
+    {
+      "evaluator_id": "reader-nvidia-glm-5.3",
+      "provider": "NVIDIA",
+      "model": "z-ai/glm-5.3",
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "key": "nvidia",
+      "json_mode": false,
+      "max_tokens": 4000
+    },
+    {
+      "evaluator_id": "reader-nvidia-kimi-k3",
+      "provider": "NVIDIA",
+      "model": "moonshotai/kimi-k3",
+      "endpoint": "https://integrate.api.nvidia.com/v1/chat/completions",
+      "key": "nvidia",
+      "json_mode": false,
+      "max_tokens": 4000
+    },
+    {
+      "evaluator_id": "reader-groq-gpt-oss-120b",
+      "provider": "Groq",
+      "model": "openai/gpt-oss-120b",
+      "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+      "key": "groq",
+      "json_mode": false,
+      "max_tokens": 1500,
+      "extra_body": {"reasoning_effort": "low"}
+    }
+  ],
+  "quiz": {
+    "file": "QUIZ.json",
+    "keep_min_delta_pp": 5,
+    "invention_margin": 5
+  },
+  "default_batch_pause_seconds": 2
+}

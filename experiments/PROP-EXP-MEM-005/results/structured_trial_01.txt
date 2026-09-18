@@ -1,0 +1,32 @@
+**1. Mission**
+Build a measurable, reproducible AI research system (RA-PSI-2026 / Mission Rubens) that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, and transfers complete state to future systems.
+
+**2. Current Technical State**
+*   **Canonical Repo:** GitHub (verified).
+*   **Automation:** GitHub Actions workflow scheduled/triggerable (verified).
+*   **Data Source:** OpenAlex (verified); collected 30 papers with 0 errors (verified).
+*   **Artifacts:** `research-assessment.json`, `proposed-next-problem.json` generated (verified).
+*   **Active Experiment:** PROP-EXP-MEM-001 proposed (not run). Tests if structured memory improves blind handoff fidelity vs. flat baseline using PCRB-1 rubric.
+
+**3. Failures and Lessons**
+*   **arXiv Collector:** Failed via timeouts and HTTP 429 rate limits (resolved). *Lesson:* Switched to OpenAlex as primary source.
+*   **Missing Assessments:** Files absent in early runs because `analyze_research.py` was not uploaded/executed (resolved). *Lesson:* Ensure all pipeline scripts are present before workflow execution.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001: Run at least three blind trials per condition (structured memory vs. flat baseline) using fresh model instances and identical prompts. Score outputs with the PCRB-1 rubric. Compare mean scores and critical fabrication counts. Structured memory is only accepted if its mean score exceeds the baseline by ≥10 points with no increase in critical fabrications.
+
+**5. Missing/Uncertain Information**
+*   Actual results of PROP-EXP-MEM-001 (none exist yet).
+*   Which specific memory fields contribute most to fidelity.
+*   Method for independent evaluation of proposed experiments before acceptance.
+*   Provider-neutral adapter design for comparing multiple model families.
+*   Whether unrelated models can reproduce the mission without original conversation context.
+
+**Confidence in Reconstruction:** 0.95
+**Unsure Facts:** None; all provided states are explicit.
+**Proposed Next Experiment:**
+**PROP-EXP-ADL-001:** Test a provider-neutral adapter layer.
+*   **Hypothesis:** A standardized input/output schema allows two different model families to execute the same research cycle with <5% divergence in output structure.
+*   **Method:** Define `adapter.py` interface. Run OpenAlex fetch + assessment pipeline via Model A and Model B using identical state inputs.
+*   **Metric:** JSON schema validation pass rate and semantic similarity of `proposed-next-problem.json` outputs.
+*   **Status:** Proposed.

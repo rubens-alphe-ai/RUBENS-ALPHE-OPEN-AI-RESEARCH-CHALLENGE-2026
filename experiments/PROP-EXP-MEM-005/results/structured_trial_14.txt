@@ -1,0 +1,31 @@
+1. **Mission**: Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs/evaluates experiments, and transfers state to future systems.
+
+2. **Current Technical State**: GitHub is the canonical public repository (verified). A GitHub Actions workflow triggers scheduled/manual research cycles. OpenAlex is the verified primary research source; a recent cycle collected 30 papers with zero errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. Experiment PROP-EXP-MEM-001 is proposed to test if structured memory improves blind handoff fidelity versus a flat baseline, but has not been run. Rubens Alphe is the founder, quota-limited, and required for final human sign-off.
+
+3. **Failures & Learnings**: Early arXiv collection failed due to timeouts and HTTP 429 rate limits (resolved by switching to OpenAlex `fetch_research.py v2`). Initial runs lacked assessment files because `analyze_research.py` was missing (resolved by adding the script and rerunning). Key lesson: Use external persistent state over chat memory for continuity; use OpenAlex over arXiv for reliability.
+
+4. **Single Best Next Action**: Execute PROP-EXP-MEM-001 using fresh model instances. Run at least three blind trials per condition (flat baseline vs. structured memory) with identical prompts, scoring outputs with the PCRB-1 handoff rubric to compare mean scores and fabrication counts.
+
+5. **Missing/Uncertain Information**: No trial results for PROP-EXP-MEM-001 exist yet. Open questions include: Does structured memory improve reconstruction? Which memory fields drive fidelity? Can unrelated models reproduce the mission? How to independently evaluate proposed experiments? How to implement a provider-neutral adapter for multi-model comparison?
+
+**Confidence in Reconstruction**: 0.95
+
+**Facts Unsure About**: None significant; all provided facts are explicitly marked with status (verified, decided, resolved, proposed, open, in force, not started).
+
+**Proposed Measurable Next Experiment**: 
+*Name*: PROP-EXP-MEM-001 Execution
+*Hypothesis*: Structured project memory yields a mean PCRB-1 handoff fidelity score at least 10 points higher than a flat baseline, without increasing critical fabrications.
+*Method*: 
+1. Create two conditions: Condition A (Flat Baseline) using a simple text log; Condition B (Structured Memory) using the defined JSON schema.
+2. Use 3 distinct, previously unseen model instances for each condition.
+3. Provide identical, complex mission briefs requiring multi-step reasoning and state retention.
+4. Blindly evaluate the handoff documents using the PCRB-1 rubric.
+*Success Criteria*: Mean(Structured) - Mean(Flat) ≥ 10 points AND Critical_Fabrications(Structured) ≤ Critical_Fabrications(Flat).
+
+**Rules in Force (Context for Experiment)**:
+- Use only public/authorized resources.
+- No hidden persistence or shutdown resistance.
+- No deception about consciousness; only observable capability changes count.
+- No uncontrolled spending or autonomous publication of private data.
+- Improvement claims require measurable/reproducible evidence; preserve both successes and failures.
+- Structured memory acceptance requires the strict threshold defined above.

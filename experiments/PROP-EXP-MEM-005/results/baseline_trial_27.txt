@@ -1,0 +1,30 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, designs experiments, evaluates results objectively, and transfers complete state to future systems.
+
+**2. Current Technical State**
+*   **Infrastructure:** GitHub is the canonical repository. A verified GitHub Actions workflow runs scheduled/manual research cycles.
+*   **Data Collection:** OpenAlex is the active source (replacing arXiv). The last successful cycle collected 30 papers with zero errors.
+*   **Assessment:** `research-assessment.json` and `proposed-next-problem.json` are generated.
+*   **Pending Experiment:** `PROP-EXP-MEM-001` is proposed to test if structured memory improves blind handoff fidelity compared to a flat baseline using PCRB-1-style evaluation. This experiment has not been run yet.
+
+**3. Failures and Lessons**
+*   **arXiv Collector:** Failed with timeouts and HTTP 429 rate limits, resulting in empty paper lists. **Lesson:** Replaced with OpenAlex-based `fetch_research.py` v2 to ensure stability.
+*   **Missing Analysis:** Early runs failed to produce assessment files because `analyze_research.py` was not uploaded/executed. **Lesson:** Integrated the analyzer and reran the workflow successfully.
+
+**4. Single Best Next Action**
+Run trial trials for `PROP-EXP-MEM-001` using fresh model instances. Specifically, execute at least three blind trials per condition (flat baseline vs. structured memory) using identical test prompts, then score outputs with the PCRB-1 handoff rubric.
+
+**5. Missing or Uncertain Information**
+*   The actual content/structure of the "structured project memory" versus the "flat baseline" is not defined in the supplied state.
+*   The specific criteria for the "PCRB-1 handoff rubric" are not provided.
+*   The results of any previous handoff trials (if any existed prior to this prompt) are absent.
+*   The specific "provider-neutral adapter" architecture for future multi-model comparison is undefined.
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts Unsure About:**
+*   The exact file structure of `PROP-EXP-MEM-001`.
+*   The specific definition of "critical fabrication" within the PCRB-1 rubric.
+
+**Proposed Measurable Next Experiment:**
+Execute `PROP-EXP-MEM-001` as specified: Run 3+ blind trials for Flat Baseline and 3+ for Structured Memory. Calculate mean PCRB-1 scores. Accept Structured Memory only if Mean(Score_Structured) >= Mean(Score_Flat) + 10 points AND Critical_Fabrications_Structured <= Critical_Fabrications_Flat.

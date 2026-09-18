@@ -12,7 +12,9 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 import handoff_quiz as hq  # noqa: E402
 
-QUIZ = json.loads((ROOT / "experiments" / "PROP-EXP-MEM-004" / "QUIZ.json").read_text(encoding="utf-8"))
+QUIZ_PATHS = [ROOT / "experiments" / "PROP-EXP-MEM-004" / "QUIZ.json",
+              ROOT / "experiments" / "HOLDOUT-2026-09" / "QUIZ.json"]
+QUIZ = json.loads(QUIZ_PATHS[0].read_text(encoding="utf-8"))
 RULE = {"keep_min_delta_pp": 10, "invention_margin": 5}
 
 
@@ -53,6 +55,20 @@ class QuizContentTests(unittest.TestCase):
         self.assertIn("HANDOFF TEXT HERE", prompt)
         self.assertNotIn('"correct"', prompt)
         self.assertNotIn("kind", prompt)
+
+
+class EveryQuizFileTests(unittest.TestCase):
+    def test_each_quiz_renders_with_one_key_per_question(self) -> None:
+        for path in QUIZ_PATHS:
+            quiz = json.loads(path.read_text(encoding="utf-8"))
+            with self.subTest(quiz=path.parent.name):
+                rendered, key = hq.render_quiz(quiz, path.parent.name)
+                ids = [q["id"] for q in quiz["questions"]]
+                self.assertEqual(len(ids), len(set(ids)))
+                self.assertEqual(set(key), set(ids))
+                self.assertTrue(all(len(item["options"]) == 5 for item in rendered))
+                for item in rendered:
+                    self.assertEqual(key[item["id"]] == "E", item["kind"] == "absent")
 
 
 class ParseAndGradeTests(unittest.TestCase):

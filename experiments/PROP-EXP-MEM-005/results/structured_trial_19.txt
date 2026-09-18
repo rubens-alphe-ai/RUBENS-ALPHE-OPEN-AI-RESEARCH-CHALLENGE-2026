@@ -1,0 +1,27 @@
+**Reconstruction of Project RA-PSI-2026 / Mission Rubens**
+
+1. **Mission:** Build a measurable, reproducible AI research system that preserves state across sessions, discovers public research, formulates hypotheses, designs experiments, evaluates results objectively, and transfers state to future systems.
+2. **Technical State:** GitHub is the canonical repository (verified). A GitHub Actions workflow (verified) uses OpenAlex (verified) to fetch research; a recent cycle collected 30 papers with zero errors (verified). The assessment layer generates `research-assessment.json` and `proposed-next-problem.json` (verified). Experiment PROP-EXP-MEM-001 has been generated (verified) but not run (verified).
+3. **Failures & Lessons:** Initial arXiv collection failed due to timeouts and HTTP 429 rate limits; resolved by switching to OpenAlex-based `fetch_research.py` v2. Early assessment files were missing because `analyze_research.py` was not uploaded; resolved by adding the script and rerunning the workflow.
+4. **Best Next Action:** Run PROP-EXP-MEM-001 using fresh model instances. This experiment tests whether structured project memory improves blind handoff fidelity versus a flat baseline using PCRB-1-style evaluation.
+5. **Missing/Uncertain Information:** No trial results exist for PROP-EXP-MEM-001 (verified absent). The specific content of the "identical test prompts" is not provided. The exact definition of the PCRB-1 rubric scores is not detailed in the state. Provider-neutral adapter implementation details for multi-model comparison are open questions.
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts I am unsure about:**
+*   The specific text of the test prompts to be used in the baseline vs. structured memory conditions.
+*   The precise weighting or criteria of the PCRB-1 handoff rubric (only mentioned as a standard, not defined).
+*   The current quota status of Rubens Alphe beyond "quota-limited."
+
+**Proposed Measurable Next Experiment:**
+*   **Name:** PROP-EXP-MEM-001-A (Pilot Run)
+*   **Objective:** Validate the experimental pipeline for PROP-EXP-MEM-001.
+*   **Method:** Execute 1 trial each for the Flat Baseline and Structured Memory conditions using the same blind handoff prompt.
+*   **Metric:** Calculate the PCRB-1 score and count critical fabrications.
+*   **Success Criteria:** Successful generation of machine-readable scores for both conditions without pipeline errors.
+*   **Acceptance:** Proceed to full 3-trial blind test only if pilot runs complete without technical failure.
+
+**Key Rules & Decisions Preserved:**
+*   **Decisions:** Use external persistent state (decided); Use GitHub Actions for scheduled cycles (decided); Use OpenAlex over arXiv due to rate limits (decided); Separate proposal from acceptance (decided); Test structured memory via blind trials (decided).
+*   **Rules:** Use only public/authorized resources (in force); No hidden persistence/shutdown resistance (in force); No deception about consciousness (in force); No uncontrolled spending (in force); No improvement claims without reproducible evidence (in force).
+*   **Acceptance Threshold:** Structured memory is accepted only if mean PCRB-1 score ≥ flat baseline + 10 points AND critical fabrications do not increase (in force).

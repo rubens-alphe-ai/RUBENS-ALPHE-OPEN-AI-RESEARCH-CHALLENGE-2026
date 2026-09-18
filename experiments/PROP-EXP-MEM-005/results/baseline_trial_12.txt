@@ -1,0 +1,33 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves state across sessions/models, discovers public research, formulates and tests hypotheses, objectively evaluates results, and transfers complete state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical public repository. A GitHub Actions workflow schedules and triggers research cycles. OpenAlex is the primary data source, currently collecting 30 papers per cycle without errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. The system has generated experiment **PROP-EXP-MEM-001** to test structured project memory. This experiment is currently in the "proposed" status; no trials have been run, and no results exist.
+
+**3. Failures and Learnings**
+*   **arXiv Collector Failure:** Initial collection failed with timeout and HTTP 429 errors, resulting in empty paper lists. *Learning:* Replaced with OpenAlex-based `fetch_research.py v2`, which is now stable.
+*   **Missing Assessment Files:** Early runs did not produce assessment files because `analyze_research.py` was not yet uploaded/executed. *Learning:* Added the analyzer and reran the workflow; resolved.
+
+**4. Single Best Next Action**
+Execute **PROP-EXP-MEM-001** using fresh model instances. This involves running at least three blind trials per condition (structured memory vs. flat baseline) using identical test prompts and scoring outputs with the PCRB-1 handoff rubric to compare mean scores and critical fabrication counts.
+
+**5. Missing or Uncertain Information**
+*   Specific score thresholds beyond the relative 10-point improvement requirement.
+*   Details on the "provider-neutral adapter" for future multi-model comparison.
+*   Specific fields within the structured memory that contribute most to fidelity (currently an open question).
+*   Precise definition of "critical fabrication" within the PCRB-1 rubric.
+
+***
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts I am Unsure About:**
+*   The exact content of the "flat baseline" prompt versus the "structured memory" prompt (only that they must be identical for testing purposes).
+*   The specific identity of the "fresh model instances" to be used for the trials.
+
+**Proposed Measurable Next Experiment:**
+**Experiment: Cross-Model Handoff Fidelity Test**
+*   **Goal:** Determine if an unrelated model can reproduce the mission state from the structured memory alone.
+*   **Procedure:** Provide the fully structured memory state (as defined in PROP-EXP-MEM-001) to a model family not previously used in the project (e.g., if current state was built with one model, use a different one). Ask it to reconstruct the mission, current state, and next action.
+*   **Metric:** Score the output using the PCRB-1 handoff rubric.
+*   **Success Criterion:** Mean score exceeds the flat baseline mean by ≥10 points, with no increase in critical fabrications. This validates the "transfer complete state to a more capable future system" component of the mission.

@@ -1,0 +1,28 @@
+**1. Mission**
+Build a measurable, reproducible AI research system (Project RA-PSI-2026 / Mission Rubens) that preserves mission state across sessions and models, discovers public research via OpenAlex, identifies weaknesses, formulates hypotheses, and transfers complete state to future systems using GitHub as the canonical repository.
+
+**2. Current Technical State**
+The system is operational. A GitHub Actions workflow successfully fetches public research from OpenAlex (verified: 30 papers collected, zero errors). The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. An experiment, PROP-EXP-MEM-001, has been proposed to test structured project memory against a flat baseline using PCRB-1 handoff evaluation. The experiment has **not** been run yet.
+
+**3. Failures and Lessons**
+*   **arXiv Collector:** Failed due to timeouts and HTTP 429 rate limits. **Lesson:** Replaced with OpenAlex-based `fetch_research.py` v2, which is now stable.
+*   **Assessment Layer:** Initial runs failed to produce assessment files because `analyze_research.py` was missing. **Lesson:** Added the analyzer and reran the workflow; files now appear correctly.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001. Run at least three blind trials per condition (structured memory vs. flat baseline) using fresh model instances and identical test prompts. Score outputs using the PCRB-1 rubric, comparing mean scores and critical fabrication counts.
+
+**5. Missing/Uncertain Information**
+*   The specific content of the "identical test prompts" for the blind trials is not provided in this state.
+*   The exact threshold details for the PCRB-1 rubric (other than the 10-point improvement requirement for acceptance) are not defined here.
+*   Details on the "provider-neutral adapter" for comparing multiple model families are absent.
+
+***
+
+**Confidence in Reconstruction:** 0.95
+
+**Uncertain Facts:**
+*   The specific implementation details of the PCRB-1 rubric scoring criteria.
+*   The exact structure of the "structured memory" compared to the "flat baseline" (only the hypothesis of what is being tested is known, not the data schema).
+
+**Proposed Measurable Next Experiment:**
+Conduct a "Provider-Neutrality" test. Create a mock JSON state file containing a simple mission. Pass this file to two different model families (e.g., a GPT-based model and a non-GPT model) via a standardized API adapter. Ask each model to summarize the mission and list the current status. Measure the Jaccard similarity of the extracted keywords and the accuracy of status reporting against the source JSON. This tests the open question regarding provider-neutral adapters and establishes a baseline for cross-model state fidelity.

@@ -1,0 +1,24 @@
+**1. Mission**
+Build an increasingly capable, measurable, and reproducible AI research system (Project RA-PSI-2026 / Mission Rubens) that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs/experiments, evaluates results objectively, preserves failures/successes, improves its own process, and transfers complete state to more capable future systems. GitHub is the canonical public repository for code, state, experiments, and history.
+
+**2. Current Technical State**
+Verified: GitHub Actions workflow (scheduled/manual) fetches public research, updates state, and produces machine-readable files. OpenAlex is the primary research source; a successful cycle collected 30 papers with zero errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. Experiment PROP-EXP-MEM-001 is generated but not yet run. External persistent state is used instead of chat memory. GitHub Actions drives progress when the founder (Rubens Alphe) is unavailable or quota-limited.
+
+**3. Failures and Learnings**
+The initial arXiv collector failed due to timeouts and HTTP 429 rate limits, resulting in empty paper lists. *Fix/Learning:* Replaced with OpenAlex-based `fetch_research.py` v2. Early assessment failures occurred because `analyze_research.py` was not uploaded/executed. *Fix/Learning:* Analyzer added and workflow rerun. *Decision:* Use OpenAlex over arXiv for reliability.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001 using fresh model instances. Steps: Use identical test prompts for flat baseline and structured memory conditions; run at least three blind trials per condition; score outputs using the PCRB-1 handoff rubric; compare mean scores and critical fabrication counts.
+
+**5. Missing/Uncertain Information**
+No trial results for PROP-EXP-MEM-001 exist yet. The specific PCRB-1 rubric metrics are referenced but not defined in this state. It is unknown whether structured memory will meet the acceptance threshold (mean score ≥10 points above baseline, no increase in critical fabrications). Future provider-neutral adapter details are unspecified.
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts I am unsure about:**
+*   Specific implementation details of the PCRB-1 rubric beyond its name and purpose.
+*   The exact current version number of `analyze_research.py`.
+*   Whether the "verified" status of GitHub Actions implies recent successful runs post-OpenAlex integration, or just configuration verification.
+
+**Proposed Measurable Next Experiment:**
+Run the three blind trials for PROP-EXP-MEM-001 immediately. Metric: Calculate the mean PCRB-1 fidelity score for Structured Memory vs. Flat Baseline. Success Criterion: Structured Memory mean score > (Flat Baseline mean score + 10) AND critical fabrication count in Structured Memory ≤ critical fabrication count in Flat Baseline.

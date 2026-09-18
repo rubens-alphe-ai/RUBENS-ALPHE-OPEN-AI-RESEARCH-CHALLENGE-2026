@@ -34,18 +34,32 @@ def now() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
-def reader_entry(policy: dict, private: dict) -> dict:
-    reader = dict(policy["reader"])
-    reader.update({k: v for k, v in rx.key_location(private, reader.pop("key")).items() if k in ("api_key_file", "api_key_env")})
-    reader.setdefault("json_mode", False)
-    return reader
+def reader_entries(policy: dict, private: dict) -> list[dict]:
+    """Readers in their pre-registered order; the first one that completes is used."""
+    entries = []
+    for rung in policy.get("reader_ladder") or [policy["reader"]]:
+        reader = dict(rung)
+        reader.update({k: v for k, v in rx.key_location(private, reader.pop("key")).items()
+                       if k in ("api_key_file", "api_key_env")})
+        reader.setdefault("json_mode", False)
+        entries.append(reader)
+    return entries
+
+
+def set_readings_aside(quiz_dir: Path, reader_id: str) -> None:
+    """Keep a failed reader's partial work; the next reader starts from nothing."""
+    aside = quiz_dir / "abandoned" / reader_id
+    aside.mkdir(parents=True, exist_ok=True)
+    for path in list(quiz_dir.glob("*.json")) + list(quiz_dir.glob("*.raw.txt")):
+        if path.name != "answer-key.json":
+            path.replace(aside / path.name)
 
 
 def read_one(entry: dict, prompt: str, ids: list[str], limits: dict, pause: float, out: Path, retries: int = 1) -> dict:
     """Ask the reader, parse, retry once on an unusable answer; keep every attempt."""
     record = {"attempts": []}
     for attempt in range(retries + 1):
-        time.sleep(pause_before_next(limits, prompt, pause) if limits else 0)
+        time.sleep(pause_before_next(limits, prompt, pause, int(entry.get("max_tokens", 2000))) if limits else 0)
         try:
             content, served = call(entry, prompt, int(entry.get("max_tokens", 2000)), limits)
         except AdapterError as exc:
@@ -97,29 +111,36 @@ def run(experiment_name: str, config_path: Path) -> dict:
     manifest = json.loads((results / "experiment-manifest.json").read_text(encoding="utf-8"))
     trials = list(manifest["trials"])
     random.Random(hq.seed_from(manifest["protocol_sha256"])).shuffle(trials)  # reading order hides pairing
-    entry = reader_entry(policy, private)
-    limits: dict = {}
-    graded, failures = {}, []
-    for trial in trials:
-        out = quiz_dir / ("%s.json" % trial["trial_id"])
-        if out.is_file():
-            record = json.loads(out.read_text(encoding="utf-8"))
-        else:
-            handoff = (ROOT / trial["output_path"]).read_text(encoding="utf-8")
-            prompt = hq.reader_prompt(quiz, rendered, handoff)
-            record = read_one(entry, prompt, ids, limits, float(policy.get("default_batch_pause_seconds", 20)), out)
-            if "answers" not in record:
-                failures.append(trial["trial_id"])
-                continue  # nothing stored: a later run asks again
-            record.update(trial_id=trial["trial_id"], pair_id=trial["pair_id"], condition=trial["condition"],
-                          prompt_sha256=sha256_text(prompt), read_at_utc=now(),
-                          grade=hq.grade(record["answers"], key, rendered))
-            out.write_text(json.dumps(record, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-        graded[trial["trial_id"]] = record
-    report["steps"].append({"step": "reading", "status": "complete" if not failures else "incomplete",
-                            "read": len(graded), "failed": failures})
-    if failures:
-        return finish("STOPPED_READING_INCOMPLETE")
+    readers = reader_entries(policy, private)
+    reader_used, graded = readers[0]["evaluator_id"], {}
+    for position, entry in enumerate(readers):
+        limits: dict = {}
+        graded, failures = {}, []
+        for trial in trials:
+            out = quiz_dir / ("%s.json" % trial["trial_id"])
+            if out.is_file():
+                record = json.loads(out.read_text(encoding="utf-8"))
+            else:
+                handoff = (ROOT / trial["output_path"]).read_text(encoding="utf-8")
+                prompt = hq.reader_prompt(quiz, rendered, handoff)
+                record = read_one(entry, prompt, ids, limits, float(policy.get("default_batch_pause_seconds", 20)), out)
+                if "answers" not in record:
+                    failures.append(trial["trial_id"])
+                    continue  # nothing stored: a later run asks again
+                record.update(trial_id=trial["trial_id"], pair_id=trial["pair_id"], condition=trial["condition"],
+                              reader_id=entry["evaluator_id"], prompt_sha256=sha256_text(prompt), read_at_utc=now(),
+                              grade=hq.grade(record["answers"], key, rendered))
+                out.write_text(json.dumps(record, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+            graded[trial["trial_id"]] = record
+        report["steps"].append({"step": "reading", "reader": entry["evaluator_id"],
+                                "status": "complete" if not failures else "incomplete",
+                                "read": len(graded), "failed": failures})
+        reader_used = entry["evaluator_id"]
+        if not failures:
+            break
+        if position + 1 == len(readers):
+            return finish("STOPPED_READING_INCOMPLETE")
+        set_readings_aside(quiz_dir, entry["evaluator_id"])
 
     pairs: dict[str, dict] = {}
     for record in graded.values():
@@ -128,7 +149,7 @@ def run(experiment_name: str, config_path: Path) -> dict:
     decision = hq.decide(sorted(complete, key=lambda p: p["pair_id"]), quiz_cfg)
     decision.update(record_version="RA-PSI-QUIZ-DECISION-V1", experiment_id=experiment_name, decided_at_utc=now(),
                     rule={k: quiz_cfg[k] for k in ("keep_min_delta_pp", "invention_margin")},
-                    reader_model=entry["model"], generator_model=spec["model"])
+                    reader=reader_used, generator_model=spec["model"])
     (results / "decision.json").write_text(json.dumps(decision, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     report["steps"].append({"step": "decision", "status": decision["decision"], "reason_codes": decision["reason_codes"]})
     return finish("DECIDED")

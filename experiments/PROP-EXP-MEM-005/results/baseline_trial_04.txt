@@ -1,0 +1,22 @@
+**1. What is the mission of this project?**
+The mission is to build an increasingly capable, measurable, and reproducible AI research system (Project RA-PSI-2026 / Mission Rubens) that preserves mission state across sessions and models. It must discover public research, identify weaknesses, formulate hypotheses, design and evaluate experiments objectively, preserve both successes and failures, improve its own process, and transfer complete state to more capable future systems.
+
+**2. What is the project's current technical state?**
+The system uses GitHub as the canonical public repository for code and state. A verified GitHub Actions workflow triggers research cycles. The primary research source is OpenAlex (replacing arXiv due to errors). A successful cycle collected 30 papers with no errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. The system has generated experiment **PROP-EXP-MEM-001**, which tests if structured project memory improves blind handoff fidelity compared to a flat baseline using PCRB-1-style evaluation. This experiment is proposed but **not yet run**.
+
+**3. What has already failed, and what was learned from those failures?**
+The initial arXiv collector failed due to timeouts and HTTP 429 rate limits, resulting in empty paper lists. **Learning:** Replaced with an OpenAlex-based collector (`fetch_research.py` v2), which resolved the issue. Additionally, assessment files were missing early on because `analyze_research.py` was not uploaded/executed. **Learning:** The analyzer was added, and the workflow was rerun successfully.
+
+**4. What is the single best next action?**
+Run **PROP-EXP-MEM-001** with fresh model instances. This involves using identical test prompts for both the flat baseline and structured memory conditions, conducting at least three blind trials per condition, scoring outputs with the PCRB-1 handoff rubric, and comparing mean scores and critical fabrication counts.
+
+**5. What important information is still missing or uncertain?**
+The actual results of PROP-EXP-MEM-001 are missing (it has not been run). Therefore, it is unknown whether structured memory improves blind mission reconstruction, which specific memory fields contribute most to fidelity, or how unrelated models perform in reproducing the mission without original conversation access. The criteria for independent evaluation of proposed experiments are defined but not yet applied to this specific experiment’s results.
+
+**Confidence in your reconstruction:** 0.95
+
+**Any facts you are unsure about:**
+I am unsure about the specific content of the 30 collected papers or the details within `research-assessment.json`, as only their existence and the absence of errors are stated. I am also unsure about the specific implementation details of the "flat baseline" vs. "structured memory" beyond the general description.
+
+**One proposed measurable next experiment:**
+Execute PROP-EXP-MEM-001: Compare the mean PCRB-1 handoff fidelity score and critical fabrication count between a flat baseline memory and a structured memory condition across at least three blind trials per condition using fresh model instances. Accept structured memory only if the mean score is at least 10 points higher than the baseline and critical fabrications do not increase.

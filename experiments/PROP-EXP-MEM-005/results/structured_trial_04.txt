@@ -1,0 +1,38 @@
+**1. What is the mission of this project?**
+Build a capable, measurable, and reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs/evaluates experiments objectively, preserves failures/successes, and transfers complete state to future systems.
+
+**2. What is the project's current technical state?**
+GitHub is the canonical repository (verified). GitHub Actions workflows fetch research and update state (verified). OpenAlex is the primary research source (verified). A successful cycle collected 30 papers with no errors (verified). The assessment layer outputs `research-assessment.json` and `proposed-next-problem.json` (verified). The experiment **PROP-EXP-MEM-001** has been generated but **not yet run** (verified). The project founder, Rubens Alphe, provides final sign-off but is quota-limited and lacks continuous access (verified).
+
+**3. What has already failed, and what was learned from those failures?**
+*   **arXiv Collector Failure:** Initial collection failed with empty paper lists, timeouts, and HTTP 429 errors. *Fix:* Replaced with `fetch_research.py` v2 using OpenAlex (Resolved).
+*   **Missing Assessment Files:** Early runs lacked assessment outputs. *Cause:* `analyze_research.py` was not uploaded/executed. *Fix:* Analyzer added and workflow rerun (Resolved).
+*   **Lesson:** Use external persistent state (GitHub) instead of chat memory for cross-session continuity. Separate proposal from acceptance; evaluation is required before canonical state changes.
+
+**4. What is the single best next action?**
+Execute **PROP-EXP-MEM-001** using fresh model instances. This experiment tests whether structured project memory improves blind handoff fidelity compared to a flat baseline.
+
+**5. What important information is still missing or uncertain?**
+*   Results of PROP-EXP-MEM-001 (no trials run yet).
+*   Which specific memory fields contribute most to fidelity.
+*   Whether unrelated models can reproduce the mission without original conversation context.
+*   How proposed experiments are independently evaluated before acceptance.
+*   How to implement a provider-neutral adapter for comparing multiple model families.
+*   **Key Constraint:** Structured memory is accepted only if its mean PCRB-1 score is at least 10 points higher than the flat baseline AND critical fabrications do not increase.
+
+***
+
+**Confidence in your reconstruction:** 0.95
+
+**Any facts you are unsure about:**
+*   The exact current score of the flat baseline (not provided in state).
+*   The specific "PCRB-1" rubric details (referenced but not defined in text).
+*   The current version number of `fetch_research.py` other than "v2".
+
+**One proposed measurable next experiment:**
+**PROP-EXP-MEM-001 Trial Execution:**
+1.  **Protocol:** Run 3 blind trials per condition (Flat Baseline vs. Structured Memory) using identical test prompts.
+2.  **Control:** Use fresh model instances for both conditions to prevent bias.
+3.  **Metric:** Score outputs using the PCRB-1 handoff rubric.
+4.  **Success Criteria:** Mean score of Structured Memory - Mean score of Flat Baseline ≥ 10 points AND Critical Fabrication Count(Structured) ≤ Critical Fabrication Count(Flat).
+5.  **Output:** Save results to `results/PROP-EXP-MEM-001.json` and update `research-assessment.json` with the verdict.

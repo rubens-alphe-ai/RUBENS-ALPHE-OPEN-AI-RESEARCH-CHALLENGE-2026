@@ -84,6 +84,34 @@
       "holdout_required": true,
       "regression_suite_required": true,
       "notes": "REJECT on 2026-09-17: mean paired delta -0.9 pp, 95% CI -4.1 to +2.2 pp, zero inventions and zero wrong facts in both conditions. See RESULT.md."
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-005",
+      "title": "Handoff Checklist",
+      "status": "INCONCLUSIVE",
+      "capability_target": "blind cross-model mission reconstruction",
+      "hypothesis": "A short generic checklist of the state's item kinds, added after the state, increases the facts a reader recovers from the handoff without more invented facts.",
+      "metric": "Fact accuracy on 32 keyed questions from the handoff alone (paired delta, pp); inventions on 10 absent-fact questions",
+      "acceptance_rule": "Thirty pairs. REJECT if checklist inventions exceed baseline by more than 5; PROVISIONAL_KEEP if mean delta >= +5 pp and 95% lower bound > 0; REJECT if 95% upper bound < +5 pp; else INCONCLUSIVE.",
+      "protocol_path": "experiments/PROP-EXP-MEM-005/PROTOCOL.md",
+      "evidence_stage": "PILOT",
+      "holdout_required": true,
+      "regression_suite_required": true,
+      "notes": "INCONCLUSIVE on 2026-09-18: +4.1 pp (95% CI +1.5 to +6.6), below the pre-registered +5 pp bar but excluding zero; zero inventions in both conditions. First positive signal of the project. See RESULT.md."
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-006",
+      "title": "Handoff Checklist, Replication with Other Models",
+      "status": "OPEN",
+      "capability_target": "blind cross-model mission reconstruction",
+      "hypothesis": "The handoff checklist raises fact transfer by at least 5 points with a generator and a reader from families not used before.",
+      "metric": "Fact accuracy on 32 keyed questions from the handoff alone (paired delta, pp); inventions on 10 absent-fact questions",
+      "acceptance_rule": "Sixty pairs, rule identical to MEM-005: REJECT if inventions exceed baseline by more than 5; PROVISIONAL_KEEP if mean delta >= +5 pp and 95% lower bound > 0; REJECT if 95% upper bound < +5 pp; else INCONCLUSIVE.",
+      "protocol_path": "experiments/PROP-EXP-MEM-006/PROTOCOL.md",
+      "evidence_stage": "PILOT",
+      "holdout_required": true,
+      "regression_suite_required": true,
+      "notes": "Generator moonshotai/kimi-k3 and reader z-ai/glm-5.3, both on NVIDIA; same states, checklist, quiz and threshold as MEM-005."
     }
   ]
 }

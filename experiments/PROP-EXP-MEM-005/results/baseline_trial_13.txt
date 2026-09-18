@@ -1,0 +1,24 @@
+**1. What is the mission of this project?**
+To build a capable, measurable, and reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs/experiments, evaluates results objectively, preserves outcomes, self-improves, and transfers complete state to future systems.
+
+**2. What is the project's current technical state?**
+GitHub is the canonical public repository (verified). A GitHub Actions workflow (scheduled and manual) uses OpenAlex as the primary research source (verified). The system successfully collected 30 papers with no errors. It generates `research-assessment.json` and `proposed-next-problem.json`. The current active experiment is PROP-EXP-MEM-001, which tests structured project memory against a flat baseline using PCRB-1-style blind handoff evaluation.
+
+**3. What has already failed, and what was learned from those failures?**
+The initial arXiv collector failed due to timeouts and HTTP 429 rate limits, resulting in empty paper lists. This was resolved by replacing it with an OpenAlex-based collector (`fetch_research.py` v2). Additionally, early assessment files were missing because the analyzer script was not uploaded/executed; this was resolved by adding `analyze_research.py` and rerunning the workflow.
+
+**4. What is the single best next action?**
+Execute PROP-EXP-MEM-001 by running at least three blind trials per condition (structured memory vs. flat baseline) using fresh model instances and identical test prompts. Each trial must be scored using the PCRB-1 handoff rubric, comparing mean scores and critical fabrication counts.
+
+**5. What important information is still missing or uncertain?**
+The actual results, mean scores, and fabrication counts for the structured vs. flat baseline conditions are absent (the experiment has not been run). It is unknown which specific memory fields contribute most to fidelity. It is unverified whether an unrelated model can reproduce the mission without the original conversation. The method for independent evaluation of proposed experiments remains open.
+
+**Confidence in reconstruction:** 0.95
+
+**Facts I am unsure about:**
+*   The specific numerical thresholds for "critical fabrication" counts beyond the requirement that they must not increase.
+*   The exact content of the "identical test prompts" to be used for the blind trials.
+*   The specific provider-neutral adapter design currently planned or in development.
+
+**One proposed measurable next experiment:**
+Conduct a "Single-Field Omission Trial." Select the three most critical fields in the structured memory (e.g., Mission, Current State, Constraints). Run three blind handoff instances where only one specific field is omitted at a time, while keeping the other fields intact. Measure the drop in PCRB-1 score for each omission. The field causing the largest statistically significant score degradation relative to the full-state baseline is identified as the highest-contributor to handoff fidelity. This directly answers the open question regarding which memory fields contribute most to fidelity.

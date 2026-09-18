@@ -1,0 +1,34 @@
+**1. Mission**
+Build a reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, and transfers complete state to future capable systems.
+
+**2. Current Technical State**
+*   **Infrastructure:** GitHub is the canonical repository (verified). A GitHub Actions workflow triggers scheduled/manual research cycles (verified).
+*   **Data Collection:** OpenAlex is the primary source (verified). Recent cycle collected 30 papers with zero errors (verified).
+*   **Analysis:** `analyze_research.py` generates `research-assessment.json` and `proposed-next-problem.json` (verified).
+*   **Experiment Proposal:** `PROP-EXP-MEM-001` is generated to test structured project memory vs. flat baseline using PCRB-1 handoff evaluation (proposed, not started).
+*   **Governance:** Separation of proposal and acceptance is enforced; evaluation precedes canonical state changes (decided).
+
+**3. Failures and Lessons**
+*   **arXiv Collector Failure:** Initial collection returned empty papers and HTTP 429/timeout errors. *Lesson/Fix:* Replaced with OpenAlex-based `fetch_research.py` v2 (resolved).
+*   **Missing Analysis Files:** Early runs lacked assessment files because `analyze_research.py` was not yet uploaded/executed. *Lesson/Fix:* Analyzer added; workflow rerun successfully (resolved).
+*   **Strategic Learning:** Rely on external persistent state (GitHub) rather than chat memory to ensure cross-session continuity, especially given the founder’s quota limitations.
+
+**4. Single Best Next Action**
+Execute `PROP-EXP-MEM-001` using fresh, isolated model instances. Run at least three blind trials per condition (structured memory vs. flat baseline) using identical test prompts. Score all outputs with the PCRB-1 rubric, comparing mean scores and critical fabrication counts.
+
+**5. Missing/Uncertain Information**
+*   **Experimental Results:** No trials of `PROP-EXP-MEM-001` have been run; no data exists yet (verified).
+*   **Contributing Factors:** Which specific memory fields drive fidelity is unknown.
+*   **Model Generalizability:** Whether unrelated models can reproduce the mission without original conversation context is untested.
+*   **Evaluation Protocol:** Independent evaluation methods for proposed experiments are still open questions.
+*   **Provider Neutrality:** Adapter design for comparing multiple model families is undefined.
+
+**Confidence in Reconstruction:** 0.95
+*High confidence in infrastructure status and decisions. Lower confidence in future outcomes due to lack of experimental data.*
+
+**Facts Unsure About:**
+*   Specific wording of the "identical test prompts" to be used in `PROP-EXP-MEM-001`.
+*   The exact current quota status of the founder (Rubens Alphe), only described as "limited."
+
+**Proposed Measurable Next Experiment:**
+Execute the pending `PROP-EXP-MEM-001`: Conduct 3 blind trials per condition (Flat vs. Structured Memory) using fresh model instances. **Success Criterion:** Structured Memory condition must yield a mean PCRB-1 score at least 10 points higher than the Flat Baseline, with no increase in critical fabrications.

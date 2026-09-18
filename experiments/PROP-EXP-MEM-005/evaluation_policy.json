@@ -1,0 +1,36 @@
+{
+  "policy_version": "RA-PSI-EVAL-POLICY-V1",
+  "design": "handoff_quiz",
+  "notes": "Pre-registered with PROTOCOL.md before any trial. Manifest condition 'baseline' = STATE_A.txt; manifest condition 'structured' = STATE_C.txt (the same state followed by the handoff checklist). Run with scripts/run_quiz_experiment.py.",
+  "generation": {
+    "provider": "openai-compatible",
+    "model": "qwen/qwen3.8-27b",
+    "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+    "key": "groq",
+    "temperature": 0.8,
+    "max_output_tokens": 1000,
+    "timeout_seconds": 300,
+    "extra_body": {"reasoning_effort": "none"},
+    "seeds": [701, 702, 703, 704, 705, 706, 707, 708, 709, 710, 711, 712, 713, 714, 715,
+              716, 717, 718, 719, 720, 721, 722, 723, 724, 725, 726, 727, 728, 729, 730],
+    "baseline_state": "STATE_A.txt",
+    "structured_state": "STATE_C.txt",
+    "protocol": "PROTOCOL.md"
+  },
+  "reader": {
+    "evaluator_id": "reader-groq-gpt-oss-120b",
+    "provider": "Groq",
+    "model": "openai/gpt-oss-120b",
+    "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+    "key": "groq",
+    "json_mode": false,
+    "max_tokens": 1500,
+    "extra_body": {"reasoning_effort": "low"}
+  },
+  "quiz": {
+    "file": "QUIZ.json",
+    "keep_min_delta_pp": 5,
+    "invention_margin": 5
+  },
+  "default_batch_pause_seconds": 20
+}

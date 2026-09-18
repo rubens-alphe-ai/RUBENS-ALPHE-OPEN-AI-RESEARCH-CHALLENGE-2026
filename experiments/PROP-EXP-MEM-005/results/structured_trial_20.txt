@@ -1,0 +1,22 @@
+**1. Mission**
+Build a measurable, reproducible AI research system capable of preserving mission state across sessions/models, discovering public research, identifying weaknesses, formulating hypotheses, designing experiments, and transferring complete state to future systems.
+
+**2. Current Technical State**
+GitHub is the canonical public repository. A GitHub Actions workflow triggers scheduled/manual research cycles. OpenAlex is the primary research source, successfully collecting 30 papers with zero errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. Experiment `PROP-EXP-MEM-001` was generated from the dominant persistent-memory theme but has not been executed. The system separates proposal from acceptance, requiring evaluation before canonical state changes.
+
+**3. Failures & Learnings**
+Initial arXiv collection failed due to timeouts and HTTP 429 rate limits, resulting in empty paper lists. **Fix/Decision:** Replaced arXiv with OpenAlex. Early assessment runs produced no files because `analyze_research.py` was missing. **Fix:** Uploaded analyzer and reran workflow.
+
+**4. Single Best Next Action**
+Execute `PROP-EXP-MEM-001` using fresh model instances. This involves running at least three blind trials per condition (flat baseline vs. structured memory) using identical prompts, scoring outputs via the PCRB-1 rubric, and comparing mean scores and critical fabrication counts.
+
+**5. Missing/Uncertain Information**
+No trial results exist yet. It is unverified whether structured memory improves blind reconstruction. Specific contributions of individual memory fields to fidelity are unknown. The feasibility of unrelated models reproducing the mission without original conversation context is untested. Methods for independent evaluation of proposed experiments and provider-neutral adapters for multiple model families are undefined.
+
+**Confidence:** 0.95
+
+**Unsure Facts:**
+None. All facts are explicitly provided in the state.
+
+**Proposed Measurable Next Experiment:**
+Execute `PROP-EXP-MEM-001`. Success criterion: Structured memory mean PCRB-1 score must be ≥10 points higher than the flat baseline, with no increase in critical fabrications.

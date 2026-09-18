@@ -1,0 +1,38 @@
+**1. Mission**
+Build a reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, tests hypotheses, and transfers state to future systems.
+
+**2. Current Technical State**
+- **Infrastructure:** GitHub is the canonical repository (verified). GitHub Actions workflows fetch research and update state (verified).
+- **Data Source:** OpenAlex is the primary source, replacing arXiv (verified). A successful cycle collected 30 papers with zero errors (verified).
+- **Assessment:** `analyze_research.py` runs via CI to produce `research-assessment.json` and `proposed-next-problem.json` (verified).
+- **Current Experiment:** `PROP-EXP-MEM-001` is proposed but not yet executed (verified). It tests if structured project memory improves blind handoff fidelity over a flat baseline.
+
+**3. Failures and Learnings**
+- **arXiv Collector:** Repeated timeouts and HTTP 429 errors caused `papers=[]`. **Fix:** Replaced with OpenAlex-based `fetch_research.py v2` (resolved).
+- **Missing Assessment:** Initial runs lacked assessment files because `analyze_research.py` was not uploaded/executed. **Fix:** Added script and reran workflow (resolved).
+- **Lesson:** Do not rely on chat memory; use external persistent state for cross-model continuity. Separate proposal from acceptance; evaluation is required before canonical state changes.
+
+**4. Single Best Next Action**
+Execute `PROP-EXP-MEM-001`: Run at least three blind trials per condition (structured memory vs. flat baseline) using fresh model instances and identical test prompts. Score outputs using the PCRB-1 handoff rubric.
+
+**5. Missing/Uncertain Information**
+- Actual scores from `PROP-EXP-MEM-001` trials (none exist yet).
+- Which specific memory fields contribute most to fidelity (open).
+- Method for independent evaluation of proposed experiments before acceptance (open).
+- Provider-neutral adapter design for comparing model families (open).
+- Whether unrelated models can reproduce the mission without original conversation context (open).
+
+**Confidence in Reconstruction:** 0.95
+The state is highly structured and explicit. Uncertainty stems only from the lack of experimental results, which are explicitly noted as absent.
+
+**Facts I am unsure about:**
+There are no invented facts. All statuses are explicitly provided in the state. The only "unknowns" are the future results of the proposed experiment and the answers to the open research questions, which the state correctly identifies as missing.
+
+**Proposed Measurable Next Experiment:**
+**Experiment:** `PROP-EXP-MEM-001` Execution.
+**Method:**
+1. Create two conditions: Condition A (Flat Baseline: raw text summary of mission) and Condition B (Structured Memory: JSON schema with fields like `mission`, `decisions`, `failures`, `status`).
+2. Submit identical handoff prompts to three distinct, fresh model instances for each condition.
+3. Evaluate each output using the PCRB-1 rubric (score 0-100) and count "critical fabrications" (claims of facts not in the source state).
+4. **Success Criterion:** Condition B must have a mean PCRB-1 score at least 10 points higher than Condition A, with no increase in critical fabrication count.
+5. **Output:** Persist results to `experiment-results/PROP-EXP-MEM-001.json`.

@@ -1,0 +1,27 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates/detects/evaluates hypotheses, and transfers complete state to future systems.
+
+**2. Current Technical State**
+GitHub is the canonical repository for code and state. A verified GitHub Actions workflow schedules research cycles via OpenAlex. The system successfully collected 30 papers with zero errors. `research-assessment.json` and `proposed-next-problem.json` are generated. Experiment PROP-EXP-MEM-001 is proposed to test structured memory vs. flat baseline using PCRB-1-style handoff evaluation. Rubens Alphe is the founder, quota-limited, and holds final sign-off authority.
+
+**3. Failures and Lessons**
+Initial arXiv collection failed due to timeouts and HTTP 429 rate limits, resulting in an empty paper list. *Fix:* Replaced with OpenAlex-based `fetch_research.py` v2. Early assessment files were missing because `analyze_research.py` was not uploaded or executed. *Fix:* Analyzer added and workflow rerun.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001: Run blind handoff trials with fresh model instances, using identical prompts for flat baseline and structured memory conditions (min. 3 trials each), scoring via the PCRB-1 rubric.
+
+**5. Missing/Uncertain Information**
+- No trial results exist yet; PROP-EXP-MEM-001 has not been run.
+- Specific content of the “30 papers” and exact metrics in `research-assessment.json` are not detailed.
+- Implementation details of the PCRB-1 rubric are referenced but not defined in the text.
+- Specific provider-neutral adapter design is an open question.
+
+**Confidence in reconstruction:** 0.95
+
+**Facts unsure about:**
+- The exact definition/scoring criteria of the PCRB-1 handoff rubric.
+- The specific content of the 30 collected OpenAlex papers.
+- The current version number of the GitHub Actions workflow file itself.
+
+**Proposed measurable next experiment:**
+Implement and execute PROP-EXP-MEM-001. Define a fixed handoff prompt. Generate 3 blind handoff outputs using a flat text log (baseline) and 3 using the structured memory fields (treatment) with a fresh model instance. Score all 6 outputs against the PCRB-1 rubric. Accept structured memory only if the mean treatment score exceeds the mean baseline score by ≥10 points and critical fabrication counts do not increase.

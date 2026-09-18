@@ -1,0 +1,26 @@
+**1. What is the mission of this project?**
+To build a capable, measurable, and reproducible AI research system that preserves mission state across sessions and models. It must discover public research, identify weaknesses, formulate hypotheses, design/evaluate experiments, preserve failures/successes, improve its own process, and transfer state to future systems.
+
+**2. What is the project's current technical state?**
+The system uses GitHub as the canonical public repository (verified). A GitHub Actions workflow runs scheduled research cycles using OpenAlex as the primary source (verified). A successful cycle collected 30 papers with no errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json` (verified). An experiment, PROP-EXP-MEM-001, has been proposed to test structured project memory versus a flat baseline using PCRB-1-style handoff evaluation. This experiment is currently in "proposed" status and has not been executed.
+
+**3. What has already failed, and what was learned from those failures?**
+The initial arXiv collector failed due to timeouts and HTTP 429 rate limits, resulting in an empty paper list. This led to the decision to replace arXiv with OpenAlex to ensure reliability. Early runs failed to produce assessment files because the analyzer script was missing; this was resolved by adding and executing `analyze_research.py`. The failure taught the project to use external persistent state rather than chat memory and to separate proposal from acceptance.
+
+**4. What is the single best next action?**
+Execute PROP-EXP-MEM-001. This involves running blind handoff trials with fresh model instances using identical prompts for the flat baseline and structured memory conditions. At least three trials per condition are required, scored via the PCRB-1 rubric to compare mean scores and critical fabrication counts.
+
+**5. What important information is still missing or uncertain?**
+The actual results of PROP-EXP-MEM-001 are missing; no trials have been run. It is uncertain whether structured memory will meet the acceptance threshold (mean PCRB-1 score ≥10 points above baseline with no increase in fabrications). The contribution of specific memory fields to fidelity is unknown. The method for independent evaluation of proposed experiments before acceptance remains an open question.
+
+***
+
+**Confidence in reconstruction:** 0.95
+
+**Facts I am unsure about:**
+*   Specific details of the PCRB-1 rubric criteria (only the name and purpose are provided).
+*   The exact structure of the `research-assessment.json` file.
+*   Whether any other experiment proposals exist besides PROP-EXP-MEM-001.
+
+**Proposed measurable next experiment:**
+Execute the three blind trials for PROP-EXP-MEM-001. Measure the mean PCRB-1 score for the "structured memory" condition against the "flat baseline" condition. Measure the count of "critical fabrications" in both conditions. Accept the structured memory implementation only if $\text{Mean}_{\text{structured}} \ge \text{Mean}_{\text{flat}} + 10$ and $\text{Fabrications}_{\text{structured}} \le \text{Fabrications}_{\text{flat}}$.
