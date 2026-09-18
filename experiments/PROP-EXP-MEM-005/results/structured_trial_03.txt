@@ -1,0 +1,31 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, evaluates weaknesses, formulates hypotheses, runs experiments, preserves outcomes, and transfers state to future capable systems.
+
+**2. Current Technical State**
+*   **Infrastructure:** GitHub is the canonical repository (verified). A GitHub Actions workflow fetches public research and updates state (verified).
+*   **Data Source:** OpenAlex is the primary collector (verified). Successful cycle collected 30 papers with zero errors (verified).
+*   **Assessment:** `analyze_research.py` generates `research-assessment.json` and `proposed-next-problem.json` (verified).
+*   **Current Experiment:** `PROP-EXP-MEM-001` is proposed to test if structured memory improves blind handoff fidelity vs. a flat baseline using PCRB-1-style evaluation. Status: Proposed, not yet run. No trial results exist (verified).
+
+**3. Failures and Lessons**
+*   **arXiv Collector:** Failed with empty paper lists, timeouts, and HTTP 429 rate limits. **Fix:** Replaced with OpenAlex-based `fetch_research.py` v2. **Lesson:** Use OpenAlex over arXiv for reliability.
+*   **Missing Assessment Files:** Early runs lacked output because the analyzer script was not uploaded/executed. **Fix:** Added `analyze_research.py` and reran workflow. **Lesson:** Ensure all pipeline components are deployed before execution.
+
+**4. Single Best Next Action**
+Execute `PROP-EXP-MEM-001` using fresh model instances. Run at least three blind trials per condition (structured memory vs. flat baseline) using identical test prompts. Score outputs with the PCRB-1 rubric and compare mean scores and critical fabrication counts.
+
+**5. Missing or Uncertain Information**
+*   Specific content of the flat baseline memory format.
+*   Exact PCRB-1 rubric criteria details.
+*   Specific fields in the structured memory format.
+*   Provider-neutral adapter design for comparing multiple model families.
+*   Independent evaluation protocol for proposed experiments before acceptance.
+
+**Confidence in Reconstruction:** 0.95
+**Uncertain Facts:**
+*   The specific technical implementation of the "PCRB-1-style handoff evaluation" (only the name and general purpose are known).
+*   The exact structure of the `research-assessment.json` file (only its existence and source are verified).
+*   The specific "dominant persistent-memory research theme" that generated the proposal.
+
+**Proposed Measurable Next Experiment:**
+Run a single pilot trial of `PROP-EXP-MEM-001` with one fresh model instance for both conditions to validate the rubric scoring mechanism and confirm that the structured memory format yields a parseable output for the PCRB-1 score, before proceeding to the full N=3 blind trials. Success criterion: Both conditions produce a valid numeric PCRB-1 score without parsing errors.

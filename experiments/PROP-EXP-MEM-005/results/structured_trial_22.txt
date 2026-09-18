@@ -1,0 +1,31 @@
+**1. Mission**
+Build a measurable, reproducible AI research system (RA-PSI-2026 / Mission Rubens) that preserves state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, and transfers complete state to future systems.
+
+**2. Current Technical State**
+- **Infrastructure:** GitHub is the canonical repository. A verified GitHub Actions workflow runs scheduled/manual research cycles.
+- **Data Source:** OpenAlex is the primary collector (verified). It successfully collected 30 papers with zero errors.
+- **Assessment:** `analyze_research.py` generates `research-assessment.json` and `proposed-next-problem.json` (verified).
+- **Current Experiment:** PROP-EXP-MEM-001 is proposed but **not yet run**. It tests if structured project memory improves blind handoff fidelity versus a flat baseline using PCRB-1 style evaluation.
+
+**3. Failures and Lessons**
+- **arXiv Collector Failure:** Initial attempts resulted in empty paper lists due to timeouts and HTTP 429 rate limits. *Fix:* Replaced with OpenAlex-based `fetch_research.py` v2 (Resolved).
+- **Missing Assessment Files:** Early runs lacked output files because `analyze_research.py` was not uploaded/executed. *Fix:* Uploaded analyzer and reran workflow (Resolved).
+- **Lesson:** External persistent state is required for cross-session continuity; chat memory is insufficient.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001. Run at least three blind trials per condition (structured memory vs. flat baseline) using fresh model instances and identical prompts. Score outputs using the PCRB-1 handoff rubric. Compare mean scores and critical fabrication counts.
+
+**5. Missing/Uncertain Information**
+- No trial results for PROP-EXP-MEM-001 exist yet.
+- Which specific memory fields contribute most to fidelity is unknown.
+- Whether unrelated models can reproduce the mission without original conversation context is unverified.
+- Methodology for independent evaluation of proposed experiments is open.
+- Provider-neutral adapter design for comparing multiple model families is undefined.
+
+**Confidence in Reconstruction:** 0.95
+
+**Uncertain Facts:**
+- None. All provided facts are explicitly marked with status. The only "unknowns" are explicitly labeled as open questions or not-yet-started actions in the source state.
+
+**Proposed Measurable Next Experiment:**
+Execute the full PROP-EXP-MEM-001 protocol. Define success criteria: Structured memory must achieve a mean PCRB-1 score at least 10 points higher than the flat baseline, with no increase in critical fabrications. Record all raw outputs, scores, and fabrication logs in GitHub to preserve both success and failure data for future reproducibility.

@@ -1,0 +1,13 @@
+1. **Mission**: Build a reproducible, measurable AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, and objectively evaluates results while preserving both successes and failures.
+
+2. **Technical State**: GitHub is the canonical repository. A GitHub Actions workflow triggers `fetch_research.py` (using OpenAlex) to collect papers and `analyze_research.py` to generate `research-assessment.json` and `proposed-next-problem.json`. A specific experiment, PROP-EXP-MEM-001, has been proposed to test structured memory versus a flat baseline for blind handoff fidelity. The system is currently awaiting execution of this experiment.
+
+3. **Failures & Learnings**: The initial arXiv collector failed with empty results due to timeouts and HTTP 429 rate limits. This was resolved by switching to OpenAlex. Early assessments were missing because `analyze_research.py` was not uploaded/executed; this was fixed by adding the script and rerunning the workflow. These failures highlighted the need for robust API handling and verified deployment of all pipeline components before execution.
+
+4. **Single Best Next Action**: Execute PROP-EXP-MEM-001 using fresh model instances. Run at least three blind trials for both the flat baseline and structured memory conditions using identical prompts, then score outputs using the PCRB-1 handoff rubric to compare mean scores and critical fabrication counts.
+
+5. **Missing/Uncertain Information**: No results from PROP-EXP-MEM-001 exist yet. It is unverified whether structured memory actually improves fidelity. The specific contribution of individual memory fields to fidelity is unknown. It remains untested if an unrelated model can reproduce the mission without original conversation context. The method for independent evaluation of proposed experiments before acceptance is undefined. A provider-neutral adapter for comparing multiple model families has not been designed.
+
+- **Confidence**: 0.95
+- **Unsure Facts**: None regarding the provided state; all facts are explicitly stated in the supplied context.
+- **Proposed Measurable Next Experiment**: Conduct a "Provider-Neutral Adapter Proof-of-Concept." Create a lightweight interface that allows the same handoff prompt and rubric to be executed against two distinct model providers (e.g., one LLM provider for baseline, another for structured memory). Measure the variance in PCRB-1 scores when switching providers to determine if the memory structure's benefits are model-specific or generalizable, establishing a reproducibility metric for cross-vendor consistency.

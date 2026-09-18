@@ -1,0 +1,33 @@
+**1. Mission**
+Build a measurable, reproducible AI research system for RA-PSI-2026 / Mission Rubens that preserves state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs/evaluates experiments, preserves failures, improves its own process, and transfers state to future systems.
+
+**2. Current Technical State**
+GitHub is the canonical repository (verified). A verified GitHub Actions workflow triggers scheduled/manual research cycles. OpenAlex is the primary research source (verified). A recent cycle collected 30 papers with zero errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json` (verified). Experiment `PROP-EXP-MEM-001` has been generated but not yet run (verified).
+
+**3. Failures and Learnings**
+*   **Failure:** Initial arXiv collection failed (`papers=[]`, timeouts, HTTP 429). **Fix/Learning:** Replaced with OpenAlex-based `fetch_research.py` v2 to avoid rate limits (resolved).
+*   **Failure:** Assessment files missing after early runs. **Fix/Learning:** `analyze_research.py` was not uploaded/executed; analyzer added and workflow rerun (resolved).
+
+**4. Single Best Next Action**
+Execute `PROP-EXP-MEM-001`: Test if structured project memory improves blind handoff fidelity versus a flat baseline using PCRB-1-style evaluation. Requires fresh model instances, identical prompts, ≥3 blind trials per condition, same rubric for scoring, and comparison of mean scores and critical fabrication counts.
+
+**5. Missing/Uncertain Information**
+*   Actual results of `PROP-EXP-MEM-001` trials.
+*   Which specific memory fields contribute most to fidelity.
+*   Reproducibility of the mission by unrelated models without original conversation access.
+*   Independent evaluation methodology for proposed experiments.
+*   Provider-neutral adapter design for multi-model comparison.
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts Unsure About:**
+*   Specific content of the 30 collected papers.
+*   Exact implementation details of the PCRB-1 rubric.
+*   Current quota status of Rubens Alphe (known to be limited, but current level unspecified).
+
+**Proposed Measurable Next Experiment:**
+Conduct the `PROP-EXP-MEM-001` blind trial.
+*   **Hypothesis:** Structured memory yields significantly higher handoff fidelity than flat baseline.
+*   **Metric:** Mean PCRB-1 score difference and count of critical fabrications.
+*   **Acceptance Criteria:** Structured memory must score ≥10 points higher than baseline AND not increase critical fabrications.
+*   **Method:** Run 3+ trials per condition with fresh instances, identical prompts, blind evaluation.

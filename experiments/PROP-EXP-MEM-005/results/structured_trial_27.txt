@@ -1,0 +1,30 @@
+**1. Mission**
+Build a measurable, reproducible AI research system (RA-PSI-2026 / Mission Rubens) that preserves state across sessions/models, discovers public research, evaluates weaknesses, and transfers state to future systems.
+
+**2. Current Technical State**
+GitHub is the canonical repository (verified). A verified GitHub Actions workflow triggers `fetch_research.py` (OpenAlex-based) to update state. A successful cycle collected 30 papers with zero errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json` (verified). Experiment PROP-EXP-MEM-001 is proposed to test if structured memory improves blind handoff fidelity versus a flat baseline using PCRB-1 rubric (proposed, not run).
+
+**3. Failures and Lessons**
+Initial arXiv collection failed due to timeouts and HTTP 429 errors, resulting in empty papers lists. Fix: Replaced collector with OpenAlex-based v2, resolving errors. Early assessment files were missing because `analyze_research.py` was not uploaded/executed. Fix: Added analyzer and reran workflow.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001: Run at least three blind trials per condition (structured memory vs. flat baseline) using identical prompts and fresh model instances. Score outputs with the PCRB-1 rubric; accept structured memory only if mean score is ≥10 points higher and critical fabrications do not increase.
+
+**5. Missing/Uncertain Information**
+*   Actual scores and fabrication counts for PROP-EXP-MEM-001 (no trial results exist yet).
+*   Provider-neutral adapter design for comparing multiple model families.
+*   Specific method for independent evaluation of proposed experiments before acceptance.
+*   Which specific memory fields contribute most to fidelity.
+*   Human sign-off status from Rubens Alphe (founder, quota-limited, final authority).
+
+**Confidence:** 0.95
+
+**Unsure Facts:** None. All provided facts are explicitly stated with status. I do not assume access to the actual GitHub repo or file contents beyond what is described.
+
+**Proposed Measurable Next Experiment:**
+**PROP-EXP-MEM-002: Adapter Neutrality Test**
+*   **Hypothesis:** A provider-neutral adapter allows identical state transfer between at least two distinct model families without fidelity loss.
+*   **Method:** Create a synthetic mission state. Transfer it via the adapter from Model Family A to Model Family B. Have Family B reconstruct the state.
+*   **Metric:** Compare reconstruction fidelity score (using PCRB-1) against a baseline where Family B receives the raw state without the adapter. Success if fidelity loss is <5% and no critical fabrications occur.
+*   **Cost:** Low (uses existing state files and two model API calls).
+*   **Status:** Proposed.

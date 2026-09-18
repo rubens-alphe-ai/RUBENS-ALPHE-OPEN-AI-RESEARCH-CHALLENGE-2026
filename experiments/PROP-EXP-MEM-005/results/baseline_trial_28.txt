@@ -1,0 +1,31 @@
+### 1. Mission
+Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, tests hypotheses, and transfers complete state to future systems.
+
+### 2. Current Technical State
+The system relies on GitHub as the canonical repository and GitHub Actions for scheduled cycles. OpenAlex is the verified research source, successfully collecting 30 papers with no errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. An experiment, PROP-EXP-MEM-001, has been proposed to test structured project memory against a flat baseline using PCRB-1 handoff evaluation. The system is currently in a "proposed, not yet run" state for this experiment.
+
+### 3. Failures and Lessons
+*   **arXiv Collection Failure:** Initial attempts resulted in empty paper lists, timeouts, and HTTP 429 rate limits. *Lesson:* Replaced with OpenAlex-based `fetch_research.py v2`, which resolved the issue.
+*   **Missing Assessment Files:** Early runs did not produce assessment files because `analyze_research.py` was not uploaded/executed. *Lesson:* Ensured the analyzer was added and the workflow rerun to generate required outputs.
+
+### 4. Single Best Next Action
+Execute PROP-EXP-MEM-001 by running at least three blind trials per condition (structured memory vs. flat baseline) using fresh model instances and identical test prompts. Score outputs using the PCRB-1 rubric to compare mean scores and critical fabrication counts.
+
+### 5. Missing or Uncertain Information
+*   Specific PCRB-1 rubric criteria and score definitions are not provided in the state.
+*   The exact structure of the "structured project memory" versus the "flat baseline" is not detailed.
+*   No results exist yet for PROP-EXP-MEM-001; the hypothesis remains open.
+*   Provider-neutral adapter design for comparing multiple model families is not yet defined.
+*   Specific acceptance threshold details (other than the 10-point margin) are implicit in the "in force" constraints but not elaborated as a formula.
+
+***
+
+**Confidence in reconstruction:** 0.95
+
+**Facts I am unsure about:**
+*   The specific quantitative metrics within the PCRB-1 rubric (e.g., how "critical fabrication" is precisely defined beyond the count).
+*   The exact content of the `research-assessment.json` file, as only its existence is confirmed.
+*   The specific identity of the "more capable future system" intended for state transfer.
+
+**Proposed measurable next experiment:**
+**EXP-ADAPTER-001:** Implement a provider-neutral adapter interface that wraps 2 different LLM APIs. Measure the latency overhead and output consistency (using a fixed set of 10 logical reasoning tasks) between the native API calls and the adapted calls. Success criterion: <5% variance in output correctness and <100ms added latency per call.

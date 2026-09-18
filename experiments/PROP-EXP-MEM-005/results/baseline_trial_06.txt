@@ -1,0 +1,13 @@
+1. **Mission**: Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, preserves failures, and transfers complete state to future capable systems.
+
+2. **Current Technical State**: GitHub is the canonical repository. A GitHub Actions workflow fetches research from OpenAlex (primary source) and updates project state. A successful cycle collected 30 papers with no errors. The system generates `research-assessment.json` and `proposed-next-problem.json`. An experiment, PROP-EXP-MEM-001, has been proposed to test structured project memory vs. flat baseline for blind handoff fidelity but has not been run.
+
+3. **Failures and Learnings**: Initial arXiv collection failed due to timeouts and HTTP 429 rate limits; learned to use OpenAlex instead. Early assessment files failed to appear because `analyze_research.py` was missing; learned to ensure all pipeline scripts are uploaded and executed before workflow runs.
+
+4. **Single Best Next Action**: Execute PROP-EXP-MEM-001 using fresh model instances. This involves running at least three blind trials per condition (structured memory vs. flat baseline) with identical prompts and scoring outputs using the PCRB-1 handoff rubric.
+
+5. **Missing/Uncertain Information**: No trial results exist yet for PROP-EXP-MEM-001. It is unknown if structured memory meets the acceptance criterion (mean PCRB-1 score ≥10 points above baseline without increased fabrications). Specific contributions of individual memory fields to fidelity are unknown. The optimal method for independent pre-acceptance evaluation of proposed experiments is unresolved. Provider-neutral adapter design for comparing multiple model families is undefined.
+
+- **Confidence**: 0.95
+- **Uncertain Facts**: The specific technical details of the "PCRB-1-style handoff evaluation" rubric are not defined in the state. The exact composition of the "structured memory" fields versus the "flat baseline" is not specified.
+- **Proposed Experiment**: Conduct a pilot run of PROP-EXP-MEM-001 with one trial per condition using a fixed, verifiable metric for "handoff fidelity" (e.g., percentage of key mission constraints correctly restated) to validate the rubric before full three-trial execution.

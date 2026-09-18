@@ -1,0 +1,28 @@
+**1. Mission:**
+Build a reproducible, measurable AI research system ("Mission Rubens") that preserves state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, runs experiments, and objectively evaluates results. It must transfer complete state to future systems.
+
+**2. Current Technical State:**
+The system uses GitHub as the canonical repository. A GitHub Actions workflow is verified to fetch public research from OpenAlex (replacing arXiv). Recent cycles collected 30 papers with zero errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. An experiment, PROP-EXP-MEM-001, has been proposed to test structured project memory vs. flat baseline using PCRB-1 handoff evaluation. No trials of this experiment have been executed yet.
+
+**3. Failures and Lessons:**
+Initial arXiv collection failed due to timeouts and HTTP 429 rate limits, resulting in empty data. Lesson: Replace unstable sources with more robust public APIs (OpenAlex). Assessment files were initially missing because the analyzer script (`analyze_research.py`) was not uploaded/executed. Lesson: Ensure all necessary code artifacts are deployed before triggering workflow runs.
+
+**4. Single Best Next Action:**
+Execute PROP-EXP-MEM-001. Run at least three blind trials per condition (flat baseline vs. structured memory) using identical test prompts and fresh model instances. Score outputs using the PCRB-1 handoff rubric to compare mean scores and critical fabrication counts.
+
+**5. Missing/Uncertain Information:**
+*   Actual experimental results for PROP-EXP-MEM-001 (none exist yet).
+*   Which specific memory fields contribute most to handoff fidelity (open hypothesis).
+*   Whether unrelated models can reproduce the mission without the original conversation (open question).
+*   Implementation details for the provider-neutral adapter for comparing multiple model families.
+*   The specific threshold for "critical fabrication" beyond the non-increase constraint.
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts I Am Unsure About:**
+*   The specific content of the "30 papers" collected (only count and source are verified).
+*   The exact definition of the "PCRB-1-style handoff evaluation" rubric criteria (only referenced, not defined in state).
+*   The specific quota limits or access constraints affecting Rubens Alphe beyond "quota-limited."
+
+**Proposed Measurable Next Experiment:**
+Run the planned PROP-EXP-MEM-001 trials. Specifically, conduct 3 blind handoff tests using a flat text baseline and 3 using the structured memory format. Measure the mean PCRB-1 score for each condition. Success criterion: Structured memory mean score must be ≥10 points higher than the flat baseline, with no increase in critical fabrications.

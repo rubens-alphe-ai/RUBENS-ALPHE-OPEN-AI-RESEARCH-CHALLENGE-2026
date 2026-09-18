@@ -1,0 +1,40 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates tested hypotheses, and transfers state to future systems.
+
+**2. Current Technical State**
+*   **Infrastructure:** GitHub is the canonical repository. GitHub Actions workflows (scheduled/manual) drive research cycles.
+*   **Data Collection:** OpenAlex is the primary source (verified). Last cycle collected 30 papers with zero errors.
+*   **Analysis:** `analyze_research.py` generates `research-assessment.json` and `proposed-next-problem.json`.
+*   **Experiment:** PROP-EXP-MEM-001 is proposed to test structured project memory vs. flat baseline for blind handoff fidelity (PCRB-1 rubric). Status: Not started.
+*   **Governance:** Strict separation of proposal and acceptance. Human sign-off required by Rubens Alphe.
+
+**3. Failures & Lessons**
+*   **arXiv Collector:** Failed due to timeouts and HTTP 429 rate limits, resulting in empty paper lists.
+    *   *Lesson:* Replaced with OpenAlex collector (v2), which proved stable.
+*   **Missing Analysis Files:** Early runs lacked assessment outputs because `analyze_research.py` was not uploaded/executed.
+    *   *Lesson:* Workflow steps must include all required scripts; analyzer added and workflow rerun successfully.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001: Run at least three blind trials per condition (flat baseline vs. structured memory) using identical test prompts and fresh model instances, scoring outputs with the PCRB-1 rubric to compare mean scores and fabrication counts.
+
+**5. Missing/Uncertain Information**
+*   **Execution Data:** No trial results exist yet; no scores, fabrication counts, or comparative analysis have been generated.
+*   **Rubric Details:** The specific criteria for "PCRB-1 handoff rubric" scoring are not defined in the supplied state.
+*   **Provider Adapter:** No details on the implementation of the provider-neutral adapter for future model family comparisons.
+*   **Field Contribution:** Unknown which specific memory fields contribute most to fidelity (open question).
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts I am Unsure About**
+*   The exact threshold values for "critical fabrication" within the PCRB-1 rubric.
+*   The specific technical architecture of the "provider-neutral adapter" mentioned in open questions.
+*   The current quota status or availability of Rubens Alphe for immediate sign-off (only his role and limitation are stated).
+
+**Proposed Measurable Next Experiment**
+**Experiment:** Blinded A/B Test of Memory Structures.
+**Procedure:**
+1.  Define two state representations: `state_flat.json` (key-value flat) and `state_structured.json` (nested, semantic fields).
+2.  Select 3 fresh model instances.
+3.  Prompt each instance to reconstruct the mission from `state_flat.json` (Baseline) and `state_structured.json` (Treatment) using the PCRB-1 rubric.
+4.  Metric: Calculate mean reconstruction accuracy score and count of factual hallucinations per condition.
+5.  Success Criteria: Structured memory must achieve a mean score ≥10 points higher than baseline with no increase in critical fabrications to be accepted.

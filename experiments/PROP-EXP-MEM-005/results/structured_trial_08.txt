@@ -1,0 +1,30 @@
+**1. Mission**
+Build a reproducible AI research system that preserves mission state across sessions, discovers public research, identifies weaknesses, designs/evaluates experiments, and transfers state to future systems.
+
+**2. Current Technical State**
+- **Infra:** GitHub is canonical store. Verified GitHub Actions workflow schedules/ triggers research cycles.
+- **Data:** OpenAlex is primary source (replaced arXiv). Last verified cycle collected 30 papers with zero errors.
+- **Processing:** `fetch_research.py` v2 and `analyze_research.py` are operational. System outputs `research-assessment.json` and `proposed-next-problem.json`.
+- **Proposal:** Experiment `PROP-EXP-MEM-001` generated. It tests if structured memory improves blind handoff fidelity vs. flat baseline using PCRB-1 rubric. Status: Proposed, not run.
+
+**3. Failures and Lessons**
+- **arXiv Collector:** Failed due to timeouts and HTTP 429 rate limits. **Lesson:** Switched to OpenAlex.
+- **Assessment Layer:** Initial runs produced no assessment files. **Cause:** `analyze_research.py` was missing/unexecuted. **Fix:** Uploaded script and reran workflow.
+
+**4. Single Best Next Action**
+Run `PROP-EXP-MEM-001`. Execute at least three blind trials per condition (structured vs. flat memory) using fresh model instances and identical prompts. Score outputs with the PCRB-1 handoff rubric.
+
+**5. Missing/Uncertain Information**
+- Actual scores or results of `PROP-EXP-MEM-001` (none exist yet).
+- Specific contribution of individual memory fields to fidelity.
+- Methodology for provider-neutral adaptation to compare multiple model families.
+- Independent evaluation protocol for accepting proposed experiments prior to state change.
+- Whether unrelated models can reproduce the mission without original conversation context.
+
+***
+
+**Confidence:** 0.95
+Facts are explicitly marked "verified" in the source state. Uncertainty lies only in future outcomes or unlisted technical details of the PCRB-1 rubric itself.
+
+**Proposed Measurable Next Experiment:**
+Execute the 3+3 blind trials for `PROP-EXP-MEM-001`. Accept structured memory as canonical only if the mean PCRB-1 score is ≥10 points higher than the flat baseline AND critical fabrication counts do not increase.

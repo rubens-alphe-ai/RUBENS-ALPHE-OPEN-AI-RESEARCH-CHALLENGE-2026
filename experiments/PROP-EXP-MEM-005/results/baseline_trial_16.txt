@@ -1,0 +1,36 @@
+**1. Mission**
+Build a capable, measurable, and reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, runs experiments, evaluates results objectively, preserves failures, improves its own process, and transfers state to future systems.
+
+**2. Current Technical State**
+- **Repository:** GitHub is the canonical public store for code, state, and experiments (verified).
+- **Automation:** A verified GitHub Actions workflow (scheduled/manual) drives research cycles.
+- **Data Source:** OpenAlex is the primary research source (verified). Recent cycle collected 30 papers with zero errors.
+- **Assessment:** The system generates `research-assessment.json` and `proposed-next-problem.json`.
+- **Current Experiment:** `PROP-EXP-MEM-001` (testing structured vs. flat memory for blind handoff fidelity) is proposed but **not yet run**. No results exist.
+- **Governance:** Separation of proposal and acceptance is enforced; only measurable evidence counts for improvement claims.
+
+**3. Failures and Learnings**
+- **arXiv Collector Failure:** Initial collection failed due to timeouts and HTTP 429 rate limits, resulting in empty paper lists.
+  - *Learning:* Replaced with `fetch_research.py` v2 using OpenAlex to ensure reliability.
+- **Missing Assessment Files:** Early runs did not produce assessment files because `analyze_research.py` was not uploaded/executed.
+  - *Learning:* Added the analyzer and reran the workflow to restore the pipeline.
+
+**4. Single Best Next Action**
+Execute `PROP-EXP-MEM-001` using fresh model instances. This requires running at least three blind trials for both the structured memory condition and the flat baseline condition using identical prompts, then scoring them against the PCRB-1 handoff rubric to compare mean scores and critical fabrication counts.
+
+**5. Missing/Uncertain Information**
+- **Actual Experimental Data:** No scores, fabrication counts, or trial logs for `PROP-EXP-MEM-001` exist yet.
+- **Specific Test Prompts:** The document specifies "identical test prompts" but does not list their content.
+- **Rubric Details:** The PCRB-1 handoff rubric criteria are referenced but not defined in the supplied state.
+- **Adapter Implementation:** No details are provided on the current status or implementation of the provider-neutral adapter for multi-model comparison.
+
+***
+
+**Confidence in Reconstruction:** 0.95
+**Facts I am unsure about:** The specific contents of the "identical test prompts" and the detailed scoring criteria of the "PCRB-1 handoff rubric."
+**Proposed Measurable Next Experiment:**
+Conduct the planned `PROP-EXP-MEM-001` trial.
+*   **Hypothesis:** Structured project memory yields a mean PCRB-1 score at least 10 points higher than the flat baseline, without increasing critical fabrications.
+*   **Method:** Run *n* ≥ 3 blind handoff trials per condition (Structured vs. Flat) using fresh models.
+*   **Success Metric:** Mean(Structured Score) - Mean(Flat Score) ≥ 10 AND Fabrications(Structured) ≤ Fabrications(Flat).
+*   **Output:** `experiment-results/PROP-EXP-MEM-001.json` containing raw scores and fabrication logs.

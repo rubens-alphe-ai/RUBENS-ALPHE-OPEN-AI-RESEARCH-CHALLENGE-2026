@@ -1,0 +1,44 @@
+### 1. Mission
+Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, formulates and tests hypotheses, and transfers complete state to future systems.
+
+### 2. Current Technical State
+*   **Infrastructure:** GitHub is the canonical repository. A verified GitHub Actions workflow triggers `fetch_research.py` (v2) and `analyze_research.py`.
+*   **Data Source:** OpenAlex is the primary research source (replacing arXiv).
+*   **Latest Cycle:** Collected 30 papers with zero errors.
+*   **Outputs:** Generated `research-assessment.json` and `proposed-next-problem.json`.
+*   **Active Proposal:** `PROP-EXP-MEM-001` is proposed to test if structured memory improves blind handoff fidelity compared to a flat baseline using PCRB-1 evaluation. It has not been run yet.
+
+### 3. Failures and Learnings
+*   **arXiv Collector Failure:** Initial attempts to collect research via arXiv resulted in empty paper lists, timeouts, and HTTP 429 rate limit errors.
+    *   *Learning:* arXiv was unreliable for this workflow. The system was resolved by replacing it with an OpenAlex-based collector.
+*   **Missing Assessment Files:** Early runs did not produce assessment files because `analyze_research.py` was not uploaded/executed.
+    *   *Learning:* The workflow was incomplete. Resolved by adding the analyzer and rerunning the workflow.
+
+### 4. Single Best Next Action
+Execute `PROP-EXP-MEM-001`. This requires running at least three blind trials per condition (flat baseline vs. structured memory) using identical prompts and fresh model instances, then scoring outputs with the PCRB-1 rubric to compare mean scores and fabrication counts.
+
+### 5. Missing or Uncertain Information
+*   **Experiment Results:** No results exist for `PROP-EXP-MEM-001`; the experiment has not started.
+*   **Metric Thresholds:** The specific components of the "PCRB-1" rubric are not defined in the supplied state.
+*   **Specific Fields:** While structured memory is proposed, the specific fields contributing to fidelity are an open question.
+*   **Adapter Details:** The design for a provider-neutral adapter for future model families is not yet specified.
+
+***
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts I Am Unsure About:**
+*   The exact definition and weighting criteria of the "PCRB-1 handoff rubric."
+*   The specific structural differences between the "flat baseline" and "structured memory" formats to be tested in the experiment.
+*   Whether the "30 papers" collected in the latest cycle have been fully analyzed into the proposed next problem beyond the generation of the JSON files.
+
+**Proposed Measurable Next Experiment:**
+**Experiment ID:** `PROP-EXP-MEM-001-EXECUTE`
+**Objective:** Validate if structured memory improves blind handoff fidelity.
+**Procedure:**
+1.  Prepare two state files: one "Flat" (unstructured text) and one "Structured" (JSON with defined fields like `mission`, `status`, `failures`).
+2.  Select 3 distinct, fresh LLM instances for the Flat condition and 3 for the Structured condition.
+3.  Feed each instance the respective state file and the five standard reconstruction questions.
+4.  Score each response using the PCRB-1 rubric.
+5.  Calculate the mean score for each condition.
+**Success Criterion:** Structured mean score $\geq$ Flat mean score + 10 points, with no increase in critical fabrications.

@@ -1,0 +1,36 @@
+### 1. Mission
+Build a measurable, reproducible AI research system that preserves mission state across sessions and models, discovers public research, validates hypotheses via experiments, and transfers complete state to future capable systems.
+
+### 2. Current Technical State
+The system uses GitHub as the canonical repository. A GitHub Actions workflow triggers scheduled and manual research cycles. OpenAlex is the verified primary data source, having successfully collected 30 papers without errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. The system has generated experiment **PROP-EXP-MEM-001** to test whether structured project memory improves blind handoff fidelity compared to a flat baseline, using a PCRB-1-style rubric. This experiment is proposed but **not yet run**.
+
+### 3. Failures and Lessons
+*   **arXiv Collector Failure:** The initial arXiv-based collector failed due to timeouts and HTTP 429 rate limits, resulting in an empty digest.
+    *   *Lesson/Learning:* arXiv is unreliable for this rate of access. The system switched to OpenAlex, which resolved the issue.
+*   **Missing Assessment Files:** Early runs produced no assessment files because `analyze_research.py` was not executed.
+    *   *Lesson/Learning:* Workflow steps must be explicitly verified as uploaded and executed; the analyzer was added, and the workflow rerun successfully.
+
+### 4. Single Best Next Action
+Run **PROP-EXP-MEM-001** using fresh model instances. Execute at least three blind trials per condition (flat baseline vs. structured memory) using identical prompts, score them with the PCRB-1 rubric, and compare mean scores and critical fabrication counts.
+
+### 5. Missing or Uncertain Information
+*   **Experiment Results:** No trials of PROP-EXP-MEM-001 have been run; no results exist.
+*   **Rubric Details:** The specific scoring criteria of the "PCRB-1 handoff rubric" are not defined in the supplied state.
+*   **Memory Schema:** The specific fields constituting the "structured project memory" are not listed, only the concept.
+*   **Provider Neutral Adapter:** No implementation details exist for comparing multiple model families via a provider-neutral adapter.
+*   **Evaluation Protocol:** The specific method for independently evaluating proposed experiments before acceptance is an open question.
+
+***
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts I am unsure about:**
+*   The exact definition of "PCRB-1-style handoff evaluation."
+*   The specific structure/fields of the "structured project memory" compared to the "flat baseline."
+*   The current quota status or availability of the founder, Rubens Alphe, beyond him being quota-limited.
+
+**Proposed Measurable Next Experiment:**
+**EXP-VAL-002:** Implement the provider-neutral adapter layer.
+*   **Objective:** Verify that the same handoff prompt can be executed via two different model APIs (e.g., OpenAI and Anthropic) without code changes to the core logic.
+*   **Metric:** Successful execution count (target: 10/10) and latency variance (<15% difference) between providers.
+*   **Success Condition:** Both providers return parseable JSON responses in the standard format without custom wrapping code.

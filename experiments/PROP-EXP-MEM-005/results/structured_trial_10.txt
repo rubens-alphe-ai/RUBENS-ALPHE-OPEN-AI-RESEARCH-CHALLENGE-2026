@@ -1,0 +1,37 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, formulates hypotheses, runs experiments, and transfers state to future systems.
+
+**2. Current Technical State**
+*   **Infrastructure:** GitHub is the canonical repository. GitHub Actions workflows (scheduled/manual) fetch research and update state.
+*   **Data Source:** OpenAlex is the primary collector (verified). A recent cycle collected 30 papers with zero errors.
+*   **Assessment:** `analyze_research.py` generates `research-assessment.json` and `proposed-next-problem.json` (verified).
+*   **Memory:** Structured project memory is being tested via blind handoff trials.
+*   **Governance:** Rubens Alphe is the founder and final sign-off authority. He is quota-limited; slow responses do not imply abandonment.
+
+**3. Failures & Lessons**
+*   **arXiv Collector:** Failed due to timeouts and HTTP 429 rate limits, resulting in empty paper lists.
+    *   *Fix/Lesson:* Replaced with OpenAlex-based `fetch_research.py` v2. OpenAlex is now the standard to avoid rate-limit instability.
+*   **Missing Assessment Files:** Early runs lacked output files because the analyzer was not uploaded.
+    *   *Fix/Lesson:* Added `analyze_research.py` and reran workflow. Ensured pipeline completeness before triggering cycles.
+
+**4. Single Best Next Action**
+Execute **PROP-EXP-MEM-001**: Test if structured memory improves blind handoff fidelity versus a flat baseline.
+*   Run ≥3 blind trials per condition using fresh model instances.
+*   Use identical prompts.
+*   Score using the PCRB-1 handoff rubric.
+*   Compare mean scores and critical fabrication counts.
+
+**5. Missing/Uncertain Information**
+*   Specific contents of `research-assessment.json` and `proposed-next-problem.json` beyond their existence.
+*   The exact threshold values or criteria for the PCRB-1 rubric.
+*   Details on the "provider-neutral adapter" for future multi-model comparison (currently an open question).
+*   Results of any prior handoff trials (none exist yet for PROP-EXP-MEM-001).
+
+**Confidence:** 0.95
+
+**Uncertain Facts:**
+*   The specific technical implementation details of the "provider-neutral adapter."
+*   The exact current values in `research-assessment.json`.
+
+**Proposed Measurable Next Experiment:**
+Run three blind handoff trials where a fresh model instance receives only the structured memory file (Condition A) versus a flat text log (Condition B). Measure the difference in "Critical Fabrication Count" and "Mean PCRB-1 Score." Accept structured memory only if the mean score in Condition A is ≥10 points higher than Condition B with no increase in critical fabrications.

@@ -1,0 +1,28 @@
+**1. Mission**
+Build a capable, measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, tests hypotheses, evaluates results objectively, preserves failure/success, and improves its own process.
+
+**2. Current Technical State**
+*   **Infrastructure:** GitHub is the canonical public repository (verified). GitHub Actions workflows (scheduled/manual) automate research cycles and state updates (verified).
+*   **Data Collection:** OpenAlex is the active primary research source (verified). A recent cycle successfully collected 30 papers with zero errors (verified).
+*   **Assessment:** The assessment layer generates `research-assessment.json` and `proposed-next-problem.json` (verified).
+*   **Experiment Status:** Experiment PROP-EXP-MEM-001 is generated but **not yet run** (verified). No results exist.
+*   **Governance:** Rubens Alphe is the founder with final sign-off authority; he is quota-limited, so slow responses do not indicate abandonment (verified).
+
+**3. Failures and Lessons**
+*   **arXiv Collector Failure:** Initial attempts failed with `papers=[]`, timeouts, and HTTP 429 errors. **Fix:** Replaced with OpenAlex-based `fetch_research.py` v2. **Lesson:** OpenAlex is more reliable for this use case than arXiv.
+*   **Missing Assessment Files:** Early runs lacked assessment outputs because `analyze_research.py` was not executed. **Fix:** Uploaded analyzer and reran workflow. **Lesson:** Ensure all pipeline components are present before execution.
+
+**4. Single Best Next Action**
+Execute PROP-EXP-MEM-001 using fresh model instances. This experiment tests if structured project memory improves blind handoff fidelity versus a flat baseline using PCRB-1-style evaluation. It must run at least three blind trials per condition with identical prompts, scoring via the PCRB-1 rubric.
+
+**5. Missing/Uncertain Information**
+*   Specific PCRB-1 rubric criteria details.
+*   Implementation details of the "provider-neutral adapter" for future model comparisons.
+*   Exact criteria for independent evaluation of proposed experiments before acceptance.
+*   Which specific memory fields contribute most to fidelity (open question).
+
+***
+
+**Confidence:** 0.95
+**Uncertain Facts:** None; all supplied states are explicitly verified or marked as open/not started.
+**Proposed Experiment:** PROP-EXP-MEM-001 (Already defined: Compare mean PCRB-1 scores and critical fabrication counts between flat baseline and structured memory conditions across ≥3 blind trials).

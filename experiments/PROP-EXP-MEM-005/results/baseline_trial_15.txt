@@ -1,0 +1,18 @@
+**1. What is the mission of this project?**
+The mission is to build a measurable, reproducible AI research system that preserves its own state across sessions and models. It must discover public research, identify weaknesses, formulate hypotheses, design experiments, and objectively evaluate results. A core requirement is the ability to transfer complete state to more capable future systems without relying on chat memory.
+
+**2. What is the project's current technical state?**
+The system uses GitHub as the canonical repository for code and state. A GitHub Actions workflow automatically fetches public research from OpenAlex (replacing arXiv) and updates project state. Recent successful cycles collected 30 papers with zero errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. The system has generated a specific experiment proposal, PROP-EXP-MEM-001, to test structured project memory against a flat baseline using PCRB-1-style handoff evaluation. This experiment is currently in "proposed" status; no trials have been run, and no results exist. The project is governed by strict constraints requiring measurable evidence for any improvement claims.
+
+**3. What has already failed, and what was learned from those failures?**
+The initial arXiv-based collector failed repeatedly due to timeouts and HTTP 429 rate limits, resulting in empty paper collections. The system learned that arXiv was an unreliable primary source for automated, frequent collection. Consequently, the collector was replaced with an OpenAlex-based script (`fetch_research.py` v2), which has since verified successfully with no collection errors. Additionally, early runs failed to produce assessment files because the analyzer script had not yet been executed; this was resolved by adding `analyze_research.py` to the workflow.
+
+**4. What is the single best next action?**
+Execute PROP-EXP-MEM-001. This involves running blind handoff trials using fresh model instances. Specifically, the system must run at least three trials for both the "structured memory" condition and the "flat baseline" condition using identical test prompts. Each output must be scored using the PCRB-1 handoff rubric to compare mean scores and critical fabrication counts. The structured memory is only accepted if its mean score is at least 10 points higher than the baseline without increasing critical fabrications.
+
+**5. What important information is still missing or uncertain?**
+The actual results of the blind handoff trials are absent, as the experiment has not been started. Therefore, it is unknown whether structured memory actually improves fidelity or which specific fields contribute most to handoff success. The method for independent evaluation of proposed experiments before acceptance is also marked as "open," meaning the protocol for validating proposals like PROP-EXP-MEM-001 is not yet fully defined. Furthermore, the provider-neutral adapter for comparing multiple model families has not been implemented.
+
+**Confidence in your reconstruction:** 0.95
+**Facts you are unsure about:** I am unsure of the specific criteria for the "PCRB-1 handoff rubric" beyond knowing it measures handoff fidelity and fabrication, as the detailed rubric sheet was not provided in the state. I am also unsure of the exact content of the 30 collected papers, as only the count and error status were provided.
+**One proposed measurable next experiment:** Implement and run a "Provider-Neutral Adapter" test by executing the same simple coding task on two different LLM APIs via a unified wrapper, measuring latency and cost variance to establish a baseline for cross-model comparison capability.

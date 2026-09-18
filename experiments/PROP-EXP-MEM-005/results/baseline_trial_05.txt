@@ -1,0 +1,27 @@
+**1. Mission**
+Build a capable, measurable, and reproducible AI research system that preserves mission continuity across sessions and models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, and transfers complete state to future systems.
+
+**2. Current Technical State**
+The system uses GitHub as the canonical repository and GitHub Actions for scheduled research cycles. An OpenAlex-based collector (`fetch_research.py` v2) successfully retrieved 30 papers with zero errors. A research assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. The system has generated experiment `PROP-EXP-MEM-001`, which proposes testing structured project memory against a flat baseline for blind handoff fidelity using PCRB-1-style evaluation. The project is currently in the "proposed, not yet run" phase for this specific experiment.
+
+**3. Failures and Lessons**
+Initial arXiv collection failed due to timeouts and HTTP 429 rate limits, resulting in empty paper lists. This was resolved by switching to OpenAlex as the primary source. Early runs failed to produce assessment files because the analyzer script was not yet uploaded or executed; this was resolved by adding `analyze_research.py` and rerunning the workflow. The lesson is to verify pipeline completeness (scripts present and executable) before assuming data flow, and to prioritize robust, rate-limit-resilient public sources like OpenAlex over unstable ones.
+
+**4. Single Best Next Action**
+Execute `PROP-EXP-MEM-001` using fresh, blind model instances. Run at least three trials for both the flat baseline and structured memory conditions using identical test prompts. Score outputs using the PCRB-1 handoff rubric and compare mean scores and critical fabrication counts to determine if structured memory meets the acceptance threshold (mean score ≥10 points higher than baseline with no increase in fabrications).
+
+**5. Missing or Uncertain Information**
+The specific content of the PCRB-1 rubric is not defined in the supplied state. The actual data files (`research-digest.json`, `research-assessment.json`) are not provided, only their existence and status are confirmed. The specific technical implementation details of the "flat baseline" memory structure are absent. Details on how the "provider-neutral adapter" for future model comparison will be architected are not specified.
+
+**Confidence in Reconstruction:** 0.95
+
+**Facts Unsure About:**
+*   The exact scoring criteria and weightings within the PCRB-1 rubric.
+*   The current specific metrics or values inside `research-assessment.json`.
+*   The exact schema of the structured memory fields being tested.
+
+**Proposed Measurable Next Experiment:**
+**Experiment ID:** `PROP-EXP-MEM-002`
+**Hypothesis:** Including a "Decision Log" field in structured memory reduces critical fabrications in blind handoffs by >20% compared to a baseline that only includes "Mission Statement" and "Current State."
+**Method:** Conduct 5 blind trials where the model reconstructs the mission from two memory variants: (A) Baseline (Mission + State) and (B) Extended (Mission + State + Decision Log).
+**Success Metric:** Mean critical fabrication count in Condition B is ≤80% of Condition A, with no significant drop in overall PCRB-1 score (>5% variance).

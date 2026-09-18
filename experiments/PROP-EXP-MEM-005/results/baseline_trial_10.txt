@@ -1,0 +1,34 @@
+**1. Mission**
+Build a measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, and transfers complete state to future systems.
+
+**2. Current Technical State**
+*   **Infrastructure:** GitHub is the canonical repository. A verified GitHub Actions workflow triggers scheduled and manual research cycles.
+*   **Data Source:** OpenAlex is the primary research source (verified). A recent cycle collected 30 papers with zero errors.
+*   **Analysis:** The assessment layer successfully generates `research-assessment.json` and `proposed-next-problem.json`.
+*   **Active Experiment:** `PROP-EXP-MEM-001` has been proposed to test structured project memory against a flat baseline using PCRB-1-style handoff evaluation. It is currently in "proposed" status; no trials have been executed, and no results exist yet.
+*   **Governance:** Decisions are recorded with status tags. Strict constraints apply: no hidden persistence, no deception about capabilities, and no improvement claims without reproducible evidence.
+
+**3. Past Failures and Lessons**
+*   **arXiv Collector Failure:** The initial collector failed due to timeouts and HTTP 429 rate limits, resulting in empty paper arrays. **Lesson:** Switched to OpenAlex as the primary source for stability.
+*   **Missing Analysis Outputs:** Early runs failed to produce assessment files because `analyze_research.py` was not uploaded/executed. **Lesson:** Ensured the analyzer was integrated into the workflow before rerunning.
+
+**4. Single Best Next Action**
+Execute the blind handoff trials for **PROP-EXP-MEM-001**. This involves running at least three fresh model instances per condition (structured memory vs. flat baseline) using identical prompts, scoring them with the PCRB-1 rubric, and comparing mean scores and fabrication counts to determine if structured memory meets the acceptance threshold (mean score ≥10 points higher than baseline with no increased fabrications).
+
+**5. Missing or Uncertain Information**
+*   **Trial Results:** No data exists yet on whether structured memory actually improves fidelity.
+*   **Contributing Fields:** Which specific memory fields drive handoff fidelity is unknown.
+*   **Cross-Model Reproducibility:** It is unverified if unrelated models can reproduce the mission without original conversation context.
+*   **Evaluation Protocols:** The specific method for independently evaluating proposed experiments before acceptance is still open.
+*   **Provider Neutrality:** How to implement a provider-neutral adapter for comparing multiple model families in the future is undefined.
+
+***
+
+**Confidence in Reconstruction:** 0.95
+
+**Uncertain Facts:**
+*   The specific contents of the "flat baseline" prompt versus the "structured memory" prompt (only that they must be identical except for memory format is implied, but exact text is not provided).
+*   The specific weighting of the PCRB-1 rubric criteria.
+
+**Proposed Measurable Next Experiment:**
+Execute 3 blind trials for the "Structured Memory" condition and 3 for the "Flat Baseline" condition. Record the PCRB-1 score for each. Calculate the mean score for each condition. Calculate the delta. Verify if (Mean_Structured - Mean_Flat) ≥ 10 and if (Fabrications_Structured ≤ Fabrications_Flat). If both conditions are met, update `research-assessment.json` to mark structured memory as "Accepted"; otherwise, mark as "Rejected" and log the specific point of failure.

@@ -1,0 +1,23 @@
+**1. Mission**
+Build a capable, measurable, and reproducible AI research system that preserves mission state across sessions and models, discovers public research, identifies weaknesses, formulates hypotheses, designs/runs experiments, evaluates results objectively, and transfers complete state to future systems.
+
+**2. Current Technical State**
+GitHub is the canonical repository for code and state. A verified GitHub Actions workflow uses OpenAlex as the primary research source (replacing arXiv) to fetch public research. A successful cycle collected 30 papers with zero errors. The assessment layer generates `research-assessment.json` and `proposed-next-problem.json`. The system has generated experiment PROP-EXP-MEM-001 based on persistent-memory themes. Structured project memory is being tested via blind handoff trials.
+
+**3. Failures and Learnings**
+The initial arXiv collector failed due to timeouts and HTTP 429 rate limits, resulting in empty paper lists. *Lesson:* Switched to OpenAlex for stability. Early assessment files were missing because `analyze_research.py` was not executed. *Lesson:* Added the analyzer and rerun the workflow. These failures are preserved in the state.
+
+**4. Single Best Next Action**
+Execute experiment PROP-EXP-MEM-001: Test whether structured project memory improves blind handoff fidelity compared to a flat baseline using PCRB-1-style evaluation. This requires running at least three blind trials per condition with fresh model instances and identical prompts.
+
+**5. Missing/Uncertain Information**
+No results exist yet for PROP-EXP-MEM-001. It is unclear which specific memory fields contribute most to fidelity. The method for independently evaluating proposed experiments before acceptance is not yet defined. The implementation details for a provider-neutral adapter to compare multiple model families are absent. The specific content of the "flat baseline" prompt versus the "structured memory" prompt is not provided, only the requirement for them to be used.
+
+**Confidence:** 0.95
+**Uncertain Facts:**
+- The exact text of the test prompts for the baseline and structured conditions.
+- The specific technical implementation of the PCRB-1 rubric scoring criteria beyond the goal of measuring handoff fidelity and fabrication.
+- Whether the "fresh model instances" for the upcoming trials are already provisioned or require setup.
+
+**Proposed Next Experiment**
+Execute a pilot run of PROP-EXP-MEM-001 with one trial per condition (Flat Baseline vs. Structured Memory) using a fixed, identical test prompt regarding the "OpenAlex migration." Score the outputs using the PCRB-1 rubric to verify the evaluation pipeline functions before scaling to the required three trials per condition. This validates the measurement infrastructure prior to full statistical comparison.

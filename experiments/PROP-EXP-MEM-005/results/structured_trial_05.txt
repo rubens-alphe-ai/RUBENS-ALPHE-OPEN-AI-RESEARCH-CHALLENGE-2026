@@ -1,0 +1,27 @@
+**1. Mission**
+Build a reproducible AI research system that preserves state across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, and transfers complete state to future systems.
+
+**2. Current Technical State**
+GitHub is the canonical repository (verified). GitHub Actions workflows (scheduled/manual) fetch research and update state (verified). The primary research source is OpenAlex (verified). A recent cycle collected 30 papers with zero errors (verified). `analyze_research.py` generates `research-assessment.json` and `proposed-next-problem.json` (verified). The system generated experiment `PROP-EXP-MEM-001` based on persistent-memory themes (verified). Rubens Alphe is the founder and final sign-off authority; he is quota-limited (verified).
+
+**3. Failures and Learnings**
+Initial arXiv collection failed due to timeouts and HTTP 429 rate limits, resulting in empty paper lists. **Cause:** arXiv API instability. **Fix:** Replaced with OpenAlex-based `fetch_research.py` v2 (resolved). Early runs lacked assessment files because `analyze_research.py` was not yet uploaded/executed. **Fix:** Added analyzer and reran workflow (resolved).
+
+**4. Single Best Next Action**
+Execute `PROP-EXP-MEM-001`. This experiment tests whether structured project memory improves blind handoff fidelity compared to a flat baseline. Requirements: Use fresh model instances, identical test prompts, at least three blind trials per condition, and score outputs using the PCRB-1 handoff rubric. Compare mean scores and critical fabrication counts.
+
+**5. Missing/Uncertain Information**
+No results from `PROP-EXP-MEM-001` exist yet (verified). The specific details of the PCRB-1 rubric criteria are not defined in the state. The definition of "critical fabrication" is not explicitly listed. The specific structure of the "structured memory" fields to be tested is not detailed.
+
+**Confidence in reconstruction:** 0.95
+
+**Facts unsure about:**
+- The exact numerical threshold for "critical fabrication" beyond "do not increase."
+- The specific fields in the "structured memory" vs. "flat baseline" that will be compared.
+- The exact content of the `PCRB-1` rubric scoring criteria.
+
+**Proposed measurable next experiment:**
+Run `PROP-EXP-MEM-001` with 3 trials per condition (structured vs. flat). Measure:
+1. Mean PCRB-1 score per condition.
+2. Total count of critical fabrications per condition.
+**Success Criterion:** Structured memory mean score ≥ Flat baseline mean score + 10 points AND critical fabrications ≤ Flat baseline count.
