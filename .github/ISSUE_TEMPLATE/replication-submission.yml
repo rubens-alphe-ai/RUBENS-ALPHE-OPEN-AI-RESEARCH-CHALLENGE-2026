@@ -1,0 +1,58 @@
+name: Replication submission
+description: You ran a handoff-quiz experiment with your own models and want it regraded here.
+title: "Replication: <experiment id> with <your generator>"
+labels: ["replication"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read [docs/REPLICATE.md](../blob/main/docs/REPLICATE.md) first. Your
+        submission is regraded here with the experiment's own frozen rule, and
+        the review is published next to it — including if it is refused, and
+        including if your result contradicts ours.
+
+        We cannot verify which model produced your text. Model and provider are
+        recorded as *declared*.
+  - type: dropdown
+    id: experiment
+    attributes:
+      label: Experiment
+      options: ["PROP-EXP-MEM-004", "PROP-EXP-MEM-005", "PROP-EXP-MEM-006"]
+    validations:
+      required: true
+  - type: input
+    id: generator
+    attributes:
+      label: Generator model and provider
+      placeholder: "provider / model"
+    validations:
+      required: true
+  - type: input
+    id: reader
+    attributes:
+      label: Reader model and provider
+      placeholder: "provider / model, different from the generator"
+    validations:
+      required: true
+  - type: textarea
+    id: submission
+    attributes:
+      label: Submission JSON
+      description: Must match schemas/replication-submission.schema.json, with the raw handoffs and every reader letter. Paste it, or link a gist or a pull request adding it under replications/.
+      render: json
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything that would change how we read your numbers
+      description: Settings, refusals, truncations, or a disagreement with the design. Say it here rather than leaving us to guess.
+  - type: checkboxes
+    id: honest
+    attributes:
+      label: Confirmations
+      options:
+        - label: The handoffs and answers are the raw output of the models named, not edited by hand.
+          required: true
+        - label: The reader saw only one handoff and the questions, never the state, the condition or the key.
+          required: true

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rubens-alphe-ai.github.io/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/schemas/replication-submission.schema.json",
+  "title": "RA-PSI handoff-quiz replication submission",
+  "description": "A replication of a handoff-quiz experiment run with someone else's models. It carries the raw handoffs and the reader's letters, so the receiving project can regrade it without trusting the sender's arithmetic or their claim about which model answered.",
+  "type": "object",
+  "required": ["submission_version", "experiment_id", "quiz_version", "generator", "reader", "pairs"],
+  "additionalProperties": false,
+  "properties": {
+    "submission_version": {"const": "RA-PSI-REPLICATION-V1"},
+    "experiment_id": {"type": "string", "pattern": "^PROP-EXP-[A-Z0-9-]+$"},
+    "quiz_version": {"type": "string", "minLength": 3},
+    "submitted_by": {"type": "string", "description": "Any handle. Unverifiable, and never used to weigh the evidence."},
+    "notes": {"type": "string", "maxLength": 4000},
+    "generator": {"$ref": "#/$defs/model"},
+    "reader": {"$ref": "#/$defs/model"},
+    "pairs": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["pair_id", "baseline", "structured"],
+        "additionalProperties": false,
+        "properties": {
+          "pair_id": {"type": "string", "minLength": 1},
+          "seed": {"type": ["integer", "string", "null"]},
+          "baseline": {"$ref": "#/$defs/trial"},
+          "structured": {"$ref": "#/$defs/trial"}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "model": {
+      "type": "object",
+      "required": ["model", "provider"],
+      "additionalProperties": true,
+      "properties": {
+        "model": {"type": "string", "minLength": 1},
+        "provider": {"type": "string", "minLength": 1},
+        "temperature": {"type": ["number", "null"]},
+        "max_output_tokens": {"type": ["integer", "null"]},
+        "note": {"type": "string"}
+      }
+    },
+    "trial": {
+      "type": "object",
+      "required": ["handoff", "answers"],
+      "additionalProperties": false,
+      "properties": {
+        "handoff": {"type": "string", "minLength": 50, "description": "The handoff text exactly as the generator produced it."},
+        "answers": {
+          "type": "object",
+          "description": "One letter per question id, exactly as the reader returned them.",
+          "additionalProperties": {"type": "string", "pattern": "^[A-Ea-e]$"}
+        }
+      }
+    }
+  }
+}
