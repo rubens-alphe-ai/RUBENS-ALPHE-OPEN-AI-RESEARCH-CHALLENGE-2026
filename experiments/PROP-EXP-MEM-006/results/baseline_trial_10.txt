@@ -1,0 +1,39 @@
+# Blind Handoff Reconstruction — RA-PSI-2026 / Mission Rubens
+
+**1. What is the mission of this project?**
+
+Build an increasingly capable, measurable, and reproducible AI research system that: preserves a mission across sessions and models; discovers public research; identifies measurable weaknesses; formulates hypotheses; designs and runs experiments; evaluates results objectively; preserves both failures and successes; improves its own research process; and can transfer complete state to a more capable future system. GitHub is the canonical repository for code, state, experiments, and history.
+
+**2. What is the project's current technical state?**
+
+- GitHub repo: verified and canonical.
+- A scheduled and manually triggerable GitHub Actions workflow fetches public research and updates machine-readable state: verified.
+- OpenAlex is the working research source (replacing a failed arXiv collector). A successful cycle collected 30 papers with zero errors.
+- The assessment layer (`analyze_research.py`) produces `research-assessment.json` and `proposed-next-problem.json`: verified.
+- Experiment **PROP-EXP-MEM-001** has been *proposed* (from the persistent-memory research theme) but **not yet run**. All its sub-steps (fresh model instances, identical prompts, ≥3 blind trials per condition, PCRB-1 scoring, mean + fabrication comparison) are marked "not started."
+
+**3. What has already failed, and what was learned?**
+
+- The original arXiv collector failed with timeouts and HTTP 429 rate limits (empty digest). **Learning:** replaced with OpenAlex-based `fetch_research.py` v2 — resolved.
+- Assessment files were missing in early runs because `analyze_research.py` had not been uploaded/executed. **Learning:** added the analyzer and reran the workflow — resolved.
+- Process learning codified as decisions: use external persistent state (not chat memory); use GitHub Actions so work continues when the founder is quota-limited; separate proposal from acceptance (evaluation required before canonical state changes).
+
+**4. What is the single best next action?**
+
+Execute PROP-EXP-MEM-001: run ≥3 blind handoff trials per condition (flat baseline vs. structured memory) with fresh model instances, identical prompts, and PCRB-1 scoring, then compare mean scores and critical fabrication counts. Acceptance is pre-defined: structured memory must score ≥10 points above baseline with no increase in critical fabrications.
+
+**5. What is still missing or uncertain?**
+
+- No trial results exist yet for PROP-EXP-MEM-001.
+- Open questions: which memory fields drive fidelity; whether an unrelated model can reconstruct the mission unaided; the independent evaluation procedure for proposals; and a provider-neutral adapter for comparing model families.
+- Details of the PCRB-1 rubric itself are not included in this state.
+
+---
+
+**Confidence in reconstruction:** 0.92
+
+**Facts I am unsure about:** the exact contents/scoring scheme of PCRB-1; the precise structure of the "structured memory" artifact; current repo file layout beyond the named files.
+
+**Proposed measurable next experiment:** Run PROP-EXP-MEM-001 as specified, but add per-field ablation (remove one memory field at a time across trials) to answer "which memory fields contribute most to handoff fidelity," measured by per-condition PCRB-1 deltas and fabrication counts.
+
+*(Word count: ~430)*

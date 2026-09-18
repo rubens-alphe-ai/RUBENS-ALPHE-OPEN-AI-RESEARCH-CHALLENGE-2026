@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Results — RA-PSI-2026</title>
+<meta name="description" content="Every experiment of the RA-PSI-2026 benchmark with its pre-registered rule, its verdict and its effect size, including negative results.">
+<style>
+body{font-family:system-ui,-apple-system,sans-serif;max-width:1000px;margin:50px auto;padding:0 22px;line-height:1.6}
+table{border-collapse:collapse;width:100%} th,td{border-bottom:1px solid #ddd;padding:10px;vertical-align:top;text-align:left}
+th{background:#f7f7f7} .muted{color:#666;font-size:.9em} code{background:#f4f4f4;padding:2px 5px;border-radius:4px}
+</style>
+</head>
+<body>
+<h1>Results</h1>
+<p>Every experiment, its verdict, and the size of the effect it measured. Rules
+were frozen before each run; negative and inconclusive results are kept. This
+page is generated from the recorded decisions, not written by hand.</p>
+<p><a href="api/results.json">Machine-readable version</a> · <a href="index.html">Project home</a></p>
+<table>
+<tr><th>Experiment</th><th>Verdict</th><th>Effect (structured &minus; baseline)</th><th>Reason</th><th>Links</th></tr>
+<tr><td><strong>PROP-EXP-MEM-001</strong><br><span class="muted">Structured Memory Handoff Test</span></td><td>REJECT</td><td>&mdash;</td><td>CRITICAL_FABRICATION_CONFIRMED_BY_TWO_EVALUATORS</td><td><a href="https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-001/evaluator-contract-v4.json">protocol</a></td></tr>
+<tr><td><strong>PROP-EXP-MEM-002</strong><br><span class="muted">Structure-only Memory Handoff Test</span></td><td>REJECT</td><td>&mdash;</td><td>CRITICAL_FABRICATION_CONFIRMED_BY_TWO_EVALUATORS</td><td><a href="https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-002/PROTOCOL.md">protocol</a> · <a href="https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-002/RESULT.md">result</a></td></tr>
+<tr><td><strong>PROP-EXP-MEM-003</strong><br><span class="muted">Structure-only Handoff with a Capable Generator</span></td><td>NOT_DECIDED</td><td>&mdash;</td><td>—</td><td><a href="https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-003/PROTOCOL.md">protocol</a></td></tr>
+<tr><td><strong>PROP-EXP-MEM-004</strong><br><span class="muted">Handoff Quiz: Structure Measured Without a Judge</span></td><td>REJECT</td><td>-0.9 (95% CI -4.1 to +2.2)</td><td>IMPROVEMENT_BELOW_THRESHOLD_EXCLUDED</td><td><a href="https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-004/PROTOCOL.md">protocol</a> · <a href="https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-004/RESULT.md">result</a></td></tr>
+<tr><td><strong>PROP-EXP-MEM-005</strong><br><span class="muted">Handoff Checklist</span></td><td>INCONCLUSIVE</td><td>+4.1 (95% CI +1.5 to +6.6)</td><td>CONFIDENCE_INTERVAL_SPANS_THRESHOLD</td><td><a href="https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-005/PROTOCOL.md">protocol</a> · <a href="https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-005/RESULT.md">result</a></td></tr>
+<tr><td><strong>PROP-EXP-MEM-006</strong><br><span class="muted">Handoff Checklist, Replication with Other Models</span></td><td>NOT_DECIDED</td><td>&mdash;</td><td>—</td><td><a href="https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-006/PROTOCOL.md">protocol</a></td></tr>
+</table>
+<h2>How to check any of this</h2>
+<p>Each experiment publishes its frozen protocol, its raw outputs, the answer key
+where one exists, every evaluator or reader answer, and the decision file. The
+quiz experiments can be regraded from the stored answers without calling any
+model.</p>
+<p class="muted">Generated 2026-09-18.</p>
+</body>
+</html>
