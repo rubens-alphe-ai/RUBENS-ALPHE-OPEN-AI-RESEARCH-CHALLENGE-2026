@@ -108,8 +108,14 @@ def run(experiment_name: str, config_path: Path) -> dict:
     spec = rx.generation_spec(policy)
     report["steps"].append(rx.ensure_manifest(experiment, spec))
     step = rx.run_trials(experiment, spec, private)
+    # A generator can refuse the same trial for ever (truncation, empty answer).
+    # An experiment may pre-register a small number of trials it tolerates
+    # losing; their pairs are then incomplete and dropped from the analysis,
+    # and the run report names them so the loss is visible with the verdict.
+    tolerated = int(policy.get("max_missing_trials", 0))
+    step["tolerated_missing"] = tolerated
     report["steps"].append(step)
-    if step["status"] != "complete":
+    if step["status"] != "complete" and len(step["missing"]) > tolerated:
         return finish("STOPPED_TRIALS_INCOMPLETE")
 
     quiz_cfg = policy["quiz"]
