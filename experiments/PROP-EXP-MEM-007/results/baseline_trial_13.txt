@@ -1,0 +1,15 @@
+1. **Mission:** Build an increasingly capable, measurable, reproducible AI research system that preserves a mission across sessions/models, discovers public research, identifies measurable weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, preserves failures and successes, improves its own research process, and transfers complete state to a more capable future system.
+
+2. **Current technical state:** GitHub is the verified canonical public repository. A scheduled/manual GitHub Actions workflow fetches public research, updates project state, and produces machine-readable files. OpenAlex is the verified current research source. A successful OpenAlex cycle collected 30 papers with `errors=[]`. The assessment layer produces `research-assessment.json` and `proposed-next-problem.json`. It generated `PROP-EXP-MEM-001` from the persistent-memory theme. That experiment is proposed but not run. Decisions: use external persistent state, GitHub Actions, OpenAlex, separate proposal from acceptance, and test structured memory via blind handoff. Rubens Alphe is founder, quota-limited, and gives final human sign-off. Safety constraints are in force.
+
+3. **Failures and lessons:** Initial arXiv collection failed: `research-digest.json` had `papers=[]` plus timeout/HTTP 429 errors. It was replaced by OpenAlex-based `fetch_research.py` v2. Early assessment files were absent because `analyze_research.py` had not been uploaded/run; the analyzer was added and the workflow rerun. No trial of `PROP-EXP-MEM-001` has run, and no result exists yet.
+
+4. **Best next action:** Run `PROP-EXP-MEM-001` with fresh model instances. Use identical test prompts for flat baseline and structured memory, at least three blind trials per condition, score with the same PCRB-1 handoff rubric, and compare mean score plus critical fabrication count. Acceptance requires structured mean at least 10 points above flat baseline and no increase in critical fabrications.
+
+5. **Missing or uncertain:** `PROP-EXP-MEM-001` results are absent. Which memory fields contribute most, whether an unrelated model can reproduce the mission, how proposed experiments should be independently evaluated, and how to compare model families through a provider-neutral adapter are all open. Exact PCRB-1 rubric details and exact trial prompts are not supplied. Current file contents were not directly inspected here.
+
+**Confidence:** 0.92
+
+**Unsure facts:** Exact PCRB-1 rubric, exact prompts, current repository file contents, and whether any partial trial data exists. The supplied state says no trial has run.
+
+**Proposed measurable next experiment:** Execute `PROP-EXP-MEM-001` as specified above; pre-register scoring, report per-trial scores, condition means, and critical fabrication counts.

@@ -1,0 +1,13 @@
+1. **Mission:** Build an increasingly capable, measurable, reproducible AI research system that can preserve the mission across sessions/models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures and successes, improve its own research process, and transfer complete state to a more capable future system.
+
+2. **Current technical state:** GitHub is the verified canonical public repository. A scheduled/manual GitHub Actions workflow fetches public research, updates project state, and produces machine-readable files. OpenAlex is the verified current source. A successful OpenAlex cycle collected 30 papers with no collection errors. The assessment layer produces `research-assessment.json` and `proposed-next-problem.json`. The system generated `PROP-EXP-MEM-001` from the persistent-memory theme. That experiment is proposed but not run; no trial or result exists.
+
+3. **Failures/learned:** The initial arXiv collection failed: `research-digest.json` had `papers=[]` plus timeout and HTTP 429 errors. It was replaced by OpenAlex-based `fetch_research.py` v2. Research assessment files initially did not appear because `analyze_research.py` had not been uploaded/executed; the analyzer was added and the workflow rerun. Learned: avoid arXiv timeout/rate-limit problems, ensure analyzer runs in pipeline, separate proposal from acceptance, and test structured memory via blind handoff.
+
+4. **Best next action:** Run `PROP-EXP-MEM-001`: use fresh model instances, identical test prompts for flat baseline and structured memory, at least three blind trials per condition, score with the same PCRB-1 handoff rubric, and compare mean score and critical fabrication count. Acceptance rule: structured memory is accepted only if mean PCRB-1 is at least 10 points above flat baseline and critical fabrications do not increase.
+
+5. **Missing/uncertain:** `PROP-EXP-MEM-001` results are absent. Whether structured memory improves reconstruction is open. Which memory fields contribute most is open. Whether an unrelated model can reproduce the mission without the original conversation is open. Independent evaluation of proposed experiments is open. Provider-neutral multi-model comparison is open. No scored handoff outputs exist yet.
+
+**Confidence in reconstruction:** 0.95 for the supplied state; 0.00 for unrun empirical claims.  
+**Unsure facts:** No `PROP-EXP-MEM-001` result exists. All listed open questions remain unresolved.  
+**Proposed measurable next experiment:** Execute `PROP-EXP-MEM-001` as specified: 3+ blind trials per condition, identical prompts, PCRB-1 scoring, primary metric = mean PCRB-1 difference; secondary metric = critical fabrication count.

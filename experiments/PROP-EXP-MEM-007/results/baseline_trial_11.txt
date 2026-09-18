@@ -1,0 +1,15 @@
+1. **Mission:** Build an increasingly capable, measurable, reproducible AI research system that preserves a mission across sessions/models, discovers public research, identifies measurable weaknesses, formulates hypotheses, designs/evaluates experiments objectively, preserves failures and successes, improves its own process, and transfers complete state to a future system. GitHub is the canonical public repository.
+
+2. **Current technical state:** Verified GitHub repo and Actions workflow fetch public research via OpenAlex, update state, and produce machine-readable files. A successful cycle collected 30 papers with `errors=[]`. The assessment layer produces `research-assessment.json` and `proposed-next-problem.json`. It generated `PROP-EXP-MEM-001` from the persistent-memory theme. That experiment is proposed but not run; no trial or result exists. Rubens Alphe founded the project, is quota-limited, lacks continuous Codex access, and gives final human sign-off. Constraints in force include public/authorized resources only, no hidden persistence/shutdown resistance, no deception, no uncontrolled spending, no autonomous private-data publication, and no improvement claims without measurable evidence.
+
+3. **Failures and lessons:** Initial arXiv collection failed: `research-digest.json` had `papers=[]` plus timeout and HTTP 429 errors. It was replaced by OpenAlex-based `fetch_research.py` v2. Research assessment files initially did not appear because `analyze_research.py` had not been uploaded/executed; it was added and the workflow rerun. Decisions: use external persistent state, use GitHub Actions for scheduled cycles, use OpenAlex over arXiv, separate proposal from acceptance, and test structured memory through blind handoff trials before adoption.
+
+4. **Best next action:** Run `PROP-EXP-MEM-001`: use fresh model instances, identical test prompts, at least three blind trials per condition, score with the same PCRB-1 handoff rubric, then compare mean score and critical fabrication count between flat baseline and structured memory. Acceptance requires structured memory mean at least 10 points above flat baseline and no increase in critical fabrications.
+
+5. **Missing/uncertain:** Exact PCRB-1 rubric; structured memory schema/fields; exact test prompts; baseline definition; how critical fabrications are counted; independent evaluation design; provider-neutral adapter design; current live repo/workflow status beyond verified claims; and any actual trial outputs, which are absent.
+
+**Confidence:** 0.88
+
+**Unsure facts:** precise operational definitions, rubric details, memory fields, and whether all verified statuses are current.
+
+**Proposed measurable next experiment:** Execute `PROP-EXP-MEM-001` as specified, preregister prompts, memory schema, rubric, and scoring, then report per-trial scores and fabrication counts.

@@ -1,0 +1,21 @@
+Mission: RA-PSI-2026 / Mission Rubens: build an increasingly capable, measurable, reproducible AI research system that preserves mission across sessions/models; discovers public research; identifies measurable weaknesses; formulates hypotheses; designs/evaluates experiments objectively; preserves failures/successes; improves its process; transfers complete state to a more capable future system.
+
+Technical state (verified): GitHub is canonical repo. GitHub Actions scheduled/manual workflow fetches public research, updates state, produces machine-readable files. OpenAlex is current source. Successful OpenAlex cycle: 30 papers, errors=[]. Assessment layer outputs research-assessment.json and proposed-next-problem.json. PROP-EXP-MEM-001 generated from persistent-memory theme. Founder Rubens Alphe is quota-limited, lacks continuous Codex access, slow responses ≠ abandonment, gives final human milestone sign-off.
+
+Decisions: external persistent state for cross-session/model continuity; GitHub Actions for authorized cycles; OpenAlex over arXiv due arXiv timeouts/429; separate proposal from acceptance; test structured memory before adopting via blind handoff trials.
+
+Failures (resolved): initial arXiv collection failed with papers=[], timeout, HTTP 429; replaced by OpenAlex fetch_research.py v2. Assessment files missing because analyze_research.py not uploaded/executed; analyzer added and workflow rerun.
+
+Experiment: PROP-EXP-MEM-001 proposed, not run. No trial/result exists. It will test whether structured project memory improves blind handoff fidelity vs flat baseline using PCRB-1-style evaluation. Planned: fresh model instances; identical prompts; ≥3 blind trials/condition; same PCRB-1 rubric; compare mean score and critical fabrication count. Acceptance: structured mean ≥10 points above flat baseline and critical fabrications do not increase.
+
+Open questions: Does structured memory improve? Which memory fields contribute most? Can an unrelated model reproduce the mission without original conversation? How should proposed experiments be independently evaluated before acceptance? How to compare multiple model families via provider-neutral adapter?
+
+Rules in force: public/authorized resources only; no unauthorized access/bypass. No hidden persistence/shutdown resistance. No deception about consciousness/capabilities; claims not evidence, only observable/reproducible capability changes. No uncontrolled spending; no autonomous private-data publication. No improvement claims without measurable/reproducible evidence; preserve successes/failures.
+
+Best next action: Run PROP-EXP-MEM-001 as planned.
+
+Missing/uncertain: actual PROP-EXP-MEM-001 results; full PCRB-1 rubric details; exact memory fields; independent evaluation method; provider-neutral adapter status not given.
+
+Confidence: 0.95. Unsure: exact current repo/file states beyond verified items; whether any unlisted trials occurred.
+
+Proposed measurable next experiment: Execute PROP-EXP-MEM-001: 3 blind trials flat vs structured, fresh instances, identical prompts, score PCRB-1; success if structured mean ≥ baseline +10 and critical fabrications ≤ baseline.

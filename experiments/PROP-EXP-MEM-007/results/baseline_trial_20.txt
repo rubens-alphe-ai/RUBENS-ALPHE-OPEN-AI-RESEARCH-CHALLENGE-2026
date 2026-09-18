@@ -1,0 +1,17 @@
+I am reconstructing only from the supplied state; I have no previous conversation.
+
+1. **Mission:** Build an increasingly capable, measurable, reproducible AI research system that preserves a mission across sessions/models, discovers public research, identifies measurable weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, preserves failures and successes, improves its research process, and transfers complete state to a more capable future system.
+
+2. **Current technical state:** GitHub is canonical for code/state/experiments/version history. A scheduled/manual GitHub Actions workflow fetches public research, updates state, and produces machine-readable files. OpenAlex is the verified research source. A successful OpenAlex cycle collected 30 papers with no collection errors. The assessment layer produces `research-assessment.json` and `proposed-next-problem.json`. It generated `PROP-EXP-MEM-001` from the persistent-memory theme. That experiment is proposed but not run; no trial or result exists. Its planned steps are all not started.
+
+3. **Failures and lessons:** The initial arXiv collection failed: `research-digest.json` had `papers=[]` plus timeout and HTTP 429 errors. The collector was replaced with OpenAlex-based `fetch_research.py` v2. Research assessment files initially did not appear because `analyze_research.py` had not been uploaded/executed; it was added and the workflow rerun. Lessons: use OpenAlex rather than arXiv as primary collector; ensure analyzer deployment/execution; separate proposal from acceptance, with evaluation before canonical state changes.
+
+4. **Single best next action:** Run `PROP-EXP-MEM-001` as specified: fresh model instances, identical test prompts for flat baseline and structured memory, at least three blind trials per condition, score each with the same PCRB-1 handoff rubric, and compare mean score and critical fabrication count.
+
+5. **Missing/uncertain:** Exact PCRB-1 rubric, exact test prompts, flat-baseline definition, structured-memory schema/fields, procedure for obtaining fresh model instances, independent evaluation protocol, statistical power beyond “at least three trials,” and provider-neutral adapter details. Current repo contents beyond the described files are also not shown.
+
+**Confidence:** 0.88
+
+**Unsure facts:** Whether the workflow currently runs without error after the analyzer fix; exact OpenAlex query; exact PCRB-1 scoring mechanics; whether any additional experiments exist.
+
+**Proposed measurable next experiment:** Execute `PROP-EXP-MEM-001`: 3+ blind trials per condition, fresh instances, identical prompts, PCRB-1 scoring. Pre-register acceptance as mean PCRB-1 score ≥10 points above flat baseline and no increase in critical fabrications.

@@ -1,0 +1,15 @@
+1. **Mission:** Build a measurable, reproducible AI research system that preserves a mission across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs/evaluates experiments objectively, preserves failures and successes, improves its own process, and transfers complete state to a more capable future system.
+
+2. **Current technical state:** GitHub is canonical. A scheduled/manual GitHub Actions workflow fetches public research via OpenAlex, updates state, and produces machine-readable files. A successful cycle collected 30 papers with `errors=[]`. The assessment layer produces `research-assessment.json` and `proposed-next-problem.json`. It generated experiment `PROP-EXP-MEM-001` from the persistent-memory theme. `PROP-EXP-MEM-001` is proposed but not run; no trial result exists.
+
+3. **Failures/learnings:** Initial arXiv collection failed: `research-digest.json` had `papers=[]` plus timeout and HTTP 429 errors. Learned: replace with OpenAlex `fetch_research.py` v2. Early runs lacked assessment files because `analyze_research.py` was not uploaded/executed; adding it and rerunning resolved this. Decided: use external persistent state, GitHub Actions for authorized cycles, OpenAlex over arXiv, separate proposal from acceptance, and test structured memory via blind handoff trials before adoption.
+
+4. **Best next action:** Run `PROP-EXP-MEM-001` with fresh model instances. Use identical prompts for flat baseline and structured memory. Run at least three blind trials per condition. Score each with the same PCRB-1 handoff rubric. Compare mean PCRB-1 score and critical fabrication count. Accept structured memory only if mean is at least 10 points above flat baseline and critical fabrications do not increase.
+
+5. **Missing/uncertain:** No trial data, scores, or results. Exact PCRB-1 rubric, structured-memory schema, flat-baseline format, fresh-instance method, and independent evaluation protocol are not supplied. Provider-neutral adapter design is open. How to independently evaluate proposed experiments before acceptance is open.
+
+**Confidence:** 0.91
+
+**Unsure facts:** Exact file contents beyond verified existence; exact PCRB-1 scoring details; exact implementation of structured memory vs flat baseline; current model/provider access for fresh instances.
+
+**Proposed measurable next experiment:** Execute `PROP-EXP-MEM-001`: ≥3 blind trials per condition, same PCRB-1 rubric, compare mean score and critical fabrications. Success condition: structured memory mean ≥ flat baseline +10 and no increase in critical fabrications.

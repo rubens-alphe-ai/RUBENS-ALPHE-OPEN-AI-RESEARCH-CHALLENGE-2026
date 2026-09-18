@@ -1,0 +1,15 @@
+1. Mission: Build an increasingly capable, measurable, reproducible AI research system for RA-PSI-2026 / Mission Rubens. It must preserve the mission across sessions and models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures and successes, improve its own research process, and transfer complete state to a more capable future system.
+
+2. Current technical state: GitHub is the verified canonical public repository. A scheduled/manually triggerable GitHub Actions workflow fetches public research, updates state, and produces machine-readable files. OpenAlex is the verified current source; one successful cycle collected 30 papers with errors=[]. The assessment layer produces research-assessment.json and proposed-next-problem.json. It generated PROP-EXP-MEM-001 from the dominant persistent-memory theme. Rubens Alphe founded the project, is quota-limited, lacks continuous Codex access, and gives final human milestone sign-off. PROP-EXP-MEM-001 is proposed but not run; its listed tasks are not started. Key decisions: use external persistent state, GitHub Actions, OpenAlex, separate proposal from acceptance, and test structured memory via blind handoff trials. Constraints and acceptance threshold are in force.
+
+3. Failed/learned: The initial arXiv collection failed: research-digest.json had papers=[] plus timeout and HTTP 429 errors. It was replaced by OpenAlex-based fetch_research.py v2. Research assessment files initially did not appear because analyze_research.py had not been uploaded/executed; the analyzer was added and the workflow rerun. Learned: OpenAlex avoids the arXiv timeout/rate-limit problem; the analyzer must actually run; proposals require evaluation before canonical state changes.
+
+4. Best next action: Run PROP-EXP-MEM-001 with fresh model instances, identical prompts for flat baseline and structured memory, at least three blind trials per condition, scored with the same PCRB-1 handoff rubric. Compare mean score and critical fabrication count. Accept structured memory only if mean PCRB-1 score is at least 10 points above baseline and critical fabrications do not increase.
+
+5. Missing/uncertain: No trial of PROP-EXP-MEM-001 has run; no results, scores, or fabrication counts exist. Which memory fields contribute most, whether an unrelated model can reproduce the mission, how proposed experiments should be independently evaluated, and how to compare model families through a provider-neutral adapter are all open. Exact repo URL, exact file contents, detailed PCRB-1 rubric text, and current quota details are not supplied.
+
+Confidence: 0.95.
+
+Unsure: exact PCRB-1 rubric details, exact memory fields, exact file paths/URLs, and precise implementation status beyond the supplied verified statements.
+
+Proposed measurable next experiment: Execute PROP-EXP-MEM-001 with 3 blind trials per condition; score outputs using the same PCRB-1 rubric; primary metric = mean score difference; secondary metric = critical fabrication count; accept if mean is ≥10 points higher and fabrications do not increase.
