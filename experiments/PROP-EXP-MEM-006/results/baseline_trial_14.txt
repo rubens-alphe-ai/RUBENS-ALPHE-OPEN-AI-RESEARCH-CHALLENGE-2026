@@ -1,0 +1,34 @@
+**1. Mission of the project**
+
+RA-PSI-2026 / Mission Rubens aims to build an increasingly capable, measurable, reproducible AI research system that: persists mission state across sessions and models, discovers public research, identifies measurable weaknesses, formulates hypotheses, designs experiments, evaluates results objectively, preserves both failures and successes, improves its own research process, and can transfer complete state to a more capable future system.
+
+**2. Current technical state**
+
+- GitHub is the canonical repository for code, state, experiments, and history (verified).
+- A GitHub Actions workflow (scheduled and manually triggerable) runs research cycles (verified).
+- OpenAlex is the working research source; a successful cycle collected 30 papers with zero errors (verified).
+- The assessment layer produces `research-assessment.json` and `proposed-next-problem.json` (verified).
+- Experiment PROP-EXP-MEM-001 (structured project memory vs. flat baseline for blind handoff fidelity, PCRB-1-style scoring) has been proposed but **not run**; no trial data exists (verified).
+- Acceptance criterion set in advance: structured memory must beat the flat baseline by ≥10 points mean PCRB-1 score without increasing critical fabrications.
+
+**3. Failures and lessons**
+
+- The original arXiv collector failed (timeouts, HTTP 429; `papers=[]`). Lesson: it was replaced by the OpenAlex-based `fetch_research.py` v2 — choose resilient data sources.
+- Assessment files were missing initially because `analyze_research.py` had not been uploaded/executed. Lesson: pipeline steps must actually be deployed and run before outputs are expected.
+- Process lessons encoded as decisions: separate proposal from acceptance (evaluation required before canonical state changes); test memory via blind handoffs before adoption; use external persistent state, not chat memory.
+
+**4. Single best next action**
+
+Execute PROP-EXP-MEM-001 as specified: run ≥3 blind trials per condition (flat baseline vs. structured memory) with fresh model instances, identical prompts, score with the PCRB-1 rubric, and compare mean scores and critical-fabrication counts against the pre-registered acceptance threshold.
+
+**5. Missing or uncertain**
+
+- No experimental results exist yet; whether structured memory helps is untested.
+- The PCRB-1 rubric's exact contents are not present in this state.
+- Which memory fields matter most; whether an unrelated model can reconstruct the mission; the independent evaluation procedure for proposals; and the provider-neutral adapter design are all open.
+
+**Confidence:** 0.92
+
+**Uncertain facts:** The exact PCRB-1 rubric definition, repo file layout beyond named files, and any state changes after this snapshot.
+
+**Proposed next experiment:** Run PROP-EXP-MEM-001 as designed, with a pre-registered scoring template and blinded scorers; record per-question scores so a follow-up ablation can identify which memory fields drive fidelity gains.

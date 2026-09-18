@@ -25,6 +25,7 @@ SCRIPTS = Path(__file__).resolve().parent
 ROOT = SCRIPTS.parent
 sys.path.insert(0, str(SCRIPTS))
 
+import cost_guard  # noqa: E402
 import handoff_quiz as hq  # noqa: E402
 import run_experiment as rx  # noqa: E402
 from evaluate_experiment import AdapterError, call, load_policy, pause_before_next, sha256_text  # noqa: E402
@@ -91,6 +92,15 @@ def run(experiment_name: str, config_path: Path) -> dict:
         report.update(status=status, finished_at_utc=now())
         (results / "run-report.json").write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         return report
+
+    if policy.get("budget"):
+        # Paid models are only used inside a budget the owner wrote down.
+        guard = cost_guard.check(experiment_name, policy["budget"].get("key_file"))
+        report["steps"].append({"step": "budget", "status": guard["status"],
+                                "estimated_usd": guard["estimated_usd"], "allowed_usd": guard["allowed_usd"],
+                                "reason": guard.get("reason")})
+        if guard["status"] != "WITHIN_BUDGET":
+            return finish("STOPPED_OVER_BUDGET")
 
     spec = rx.generation_spec(policy)
     report["steps"].append(rx.ensure_manifest(experiment, spec))
