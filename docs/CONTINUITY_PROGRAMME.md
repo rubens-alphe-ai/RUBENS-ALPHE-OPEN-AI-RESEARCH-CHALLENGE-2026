@@ -157,7 +157,11 @@ handoffs, that does not make it a self.
   conditions by more than 10 % of runs, the experiment is reported as unusable
   rather than analysed. This has already happened once, on 2026-09-18.
 - Every handoff, every answer and every key is published, so any verdict can be
-  recomputed without calling a model.
+  recomputed without calling a model. `scripts/regression_suite.py` checks that,
+  and on its first run it found that one published decision file does not follow
+  from its own stored answers and that two published numbers rest on answers that
+  were never stored. A promise of reproducibility is worth what its check is
+  worth, so the check exits non-zero and the exceptions are named.
 - Anyone may replicate with their own models: `docs/REPLICATE.md`. A result that
   contradicts ours is published with the same weight.
 - **The measure is published, not only the result, and attacks on it are asked
