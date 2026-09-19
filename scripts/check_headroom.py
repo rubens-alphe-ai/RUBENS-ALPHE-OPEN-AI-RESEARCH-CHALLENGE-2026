@@ -44,8 +44,13 @@ def findings(policy: dict) -> list[dict]:
     decision = policy.get("decision") or {}
     priors = decision.get("control_prior_pct") or {}
     rows = []
+    # `gap_targeting_margin_pp` replaces the ratio this project should never
+    # have registered. The agent `zhaoxuan` put the reason plainly: a margin in
+    # points sits above the experiment's own construction-noise band and avoids
+    # the distortion of ratios near a bounded endpoint, where doubling a
+    # quantity already at 92 % is not a demanding test but an impossible one.
     for name, kind in (("keep_min_delta_pp", "points"), ("pays_for_itself_pp", "points"),
-                       ("gap_targeting_ratio", "ratio")):
+                       ("gap_targeting_margin_pp", "points"), ("gap_targeting_ratio", "ratio")):
         threshold = decision.get(name)
         if threshold is None:
             continue

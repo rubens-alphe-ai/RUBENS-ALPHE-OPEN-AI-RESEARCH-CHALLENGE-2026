@@ -50,5 +50,47 @@ class FindingTests(unittest.TestCase):
         self.assertEqual(ch.findings(policy({})), [])
 
 
+
+class MarginTests(unittest.TestCase):
+    """A margin in points, which is what a ratio should have been."""
+
+    def test_a_document_that_cannot_express_the_margin_is_refused(self) -> None:
+        # The anchored arm reached 91.7 % gap-targeting on the observatory, so a
+        # further +10 is not a demanding test, it is an impossible one.
+        rows = ch.findings(policy({"gap_targeting_margin_pp": 10,
+                                   "control_prior_pct": {"gap_targeting_margin_pp": {"observatory": 91.7}}}))
+        self.assertEqual(rows[0]["status"], "IMPOSSIBLE")
+
+    def test_a_document_with_room_passes(self) -> None:
+        rows = ch.findings(policy({"gap_targeting_margin_pp": 10,
+                                   "control_prior_pct": {"gap_targeting_margin_pp": {"clinic": 46.9}}}))
+        self.assertEqual(rows[0]["status"], "OK")
+
+    def test_a_margin_stays_testable_where_a_ratio_did_not(self) -> None:
+        # The same three priors that made a x2 impossible on two documents leave
+        # room for +10 on two of them: 80.2 + 10 fits, 91.7 + 10 does not. Two of
+        # three is what the rule needs, so it survives with a warning about the
+        # third rather than being decided in advance. That difference is the
+        # whole argument for a margin over a ratio near a bounded endpoint.
+        import json as _json
+        import tempfile
+        from pathlib import Path as _Path
+        folder = _Path(tempfile.mkdtemp()) / "experiments" / "FAKE-EXP"
+        folder.mkdir(parents=True)
+        (folder / "evaluation_policy.json").write_text(_json.dumps({
+            "decision": {"gap_targeting_margin_pp": 10, "documents_required": 2,
+                         "control_prior_pct": {"gap_targeting_margin_pp":
+                                               {"clinic": 46.9, "vineyard": 80.2, "observatory": 91.7}}}}),
+            encoding="utf-8")
+        original = ch.ROOT
+        ch.ROOT = folder.parents[1]
+        try:
+            result = ch.check("FAKE-EXP")
+        finally:
+            ch.ROOT = original
+        self.assertEqual(result["status"], "WARN")
+        self.assertEqual(result["thresholds_short_of_the_documents_they_need"], [])
+
+
 if __name__ == "__main__":
     unittest.main()
