@@ -56,6 +56,13 @@ memory but of a population that overlaps — which is how science, law and
 institutions actually persist. The engineering consequence is immediate: never
 entrust a long-lived project to a single lineage.
 
+**Outcome: refused** (`experiments/PROP-EXP-MEM-009/RESULT.md`). Recovery was
++11.6, +6.9 and +1.4 against the +15 required, and no merge beat the best
+single chain it came from. At a fixed budget, merging recovers dispersion, not
+loss: it reaches the level of the best witness and stops. An exploratory rerun
+at double the budget did beat the best single chain on two documents of three,
+which is registered as a hypothesis for a later experiment, not as a finding.
+
 ## Stage 2 — Memory versus archive
 
 **Hypothesis.** A chain that can *check* something — an index, hashes, pointers
@@ -74,6 +81,35 @@ documents, with the 95 % lower bound above 0.
 anchored chain also converges to a floor. That would say continuity cannot be
 bought with an archive alone, and that the protocol for using it is what
 matters.
+
+**Outcome: refused, and this is what happened.**
+
+The first attempt (`experiments/PROP-EXP-MEM-010/RESULT.md`) was built on the
+best instruction this project has found, whose chains keep about 95 % of a
+document. The largest effect available was +4.2 to +6.2 points against a +20
+threshold, so the rule could not have been met. That is published as a defect
+of the design, not as evidence about archives. Both archive regimes cost 1.4 to
+3.6 points there rather than gaining.
+
+The retest (`experiments/PROP-EXP-MEM-011/RESULT.md`) used the free summary
+instruction, whose chains lose 26 to 30 points, with the threshold unchanged.
+The archive recovered **+3.6, +5.6 and +3.5** points at hop 5, every interval
+including zero. Hop 1 is identical across arms by construction and differs by
+−8.3 to +6.9, so the measured effects sit inside the experiment's own null.
+
+Set against the rest of the record, the comparison is the finding: telling a
+writer which kinds of item to carry is worth +16.7 to +31.9 points at hop 3,
+while giving it a searchable archive is worth nothing distinguishable from
+noise — and worse than nothing on a chain that already writes well. **What a
+system carries forward is decided by what it was told to look for, not by what
+it can look up.**
+
+What is left standing is the clause this refutation names: the protocol for
+using an archive is what matters. The chains retrieved reliably — 96
+hash-checked retrievals per document, no failures — and chose badly, fetching
+the opening lines a summary keeps anyway instead of what they had dropped. A
+chain instructed to audit its note against the index before fetching is the
+next registered experiment.
 
 ## Stage 3 — Let the protocol evolve
 

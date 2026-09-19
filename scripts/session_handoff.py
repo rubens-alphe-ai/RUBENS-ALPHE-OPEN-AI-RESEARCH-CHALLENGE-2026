@@ -117,7 +117,8 @@ def render() -> str:
     lines += [
         "- Calibration failed once (`calibration/PCRB2/`) and has not been rerun; FINAL_KEEP needs it.",
         "- The holdout (`experiments/HOLDOUT-2026-09/`) is sealed and unused.",
-        "- The Continuity Programme (`docs/CONTINUITY_PROGRAMME.md`) is registered; stage 1 has not run.",
+        "- The Continuity Programme (`docs/CONTINUITY_PROGRAMME.md`): stages 1 and 2 ran and were both refused. "
+        "Stage 3, evolving the instruction against the sealed holdout, has not run.",
         "",
         "## Rules in force",
         "",
@@ -148,7 +149,8 @@ def render() -> str:
         "",
         "## Next actions",
         "",
-        "- Run stage 1 of the Continuity Programme.",
+        "- Run stage 3 of the Continuity Programme, or first test whether a chain told how to use an archive "
+        "chooses differently from one merely given it.",
         "- Rerun calibration as a new anchor-set version; do not edit the one that failed.",
         "- Trigger the GitHub Actions workflow once, so a run no longer depends on this machine.",
         "- Read `docs/OUTREACH_CRITERIA.md` on 2026-10-18 and write the verdict, whatever it says.",
