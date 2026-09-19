@@ -71,10 +71,42 @@ def account(key: str, base: str = "https://openrouter.ai/api/v1") -> dict:
             "free_requests_left": (data.get("free_model_daily_requests") or {}).get("remaining")}
 
 
+def plan_for_anchored_chain(experiment: Path, policy: dict) -> list[dict]:
+    """What a chain experiment will send: every hop, every arm, every document.
+
+    A guard that does not know a design cannot refuse a run under it, so a new
+    design is priced here before it is run rather than after.
+    """
+    regimes = policy["regimes"]
+    repeats, hops = int(policy["repeats"]), max(policy["read_at"])
+    documents = len(policy["documents"])
+    writer_calls = documents * repeats * hops * len(regimes)
+    # The anchored arm spends one extra call per hop asking what to retrieve;
+    # hop 1 reads the document itself and asks for nothing.
+    asking = documents * repeats * (hops - 1) if "anchored" in regimes else 0
+    generation = policy["generator"]
+    document_chars = max(len((experiment / name).read_text(encoding="utf-8")) for name in policy["documents"])
+    index_chars = max(len(json.dumps(json.loads((experiment / path).read_text(encoding="utf-8"))))
+                      for path in policy["ledgers"].values())
+    prompt_chars = document_chars + index_chars + 1500
+    steps = [{"stage": "writing", "model": generation["model"], "calls": writer_calls + asking,
+              "endpoint": generation.get("endpoint", ""), "prompt_chars": prompt_chars,
+              "max_output_tokens": int(generation.get("max_tokens", 5000))}]
+    reader = policy["reader"]
+    quiz_chars = max(len((experiment / path).read_text(encoding="utf-8")) for path in policy["quizzes"].values())
+    steps.append({"stage": "reading", "model": reader["model"],
+                  "calls": documents * repeats * len(regimes) * len(policy["read_at"]),
+                  "endpoint": reader.get("endpoint", ""), "prompt_chars": quiz_chars + 3000,
+                  "max_output_tokens": int(reader.get("max_tokens", 2000))})
+    return steps
+
+
 def plan_for(experiment_id: str) -> list[dict]:
     """What a quiz experiment will send, from its own policy and files."""
     experiment = ROOT / "experiments" / experiment_id
     policy = json.loads((experiment / "evaluation_policy.json").read_text(encoding="utf-8"))
+    if policy.get("design") == "anchored_chain":
+        return plan_for_anchored_chain(experiment, policy)
     generation = policy["generation"]
     pairs = len(generation["seeds"])
     state_chars = max(len((experiment / generation[name]).read_text(encoding="utf-8"))

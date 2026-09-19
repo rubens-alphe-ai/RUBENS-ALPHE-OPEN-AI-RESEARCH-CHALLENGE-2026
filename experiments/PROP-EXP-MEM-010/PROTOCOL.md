@@ -73,7 +73,11 @@ letters to a key rendered from a frozen quiz; no model scores anything.
 
 Writer `deepseek/deepseek-v4.1-flash`, reader `openai/gpt-oss-120b`, both via
 OpenRouter. 6 repeats per regime per document, read at hops 1, 3 and 5.
-Ceiling 0.80 USD, enforced before the first call.
+Writer output budget 900 tokens — a 150-word handoff is about 200, so this is
+over four times the room it needs, and it keeps the priced ceiling honest
+rather than nominal. Ceiling 0.80 USD, enforced by `scripts/cost_guard.py`
+before the first call; at 900 tokens the pessimistic estimate is 0.61 USD, and
+at the 5000 copied from MEM-008 it was 1.45 and the guard refused the run.
 
 ## Pre-registered decision rule
 

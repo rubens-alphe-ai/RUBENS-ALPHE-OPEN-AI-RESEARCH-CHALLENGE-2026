@@ -1,7 +1,7 @@
 {
   "policy_version": "RA-PSI-BENCH-POLICY-V1",
   "design": "anchored_chain",
-  "notes": "Pre-registered with PROTOCOL.md before any trial. Run with scripts/anchored_chain.py, once per document.",
+  "notes": "Pre-registered with PROTOCOL.md before any trial. Run with scripts/anchored_chain.py, once per document. Generator output budget 900 tokens: a 150-word handoff is about 200, so this is over four times the room it needs while keeping the priced ceiling honest.",
   "budget": {
     "max_usd": 0.8,
     "key_file": "~/.ra-psi/keys/openrouter.key"
@@ -40,7 +40,7 @@
     "model": "deepseek/deepseek-v4.1-flash",
     "endpoint": "https://openrouter.ai/api/v1/chat/completions",
     "key": "openrouter",
-    "max_tokens": 5000,
+    "max_tokens": 900,
     "extra_body": {
       "reasoning": {
         "enabled": false
