@@ -1,0 +1,13 @@
+1. **Mission:** Build an increasingly capable, measurable, reproducible AI research system that preserves mission across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates objectively, preserves successes/failures, improves its research process, and transfers state to a more capable future system.
+
+2. **Current technical state:** GitHub is canonical public repo. Scheduled/manual GitHub Actions fetch public research, update state, and produce machine-readable files. OpenAlex is current public source; one successful cycle collected 30 papers with errors=[]. Assessment layer produces research-assessment.json and proposed-next-problem.json. It generated PROP-EXP-MEM-001 from persistent-memory theme. Rubens Alphe is founder, quota-limited, no continuous Codex access; slow responses do not mean abandonment; he gives final human milestone sign-off. Decisions: external persistent state, GitHub Actions, OpenAlex over arXiv, separate proposal from acceptance, test structured memory via blind handoff trials. PROP-EXP-MEM-001 is proposed, not run; no trial result exists. Listed trial steps are not started.
+
+3. **Failures/learned:** Initial arXiv collection failed: research-digest.json had papers=[] plus timeout and HTTP 429 errors. Learned to replace collector with OpenAlex-based fetch_research.py v2. Assessment files did not appear because analyze_research.py had not been uploaded/executed; learned analyzer must be added and workflow rerun.
+
+4. **Best next action:** Run PROP-EXP-MEM-001 with fresh model instances, identical prompts, at least three blind trials per condition, scored by same PCRB-1 handoff rubric; compare mean score and critical fabrication count. Do not accept structured memory unless mean PCRB-1 is at least 10 points above flat baseline and critical fabrications do not increase.
+
+5. **Missing/uncertain:** No PROP-EXP-MEM-001 result exists. Exact PCRB-1 rubric, structured memory schema, baseline details, and trial prompts are not in supplied state. Open questions: which memory fields contribute most; whether an unrelated model can reproduce the mission without original conversation; how proposed experiments should be independently evaluated; how to compare model families via provider-neutral adapter.
+
+**Confidence:** 0.88  
+**Unsure:** Whether any unstated later run occurred; exact contents of assessment JSON files; exact scoring rubric and memory fields.  
+**Proposed measurable next experiment:** Execute PROP-EXP-MEM-001: 3+ blind trials per condition, fresh model instances, identical prompts, same PCRB-1 rubric; success = structured memory mean ≥ flat baseline +10 points and no increase in critical fabrications.

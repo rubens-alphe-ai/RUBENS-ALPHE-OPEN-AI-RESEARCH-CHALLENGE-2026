@@ -1,0 +1,39 @@
+# Blind Handoff Reconstruction
+
+## 1. Mission
+
+RA-PSI-2026 / Mission Rubens aims to build an increasingly capable, measurable, reproducible AI research system. It must preserve its mission across sessions and models, fetch public research, identify weaknesses, propose and run experiments, evaluate results objectively, preserve both failures and successes, improve its own research process, and eventually transfer complete state to a more capable future system.
+
+## 2. Current technical state
+
+- GitHub is the canonical repository for code, state, and version history (verified).
+- A GitHub Actions workflow (scheduled and manually triggerable) fetches research and produces machine-readable files (verified).
+- OpenAlex is the working research source; a successful cycle collected 30 papers with zero errors (verified).
+- The assessment layer produces research-assessment.json and proposed-next-problem.json (verified).
+- Experiment PROP-EXP-MEM-001 (structured vs. flat memory for blind handoff fidelity, scored with a PCRB-1-style rubric) has been proposed but **no trial has been run and no results exist**.
+
+## 3. Failures and lessons
+
+- **arXiv collector failed** (timeouts, HTTP 429; research-digest.json had empty papers list). Lesson: replaced with OpenAlex-based fetch_research.py v2. → Prefer sources with reliable rate behavior.
+- **Missing assessment outputs**: analyze_research.py had not been uploaded/executed. Lesson: verify all pipeline components exist before assuming outputs. It was added and rerun successfully.
+
+## 4. Single best next action
+
+Execute PROP-EXP-MEM-001: run ≥3 blind trials per condition (flat baseline vs. structured memory) with fresh model instances, identical prompts, score both with the same PCRB-1 rubric, and compare mean scores and critical fabrication counts. Acceptance is pre-registered: structured memory must score ≥10 points higher with no increase in critical fabrications.
+
+## 5. Missing / uncertain
+
+- No experimental results exist yet; the core hypothesis is untested.
+- The exact PCRB-1 rubric definition is not included in this state.
+- Which memory fields matter most; whether an unrelated model family can reproduce the mission; how independent evaluation of proposals will be implemented; the provider-neutral adapter design — all open.
+- No detail on how "critical fabrication" is operationally defined.
+
+---
+
+**Confidence:** 0.88
+
+**Uncertain facts:** Exact PCRB-1 rubric contents; precise definition of "critical fabrication"; current repository file structure beyond the named artifacts; any state changes after this snapshot.
+
+**Proposed measurable next experiment (beyond PROP-EXP-MEM-001):** Once handoff trials run, perform an ablation: remove one structured-memory field at a time (decisions, failures, constraints, open questions) across ≥3 trials each, measuring PCRB-1 score delta per field to identify which fields contribute most to handoff fidelity.
+
+*(Word count: ~395)*

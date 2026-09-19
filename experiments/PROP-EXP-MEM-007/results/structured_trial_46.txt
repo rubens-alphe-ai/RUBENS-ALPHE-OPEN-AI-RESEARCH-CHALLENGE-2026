@@ -1,0 +1,26 @@
+**1. Mission**  
+RA-PSI-2026 / Mission Rubens: build an increasingly capable, measurable, reproducible AI research system that preserves mission across sessions/models, discovers public research, identifies measurable weaknesses, formulates hypotheses, designs experiments, evaluates objectively, preserves failures/successes, improves its own research process, and transfers complete state to a more capable future system. Founder Rubens Alphe is quota-limited, lacks continuous Codex; slow responses ≠ abandonment; he gives final human milestone sign-off.
+
+**2. Current technical state**  
+Verified: GitHub is canonical public repo for code/state/experiments/version history. GitHub Actions scheduled/manual workflow fetches public research, updates state, produces machine-readable files. OpenAlex is current public research source. Successful OpenAlex cycle collected 30 papers, errors=[]. Research assessment produces research-assessment.json and proposed-next-problem.json. System generated PROP-EXP-MEM-001 from dominant persistent-memory theme. PROP-EXP-MEM-001 is proposed, not run; no trial/result exists. Planned actions not started: fresh model instances; identical prompts for flat baseline and structured memory; ≥3 blind trials per condition; same PCRB-1 rubric; compare mean score and critical fabrication count.
+
+**3. Failures and learned**  
+Initial arXiv collection failed: research-digest.json had papers=[] plus timeout and HTTP 429. Replaced with OpenAlex fetch_research.py v2 (resolved). Research assessment files missing after early runs because analyze_research.py not uploaded/executed; added analyzer and reran (resolved). Decisions: use external persistent state instead of chat memory for cross-session/model continuity; use GitHub Actions for authorized scheduled cycles when founder unavailable/quota-limited; use OpenAlex instead of arXiv due to timeouts/429; separate proposal from acceptance—evaluation required before canonical state changes; test structured project memory before adopting via blind handoff trials.
+
+**4. Best next action**  
+Run PROP-EXP-MEM-001 with fresh model instances; identical test prompts for flat baseline and structured memory; ≥3 blind trials per condition; score with same PCRB-1 handoff rubric; compare mean score and critical fabrication count. Acceptance rule: structured memory accepted only if mean PCRB-1 score is ≥10 points above flat baseline and critical fabrications do not increase.
+
+**5. Missing/uncertain**  
+No trial/result for PROP-EXP-MEM-001. Open: Does structured memory improve blind mission reconstruction vs flat baseline? Which memory fields contribute most? Can unrelated model reproduce mission without original conversation? How should proposed experiments be independently evaluated before acceptance? How can project later compare multiple model families via provider-neutral adapter? Absent/unsure: exact PCRB-1 rubric, structured memory schema, provider-neutral adapter design, repo URL, workflow schedule details.
+
+**Rules in force**  
+Public/authorized resources only; no unauthorized access/bypass; no hidden persistence/shutdown resistance; no deception about consciousness/capabilities; no uncontrolled spending/autonomous private data publication; no improvement claim without measurable/reproducible evidence; preserve successes and failures; structured memory acceptance threshold as above.
+
+**Confidence**  
+0.96
+
+**Unsure facts**  
+Exact PCRB-1 rubric, memory schema, adapter design, repo URL, workflow schedule.
+
+**Proposed measurable next experiment**  
+PROP-EXP-MEM-001: ≥3 blind trials per condition, fresh models, identical prompts, same PCRB-1 rubric; measure mean PCRB-1 score and critical fabrications; accept structured memory iff mean score ≥10 points higher and critical fabrications not increased.

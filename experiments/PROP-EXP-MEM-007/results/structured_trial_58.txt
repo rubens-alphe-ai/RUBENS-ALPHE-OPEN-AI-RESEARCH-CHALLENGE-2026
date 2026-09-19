@@ -1,0 +1,17 @@
+Reconstruction only from supplied state.
+
+1. **Mission**: Build an increasingly capable, measurable, reproducible AI research system that can preserve a mission across sessions and models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures and successes, improve its own research process, and transfer complete state to a more capable future system. GitHub is canonical public repository (verified). GitHub Actions workflow fetches public research, updates project state, produces machine-readable files (verified). OpenAlex is current public research source (verified).
+
+2. **Current technical state**: A successful OpenAlex cycle collected 30 papers, errors=[] (verified). Research assessment layer produces research-assessment.json and proposed-next-problem.json (verified). System generated PROP-EXP-MEM-001 from dominant persistent-memory theme (verified). PROP-EXP-MEM-001 is proposed, not run; no trial/result exists (verified). Planned actions not started: run with fresh model instances, identical prompts for flat baseline and structured memory, at least three blind trials per condition, score with same PCRB-1 handoff rubric, compare mean score and critical fabrication count.
+
+3. **Failures/learned**: Initial arXiv collection failed: research-digest.json had papers=[] plus timeout and HTTP 429 errors. Fix: replaced with OpenAlex-based fetch_research.py v2 (resolved). Research assessment files did not appear after early runs because analyze_research.py had not been uploaded/executed. Fix: analyzer added and workflow rerun (resolved). Learned/decided: use OpenAlex instead of arXiv as primary collector due arXiv timeouts/429.
+
+4. **Best next action**: Run PROP-EXP-MEM-001 exactly as planned: fresh model instances, identical prompts for flat baseline and structured memory, ≥3 blind trials per condition, same PCRB-1 handoff rubric, then compare mean score and critical fabrications. Acceptance rule is in force: structured memory accepted only if mean PCRB-1 score is at least 10 points above flat baseline and critical fabrications do not increase.
+
+5. **Missing/uncertain**: Exact PCRB-1 rubric details absent. Exact test prompts absent. Exact memory schema/fields absent. Trial data absent. How proposed experiments should be independently evaluated before acceptance is open. How to compare multiple model families through a provider-neutral adapter is open. Whether structured memory improves blind mission reconstruction is open. Which memory fields contribute most is open. Whether an unrelated model can reproduce the mission without original conversation is open.
+
+Confidence: 0.92.
+
+Unsure: exact rubric wording, exact prompt text, exact structured-memory fields, and whether any trial outputs exist elsewhere.
+
+Proposed measurable next experiment: Execute PROP-EXP-MEM-001: 3+ blind trials per condition, identical prompts, PCRB-1 scoring; accept structured memory iff mean score ≥ flat baseline +10 and critical fabrications do not increase.

@@ -1,0 +1,30 @@
+# Blind Handoff Reconstruction — RA-PSI-2026 / Mission Rubens
+
+**1. Mission**
+Build an increasingly capable, measurable, reproducible AI research system that preserves its mission across sessions and models, discovers public research, finds measurable weaknesses, forms hypotheses, designs and runs experiments, evaluates results objectively, preserves failures and successes, improves its own research process, and transfers complete state to a more capable future system.
+
+**2. Current technical state**
+- GitHub is the canonical public repo for code, state, experiments, version history (verified).
+- GitHub Actions runs scheduled/manual research cycles (verified).
+- OpenAlex is the research source; a successful cycle collected 30 papers with zero errors (verified).
+- The assessment layer produces research-assessment.json and proposed-next-problem.json (verified).
+- Experiment PROP-EXP-MEM-001 (structured memory vs. flat baseline handoff fidelity, PCRB-1 rubric) has been generated but **no trial has been run**; all execution steps (fresh model instances, identical prompts, ≥3 blind trials per condition, rubric scoring, mean-score and critical-fabrication comparison) are not started.
+- Founder Rubens Alphe is quota-limited, gives final human milestone sign-off.
+
+**3. Failures and lessons**
+- arXiv collector failed (timeouts, HTTP 429; papers=[]). Fix: replaced with OpenAlex-based fetch_research.py v2. Lesson: choose resilient data sources.
+- Assessment files missing because analyze_research.py wasn't uploaded/executed. Fix: added analyzer, reran workflow. Lesson: verify all pipeline components are deployed, not just designed.
+
+**4. Single best next action**
+Run PROP-EXP-MEM-001: ≥3 blind trials per condition with identical prompts and fresh model instances, scored with the PCRB-1 rubric. Acceptance gate: structured memory must score ≥10 points above flat baseline with no increase in critical fabrications.
+
+**5. Missing/uncertain**
+- No experimental results exist yet for PROP-EXP-MEM-001.
+- Open questions: which memory fields drive fidelity; can an unrelated model reconstruct the mission; how to independently evaluate proposed experiments; how to build a provider-neutral multi-model adapter.
+- Details of the PCRB-1 rubric itself and exact prompt sets are not specified in the state.
+
+**Confidence: 0.93**
+
+**Unsure about:** exact PCRB-1 rubric contents; precise repo file layout beyond the named JSON files; whether any infrastructure beyond the named components exists.
+
+**Proposed next experiment:** Handoff Ablation Trial — run blind handoffs with the structured memory minus one field category at a time (decisions, failures, rules, open questions), ≥3 trials each, PCRB-1 scored, to identify which fields contribute most to reconstruction fidelity.

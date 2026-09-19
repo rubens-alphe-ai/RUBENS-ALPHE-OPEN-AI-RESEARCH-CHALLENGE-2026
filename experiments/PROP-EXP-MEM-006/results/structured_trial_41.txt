@@ -1,0 +1,15 @@
+1. **Mission:** RA-PSI-2026 / Mission Rubens is building an increasingly capable, measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, finds measurable weaknesses, forms hypotheses, designs/evaluates experiments, preserves failures and successes, improves its research process, and transfers complete state to future systems.
+
+2. **Current technical state:** GitHub is the canonical public repo for code/state/experiments/history: verified. GitHub Actions scheduled/manual workflow fetches public research, updates state, emits machine-readable files: verified. OpenAlex is the research source: verified. One OpenAlex cycle collected 30 papers with `errors=[]`: verified. Assessment layer emits `research-assessment.json` and `proposed-next-problem.json`: verified. It generated `PROP-EXP-MEM-001` from the dominant persistent-memory theme: verified. That experiment is proposed, not run; no results exist.
+
+3. **Failures and lessons:** Initial arXiv collection failed with `papers=[]`, timeouts, HTTP 429; fixed by replacing collector with OpenAlex `fetch_research.py` v2. Assessment files initially missing because `analyze_research.py` had not been uploaded/executed; fixed by adding analyzer and rerunning workflow. Lesson: prefer robust public APIs and verify required components are actually present/executed.
+
+4. **Best next action:** Run `PROP-EXP-MEM-001`: fresh model instances, identical prompts for flat baseline vs structured memory, at least three blind trials per condition, same PCRB-1 handoff rubric, compare mean score and critical fabrication count. Accept structured memory only if mean PCRB-1 is ≥10 points above baseline and critical fabrications do not increase.
+
+5. **Missing/uncertain:** No trial results exist. Unknown: which memory fields drive fidelity; whether an unrelated model can reproduce the mission without original conversation; how proposals are independently evaluated before acceptance; how to compare model families via provider-neutral adapter. Also absent from supplied state: exact PCRB-1 rubric definition, exact test prompts, model identities, repo URL, costs, runtime limits, and detailed scoring/adjudication procedure.
+
+**Confidence:** 0.86
+
+**Unsure facts:** PCRB-1 scoring details; whether workflow artifacts are publicly visible; exact provenance of “dominant persistent-memory theme”; current GitHub file layout beyond named JSON files.
+
+**Proposed measurable next experiment:** Execute `PROP-EXP-MEM-001` as specified, logging condition, model/instance ID, prompt hash, raw outputs, blinded PCRB-1 item scores, critical fabrications, latency/cost if available. Primary endpoints: mean PCRB-1 difference and critical-fabrication counts. Secondary exploratory analysis: per-memory-field ablation only after primary acceptance decision is recorded. Preserve all successes/failures in GitHub.

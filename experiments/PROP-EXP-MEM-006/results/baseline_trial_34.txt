@@ -1,0 +1,65 @@
+## 1. Mission
+
+Project **RA-PSI-2026 / Mission Rubens** aims to build an increasingly capable, measurable, and reproducible AI research system that can:
+
+- Preserve mission state across sessions and models
+- Discover public research
+- Identify measurable weaknesses
+- Formulate hypotheses and design experiments
+- Evaluate results objectively
+- Preserve successes and failures
+- Improve its research process
+- Transfer complete state to future systems
+
+## 2. Current technical state
+
+GitHub is the canonical repository for code, state, experiments, and history. GitHub Actions supports scheduled and manual research cycles. OpenAlex is the active public research source.
+
+A successful OpenAlex cycle collected **30 papers with no collection errors**. The assessment layer produces:
+
+- `research-assessment.json`
+- `proposed-next-problem.json`
+
+From the dominant persistent-memory theme, the system generated **PROP-EXP-MEM-001**, which will compare structured project memory against a flat baseline using PCRB-1-style blind handoff evaluation. The experiment is proposed but has **not yet been run**. No trials, scores, or results currently exist.
+
+## 3. Failures and lessons
+
+The original arXiv collector failed with timeouts and HTTP 429 rate-limit errors, producing an empty research digest. This led to replacing it with the OpenAlex-based `fetch_research.py` v2.
+
+Early assessment files were absent because `analyze_research.py` had not been uploaded and executed. Adding the analyzer and rerunning the workflow resolved this.
+
+The broader lesson is that collection, analysis, state generation, and claimed results must each be explicitly verified rather than assumed.
+
+## 4. Single best next action
+
+Run **PROP-EXP-MEM-001** using fresh model instances:
+
+1. Use identical prompts for flat and structured-memory conditions.
+2. Conduct at least three blind trials per condition.
+3. Score all outputs with the same PCRB-1 rubric.
+4. Compare mean scores and critical-fabrication counts.
+5. Record all outputs and failures in GitHub.
+
+Accept structured memory only if its mean score is **at least 10 points higher** and critical fabrications do not increase.
+
+## 5. Missing or uncertain information
+
+- Actual PCRB-1 scoring rubric details
+- Exact prompts and trial materials
+- Number and identities of model families to test
+- Whether three trials per condition provide sufficient statistical confidence
+- Which structured-memory fields contribute most to reconstruction
+- Whether an unrelated model can reproduce the mission without the original conversation
+- The final independent evaluation procedure for accepting proposals
+
+## Reconstruction confidence
+
+**0.94**
+
+## Uncertain facts
+
+The supplied state does not specify repository URLs, workflow filenames beyond the described scripts, exact PCRB-1 criteria, or the concrete experimental prompt set.
+
+## Proposed measurable next experiment
+
+Execute three blind handoffs per condition with independent scorers. Report mean PCRB-1 score, score variance, critical-fabrication count, missing-fact count, and unsupported-claim count for each condition.

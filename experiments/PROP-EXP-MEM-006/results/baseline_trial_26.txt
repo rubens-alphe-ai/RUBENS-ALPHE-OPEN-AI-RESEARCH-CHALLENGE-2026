@@ -1,0 +1,15 @@
+1. **Mission:** Build an increasingly capable, measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, finds measurable weaknesses, proposes and evaluates experiments, preserves successes/failures, improves its process, and can transfer complete state to future systems.
+
+2. **Current technical state:** GitHub is canonical for code/state/history. GitHub Actions runs scheduled/manual research cycles. OpenAlex is the working public research source after arXiv failed. A successful cycle collected 30 papers with `errors=[]`. Assessment outputs exist: `research-assessment.json` and `proposed-next-problem.json`. The system proposed `PROP-EXP-MEM-001` from the persistent-memory theme, but no trial has run and no results exist.
+
+3. **Failures and lessons:** The initial arXiv collector produced `papers=[]` with timeout and HTTP 429 errors; lesson: avoid unreliable/rate-limited sources and use OpenAlex. Early assessment files were absent because `analyze_research.py` had not been uploaded/executed; lesson: pipeline components must be present and actually run. Broader lesson: proposals are not accepted until independently evaluated.
+
+4. **Single best next action:** Run `PROP-EXP-MEM-001` as a controlled blind-handoff experiment: fresh model instances, identical prompts, at least three trials per condition, same PCRB-1 rubric, then compare mean score and critical fabrication count against the predefined acceptance rule.
+
+5. **Missing/uncertain:** Exact PCRB-1 rubric and scoring procedure; precise flat-baseline format; structured-memory schema; trial randomization/blinding protocol; model/provider identities; repo paths/commit hashes; workflow schedule; current digest contents beyond “30 papers”; operational definition of “critical fabrication”; who scores and whether scoring is blinded; statistical treatment of small samples.
+
+**Confidence:** 0.86
+
+**Unsure facts:** I am unsure whether the supplied state itself constitutes the structured-memory condition, whether GitHub workflow status is current as of now, and whether any files beyond those named exist.
+
+**Proposed measurable next experiment:** Execute `PROP-EXP-MEM-001` with 3+ blind trials per arm using fresh instances. Pre-register prompts, rubric, scorer blinding, and exclusion rules. Record PCRB-1 scores and critical fabrications per output. Accept structured memory only if mean PCRB-1 is ≥10 points above flat baseline and critical fabrications do not increase; otherwise preserve the failure and revise the memory schema.

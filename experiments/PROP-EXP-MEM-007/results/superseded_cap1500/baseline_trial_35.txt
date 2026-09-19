@@ -1,0 +1,15 @@
+1. **Mission:** Build an increasingly capable, measurable, reproducible AI research system that preserves a mission across sessions/models; discovers public research; identifies measurable weaknesses; formulates hypotheses; designs experiments; evaluates results objectively; preserves failures and successes; improves its own research process; and transfers complete state to a more capable future system.
+
+2. **Current technical state:** GitHub is the canonical public repository. A scheduled/manual GitHub Actions workflow fetches public research, updates project state, and produces machine-readable files. OpenAlex is the verified research source; one cycle collected 30 papers with `errors=[]`. The assessment layer produces `research-assessment.json` and `proposed-next-problem.json`. `PROP-EXP-MEM-001` was generated from the persistent-memory theme but has not been run. No trial result exists.
+
+3. **Failures and lessons:** Initial arXiv collection failed: `research-digest.json` had `papers=[]` plus timeout and HTTP 429 errors. It was replaced by OpenAlex-based `fetch_research.py` v2. Early assessment files were missing because `analyze_research.py` had not been uploaded/run; after adding it and rerunning, that was resolved. Lessons: use external persistent state, use GitHub Actions for authorized cycles, prefer OpenAlex over arXiv, separate proposal from acceptance, and test structured memory via blind handoff trials.
+
+4. **Single best next action:** Run `PROP-EXP-MEM-001` with fresh model instances, identical test prompts for flat baseline and structured memory, at least three blind trials per condition, and score each output with the same PCRB-1 handoff rubric. Compare mean PCRB-1 score and critical fabrication count. Acceptance rule: structured memory is accepted only if mean PCRB-1 score is at least 10 points above flat baseline and critical fabrications do not increase.
+
+5. **Missing or uncertain:** No `PROP-EXP-MEM-001` trial has been run; no results exist. The exact PCRB-1 rubric, test prompts, model instances, structured-memory field design, independent evaluation protocol, and provider-neutral adapter are not supplied. It is also unclear whether the current workflow can execute experiment trials or only research/assessment cycles. How proposed experiments should be independently evaluated before acceptance remains open.
+
+**Confidence:** 0.94
+
+**Unsure facts:** Exact contents of `research-assessment.json` and `proposed-next-problem.json` are not supplied. Exact PCRB-1 scoring details are absent. Whether experiment execution is already automated is not verified.
+
+**Proposed measurable next experiment:** Execute `PROP-EXP-MEM-001` as a preregistered blind trial: flat vs structured memory, fresh models, identical prompts, ≥3 trials per condition, same PCRB-1 rubric; primary metric = mean PCRB-1 difference; secondary metric = critical fabrication count. Preserve all outputs and failures.

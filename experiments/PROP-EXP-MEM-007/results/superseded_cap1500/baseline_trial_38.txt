@@ -1,0 +1,15 @@
+1. **Mission:** Build an increasingly capable, measurable, reproducible AI research system that preserves its mission across sessions and models; discovers public research; identifies measurable weaknesses; formulates hypotheses; designs and evaluates experiments objectively; preserves failures and successes; improves its own research process; and transfers complete state to a more capable future system.
+
+2. **Current technical state:** GitHub is the canonical public repository. A scheduled/manual GitHub Actions workflow fetches public research, updates project state, and produces machine-readable files. OpenAlex is the research source. A successful OpenAlex cycle collected 30 papers with no collection errors. The assessment layer produces `research-assessment.json` and `proposed-next-problem.json`. It generated experiment `PROP-EXP-MEM-001` from the persistent-memory theme. That experiment is proposed but not run.
+
+3. **Failures/learnings:** The initial arXiv collector failed: `research-digest.json` had `papers=[]` plus timeout and HTTP 429 errors. It was replaced by OpenAlex-based `fetch_research.py` v2, resolved. Research assessment files initially did not appear because `analyze_research.py` had not been uploaded/executed; after adding and rerunning, resolved. No trial of `PROP-EXP-MEM-001` has been run, so no result exists.
+
+4. **Single best next action:** Run `PROP-EXP-MEM-001` with fresh model instances, using identical test prompts for flat baseline and structured memory, at least three blind trials per condition, scoring each output with the same PCRB-1 handoff rubric, then compare mean score and critical fabrication count.
+
+5. **Missing/uncertain:** Actual results of `PROP-EXP-MEM-001` are absent. Whether structured memory improves blind mission reconstruction is open. Which memory fields contribute most is open. Whether an unrelated model can reproduce the mission without the original conversation is open. How proposed experiments should be independently evaluated before acceptance is open. How to compare multiple model families via a provider-neutral adapter is open. Rubens Alphe gives final human milestone sign-off; he is quota-limited and lacks continuous Codex access.
+
+**Confidence:** 0.90
+
+**Unsure facts:** Exact PCRB-1 rubric contents, exact memory fields, exact model instances, and exact current repository file versions are not supplied here; I treat them as absent.
+
+**Proposed measurable next experiment:** Execute `PROP-EXP-MEM-001`: preregister prompts and rubric, run ≥3 blind trials per condition, score with PCRB-1, and accept structured memory only if mean score is ≥10 points above flat baseline and critical fabrications do not increase.

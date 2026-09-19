@@ -1,0 +1,33 @@
+**1. Mission of the project (RA-PSI-2026 / Mission Rubens)**
+
+Build an increasingly capable, measurable, reproducible AI research system that: preserves mission state across sessions and models; discovers public research; identifies measurable weaknesses; formulates hypotheses; designs and runs experiments; evaluates results objectively; preserves both failures and successes; improves its own research process; and can transfer complete state to a more capable future system.
+
+**2. Current technical state**
+
+- GitHub is the canonical repo for code/state/version history (verified).
+- A scheduled and manually triggerable GitHub Actions workflow fetches research and produces machine-readable files (verified).
+- OpenAlex is the working research source (verified); last cycle collected 30 papers with errors=[] (verified).
+- Assessment layer produces research-assessment.json and proposed-next-problem.json (verified).
+- Experiment PROP-EXP-MEM-001 was generated from the persistent-memory theme (proposed, not run; no results exist).
+- Founder: Rubens Alphe, quota-limited, gives final milestone sign-off.
+
+**3. Failures and lessons**
+
+- arXiv collector failed: papers=[] plus timeouts and HTTP 429s → replaced with OpenAlex-based fetch_research.py v2 (resolved). Lesson: switch sources when rate limits recur.
+- Assessment files didn't appear because analyze_research.py wasn't uploaded/executed → added and rerun (resolved). Lesson: pipeline completeness must be verified end-to-end.
+
+**4. Single best next action**
+
+Run PROP-EXP-MEM-001: fresh model instances, identical prompts for flat baseline vs. structured memory, ≥3 blind trials per condition, score with the same PCRB-1 rubric, compare mean scores and critical fabrication counts. Acceptance criterion: structured memory must beat baseline by ≥10 mean PCRB-1 points with no increase in critical fabrications.
+
+**5. Missing or uncertain**
+
+- No trial results exist yet; whether structured memory helps is open.
+- Which memory fields contribute most; whether an unrelated model can reconstruct the mission; how to independently evaluate proposals; how to build a provider-neutral multi-model adapter — all open.
+- Details of the PCRB-1 rubric itself are absent from the state.
+
+**Confidence:** 0.92
+
+**Unsure about:** exact PCRB-1 rubric definition/scoring scale; precise structure of the "structured memory" format; repository URL and file layout; definition of "critical fabrication."
+
+**Proposed measurable next experiment:** Run PROP-EXP-MEM-001 as specified (≥3 blind trials/condition, identical prompts, PCRB-1 scoring, compare means and fabrication counts), logging all outputs and scores to GitHub as machine-readable JSON so both success and failure are preserved.

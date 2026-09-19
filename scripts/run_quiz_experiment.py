@@ -25,6 +25,7 @@ SCRIPTS = Path(__file__).resolve().parent
 ROOT = SCRIPTS.parent
 sys.path.insert(0, str(SCRIPTS))
 
+import cost_guard  # noqa: E402
 import handoff_quiz as hq  # noqa: E402
 import run_experiment as rx  # noqa: E402
 from evaluate_experiment import AdapterError, call, load_policy, pause_before_next, sha256_text  # noqa: E402
@@ -36,8 +37,11 @@ def now() -> str:
 
 def reader_entries(policy: dict, private: dict) -> list[dict]:
     """Readers in their pre-registered order; the first one that completes is used."""
+    skip = set(policy.get("skip_readers") or ())
     entries = []
     for rung in policy.get("reader_ladder") or [policy["reader"]]:
+        if rung.get("evaluator_id") in skip:
+            continue  # declared unable, with the evidence recorded in the deviations
         reader = dict(rung)
         reader.update({k: v for k, v in rx.key_location(private, reader.pop("key")).items()
                        if k in ("api_key_file", "api_key_env")})
@@ -92,11 +96,26 @@ def run(experiment_name: str, config_path: Path) -> dict:
         (results / "run-report.json").write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         return report
 
+    if policy.get("budget"):
+        # Paid models are only used inside a budget the owner wrote down.
+        guard = cost_guard.check(experiment_name, policy["budget"].get("key_file"))
+        report["steps"].append({"step": "budget", "status": guard["status"],
+                                "estimated_usd": guard["estimated_usd"], "allowed_usd": guard["allowed_usd"],
+                                "reason": guard.get("reason")})
+        if guard["status"] != "WITHIN_BUDGET":
+            return finish("STOPPED_OVER_BUDGET")
+
     spec = rx.generation_spec(policy)
     report["steps"].append(rx.ensure_manifest(experiment, spec))
     step = rx.run_trials(experiment, spec, private)
+    # A generator can refuse the same trial for ever (truncation, empty answer).
+    # An experiment may pre-register a small number of trials it tolerates
+    # losing; their pairs are then incomplete and dropped from the analysis,
+    # and the run report names them so the loss is visible with the verdict.
+    tolerated = int(policy.get("max_missing_trials", 0))
+    step["tolerated_missing"] = tolerated
     report["steps"].append(step)
-    if step["status"] != "complete":
+    if step["status"] != "complete" and len(step["missing"]) > tolerated:
         return finish("STOPPED_TRIALS_INCOMPLETE")
 
     quiz_cfg = policy["quiz"]
@@ -113,25 +132,45 @@ def run(experiment_name: str, config_path: Path) -> dict:
     random.Random(hq.seed_from(manifest["protocol_sha256"])).shuffle(trials)  # reading order hides pairing
     readers = reader_entries(policy, private)
     reader_used, graded = readers[0]["evaluator_id"], {}
+    workers = max(1, int(policy.get("reader_workers", 1)))
     for position, entry in enumerate(readers):
-        limits: dict = {}
+        shared_limits: dict = {}
         graded, failures = {}, []
-        for trial in trials:
+
+        give_up_after = int(policy.get("reader_give_up_after", 5))
+
+        def read_trial(trial: dict) -> None:
             out = quiz_dir / ("%s.json" % trial["trial_id"])
             if out.is_file():
-                record = json.loads(out.read_text(encoding="utf-8"))
-            else:
-                handoff = (ROOT / trial["output_path"]).read_text(encoding="utf-8")
-                prompt = hq.reader_prompt(quiz, rendered, handoff)
-                record = read_one(entry, prompt, ids, limits, float(policy.get("default_batch_pause_seconds", 20)), out)
-                if "answers" not in record:
-                    failures.append(trial["trial_id"])
-                    continue  # nothing stored: a later run asks again
-                record.update(trial_id=trial["trial_id"], pair_id=trial["pair_id"], condition=trial["condition"],
-                              reader_id=entry["evaluator_id"], prompt_sha256=sha256_text(prompt), read_at_utc=now(),
-                              grade=hq.grade(record["answers"], key, rendered))
-                out.write_text(json.dumps(record, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+                graded[trial["trial_id"]] = json.loads(out.read_text(encoding="utf-8"))
+                return
+            if len(failures) >= give_up_after:
+                # This reader has failed enough times to call it unable; the
+                # ladder's next rung reads everything again rather than finish
+                # a series nobody would trust.
+                return
+            handoff = (ROOT / trial["output_path"]).read_text(encoding="utf-8")
+            prompt = hq.reader_prompt(quiz, rendered, handoff)
+            # Each worker paces itself from its own view of the provider's limits.
+            limits = shared_limits if workers == 1 else {}
+            record = read_one(entry, prompt, ids, limits, float(policy.get("default_batch_pause_seconds", 20)), out)
+            if "answers" not in record:
+                failures.append(trial["trial_id"])
+                return  # nothing stored: a later run asks again
+            record.update(trial_id=trial["trial_id"], pair_id=trial["pair_id"], condition=trial["condition"],
+                          reader_id=entry["evaluator_id"], prompt_sha256=sha256_text(prompt), read_at_utc=now(),
+                          grade=hq.grade(record["answers"], key, rendered))
+            out.write_text(json.dumps(record, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
             graded[trial["trial_id"]] = record
+
+        if workers > 1:
+            from concurrent.futures import ThreadPoolExecutor
+
+            with ThreadPoolExecutor(max_workers=workers) as pool:
+                list(pool.map(read_trial, trials))
+        else:
+            for trial in trials:
+                read_trial(trial)
         report["steps"].append({"step": "reading", "reader": entry["evaluator_id"],
                                 "status": "complete" if not failures else "incomplete",
                                 "read": len(graded), "failed": failures})
@@ -140,7 +179,11 @@ def run(experiment_name: str, config_path: Path) -> dict:
             break
         if position + 1 == len(readers):
             return finish("STOPPED_READING_INCOMPLETE")
-        set_readings_aside(quiz_dir, entry["evaluator_id"])
+        # Readings are set aside only when the next rung is a *different model*.
+        # Two rungs can be the same model served by two providers: there the
+        # rule protects nothing and would throw away valid, comparable work.
+        if readers[position + 1]["model"].strip().lower() != entry["model"].strip().lower():
+            set_readings_aside(quiz_dir, entry["evaluator_id"])
 
     pairs: dict[str, dict] = {}
     for record in graded.values():

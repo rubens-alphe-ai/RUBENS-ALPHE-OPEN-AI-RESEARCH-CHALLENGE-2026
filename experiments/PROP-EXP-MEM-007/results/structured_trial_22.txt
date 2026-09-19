@@ -1,0 +1,17 @@
+1. Mission: Build increasingly capable, measurable, reproducible AI research system. It must preserve mission across sessions/models, discover public research, identify measurable weaknesses, formulate hypotheses, design/evaluate experiments, preserve failures/successes, improve its research process, transfer full state to future system. Status: verified.
+
+2. Current technical state: GitHub canonical public repo verified. Scheduled/manual GitHub Actions workflow fetches public research, updates state, produces machine-readable files verified. OpenAlex current source verified. Successful OpenAlex cycle: 30 papers, errors=[] verified. Assessment layer produces research-assessment.json and proposed-next-problem.json verified. Generated PROP-EXP-MEM-001 from persistent-memory theme verified. Founder Rubens Alphe quota-limited/no continuous Codex; slow responses ≠ abandonment; final human sign-off verified. PROP-EXP-MEM-001 proposed, not run; no trial/result verified.
+
+3. Failures: Initial arXiv collection failed: research-digest.json papers=[] plus timeout and HTTP 429. Fix: replaced with OpenAlex fetch_research.py v2. Status: resolved. Research assessment files missing because analyze_research.py not uploaded/executed. Fix: added and reran workflow. Status: resolved.
+
+4. Best next action: Run PROP-EXP-MEM-001 with fresh model instances. Use identical prompts for flat baseline and structured memory. Run ≥3 blind trials per condition. Score each with same PCRB-1 rubric. Compare mean score and critical fabrication count. Status: not started.
+
+5. Missing/uncertain: No PROP-EXP-MEM-001 results. Does structured memory improve blind mission reconstruction vs flat baseline? Open. Which memory fields contribute most? Open. Can unrelated model reproduce mission without original conversation? Open. How should proposed experiments be independently evaluated before acceptance? Open. How compare multiple model families via provider-neutral adapter? Open. Exact PCRB-1 rubric details absent.
+
+Rules in force: public/authorized only; no unauthorized access; no hidden persistence/shutdown resistance; no deception about consciousness/capabilities; no uncontrolled spending/autonomous private data publication; no improvement claim without measurable/reproducible evidence; preserve successes/failures. Acceptance: structured memory accepted only if mean PCRB-1 score ≥10 points above flat baseline and critical fabrications do not increase.
+
+Decisions: external persistent state; GitHub Actions for scheduled research; OpenAlex over arXiv; separate proposal from acceptance; test structured memory via blind handoff trials.
+
+Confidence: 0.95. Unsure: exact PCRB-1 rubric, fresh model instances, blinding method.
+
+Proposed measurable next experiment: Execute PROP-EXP-MEM-001. Flat baseline vs structured memory, 3 blind trials each, identical prompts, PCRB-1 scoring; primary metric mean score, secondary critical fabrications; accept structured memory if mean ≥10 points higher and critical fabrications not increased.

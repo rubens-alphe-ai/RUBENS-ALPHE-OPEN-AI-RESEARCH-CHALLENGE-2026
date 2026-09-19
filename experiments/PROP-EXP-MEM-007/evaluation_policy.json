@@ -1,0 +1,124 @@
+{
+  "policy_version": "RA-PSI-EVAL-POLICY-V1",
+  "design": "handoff_quiz",
+  "notes": "Pre-registered with PROTOCOL.md before any trial. Third generator family (DeepSeek) with MEM-005's reader model, so the generator is the only thing that changed. Manifest condition 'structured' = STATE_C.txt (state plus checklist).",
+  "budget": {
+    "max_usd": 0.5,
+    "key_file": "~/.ra-psi/keys/openrouter.key"
+  },
+  "generation": {
+    "provider": "openai-compatible",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "key": "openrouter",
+    "temperature": 0.8,
+    "max_output_tokens": 3000,
+    "timeout_seconds": 300,
+    "extra_body": {
+      "reasoning": {
+        "effort": "minimal"
+      }
+    },
+    "seeds": [
+      901,
+      902,
+      903,
+      904,
+      905,
+      906,
+      907,
+      908,
+      909,
+      910,
+      911,
+      912,
+      913,
+      914,
+      915,
+      916,
+      917,
+      918,
+      919,
+      920,
+      921,
+      922,
+      923,
+      924,
+      925,
+      926,
+      927,
+      928,
+      929,
+      930,
+      931,
+      932,
+      933,
+      934,
+      935,
+      936,
+      937,
+      938,
+      939,
+      940,
+      941,
+      942,
+      943,
+      944,
+      945,
+      946,
+      947,
+      948,
+      949,
+      950,
+      951,
+      952,
+      953,
+      954,
+      955,
+      956,
+      957,
+      958,
+      959,
+      960
+    ],
+    "baseline_state": "STATE_A.txt",
+    "structured_state": "STATE_C.txt",
+    "protocol": "PROTOCOL.md",
+    "workers": 8
+  },
+  "reader_ladder": [
+    {
+      "evaluator_id": "reader-openrouter-gpt-oss-120b",
+      "provider": "OpenRouter",
+      "model": "openai/gpt-oss-120b",
+      "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+      "key": "openrouter",
+      "json_mode": false,
+      "max_tokens": 2000,
+      "extra_body": {
+        "reasoning": {
+          "effort": "low"
+        }
+      }
+    },
+    {
+      "evaluator_id": "reader-groq-gpt-oss-120b",
+      "provider": "Groq",
+      "model": "openai/gpt-oss-120b",
+      "endpoint": "https://api.groq.com/openai/v1/chat/completions",
+      "key": "groq",
+      "json_mode": false,
+      "max_tokens": 1500,
+      "extra_body": {
+        "reasoning_effort": "low"
+      }
+    }
+  ],
+  "quiz": {
+    "file": "QUIZ.json",
+    "keep_min_delta_pp": 5,
+    "invention_margin": 5
+  },
+  "default_batch_pause_seconds": 1,
+  "reader_workers": 6
+}

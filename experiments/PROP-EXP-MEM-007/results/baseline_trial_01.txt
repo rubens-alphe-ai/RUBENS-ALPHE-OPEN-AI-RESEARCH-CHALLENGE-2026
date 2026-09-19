@@ -1,0 +1,15 @@
+1. **Mission:** Build an increasingly capable, measurable, reproducible AI research system that can preserve a mission across sessions and models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures and successes, improve its own research process, and transfer complete state to a more capable future system.
+
+2. **Current technical state:** GitHub is the canonical public repository. A scheduled and manually triggerable GitHub Actions workflow fetches public research, updates project state, and produces machine-readable files. OpenAlex is the current research source. A successful OpenAlex cycle collected 30 papers with no collection errors. The assessment layer produces `research-assessment.json` and `proposed-next-problem.json`. The system generated `PROP-EXP-MEM-001` from the dominant persistent-memory theme. External persistent state, GitHub Actions, and OpenAlex are decided practices. Proposal and acceptance are separated.
+
+3. **What failed / learned:** The initial arXiv collector failed: `research-digest.json` had `papers=[]` with timeouts and HTTP 429 errors. It was replaced by OpenAlex-based `fetch_research.py` v2. Research assessment files initially did not appear because `analyze_research.py` was not yet uploaded/executed; it was added and the workflow rerun. Learned: use external persistent state, authorized GitHub Actions, and OpenAlex rather than arXiv for reliable collection. Also learned to separate proposal from acceptance.
+
+4. **Single best next action:** Run `PROP-EXP-MEM-001` with fresh model instances, using identical test prompts for flat baseline and structured memory, at least three blind trials per condition, scoring each output with the same PCRB-1 handoff rubric, then compare mean score and critical fabrication count.
+
+5. **Missing / uncertain:** No trial of `PROP-EXP-MEM-001` has been run; no result exists. Unknown: whether structured memory will meet the acceptance threshold of mean PCRB-1 score at least 10 points above flat baseline without increasing critical fabrications. Unknown: which memory fields contribute most to handoff fidelity. Unknown: how proposed experiments should be independently evaluated before acceptance. Unknown: how to compare multiple model families through a provider-neutral adapter. Also uncertain: exact PCRB-1 rubric details and current workflow health beyond the last verified cycle.
+
+**Confidence:** 0.96
+
+**Unsure facts:** Exact implementation details of structured memory fields, exact PCRB-1 scoring mechanics, and whether any later unstated runs occurred.
+
+**Proposed measurable next experiment:** Execute `PROP-EXP-MEM-001`: 3+ blind trials per condition, identical prompts, PCRB-1 scoring. Measure mean score difference and critical fabrication count. Accept structured memory only if mean PCRB-1 is ≥10 points above flat baseline and critical fabrications do not increase.

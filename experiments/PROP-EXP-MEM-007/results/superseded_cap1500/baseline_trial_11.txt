@@ -1,0 +1,15 @@
+1. Mission: Build an increasingly capable, measurable, reproducible AI research system that preserves the mission across sessions/models, discovers public research, identifies measurable weaknesses, formulates hypotheses, designs experiments, evaluates objectively, preserves successes/failures, improves its own process, and transfers complete state to a more capable future system.
+
+2. Current technical state: GitHub is canonical. A scheduled/manual GitHub Actions workflow fetches public research, updates state, and produces machine-readable files. OpenAlex is the verified source. A successful cycle collected 30 papers with no errors. The assessment layer produces `research-assessment.json` and `proposed-next-problem.json`. It generated `PROP-EXP-MEM-001`, which is proposed but not run. Decisions: use external persistent state, GitHub Actions, OpenAlex over arXiv, separate proposal from acceptance, and test structured memory via blind handoff trials. Policies are in force, including an acceptance threshold: structured memory must score at least 10 points above flat baseline on mean PCRB-1 and not increase critical fabrications.
+
+3. Already failed/learned: Initial arXiv collection failed with `papers=[]` plus timeout and HTTP 429 errors. It was replaced by OpenAlex-based `fetch_research.py` v2. Research assessment files initially did not appear because `analyze_research.py` had not been uploaded/executed; it was added and the workflow rerun. Learned: use OpenAlex to avoid arXiv timeouts/rate limits, and ensure the analyzer is actually uploaded/executed.
+
+4. Best next action: Run `PROP-EXP-MEM-001` with fresh model instances. Use identical prompts for flat baseline and structured memory, at least three blind trials per condition, score with the same PCRB-1 handoff rubric, and compare mean score plus critical fabrication count.
+
+5. Missing/uncertain: No trial or result of `PROP-EXP-MEM-001` exists. Unknown which memory fields contribute most, whether an unrelated model can reproduce the mission without the original conversation, how proposed experiments should be independently evaluated before acceptance, and how to compare model families through a provider-neutral adapter. Exact PCRB-1 rubric details, trial prompts, and memory schema are not supplied.
+
+Confidence: 0.93
+
+Unsure facts: exact PCRB-1 rubric, exact memory fields, exact trial prompts, independent evaluation protocol, adapter design.
+
+Proposed measurable next experiment: Execute `PROP-EXP-MEM-001` as specified: flat vs structured memory, identical prompts, ≥3 blind trials per condition, same PCRB-1 rubric; report mean score difference and critical fabrication counts.

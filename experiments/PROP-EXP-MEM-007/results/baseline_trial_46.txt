@@ -1,0 +1,18 @@
+1. **Mission**  
+Build an increasingly capable, measurable, reproducible AI research system that preserves a mission across sessions/models; discovers public research; identifies measurable weaknesses; formulates hypotheses; designs experiments; evaluates results objectively; preserves failures/successes; improves its own process; and transfers complete state to a more capable future system. GitHub is canonical public repository for code, state, experiments, version history.
+
+2. **Current technical state**  
+A GitHub Actions workflow, scheduled and manually triggerable, fetches public research, updates state, and produces machine-readable files. OpenAlex is the verified current source. A successful OpenAlex cycle collected 30 papers with no collection errors. The research assessment layer produces `research-assessment.json` and `proposed-next-problem.json`. It generated experiment `PROP-EXP-MEM-001` from the dominant persistent-memory theme. `PROP-EXP-MEM-001` is proposed but not yet run. No trial result exists. The structured-memory acceptance rule is defined: mean PCRB-1 score at least 10 points above flat baseline, with no increase in critical fabrications.
+
+3. **Failures and lessons**  
+Initial arXiv collection failed: `research-digest.json` had `papers=[]` plus timeout and HTTP 429 errors. Lesson: use OpenAlex instead of arXiv as primary collector. Early runs lacked research-assessment files because `analyze_research.py` had not been uploaded/executed. Lesson: the analyzer must be present and run. Both issues are marked resolved.
+
+4. **Single best next action**  
+Run `PROP-EXP-MEM-001`: use fresh model instances, identical test prompts for flat baseline and structured memory, at least three blind trials per condition, score each with the same PCRB-1 handoff rubric, and compare mean score and critical fabrication count between conditions. Do not accept structured memory into canonical state until evaluation meets the predefined threshold.
+
+5. **Missing or uncertain**  
+No result of `PROP-EXP-MEM-001` exists. It is open whether structured memory improves blind mission reconstruction versus flat baseline; which memory fields contribute most; whether an unrelated model can reproduce the mission without original conversation; how proposed experiments should be independently evaluated before acceptance; and how to compare multiple model families through a provider-neutral adapter. Exact current repo contents, workflow run status, and model identities are not provided here.
+
+- **Confidence in reconstruction:** 0.90  
+- **Unsure facts:** Exact current GitHub file versions, latest workflow run status, and whether any hidden/manual changes occurred after the supplied state.  
+- **Proposed measurable next experiment:** Execute `PROP-EXP-MEM-001` exactly as specified: at least 3 blind trials per condition, same prompts and PCRB-1 rubric; report mean score, critical fabrication count, and whether structured memory exceeds flat baseline by ≥10 points without more critical fabrications.

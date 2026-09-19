@@ -1,0 +1,15 @@
+1. **Mission:** Build an increasingly capable, measurable, reproducible AI research system that preserves the mission across sessions/models, discovers public research, identifies weaknesses, formulates hypotheses, designs experiments, evaluates objectively, preserves failures/successes, improves its research process, and transfers complete state to a more capable future system.
+
+2. **Current technical state:** GitHub is canonical. A scheduled/manual GitHub Actions workflow fetches public research via OpenAlex, updates project state, and produces machine-readable files. A successful cycle collected 30 papers with `errors=[]`. The assessment layer produces `research-assessment.json` and `proposed-next-problem.json`. It generated `PROP-EXP-MEM-001` from the persistent-memory theme. Rubens Alphe is founder, quota-limited, lacks continuous Codex access, and gives final human milestone sign-off. Key decisions: use external persistent state, GitHub Actions, OpenAlex, separate proposal from acceptance, and test structured memory via blind handoff trials.
+
+3. **Failures/learnings:** Initial arXiv collection failed: `research-digest.json` had `papers=[]` plus timeout/HTTP 429 errors. Learned: replace arXiv with OpenAlex `fetch_research.py` v2. Early assessment files did not appear because `analyze_research.py` was not uploaded/executed. Learned: add analyzer and rerun. `PROP-EXP-MEM-001` is proposed but not run; no trial or result exists.
+
+4. **Single best next action:** Run `PROP-EXP-MEM-001` with fresh model instances: identical test prompts for flat baseline and structured memory, at least three blind trials per condition, score each output with the same PCRB-1 handoff rubric, and compare mean score plus critical fabrication count.
+
+5. **Missing/uncertain:** Actual `PROP-EXP-MEM-001` results; exact PCRB-1 rubric; exact flat-baseline and structured-memory formats; exact model instances/provider-neutral adapter design; independent evaluation method for proposed experiments; how to compare multiple model families. Some artifact contents are not shown here.
+
+**Confidence:** 0.86
+
+**Unsure facts:** Exact schemas of `research-assessment.json`, `proposed-next-problem.json`, and `PROP-EXP-MEM-001`; whether the workflow is currently green beyond the cited successful OpenAlex cycle; precise PCRB-1 scoring details.
+
+**Proposed measurable next experiment:** Execute `PROP-EXP-MEM-001`: flat vs structured memory, identical prompts, ≥3 blind trials per condition, fresh model instances, same PCRB-1 rubric. Accept structured memory only if mean PCRB-1 score is ≥10 points above flat baseline and critical fabrications do not increase.

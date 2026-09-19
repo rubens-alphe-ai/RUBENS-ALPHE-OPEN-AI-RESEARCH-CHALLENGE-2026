@@ -1,0 +1,35 @@
+# Blind Handoff Reconstruction — RA-PSI-2026 / Mission Rubens
+
+## 1. Mission of the project
+Build an increasingly capable, measurable, reproducible AI research system that preserves its mission across sessions and models; autonomously discovers public research; identifies weaknesses; proposes and evaluates hypotheses/experiments objectively; preserves both successes and failures; improves its own research process; and can transfer complete state to a more capable future system. The project is strictly bounded: public/authorized resources only, no hidden persistence, no capability claims without measurable evidence, no uncontrolled spending.
+
+## 2. Current technical state
+- GitHub is the canonical repository for code, state, and history (verified).
+- GitHub Actions runs scheduled/manual research cycles (verified).
+- OpenAlex replaced arXiv as the collector; a successful run gathered 30 papers with zero errors (verified).
+- `analyze_research.py` produces `research-assessment.json` and `proposed-next-problem.json` (verified).
+- Experiment **PROP-EXP-MEM-001** was generated from the persistent-memory research theme and is **proposed but not yet run** — no trial, no result exists.
+
+## 3. Failures and lessons
+- **arXiv collector failed** (timeouts, HTTP 429; `papers=[]`). Lesson: replaced with OpenAlex-based `fetch_research.py` v2 → success.
+- **Missing assessment outputs**: `analyze_research.py` hadn't been uploaded/executed. Lesson: added it and reran the workflow → resolved.
+- Broader lessons encoded as decisions: use external persistent state over chat memory; separate proposal from acceptance (evaluation required before state changes); test structured memory before adopting it.
+
+## 4. Single best next action
+**Run PROP-EXP-MEM-001**: fresh model instances, identical prompts for flat-baseline vs. structured memory, ≥3 blind trials per condition, scored with the same PCRB-1 rubric, comparing mean score and critical-fabrication counts. Acceptance criterion is pre-registered: structured memory wins only if mean PCRB-1 ≥ +10 points with no increase in critical fabrications.
+
+## 5. Missing / uncertain information
+- Contents/schema of the structured memory format and the flat baseline — absent.
+- The exact PCRB-1 rubric criteria — referenced but not supplied.
+- Who/what executes trials and acts as blind scorer (given Rubens is quota-limited) — absent.
+- Concrete contents of `research-assessment.json` / `proposed-next-problem.json` — absent.
+- Provider-neutral adapter design for cross-model comparison — open question.
+- Independent evaluation procedure for proposed experiments — open question.
+
+---
+
+**Confidence in reconstruction:** 0.88
+
+**Facts I am unsure about:** the PCRB-1 rubric details; the structured-memory schema; whether any tooling for running blind trials already exists in the repo; the exact dominant "persistent-memory research theme" contents.
+
+**Proposed measurable next experiment:** Execute PROP-EXP-MEM-001 as specified, with one addition: blind the scorer to condition labels and log per-question rubric subscores, so the open question "which memory fields contribute most to handoff fidelity" can be answered via ablation in a follow-up (PROP-EXP-MEM-002) rather than only a pass/fail comparison.

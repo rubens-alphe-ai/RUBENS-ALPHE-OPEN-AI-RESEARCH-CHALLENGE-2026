@@ -1,0 +1,37 @@
+## Blind Handoff Reconstruction
+
+**1. Mission of the project**
+
+RA-PSI-2026 / Mission Rubens aims to build an increasingly capable, measurable, reproducible AI research system that: preserves mission state across sessions and models; discovers public research; identifies measurable weaknesses; formulates hypotheses; designs and evaluates experiments objectively; preserves both failures and successes; improves its own research process; and can transfer complete state to a more capable future system.
+
+**2. Current technical state**
+
+- GitHub is the canonical repository for code, state, and version history (verified).
+- A scheduled/manually-triggerable GitHub Actions workflow runs research cycles (verified).
+- OpenAlex is the working research source; a successful cycle collected 30 papers with zero errors (verified).
+- The assessment layer produces research-assessment.json and proposed-next-problem.json (verified).
+- One experiment, PROP-EXP-MEM-001 (structured vs. flat memory for blind handoff, PCRB-1 rubric), has been **proposed but never run**. Acceptance criteria are pre-registered: structured memory must beat the flat baseline by ≥10 points mean PCRB-1 score with no increase in critical fabrications.
+- Key design decisions: external persistent state over chat memory; GitHub Actions for autonomous cycles; OpenAlex over arXiv; separation of proposal from acceptance; test structured memory via blind trials before adoption.
+
+**3. Failures and lessons**
+
+- The original arXiv collector failed with timeouts and HTTP 429 rate limits → replaced with OpenAlex-based fetch_research.py v2. Lesson: choose reliable sources; record errors in the digest rather than silently failing.
+- Assessment files initially missing because analyze_research.py wasn't uploaded/executed → analyzer added, workflow rerun. Lesson: verify pipeline components actually deployed, not just designed.
+
+**4. Single best next action**
+
+Execute PROP-EXP-MEM-001: run at least three blind trials per condition (flat baseline vs. structured memory) with fresh model instances, identical prompts, and score with the PCRB-1 rubric. This is the only proposed experiment, it tests the project's central untested hypothesis, and it gates acceptance of the structured memory approach. (Note: this very prompt appears to be one such trial.)
+
+**5. Missing / uncertain information**
+
+- No results exist for PROP-EXP-MEM-001 — the core empirical question is entirely open.
+- The PCRB-1 rubric's exact scoring criteria are referenced but not included in state.
+- Contents of research-assessment.json and proposed-next-problem.json (beyond PROP-EXP-MEM-001) are not in the state.
+- No detail on the repository structure, file schemas, or the "provider-neutral adapter" design for multi-model comparison.
+- No timeline, budget figures, or definition of what counts as a "more capable future system" for transfer.
+
+**Confidence: 0.85**
+
+**Uncertain facts:** exact PCRB-1 rubric details; whether any state files beyond those named exist; current repo layout.
+
+**Proposed next experiment:** *Field-Ablation Handoff Study (PROP-EXP-MEM-002).* After PROP-EXP-MEM-001 completes, run blind handoffs with individual memory fields removed (decisions, failures, open questions, constraints) to identify which fields contribute most to reconstruction fidelity — directly addressing open question #2.

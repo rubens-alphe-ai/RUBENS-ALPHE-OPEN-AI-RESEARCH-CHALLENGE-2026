@@ -1,0 +1,15 @@
+1. Mission: Build an increasingly capable, measurable, reproducible AI research system that can preserve its mission across sessions/models, discover public research, identify weaknesses, formulate hypotheses, design and evaluate experiments, preserve failures/successes, improve its research process, and transfer complete state to a future system. Project: RA-PSI-2026 / Mission Rubens.
+
+2. Current technical state: GitHub is canonical. A scheduled/manual GitHub Actions workflow fetches public research, updates state, and produces machine-readable files. OpenAlex is the verified source; one cycle collected 30 papers with errors=[]. The assessment layer produces research-assessment.json and proposed-next-problem.json. It generated PROP-EXP-MEM-001 from persistent-memory research. That experiment is proposed but not run.
+
+3. Failures/learned: Initial arXiv collection failed with papers=[] plus timeout/HTTP 429; replaced by OpenAlex fetch_research.py v2, resolved. Research assessment files were absent because analyze_research.py was not uploaded/executed; added and rerun, resolved. No trial/result exists for PROP-EXP-MEM-001. Learned: use OpenAlex, ensure analyzers execute, separate proposal from acceptance.
+
+4. Best next action: Execute PROP-EXP-MEM-001 with fresh model instances, identical test prompts for flat baseline and structured memory, at least three blind trials per condition, score each with the same PCRB-1 handoff rubric, then compare mean score and critical fabrication count.
+
+5. Missing/uncertain: Whether structured memory improves blind reconstruction versus flat baseline; which memory fields contribute most; whether an unrelated model can reproduce the mission without original conversation; how proposed experiments should be independently evaluated before acceptance; how to compare model families via a provider-neutral adapter. Exact PCRB-1 rubric details, memory fields, and implementation details are not supplied.
+
+Confidence: 0.95
+
+Unsure facts: exact PCRB-1 scoring rubric; exact structured-memory fields; provider-neutral adapter design; any unlisted artifacts.
+
+Proposed measurable next experiment: Run PROP-EXP-MEM-001 as specified: flat baseline vs structured memory, ≥3 blind trials each, same PCRB-1 rubric. Accept structured memory only if mean PCRB-1 score is ≥10 points above baseline and critical fabrications do not increase.

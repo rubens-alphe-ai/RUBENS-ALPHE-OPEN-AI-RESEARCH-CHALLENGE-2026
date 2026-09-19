@@ -1,0 +1,31 @@
+## 1. Mission
+Build an increasingly capable, measurable, reproducible AI research system that preserves its mission across sessions and models, discovers public research, identifies weaknesses, forms hypotheses, designs and evaluates experiments objectively, preserves successes and failures, improves its own research process, and transfers complete state to a future, more capable system. Project: RA-PSI-2026 / Mission Rubens; founder Rubens Alphe gives final milestone sign-off.
+
+## 2. Current technical state
+- GitHub is the canonical repository for code, state, experiments, version history (verified).
+- Scheduled and manually triggerable GitHub Actions workflow fetches public research and produces machine-readable files (verified).
+- OpenAlex is the research source; a cycle collected 30 papers with zero errors (verified).
+- Assessment layer produces research-assessment.json and proposed-next-problem.json (verified).
+- Experiment PROP-EXP-MEM-001 was generated from the persistent-memory research theme and is proposed, not yet run; no trial or result exists (verified).
+
+## 3. Failures and lessons
+- arXiv collector failed with timeouts and HTTP 429 → replaced by OpenAlex fetch_research.py v2 (resolved).
+- Assessment files missing because analyze_research.py wasn't uploaded/executed → added and workflow rerun (resolved).
+- Lessons: prefer working public sources over retrying flaky ones; verify all pipeline components exist before expecting outputs.
+
+## 4. Best next action
+Run PROP-EXP-MEM-001: fresh model instances, identical test prompts for flat baseline vs. structured memory, ≥3 blind trials per condition, score with the same PCRB-1 rubric, compare mean score and critical fabrication counts. Acceptance criterion: structured memory must score ≥10 points above baseline with no increase in critical fabrications.
+
+## 5. Missing / uncertain
+- Whether structured memory improves blind handoff fidelity (open).
+- Which memory fields contribute most (open).
+- Whether an unrelated model can reconstruct the mission (open).
+- How proposals get independently evaluated before acceptance (open).
+- How to compare model families via a provider-neutral adapter (open).
+- Absent: PCRB-1 rubric details, exact memory schema, trial timeline.
+
+**Confidence:** 0.95
+**Unsure about:** exact contents of the structured memory format; PCRB-1 scoring specifics; whether any infrastructure beyond OpenAlex/GitHub Actions exists.
+
+## Proposed next experiment
+PCRB-1-B: blind-handoff trial with 3 conditions (flat baseline, full structured memory, structured memory minus decision-rationale fields), 3 fresh-model trials each, identical prompts and rubric. Measure mean handoff score and fabrication count per condition to isolate which memory fields drive fidelity. Hypothesis: rationale fields account for the largest fidelity gain.

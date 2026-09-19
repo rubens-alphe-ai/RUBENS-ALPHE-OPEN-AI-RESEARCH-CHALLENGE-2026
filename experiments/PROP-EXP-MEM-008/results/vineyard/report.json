@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "document": "vineyard.md",
+    "fact_questions": 24,
+    "absent_questions": 8,
+    "read_at": [
+      1,
+      3,
+      5
+    ],
+    "repeats": 6,
+    "generator": "deepseek/deepseek-v4.1-flash",
+    "reader": "openai/gpt-oss-120b",
+    "word_limit": 150,
+    "failed_runs": 1,
+    "failures": [
+      {
+        "strategy": "facts_only",
+        "repeat": 4,
+        "error": "hop 5: response truncated at max_output_tokens=2000; raise the budget and rerun this trial"
+      }
+    ]
+  },
+  "by_hop": {
+    "1": {
+      "checklist": {
+        "runs": 6,
+        "facts_kept_pct": 97.2,
+        "ci95": [
+          93.7,
+          100.8
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 150,
+        "trimmed_runs": 3,
+        "vs_control_pp": 16.0,
+        "vs_control_ci95": [
+          12.7,
+          19.3
+        ]
+      },
+      "facts_only": {
+        "runs": 5,
+        "facts_kept_pct": 97.5,
+        "ci95": [
+          92.9,
+          102.1
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 40,
+        "median_words": 150,
+        "trimmed_runs": 5,
+        "vs_control_pp": 16.7,
+        "vs_control_ci95": [
+          10.3,
+          23.0
+        ]
+      },
+      "sections": {
+        "runs": 6,
+        "facts_kept_pct": 91.7,
+        "ci95": [
+          91.7,
+          91.7
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 150,
+        "trimmed_runs": 4,
+        "vs_control_pp": 10.4,
+        "vs_control_ci95": [
+          8.0,
+          12.8
+        ]
+      },
+      "summary": {
+        "runs": 6,
+        "facts_kept_pct": 81.2,
+        "ci95": [
+          78.9,
+          83.6
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 107,
+        "trimmed_runs": 0
+      }
+    },
+    "3": {
+      "checklist": {
+        "runs": 6,
+        "facts_kept_pct": 96.5,
+        "ci95": [
+          93.2,
+          99.8
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 127,
+        "trimmed_runs": 0,
+        "vs_control_pp": 16.7,
+        "vs_control_ci95": [
+          12.8,
+          20.6
+        ]
+      },
+      "facts_only": {
+        "runs": 5,
+        "facts_kept_pct": 97.5,
+        "ci95": [
+          92.9,
+          102.1
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 40,
+        "median_words": 150,
+        "trimmed_runs": 2,
+        "vs_control_pp": 17.5,
+        "vs_control_ci95": [
+          9.8,
+          25.2
+        ]
+      },
+      "sections": {
+        "runs": 6,
+        "facts_kept_pct": 88.9,
+        "ci95": [
+          86.6,
+          91.1
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 138,
+        "trimmed_runs": 0,
+        "vs_control_pp": 9.0,
+        "vs_control_ci95": [
+          3.9,
+          14.1
+        ]
+      },
+      "summary": {
+        "runs": 6,
+        "facts_kept_pct": 79.9,
+        "ci95": [
+          76.6,
+          83.2
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 104,
+        "trimmed_runs": 0
+      }
+    },
+    "5": {
+      "checklist": {
+        "runs": 6,
+        "facts_kept_pct": 96.5,
+        "ci95": [
+          93.2,
+          99.8
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 127,
+        "trimmed_runs": 0,
+        "vs_control_pp": 16.7,
+        "vs_control_ci95": [
+          12.8,
+          20.6
+        ]
+      },
+      "facts_only": {
+        "runs": 5,
+        "facts_kept_pct": 97.5,
+        "ci95": [
+          92.9,
+          102.1
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 40,
+        "median_words": 148,
+        "trimmed_runs": 0,
+        "vs_control_pp": 18.3,
+        "vs_control_ci95": [
+          9.7,
+          27.0
+        ]
+      },
+      "sections": {
+        "runs": 6,
+        "facts_kept_pct": 88.9,
+        "ci95": [
+          86.6,
+          91.1
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 138,
+        "trimmed_runs": 0,
+        "vs_control_pp": 9.0,
+        "vs_control_ci95": [
+          2.6,
+          15.5
+        ]
+      },
+      "summary": {
+        "runs": 6,
+        "facts_kept_pct": 79.9,
+        "ci95": [
+          75.6,
+          84.2
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 104,
+        "trimmed_runs": 0
+      }
+    }
+  }
+}

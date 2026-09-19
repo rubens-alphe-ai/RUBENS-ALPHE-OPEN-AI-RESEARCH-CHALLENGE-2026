@@ -1,6 +1,6 @@
 {
   "record_version": "RA-PSI-RESULTS-V1",
-  "generated_utc": "2026-09-18",
+  "generated_utc": "2026-09-19",
   "note": "Generated from each experiment's decision.json; negative results included.",
   "experiments": [
     {
@@ -92,11 +92,69 @@
       "experiment_id": "PROP-EXP-MEM-006",
       "title": "Handoff Checklist, Replication with Other Models",
       "question": "The handoff checklist raises fact transfer by at least 5 points with a generator and a reader from families not used before.",
-      "status": "OPEN",
-      "decision": "NOT_DECIDED",
+      "status": "PROVISIONAL_KEEP",
+      "decision": "PROVISIONAL_KEEP",
       "reason_codes": [],
       "protocol": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-006/PROTOCOL.md",
-      "effect": {}
+      "effect": {
+        "metric": "fact accuracy, percentage points",
+        "mean_paired_delta": 5.885416666666667,
+        "ci95": [
+          3.528490021576864,
+          8.24234331175647
+        ],
+        "pairs": 60,
+        "inventions": {
+          "baseline": 0,
+          "structured": 0
+        }
+      },
+      "result": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-006/RESULT.md"
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-007",
+      "title": "Handoff Checklist, Third Generator Family",
+      "question": "The handoff checklist raises fact transfer by at least 5 points when a DeepSeek generator writes the handoffs and MEM-005's reader model reads them.",
+      "status": "PROVISIONAL_KEEP",
+      "decision": "PROVISIONAL_KEEP",
+      "reason_codes": [],
+      "protocol": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-007/PROTOCOL.md",
+      "effect": {
+        "metric": "fact accuracy, percentage points",
+        "mean_paired_delta": 5.46875,
+        "ci95": [
+          3.6998657494401925,
+          7.2376342505598075
+        ],
+        "pairs": 60,
+        "inventions": {
+          "baseline": 0,
+          "structured": 0
+        }
+      },
+      "result": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-007/RESULT.md"
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-008",
+      "title": "Handoff Chains: How Fast a Project Decays",
+      "question": "Across repeated handoffs, an instruction naming the kinds of item to carry preserves more facts than a free summary, at equal length, on documents from unrelated domains, without more invented facts.",
+      "status": "PROVISIONAL_KEEP",
+      "decision": "NOT_DECIDED",
+      "reason_codes": [],
+      "protocol": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-008/PROTOCOL.md",
+      "effect": {},
+      "result": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-008/RESULT.md"
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-009",
+      "title": "Continuity Programme, Stage 1: Populations versus Lineages",
+      "question": "Merging several independent chains recovers a large part of what each lost, because they lost different facts.",
+      "status": "REJECTED",
+      "decision": "NOT_DECIDED",
+      "reason_codes": [],
+      "protocol": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/docs/CONTINUITY_PROGRAMME.md",
+      "effect": {},
+      "result": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-009/RESULT.md"
     }
   ]
 }

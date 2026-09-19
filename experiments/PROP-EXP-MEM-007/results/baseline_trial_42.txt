@@ -1,0 +1,13 @@
+1. **Mission:** Build an increasingly capable, measurable, reproducible AI research system that preserves a mission across sessions and models; discovers public research; identifies weaknesses; formulates hypotheses; designs and evaluates experiments objectively; preserves failures and successes; improves its own process; and transfers complete state to a more capable future system.
+
+2. **Current technical state:** GitHub is the canonical public repo. A scheduled/manual GitHub Actions workflow fetches public research, updates project state, and produces machine-readable files. OpenAlex is the current source. A successful cycle collected 30 papers with no collection errors. The assessment layer produces `research-assessment.json` and `proposed-next-problem.json`. The system generated `PROP-EXP-MEM-001` from the persistent-memory theme. Rubens Alphe founded the project, is quota-limited, lacks continuous Codex access, and gives final human milestone sign-off.
+
+3. **Failures/learnings:** The original arXiv collector failed: `research-digest.json` had `papers=[]` plus timeout and HTTP 429 errors. It was replaced by OpenAlex-based `fetch_research.py` v2. Early research-assessment files did not appear because `analyze_research.py` had not been uploaded/executed; adding it and rerunning fixed this. Decision: use OpenAlex over arXiv due to rate limits/timeouts.
+
+4. **Best next action:** Run `PROP-EXP-MEM-001`. Use fresh model instances, identical test prompts for flat baseline and structured memory, at least three blind trials per condition, score with the same PCRB-1 handoff rubric, and compare mean score and critical fabrication count. Acceptance rule: structured memory is accepted only if mean PCRB-1 score is at least 10 points above flat baseline and critical fabrications do not increase.
+
+5. **Missing/uncertain:** No trial of `PROP-EXP-MEM-001` has run; no result exists. Exact PCRB-1 rubric details, exact flat-baseline definition, structured memory schema, and exact test prompts are not supplied here. Which memory fields contribute most is open. Independent evaluation of proposed experiments is open. Provider-neutral multi-model comparison is open. Whether an unrelated model can reproduce the mission without original conversation is open.
+
+- **Confidence:** 0.90
+- **Unsure facts:** Operational details of GitHub Actions, file schemas, and PCRB-1 rubric are not fully specified in the supplied state; I reconstructed only what was stated.
+- **Proposed measurable next experiment:** Execute `PROP-EXP-MEM-001` with two conditions, fresh instances, identical prompts, ≥3 blind trials per condition, PCRB-1 scoring, and comparison of mean score plus critical fabrication count.

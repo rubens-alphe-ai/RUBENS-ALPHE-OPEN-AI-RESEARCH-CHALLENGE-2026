@@ -1,0 +1,32 @@
+## 1. Mission
+
+Project RA-PSI-2026 "Mission Rubens" aims to build an increasingly capable, measurable, reproducible AI research system that: preserves mission state across sessions and models; discovers public research; identifies measurable weaknesses; formulates hypotheses; designs experiments; evaluates results objectively; preserves failures and successes; improves its own research process; and transfers complete state to a more capable future system. Rubens Alphe founded it, is quota-limited (slow replies ≠ abandonment), and gives final human milestone sign-off.
+
+## 2. Current technical state
+
+- GitHub is the canonical public repo for code, state, and history (verified).
+- GitHub Actions workflow (scheduled + manual) fetches public research and produces machine-readable files (verified).
+- OpenAlex is the current research source (verified); a successful cycle collected 30 papers with `errors=[]` (verified).
+- Assessment layer produces `research-assessment.json` and `proposed-next-problem.json` (verified).
+- The system proposed experiment PROP-EXP-MEM-001 from the dominant persistent-memory theme (verified, proposed—not yet run; no results exist).
+
+## 3. Failures and lessons
+
+- **arXiv collector failed**: `research-digest.json` had `papers=[]` plus timeouts and HTTP 429s. Fix: replaced with OpenAlex-based `fetch_research.py v2`. Lesson: OpenAlex > arXiv as primary collector.
+- **Missing assessment files**: `analyze_research.py` hadn't been uploaded/executed. Fix: analyzer added, workflow rerun. Lesson: verify pipeline components exist before expecting outputs.
+
+Decisions (with reasons): external persistent state (cross-session/model continuity); GitHub Actions (progress while Rubens is quota-limited); OpenAlex over arXiv (rate limits); separate proposal from acceptance (evaluation required before state changes); test structured memory via blind handoff trials before adoption.
+
+## 4. Best next action
+
+Run PROP-EXP-MEM-001: fresh model instances, ≥3 blind trials per condition, identical test prompts for flat baseline vs. structured memory, score with the PCRB-1 handoff rubric, compare mean scores and critical-fabrication counts. Acceptance criterion: structured memory must beat baseline by ≥10 mean PCRB-1 points with no increase in critical fabrications.
+
+## 5. Missing/uncertain
+
+Open questions: does structured memory improve blind reconstruction; which memory fields contribute most; can an unrelated model reproduce the mission; how to independently evaluate proposed experiments; how to compare model families via a provider-neutral adapter. Absent: the PCRB-1 rubric's exact scoring criteria, concrete prompts for trials, and implementation details of the structured memory format.
+
+**Confidence: 0.93**
+
+**Unsure about:** exact PCRB-1 rubric contents; precisely which files constitute "structured memory" vs. the flat baseline.
+
+**Proposed measurable next experiment:** Execute PROP-EXP-MEM-001 as planned, but pre-register the rubric and prompts in the repo, run 5 trials/condition instead of 3, and log per-field ablations (remove one memory field per trial) to answer "which memory fields contribute most"—measuring mean PCRB-1 score, critical fabrication count, and per-field score deltas, preserving all raw outputs in GitHub.

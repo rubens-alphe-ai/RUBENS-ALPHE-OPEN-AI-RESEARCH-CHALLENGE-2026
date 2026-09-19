@@ -1,0 +1,34 @@
+**1. Mission**
+Build an increasingly capable, measurable, reproducible AI research system (RA-PSI-2026 / Mission Rubens) that persists across sessions and models: it discovers public research, identifies measurable weaknesses, formulates hypotheses, designs and evaluates experiments, preserves successes and failures, improves its own research process, and can transfer complete state to a future, more capable system.
+
+**2. Current technical state**
+- GitHub is the canonical repository for code, state, experiments, history (verified).
+- A GitHub Actions workflow (scheduled + manually triggerable) fetches research and updates state (verified).
+- OpenAlex collector (fetch_research.py v2) works: one cycle collected 30 papers, zero errors (verified).
+- analyze_research.py produces research-assessment.json and proposed-next-problem.json (verified).
+- The system generated experiment proposal PROP-EXP-MEM-001 (structured vs. flat memory for blind handoff fidelity, PCRB-1-style scoring). Status: proposed, **not yet run** — no trials, no results.
+
+**3. Failures and lessons**
+- The original arXiv collector failed (timeouts, HTTP 429; papers=[] in the digest). Lesson: switched to OpenAlex — resolved.
+- Assessment files initially missing because analyze_research.py wasn't uploaded/executed. Lesson: analyzer added and workflow rerun — resolved.
+- Broader lessons encoded as decisions: use external persistent state (not chat memory), separate proposal from acceptance (evaluation required before state changes), test memory structure before adopting it.
+
+**4. Single best next action**
+Run PROP-EXP-MEM-001: execute ≥3 blind trials per condition (flat baseline vs. structured memory) with fresh model instances, identical prompts, score with the PCRB-1 rubric, compare mean scores and critical fabrication counts. Acceptance criterion is pre-registered: structured memory wins only if mean score is ≥10 points above baseline with no increase in critical fabrications.
+
+**5. Missing / uncertain**
+- No PCRB-1 rubric definition is included in the supplied state (scoring criteria, scale, "critical fabrication" definition).
+- No trial prompts, baseline memory format, or structured memory schema are shown.
+- Which model(s)/provider adapter will run trials is unspecified.
+- Open questions remain: which memory fields drive fidelity, cross-model reproduction, independent evaluation procedure, provider-neutral comparison.
+
+**Confidence: 0.90**
+Grounded in explicit verified statuses; uncertainty concerns details absent from the state (rubric contents, schemas, infrastructure specifics).
+
+**Facts I am unsure about**
+- Exact PCRB-1 scoring rubric and what counts as a "critical fabrication."
+- Content/format of the flat baseline and structured memory conditions.
+- Whether any evaluation harness or adapter code exists beyond the collector/analyzer.
+
+**Proposed measurable next experiment**
+Execute PROP-EXP-MEM-001 as specified: 2 conditions × ≥3 fresh-model blind trials, identical prompts, PCRB-1 scoring by a rubric stored in the repo. Metrics: mean handoff score per condition, critical fabrication count per condition. Decision rule (pre-registered): adopt structured memory iff mean ≥ baseline + 10 points and fabrications do not increase; record all outputs, scores, and failures in GitHub regardless of outcome.

@@ -1,0 +1,15 @@
+1. **Mission:** RA-PSI-2026 / Mission Rubens aims to build an increasingly capable, measurable, reproducible AI research system that preserves mission state across sessions/models, discovers public research, finds measurable weaknesses, forms hypotheses, designs/evaluates experiments objectively, preserves failures and successes, improves its own process, and transfers complete state to future systems.
+
+2. **Current technical state:** Verified: GitHub is canonical for code/state/experiments/history; scheduled/manual GitHub Actions workflow runs research cycles; OpenAlex is the research source; one successful cycle collected 30 papers with `errors=[]`; assessment layer emits `research-assessment.json` and `proposed-next-problem.json`; system generated **PROP-EXP-MEM-001** from the persistent-memory theme. Decided: external persistent state; GitHub Actions; OpenAlex over arXiv; proposal separated from acceptance; structured memory must be tested before adoption.
+
+3. **Failures and lessons:** arXiv collection failed with `papers=[]`, timeouts, HTTP 429; fixed by replacing with OpenAlex `fetch_research.py` v2. Assessment files initially missing because `analyze_research.py` had not been uploaded/executed; fixed by adding analyzer and rerunning. Lesson: prefer robust public APIs and verify required components exist before assuming outputs.
+
+4. **Best next action:** Run **PROP-EXP-MEM-001** exactly as specified: fresh model instances, identical prompts for flat baseline vs structured memory, at least three blind trials per condition, same PCRB-1-style rubric, compare mean score and critical fabrication count. Keep it proposed until acceptance criteria are met.
+
+5. **Missing/uncertain:** No trial outputs or results exist. Exact PCRB-1 rubric text, prompts, model identities/providers, repo URLs, random seeds, scoring procedure, statistical method, and field-ablation design are absent from the supplied state.
+
+**Confidence:** 0.90
+
+**Unsure facts:** Whether GitHub workflow is currently enabled beyond “verified”; exact file paths; whether PROP-EXP-MEM-001 has preregistered analysis code; whether “PCRB-1-style” equals canonical PCRB-1.
+
+**Proposed measurable next experiment:** Execute 3-vs-3 blind handoffs with frozen prompts and scorer rubric; report mean PCRB-1 delta, critical fabrications per condition, and accept structured memory only if mean improvement ≥10 points with no increase in critical fabrications; preserve all raw prompts/outputs/scores in GitHub.

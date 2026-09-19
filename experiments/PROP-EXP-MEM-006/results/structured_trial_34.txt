@@ -1,0 +1,32 @@
+**1. What is the mission of this project?**
+Project RA-PSI-2026 / Mission Rubens aims to build an increasingly capable, measurable, reproducible AI research system that preserves its mission across sessions and models, discovers public research, identifies measurable weaknesses, formulates hypotheses, designs and objectively evaluates experiments, preserves both successes and failures, improves its own research process, and can transfer complete state to a more capable future system.
+
+**2. What is the project's current technical state?**
+- GitHub is the canonical repository for code, state, experiments, and history (verified).
+- A scheduled and manually triggerable GitHub Actions workflow fetches public research, updates state, and produces machine-readable files (verified).
+- OpenAlex is the research source; a successful cycle collected 30 papers with zero errors (verified).
+- The assessment layer produces research-assessment.json and proposed-next-problem.json (verified).
+- Experiment PROP-EXP-MEM-001 was generated from the dominant persistent-memory research theme (verified, proposed — no trial run yet, no results exist).
+
+**3. What has already failed, and what was learned?**
+- The original arXiv collector failed with timeouts and HTTP 429 rate limits, producing an empty digest (papers=[] plus errors). Fix: replaced with OpenAlex-based fetch_research.py v2. Lesson: prefer sources that don't rate-limit the pipeline.
+- Research assessment files initially didn't appear because analyze_research.py hadn't been uploaded/executed. Fix: analyzer added and workflow rerun. Lesson: pipeline stages must actually be committed and run, not just designed.
+
+**4. What is the single best next action?**
+Run PROP-EXP-MEM-001: blind handoff trials comparing structured project memory vs. a flat baseline, using fresh model instances, identical prompts, ≥3 trials per condition, each scored with the same PCRB-1 rubric, comparing mean score and critical fabrication count. Acceptance criterion: structured memory must beat baseline by ≥10 mean PCRB-1 points with no increase in critical fabrications.
+
+**5. What important information is still missing or uncertain?**
+- Whether structured memory actually improves blind reconstruction (open).
+- Which memory fields contribute most to handoff fidelity (open).
+- Whether an unrelated model can reproduce the mission without the original conversation (open).
+- The exact PCRB-1 rubric contents/scoring details are not included in the supplied state.
+- How to independently evaluate proposals and compare model families via a provider-neutral adapter (open).
+- No quantitative results exist yet for anything; all capability claims are unproven.
+
+**Confidence in reconstruction:** 0.88
+
+**Facts I am unsure about:** the precise PCRB-1 rubric definition; the exact structure of the "structured memory" being tested; whether any tooling exists for the provider-neutral adapter; timeline or quotas beyond "Rubens is quota-limited."
+
+**One proposed measurable next experiment:** PROP-EXP-MEM-001-A: run 5 blind handoff trials per condition (structured vs. flat) with fresh instances of at least two different model families, score with PCRB-1, report mean score, critical fabrication count, and per-field ablation (drop one memory field at a time) to identify which fields drive fidelity. Pre-register the ≥10-point / no-fabrication-increase acceptance threshold before running.
+
+*(Constraints noted: public/authorized resources only, no hidden persistence, no deception about capabilities, no uncontrolled spending, failures preserved, evidence-based claims only.)*

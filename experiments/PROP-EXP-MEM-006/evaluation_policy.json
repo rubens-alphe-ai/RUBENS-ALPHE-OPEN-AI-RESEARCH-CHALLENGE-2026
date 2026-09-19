@@ -10,13 +10,72 @@
     "temperature": 0.8,
     "max_output_tokens": 2000,
     "timeout_seconds": 600,
-    "seeds": [801, 802, 803, 804, 805, 806, 807, 808, 809, 810, 811, 812, 813, 814, 815,
-              816, 817, 818, 819, 820, 821, 822, 823, 824, 825, 826, 827, 828, 829, 830,
-              831, 832, 833, 834, 835, 836, 837, 838, 839, 840, 841, 842, 843, 844, 845,
-              846, 847, 848, 849, 850, 851, 852, 853, 854, 855, 856, 857, 858, 859, 860],
+    "seeds": [
+      801,
+      802,
+      803,
+      804,
+      805,
+      806,
+      807,
+      808,
+      809,
+      810,
+      811,
+      812,
+      813,
+      814,
+      815,
+      816,
+      817,
+      818,
+      819,
+      820,
+      821,
+      822,
+      823,
+      824,
+      825,
+      826,
+      827,
+      828,
+      829,
+      830,
+      831,
+      832,
+      833,
+      834,
+      835,
+      836,
+      837,
+      838,
+      839,
+      840,
+      841,
+      842,
+      843,
+      844,
+      845,
+      846,
+      847,
+      848,
+      849,
+      850,
+      851,
+      852,
+      853,
+      854,
+      855,
+      856,
+      857,
+      858,
+      859,
+      860
+    ],
     "baseline_state": "STATE_A.txt",
     "structured_state": "STATE_C.txt",
-    "protocol": "PROTOCOL.md"
+    "protocol": "PROTOCOL.md",
+    "workers": 6
   },
   "reader_ladder": [
     {
@@ -38,14 +97,18 @@
       "max_tokens": 4000
     },
     {
-      "evaluator_id": "reader-groq-gpt-oss-120b",
-      "provider": "Groq",
+      "evaluator_id": "reader-openrouter-gpt-oss-120b",
+      "provider": "OpenRouter",
       "model": "openai/gpt-oss-120b",
-      "endpoint": "https://api.groq.com/openai/v1/chat/completions",
-      "key": "groq",
+      "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+      "key": "openrouter",
       "json_mode": false,
-      "max_tokens": 1500,
-      "extra_body": {"reasoning_effort": "low"}
+      "max_tokens": 5000,
+      "extra_body": {
+        "reasoning": {
+          "effort": "low"
+        }
+      }
     }
   ],
   "quiz": {
@@ -53,5 +116,15 @@
     "keep_min_delta_pp": 5,
     "invention_margin": 5
   },
-  "default_batch_pause_seconds": 2
+  "default_batch_pause_seconds": 2,
+  "reader_workers": 4,
+  "reader_give_up_after": 5,
+  "skip_readers": [
+    "reader-nvidia-glm-5.3",
+    "reader-nvidia-kimi-k3"
+  ],
+  "budget": {
+    "max_usd": 0.5,
+    "key_file": "~/.ra-psi/keys/openrouter.key"
+  }
 }

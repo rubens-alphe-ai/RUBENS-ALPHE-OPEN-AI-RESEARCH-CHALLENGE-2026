@@ -42,7 +42,7 @@ import run_blind_trials  # noqa: E402
 from evaluate_experiment import load_policy, run_evaluation  # noqa: E402
 
 GENERATION_FIELDS = {"provider", "model", "endpoint", "key", "temperature", "max_output_tokens", "timeout_seconds",
-                     "extra_body", "seeds", "baseline_state", "structured_state", "protocol"}
+                     "extra_body", "seeds", "baseline_state", "structured_state", "protocol", "workers"}
 
 
 def now() -> str:
@@ -90,6 +90,9 @@ def run_trials(experiment: Path, spec: dict, private: dict) -> dict:
         temperature=float(spec.get("temperature", 0.8)), max_output_tokens=int(spec.get("max_output_tokens", 2048)),
         timeout_seconds=int(spec.get("timeout_seconds", 300)), think=None, dry_run=False, overwrite=False,
         retries=8, min_free_mb=0, memory_wait_seconds=0, resume=True,
+        # Trials share nothing, so running several at once shortens the series
+        # without touching what it measures.
+        workers=int(spec.get("workers", 1)),
         api_key_env=location.get("api_key_env", ""), api_key_file=location.get("api_key_file", ""),
         extra_body=spec.get("extra_body"))
     run_blind_trials.run(args)

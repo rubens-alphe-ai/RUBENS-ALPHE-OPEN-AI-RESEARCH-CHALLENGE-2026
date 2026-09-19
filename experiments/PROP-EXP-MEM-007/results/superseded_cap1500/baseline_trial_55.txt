@@ -1,0 +1,15 @@
+1. **Mission:** Build an increasingly capable, measurable, reproducible AI research system that can preserve a mission across sessions and models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures and successes, improve its own research process, and transfer complete state to a more capable future system.
+
+2. **Current technical state:** GitHub is canonical. A scheduled/manual GitHub Actions workflow fetches public research, updates state, and produces machine-readable files. OpenAlex is the primary source; a cycle collected 30 papers with `errors=[]`. The assessment layer produces `research-assessment.json` and `proposed-next-problem.json`. It generated `PROP-EXP-MEM-001` from the persistent-memory theme. The analyzer was added after earlier missing-file issues. `PROP-EXP-MEM-001` is proposed but not run; no trial or result exists.
+
+3. **What failed / learned:** Initial arXiv collection failed: `research-digest.json` had `papers=[]` plus timeout and HTTP 429 errors. It was replaced with OpenAlex-based `fetch_research.py` v2. Research assessment files did not appear because `analyze_research.py` had not been uploaded/executed; adding it and rerunning resolved this. Learned: use OpenAlex over arXiv due to rate/timeout issues; external persistent state is preferred over chat memory; GitHub Actions supports progress when Rubens is unavailable; proposal and acceptance must be separated.
+
+4. **Single best next action:** Run `PROP-EXP-MEM-001` with fresh model instances. Use identical test prompts for flat baseline and structured memory, at least three blind trials per condition, score with the same PCRB-1 handoff rubric, and compare mean score and critical fabrication count.
+
+5. **Missing or uncertain:** Actual `PROP-EXP-MEM-001` results; exact PCRB-1 rubric details; exact structured-memory schema; exact flat-baseline implementation; independent evaluation method for proposed experiments; provider-neutral adapter design; which memory fields most affect fidelity; whether an unrelated model can reproduce the mission.
+
+**Confidence:** 0.86
+
+**Unsure facts:** I am unsure about the precise PCRB-1 rubric, the exact memory format, and how the flat baseline is implemented. These are not supplied.
+
+**Proposed measurable next experiment:** Execute `PROP-EXP-MEM-001`: 3+ blind trials per condition, fresh models, identical prompts, PCRB-1 scoring. Accept structured memory only if mean score is ≥10 points above flat baseline and critical fabrications do not increase.

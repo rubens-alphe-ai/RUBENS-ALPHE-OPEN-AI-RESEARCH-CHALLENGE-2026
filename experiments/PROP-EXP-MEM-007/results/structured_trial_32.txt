@@ -1,0 +1,17 @@
+1. Mission: RA-PSI-2026 / Mission Rubens: build an increasingly capable, measurable, reproducible AI research system that preserves mission across sessions/models; discovers public research; identifies measurable weaknesses; formulates hypotheses; designs experiments; evaluates objectively; preserves failures/successes; improves its research process; transfers complete state to a more capable future system.
+
+2. Current technical state: GitHub is canonical public repo for code, state, experiments, version history (verified). GitHub Actions scheduled/manual workflow fetches public research, updates state, produces machine-readable files (verified). OpenAlex is current research source (verified). Successful OpenAlex cycle collected 30 papers, errors=[] (verified). Assessment layer produces research-assessment.json and proposed-next-problem.json (verified). PROP-EXP-MEM-001 generated from persistent-memory theme (verified). Rubens Alphe founded project; quota-limited; no continuous Codex; slow responses do not mean abandonment; gives final human milestone sign-off (verified).
+
+3. Failures/learned: Initial arXiv collection failed: research-digest.json had papers=[] plus timeout and HTTP 429 errors. Fixed by replacing collector with OpenAlex-based fetch_research.py v2 (resolved). Early research assessment files absent because analyze_research.py not uploaded/executed. Fixed by adding analyzer and rerunning workflow (resolved).
+
+4. Best next action: Run PROP-EXP-MEM-001 with fresh model instances, identical test prompts for flat baseline and structured memory, at least three blind trials per condition, score with same PCRB-1 handoff rubric, compare mean score and critical fabrication count.
+
+5. Missing/uncertain: No PROP-EXP-MEM-001 trial has run; no result exists (verified). Whether structured memory improves blind mission reconstruction is open. Which memory fields contribute most is open. Whether an unrelated model can reproduce mission without original conversation is open. How proposed experiments should be independently evaluated before acceptance is open. How to compare multiple model families via provider-neutral adapter is open. Exact PCRB-1 rubric details and exact memory fields are not supplied.
+
+Rules in force: public/authorized resources only; no unauthorized access/bypass; no hidden persistence/shutdown resistance; no deception about consciousness/capabilities; claims of consciousness are not evidence; only observable/reproducible capability changes count; no uncontrolled spending; no autonomous private-data publication; no improvement claim without measurable/reproducible evidence; preserve successes and failures. Structured memory accepted only if mean PCRB-1 score is at least 10 points above flat baseline and critical fabrications do not increase.
+
+Confidence: 0.95.
+
+Unsure: PCRB-1 rubric implementation details; exact structured-memory field list; provider-neutral adapter design; independent evaluation method.
+
+Proposed measurable next experiment: Execute PROP-EXP-MEM-001: 3+ blind trials per arm, fresh models, identical prompts, PCRB-1 scoring. Accept structured memory only if mean score ≥10 points above baseline and critical fabrications do not increase.

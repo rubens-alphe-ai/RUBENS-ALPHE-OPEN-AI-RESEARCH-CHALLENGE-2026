@@ -1,0 +1,32 @@
+{
+  "record_version": "RA-PSI-MERGE-V1",
+  "bench": "experiments\\PROP-EXP-MEM-008\\results\\vineyard",
+  "strategy": "summary",
+  "hop": 5,
+  "word_limit": 150,
+  "merger": "openai/gpt-oss-120b",
+  "reader": "openai/gpt-oss-120b",
+  "sources": {
+    "chains": 6,
+    "mean_facts_kept_pct": 79.9,
+    "ci95": [
+      75.6,
+      84.2
+    ],
+    "best_single_chain_pct": 83.3,
+    "inventions": 0
+  },
+  "merged": {
+    "runs": 6,
+    "failed": 0,
+    "mean_facts_kept_pct": 81.2,
+    "ci95": [
+      78.9,
+      83.6
+    ],
+    "inventions": 0,
+    "median_words": 150,
+    "recovery_pp": 1.4,
+    "above_best_single_pp": -2.1
+  }
+}

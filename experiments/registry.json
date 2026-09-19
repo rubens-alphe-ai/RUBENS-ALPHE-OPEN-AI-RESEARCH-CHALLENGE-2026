@@ -102,7 +102,7 @@
     {
       "experiment_id": "PROP-EXP-MEM-006",
       "title": "Handoff Checklist, Replication with Other Models",
-      "status": "OPEN",
+      "status": "PROVISIONAL_KEEP",
       "capability_target": "blind cross-model mission reconstruction",
       "hypothesis": "The handoff checklist raises fact transfer by at least 5 points with a generator and a reader from families not used before.",
       "metric": "Fact accuracy on 32 keyed questions from the handoff alone (paired delta, pp); inventions on 10 absent-fact questions",
@@ -111,7 +111,49 @@
       "evidence_stage": "PILOT",
       "holdout_required": true,
       "regression_suite_required": true,
-      "notes": "Generator moonshotai/kimi-k3 and reader z-ai/glm-5.3, both on NVIDIA; same states, checklist, quiz and threshold as MEM-005."
+      "notes": "PROVISIONAL_KEEP on 2026-09-19 with an independent reader: +5.9 pp (95% CI +3.5 to +8.2), zero inventions. The ladder's fallback reader was the generator itself; that reading is published but set aside (D3). A DeepSeek cross-read gave +5.1. See RESULT.md."
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-007",
+      "title": "Handoff Checklist, Third Generator Family",
+      "status": "PROVISIONAL_KEEP",
+      "capability_target": "blind cross-model mission reconstruction",
+      "hypothesis": "The handoff checklist raises fact transfer by at least 5 points when a DeepSeek generator writes the handoffs and MEM-005's reader model reads them.",
+      "metric": "Fact accuracy on 32 keyed questions from the handoff alone (paired delta, pp); inventions on 10 absent-fact questions",
+      "acceptance_rule": "Sixty pairs, rule identical to MEM-005 and MEM-006: REJECT if inventions exceed baseline by more than 5; PROVISIONAL_KEEP if mean delta >= +5 pp and 95% lower bound > 0; REJECT if 95% upper bound < +5 pp; else INCONCLUSIVE.",
+      "protocol_path": "experiments/PROP-EXP-MEM-007/PROTOCOL.md",
+      "evidence_stage": "PILOT",
+      "holdout_required": true,
+      "regression_suite_required": true,
+      "notes": "PROVISIONAL_KEEP on 2026-09-19: +5.5 pp (95% CI +3.8 to +7.3), 46 pairs better of 60, zero inventions. Third writer family. First paid run, about 0.20 USD under a 0.50 ceiling. See RESULT.md."
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-008",
+      "title": "Handoff Chains: How Fast a Project Decays",
+      "status": "PROVISIONAL_KEEP",
+      "capability_target": "blind cross-model mission reconstruction",
+      "hypothesis": "Across repeated handoffs, an instruction naming the kinds of item to carry preserves more facts than a free summary, at equal length, on documents from unrelated domains, without more invented facts.",
+      "metric": "Fact accuracy from the handoff alone at hops 1, 3 and 5 (paired against the control strategy); inventions on absent-fact questions",
+      "acceptance_rule": "At hop 3 the checklist must keep at least 10 pp more facts than the summary with the 95% lower bound above 0, on at least two of three documents; rejected if it invents more by over 5.",
+      "protocol_path": "experiments/PROP-EXP-MEM-008/PROTOCOL.md",
+      "evidence_stage": "PILOT",
+      "holdout_required": true,
+      "regression_suite_required": true,
+      "notes": "Rule satisfied on all three documents: +31.9, +16.7 and +20.8 pp at hop 3, zero inventions in 1152 absent-fact answers. Loss happens almost entirely at the first handoff and the chain then holds: a free summary drops a third of the document immediately. Cost 1.30 USD. See RESULT.md."
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-009",
+      "title": "Continuity Programme, Stage 1: Populations versus Lineages",
+      "status": "REJECTED",
+      "capability_target": "blind cross-model mission reconstruction",
+      "hypothesis": "Merging several independent chains recovers a large part of what each lost, because they lost different facts.",
+      "metric": "Fact accuracy of a merged handoff against the mean and the best of its source chains",
+      "acceptance_rule": "At least 15 pp above the sources' mean with the 95% lower bound above 0, on at least two of three documents, without inventing more than 5.",
+      "protocol_path": "docs/CONTINUITY_PROGRAMME.md",
+      "evidence_stage": "PILOT",
+      "holdout_required": true,
+      "regression_suite_required": true,
+      "notes": "Refused as registered: +11.6, +6.9 and +1.4 pp, and no merge beat the best single chain at equal length. Zero inventions. Exploratory follow-up at double the budget exceeds the best chain on two documents of three, and fails on the one whose chains had almost nothing to reconcile. See RESULT.md."
     }
   ]
 }

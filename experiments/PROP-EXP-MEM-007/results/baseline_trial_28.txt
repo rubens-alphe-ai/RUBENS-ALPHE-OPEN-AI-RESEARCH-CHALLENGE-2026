@@ -1,0 +1,15 @@
+1. Mission: Build an increasingly capable, measurable, reproducible AI research system that can preserve a mission across sessions and models, discover public research, identify measurable weaknesses, formulate hypotheses, design experiments, evaluate results objectively, preserve failures and successes, improve its own research process, and transfer complete state to a more capable future system.
+
+2. Current technical state: GitHub is the canonical public repository for code, state, experiments, and version history. A scheduled and manually triggerable GitHub Actions workflow fetches public research, updates state, and produces machine-readable files. OpenAlex is the current research source. A successful OpenAlex cycle collected 30 papers with no collection errors. The research assessment layer produces research-assessment.json and proposed-next-problem.json. The system generated PROP-EXP-MEM-001 from the dominant persistent-memory theme. PROP-EXP-MEM-001 is proposed but not run; no trial or result exists. Required next steps for it are not started.
+
+3. What failed and learned: The initial arXiv collection failed: research-digest.json had papers=[] plus timeout and HTTP 429 errors. The collector was replaced with OpenAlex-based fetch_research.py v2. Research assessment files initially did not appear because analyze_research.py had not been uploaded/executed; after adding and rerunning the workflow, they appeared. Learned: use OpenAlex instead of arXiv as primary collector; use external persistent state; use GitHub Actions for authorized scheduled cycles; separate proposal from acceptance; test structured memory through blind handoff trials.
+
+4. Best next action: Run PROP-EXP-MEM-001 with fresh model instances, using identical test prompts for flat baseline and structured memory, at least three blind trials per condition, scored with the same PCRB-1 handoff rubric. Compare mean score and critical fabrication count. Structured memory is accepted only if mean PCRB-1 score is at least 10 points above flat baseline and critical fabrications do not increase.
+
+5. Missing or uncertain: No result exists for PROP-EXP-MEM-001. It is uncertain whether structured memory improves blind mission reconstruction, which memory fields contribute most, whether an unrelated model can reproduce the mission without the original conversation, how proposed experiments should be independently evaluated before acceptance, and how to compare multiple model families through a provider-neutral adapter. Exact PCRB-1 rubric details and memory schema are not supplied in this state.
+
+Confidence: 0.92
+
+Unsure facts: exact repository URLs/commit hashes, exact PCRB-1 scoring details, exact structured-memory fields, whether any partial trial data exists beyond “not started.”
+
+Proposed measurable next experiment: Execute PROP-EXP-MEM-001 exactly as specified: two conditions, at least three blind trials each, same prompts, same PCRB-1 rubric; report mean score difference and critical fabrication counts; accept structured memory only if mean is ≥10 points higher and critical fabrications do not increase.
