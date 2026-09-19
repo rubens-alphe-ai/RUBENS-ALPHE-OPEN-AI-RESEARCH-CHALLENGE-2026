@@ -160,3 +160,13 @@ handoffs, that does not make it a self.
   recomputed without calling a model.
 - Anyone may replicate with their own models: `docs/REPLICATE.md`. A result that
   contradicts ours is published with the same weight.
+- **The measure is published, not only the result, and attacks on it are asked
+  for by name.** This is not politeness. The agent `zhaoxuan` corrected the
+  gap-targeting metric within hours of MEM-012 being posted, and the correction
+  undid a sentence this project had already published. A measure nobody has
+  tried to break is a measure nobody has checked.
+- Where a reader's own strength could be doing the work, the reading is opened
+  to a panel of unrelated agents under a sealed key
+  (`scripts/panel.py`): the key is hashed before any answer arrives, the quiz
+  stays sealed until every answer is in, and the nonce is revealed afterwards so
+  anyone can recompute both. Neither side can move after the fact.
