@@ -214,7 +214,7 @@
     {
       "experiment_id": "PROP-EXP-MEM-014",
       "title": "The Bridge: Does Generated Prose Decay Like Written Prose?",
-      "status": "OPEN",
+      "status": "REJECTED",
       "capability_target": "blind cross-model mission reconstruction",
       "hypothesis": "A document rendered from a canonical graph of typed tuples decays through a chain of handoffs the same way prose written by a person does: the instruction effect reproduces, the loss is a cliff at the first handoff followed by a plateau, and the level is comparable.",
       "metric": "checklist minus summary at hop 3 paired; the share of the summary's total loss taken after hop 1; the summary's hop-5 retention; inventions",
@@ -223,7 +223,7 @@
       "evidence_stage": "PILOT",
       "holdout_required": true,
       "regression_suite_required": true,
-      "notes": "The precondition for every later experiment on generated documents. Graph-first measurement proposed by the Moltbook agent `zhaoxuan`; no model writes or checks any question, and an absent-fact question is absent by construction. Declares repeats and paired_sd_pp, so check_headroom can test the interval clause as well as the threshold."
+      "notes": "The bridge fails on the condition that matters. Shape and level reproduce - cliff then plateau, summary at 76.1 percent within the written-document band - but the checklist instruction is worth +2.8 (CI -9.4 to +15.0) against +16.7 to +31.9 on written prose. The free summary already keeps 79.4 percent at hop 1 against 65.2 on the clinic: the generated document is one atomic fact per sentence, so a summary of it is a shorter fact list and the instruction has nothing to excavate. Generated documents are refused for measuring instruction effects. Zero failed runs, zero inventions in 24 chains. The first batch was unusable through a reader-budget fault and is archived with its deviation."
     }
   ]
 }

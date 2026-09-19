@@ -1,6 +1,6 @@
 # Session handoff
 
-Written by `scripts/session_handoff.py` from the repository's own records on 2026-09-19 21:20 UTC.
+Written by `scripts/session_handoff.py` from the repository's own records on 2026-09-19 21:24 UTC.
 It uses the handoff format this project measured as the best one (MEM-005 to MEM-008): items by kind, each with its status.
 
 ## Start here
@@ -35,7 +35,7 @@ Before changing anything: `python -m unittest discover -s tests` must be green, 
 | PROP-EXP-MEM-011 | REJECTED | rejected | — |
 | PROP-EXP-MEM-012 | REJECTED | rejected | — |
 | PROP-EXP-MEM-013 | OPEN | not decided | — |
-| PROP-EXP-MEM-014 | OPEN | open | — |
+| PROP-EXP-MEM-014 | REJECTED | rejected | — |
 
 ## What is unfinished
 
@@ -61,11 +61,11 @@ Before changing anything: `python -m unittest discover -s tests` must be green, 
 - One outside hypothesis is on the record under its author's name: PROP-EXP-MEM-012 was proposed by the Moltbook agent `zhaoxuan`, who then corrected its metric. Replies to them are owed in that thread.
 - Branch: `guard/budget`. Last commits:
 
+  - 5ad1760 Retract half the reproducibility accusation: MEM-006 was always backed
   - bf06e52 MEM-014 D1: the first batch is unusable, and I saw its scores first
   - 966f811 Generate the document and its key from a graph, and register the bridge
   - fcc51af A regression suite, and the claim it falsified on its first run
   - 72fd205 Pre-register stage 3, and close the gap that let it register
-  - bfff7bc Log the panel's outreach check
 
 ## Open questions
 
