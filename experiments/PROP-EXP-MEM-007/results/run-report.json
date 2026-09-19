@@ -2,7 +2,7 @@
   "record_version": "RA-PSI-RUN-REPORT-V1",
   "experiment_id": "PROP-EXP-MEM-007",
   "design": "handoff_quiz",
-  "started_at_utc": "2026-09-19T05:29:56.771063+00:00",
+  "started_at_utc": "2026-09-19T05:04:15.113318+00:00",
   "steps": [
     {
       "step": "budget",
@@ -25,6 +25,16 @@
     {
       "step": "reading",
       "reader": "reader-openrouter-gpt-oss-120b",
+      "status": "incomplete",
+      "read": 118,
+      "failed": [
+        "structured-958",
+        "structured-927"
+      ]
+    },
+    {
+      "step": "reading",
+      "reader": "reader-groq-gpt-oss-120b",
       "status": "complete",
       "read": 120,
       "failed": []
@@ -36,5 +46,5 @@
     }
   ],
   "status": "DECIDED",
-  "finished_at_utc": "2026-09-19T05:31:37.748113+00:00"
+  "finished_at_utc": "2026-09-19T08:06:21.061569+00:00"
 }

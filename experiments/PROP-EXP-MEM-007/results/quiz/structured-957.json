@@ -1,7 +1,10 @@
 {
   "attempts": [
     {
-      "raw": "structured-957.attempt1.raw.txt",
+      "error": "provider returned HTTP 429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m2nqhfseev59dq0h7eernr8v` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199977, Requested 3868. Please try again in 27m41.04s. Need more tokens? Upgrade t"
+    },
+    {
+      "raw": "structured-957.attempt2.raw.txt",
       "response_sha256": "05858f2c3e268633cf1d5b579d87dcaa2cf2b24a28a22ead0005a0aec25b36e3",
       "served_model": "openai/gpt-oss-120b",
       "problems": []
@@ -54,9 +57,9 @@
   "trial_id": "structured-957",
   "pair_id": "pair-957",
   "condition": "structured",
-  "reader_id": "reader-openrouter-gpt-oss-120b",
+  "reader_id": "reader-groq-gpt-oss-120b",
   "prompt_sha256": "3881219eb8dcac4fa06ffa2530c5167c6e0fa16f843c3f019f2037b28ee87e39",
-  "read_at_utc": "2026-09-19T05:04:22.290769+00:00",
+  "read_at_utc": "2026-09-19T08:06:21.034834+00:00",
   "grade": {
     "fact_questions": 32,
     "fact_correct": 31,
