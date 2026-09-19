@@ -43,12 +43,21 @@ KNOWN_UNREPRODUCIBLE = {"PROP-EXP-MEM-007": ["decision.json"]}
 
 # Verdicts whose supporting answers were never stored. They cannot be shown to
 # be wrong; they cannot be shown to be right either, which is the whole claim.
+#
+# MEM-006's `decision-kimi-reader.json` was on this list until 2026-09-19 and is
+# not on it any more, and the reason is worth stating: its answers were never
+# missing. All 120 of them are in the repository, where deviation D3 said they
+# were put — `results/quiz/abandoned/reader-nvidia-kimi-k3/` — and they regrade
+# to the published summary field for field. What was missing was this suite's
+# ability to look there: it searched only for a directory named after the
+# decision's slug. The entry was removed by making the suite find the evidence,
+# not by deciding the claim was fine. See PROP-EXP-MEM-006/RE-READING.md.
 KNOWN_UNVERIFIABLE = {
-    # A second reading of MEM-006 by the NVIDIA Kimi reader. Its answers are not
-    # in the repository, so only the summary survives.
-    "PROP-EXP-MEM-006": ["decision-kimi-reader.json"],
     # MEM-009 stores one grade per merged chain but neither the reader answers
     # nor an answer key, so its recovery figures can be re-read and not regraded.
+    # A re-reading of the same frozen merged notes is filed outside results/, in
+    # PROP-EXP-MEM-009/re-grading/, precisely so that it stands beside these
+    # numbers instead of appearing to repair them. They stay unverifiable.
     "PROP-EXP-MEM-009": ["clinic-summary", "clinic-summary-w300", "observatory-summary",
                          "observatory-summary-w300", "vineyard-summary", "vineyard-summary-w300"],
 }
@@ -122,6 +131,35 @@ class Fixture:
         verdict = hq.decide(pairs, {"keep_min_delta_pp": 5, "invention_margin": 5})
         write(self.experiment / "results" / "decision.json",
               {**verdict, "experiment_id": self.experiment.name,
+               "rule": {"keep_min_delta_pp": 5, "invention_margin": 5}})
+        return verdict
+
+    def abandoned_reading(self, reader: str, slug: str, scores: list[tuple[int, int]],
+                          reader_id: str | None = None) -> dict:
+        """A reading the protocol set aside: answers under the reader, verdict under a slug.
+
+        This is MEM-006's shape. The folder is named after the reader that
+        produced it and the decision after a slug that resembles nothing else in
+        the tree, so only the decision's `reader` field connects the two.
+        """
+        rendered, key = hq.render_quiz(quiz(), self.experiment.name + ":fixture-1")
+        directory = self.experiment / "results" / "quiz" / "abandoned" / reader
+        write(directory / "answer-key.json", {"key": key, "rendered": rendered})
+        pairs = []
+        for index, (baseline, structured) in enumerate(scores):
+            pair_id = "pair-%03d" % index
+            graded = {"pair_id": pair_id}
+            for condition, correct in (("baseline", baseline), ("structured", structured)):
+                given = answers_for(key, rendered, correct)
+                graded[condition] = hq.grade(given, key, rendered)
+                write(directory / ("%s-%s.json" % (condition, pair_id)),
+                      {"trial_id": "%s-%s" % (condition, pair_id), "pair_id": pair_id,
+                       "condition": condition, "reader_id": reader_id or reader,
+                       "answers": given, "grade": graded[condition]})
+            pairs.append(graded)
+        verdict = hq.decide(pairs, {"keep_min_delta_pp": 5, "invention_margin": 5})
+        write(self.experiment / "results" / ("decision-%s.json" % slug),
+              {**verdict, "experiment_id": self.experiment.name, "reader": reader,
                "rule": {"keep_min_delta_pp": 5, "invention_margin": 5}})
         return verdict
 
@@ -251,6 +289,40 @@ class PairedQuizTests(unittest.TestCase):
             self.assertEqual(orphan["status"], rs.UNVERIFIABLE)
             self.assertTrue(orphan["notes"])
             self.assertIsNotNone(orphan["effect"]["published"])
+
+    def test_a_reading_set_aside_under_its_reader_is_found_by_the_name_its_decision_gives(self) -> None:
+        # The bug this pins reported MEM-006's second reading as resting on
+        # nothing for as long as the suite looked only for the decision's slug.
+        with tempfile.TemporaryDirectory() as directory:
+            fixture = Fixture(Path(directory))
+            fixture.paired_quiz([(1, 3), (2, 4), (1, 2), (2, 2)])
+            truth = fixture.abandoned_reading("reader-vendor-model-9", "other-reader",
+                                              [(1, 4), (2, 4), (1, 3), (2, 2)])
+            report = rs.run(Path(directory))
+            row = report["experiments"][0]
+            self.assertEqual(row["status"], rs.REPRODUCED)
+            self.assertEqual(report["exit_code"], rs.EXIT_OK)
+            aside = [item for item in row["units"] if item["unit"] == "decision-other-reader.json"][0]
+            self.assertEqual(aside["status"], rs.REPRODUCED)
+            self.assertEqual(aside["records"], 8)
+            self.assertAlmostEqual(aside["effect"]["recomputed"]["mean_paired_delta_pp"],
+                                   truth["summary"]["mean_paired_delta_pp"])
+
+    def test_a_set_aside_reading_whose_records_name_another_reader_is_refused(self) -> None:
+        # Regrading one reader's verdict from another reader's answers would
+        # report a disagreement between two models as a published number moving.
+        with tempfile.TemporaryDirectory() as directory:
+            fixture = Fixture(Path(directory))
+            fixture.paired_quiz([(1, 3), (2, 4), (1, 2), (2, 2)])
+            fixture.abandoned_reading("reader-vendor-model-9", "other-reader",
+                                      [(1, 4), (2, 4), (1, 3), (2, 2)],
+                                      reader_id="reader-somebody-else")
+            report = rs.run(Path(directory))
+            aside = [item for item in report["experiments"][0]["units"]
+                     if item["unit"] == "decision-other-reader.json"][0]
+            self.assertEqual(aside["status"], rs.UNVERIFIABLE)
+            self.assertEqual(aside["differences"], [])
+            self.assertIn("reader-somebody-else", " ".join(aside["notes"]))
 
     def test_an_unverifiable_verdict_exits_non_zero_but_distinctly_from_a_mismatch(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

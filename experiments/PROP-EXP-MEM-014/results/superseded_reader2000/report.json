@@ -1,0 +1,246 @@
+{
+  "meta": {
+    "document": "document.md",
+    "fact_questions": 30,
+    "absent_questions": 10,
+    "read_at": [
+      1,
+      3,
+      5
+    ],
+    "repeats": 6,
+    "generator": "deepseek/deepseek-v4.1-flash",
+    "reader": "openai/gpt-oss-120b",
+    "word_limit": 150,
+    "failed_runs": 6,
+    "failures": [
+      {
+        "strategy": "checklist",
+        "repeat": 3,
+        "error": "hop 3: model returned only reasoning and no answer; raise max_tokens or lower reasoning effort"
+      },
+      {
+        "strategy": "checklist",
+        "repeat": 5,
+        "error": "hop 5: response truncated at max_output_tokens=2000; raise the budget and rerun this trial"
+      },
+      {
+        "strategy": "sections",
+        "repeat": 2,
+        "error": "hop 1: response truncated at max_output_tokens=2000; raise the budget and rerun this trial"
+      },
+      {
+        "strategy": "sections",
+        "repeat": 4,
+        "error": "hop 1: response truncated at max_output_tokens=2000; raise the budget and rerun this trial"
+      },
+      {
+        "strategy": "summary",
+        "repeat": 5,
+        "error": "hop 1: response truncated at max_output_tokens=2000; raise the budget and rerun this trial"
+      },
+      {
+        "strategy": "summary",
+        "repeat": 6,
+        "error": "hop 3: response truncated at max_output_tokens=2000; raise the budget and rerun this trial"
+      }
+    ]
+  },
+  "by_hop": {
+    "1": {
+      "checklist": {
+        "runs": 4,
+        "facts_kept_pct": 86.7,
+        "ci95": [
+          79.2,
+          94.2
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 40,
+        "median_words": 136,
+        "trimmed_runs": 0,
+        "vs_control_pp": 11.7,
+        "vs_control_ci95": [
+          -4.8,
+          28.2
+        ]
+      },
+      "facts_only": {
+        "runs": 6,
+        "facts_kept_pct": 62.8,
+        "ci95": [
+          61.3,
+          64.2
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 60,
+        "median_words": 150,
+        "trimmed_runs": 6,
+        "vs_control_pp": -12.5,
+        "vs_control_ci95": [
+          -28.9,
+          3.9
+        ]
+      },
+      "sections": {
+        "runs": 4,
+        "facts_kept_pct": 81.7,
+        "ci95": [
+          67.6,
+          95.7
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 40,
+        "median_words": 145,
+        "trimmed_runs": 1,
+        "vs_control_pp": 6.7,
+        "vs_control_ci95": [
+          -12.2,
+          25.5
+        ]
+      },
+      "summary": {
+        "runs": 4,
+        "facts_kept_pct": 75.0,
+        "ci95": [
+          58.5,
+          91.5
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 40,
+        "median_words": 121,
+        "trimmed_runs": 0
+      }
+    },
+    "3": {
+      "checklist": {
+        "runs": 4,
+        "facts_kept_pct": 85.0,
+        "ci95": [
+          79.7,
+          90.3
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 40,
+        "median_words": 136,
+        "trimmed_runs": 0,
+        "vs_control_pp": 27.5,
+        "vs_control_ci95": [
+          -10.8,
+          65.8
+        ]
+      },
+      "facts_only": {
+        "runs": 6,
+        "facts_kept_pct": 62.8,
+        "ci95": [
+          61.3,
+          64.2
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 60,
+        "median_words": 150,
+        "trimmed_runs": 0,
+        "vs_control_pp": 5.0,
+        "vs_control_ci95": [
+          -32.9,
+          42.9
+        ]
+      },
+      "sections": {
+        "runs": 4,
+        "facts_kept_pct": 79.2,
+        "ci95": [
+          65.2,
+          93.1
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 40,
+        "median_words": 133,
+        "trimmed_runs": 0,
+        "vs_control_pp": 21.7,
+        "vs_control_ci95": [
+          -20.0,
+          63.3
+        ]
+      },
+      "summary": {
+        "runs": 4,
+        "facts_kept_pct": 57.5,
+        "ci95": [
+          20.9,
+          94.1
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 40,
+        "median_words": 111,
+        "trimmed_runs": 0
+      }
+    },
+    "5": {
+      "checklist": {
+        "runs": 4,
+        "facts_kept_pct": 84.2,
+        "ci95": [
+          79.1,
+          89.2
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 40,
+        "median_words": 136,
+        "trimmed_runs": 0,
+        "vs_control_pp": 25.8,
+        "vs_control_ci95": [
+          -11.0,
+          62.7
+        ]
+      },
+      "facts_only": {
+        "runs": 6,
+        "facts_kept_pct": 62.8,
+        "ci95": [
+          61.3,
+          64.2
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 60,
+        "median_words": 150,
+        "trimmed_runs": 0,
+        "vs_control_pp": 4.2,
+        "vs_control_ci95": [
+          -30.6,
+          38.9
+        ]
+      },
+      "sections": {
+        "runs": 4,
+        "facts_kept_pct": 79.2,
+        "ci95": [
+          65.2,
+          93.1
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 40,
+        "median_words": 133,
+        "trimmed_runs": 0,
+        "vs_control_pp": 20.8,
+        "vs_control_ci95": [
+          -17.0,
+          58.7
+        ]
+      },
+      "summary": {
+        "runs": 4,
+        "facts_kept_pct": 58.3,
+        "ci95": [
+          24.7,
+          92.0
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 40,
+        "median_words": 111,
+        "trimmed_runs": 0
+      }
+    }
+  }
+}

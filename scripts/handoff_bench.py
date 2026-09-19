@@ -241,6 +241,12 @@ def main() -> None:
     parser.add_argument("--endpoint", default="https://openrouter.ai/api/v1/chat/completions")
     parser.add_argument("--key", default="openrouter")
     parser.add_argument("--max-tokens", type=int, default=5000)
+    # The reader's budget was hard-coded at 2000 while MEM-008's policy gave it
+    # 5000, so launching the same benchmark from the command line silently
+    # halved it and truncated answers — unevenly across strategies, which makes
+    # a run unusable. A budget that cannot be set where the run is launched is a
+    # fault waiting to repeat.
+    parser.add_argument("--reader-max-tokens", type=int, default=5000)
     parser.add_argument("--workers", type=int, default=4)
     args = parser.parse_args()
 
@@ -253,7 +259,7 @@ def main() -> None:
                  "endpoint": args.endpoint, "json_mode": False, "max_tokens": args.max_tokens,
                  "extra_body": {"reasoning": {"enabled": False}}, **common}
     reader = {"evaluator_id": "bench-reader", "provider": args.key, "model": args.reader_model,
-              "endpoint": args.endpoint, "json_mode": False, "max_tokens": 2000,
+              "endpoint": args.endpoint, "json_mode": False, "max_tokens": args.reader_max_tokens,
               "extra_body": {"reasoning": {"effort": "low"}}, **common}
 
     document = args.document.read_text(encoding="utf-8")

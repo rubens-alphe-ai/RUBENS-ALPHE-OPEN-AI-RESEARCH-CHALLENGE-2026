@@ -185,7 +185,7 @@ def check_adjudicated(experiment: Path) -> list[dict]:
 # --- paired quiz verdicts (MEM-004 to MEM-007) -------------------------------
 
 
-def answers_directory(experiment: Path, decision_path: Path) -> Path | None:
+def answers_directory(experiment: Path, decision_path: Path, published: dict | None = None) -> Path | None:
     """Where the reader answers behind one decision file live.
 
     A run may publish more than one decision — MEM-006 published a second
@@ -193,6 +193,15 @@ def answers_directory(experiment: Path, decision_path: Path) -> Path | None:
     after it. Guessing wrong would regrade one reader's decision from another
     reader's answers and call the disagreement a mismatch, so a decision whose
     answers cannot be located is reported as unverifiable instead.
+
+    A reading the protocol *set aside* breaks that convention, and looking only
+    at the decision's own name is what made this suite report MEM-006's second
+    reading as resting on nothing. It does not: MEM-006's deviation D3 moved the
+    whole Kimi reading to `results/quiz/abandoned/reader-nvidia-kimi-k3/` and
+    published its verdict as `decision-kimi-reader.json`. The folder is named
+    after the reader and the file after a slug, so the two never meet by name.
+    The decision's own `reader` field is the link, and it is the only one that
+    cannot pick up a different reader's answers by accident.
     """
     results = experiment / "results"
     if decision_path.parent != results:
@@ -200,10 +209,27 @@ def answers_directory(experiment: Path, decision_path: Path) -> Path | None:
     if decision_path.name == "decision.json":
         return results / "quiz"
     slug = decision_path.stem[len("decision-"):]
-    for candidate in (results / ("quiz-%s" % slug), results / slug):
+    candidates = [results / ("quiz-%s" % slug), results / slug]
+    reader = (published or {}).get("reader")
+    if reader:
+        candidates.append(results / "quiz" / "abandoned" / str(reader))
+    for candidate in candidates:
         if candidate.is_dir():
             return candidate
     return None
+
+
+def wrong_reader(directory: Path, record: dict) -> bool:
+    """Whether a record filed under an abandoned reader was written by another one.
+
+    Only the abandoned folders are checked, because only there is the folder's
+    name an `evaluator_id` that a record repeats. Elsewhere the two are written
+    in different vocabularies — a cross-read folder is named `cross-read-deepseek`
+    and holds records whose reader_id is `cross-deepseek` — and comparing them
+    would reject good evidence.
+    """
+    return directory.parent.name == "abandoned" and \
+        record.get("reader_id") not in (None, directory.name)
 
 
 def quiz_and_key(experiment: Path) -> tuple[list[dict], dict[str, str]]:
@@ -224,7 +250,7 @@ def check_paired_quiz(experiment: Path) -> list[dict]:
         name = str(decision_path.relative_to(results)).replace("\\", "/")
         row = unit(name, "paired quiz", REPRODUCED)
         published = load(decision_path)
-        directory = answers_directory(experiment, decision_path)
+        directory = answers_directory(experiment, decision_path, published)
         if directory is None or not directory.is_dir():
             row["status"] = UNVERIFIABLE
             row["notes"].append("no directory of reader answers accompanies this decision, so its "
@@ -251,21 +277,27 @@ def check_paired_quiz(experiment: Path) -> list[dict]:
                                 % policy["quiz"]["file"])
         pairs: dict[str, dict] = {}
         graded = 0
+        foreign = ""
         for path in sorted(directory.glob("*.json")):
             if path.name in SKIP_RESULT_FILES:
                 continue
             record = load(path)
             if "answers" not in record or "condition" not in record:
                 continue
+            if wrong_reader(directory, record):
+                foreign = "%s was written by %r, not by the reader this decision names; refusing to " \
+                          "regrade one reader's verdict from another's answers" \
+                          % (path.name, record.get("reader_id"))
+                break
             again = hq.grade(record["answers"], key, rendered)
             if "grade" in record:
                 checks += 1
                 found.extend(differences(again, record["grade"], "%s.grade" % path.name))
             graded += 1
             pairs.setdefault(record["pair_id"], {"pair_id": record["pair_id"]})[record["condition"]] = again
-        if not graded:
+        if foreign or not graded:
             row["status"] = UNVERIFIABLE
-            row["notes"].append("the directory holds no record carrying raw answers")
+            row["notes"].append(foreign or "the directory holds no record carrying raw answers")
             row["effect"] = {"recomputed": None, "published": summary_effect(published)}
             rows.append(row)
             continue
