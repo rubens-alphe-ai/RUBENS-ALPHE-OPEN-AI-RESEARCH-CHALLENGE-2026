@@ -1,0 +1,128 @@
+{
+  "policy_version": "RA-PSI-BENCH-POLICY-V1",
+  "design": "evolutionary_search",
+  "notes": "Stage 3 of the Continuity Programme, pre-registered with PROTOCOL.md before any trial. Three generations of model-written variants of the four hand-written strategies, selected by facts kept at hop 5 on two training documents, filtered once on a third, and validated ONCE on the sealed holdout against the best hand-written instruction. The search is drift-limited at six repeats and is registered as such: see the variance section of PROTOCOL.md. No runner exists yet; scripts/evolve_instructions.py, scripts/screen_instruction.py, an arbitrary-instruction entry point in handoff_bench.py and a cost_guard branch for this design must be written first.",
+  "budget": {
+    "max_usd": 2.5,
+    "key_file": "~/.ra-psi/keys/openrouter.key"
+  },
+  "documents": [
+    "../PROP-EXP-MEM-008/documents/clinic.md",
+    "../PROP-EXP-MEM-008/documents/vineyard.md"
+  ],
+  "quizzes": {
+    "clinic": "../PROP-EXP-MEM-008/quiz-clinic.json",
+    "vineyard": "../PROP-EXP-MEM-008/quiz-vineyard.json"
+  },
+  "validation": {
+    "document": "../PROP-EXP-MEM-008/documents/observatory.md",
+    "quiz": "../PROP-EXP-MEM-008/quiz-observatory.json",
+    "repeats": 6,
+    "rule": "A finalist that does not beat the control on this document does not reach the holdout, and the stage ends refused without spending the seal."
+  },
+  "holdout": {
+    "document": "../HOLDOUT-2026-09/STATE_A.txt",
+    "quiz": "../HOLDOUT-2026-09/QUIZ.json",
+    "repeats": 60,
+    "read_at": [
+      1,
+      5
+    ],
+    "uses_allowed": 1,
+    "used": false,
+    "rule": "One batch, one candidate chosen and hashed before the first call, applied once. A restart is permitted only if the batch aborts before any reader answer has been graded, and is recorded in PROTOCOL_DEVIATIONS.md before any score is seen."
+  },
+  "seed_instructions": [
+    "summary",
+    "checklist",
+    "sections",
+    "facts_only"
+  ],
+  "control": "checklist",
+  "generations": 3,
+  "variants_per_generation": 6,
+  "carried_per_generation": 4,
+  "repeats": 6,
+  "read_at": [
+    5
+  ],
+  "words": 150,
+  "screen": {
+    "quarantine": "A variant is discarded before it is run if it contains any content word from a quiz question, option or answer key of any of the three training documents, or any proper noun from those documents, outside the committed allow-list of generic handover vocabulary.",
+    "feedback_to_mutator": "Parent instruction texts and one fitness number each. No document, quiz, question, option, answer key, per-question grade or handoff is ever shown to the mutator.",
+    "both_documents_required": true,
+    "publish_discarded_variants": true
+  },
+  "generator": {
+    "model": "deepseek/deepseek-v4.1-flash",
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "key": "openrouter",
+    "max_tokens": 400,
+    "extra_body": {
+      "reasoning": {
+        "enabled": false
+      }
+    }
+  },
+  "mutator": {
+    "model": "deepseek/deepseek-v4.1-flash",
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "key": "openrouter",
+    "max_tokens": 700,
+    "extra_body": {
+      "reasoning": {
+        "enabled": false
+      }
+    }
+  },
+  "reader": {
+    "model": "openai/gpt-oss-120b",
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "key": "openrouter",
+    "max_tokens": 2000,
+    "extra_body": {
+      "reasoning": {
+        "effort": "low"
+      }
+    }
+  },
+  "decision": {
+    "hop": 5,
+    "keep_min_delta_pp": 5,
+    "documents_required": 1,
+    "invention_margin": 5,
+    "control_prior_pct": {
+      "keep_min_delta_pp": {
+        "holdout": 93.0
+      }
+    },
+    "control_prior_basis": "checklist at hop 5 in MEM-008 (91.3, 96.5, 92.4) and reproduced in a separate harness in MEM-010 (94.2, 95.8, 93.8). Headroom is 7 points against a registered threshold of 5. The prior cannot be verified before the holdout is spent.",
+    "power": {
+      "paired_sd_pp": 11.0,
+      "paired_sd_basis": "MEM-011 and MEM-012 ran an identical arm twice; the six-repeat estimates differ by +7.3, -2.8 and +8.3 per document, giving SE about 4.7 at six repeats and a per-chain paired SD of about 11.",
+      "se_at_60_repeats_pp": 1.42,
+      "min_repeats_for_interval_clause_not_to_dominate": 19,
+      "probability_rule_passes": {
+        "0": 0.0002,
+        "3": 0.08,
+        "4": 0.24,
+        "5": 0.5,
+        "6": 0.76,
+        "7": 0.92
+      },
+      "search_is_drift_limited": true,
+      "search_resolution_pp": 12.5,
+      "repeats_required_to_rank_variants": 480,
+      "note": "check_headroom.py checks the point threshold against the control prior; it does not check the interval clause against the estimator's noise. At six repeats the 95% lower bound clause would require an observed mean above 8.8 points while the ceiling is 7."
+    },
+    "repeats": 60,
+    "paired_sd_pp": 11.0,
+    "noise_source": "Paired SD estimated at about 11 points from the duplicate anchored arm in PROP-EXP-MEM-011 and PROP-EXP-MEM-012, whose two six-repeat estimates differ by +7.3, -2.8 and +8.3 per document. It is an estimate from three paired differences and is itself uncertain; it is declared so the rule's interval clause can be checked at all, not because it is precise."
+  },
+  "failure_policy": {
+    "record": "*.failed.json",
+    "uneven_failure_fraction": 0.1,
+    "on_uneven": "UNUSABLE",
+    "scope": "applied separately within each generation, on the validation filter and on the holdout batch"
+  }
+}

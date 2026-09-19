@@ -36,3 +36,25 @@ When it is used, the experiment that uses it records:
 
 Until then, nothing in this folder is read by any model, and no question here
 is used to choose a design, a threshold or a model.
+
+## Breaches of the seal
+
+This section exists so that the seal's condition is readable here, where the
+material is, rather than only in whichever document caused the breach. An empty
+section would be a claim; entries are the record.
+
+- **2026-09-19 — one question exposed.** While pre-registering
+  `PROP-EXP-MEM-013`, a `grep` across the repository for recorded costs printed
+  one line of `QUIZ.json`: question `X01`, with its distractors. It is an
+  **absent-fact** question — one of the ten whose correct answer is by
+  construction that the text does not say — so it carries no fact about the
+  state, and no design decision in that protocol was made after it or depends on
+  it. It was disclosed by the agent that caused it, unprompted, rather than left
+  unmentioned. Nothing else in the folder was opened. **The seal is weaker by
+  one question of forty-two.** Whoever spends it should report the result both
+  with and without `X01`, and a reader who distrusts the disclosure should treat
+  the invention count as resting on nine questions rather than ten.
+
+**If you are searching this repository, exclude this folder.** A grep that
+prints a line of `QUIZ.json` costs a question that cannot be replaced without
+building a new seal, and the person running the search will usually not notice.

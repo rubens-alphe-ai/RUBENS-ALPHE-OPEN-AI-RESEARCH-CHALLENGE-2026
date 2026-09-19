@@ -27,9 +27,14 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+from handoff_quiz import T_975  # noqa: E402
 
 
 def headroom(prior_pct: float, kind: str) -> float:
@@ -37,6 +42,26 @@ def headroom(prior_pct: float, kind: str) -> float:
     if kind == "ratio":
         return 100.0 / prior_pct if prior_pct else float("inf")
     return 100.0 - prior_pct
+
+
+def smallest_passing_mean(threshold: float, repeats: int, paired_sd_pp: float) -> float:
+    """The smallest observed effect that would satisfy the whole rule.
+
+    Every acceptance rule in this project has two clauses: the effect must reach
+    the threshold, **and** the 95 % lower bound must sit above zero. Only the
+    first was ever checked here. The second is a separate demand — the mean must
+    exceed t × the standard error — and at small repeat counts it is by far the
+    harder one.
+
+    Ignoring it let PROP-EXP-MEM-013 register as REACHABLE while being
+    unmeetable: at six repeats and a paired standard deviation of about 11
+    points, the interval clause alone needs an observed 8.8 points, against an
+    arithmetic ceiling of 7. The threshold fit; the rule could not be satisfied.
+    """
+    if repeats < 2 or paired_sd_pp <= 0:
+        return threshold
+    standard_error = paired_sd_pp / math.sqrt(repeats)
+    return max(threshold, T_975.get(repeats - 1, 1.96) * standard_error)
 
 
 def findings(policy: dict) -> list[dict]:
@@ -60,16 +85,37 @@ def findings(policy: dict) -> list[dict]:
                          "status": "UNDECLARED",
                          "reason": "no control_prior_pct declared for %s: the threshold cannot be checked" % name})
             continue
+        # What the rule actually demands, once its interval clause is counted.
+        # A rule is checked against this, not against its headline threshold.
+        needed = float(threshold)
+        repeats, sd = decision.get("repeats"), decision.get("paired_sd_pp")
+        if kind == "points" and repeats and sd:
+            needed = smallest_passing_mean(float(threshold), int(repeats), float(sd))
         for document, value in (prior.items() if isinstance(prior, dict) else [("all", prior)]):
             room = headroom(float(value), kind)
-            ok = float(threshold) <= room
-            rows.append({"threshold": name, "value": threshold, "kind": kind, "document": document,
-                         "control_prior_pct": value, "headroom": round(room, 2),
-                         "status": "OK" if ok else "IMPOSSIBLE",
-                         "reason": "" if ok else
-                         "%s of %s needs a control at or below %.1f %%, and it is declared at %.1f %%"
-                         % (name, threshold, 100.0 - float(threshold) if kind == "points"
-                            else 100.0 / float(threshold), float(value))})
+            ok = needed <= room
+            row = {"threshold": name, "value": threshold, "kind": kind, "document": document,
+                   "control_prior_pct": value, "headroom": round(room, 2),
+                   "smallest_passing_mean": round(needed, 2),
+                   "status": "OK" if ok else "IMPOSSIBLE"}
+            if kind == "points" and not (repeats and sd):
+                # Silence about the noise is not a claim that there is none. The
+                # check is left exactly as weak as it was, and says so, because
+                # the alternative is a REACHABLE that was never earned.
+                row["noise_undeclared"] = True
+                row["note"] = ("no `repeats` and `paired_sd_pp` declared, so the 95 %% lower bound clause "
+                               "of this rule is unchecked; only the %s-point threshold was tested" % threshold)
+            if not ok and needed > float(threshold):
+                row["reason"] = ("the interval clause, not the threshold: at %s repeats with a paired SD of "
+                                 "%s points the 95%% lower bound only clears zero above %.1f, and the ceiling "
+                                 "here is %.1f" % (repeats, sd, needed, room))
+            elif not ok:
+                row["reason"] = ("%s of %s needs a control at or below %.1f %%, and it is declared at %.1f %%"
+                                 % (name, threshold, 100.0 - float(threshold) if kind == "points"
+                                    else 100.0 / float(threshold), float(value)))
+            else:
+                row["reason"] = ""
+            rows.append(row)
     return rows
 
 
@@ -88,9 +134,13 @@ def check(experiment_id: str) -> dict:
         if row["status"] == "OK":
             per_threshold[row["threshold"]] = per_threshold.get(row["threshold"], 0) + 1
     short = [name for name in reachable if per_threshold.get(name, 0) < required]
-    status = "REFUSED" if (impossible and short) else ("WARN" if undeclared or impossible else "REACHABLE")
+    unchecked = [row for row in rows if row.get("noise_undeclared")]
+    status = ("REFUSED" if (impossible and short)
+              else ("WARN" if undeclared or impossible or unchecked else "REACHABLE"))
     return {"experiment": experiment_id, "documents_required": required, "rows": rows,
-            "thresholds_short_of_the_documents_they_need": short, "status": status}
+            "thresholds_short_of_the_documents_they_need": short,
+            "rules_whose_interval_clause_is_unchecked": [row["threshold"] for row in unchecked],
+            "status": status}
 
 
 def main() -> None:

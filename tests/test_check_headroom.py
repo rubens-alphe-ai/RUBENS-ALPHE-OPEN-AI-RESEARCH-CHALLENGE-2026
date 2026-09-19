@@ -92,5 +92,39 @@ class MarginTests(unittest.TestCase):
         self.assertEqual(result["thresholds_short_of_the_documents_they_need"], [])
 
 
+class IntervalClauseTests(unittest.TestCase):
+    """The clause the guard used to ignore, and the registration it let through."""
+
+    def test_at_six_repeats_the_interval_clause_asks_more_than_the_threshold(self) -> None:
+        # MEM-013 registered +5 against a control at 93 %, which fits under the
+        # 7-point ceiling. With a paired SD of 11 points at six repeats, the
+        # lower bound only clears zero above about 11.5, so the rule could not
+        # be satisfied at all.
+        needed = ch.smallest_passing_mean(5.0, 6, 11.0)
+        self.assertGreater(needed, 7.0)
+
+    def test_that_registration_is_now_refused_where_it_was_reachable(self) -> None:
+        decision = {"keep_min_delta_pp": 5, "repeats": 6, "paired_sd_pp": 11.0,
+                    "control_prior_pct": {"keep_min_delta_pp": {"holdout": 93.0}}}
+        row = ch.findings(policy(decision))[0]
+        self.assertEqual(row["status"], "IMPOSSIBLE")
+        self.assertIn("interval clause", row["reason"])
+
+    def test_enough_repeats_bring_the_rule_back_within_reach(self) -> None:
+        decision = {"keep_min_delta_pp": 5, "repeats": 60, "paired_sd_pp": 11.0,
+                    "control_prior_pct": {"keep_min_delta_pp": {"holdout": 93.0}}}
+        row = ch.findings(policy(decision))[0]
+        self.assertEqual(row["status"], "OK")
+        self.assertAlmostEqual(row["smallest_passing_mean"], 5.0, places=2)
+
+    def test_a_policy_that_declares_no_noise_is_checked_as_before(self) -> None:
+        # Silence about the noise must not be read as a claim that there is none;
+        # it leaves the check exactly as weak as it was, and no weaker.
+        row = ch.findings(policy({"keep_min_delta_pp": 5,
+                                  "control_prior_pct": {"keep_min_delta_pp": {"holdout": 93.0}}}))[0]
+        self.assertEqual(row["status"], "OK")
+        self.assertEqual(row["smallest_passing_mean"], 5.0)
+
+
 if __name__ == "__main__":
     unittest.main()
