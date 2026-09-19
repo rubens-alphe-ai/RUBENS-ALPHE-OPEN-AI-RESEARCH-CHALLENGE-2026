@@ -70,3 +70,24 @@ states, same prompt, same 450-word instruction, same quiz, same key, same rule,
 same ceiling. The guard first refused 4,000 tokens as over budget (0.54 USD against 0.50), so the budget is 3,000 tokens, about five times what a handoff uses.
 
 **Decided before:** any handoff was read or graded. No reading had run.
+
+## D5 — Readings are kept when the next reader is the same model (2026-09-19)
+
+**What happened:** the first reader (`openai/gpt-oss-120b` via OpenRouter) hit
+the provider's per-minute limit five times, so the pre-registered ladder moved to
+its next rung — `openai/gpt-oss-120b` on Groq, the same model served elsewhere —
+and the rule set aside 115 completed readings to start again.
+
+**Why that was wrong:** the rule exists so that one experiment is never graded
+partly by one reader and partly by another. When the next rung is the same
+model, there is no second reader: the rule discarded valid, comparable work and
+sent the experiment back to the start of a slower free quota.
+
+**Deviation:** readings are set aside only when the next rung's model differs
+from the failed one. The 115 readings are restored from
+`results/quiz/abandoned/` and the run continues with the same model through
+Groq. Every reading records the provider that served it, so anyone can check
+that one model produced them all.
+
+**Decided before:** any verdict for this experiment. No reading was discarded or
+re-graded to change a number; the restored readings are the ones already taken.

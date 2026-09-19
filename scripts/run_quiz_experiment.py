@@ -179,7 +179,11 @@ def run(experiment_name: str, config_path: Path) -> dict:
             break
         if position + 1 == len(readers):
             return finish("STOPPED_READING_INCOMPLETE")
-        set_readings_aside(quiz_dir, entry["evaluator_id"])
+        # Readings are set aside only when the next rung is a *different model*.
+        # Two rungs can be the same model served by two providers: there the
+        # rule protects nothing and would throw away valid, comparable work.
+        if readers[position + 1]["model"].strip().lower() != entry["model"].strip().lower():
+            set_readings_aside(quiz_dir, entry["evaluator_id"])
 
     pairs: dict[str, dict] = {}
     for record in graded.values():

@@ -2,7 +2,7 @@
   "record_version": "RA-PSI-RUN-REPORT-V1",
   "experiment_id": "PROP-EXP-MEM-006",
   "design": "handoff_quiz",
-  "started_at_utc": "2026-09-18T20:17:14.234439+00:00",
+  "started_at_utc": "2026-09-19T04:54:58.058824+00:00",
   "steps": [
     {
       "step": "manifest",
@@ -12,36 +12,20 @@
       "step": "trials",
       "status": "complete",
       "total": 120,
-      "missing": []
+      "missing": [],
+      "tolerated_missing": 0
     },
     {
       "step": "reading",
-      "reader": "reader-nvidia-glm-5.3",
+      "reader": "reader-openrouter-gpt-oss-120b",
       "status": "incomplete",
-      "read": 6,
+      "read": 118,
       "failed": [
-        "baseline-824",
-        "baseline-856",
-        "structured-844",
-        "baseline-830",
-        "structured-809",
-        "baseline-848",
-        "structured-860"
+        "baseline-807",
+        "baseline-808"
       ]
-    },
-    {
-      "step": "reading",
-      "reader": "reader-nvidia-kimi-k3",
-      "status": "complete",
-      "read": 120,
-      "failed": []
-    },
-    {
-      "step": "decision",
-      "status": "PROVISIONAL_KEEP",
-      "reason_codes": []
     }
   ],
-  "status": "DECIDED",
-  "finished_at_utc": "2026-09-18T23:57:03.143707+00:00"
+  "status": "STOPPED_READING_INCOMPLETE",
+  "finished_at_utc": "2026-09-19T05:13:40.782328+00:00"
 }
