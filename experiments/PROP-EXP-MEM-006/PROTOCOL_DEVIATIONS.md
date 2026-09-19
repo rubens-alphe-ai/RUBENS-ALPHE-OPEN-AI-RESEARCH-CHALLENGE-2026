@@ -51,3 +51,8 @@ by that independent reader, whatever it says.
 **Decided before:** the independent reading began. The Kimi verdict is public so
 the difference between the two readers can be compared afterwards — that
 comparison is exploratory, not part of the decision.
+
+**Amendment to D4 (before the verdict):** one handoff of 430 words made the
+reader spend its whole 2,000-token budget reasoning and return nothing. Its
+budget is 5,000 tokens. The prompt, the model, the key and the rule are
+unchanged; this only lets the reader finish an answer it had started.
