@@ -1,0 +1,68 @@
+{
+  "policy_version": "RA-PSI-BENCH-POLICY-V1",
+  "design": "anchored_chain",
+  "notes": "Pre-registered with PROTOCOL.md before any trial. Same three regimes as MEM-010, on the free summary instruction, which loses a third of a document at the first handoff and therefore leaves an archive something to recover. Run with scripts/anchored_chain.py, once per document.",
+  "budget": {
+    "max_usd": 0.8,
+    "key_file": "~/.ra-psi/keys/openrouter.key"
+  },
+  "documents": [
+    "../PROP-EXP-MEM-008/documents/clinic.md",
+    "../PROP-EXP-MEM-008/documents/vineyard.md",
+    "../PROP-EXP-MEM-008/documents/observatory.md"
+  ],
+  "quizzes": {
+    "clinic": "../PROP-EXP-MEM-008/quiz-clinic.json",
+    "vineyard": "../PROP-EXP-MEM-008/quiz-vineyard.json",
+    "observatory": "../PROP-EXP-MEM-008/quiz-observatory.json"
+  },
+  "ledgers": {
+    "clinic": "../PROP-EXP-MEM-010/ledgers/ledger-clinic.json",
+    "vineyard": "../PROP-EXP-MEM-010/ledgers/ledger-vineyard.json",
+    "observatory": "../PROP-EXP-MEM-010/ledgers/ledger-observatory.json"
+  },
+  "regimes": [
+    "bare",
+    "index",
+    "anchored"
+  ],
+  "control": "bare",
+  "instruction": "summary",
+  "repeats": 6,
+  "read_at": [
+    1,
+    3,
+    5
+  ],
+  "words": 150,
+  "fetch": 4,
+  "generator": {
+    "model": "deepseek/deepseek-v4.1-flash",
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "key": "openrouter",
+    "max_tokens": 900,
+    "extra_body": {
+      "reasoning": {
+        "enabled": false
+      }
+    }
+  },
+  "reader": {
+    "model": "openai/gpt-oss-120b",
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "key": "openrouter",
+    "max_tokens": 2000,
+    "extra_body": {
+      "reasoning": {
+        "effort": "low"
+      }
+    }
+  },
+  "decision": {
+    "hop": 5,
+    "keep_min_delta_pp": 20,
+    "documents_required": 2,
+    "retrieval_over_index_pp": 10,
+    "invention_margin": 5
+  }
+}
