@@ -154,6 +154,20 @@
       "holdout_required": true,
       "regression_suite_required": true,
       "notes": "Refused as registered: +11.6, +6.9 and +1.4 pp, and no merge beat the best single chain at equal length. Zero inventions. Exploratory follow-up at double the budget exceeds the best chain on two documents of three, and fails on the one whose chains had almost nothing to reconcile. See RESULT.md."
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-010",
+      "title": "Memory against Archive: Can a Chain Recover What It Lost?",
+      "status": "OPEN",
+      "capability_target": "blind cross-model mission reconstruction",
+      "hypothesis": "A chain of handoffs that may consult a verifiable archive - an index of hashed entries, with a narrow retrieval channel - keeps substantially more facts at hop 5 than a chain that can only remember.",
+      "metric": "Fact accuracy from the handoff alone at hops 1, 3 and 5, paired against the bare regime; identifiers retrieved at each hop; inventions on absent-fact questions",
+      "acceptance_rule": "At hop 5 the anchored regime must keep at least 20 pp more facts than the bare regime with the paired 95% lower bound above 0, on at least two of three documents. The middle arm (index only, no retrieval) decides how the result is named; both namings are fixed in PROTOCOL.md before the run.",
+      "protocol_path": "experiments/PROP-EXP-MEM-010/PROTOCOL.md",
+      "evidence_stage": "PILOT",
+      "holdout_required": true,
+      "regression_suite_required": true,
+      "notes": "Stage 2 of the Continuity Programme. Threshold fixed in docs/CONTINUITY_PROGRAMME.md on 2026-09-19, before stage 1 ran. Archive built without calling a model, so the quiz cannot leak into it."
     }
   ]
 }
