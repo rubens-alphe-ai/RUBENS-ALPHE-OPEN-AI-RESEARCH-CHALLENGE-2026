@@ -51,28 +51,47 @@ loudly if anyone regenerates it without deciding to.
 The numbers to cite are the ones from the stored answers, which are also the
 ones in `RESULT.md`.
 
-## The two claims that are not checkable at all
+## The claims that are not checkable — one, not two
 
-The same run found two published numbers that are not wrong but cannot be
-verified, which for this project is a distinct and more serious category:
+The same run reported two published numbers as unbacked. One of those reports was
+itself wrong, and the retraction is below. The remaining one stands:
 
-- **`results/decision-kimi-reader.json` in PROP-EXP-MEM-006** — a second,
-  independent reading (+6.61 pp, CI +4.29 to +8.94, 60 pairs) by
-  `reader-nvidia-kimi-k3`. **No directory of that reader's answers exists in the
-  repository.** The summary survives; the evidence does not.
+- ~~**`results/decision-kimi-reader.json` in PROP-EXP-MEM-006** — no directory of
+  that reader's answers exists in the repository.~~ **This was wrong, and it was
+  published before it was checked.**
+
+  The answers were never lost. All 120 records are at
+  `experiments/PROP-EXP-MEM-006/results/quiz/abandoned/reader-nvidia-kimi-k3/`,
+  241 files including their own `answer-key.json` — exactly where
+  `PROTOCOL_DEVIATIONS.md` D3 said that reading was put, in a sentence written
+  before the verdict. Regrading all 120 reproduces the published summary field
+  for field to the last digit: +6.614583333333333, sd 9.189399857373742, CI
+  +4.289344349529045 to +8.939822317137622, 42/11/7, zero inventions.
+
+  The suite looked in the wrong place. For `decision-<slug>.json` it searched
+  `results/quiz-<slug>/` and `results/<slug>/`; the folder is named after the
+  **reader** and the file after a **slug**, and those names never meet. A
+  checker that cannot find evidence reports the same thing as a project that
+  never kept it, which is the failure mode a checker exists to prevent. It now
+  locates a set-aside reading by the `reader` field of its own decision file,
+  and refuses a folder whose records name a different reader.
+
+  **The accusation was mine and the retraction is mine.** MEM-006's second
+  reading is backed and always was.
 - **PROP-EXP-MEM-009**, all six merge directories — each `merge-NN.json` stores
   a `grade` but no `answers`, and there is no `answer-key.json`. Its headline
   recovery figures (+11.6, +6.9, +1.4) can be re-read but never regraded.
 
-Both are recorded in the registry and reported by the suite as `unverifiable`,
+MEM-009 is recorded in the registry and reported by the suite as `unverifiable`,
 which exits `2` — deliberately not the same as `mismatch`, and deliberately not
 silence.
 
 ## What this changes going forward
 
-The claim is narrowed to what is true: **8 of 11 published verdicts reproduce
-exactly from the stored answers, 1 does not, and 2 rest on data that was never
-stored.** `scripts/regression_suite.py` runs over the whole repository and says
+The claim is narrowed to what is true: **9 of 11 published verdicts reproduce
+exactly from the stored answers, 1 does not, and 1 rests on data that was never
+stored.** (Published first as 8/1/2, which double-counted my own checker's
+inability to find a folder as missing evidence.) `scripts/regression_suite.py` runs over the whole repository and says
 which is which, so the claim no longer has to be taken on trust — including when
 it is inconvenient.
 

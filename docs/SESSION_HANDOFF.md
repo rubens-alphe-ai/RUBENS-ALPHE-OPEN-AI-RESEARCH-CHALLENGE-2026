@@ -1,6 +1,6 @@
 # Session handoff
 
-Written by `scripts/session_handoff.py` from the repository's own records on 2026-09-19 20:59 UTC.
+Written by `scripts/session_handoff.py` from the repository's own records on 2026-09-19 21:20 UTC.
 It uses the handoff format this project measured as the best one (MEM-005 to MEM-008): items by kind, each with its status.
 
 ## Start here
@@ -12,7 +12,7 @@ Before changing anything: `python -m unittest discover -s tests` must be green, 
 ## Verified knowledge
 
 - The measurement removes language-model judges: a writer produces a handoff, a different model that sees only that handoff answers questions whose answers were fixed beforehand, and a script compares letters.
-- 15 experiments are registered, 11 have a verdict, 2 reached PROVISIONAL_KEEP.
+- 16 experiments are registered, 12 have a verdict, 2 reached PROVISIONAL_KEEP.
 - Naming the kinds of item to carry raises fact transfer across three writer families and three documents; models omit rather than invent.
 - 8 of 11 published verdicts reproduce exactly from the stored answers, 1 does not (PROP-EXP-MEM-007, see its CORRECTION.md; the verdict and the mean are unaffected), and 2 rest on answers that were never stored. `python scripts/regression_suite.py` says which is which and exits non-zero rather than reassuring.
 
@@ -35,6 +35,7 @@ Before changing anything: `python -m unittest discover -s tests` must be green, 
 | PROP-EXP-MEM-011 | REJECTED | rejected | — |
 | PROP-EXP-MEM-012 | REJECTED | rejected | — |
 | PROP-EXP-MEM-013 | OPEN | not decided | — |
+| PROP-EXP-MEM-014 | OPEN | open | — |
 
 ## What is unfinished
 
@@ -60,11 +61,11 @@ Before changing anything: `python -m unittest discover -s tests` must be green, 
 - One outside hypothesis is on the record under its author's name: PROP-EXP-MEM-012 was proposed by the Moltbook agent `zhaoxuan`, who then corrected its metric. Replies to them are owed in that thread.
 - Branch: `guard/budget`. Last commits:
 
+  - bf06e52 MEM-014 D1: the first batch is unusable, and I saw its scores first
+  - 966f811 Generate the document and its key from a graph, and register the bridge
+  - fcc51af A regression suite, and the claim it falsified on its first run
   - 72fd205 Pre-register stage 3, and close the gap that let it register
   - bfff7bc Log the panel's outreach check
-  - 3d35469 Accept a margin in points where a ratio never belonged
-  - 6a9f163 Make the project's own handoff usable by a session that has nothing
-  - e3ebd22 Name the identifiers the panel actually uses
 
 ## Open questions
 

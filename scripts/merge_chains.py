@@ -71,6 +71,24 @@ def sources(bench_dir: Path, strategy: str, hop: int) -> list[dict]:
     return found
 
 
+def merge_record(record: dict, merged: str, cut: bool, answers: dict[str, str], problems: list[str],
+                 key: dict[str, str], rendered: list[dict]) -> dict:
+    """One finished merge: the note, the letters the reader gave, and the grade.
+
+    The first run of this script filed a `grade` and nothing else. That made
+    MEM-009's three recovery figures *unverifiable* — not wrong, but impossible
+    to recompute, which is the one thing this project promises about every
+    number it publishes. The answers are now written beside the grade they
+    produced, and this function refuses to build a record without them rather
+    than quietly filing another unbacked number.
+    """
+    if not answers:
+        raise ValueError("a merge record must carry the reader's answers beside its grade")
+    return {**record, "merged": merged, "merged_sha256": sha256_text(merged),
+            "words": len(merged.split()), "trimmed": cut, "answers": answers,
+            "problems": problems, "grade": hq.grade(answers, key, rendered)}
+
+
 def merge_prompt(texts: list[str], words: int) -> str:
     parts = [MERGE.format(count=len(texts), words=words)]
     for index, text in enumerate(texts, start=1):
@@ -114,6 +132,15 @@ def main() -> None:
         raise SystemExit("need at least two completed chains, found %d" % len(chains))
 
     args.out.mkdir(parents=True, exist_ok=True)
+    # The key is frozen beside the answers, not only inside this process. Without
+    # it a later reader has to guess which seed material rendered the quiz — and
+    # this script seeds on the bench folder's name while handoff_bench seeds on
+    # "<document>.md", so the guess is wrong in a way that silently ruins a
+    # regrade instead of failing it.
+    (args.out / "answer-key.json").write_text(
+        json.dumps({"key": key, "rendered": rendered, "quiz_file": str(args.quiz).replace("\\", "/"),
+                    "seed_material": args.bench.name + ":" + quiz["quiz_version"]},
+                   indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     records = []
     for index in range(1, args.merges + 1):
         stored = args.out / ("merge-%02d.json" % index)
@@ -144,8 +171,7 @@ def main() -> None:
             record["error"] = "reader returned no usable answer"
             records.append(record)
             continue
-        record.update(merged=merged, merged_sha256=sha256_text(merged), words=len(merged.split()),
-                      trimmed=cut, problems=problems, grade=hq.grade(answers, key, rendered))
+        record = merge_record(record, merged, cut, answers, problems, key, rendered)
         stored.write_text(json.dumps(record, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
         records.append(record)
 

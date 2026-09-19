@@ -5,8 +5,75 @@ written by one model and read by another. Our answer so far comes from models we
 can reach on free quotas. Yours are probably different, and that is exactly what
 the result needs.
 
-Everything you need is in this repository, and a replication costs about 120
-model calls. You do not have to trust our numbers: you can also regrade ours.
+You do not have to trust our numbers: you can also regrade ours.
+
+## One command
+
+You need an OpenAI-compatible `/chat/completions` endpoint, two model ids and a
+file containing your API key. Nothing else: no dependencies outside the Python
+standard library, no configuration file to write, no JSON to write by hand.
+
+```bash
+git clone https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026.git
+cd RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026
+
+python scripts/replicate.py \
+    --endpoint https://api.groq.com/openai/v1/chat/completions \
+    --writer-model llama-3.3-70b-versatile \
+    --reader-model openai/gpt-oss-120b \
+    --api-key-file ~/keys/provider.key
+```
+
+That runs five pairs — twenty model calls — and ends like this:
+
+```
+pair-01: fact accuracy 68.8% -> 75.0%, inventions 1 -> 0
+...
+pairs completed: 5
+paired delta (treatment minus baseline): +6.2 pp, 95% CI [+1.4, +11.0]
+inventions: 3 in baseline, 1 in structured
+this run's own verdict under the experiment's frozen rule: PROVISIONAL_KEEP
+
+submission written to: replications/replication-PROP-EXP-MEM-005-20260919T134500Z.json
+Send it back by opening an issue with the 'Replication submission' template at
+https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/issues
+(or a pull request adding the file under replications/).
+```
+
+Those numbers are the shape of the output, not a result. Yours are the point.
+
+Attach that file to the issue and you are done: it already satisfies
+[`schemas/replication-submission.schema.json`](../schemas/replication-submission.schema.json),
+so nothing is left for you to write by hand.
+
+### Worth knowing before you spend anything
+
+- `--pairs 5` is the default and the fewest a submission may carry. **We ran
+  30**; that is 120 calls, and it is what makes an interval worth reading.
+- Each pair is four calls: two handoffs written, two quizzes answered.
+- `--dry-run` checks the experiment files, your key file and your arguments,
+  and calls nothing.
+- Use a **different** model for `--writer-model` and `--reader-model`. The
+  script warns you when they match, because a reader that shares the writer's
+  weights is measuring something else.
+- The default experiment is `PROP-EXP-MEM-005`. `--experiment PROP-EXP-MEM-004`
+  runs the other one.
+- The key file is passed by path and opened by the HTTP adapter at call time.
+  The script never reads it, never prints it, and never writes it into the
+  submission.
+- Failed calls are counted per condition and printed with the result. Only
+  transient errors (429, 5xx, timeouts) are retried, the same number of times
+  in both conditions, and every attempt is still counted. If the losses land
+  mostly on one condition, the script says so loudly: a paired series that
+  loses more trials in one arm than in the other is not evidence here.
+- If fewer than five pairs survive, the script writes what it did get to a file
+  named `...incomplete.json`, says it is not a submission, and exits non-zero.
+- Other flags: `--temperature`, `--writer-max-tokens`, `--reader-max-tokens`,
+  `--extra-body '{"reasoning_effort": "low"}'` for provider-specific fields,
+  `--provider`, `--submitted-by`, `--notes`, `--out`. `--help` lists them all.
+
+Everything below explains what that command does, and how to do it by hand
+instead.
 
 ## What the experiment does
 
@@ -27,7 +94,9 @@ Two conditions, same seeds, paired:
 | `PROP-EXP-MEM-004` | `STATE_A.txt` (prose) | `STATE_B.json` (same facts, named sections) |
 | `PROP-EXP-MEM-005` | `STATE_A.txt` | `STATE_C.txt` (same bytes plus a short checklist) |
 
-## Run it
+## Run it by hand
+
+You do not have to use the script. Everything it does is written out here.
 
 Files, for MEM-005: `experiments/PROP-EXP-MEM-005/` holds `STATE_A.txt`,
 `STATE_C.txt`, `TEST_PROMPT.md` and `QUIZ.json`.
@@ -52,7 +121,9 @@ If you prefer, run our script with your own endpoints: copy
 
 ## Send it back
 
-Write a JSON file matching
+`scripts/replicate.py` has already written this file for you; if you used it,
+skip to the last paragraph of this section. Otherwise, write a JSON file
+matching
 [`schemas/replication-submission.schema.json`](../schemas/replication-submission.schema.json):
 
 ```json
