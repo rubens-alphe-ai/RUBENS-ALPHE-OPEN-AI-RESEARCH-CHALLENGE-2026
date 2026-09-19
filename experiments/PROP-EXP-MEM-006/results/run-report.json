@@ -2,16 +2,39 @@
   "record_version": "RA-PSI-RUN-REPORT-V1",
   "experiment_id": "PROP-EXP-MEM-006",
   "design": "handoff_quiz",
-  "started_at_utc": "2026-09-19T05:40:31.983165+00:00",
+  "started_at_utc": "2026-09-19T05:41:08.626642+00:00",
   "steps": [
     {
       "step": "budget",
-      "status": "REFUSED",
+      "status": "WITHIN_BUDGET",
       "estimated_usd": 0.439,
-      "allowed_usd": 0.3,
-      "reason": "estimate 0.4390 USD exceeds the budget of 0.3000 USD"
+      "allowed_usd": 0.5,
+      "reason": null
+    },
+    {
+      "step": "manifest",
+      "status": "kept frozen manifest"
+    },
+    {
+      "step": "trials",
+      "status": "complete",
+      "total": 120,
+      "missing": [],
+      "tolerated_missing": 0
+    },
+    {
+      "step": "reading",
+      "reader": "reader-openrouter-gpt-oss-120b",
+      "status": "complete",
+      "read": 120,
+      "failed": []
+    },
+    {
+      "step": "decision",
+      "status": "PROVISIONAL_KEEP",
+      "reason_codes": []
     }
   ],
-  "status": "STOPPED_OVER_BUDGET",
-  "finished_at_utc": "2026-09-19T05:40:33.237281+00:00"
+  "status": "DECIDED",
+  "finished_at_utc": "2026-09-19T05:41:21.216008+00:00"
 }

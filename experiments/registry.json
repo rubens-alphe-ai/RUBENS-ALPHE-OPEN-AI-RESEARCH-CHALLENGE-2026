@@ -102,7 +102,7 @@
     {
       "experiment_id": "PROP-EXP-MEM-006",
       "title": "Handoff Checklist, Replication with Other Models",
-      "status": "OPEN",
+      "status": "PROVISIONAL_KEEP",
       "capability_target": "blind cross-model mission reconstruction",
       "hypothesis": "The handoff checklist raises fact transfer by at least 5 points with a generator and a reader from families not used before.",
       "metric": "Fact accuracy on 32 keyed questions from the handoff alone (paired delta, pp); inventions on 10 absent-fact questions",
@@ -111,12 +111,12 @@
       "evidence_stage": "PILOT",
       "holdout_required": true,
       "regression_suite_required": true,
-      "notes": "Generator moonshotai/kimi-k3 and reader z-ai/glm-5.3, both on NVIDIA; same states, checklist, quiz and threshold as MEM-005."
+      "notes": "PROVISIONAL_KEEP on 2026-09-19 with an independent reader: +5.9 pp (95% CI +3.5 to +8.2), zero inventions. The ladder's fallback reader was the generator itself; that reading is published but set aside (D3). A DeepSeek cross-read gave +5.1. See RESULT.md."
     },
     {
       "experiment_id": "PROP-EXP-MEM-007",
       "title": "Handoff Checklist, Third Generator Family",
-      "status": "OPEN",
+      "status": "PROVISIONAL_KEEP",
       "capability_target": "blind cross-model mission reconstruction",
       "hypothesis": "The handoff checklist raises fact transfer by at least 5 points when a DeepSeek generator writes the handoffs and MEM-005's reader model reads them.",
       "metric": "Fact accuracy on 32 keyed questions from the handoff alone (paired delta, pp); inventions on 10 absent-fact questions",
@@ -125,7 +125,7 @@
       "evidence_stage": "PILOT",
       "holdout_required": true,
       "regression_suite_required": true,
-      "notes": "First paid run: ceiling 0.50 USD enforced by scripts/cost_guard.py before the first call, expected about 0.19 USD. Generator deepseek/deepseek-v4.1-flash, reader openai/gpt-oss-120b, both via OpenRouter."
+      "notes": "PROVISIONAL_KEEP on 2026-09-19: +5.5 pp (95% CI +3.8 to +7.3), 46 pairs better of 60, zero inventions. Third writer family. First paid run, about 0.20 USD under a 0.50 ceiling. See RESULT.md."
     }
   ]
 }

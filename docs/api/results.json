@@ -1,6 +1,6 @@
 {
   "record_version": "RA-PSI-RESULTS-V1",
-  "generated_utc": "2026-09-18",
+  "generated_utc": "2026-09-19",
   "note": "Generated from each experiment's decision.json; negative results included.",
   "experiments": [
     {
@@ -92,10 +92,56 @@
       "experiment_id": "PROP-EXP-MEM-006",
       "title": "Handoff Checklist, Replication with Other Models",
       "question": "The handoff checklist raises fact transfer by at least 5 points with a generator and a reader from families not used before.",
+      "status": "PROVISIONAL_KEEP",
+      "decision": "PROVISIONAL_KEEP",
+      "reason_codes": [],
+      "protocol": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-006/PROTOCOL.md",
+      "effect": {
+        "metric": "fact accuracy, percentage points",
+        "mean_paired_delta": 5.885416666666667,
+        "ci95": [
+          3.528490021576864,
+          8.24234331175647
+        ],
+        "pairs": 60,
+        "inventions": {
+          "baseline": 0,
+          "structured": 0
+        }
+      },
+      "result": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-006/RESULT.md"
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-007",
+      "title": "Handoff Checklist, Third Generator Family",
+      "question": "The handoff checklist raises fact transfer by at least 5 points when a DeepSeek generator writes the handoffs and MEM-005's reader model reads them.",
+      "status": "PROVISIONAL_KEEP",
+      "decision": "PROVISIONAL_KEEP",
+      "reason_codes": [],
+      "protocol": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-007/PROTOCOL.md",
+      "effect": {
+        "metric": "fact accuracy, percentage points",
+        "mean_paired_delta": 5.520833333333333,
+        "ci95": [
+          3.7595040684909504,
+          7.282162598175716
+        ],
+        "pairs": 60,
+        "inventions": {
+          "baseline": 0,
+          "structured": 0
+        }
+      },
+      "result": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-007/RESULT.md"
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-008",
+      "title": "",
+      "question": "",
       "status": "OPEN",
       "decision": "NOT_DECIDED",
       "reason_codes": [],
-      "protocol": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/experiments/PROP-EXP-MEM-006/PROTOCOL.md",
+      "protocol": "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026/blob/main/",
       "effect": {}
     }
   ]
