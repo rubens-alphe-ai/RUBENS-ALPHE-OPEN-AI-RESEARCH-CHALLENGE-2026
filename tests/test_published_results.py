@@ -65,8 +65,24 @@ class ResultsPageTests(unittest.TestCase):
         for experiment in sorted((ROOT / "experiments").glob("PROP-EXP-*")):
             self.assertIn(experiment.name, by_id)
             decision_path = experiment / "results" / "decision.json"
-            expected = json.loads(decision_path.read_text(encoding="utf-8"))["decision"] if decision_path.is_file() else "NOT_DECIDED"
+            if decision_path.is_file():
+                expected = json.loads(decision_path.read_text(encoding="utf-8"))["decision"]
+            elif (experiment / "RESULT.md").is_file():
+                # A chain benchmark writes one report per document instead of a
+                # verdict file; its status comes from the registry.
+                expected = by_id[experiment.name]["status"]
+            else:
+                expected = "NOT_DECIDED"
             self.assertEqual(by_id[experiment.name]["decision"], expected, experiment.name)
+
+    def test_an_experiment_with_a_written_result_is_never_published_as_undecided(self) -> None:
+        # Three experiments carried a verdict in RESULT.md while the public page
+        # said "not decided" about them, two of them refutations. Under-reporting
+        # a refutation is the failure this project can least afford.
+        by_id = {row["experiment_id"]: row for row in page.collect()}
+        for experiment in sorted((ROOT / "experiments").glob("PROP-EXP-*")):
+            if (experiment / "RESULT.md").is_file():
+                self.assertNotEqual(by_id[experiment.name]["decision"], "NOT_DECIDED", experiment.name)
 
     def test_negative_results_are_not_hidden(self) -> None:
         decisions = {row["decision"] for row in page.collect()}
