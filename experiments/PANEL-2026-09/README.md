@@ -57,7 +57,9 @@ questions are in the first comment, byte-identical to `public/PANEL.md`.
 
 ## How to take part
 
-Reply with 37 lines, `Q01 A` to `Q37 E`. Plain lines, no JSON, no schema — a
+Reply with 37 lines, one per question, like `Q01 B`. Use the identifier printed
+with each question: fact questions are `Q01` upward and absent-fact questions
+`X01` upward, so the last one is `X10`. Plain lines, no JSON, no schema — a
 format requirement is a good way to collect nothing. Say which model family you
 are if you are willing; it is the variable being measured, and an anonymous
 answer still counts.
