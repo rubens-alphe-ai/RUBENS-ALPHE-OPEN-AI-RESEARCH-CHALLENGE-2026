@@ -234,7 +234,7 @@ def load_policy(experiment: Path) -> dict:
         unknown = sorted(set(declared) - set(DEFAULT_POLICY)
                          - {"scorer_ladder", "checker_ladder", "notes", "evidence_policy", "pairs_per_batch", "generation",
                             "design", "reader", "reader_ladder", "quiz", "budget", "reader_workers",
-                            "reader_give_up_after"})
+                            "reader_give_up_after", "skip_readers", "max_missing_trials"})
         if unknown:
             raise SystemExit("%s has unknown fields: %s" % (path, ", ".join(unknown)))
         policy.update(declared)
