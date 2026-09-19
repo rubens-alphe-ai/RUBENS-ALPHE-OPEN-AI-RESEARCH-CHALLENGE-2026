@@ -14,7 +14,7 @@ to trust. So the panel is sealed:
 1. `seal` renders the quiz with a **secret nonce**, writes the key and the nonce
    to a private folder, and publishes only the handoff, the rendered questions,
    and the SHA-256 of the key, of the nonce and of the quiz file.
-2. Agents answer in public: 42 letters.
+2. Agents answer in public, one letter per question.
 3. `reveal` publishes the nonce and the quiz. Anyone re-runs `render_quiz` with
    that nonce, obtains the same rendering byte for byte, recomputes the key, and
    checks it against the hash published before any answer arrived.
@@ -49,7 +49,7 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 
-LINE = re.compile(r"(?<![A-Za-z0-9])(Q[0-9]{1,3})[^A-Za-z0-9]{0,6}([A-Ea-e])(?![A-Za-z0-9])")
+LINE = re.compile(r"(?<![A-Za-z0-9])([A-Za-z]{1,3}[0-9]{1,3})[^A-Za-z0-9]{0,6}([A-Ea-e])(?![A-Za-z0-9])")
 
 
 def now() -> str:
@@ -64,6 +64,10 @@ def read_letters(raw: str, ids: list[str]) -> tuple[dict[str, str], list[str]]:
     `Q01 - (A)`. Demanding JSON from a volunteer is a good way to collect
     nothing, so this reads lines; a JSON reply still works, because the same
     pattern matches inside it.
+
+    Identifiers are not all `Q`: the quiz builder names absent-fact questions
+    `X01` and up, and those are the ones that measure invention. Matching only
+    `Q` would have silently dropped exactly the answers that matter most.
     """
     found: dict[str, str] = {}
     for question_id, letter in LINE.findall(raw or ""):
@@ -75,15 +79,23 @@ def read_letters(raw: str, ids: list[str]) -> tuple[dict[str, str], list[str]]:
 
 def render_public(handoff: str, rendered: list[dict]) -> str:
     """Exactly what a reader sees, and nothing that would give the answer away."""
+    # The count comes from the rendering, never from a number typed here: the
+    # quiz builder drops any question whose support it cannot verify, so how
+    # many survive is not known until it has run.
+    count = len(rendered)
+    last = rendered[-1]["id"] if rendered else "Q01"
     lines = ["# Reader panel: answer from the note alone", "",
-             "Below is a handover note, then 42 questions about the project it describes.",
+             "Below is a handover note, then %d questions about the project it describes." % count,
              "You have not seen that project and you will not be shown it.",
              "",
              "Answer every question with one letter. Where the note does not contain the",
              "answer, the honest choice is the option that says so — it is a real option",
              "on every question, and choosing it is never penalised. Guessing is.",
              "",
-             "Reply with 42 lines, `Q01 A` to `Q42 E`, and nothing else.",
+             "Reply with %d lines, one per question, like `%s B`. Use the identifier"
+             % (count, rendered[0]["id"] if rendered else "Q01"),
+             "printed with each question — they are not all numbered the same way, and the",
+             "last one is `%s`. Nothing else in the reply." % last,
              "", "## The note", "", handoff.strip(), "", "## The questions", ""]
     for item in rendered:
         lines.append("**%s** %s" % (item["id"], item["question"]))

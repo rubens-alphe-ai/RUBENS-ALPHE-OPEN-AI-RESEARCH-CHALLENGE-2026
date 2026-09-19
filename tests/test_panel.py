@@ -116,5 +116,17 @@ class GradeTests(unittest.TestCase):
         self.assertEqual(by_name["invents"]["inventions"], 1)
 
 
+
+class AbsentQuestionIdTests(unittest.TestCase):
+    """The builder names absent-fact questions X01 and up."""
+
+    def test_absent_question_ids_are_read_too(self) -> None:
+        # Matching only Q would have dropped exactly the answers that measure
+        # invention, and the panel would have reported zero of them.
+        answers, problems = panel.read_letters("Q01 A\nX01 E\nX02: c", ["Q01", "X01", "X02"])
+        self.assertEqual(answers, {"Q01": "A", "X01": "E", "X02": "C"})
+        self.assertEqual(problems, [])
+
+
 if __name__ == "__main__":
     unittest.main()

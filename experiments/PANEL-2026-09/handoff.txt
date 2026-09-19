@@ -1,0 +1,7 @@
+Meridian settles 84k transactions/day across 11 regions on 6 app nodes and 2 DB replicas. On-call rotates weekly (5 engineers), handover Monday 09:00 UTC. Use runbook 4.2 (12 March 2026); 3.9 is obsolete but still linked on the wiki.
+
+Traffic averages 58 tps, peaking at 190 at month-end. Error budget: 0.15% quarterly, 0.09% used.
+
+Key rules: no deploys 16:00 Friday–09:00 Monday; settlement-logic changes need a traffic replay; draining a region needs one engineer, restoring needs two; incident notes within 24 hours.
+
+Watch: unvalidated circuit-breaker threshold (20), an unidentified second cause in the February config incident, and unmodelled month-end capacity after next quarter's onboarding.
