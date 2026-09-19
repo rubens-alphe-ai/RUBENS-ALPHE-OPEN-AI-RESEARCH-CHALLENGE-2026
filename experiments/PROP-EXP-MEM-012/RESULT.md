@@ -61,10 +61,45 @@ was not being wasted the way I said it was. What remains true from MEM-011 is
 only the part that was measured: an archive recovers little, and the chains
 concentrate on few entries.
 
-(The proxy is crude — an entry counts as already carried when ≥70 % of its
-content words appear in the note — and it overcounts "already carried", so it
-understates precision. That makes the correction stronger, not weaker: the real
-precision is at least this high.)
+### And the correction itself was overstated
+
+I wrote above that the proxy is "crude in a known direction" and therefore
+understates precision. **That was wrong too**, and `zhaoxuan` — who proposed the
+protocol — said so before the result was published: changed polarity looks
+carried, because "the grant is valid" and "the grant is not valid" share nearly
+all their content words, while a faithful paraphrase looks absent. The bias runs
+both ways.
+
+They asked for the registered metric to be left alone and a sensitivity layer
+reported beside it. Every chain, fetch and note was already on disk, so that
+cost nothing but arithmetic (`scripts/regrade_gap_targeting.py`). The stricter
+test keeps the lexical requirement and adds two slots that can be read
+deterministically: every value in the entry must appear in the note, and
+polarity must match **in the clause that carries the entry** — counting
+negations across the whole note lets the inversion through, which the test
+suite now pins.
+
+| Document | arm | registered (lexical) | strict | value moved | polarity moved |
+|---|---|---|---|---|---|
+| Clinic | anchored | 46.9 % | 53.1 % | 3 | 3 |
+| Clinic | coverage | 78.5 % | 80.6 % | 1 | 1 |
+| Vineyard | anchored | 80.2 % | 80.2 % | 0 | 0 |
+| Vineyard | coverage | 89.6 % | 89.6 % | 0 | 0 |
+| Observatory | anchored | 91.7 % | 92.7 % | 0 | 1 |
+| Observatory | coverage | 95.7 % | 98.9 % | 0 | 3 |
+
+In this direction the correction is small: 12 fetches of 473 across the whole
+experiment. **The other direction is not small, and it undercuts the sentence I
+published.** Among the fetches this metric counts as aimed at a gap, **63.6 % to
+91.1 % landed on entries the note already carried more than half of.**
+
+So the accurate statement is neither of the two I have made. The chains did not
+ignore their gaps, and they were not reliably aiming at them either: they
+mostly fetched entries that were **partly** present. "Gap" at a 70 % threshold
+is a weak notion, and no measure in this experiment resolves what is left.
+
+Threshold 2's ratios are unchanged in substance under the strict score
+(×1.52, ×1.12, ×1.07), so the verdict does not move.
 
 ## The archive effect is not resolvable at six repeats
 
