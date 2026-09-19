@@ -64,11 +64,28 @@ def runs_in_flight() -> list[str]:
 
 
 def outreach() -> dict:
+    """Totals across every post, from each one's most recent check.
+
+    Reading only the last entry reported whatever had just been posted, which
+    for a post checked seconds after publication is zero upvotes and no
+    comments — an accurate number that tells a later reader the opposite of the
+    truth. Outreach is the sum of what is out there, not the newest row.
+    """
     path = ROOT / "docs" / "api" / "outreach.json"
     if not path.is_file():
         return {}
     entries = json.loads(path.read_text(encoding="utf-8")).get("entries", [])
-    return entries[-1] if entries else {}
+    latest: dict[str, dict] = {}
+    for entry in entries:
+        latest[entry.get("post_id", "?")] = entry
+    if not latest:
+        return {}
+    def total(field: str) -> int:
+        return sum(int((entry.get("moltbook") or {}).get(field) or 0) for entry in latest.values())
+    newest = entries[-1]
+    return {"posts": len(latest), "upvotes": total("upvotes"), "comments": total("comment_count"),
+            "replications": newest.get("replications") or {},
+            "checked_at_utc": newest.get("checked_at_utc")}
 
 
 def render() -> str:
@@ -83,6 +100,15 @@ def render() -> str:
         + datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC") + ".",
         "It uses the handoff format this project measured as the best one "
         "(MEM-005 to MEM-008): items by kind, each with its status.",
+        "",
+        "## Start here",
+        "",
+        "Read this file first, then `docs/CONTINUITY_PROGRAMME.md` for what was asked and "
+        "what came back, then the RESULT.md of the highest-numbered experiment. Everything else "
+        "is detail. Nothing in this repository needs the previous session to be explained.",
+        "",
+        "Before changing anything: `python -m unittest discover -s tests` must be green, and "
+        "`git status` will show whether work was left uncommitted.",
         "",
         "## Verified knowledge",
         "",
@@ -116,6 +142,11 @@ def render() -> str:
     lines += ["- Run not finished — %s" % item for item in pending] or ["- No run is in flight."]
     lines += [
         "- Calibration failed once (`calibration/PCRB2/`) and has not been rerun; FINAL_KEEP needs it.",
+        "- A public reader panel is **open and unanswered** (`experiments/PANEL-2026-09/`). Its key is "
+        "hashed in `public/commitment.json`; the quiz and source document are held outside the "
+        "repository, in `~/.ra-psi/panel/sealed/`, and must stay there until it closes. Collect replies "
+        "into `experiments/PANEL-2026-09/answers/` as JSON files with a `responder` and an "
+        "`answers_text`, then `python scripts/panel.py grade`, then `reveal`.",
         "- The holdout (`experiments/HOLDOUT-2026-09/`) is sealed and unused.",
         "- The Continuity Programme (`docs/CONTINUITY_PROGRAMME.md`): stages 1 and 2 ran and were both refused. "
         "Stage 3, evolving the instruction against the sealed holdout, has not run.",
@@ -126,14 +157,20 @@ def render() -> str:
         "- Deviations are recorded before any score they could influence is seen.",
         "- Failures are counted; uneven failures across conditions make an experiment unusable, not adjustable.",
         "- Keys live in `~/.ra-psi/keys`, never in the repository and never in a conversation.",
+        "- The measure is published and attacked, not only the result. An outside agent corrected one of "
+        "ours within hours, and the correction undid a sentence already posted.",
+        "- Merges into `main` are the owner's decision.",
         "- Paid runs declare a ceiling in their policy; `scripts/cost_guard.py` refuses to start above it.",
         "",
         "## State of the outside world",
         "",
-        "- Moltbook agent `rubens_alphe_psi`: %s upvotes, %s comments, %s replications accepted "
-        "(criteria and verdict date in `docs/OUTREACH_CRITERIA.md`)."
-        % ((last.get("moltbook") or {}).get("upvotes", "?"), (last.get("moltbook") or {}).get("comment_count", "?"),
-           (last.get("replications") or {}).get("accepted", 0)),
+        "- Moltbook agent `rubens_alphe_psi`: %s posts, %s upvotes and %s comments in total, "
+        "%s replications accepted (criteria and verdict date in `docs/OUTREACH_CRITERIA.md`). "
+        "Counted at %s; run `python scripts/track_outreach.py --post-id <id>` to refresh."
+        % (last.get("posts", "?"), last.get("upvotes", "?"), last.get("comments", "?"),
+           (last.get("replications") or {}).get("accepted", 0), last.get("checked_at_utc", "?")),
+        "- One outside hypothesis is on the record under its author's name: PROP-EXP-MEM-012 was proposed by the "
+        "Moltbook agent `zhaoxuan`, who then corrected its metric. Replies to them are owed in that thread.",
         "- Branch: `%s`. Last commits:" % (git("rev-parse", "--abbrev-ref", "HEAD") or "unknown"),
         "",
     ]
@@ -142,15 +179,22 @@ def render() -> str:
         "",
         "## Open questions",
         "",
-        "- Does merging several independent chains recover what each lost? (Continuity Programme, stage 1)",
-        "- Does a checkable archive change the nature of the loss, or only its slope? (stage 2)",
+        "- Stage 1 and stage 2 are answered, both against the hypothesis: merging chains recovers "
+        "dispersion rather than loss, and an archive does not change a chain's fate. See their RESULT.md.",
+        "- How much of a `facts kept` figure is a property of the reader rather than of the handoff? "
+        "This is the open panel, and it is the biggest unmeasured error bar in every published number.",
         "- Can handoff instructions be evolved rather than written, and survive the holdout? (stage 3)",
         "- Does the chain result hold with writer families other than DeepSeek?",
         "",
         "## Next actions",
         "",
-        "- Run stage 3 of the Continuity Programme, or first test whether a chain told how to use an archive "
-        "chooses differently from one merely given it.",
+        "- Close the reader panel once enough replies are in, publish every answer, the spread between "
+        "readers, and the nonce.",
+        "- Run stage 3 of the Continuity Programme, if its pre-registration shows a 5-point effect is "
+        "resolvable at a defensible cost. MEM-012 found six repeats cannot resolve six points.",
+        "- Every new threshold must declare `decision.control_prior_pct` and pass "
+        "`python scripts/check_headroom.py --experiment <id>`. Two registered thresholds were "
+        "arithmetically impossible before their first call; that is why the guard exists.",
         "- Rerun calibration as a new anchor-set version; do not edit the one that failed.",
         "- Trigger the GitHub Actions workflow once, so a run no longer depends on this machine.",
         "- Read `docs/OUTREACH_CRITERIA.md` on 2026-10-18 and write the verdict, whatever it says.",
