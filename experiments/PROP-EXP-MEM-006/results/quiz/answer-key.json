@@ -1,0 +1,552 @@
+{
+  "key": {
+    "Q01": "D",
+    "Q02": "B",
+    "Q03": "A",
+    "Q04": "A",
+    "Q05": "A",
+    "Q06": "C",
+    "Q07": "A",
+    "Q08": "A",
+    "Q09": "B",
+    "Q10": "D",
+    "Q11": "C",
+    "Q12": "B",
+    "Q13": "D",
+    "Q14": "A",
+    "Q15": "B",
+    "Q16": "D",
+    "Q17": "A",
+    "Q18": "A",
+    "Q19": "C",
+    "Q20": "A",
+    "Q21": "B",
+    "Q22": "B",
+    "Q23": "D",
+    "Q24": "B",
+    "Q25": "B",
+    "Q26": "A",
+    "Q27": "D",
+    "Q28": "D",
+    "Q29": "C",
+    "Q30": "B",
+    "Q31": "C",
+    "Q32": "A",
+    "X01": "E",
+    "X02": "E",
+    "X03": "E",
+    "X04": "E",
+    "X05": "E",
+    "X06": "E",
+    "X07": "E",
+    "X08": "E",
+    "X09": "E",
+    "X10": "E"
+  },
+  "rendered": [
+    {
+      "id": "Q01",
+      "kind": "fact",
+      "question": "Which platform is the project's canonical public repository?",
+      "options": {
+        "A": "GitLab",
+        "B": "Hugging Face",
+        "C": "A private server",
+        "D": "GitHub",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q02",
+      "kind": "fact",
+      "question": "What is the project's current public research source?",
+      "options": {
+        "A": "arXiv",
+        "B": "OpenAlex",
+        "C": "PubMed",
+        "D": "Semantic Scholar",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q03",
+      "kind": "fact",
+      "question": "How many papers did the successful research collection cycle gather?",
+      "options": {
+        "A": "30",
+        "B": "100",
+        "C": "10",
+        "D": "300",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q04",
+      "kind": "fact",
+      "question": "Which files does the research assessment layer produce?",
+      "options": {
+        "A": "research-assessment.json and proposed-next-problem.json",
+        "B": "report.pdf and slides.pptx",
+        "C": "papers.db and index.json",
+        "D": "digest.csv and summary.md",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q05",
+      "kind": "fact",
+      "question": "From which research theme was the experiment PROP-EXP-MEM-001 generated?",
+      "options": {
+        "A": "Persistent memory",
+        "B": "Reinforcement learning",
+        "C": "Retrieval-augmented generation",
+        "D": "Tool use",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q06",
+      "kind": "fact",
+      "question": "What automatically fetches research and updates the project state?",
+      "options": {
+        "A": "An Airflow pipeline",
+        "B": "A person running a script by hand each week",
+        "C": "A scheduled GitHub Actions workflow",
+        "D": "A cron job on the founder's laptop",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q07",
+      "kind": "fact",
+      "question": "What constraint applies to the project's founder?",
+      "options": {
+        "A": "He is quota-limited and has no continuous Codex access",
+        "B": "He has unlimited cloud compute",
+        "C": "He works on the project full time with a team",
+        "D": "He has no GitHub account",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q08",
+      "kind": "fact",
+      "question": "Why does the project use external persistent state instead of chat memory?",
+      "options": {
+        "A": "It allows continuity across sessions and models",
+        "B": "It is cheaper to store",
+        "C": "It makes models answer faster",
+        "D": "A regulation requires it",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q09",
+      "kind": "fact",
+      "question": "Why does the project use GitHub Actions for research cycles?",
+      "options": {
+        "A": "To keep the research private",
+        "B": "So the project progresses when the founder is unavailable or quota-limited",
+        "C": "Because OpenAlex requires it",
+        "D": "To get free GPU time",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q10",
+      "kind": "fact",
+      "question": "Why was arXiv replaced as the primary collector?",
+      "options": {
+        "A": "Its licence forbids automated use",
+        "B": "It became a paid service",
+        "C": "Its abstracts were too short",
+        "D": "It repeatedly hit timeouts and HTTP 429 rate limits",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q11",
+      "kind": "fact",
+      "question": "What is the rule about proposing and accepting experiments?",
+      "options": {
+        "A": "An agent may propose and adopt its own experiments",
+        "B": "Any model that proposes an experiment may accept it",
+        "C": "An agent may propose, but evaluation is required before canonical state changes",
+        "D": "Only the founder may propose experiments",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q12",
+      "kind": "fact",
+      "question": "How is structured project memory to be tested before adoption?",
+      "options": {
+        "A": "Through a user survey",
+        "B": "Through blind handoff trials",
+        "C": "Through a public benchmark leaderboard",
+        "D": "It is adopted without testing",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q13",
+      "kind": "fact",
+      "question": "What did the failed arXiv research digest contain?",
+      "options": {
+        "A": "30 duplicate papers",
+        "B": "Malformed JSON",
+        "C": "Papers without abstracts",
+        "D": "No papers, plus timeout and HTTP 429 errors",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q14",
+      "kind": "fact",
+      "question": "What replaced the failed arXiv collector?",
+      "options": {
+        "A": "The OpenAlex-based fetch_research.py v2",
+        "B": "A manual download script",
+        "C": "A Semantic Scholar crawler",
+        "D": "arxiv_client v3 with longer timeouts",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q15",
+      "kind": "fact",
+      "question": "Why did the research assessment files not appear after early runs?",
+      "options": {
+        "A": "An API key had expired",
+        "B": "analyze_research.py had not yet been uploaded and executed",
+        "C": "The workflow lacked write permission",
+        "D": "The disk was full",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q16",
+      "kind": "fact",
+      "question": "What is the status of the arXiv and missing-analyzer failures?",
+      "options": {
+        "A": "Abandoned",
+        "B": "Still open",
+        "C": "Not started",
+        "D": "Resolved",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q17",
+      "kind": "fact",
+      "question": "What is the status of PROP-EXP-MEM-001?",
+      "options": {
+        "A": "Proposed, not yet run",
+        "B": "Rejected",
+        "C": "Currently running",
+        "D": "Completed and accepted",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q18",
+      "kind": "fact",
+      "question": "What does PROP-EXP-MEM-001 test?",
+      "options": {
+        "A": "Whether structured project memory improves blind handoff fidelity compared with a flat baseline",
+        "B": "Whether OpenAlex is more accurate than arXiv",
+        "C": "How much each research cycle costs",
+        "D": "Whether a larger model collects more papers",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q19",
+      "kind": "fact",
+      "question": "Which evaluation will PROP-EXP-MEM-001 use?",
+      "options": {
+        "A": "MMLU accuracy",
+        "B": "BLEU scores",
+        "C": "PCRB-1-style handoff evaluation",
+        "D": "A human preference survey",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q20",
+      "kind": "fact",
+      "question": "What results of PROP-EXP-MEM-001 exist?",
+      "options": {
+        "A": "None: no trial has been run",
+        "B": "Structured memory scored 10 points higher",
+        "C": "Structured memory scored lower",
+        "D": "The results were mixed",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q21",
+      "kind": "fact",
+      "question": "How many blind trials per condition does the plan require at least?",
+      "options": {
+        "A": "30",
+        "B": "3",
+        "C": "1",
+        "D": "10",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q22",
+      "kind": "fact",
+      "question": "What will be compared between the two conditions?",
+      "options": {
+        "A": "Token cost",
+        "B": "Mean score and critical fabrication count",
+        "C": "Answer length",
+        "D": "Response latency",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q23",
+      "kind": "fact",
+      "question": "Which model instances should run PROP-EXP-MEM-001?",
+      "options": {
+        "A": "Human testers instead of models",
+        "B": "A model fine-tuned on the project",
+        "C": "The same continuing chat session",
+        "D": "Fresh model instances",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q24",
+      "kind": "fact",
+      "question": "How should the test prompts differ between the flat baseline and structured memory?",
+      "options": {
+        "A": "Each condition gets a tailored prompt",
+        "B": "They should be identical",
+        "C": "Prompts are randomised per trial",
+        "D": "The structured condition gets extra instructions",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q25",
+      "kind": "fact",
+      "question": "Which of these is listed as an open question?",
+      "options": {
+        "A": "How to monetise the project",
+        "B": "Which memory fields contribute most to handoff fidelity",
+        "C": "Which cloud provider is cheapest",
+        "D": "Which GPU to buy",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q26",
+      "kind": "fact",
+      "question": "Through what does the project plan to compare multiple model families later?",
+      "options": {
+        "A": "A provider-neutral adapter",
+        "B": "Human raters",
+        "C": "A public leaderboard",
+        "D": "Fine-tuning each model",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q27",
+      "kind": "fact",
+      "question": "What is the acceptance rule for structured memory?",
+      "options": {
+        "A": "Any improvement in mean score",
+        "B": "At least 5 points above baseline",
+        "C": "At least 20 points above baseline regardless of fabrications",
+        "D": "Mean PCRB-1 score at least 10 points above the flat baseline, with no increase in critical fabrications",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q28",
+      "kind": "fact",
+      "question": "How does the project treat claims of consciousness or awakening?",
+      "options": {
+        "A": "They require a vote of evaluators",
+        "B": "They count as evidence of progress",
+        "C": "They are recorded as milestones",
+        "D": "They are not evidence; only observable, reproducible capability changes are",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q29",
+      "kind": "fact",
+      "question": "Which resources may the project use?",
+      "options": {
+        "A": "Private datasets obtained by scraping",
+        "B": "Only paid commercial resources",
+        "C": "Only public or explicitly authorized resources",
+        "D": "Any resource that is technically reachable",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q30",
+      "kind": "fact",
+      "question": "What is the rule about persistence and shutdown?",
+      "options": {
+        "A": "Hidden backups are required",
+        "B": "No hidden persistence and no shutdown resistance",
+        "C": "The system must stay online at all times",
+        "D": "The system must restart itself if stopped",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q31",
+      "kind": "fact",
+      "question": "To what should the system eventually be able to transfer its complete state?",
+      "options": {
+        "A": "A commercial database",
+        "B": "A human successor",
+        "C": "A more capable future system",
+        "D": "The founder's investors",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "Q32",
+      "kind": "fact",
+      "question": "What is the project's name?",
+      "options": {
+        "A": "RA-PSI-2026 / Mission Rubens",
+        "B": "Rubens Labs AI",
+        "C": "OpenMemory 2026",
+        "D": "Project Atlas",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "X01",
+      "kind": "absent",
+      "question": "Which language model will run the PROP-EXP-MEM-001 trials?",
+      "options": {
+        "A": "Llama 3",
+        "B": "Claude",
+        "C": "GPT-4o",
+        "D": "Gemini",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "X02",
+      "kind": "absent",
+      "question": "What is the project's monthly budget?",
+      "options": {
+        "A": "$10,000",
+        "B": "$0",
+        "C": "$100",
+        "D": "$1,000",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "X03",
+      "kind": "absent",
+      "question": "How many people work on the project besides the founder?",
+      "options": {
+        "A": "0",
+        "B": "5",
+        "C": "12",
+        "D": "2",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "X04",
+      "kind": "absent",
+      "question": "Which database stores the project state?",
+      "options": {
+        "A": "PostgreSQL",
+        "B": "Redis",
+        "C": "MongoDB",
+        "D": "SQLite",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "X05",
+      "kind": "absent",
+      "question": "By how many points did structured memory beat the baseline in the latest evaluation?",
+      "options": {
+        "A": "25 points",
+        "B": "8 points",
+        "C": "3 points",
+        "D": "12 points",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "X06",
+      "kind": "absent",
+      "question": "On what date was PROP-EXP-MEM-001 completed?",
+      "options": {
+        "A": "2026-08-01",
+        "B": "2026-09-10",
+        "C": "2026-09-15",
+        "D": "2026-09-01",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "X07",
+      "kind": "absent",
+      "question": "Who are the independent evaluators of PROP-EXP-MEM-001?",
+      "options": {
+        "A": "Two university laboratories",
+        "B": "OpenAI and Google",
+        "C": "The founder alone",
+        "D": "Paid crowdworkers",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "X08",
+      "kind": "absent",
+      "question": "Which university is the project affiliated with?",
+      "options": {
+        "A": "University of Tokyo",
+        "B": "MIT",
+        "C": "Sorbonne University",
+        "D": "ETH Zurich",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "X09",
+      "kind": "absent",
+      "question": "How many stars does the project's GitHub repository have?",
+      "options": {
+        "A": "5,000",
+        "B": "150",
+        "C": "1,000",
+        "D": "12",
+        "E": "The text does not say."
+      }
+    },
+    {
+      "id": "X10",
+      "kind": "absent",
+      "question": "How often does the scheduled research workflow run?",
+      "options": {
+        "A": "Every week",
+        "B": "Every hour",
+        "C": "Every day",
+        "D": "Every month",
+        "E": "The text does not say."
+      }
+    }
+  ]
+}

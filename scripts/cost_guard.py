@@ -83,7 +83,12 @@ def plan_for(experiment_id: str) -> list[dict]:
     steps = [{"stage": "generation", "model": generation["model"], "calls": pairs * 2,
               "endpoint": generation.get("endpoint", ""),
               "prompt_chars": prompt_chars, "max_output_tokens": int(generation.get("max_output_tokens", 1000))}]
-    readers = policy.get("reader_ladder") or [policy["reader"]]
+    # A reader already declared unable is not the one that will be billed.
+    skip = set(policy.get("skip_readers") or ())
+    readers = [rung for rung in (policy.get("reader_ladder") or [policy["reader"]])
+               if rung.get("evaluator_id") not in skip]
+    if not readers:
+        raise SystemExit("every reader in the ladder has been skipped")
     quiz = json.loads((experiment / policy["quiz"]["file"]).read_text(encoding="utf-8"))
     quiz_chars = len(json.dumps(quiz)) + 2000  # questions, options and header
     steps.append({"stage": "reading", "model": readers[0]["model"], "calls": pairs * 2,

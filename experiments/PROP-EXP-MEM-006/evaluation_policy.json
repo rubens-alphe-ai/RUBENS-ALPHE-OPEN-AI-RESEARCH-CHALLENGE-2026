@@ -97,15 +97,17 @@
       "max_tokens": 4000
     },
     {
-      "evaluator_id": "reader-groq-gpt-oss-120b",
-      "provider": "Groq",
+      "evaluator_id": "reader-openrouter-gpt-oss-120b",
+      "provider": "OpenRouter",
       "model": "openai/gpt-oss-120b",
-      "endpoint": "https://api.groq.com/openai/v1/chat/completions",
-      "key": "groq",
+      "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+      "key": "openrouter",
       "json_mode": false,
-      "max_tokens": 1500,
+      "max_tokens": 2000,
       "extra_body": {
-        "reasoning_effort": "low"
+        "reasoning": {
+          "effort": "low"
+        }
       }
     }
   ],
