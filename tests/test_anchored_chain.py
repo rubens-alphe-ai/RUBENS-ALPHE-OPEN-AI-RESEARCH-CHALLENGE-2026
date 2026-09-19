@@ -121,5 +121,35 @@ class RegimeTests(unittest.TestCase):
         self.assertEqual(len(set(first)), 1)
 
 
+
+class CoverageInversionTests(unittest.TestCase):
+    """The protocol proposed by `zhaoxuan`: model the gaps before the shelf."""
+
+    def test_marks_are_read_once_each_and_lowercased(self) -> None:
+        marks = ac.parse_marks("E01 covered — 'the clinic'\nE02: ABSENT\nE02 uncertain\ne03 - uncertain")
+        self.assertEqual(marks, {"E01": "covered", "E02": "absent", "E03": "uncertain"})
+
+    def test_only_the_fetch_line_is_read_as_a_request(self) -> None:
+        reply = "E01 covered\nE02 covered\nE03 absent\nE04 uncertain\nFETCH: E03, E04"
+        self.assertEqual(ac.parse_ids(ac.fetch_line(reply), 4), ["E03", "E04"])
+
+    def test_a_reply_without_a_fetch_line_requests_nothing(self) -> None:
+        # Falling back to the whole reply would fetch whatever was marked first.
+        self.assertEqual(ac.parse_ids(ac.fetch_line("E01 covered\nE02 covered"), 4), [])
+
+    def test_gaps_are_served_before_anything_the_note_already_carries(self) -> None:
+        marks = {"E01": "covered", "E02": "absent", "E03": "uncertain"}
+        self.assertEqual(ac.order_by_gap(["E01", "E03", "E02", "E09"], marks),
+                         ["E02", "E03", "E01", "E09"])
+
+    def test_an_entry_the_note_repeats_counts_as_already_carried(self) -> None:
+        note = "The clinic serves 4200 patients and runs 6 rooms."
+        self.assertTrue(ac.already_carried("The clinic serves 4200 patients.", note))
+        self.assertFalse(ac.already_carried("The fridge failed in March 2024.", note))
+
+    def test_an_empty_entry_is_not_counted_as_a_gap(self) -> None:
+        self.assertTrue(ac.already_carried("", "anything"))
+
+
 if __name__ == "__main__":
     unittest.main()

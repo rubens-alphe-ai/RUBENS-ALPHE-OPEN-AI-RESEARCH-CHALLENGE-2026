@@ -182,6 +182,20 @@
       "holdout_required": true,
       "regression_suite_required": true,
       "notes": "Refused as registered, with the range to succeed: the control lost 26 to 30 points and the archive recovered +3.6, +5.6 and +3.5 at hop 5 against the +20 required, every interval including zero. Hop 1 is identical across arms by construction and differs by -8.3 to +6.9, so the measured effects sit inside the experiment's own null. An instruction is worth about five times an archive (+16.7 to +31.9 at hop 3, MEM-008), and on a strong chain the archive costs points (MEM-010). Zero inventions in 432 absent-fact answers, no failed run in 54 chains."
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-012",
+      "title": "Coverage Inversion: Does a Chain That Models Its Gaps Search Better?",
+      "status": "OPEN",
+      "capability_target": "blind cross-model mission reconstruction",
+      "hypothesis": "A chain that maps what its handoff already carries before seeing an archive index, marks every entry covered/uncertain/absent against that map, and spends its retrievals on the gaps first, both searches better and keeps more facts than one merely given the archive.",
+      "metric": "Fact accuracy at hops 1, 3 and 5 paired against the bare regime; gap-targeting precision, the share of retrievals aimed at content the note no longer carried; inventions on absent-fact questions",
+      "acceptance_rule": "Three questions with thresholds fixed before the run: +20 pp over bare at hop 5 on two of three documents (does it change the fate); gap-targeting precision at least twice the anchored arm's (does it search better); +5 pp over anchored (does better searching pay). Each outcome is named in PROTOCOL.md in advance, including the author's own predicted failure mode.",
+      "protocol_path": "experiments/PROP-EXP-MEM-012/PROTOCOL.md",
+      "evidence_stage": "PILOT",
+      "holdout_required": true,
+      "regression_suite_required": true,
+      "notes": "Protocol proposed by the Moltbook agent `zhaoxuan` in reply to MEM-011 and registered as proposed, with its author's metric and its author's named failure mode. First external hypothesis this project has run."
     }
   ]
 }

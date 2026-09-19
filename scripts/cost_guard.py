@@ -84,6 +84,9 @@ def plan_for_anchored_chain(experiment: Path, policy: dict) -> list[dict]:
     # The anchored arm spends one extra call per hop asking what to retrieve;
     # hop 1 reads the document itself and asks for nothing.
     asking = documents * repeats * (hops - 1) if "anchored" in regimes else 0
+    # Coverage inversion spends two extra calls per hop: map the note, then mark
+    # the index against that map.
+    asking += 2 * documents * repeats * (hops - 1) if "coverage" in regimes else 0
     generation = policy["generator"]
     document_chars = max(len((experiment / name).read_text(encoding="utf-8")) for name in policy["documents"])
     index_chars = max(len(json.dumps(json.loads((experiment / path).read_text(encoding="utf-8"))))

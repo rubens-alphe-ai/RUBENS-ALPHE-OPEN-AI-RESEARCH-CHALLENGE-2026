@@ -18,6 +18,12 @@ Three regimes, same writer, same instruction, same word budget, same quiz:
   archive would be uninterpretable.
 - **anchored** — the writer sees the index, names up to `--fetch` entries, and
   receives exactly those, verbatim and hash-checked, before writing.
+- **coverage** — coverage inversion. The writer first maps what its note already
+  carries, *before* being shown the index; then it marks every index entry as
+  covered, uncertain or absent against that map, and its fetches are spent on
+  the gaps first, an order this script enforces rather than requests. Proposed
+  by the agent `zhaoxuan` on Moltbook in reply to MEM-011, and registered as
+  PROP-EXP-MEM-012 before it ran.
 
 The archive is built by `scripts/build_ledger.py` without calling a model, so it
 cannot leak the quiz: it is the document itself, cut into hashed sentences.
@@ -54,8 +60,10 @@ import handoff_quiz as hq  # noqa: E402
 from evaluate_experiment import AdapterError, call, sha256_text  # noqa: E402
 
 CONTROL = "bare"
-REGIMES = ("bare", "index", "anchored")
+REGIMES = ("bare", "index", "anchored", "coverage")
 ID = re.compile(r"\bE\d{1,3}\b", re.IGNORECASE)
+MARK = re.compile(r"\b(E\d{1,3})\b\s*[:\-—]?\s*(covered|uncertain|absent)\b", re.IGNORECASE)
+STOP = frozenset("a an and are as at be by for from has have in is it its of on or that the to was were with".split())
 
 INDEX_NOTE = """An archive of the original document exists. You cannot read it. This is its
 index: one line per entry, with an identifier and the first few words only.
@@ -91,8 +99,88 @@ original document and have been checked against their recorded hashes:
 """
 
 
+COVERAGE = """Below is a handover note. Before you are shown anything else, write down what it
+already carries, grouped under these headings, one short line each:
+
+CLAIMS, ENTITIES, CAUSAL TRANSITIONS, EXCEPTIONS, TERMINAL OUTCOMES.
+
+Include only what is in the note. Do not speculate about what is missing yet.
+
+=== THE NOTE ===
+{note}
+=== END ===
+"""
+
+INVERT = """This is your own coverage map of a handover note:
+
+{map}
+
+An archive of the original document exists. Below is its index: one line per
+entry, an identifier and the first few words, with the digits hidden. You cannot
+read the entries.
+
+{index}
+
+Mark every identifier as covered, uncertain or absent with respect to your
+coverage map, one per line, in the form `E01 covered`. Write `covered` only
+where you can point to the span of the note that carries it, and quote that span
+after the word. Then, on a final line beginning `FETCH:`, name the {limit}
+identifiers you want, absent ones first, then uncertain. Do not name an
+identifier you marked covered.
+"""
+
+
 def now() -> str:
     return datetime.now(timezone.utc).isoformat()
+
+
+def parse_marks(text: str) -> dict[str, str]:
+    """Which identifiers the writer says its note already carries."""
+    marks: dict[str, str] = {}
+    for entry_id, state in MARK.findall(text or ""):
+        marks.setdefault(entry_id.upper(), state.lower())
+    return marks
+
+
+def order_by_gap(ids: list[str], marks: dict[str, str]) -> list[str]:
+    """Absent first, then uncertain, then anything else, order kept within each.
+
+    The protocol is enforced here rather than requested in the prompt: a rule a
+    model may quietly ignore is not a condition an experiment can claim to have
+    tested.
+    """
+    rank = {"absent": 0, "uncertain": 1}
+    return sorted(ids, key=lambda entry_id: rank.get(marks.get(entry_id, ""), 2))
+
+
+def content_words(text: str) -> set[str]:
+    return {word for word in re.findall(r"[a-z0-9]+", (text or "").lower()) if word not in STOP}
+
+
+def already_carried(entry_text: str, note: str, share: float = 0.7) -> bool:
+    """Whether a fetched entry was, by this test, already recoverable from the note.
+
+    A crude, deterministic proxy: an entry counts as already carried when at
+    least `share` of its content words appear in the note. It cannot tell a
+    changed number from a kept one, so it will overcount entries as carried. It
+    is stated in advance, applied identically to every arm, and reported as a
+    proxy rather than as a measurement of meaning.
+    """
+    words = content_words(entry_text)
+    if not words:
+        return True
+    return len(words & content_words(note)) / len(words) >= share
+
+
+def fetch_line(text: str) -> str:
+    """What follows the last `FETCH:` marker, or nothing if there is none.
+
+    No marker means no request: silently falling back to the whole reply would
+    turn a writer that refused to choose into one that fetched the first four
+    entries it had listed.
+    """
+    parts = re.split(r"FETCH\s*:", text or "", flags=re.IGNORECASE)
+    return parts[-1] if len(parts) > 1 else ""
 
 
 def parse_ids(text: str, limit: int) -> list[str]:
@@ -116,20 +204,34 @@ def write_hop(regime: str, entry: dict, note: str, instruction: str, ledger: lis
     """One handoff, under one regime. Returns the text and what was consulted."""
     asked: list[str] = []
     got: list[str] = []
+    marks: dict[str, str] = {}
     preamble = ""
     if regime == "index":
         preamble = INDEX_NOTE.format(index=index_text)
-    elif regime == "anchored":
-        wanted = retry(entry, ASK.format(index=index_text, note=note, limit=fetch_limit),
-                       min(400, max_tokens), attempts)
-        asked = parse_ids(wanted, fetch_limit)
+    elif regime in ("anchored", "coverage"):
+        if regime == "anchored":
+            wanted = retry(entry, ASK.format(index=index_text, note=note, limit=fetch_limit),
+                           min(400, max_tokens), attempts)
+            asked = parse_ids(wanted, fetch_limit)
+        else:
+            # Coverage inversion, proposed by the agent `zhaoxuan` on Moltbook:
+            # model the gaps before looking at the shelf, then spend the fetches
+            # on what the note does not already carry.
+            covered = retry(entry, COVERAGE.format(note=note), min(700, max_tokens), attempts)
+            wanted = retry(entry, INVERT.format(map=covered.strip(), index=index_text, limit=fetch_limit),
+                           min(1200, max_tokens), attempts)
+            marks = parse_marks(wanted)
+            # The marking list names every identifier, so the request has to be
+            # read from the FETCH line alone; reading the whole reply would fetch
+            # whatever happened to be marked first.
+            asked = order_by_gap(parse_ids(fetch_line(wanted), fetch_limit), marks)
         entries = bl.fetch(ledger, asked, fetch_limit)
         got = [item["id"] for item in entries]
         preamble = INDEX_NOTE.format(index=index_text)
         if entries:
             preamble += RETRIEVED.format(entries=render_entries(entries))
     content = retry(entry, note + "\n\n" + preamble + instruction, max_tokens, attempts)
-    return {"text": content.strip(), "asked": asked, "retrieved": got}
+    return {"text": content.strip(), "asked": asked, "retrieved": got, "marks": marks}
 
 
 def retry(entry: dict, prompt: str, max_tokens: int, attempts: int) -> str:
@@ -157,9 +259,14 @@ def write_chain(regime: str, entry: dict, source: str, instruction: str, hops: i
                 if hop == 1 else
                 write_hop(regime, entry, current, instruction, ledger, index_text, fetch_limit, max_tokens))
         text, cut = hb.trim(step["text"], words)
+        by_id = {item["id"]: item["text"] for item in ledger}
         chain.append({"hop": hop, "text": text, "words_written": len(step["text"].split()),
                       "words_kept": len(text.split()), "trimmed": cut, "sha256": sha256_text(text),
-                      "asked": step["asked"], "retrieved": step["retrieved"]})
+                      "asked": step["asked"], "retrieved": step["retrieved"], "marks": step["marks"],
+                      # Whether each fetch went after something the note had already
+                      # lost, judged against the note the writer was holding.
+                      "on_a_gap": [entry_id for entry_id in step["retrieved"]
+                                   if not already_carried(by_id.get(entry_id, ""), current)]})
         current = text
     return chain
 
@@ -203,21 +310,33 @@ def run_case(case: dict, document: str, quiz: dict, rendered: list[dict], key: d
 
 
 def retrieval_log(records: list[dict], ledger: list[dict]) -> dict:
-    """What the anchored chains chose to look up, and how often they agreed."""
-    counts: dict[str, int] = {}
-    asked_total = 0
-    for record in records:
-        if record.get("strategy") != "anchored":
-            continue
-        for step in record.get("chain", []):
-            for entry_id in step.get("retrieved", []):
-                counts[entry_id] = counts.get(entry_id, 0) + 1
-                asked_total += 1
+    """What each retrieving regime chose to look up, and whether it aimed at gaps.
+
+    Gap-targeting precision is the share of fetches that went after something the
+    note no longer carried. It is the metric that separates a protocol which
+    searches better from one that merely searches.
+    """
     labels = {entry["id"]: entry["label"] for entry in ledger}
-    ranked = sorted(counts.items(), key=lambda pair: (-pair[1], pair[0]))
-    return {"retrievals": asked_total, "distinct_entries": len(counts),
-            "most_retrieved": [{"id": entry_id, "times": times, "label": labels.get(entry_id, "?")}
-                               for entry_id, times in ranked[:10]]}
+    out: dict[str, dict] = {}
+    for regime in ("anchored", "coverage"):
+        counts: dict[str, int] = {}
+        total = on_gap = 0
+        for record in records:
+            if record.get("strategy") != regime:
+                continue
+            for step in record.get("chain", []):
+                for entry_id in step.get("retrieved", []):
+                    counts[entry_id] = counts.get(entry_id, 0) + 1
+                    total += 1
+                on_gap += len(step.get("on_a_gap") or ())
+        if not total:
+            continue
+        ranked = sorted(counts.items(), key=lambda pair: (-pair[1], pair[0]))
+        out[regime] = {"retrievals": total, "distinct_entries": len(counts),
+                       "on_a_gap": on_gap, "gap_targeting_pct": round(100.0 * on_gap / total, 1),
+                       "most_retrieved": [{"id": entry_id, "times": times, "label": labels.get(entry_id, "?")}
+                                          for entry_id, times in ranked[:10]]}
+    return out
 
 
 def main() -> None:
