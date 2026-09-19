@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "document": "clinic.md",
+    "ledger_entries": 17,
+    "fetch_limit": 4,
+    "instruction": "summary",
+    "fact_questions": 23,
+    "absent_questions": 8,
+    "read_at": [
+      1,
+      3,
+      5
+    ],
+    "repeats": 6,
+    "generator": "deepseek/deepseek-v4.1-flash",
+    "reader": "openai/gpt-oss-120b",
+    "word_limit": 150,
+    "failed_runs": 0,
+    "failures": [],
+    "retrieval": {
+      "retrievals": 96,
+      "distinct_entries": 9,
+      "most_retrieved": [
+        {
+          "id": "E01",
+          "times": 15,
+          "label": "Handover: Saint-Aubin community clinic, nursing coordination"
+        },
+        {
+          "id": "E05",
+          "times": 15,
+          "label": "The clinic has held its current…"
+        },
+        {
+          "id": "E16",
+          "times": 14,
+          "label": "It is unknown whether the current…"
+        },
+        {
+          "id": "E04",
+          "times": 13,
+          "label": "Twelve nurses work in three shifts,…"
+        },
+        {
+          "id": "E17",
+          "times": 13,
+          "label": "The nursing coordinator post has been…"
+        },
+        {
+          "id": "E06",
+          "times": 10,
+          "label": "Attendance averages ### consultations a day,…"
+        },
+        {
+          "id": "E02",
+          "times": 7,
+          "label": "The clinic serves #,### registered patients…"
+        },
+        {
+          "id": "E03",
+          "times": 5,
+          "label": "Opening hours are ##:## to ##:##…"
+        },
+        {
+          "id": "E15",
+          "times": 4,
+          "label": "The purchase of a second ultrasound…"
+        }
+      ]
+    }
+  },
+  "by_hop": {
+    "1": {
+      "bare": {
+        "runs": 6,
+        "facts_kept_pct": 75.4,
+        "ci95": [
+          73.0,
+          77.7
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 127,
+        "trimmed_runs": 0
+      },
+      "index": {
+        "runs": 6,
+        "facts_kept_pct": 71.7,
+        "ci95": [
+          67.9,
+          75.6
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 127,
+        "trimmed_runs": 0,
+        "vs_control_pp": -3.6,
+        "vs_control_ci95": [
+          -8.1,
+          0.9
+        ]
+      },
+      "anchored": {
+        "runs": 6,
+        "facts_kept_pct": 73.2,
+        "ci95": [
+          69.8,
+          76.6
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 124,
+        "trimmed_runs": 0,
+        "vs_control_pp": -2.2,
+        "vs_control_ci95": [
+          -7.8,
+          3.4
+        ]
+      }
+    },
+    "3": {
+      "bare": {
+        "runs": 6,
+        "facts_kept_pct": 76.1,
+        "ci95": [
+          73.6,
+          78.6
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 118,
+        "trimmed_runs": 0
+      },
+      "index": {
+        "runs": 6,
+        "facts_kept_pct": 68.8,
+        "ci95": [
+          61.5,
+          76.2
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 117,
+        "trimmed_runs": 0,
+        "vs_control_pp": -7.2,
+        "vs_control_ci95": [
+          -13.5,
+          -1.0
+        ]
+      },
+      "anchored": {
+        "runs": 6,
+        "facts_kept_pct": 76.1,
+        "ci95": [
+          70.5,
+          81.7
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 136,
+        "trimmed_runs": 0,
+        "vs_control_pp": 0.0,
+        "vs_control_ci95": [
+          -6.5,
+          6.5
+        ]
+      }
+    },
+    "5": {
+      "bare": {
+        "runs": 6,
+        "facts_kept_pct": 73.9,
+        "ci95": [
+          68.9,
+          78.9
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 114,
+        "trimmed_runs": 0
+      },
+      "index": {
+        "runs": 6,
+        "facts_kept_pct": 71.0,
+        "ci95": [
+          64.1,
+          77.9
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 114,
+        "trimmed_runs": 0,
+        "vs_control_pp": -2.9,
+        "vs_control_ci95": [
+          -7.6,
+          1.8
+        ]
+      },
+      "anchored": {
+        "runs": 6,
+        "facts_kept_pct": 77.5,
+        "ci95": [
+          67.0,
+          88.1
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 122,
+        "trimmed_runs": 0,
+        "vs_control_pp": 3.6,
+        "vs_control_ci95": [
+          -8.8,
+          16.0
+        ]
+      }
+    }
+  }
+}

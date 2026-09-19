@@ -1,0 +1,285 @@
+{
+  "meta": {
+    "document": "vineyard.md",
+    "ledger_entries": 15,
+    "fetch_limit": 4,
+    "instruction": "summary",
+    "fact_questions": 24,
+    "absent_questions": 8,
+    "read_at": [
+      1,
+      3,
+      5
+    ],
+    "repeats": 6,
+    "generator": "deepseek/deepseek-v4.1-flash",
+    "reader": "openai/gpt-oss-120b",
+    "word_limit": 150,
+    "failed_runs": 0,
+    "failures": [],
+    "retrieval": {
+      "anchored": {
+        "retrievals": 96,
+        "distinct_entries": 15,
+        "on_a_gap": 77,
+        "gap_targeting_pct": 80.2,
+        "most_retrieved": [
+          {
+            "id": "E02",
+            "times": 13,
+            "label": "The estate farms ## hectares, of…"
+          },
+          {
+            "id": "E05",
+            "times": 13,
+            "label": "Certification is organic since #### and…"
+          },
+          {
+            "id": "E03",
+            "times": 12,
+            "label": "Production averages ##,### bottles a year."
+          },
+          {
+            "id": "E15",
+            "times": 12,
+            "label": "Whether the eastern parcel should be…"
+          },
+          {
+            "id": "E06",
+            "times": 11,
+            "label": "Export accounts for ## percent of…"
+          },
+          {
+            "id": "E04",
+            "times": 9,
+            "label": "The #### harvest yielded ##,### bottles…"
+          },
+          {
+            "id": "E01",
+            "times": 8,
+            "label": "Handover: Domaine des Trois Chênes, cellar…"
+          },
+          {
+            "id": "E14",
+            "times": 5,
+            "label": "A move to lighter bottles was…"
+          },
+          {
+            "id": "E07",
+            "times": 4,
+            "label": "Two failures are documented."
+          },
+          {
+            "id": "E12",
+            "times": 3,
+            "label": "Harvest dates are decided from sugar…"
+          }
+        ]
+      },
+      "coverage": {
+        "retrievals": 96,
+        "distinct_entries": 14,
+        "on_a_gap": 86,
+        "gap_targeting_pct": 89.6,
+        "most_retrieved": [
+          {
+            "id": "E07",
+            "times": 19,
+            "label": "Two failures are documented."
+          },
+          {
+            "id": "E01",
+            "times": 9,
+            "label": "Handover: Domaine des Trois Chênes, cellar…"
+          },
+          {
+            "id": "E14",
+            "times": 9,
+            "label": "A move to lighter bottles was…"
+          },
+          {
+            "id": "E03",
+            "times": 8,
+            "label": "Production averages ##,### bottles a year."
+          },
+          {
+            "id": "E02",
+            "times": 7,
+            "label": "The estate farms ## hectares, of…"
+          },
+          {
+            "id": "E12",
+            "times": 7,
+            "label": "Harvest dates are decided from sugar…"
+          },
+          {
+            "id": "E08",
+            "times": 6,
+            "label": "In #### a temperature controller in…"
+          },
+          {
+            "id": "E15",
+            "times": 6,
+            "label": "Whether the eastern parcel should be…"
+          },
+          {
+            "id": "E04",
+            "times": 5,
+            "label": "The #### harvest yielded ##,### bottles…"
+          },
+          {
+            "id": "E05",
+            "times": 5,
+            "label": "Certification is organic since #### and…"
+          }
+        ]
+      }
+    }
+  },
+  "by_hop": {
+    "1": {
+      "bare": {
+        "runs": 6,
+        "facts_kept_pct": 81.2,
+        "ci95": [
+          78.9,
+          83.6
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 114,
+        "trimmed_runs": 0
+      },
+      "anchored": {
+        "runs": 6,
+        "facts_kept_pct": 81.9,
+        "ci95": [
+          73.3,
+          90.5
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 113,
+        "trimmed_runs": 0,
+        "vs_control_pp": 0.7,
+        "vs_control_ci95": [
+          -8.2,
+          9.6
+        ]
+      },
+      "coverage": {
+        "runs": 6,
+        "facts_kept_pct": 75.0,
+        "ci95": [
+          62.9,
+          87.1
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 115,
+        "trimmed_runs": 0,
+        "vs_control_pp": -6.2,
+        "vs_control_ci95": [
+          -18.2,
+          5.7
+        ]
+      }
+    },
+    "3": {
+      "bare": {
+        "runs": 6,
+        "facts_kept_pct": 79.9,
+        "ci95": [
+          78.1,
+          81.6
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 105,
+        "trimmed_runs": 0
+      },
+      "anchored": {
+        "runs": 6,
+        "facts_kept_pct": 82.6,
+        "ci95": [
+          75.1,
+          90.2
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 121,
+        "trimmed_runs": 0,
+        "vs_control_pp": 2.8,
+        "vs_control_ci95": [
+          -3.2,
+          8.8
+        ]
+      },
+      "coverage": {
+        "runs": 6,
+        "facts_kept_pct": 75.7,
+        "ci95": [
+          68.2,
+          83.2
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 120,
+        "trimmed_runs": 0,
+        "vs_control_pp": -4.2,
+        "vs_control_ci95": [
+          -10.9,
+          2.6
+        ]
+      }
+    },
+    "5": {
+      "bare": {
+        "runs": 6,
+        "facts_kept_pct": 79.9,
+        "ci95": [
+          78.1,
+          81.6
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 105,
+        "trimmed_runs": 0
+      },
+      "anchored": {
+        "runs": 6,
+        "facts_kept_pct": 82.6,
+        "ci95": [
+          75.1,
+          90.2
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 131,
+        "trimmed_runs": 0,
+        "vs_control_pp": 2.8,
+        "vs_control_ci95": [
+          -5.4,
+          10.9
+        ]
+      },
+      "coverage": {
+        "runs": 6,
+        "facts_kept_pct": 77.1,
+        "ci95": [
+          68.0,
+          86.2
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 119,
+        "trimmed_runs": 0,
+        "vs_control_pp": -2.8,
+        "vs_control_ci95": [
+          -11.8,
+          6.3
+        ]
+      }
+    }
+  }
+}

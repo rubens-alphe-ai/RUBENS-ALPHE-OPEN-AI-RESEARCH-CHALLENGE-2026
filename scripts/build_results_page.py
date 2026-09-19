@@ -48,9 +48,16 @@ def collect() -> list[dict]:
         entry = registry.get(experiment.name, {})
         decision_path = experiment / "results" / "decision.json"
         decision = json.loads(decision_path.read_text(encoding="utf-8")) if decision_path.is_file() else {}
+        # A chain benchmark records one report per document rather than one
+        # verdict file. Its conclusion is in RESULT.md and its status is in the
+        # registry, and reading "not decided" against an experiment that was
+        # decided — twice now, against the hypothesis — understates the record.
+        registered = entry.get("status", "OPEN")
+        fallback = registered if (registered not in ("OPEN", "") and (experiment / "RESULT.md").is_file()) \
+            else "NOT_DECIDED"
         row = {"experiment_id": experiment.name, "title": entry.get("title", ""),
-               "question": entry.get("hypothesis", ""), "status": entry.get("status", "OPEN"),
-               "decision": decision.get("decision", "NOT_DECIDED"),
+               "question": entry.get("hypothesis", ""), "status": registered,
+               "decision": decision.get("decision", fallback),
                "reason_codes": decision.get("reason_codes", []),
                "protocol": "%s/blob/main/%s" % (REPO, entry.get("protocol_path", "")),
                "effect": effect_of(decision)}

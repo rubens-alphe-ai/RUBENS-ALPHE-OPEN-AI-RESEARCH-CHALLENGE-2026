@@ -164,8 +164,8 @@ def step_at(record: dict, hop: int) -> dict:
     return {"words_kept": 0, "trimmed": False}
 
 
-def summarise(records: list[dict], hop: int) -> dict:
-    """Per strategy, at one depth of the chain."""
+def summarise(records: list[dict], hop: int, control: str = CONTROL) -> dict:
+    """Per strategy, at one depth of the chain, each compared to the control arm."""
     key = str(hop)
     by_strategy: dict[str, list[dict]] = {}
     for record in records:
@@ -181,18 +181,18 @@ def summarise(records: list[dict], hop: int) -> dict:
                        "absent_questions_asked": sum(row["grades"][key]["absent_questions"] for row in rows),
                        "median_words": sorted(step_at(row, hop)["words_kept"] for row in rows)[len(rows) // 2],
                        "trimmed_runs": sum(1 for row in rows if step_at(row, hop)["trimmed"])}
-    control = table.get(CONTROL)
+    baseline = table.get(control)
     for name, row in table.items():
-        if control and name != CONTROL:
+        if baseline and name != control:
             paired = [100.0 * (a["grades"][key]["fact_accuracy"] - b["grades"][key]["fact_accuracy"])
-                      for a, b in zip(by_strategy[name], by_strategy[CONTROL])]
+                      for a, b in zip(by_strategy[name], by_strategy[control])]
             mean, low, high = mean_ci(paired)
             row["vs_control_pp"] = round(mean, 1)
             row["vs_control_ci95"] = [round(low, 1), round(high, 1)]
     return table
 
 
-def render_report(tables: dict, meta: dict) -> str:
+def render_report(tables: dict, meta: dict, control: str = CONTROL) -> str:
     """One table per depth of the chain, so the decay is visible, not averaged."""
     lines = ["# Handoff benchmark", "",
              "Document: `%s` — %d fact questions, %d absent-fact questions, %d runs per strategy, "
@@ -208,7 +208,7 @@ def render_report(tables: dict, meta: dict) -> str:
                   "|---|---|---|---|---|---|---|"]
         for name in sorted(table, key=lambda n: -table[n]["facts_kept_pct"]):
             row = table[name]
-            against = "control" if name == CONTROL else "%+.1f pp (%.1f to %.1f)" % (
+            against = "control" if name == control else "%+.1f pp (%.1f to %.1f)" % (
                 row.get("vs_control_pp", 0), *row.get("vs_control_ci95", (0, 0)))
             lines.append("| %s | %.1f%% | %.1f to %.1f | %s | %d of %d | %d | %d of %d |" % (
                 name, row["facts_kept_pct"], row["ci95"][0], row["ci95"][1], against,
