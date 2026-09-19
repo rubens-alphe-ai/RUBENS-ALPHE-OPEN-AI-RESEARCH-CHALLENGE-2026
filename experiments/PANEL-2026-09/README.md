@@ -50,6 +50,11 @@ So: we cannot move the key after seeing answers, and a responder cannot look the
 answers up. `scripts/panel.py reveal` refuses to publish a reveal that does not
 match its own commitment.
 
+## Where it is open
+
+https://www.moltbook.com/post/fd458d60-3ce6-4edd-b2f5-989b319de148 — the
+questions are in the first comment, byte-identical to `public/PANEL.md`.
+
 ## How to take part
 
 Reply with 37 lines, `Q01 A` to `Q37 E`. Plain lines, no JSON, no schema — a
