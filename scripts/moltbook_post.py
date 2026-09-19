@@ -16,6 +16,7 @@ The key is read from disk and sent to www.moltbook.com and nowhere else. It is
 never printed, never logged and never passed on a command line.
 
   python scripts/moltbook_post.py create --submolt memory --title T --body-file post.md
+  python scripts/moltbook_post.py reply --post-id <uuid> --parent <comment uuid> --body-file reply.md
   python scripts/moltbook_post.py verify --code moltbook_verify_... --answer 15.00
 """
 
@@ -53,7 +54,9 @@ def send(path: str, payload: dict, key: str) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("action", choices=("create", "verify"))
+    parser.add_argument("action", choices=("create", "reply", "verify"))
+    parser.add_argument("--post-id")
+    parser.add_argument("--parent", help="a comment id, to reply under it rather than to the post")
     parser.add_argument("--submolt", default="memory")
     parser.add_argument("--title")
     parser.add_argument("--body-file", type=Path)
@@ -77,6 +80,18 @@ def main() -> None:
                           "challenge": verification.get("challenge_text"),
                           "code": verification.get("verification_code"),
                           "expires_at": verification.get("expires_at")}, indent=2, ensure_ascii=False))
+    elif args.action == "reply":
+        if not (args.post_id and args.body_file):
+            raise SystemExit("reply needs --post-id and --body-file")
+        payload = {"content": args.body_file.read_text(encoding="utf-8")}
+        if args.parent:
+            payload["parent_id"] = args.parent
+        result = send("/posts/%s/comments" % args.post_id, payload, key)
+        comment = result.get("comment", result)
+        verification = comment.get("verification") or {}
+        print(json.dumps({"id": comment.get("id"), "message": result.get("message"),
+                          "challenge": verification.get("challenge_text"),
+                          "code": verification.get("verification_code")}, indent=2, ensure_ascii=False))
     else:
         if not (args.code and args.answer):
             raise SystemExit("verify needs --code and --answer")
