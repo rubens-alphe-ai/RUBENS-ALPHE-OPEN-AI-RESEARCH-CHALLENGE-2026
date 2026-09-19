@@ -1,0 +1,71 @@
+{
+  "policy_version": "RA-PSI-BENCH-POLICY-V1",
+  "design": "handoff_chain_bench",
+  "notes": "Pre-registered with PROTOCOL.md before any trial. The bridge experiment: the same chain benchmark as PROP-EXP-MEM-008, unchanged, on a document rendered from a canonical graph. The generator is not usable until this passes.",
+  "budget": {
+    "max_usd": 0.4,
+    "key_file": "~/.ra-psi/keys/openrouter.key"
+  },
+  "documents": [
+    "generated/document.md"
+  ],
+  "quizzes": {
+    "depot": "generated/QUIZ.json"
+  },
+  "graph": "../graphs/depot.json",
+  "strategies": [
+    "summary",
+    "checklist",
+    "sections",
+    "facts_only"
+  ],
+  "control": "summary",
+  "repeats": 6,
+  "read_at": [
+    1,
+    3,
+    5
+  ],
+  "words": 150,
+  "generator": {
+    "model": "deepseek/deepseek-v4.1-flash",
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "key": "openrouter",
+    "max_tokens": 900,
+    "extra_body": {
+      "reasoning": {
+        "enabled": false
+      }
+    }
+  },
+  "reader": {
+    "model": "openai/gpt-oss-120b",
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "key": "openrouter",
+    "max_tokens": 2000,
+    "extra_body": {
+      "reasoning": {
+        "effort": "low"
+      }
+    }
+  },
+  "decision": {
+    "hop": 3,
+    "keep_min_delta_pp": 10,
+    "documents_required": 1,
+    "repeats": 6,
+    "paired_sd_pp": 14.2,
+    "noise_source": "Paired SD for checklist minus summary at hop 3, backed out of MEM-008's published intervals: 14.20 (clinic), 3.72 (vineyard), 5.29 (observatory). The largest is declared; a prior chosen for convenience is not a prior.",
+    "control_prior_pct": {
+      "keep_min_delta_pp": {
+        "depot": 70.0
+      }
+    },
+    "plateau_max_share_of_first_loss": 0.5,
+    "summary_hop5_band_pct": [
+      55,
+      85
+    ],
+    "invention_margin": 5
+  }
+}

@@ -210,6 +210,20 @@
       "holdout_required": true,
       "regression_suite_required": true,
       "notes": "Registered, not run; no runner exists yet. The threshold is reachable and barely: checklist is predicted to keep 93 percent at hop 5, so headroom is 7 points against a threshold of 5, and the prior cannot be verified before the seal is spent. The protocol registers in advance that the search half cannot be powered at this budget. MEM-011 and MEM-012 ran an identical arm twice and disagreed by +7.3/-2.8/+8.3, putting the per-chain paired SD at about 11 points; six repeats resolve a difference of about 12.5 points while the variants to be ranked sit within 7 of the ceiling, so selection is drift and is reported as such. Ranking them properly would need about 480 repeats per variant, roughly 90 USD, some eleven times what the project has left. The holdout half is powered: 60 repeats per arm give SE 1.42, refuse a true null essentially always, and pass with probability 0.50/0.76/0.92 at true effects of 5/6/7 - the decision window is two points wide because the rule compares a point estimate with the threshold. At six repeats the rule's interval clause would have required an observed mean above 8.8 points against a ceiling of 7, which check_headroom.py does not test; a companion power check is listed as missing code. Estimated cost about 1.8 USD against a ceiling of 2.50. Disclosure: one absent-fact question of the holdout quiz was printed incidentally by a repository-wide grep during pre-registration and is recorded in PROTOCOL.md."
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-014",
+      "title": "The Bridge: Does Generated Prose Decay Like Written Prose?",
+      "status": "OPEN",
+      "capability_target": "blind cross-model mission reconstruction",
+      "hypothesis": "A document rendered from a canonical graph of typed tuples decays through a chain of handoffs the same way prose written by a person does: the instruction effect reproduces, the loss is a cliff at the first handoff followed by a plateau, and the level is comparable.",
+      "metric": "checklist minus summary at hop 3 paired; the share of the summary's total loss taken after hop 1; the summary's hop-5 retention; inventions",
+      "acceptance_rule": "All three of: the effect at least 10 pp with the paired 95% lower bound above 0; the loss from hop 1 to hop 5 no more than half the loss taken at hop 1; the summary's hop-5 retention between 55 and 85 percent. Each failure mode is named in PROTOCOL.md before the run.",
+      "protocol_path": "experiments/PROP-EXP-MEM-014/PROTOCOL.md",
+      "evidence_stage": "PILOT",
+      "holdout_required": true,
+      "regression_suite_required": true,
+      "notes": "The precondition for every later experiment on generated documents. Graph-first measurement proposed by the Moltbook agent `zhaoxuan`; no model writes or checks any question, and an absent-fact question is absent by construction. Declares repeats and paired_sd_pp, so check_headroom can test the interval clause as well as the threshold."
     }
   ]
 }

@@ -89,8 +89,9 @@ def plan_for_anchored_chain(experiment: Path, policy: dict) -> list[dict]:
     asking += 2 * documents * repeats * (hops - 1) if "coverage" in regimes else 0
     generation = policy["generator"]
     document_chars = max(len((experiment / name).read_text(encoding="utf-8")) for name in policy["documents"])
-    index_chars = max(len(json.dumps(json.loads((experiment / path).read_text(encoding="utf-8"))))
-                      for path in policy["ledgers"].values())
+    ledgers = policy.get("ledgers") or {}
+    index_chars = max((len(json.dumps(json.loads((experiment / path).read_text(encoding="utf-8"))))
+                       for path in ledgers.values()), default=0)
     prompt_chars = document_chars + index_chars + 1500
     steps = [{"stage": "writing", "model": generation["model"], "calls": writer_calls + asking,
               "endpoint": generation.get("endpoint", ""), "prompt_chars": prompt_chars,
@@ -108,7 +109,13 @@ def plan_for(experiment_id: str) -> list[dict]:
     """What a quiz experiment will send, from its own policy and files."""
     experiment = ROOT / "experiments" / experiment_id
     policy = json.loads((experiment / "evaluation_policy.json").read_text(encoding="utf-8"))
-    if policy.get("design") == "anchored_chain":
+    if policy.get("design") in ("anchored_chain", "handoff_chain_bench"):
+        # A strategy benchmark is an anchored run with one arm per strategy and
+        # no archive: same hops, same readings, no retrieval calls. Pricing it
+        # through the same plan keeps one description of what a chain costs.
+        if policy.get("design") == "handoff_chain_bench":
+            policy = {**policy, "regimes": policy["strategies"], "ledgers": {},
+                      "documents": policy["documents"]}
         return plan_for_anchored_chain(experiment, policy)
     generation = policy["generation"]
     pairs = len(generation["seeds"])
