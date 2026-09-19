@@ -186,8 +186,10 @@ def entry_from(private: dict, name: str, model: str, endpoint: str, key: str, ma
     location = private.get("keys", {}).get(key)
     if not location:
         raise SystemExit("no key location configured for %r" % key)
+    # Writers that reason by default spend the whole budget thinking and return
+    # nothing; the quiz builder only needs an answer.
     entry = {"evaluator_id": name, "provider": key, "model": model, "endpoint": endpoint,
-             "json_mode": False, "max_tokens": max_tokens}
+             "json_mode": False, "max_tokens": max_tokens, "extra_body": {"reasoning": {"effort": "minimal"}}}
     entry.update({k: v for k, v in location.items() if k in ("api_key_file", "api_key_env")})
     return entry
 

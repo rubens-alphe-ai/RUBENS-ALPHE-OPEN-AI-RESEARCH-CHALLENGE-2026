@@ -25,3 +25,29 @@ answered a single probe minutes earlier. Waiting for 120 trials to exhaust
 their retries before the ladder moves on would take about eighteen hours, so
 the runner now declares a reader unable after five failed trials and hands the
 whole reading to the next rung, which is what the ladder was written for.
+
+## D3 — The second reader was the generator itself; every handoff is read again (2026-09-19)
+
+**What happened:** the pre-registered ladder's first reader (`z-ai/glm-5.3`)
+failed and was replaced by its second rung, `moonshotai/kimi-k3` — which is the
+model that wrote every handoff in this experiment. It read all 120 and the
+adjudicator recorded PROVISIONAL_KEEP: +6.6 points, 95 % CI +4.3 to +8.9, zero
+inventions in either condition.
+
+**Why that verdict is not kept as it stands:** a model reading its own writing
+is not an independent reader. It may recover its own phrasing, conventions and
+abbreviations better than another model would, which would inflate the measured
+difference. The ladder was written without checking that a rung could collide
+with the generator; that is a design fault in this experiment, not a property of
+the models.
+
+**Deviation:** the Kimi reading is set aside in
+`results/quiz/abandoned/reader-nvidia-kimi-k3/` with its decision preserved as
+`decision-kimi-reader.json`, both published. The same 120 frozen handoffs are
+read again by the ladder's third rung, `openai/gpt-oss-120b` on Groq, which
+shares no family with the generator. The verdict of record is the one produced
+by that independent reader, whatever it says.
+
+**Decided before:** the independent reading began. The Kimi verdict is public so
+the difference between the two readers can be compared afterwards — that
+comparison is exploratory, not part of the decision.
