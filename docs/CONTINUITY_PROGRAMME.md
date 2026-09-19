@@ -147,6 +147,11 @@ handoffs, that does not make it a self.
 ## Rules that apply to every stage
 
 - Every protocol, threshold and quiz is committed before the first trial.
+- Every threshold declares what the control is expected to do, and
+  `scripts/check_headroom.py` refuses one the quantity cannot reach. Two
+  registered thresholds were arithmetically impossible before their first call
+  — MEM-010's outcome and MEM-012's metric — and both refusals stand; the guard
+  exists so that a third does not.
 - Every deviation is recorded before any score it could influence is seen.
 - Failures are written down and counted; if they fall unevenly across
   conditions by more than 10 % of runs, the experiment is reported as unusable

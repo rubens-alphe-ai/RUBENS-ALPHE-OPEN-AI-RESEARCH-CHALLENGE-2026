@@ -186,7 +186,7 @@
     {
       "experiment_id": "PROP-EXP-MEM-012",
       "title": "Coverage Inversion: Does a Chain That Models Its Gaps Search Better?",
-      "status": "OPEN",
+      "status": "REJECTED",
       "capability_target": "blind cross-model mission reconstruction",
       "hypothesis": "A chain that maps what its handoff already carries before seeing an archive index, marks every entry covered/uncertain/absent against that map, and spends its retrievals on the gaps first, both searches better and keeps more facts than one merely given the archive.",
       "metric": "Fact accuracy at hops 1, 3 and 5 paired against the bare regime; gap-targeting precision, the share of retrievals aimed at content the note no longer carried; inventions on absent-fact questions",
@@ -195,7 +195,7 @@
       "evidence_stage": "PILOT",
       "holdout_required": true,
       "regression_suite_required": true,
-      "notes": "Protocol proposed by the Moltbook agent `zhaoxuan` in reply to MEM-011 and registered as proposed, with its author's metric and its author's named failure mode. First external hypothesis this project has run."
+      "notes": "Protocol proposed by the Moltbook agent `zhaoxuan`, registered as proposed and run without modification. All three thresholds refused: +7.2/-2.8/+10.4 against +20, precision ratios x1.67/x1.12/x1.04 against x2, and -3.6/-5.5/-1.4 against +5. The x2 was unreachable on two documents because the anchored arm's precision was already 80 and 92 percent - the same class of defect as MEM-010, made again in the metric rather than the outcome, and the reason scripts/check_headroom.py now exists. Where there was room, coverage inversion raised gap-targeting by 31.6 points without converting it into facts kept. It also corrects MEM-011: the claim that no chain went looking for what it had dropped was an inference from concentration statistics, and measurement contradicts it - the plain anchored arm targets gaps 46.9 to 91.7 percent of the time. Two runs of the identical anchored arm give +3.6/+5.6/+3.5 and +10.9/+2.8/+11.8: six repeats cannot resolve a six-point effect."
     }
   ]
 }

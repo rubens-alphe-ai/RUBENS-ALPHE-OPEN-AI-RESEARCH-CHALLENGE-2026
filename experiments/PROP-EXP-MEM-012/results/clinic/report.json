@@ -1,0 +1,285 @@
+{
+  "meta": {
+    "document": "clinic.md",
+    "ledger_entries": 17,
+    "fetch_limit": 4,
+    "instruction": "summary",
+    "fact_questions": 23,
+    "absent_questions": 8,
+    "read_at": [
+      1,
+      3,
+      5
+    ],
+    "repeats": 6,
+    "generator": "deepseek/deepseek-v4.1-flash",
+    "reader": "openai/gpt-oss-120b",
+    "word_limit": 150,
+    "failed_runs": 0,
+    "failures": [],
+    "retrieval": {
+      "anchored": {
+        "retrievals": 96,
+        "distinct_entries": 10,
+        "on_a_gap": 45,
+        "gap_targeting_pct": 46.9,
+        "most_retrieved": [
+          {
+            "id": "E05",
+            "times": 18,
+            "label": "The clinic has held its current…"
+          },
+          {
+            "id": "E02",
+            "times": 15,
+            "label": "The clinic serves #,### registered patients…"
+          },
+          {
+            "id": "E17",
+            "times": 15,
+            "label": "The nursing coordinator post has been…"
+          },
+          {
+            "id": "E03",
+            "times": 12,
+            "label": "Opening hours are ##:## to ##:##…"
+          },
+          {
+            "id": "E01",
+            "times": 8,
+            "label": "Handover: Saint-Aubin community clinic, nursing coordination"
+          },
+          {
+            "id": "E15",
+            "times": 8,
+            "label": "The purchase of a second ultrasound…"
+          },
+          {
+            "id": "E16",
+            "times": 8,
+            "label": "It is unknown whether the current…"
+          },
+          {
+            "id": "E04",
+            "times": 6,
+            "label": "Twelve nurses work in three shifts,…"
+          },
+          {
+            "id": "E06",
+            "times": 5,
+            "label": "Attendance averages ### consultations a day,…"
+          },
+          {
+            "id": "E07",
+            "times": 1,
+            "label": "No-show rate is # percent, down…"
+          }
+        ]
+      },
+      "coverage": {
+        "retrievals": 93,
+        "distinct_entries": 15,
+        "on_a_gap": 73,
+        "gap_targeting_pct": 78.5,
+        "most_retrieved": [
+          {
+            "id": "E08",
+            "times": 23,
+            "label": "Two incidents shaped current practice."
+          },
+          {
+            "id": "E11",
+            "times": 22,
+            "label": "Three rules are in force."
+          },
+          {
+            "id": "E05",
+            "times": 17,
+            "label": "The clinic has held its current…"
+          },
+          {
+            "id": "E16",
+            "times": 10,
+            "label": "It is unknown whether the current…"
+          },
+          {
+            "id": "E01",
+            "times": 7,
+            "label": "Handover: Saint-Aubin community clinic, nursing coordination"
+          },
+          {
+            "id": "E03",
+            "times": 2,
+            "label": "Opening hours are ##:## to ##:##…"
+          },
+          {
+            "id": "E04",
+            "times": 2,
+            "label": "Twelve nurses work in three shifts,…"
+          },
+          {
+            "id": "E12",
+            "times": 2,
+            "label": "A prescription may not be renewed…"
+          },
+          {
+            "id": "E17",
+            "times": 2,
+            "label": "The nursing coordinator post has been…"
+          },
+          {
+            "id": "E02",
+            "times": 1,
+            "label": "The clinic serves #,### registered patients…"
+          }
+        ]
+      }
+    }
+  },
+  "by_hop": {
+    "1": {
+      "bare": {
+        "runs": 6,
+        "facts_kept_pct": 74.6,
+        "ci95": [
+          72.8,
+          76.5
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 124,
+        "trimmed_runs": 0
+      },
+      "anchored": {
+        "runs": 6,
+        "facts_kept_pct": 73.9,
+        "ci95": [
+          73.9,
+          73.9
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 131,
+        "trimmed_runs": 0,
+        "vs_control_pp": -0.7,
+        "vs_control_ci95": [
+          -2.6,
+          1.1
+        ]
+      },
+      "coverage": {
+        "runs": 6,
+        "facts_kept_pct": 75.4,
+        "ci95": [
+          71.6,
+          79.1
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 126,
+        "trimmed_runs": 0,
+        "vs_control_pp": 0.7,
+        "vs_control_ci95": [
+          -2.7,
+          4.2
+        ]
+      }
+    },
+    "3": {
+      "bare": {
+        "runs": 6,
+        "facts_kept_pct": 74.6,
+        "ci95": [
+          72.8,
+          76.5
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 114,
+        "trimmed_runs": 0
+      },
+      "anchored": {
+        "runs": 6,
+        "facts_kept_pct": 79.7,
+        "ci95": [
+          77.4,
+          82.1
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 140,
+        "trimmed_runs": 0,
+        "vs_control_pp": 5.1,
+        "vs_control_ci95": [
+          1.6,
+          8.5
+        ]
+      },
+      "coverage": {
+        "runs": 6,
+        "facts_kept_pct": 83.3,
+        "ci95": [
+          79.9,
+          86.8
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 133,
+        "trimmed_runs": 0,
+        "vs_control_pp": 8.7,
+        "vs_control_ci95": [
+          4.6,
+          12.8
+        ]
+      }
+    },
+    "5": {
+      "bare": {
+        "runs": 6,
+        "facts_kept_pct": 73.9,
+        "ci95": [
+          71.0,
+          76.8
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 111,
+        "trimmed_runs": 0
+      },
+      "anchored": {
+        "runs": 6,
+        "facts_kept_pct": 84.8,
+        "ci95": [
+          81.0,
+          88.6
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 136,
+        "trimmed_runs": 0,
+        "vs_control_pp": 10.9,
+        "vs_control_ci95": [
+          6.1,
+          15.7
+        ]
+      },
+      "coverage": {
+        "runs": 6,
+        "facts_kept_pct": 81.2,
+        "ci95": [
+          74.9,
+          87.4
+        ],
+        "inventions": 0,
+        "absent_questions_asked": 48,
+        "median_words": 124,
+        "trimmed_runs": 0,
+        "vs_control_pp": 7.2,
+        "vs_control_ci95": [
+          0.4,
+          14.1
+        ]
+      }
+    }
+  }
+}
