@@ -140,6 +140,20 @@
       "holdout_required": true,
       "regression_suite_required": true,
       "notes": "Rule satisfied on all three documents: +31.9, +16.7 and +20.8 pp at hop 3, zero inventions in 1152 absent-fact answers. Loss happens almost entirely at the first handoff and the chain then holds: a free summary drops a third of the document immediately. Cost 1.30 USD. See RESULT.md."
+    },
+    {
+      "experiment_id": "PROP-EXP-MEM-009",
+      "title": "Continuity Programme, Stage 1: Populations versus Lineages",
+      "status": "REJECTED",
+      "capability_target": "blind cross-model mission reconstruction",
+      "hypothesis": "Merging several independent chains recovers a large part of what each lost, because they lost different facts.",
+      "metric": "Fact accuracy of a merged handoff against the mean and the best of its source chains",
+      "acceptance_rule": "At least 15 pp above the sources' mean with the 95% lower bound above 0, on at least two of three documents, without inventing more than 5.",
+      "protocol_path": "docs/CONTINUITY_PROGRAMME.md",
+      "evidence_stage": "PILOT",
+      "holdout_required": true,
+      "regression_suite_required": true,
+      "notes": "Refused as registered: +11.6, +6.9 and +1.4 pp, and no merge beat the best single chain at equal length. Zero inventions. Exploratory follow-up at double the budget exceeds the best chain on two documents of three, and fails on the one whose chains had almost nothing to reconcile. See RESULT.md."
     }
   ]
 }

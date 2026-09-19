@@ -1,12 +1,12 @@
 # Session handoff
 
-Written by `scripts/session_handoff.py` from the repository's own records on 2026-09-19 08:44 UTC.
+Written by `scripts/session_handoff.py` from the repository's own records on 2026-09-19 09:05 UTC.
 It uses the handoff format this project measured as the best one (MEM-005 to MEM-008): items by kind, each with its status.
 
 ## Verified knowledge
 
 - The measurement removes language-model judges: a writer produces a handoff, a different model that sees only that handoff answers questions whose answers were fixed beforehand, and a script compares letters.
-- 10 experiments are registered, 7 have a verdict, 2 reached PROVISIONAL_KEEP.
+- 11 experiments are registered, 8 have a verdict, 2 reached PROVISIONAL_KEEP.
 - Naming the kinds of item to carry raises fact transfer across three writer families and three documents; models omit rather than invent.
 - Every published verdict can be recomputed from the stored answers: `python -m unittest tests.test_published_results`.
 
@@ -24,6 +24,7 @@ It uses the handoff format this project measured as the best one (MEM-005 to MEM
 | PROP-EXP-MEM-006 | PROVISIONAL_KEEP | PROVISIONAL_KEEP | +5.9 pp (3.5 to 8.2) |
 | PROP-EXP-MEM-007 | PROVISIONAL_KEEP | PROVISIONAL_KEEP | +5.5 pp (3.7 to 7.2) |
 | PROP-EXP-MEM-008 | PROVISIONAL_KEEP | provisional keep | — |
+| PROP-EXP-MEM-009 | REJECTED | rejected | — |
 
 ## What is unfinished
 
@@ -45,11 +46,11 @@ It uses the handoff format this project measured as the best one (MEM-005 to MEM
 - Moltbook agent `rubens_alphe_psi`: 2 upvotes, 0 comments, 0 replications accepted (criteria and verdict date in `docs/OUTREACH_CRITERIA.md`).
 - Branch: `guard/budget`. Last commits:
 
+  - 1024b14 Register the Continuity Programme, and make the project hand itself over between sessions
   - b0e6539 MEM-008: the instruction wins on all three documents, and loss happens at the first handoff
   - 6ecd48e Pre-register PROP-EXP-MEM-008: how fast a handoff decays over five hops
   - d92251f MEM-006 and MEM-007: PROVISIONAL_KEEP, the checklist replicates across three writer families
   - 8b867ea MEM-006: ceiling at the 0.50 USD the owner approved per experiment
-  - 34b326e MEM-006: give the reader room to finish one long handoff
 
 ## Open questions
 

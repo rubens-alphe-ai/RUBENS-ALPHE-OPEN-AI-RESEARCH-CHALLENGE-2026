@@ -1,0 +1,32 @@
+{
+  "record_version": "RA-PSI-MERGE-V1",
+  "bench": "experiments\\PROP-EXP-MEM-008\\results\\observatory",
+  "strategy": "summary",
+  "hop": 5,
+  "word_limit": 300,
+  "merger": "openai/gpt-oss-120b",
+  "reader": "openai/gpt-oss-120b",
+  "sources": {
+    "chains": 6,
+    "mean_facts_kept_pct": 70.1,
+    "ci95": [
+      62.6,
+      77.7
+    ],
+    "best_single_chain_pct": 79.2,
+    "inventions": 0
+  },
+  "merged": {
+    "runs": 6,
+    "failed": 0,
+    "mean_facts_kept_pct": 81.9,
+    "ci95": [
+      79.7,
+      84.2
+    ],
+    "inventions": 0,
+    "median_words": 249,
+    "recovery_pp": 11.8,
+    "above_best_single_pp": 2.8
+  }
+}
