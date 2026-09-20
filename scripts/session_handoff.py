@@ -101,6 +101,16 @@ def render() -> str:
         "It uses the handoff format this project measured as the best one "
         "(MEM-005 to MEM-008): items by kind, each with its status.",
         "",
+        "## Status",
+        "",
+        "Five fields, always all five, computed by `python scripts/status_tuple.py --markdown`. "
+        "There is no overall score: one number would let a strong field pay for an absent one, and "
+        "that substitution is what made a careful reader of this project believe it was collapsing "
+        "while the record said otherwise.",
+        "",
+        "Run it. It is not copied here because a status line written once is a status line that lies "
+        "the next day.",
+        "",
         "## Start here",
         "",
         "Read this file first, then `docs/CONTINUITY_PROGRAMME.md` for what was asked and "

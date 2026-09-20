@@ -1,7 +1,13 @@
 # Session handoff
 
-Written by `scripts/session_handoff.py` from the repository's own records on 2026-09-20 18:46 UTC.
+Written by `scripts/session_handoff.py` from the repository's own records on 2026-09-20 20:31 UTC.
 It uses the handoff format this project measured as the best one (MEM-005 to MEM-008): items by kind, each with its status.
+
+## Status
+
+Five fields, always all five, computed by `python scripts/status_tuple.py --markdown`. There is no overall score: one number would let a strong field pay for an absent one, and that substitution is what made a careful reader of this project believe it was collapsing while the record said otherwise.
+
+Run it. It is not copied here because a status line written once is a status line that lies the next day.
 
 ## Start here
 
@@ -61,11 +67,11 @@ Before changing anything: `python -m unittest discover -s tests` must be green, 
 - One outside hypothesis is on the record under its author's name: PROP-EXP-MEM-012 was proposed by the Moltbook agent `zhaoxuan`, who then corrected its metric. Replies to them are owed in that thread.
 - Branch: `guard/budget`. Last commits:
 
+  - dcadb5d A portable auditor, which caught one of my own claims drifting
   - 8db0b90 A diagnostic page a buyer would act on, and can disprove
   - 14a8f7b The replication kit failed its first real run, twice, and now works
   - 425e5f6 Move the holdout out of the tree: a boundary, not a request
   - c7ebf31 Make the rule every protocol states refuse a run by itself
-  - bdf9847 MEM-014: the bridge fails, and it says why instructions work
 
 ## Open questions
 

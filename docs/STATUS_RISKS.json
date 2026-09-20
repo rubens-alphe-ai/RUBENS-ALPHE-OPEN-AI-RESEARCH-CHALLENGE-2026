@@ -1,0 +1,36 @@
+{
+  "record_version": "RA-PSI-RISKS-V1",
+  "note": "Unresolved risks, declared rather than inferred. A missing register is reported as unmeasured, not as none: the point of declaring is that silence cannot pass for safety. Each entry says what would close it.",
+  "risks": [
+    {
+      "id": "reader-is-a-model",
+      "statement": "Every published figure depends on a reader model, and a stronger reader extracts facts a weaker one misses. Two readers have been compared; two is not a measurement of the spread.",
+      "closes_when": "The reader panel at experiments/PANEL-2026-09/ has answers from several unrelated model families and the spread between them is published."
+    },
+    {
+      "id": "three-documents-written-here",
+      "statement": "Every written document measured was written by this project. Generated documents were tested as a substitute and refused (MEM-014): the instruction effect does not reproduce on template prose.",
+      "closes_when": "A document and quiz arrive from a domain this project does not have, and the chain benchmark runs on them."
+    },
+    {
+      "id": "six-repeats-cannot-resolve-six-points",
+      "statement": "Two identical runs of the same arm gave +3.6/+5.6/+3.5 and +10.9/+2.8/+11.8. Every single-run estimate in MEM-010, MEM-011 and MEM-012 carries that width.",
+      "closes_when": "An effect this project wants to claim below about 12 points is rerun at a repeat count its declared paired SD can resolve, checked by scripts/check_headroom.py."
+    },
+    {
+      "id": "one-writer-family-per-chain-result",
+      "statement": "The chain results use one writer family. The instruction effect replicates across three families in the paired experiments, but the chain and archive results do not.",
+      "closes_when": "MEM-008's benchmark runs with a second writer family and the shape holds."
+    },
+    {
+      "id": "holdout-weakened-by-one-question",
+      "statement": "One absent-fact question of the sealed holdout was printed by a repository-wide grep on 2026-09-19 and disclosed. The seal is weaker by one question of forty-two.",
+      "closes_when": "The holdout is spent and the result is reported both with and without X01, or a new seal is built by someone who does not then run the search."
+    },
+    {
+      "id": "mem-007-decision-file-unreconciled",
+      "statement": "MEM-007's decision file does not follow from its own stored answers. The verdict, the mean and the invention count are unaffected; the pair counts, the standard deviation and the interval are not.",
+      "closes_when": "The file is regenerated from the archived answers as a deliberate, recorded decision, or the discrepancy is accepted permanently with the correction cited beside every use of those numbers."
+    }
+  ]
+}
