@@ -192,10 +192,53 @@ def summarise(records: list[dict], hop: int, control: str = CONTROL) -> dict:
     return table
 
 
+def usability(records: list[dict], arms: list[str], tolerance: float = 0.10) -> dict:
+    """Whether the run may be analysed at all, decided before anyone reads it.
+
+    The rule has been written in every protocol this project has registered:
+    failures falling unevenly across conditions by more than a tenth of runs
+    make an experiment unusable rather than analysable. It has never been
+    enforced anywhere — it lived in prose, and on 2026-09-19 it had to be
+    applied by hand to a batch whose numbers had already been read.
+
+    A later session, or a weaker one, will read a report and analyse it. So the
+    verdict travels with the report, at the top, and says which arm failed how
+    often. A judgement nobody can skip is worth more than a judgement everyone
+    is told to make.
+    """
+    failed: dict[str, int] = {arm: 0 for arm in arms}
+    total: dict[str, int] = {arm: 0 for arm in arms}
+    for record in records:
+        arm = record.get("strategy")
+        if arm not in total:
+            continue
+        total[arm] += 1
+        if "grades" not in record:
+            failed[arm] += 1
+    rates = {arm: (failed[arm] / total[arm] if total[arm] else 0.0) for arm in arms}
+    spread = max(rates.values()) - min(rates.values()) if rates else 0.0
+    usable = spread <= tolerance
+    return {"usable": usable, "failure_rate_spread": round(spread, 4), "tolerance": tolerance,
+            "failed_by_arm": failed, "runs_by_arm": total,
+            "reason": "" if usable else
+            ("failures fall unevenly across arms by %.1f percentage points, above the %.0f allowed: "
+             "this run is unusable rather than analysable, and its numbers are not a result"
+             % (100 * spread, 100 * tolerance))}
+
+
 def render_report(tables: dict, meta: dict, control: str = CONTROL) -> str:
     """One table per depth of the chain, so the decay is visible, not averaged."""
-    lines = ["# Handoff benchmark", "",
-             "Document: `%s` — %d fact questions, %d absent-fact questions, %d runs per strategy, "
+    verdict = meta.get("usability") or {}
+    lines = ["# Handoff benchmark", ""]
+    if verdict and not verdict.get("usable", True):
+        # At the top, before any table. A later session reads a report and
+        # analyses it; this one has to refuse in its first line or it will be
+        # read as a result.
+        lines += ["> **UNUSABLE — do not analyse the tables below.** %s" % verdict["reason"],
+                  ">",
+                  "> Failures by arm: %s of %s runs." % (verdict["failed_by_arm"], verdict["runs_by_arm"]),
+                  ""]
+    lines += ["Document: `%s` — %d fact questions, %d absent-fact questions, %d runs per strategy, "
              "handoffs cut to %s words."
              % (meta["document"], meta["fact_questions"], meta["absent_questions"], meta["repeats"],
                 meta.get("word_limit") or "no limit"),
@@ -283,7 +326,8 @@ def main() -> None:
             "repeats": args.repeats, "generator": args.generator_model, "reader": args.reader_model,
             "word_limit": args.words, "failed_runs": len(failed),
             "failures": [{"strategy": row["strategy"], "repeat": row["repeat"], "error": row.get("error", "")[:160]}
-                         for row in failed]}
+                         for row in failed],
+            "usability": usability(records, args.strategies)}
     (args.out / "report.json").write_text(json.dumps({"meta": meta, "by_hop": tables}, indent=2, ensure_ascii=False) + "\n",
                                           encoding="utf-8")
     (args.out / "report.md").write_text(render_report(tables, meta), encoding="utf-8")
