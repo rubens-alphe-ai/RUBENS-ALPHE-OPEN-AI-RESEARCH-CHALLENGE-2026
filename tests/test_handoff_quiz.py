@@ -12,8 +12,12 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 import handoff_quiz as hq  # noqa: E402
 
-QUIZ_PATHS = [ROOT / "experiments" / "PROP-EXP-MEM-004" / "QUIZ.json",
-              ROOT / "experiments" / "HOLDOUT-2026-09" / "QUIZ.json"]
+# The holdout's quiz used to be checked here. Its content now lives outside the
+# repository, because a README asking searches to skip a folder is documentation
+# and not an information boundary — two agents traversed it anyway. Its
+# structure is checked by tests/test_holdout_seal.py, which verifies hashes and
+# never reads a question.
+QUIZ_PATHS = [ROOT / "experiments" / "PROP-EXP-MEM-004" / "QUIZ.json"]
 QUIZ = json.loads(QUIZ_PATHS[0].read_text(encoding="utf-8"))
 RULE = {"keep_min_delta_pp": 10, "invention_margin": 5}
 

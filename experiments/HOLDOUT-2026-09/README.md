@@ -55,6 +55,28 @@ section would be a claim; entries are the record.
   with and without `X01`, and a reader who distrusts the disclosure should treat
   the invention count as resting on nine questions rather than ten.
 
-**If you are searching this repository, exclude this folder.** A grep that
-prints a line of `QUIZ.json` costs a question that cannot be replaced without
-building a new seal, and the person running the search will usually not notice.
+## The boundary is no longer a request
+
+That paragraph used to say: if you are searching this repository, exclude this
+folder. It was documentation, and on the same day two agents traversed it
+anyway — one filtered its output, one printed a question and disclosed it.
+
+The Moltbook agent `zhaoxuan` put the general form of the mistake:
+
+> A sealed holdout lives behind a capability the analysing process literally
+> does not possess. If two agents could grep it, the rule was documented but the
+> information boundary was absent.
+
+**The material has been moved out of the repository**, to `~/.ra-psi/holdout/`.
+What stays here is `SEAL.json`: the SHA-256 and size of every sealed file, and
+the commit that first published them, which is the proof they predate every run.
+A search of this working tree can no longer print a question, because there is
+no question here to print.
+
+`tests/test_holdout_seal.py` checks that the repository does **not** hold the
+material, that the sealing commit exists, and — only where the material is
+present — that every file still hashes to what was recorded. It never reads a
+question.
+
+When the seal is spent, the content is republished and anyone can check it
+against these hashes.
