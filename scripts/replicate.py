@@ -61,6 +61,14 @@ SUBMISSION_VERSION = "RA-PSI-REPLICATION-V1"
 MIN_PAIRS = 5  # the schema's minItems; fewer is not a submission
 MIN_HANDOFF_CHARS = 50  # the schema's minLength for a handoff
 
+# An experiment's reader budget was tuned against the provider it ran on. The
+# same model served elsewhere reasons more before answering, and a reader that
+# spends its budget reasoning returns nothing this script can parse — which cost
+# two of five pairs on the first portable run. The floor is generous because the
+# reader emits forty-odd letters: the tokens are spent or they are not, and an
+# answer that never arrives is a lost pair, which is far more expensive.
+READER_TOKEN_FLOOR = 4000
+
 # Free and shared tiers answer 429 and 5xx routinely and recover within
 # minutes. Those are the only errors worth asking again about; a 401, a wrong
 # model id or a refused endpoint will not fix itself and stops the run at once.
@@ -171,8 +179,19 @@ def load_experiment(experiment_id: str) -> dict:
         raise SystemExit("experiment %s is missing: %s" % (experiment_id, ", ".join(absent)))
     quiz = json.loads(paths["quiz"].read_text(encoding="utf-8"))
     rendered, key = hq.render_quiz(quiz, experiment_id + ":" + quiz["quiz_version"])
+    # The experiment's own provider settings, not only its token budget. Reading
+    # one and dropping the other is how the first real run of this script lost
+    # every baseline pair: MEM-005 allows the writer 1000 tokens *and* turns its
+    # reasoning channel off, and 1000 tokens is enough only because of the
+    # second. A replicator following the published command got five failures in
+    # one condition, zero in the other, and no submission — which is the exact
+    # experience this script exists to remove.
+    reader_cfg = (policy.get("reader_ladder") or [policy.get("reader") or {}])[0] or {}
     return {"experiment_id": experiment_id, "policy": policy, "quiz": quiz, "rendered": rendered, "key": key,
             "rule": quiz_cfg, "generation": generation,
+            "writer_extra_body": generation.get("extra_body"),
+            "reader_extra_body": reader_cfg.get("extra_body"),
+            "reader_max_tokens": reader_cfg.get("max_tokens"),
             "states": {"baseline": paths["baseline"].read_text(encoding="utf-8"),
                        "structured": paths["structured"].read_text(encoding="utf-8")},
             "test_prompt": paths["prompt"].read_text(encoding="utf-8")}
@@ -215,10 +234,17 @@ def run(options: argparse.Namespace) -> dict:
     generation = experiment["generation"]
     temperature = options.temperature if options.temperature is not None else float(generation.get("temperature", 0.8))
     writer_tokens = options.writer_max_tokens or int(generation.get("max_output_tokens", 1000))
-    reader_tokens = options.reader_max_tokens or int((experiment["policy"].get("reader") or {}).get("max_tokens", 1500))
-    extra_body = json.loads(options.extra_body) if options.extra_body else None
-    if extra_body is not None and not isinstance(extra_body, dict):
+    reader_tokens = options.reader_max_tokens or max(int(experiment.get("reader_max_tokens") or 1500),
+                                                    READER_TOKEN_FLOOR)
+    override = json.loads(options.extra_body) if options.extra_body else None
+    if override is not None and not isinstance(override, dict):
         raise SystemExit("--extra-body must be a JSON object, for example '{\"reasoning_effort\": \"low\"}'")
+    # Each side inherits the experiment's own setting unless overridden. The
+    # writer and the reader do not share one: MEM-005 turns the writer's
+    # reasoning off entirely and asks the reader for low effort, and applying
+    # either to both breaks the run.
+    writer_extra = override if override is not None else experiment.get("writer_extra_body")
+    reader_extra = override if override is not None else experiment.get("reader_extra_body")
     seeds = seeds_for(generation, options.pairs)
 
     print("experiment %s, %d pairs, seeds %s" % (options.experiment, options.pairs,
@@ -252,7 +278,7 @@ def run(options: argparse.Namespace) -> dict:
             handoff, error = ask("writer", condition, pair_id, log, options.retries, options.pause,
                                  endpoint=options.endpoint, model=options.writer_model,
                                  api_key_file=str(key_file), prompt=writer_prompt, seed=seed,
-                                 temperature=temperature, max_tokens=writer_tokens, extra_body=extra_body,
+                                 temperature=temperature, max_tokens=writer_tokens, extra_body=writer_extra,
                                  timeout_seconds=options.timeout)
             if error is not None:
                 print("%s/%s: writer failed: %s" % (pair_id, condition, error), flush=True)
@@ -270,7 +296,7 @@ def run(options: argparse.Namespace) -> dict:
                                        condition, pair_id, log, options.reader_retries, options.retries, options.pause,
                                        endpoint=options.endpoint, model=options.reader_model,
                                        api_key_file=str(key_file), seed=seed, temperature=0.0,
-                                       max_tokens=reader_tokens, extra_body=extra_body,
+                                       max_tokens=reader_tokens, extra_body=reader_extra,
                                        timeout_seconds=options.timeout)
             if error is not None:
                 print("%s/%s: %s" % (pair_id, condition, error), flush=True)
