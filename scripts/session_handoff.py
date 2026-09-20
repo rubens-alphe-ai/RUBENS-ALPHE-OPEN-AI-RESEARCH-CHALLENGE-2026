@@ -118,10 +118,11 @@ def render() -> str:
         "- %d experiments are registered, %d have a verdict, %d reached PROVISIONAL_KEEP." % (len(rows), len(decided), len(keeps)),
         "- Naming the kinds of item to carry raises fact transfer across three writer families "
         "and three documents; models omit rather than invent.",
-        "- 8 of 11 published verdicts reproduce exactly from the stored answers, 1 does not "
-        "(PROP-EXP-MEM-007, see its CORRECTION.md; the verdict and the mean are unaffected), and 2 "
-        "rest on answers that were never stored. `python scripts/regression_suite.py` says which is "
-        "which and exits non-zero rather than reassuring.",
+        "- Most published verdicts reproduce exactly from the stored answers, 1 does not "
+        "(PROP-EXP-MEM-007, see its CORRECTION.md; the verdict and the mean are unaffected), and 1 "
+        "rests on answers that were never stored. The exact counts are not repeated here because they go "
+        "stale as work continues: `python scripts/regression_suite.py` prints them and exits non-zero "
+        "rather than reassuring, and `audit_claims.py` catches the day they drift.",
         "",
         "## Experiments and their status",
         "",

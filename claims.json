@@ -1,0 +1,50 @@
+{
+  "manifest_version": "RA-PSI-CLAIMS-V1",
+  "root": ".",
+  "note": "This project's own claims, declared so that scripts/audit_claims.py can check them the way it would check anyone else's. It is the worked example and the dogfood: run it with --run and it reports one MISMATCH, which is real and documented in experiments/PROP-EXP-MEM-007/CORRECTION.md.",
+  "claims": [
+    {
+      "id": "reproducibility-of-published-verdicts",
+      "published_in": "docs/SESSION_HANDOFF.md, experiments/PROP-EXP-MEM-007/CORRECTION.md, and five Moltbook posts",
+      "statement": "Of the experiments carrying a verdict, ten reproduce exactly from the stored answers, one does not, and one rests on answers that were never stored.",
+      "value": {
+        "reproduced": 10,
+        "mismatch": 1,
+        "unverifiable": 1,
+        "no_verdict": 2
+      },
+      "recompute": "python scripts/regression_suite.py --json",
+      "recompute_pointer": "counts",
+      "evidence": {
+        "experiments/registry.json": "dd7c1c080ce7c1936ce562077cacce5c8a0b84a9d9f5b53061235dc299965b53",
+        "scripts/regression_suite.py": "0c01ab0fe2b8e9a224b9fa0c81f0cb2a595375241ff9159e593c5cf300e3af87"
+      },
+      "drift_note": "Published first as nine reproduced. It was true when written and went stale as MEM-014 gained a verdict. The audit caught it within minutes of the claim being declared, which is the ordinary failure this tool exists for: not a number that was wrong, a number that stopped being right."
+    },
+    {
+      "id": "mem-008-clinic-checklist-at-hop-3",
+      "published_in": "experiments/PROP-EXP-MEM-008/RESULT.md",
+      "statement": "On the clinic document, the checklist instruction keeps 31.9 points more facts than a free summary at hop 3.",
+      "value": 31.9,
+      "recompute": "python -c \"import json;r=json.load(open('experiments/PROP-EXP-MEM-008/results/clinic/report.json',encoding='utf-8'));print(json.dumps(r['by_hop']['3']['checklist']['vs_control_pp']))\"",
+      "recompute_pointer": "",
+      "evidence": {
+        "experiments/PROP-EXP-MEM-008/results/clinic/report.json": "f3039ea44611172e3b313e596cc4b773b0520266b8704f68fd3fa96b5badfdbd",
+        "experiments/PROP-EXP-MEM-008/results/clinic/answer-key.json": "11703d85e5acff65e6b42cef7441695b5950d78d600da29f2adc882e0ba26672"
+      }
+    },
+    {
+      "id": "mem-009-recovery-figures",
+      "published_in": "experiments/PROP-EXP-MEM-009/RESULT.md",
+      "statement": "Merging independent chains recovers +11.6, +6.9 and +1.4 points over the mean of their sources.",
+      "value": [
+        11.6,
+        6.9,
+        1.4
+      ],
+      "evidence": {
+        "experiments/PROP-EXP-MEM-009/RESULT.md": "2785545457be9a50698982ecd452d207bf19b0a4f4911a4ed3af8302ecc86305"
+      }
+    }
+  ]
+}

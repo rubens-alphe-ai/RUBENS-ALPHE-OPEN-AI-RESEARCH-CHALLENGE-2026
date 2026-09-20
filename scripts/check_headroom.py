@@ -119,8 +119,22 @@ def findings(policy: dict) -> list[dict]:
     return rows
 
 
-def check(experiment_id: str) -> dict:
-    policy = json.loads((ROOT / "experiments" / experiment_id / "evaluation_policy.json").read_text(encoding="utf-8"))
+def check(experiment_id: str | None = None, policy_path: Path | None = None) -> dict:
+    """Check one experiment of this project, or any policy file anywhere.
+
+    Nothing in the arithmetic is specific to this repository: a threshold, a
+    prior for what the control will do, and the number of runs are all a policy
+    has to declare. The path argument exists so the check can be run against
+    someone else's project without copying their files into this one.
+    """
+    if policy_path is None:
+        if experiment_id is None:
+            raise SystemExit("give either an experiment id or a path to a policy file")
+        policy_path = ROOT / "experiments" / experiment_id / "evaluation_policy.json"
+    if not policy_path.is_file():
+        raise SystemExit("no policy file at %s" % policy_path)
+    policy = json.loads(policy_path.read_text(encoding="utf-8"))
+    experiment_id = experiment_id or policy.get("experiment_id") or policy_path.parent.name
     rows = findings(policy)
     impossible = [row for row in rows if row["status"] == "IMPOSSIBLE"]
     undeclared = [row for row in rows if row["status"] == "UNDECLARED"]
@@ -145,9 +159,13 @@ def check(experiment_id: str) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--experiment", required=True)
+    parser.add_argument("--experiment", help="an experiment id in this repository")
+    parser.add_argument("--policy", type=Path,
+                        help="a path to any evaluation policy JSON, in this project or another")
     args = parser.parse_args()
-    result = check(args.experiment)
+    if not args.experiment and not args.policy:
+        raise SystemExit("give --experiment or --policy")
+    result = check(args.experiment, args.policy)
     print(json.dumps(result, indent=2, ensure_ascii=False))
     if result["status"] == "REFUSED":
         raise SystemExit(1)
