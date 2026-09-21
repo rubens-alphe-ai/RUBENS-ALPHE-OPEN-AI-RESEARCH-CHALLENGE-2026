@@ -131,13 +131,39 @@ def distractors_for(item: dict, graph: dict, count: int = 3) -> list[str]:
     return rng.sample(pool, count)
 
 
+def answer_for(item: dict) -> str:
+    """The answer the rendered document actually supports, polarity included.
+
+    This returned `item["value"]` regardless of polarity, which made the key
+    say "fully staffed" for a document that says "is **not** fully staffed".
+    Three of the depot graph's thirty questions were affected. The reader
+    answered "the text does not say" to all three in every one of 24 runs — it
+    was right and the key was wrong — and every absolute figure in MEM-014 was
+    depressed by a uniform 10 points as a result.
+
+    The whole point of generating the quiz from the graph is that the key is
+    correct by construction rather than by a model's say-so. It was incorrect by
+    construction instead, which is worse, because nothing downstream could
+    notice.
+    """
+    if item.get("polarity") == "negate":
+        return "not " + item["value"]
+    return item["value"]
+
+
 def build_quiz(graph: dict, not_stated: str = "The text does not say.") -> dict:
     """The quiz the graph already contains, in the format the pipeline uses."""
     questions = []
     for index, item in enumerate(graph["tuples"], start=1):
+        correct = answer_for(item)
+        distractors = distractors_for(item, graph)
+        if item.get("value") in distractors:
+            # For a negated tuple the un-negated value is the one wrong answer a
+            # reader might defend, so it must never be offered as a distractor.
+            raise ValueError("%s offers its own un-negated value as a distractor" % item["id"])
         questions.append({"id": "Q%02d" % index, "kind": "fact", "question": question_for(item),
-                          "correct": item["value"], "distractors": distractors_for(item, graph),
-                          "tuple_id": item["id"]})
+                          "correct": correct, "distractors": distractors,
+                          "polarity": item.get("polarity", "affirm"), "tuple_id": item["id"]})
     for index, probe in enumerate(graph.get("absent_probes", []), start=1):
         # Absent by construction: the entity appears in the document, the
         # relation does not exist for it anywhere in the graph. Nothing has to

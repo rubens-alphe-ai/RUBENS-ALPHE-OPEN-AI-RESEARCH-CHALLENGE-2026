@@ -39,7 +39,23 @@ import regression_suite as rs  # noqa: E402
 # is right and the machine-readable verdict is the stale artefact. It is listed
 # here, not repaired, because repairing it would mean editing a published
 # result to make a test go green.
-KNOWN_UNREPRODUCIBLE = {"PROP-EXP-MEM-007": ["decision.json"]}
+KNOWN_UNREPRODUCIBLE = {
+    # Published before the stored answers said something slightly different, for
+    # reasons never established. See PROP-EXP-MEM-007/CORRECTION.md.
+    "PROP-EXP-MEM-007": ["decision.json"],
+    # Added 2026-09-21, deliberately. `handoff_bench.summarise` paired arms by
+    # list position, so vineyard's `facts_only` — the only analysed chain arm
+    # with a failed run — was compared against a shifted control. The code now
+    # pairs on the repeat number and recomputes +15.8/+16.7/+16.7 where the
+    # stored report says +16.7/+17.5/+18.3. The report is not regenerated, for
+    # the same reason MEM-007's is not: overwriting it removes the only evidence
+    # the discrepancy existed. docs/CORRECTIONS-2026-09-21.md has every number.
+    "PROP-EXP-MEM-008": ["vineyard"],
+    # Same defect, on a batch that was already refused. This one was declared
+    # unusable under a pre-registered rule and archived rather than analysed, so
+    # its numbers were never a result to begin with.
+    "PROP-EXP-MEM-014": ["superseded_reader2000"],
+}
 
 # Verdicts whose supporting answers were never stored. They cannot be shown to
 # be wrong; they cannot be shown to be right either, which is the whole claim.
@@ -545,10 +561,21 @@ class RealRepositoryTests(unittest.TestCase):
         # recomputing them from the answers is the claim, not reading them back.
         rows = {row["experiment_id"]: row for row in self.report["experiments"]}
         units = {item["unit"]: item for item in rows["PROP-EXP-MEM-008"]["units"]}
-        for document in ("clinic", "vineyard", "observatory"):
+        for document in ("clinic", "observatory"):
             self.assertEqual(units[document]["status"], rs.REPRODUCED, document)
             self.assertEqual(units[document]["effect"]["recomputed"],
                              units[document]["effect"]["published"], document)
+        # Vineyard is the exception and it is on the record: its stored report
+        # was computed with positional pairing. The headline the RESULT.md leads
+        # on is the checklist arm, which had no failed run and is unaffected;
+        # only `facts_only` moved. Asserting the mismatch keeps it from being
+        # quietly repaired by a future regeneration.
+        self.assertEqual(units["vineyard"]["status"], rs.MISMATCH)
+        moved = [item for item in units["vineyard"].get("differences", [])
+                 if "facts_only" in str(item.get("field", ""))]
+        self.assertTrue(moved, "the vineyard mismatch should be confined to facts_only")
+        self.assertEqual(len(moved), len(units["vineyard"].get("differences", [])),
+                         "a number outside facts_only moved and is not on the record")
 
     def test_the_suite_leaves_the_sealed_experiments_alone(self) -> None:
         walked = {row["experiment_id"] for row in self.report["experiments"]}

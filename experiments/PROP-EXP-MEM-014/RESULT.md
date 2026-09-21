@@ -1,5 +1,8 @@
 # PROP-EXP-MEM-014 — Result: the bridge fails, and it says why instructions work
 
+
+> **Corrected 2026-09-21.** Some numbers below moved after a defect was found in the code that produced them. The verdict is unchanged. See [`docs/CORRECTIONS-2026-09-21.md`](../../docs/CORRECTIONS-2026-09-21.md) for every number that moved and why the stored files were not overwritten.
+
 **The generator is not usable for this project's main question.** Two of the
 three registered conditions passed. The one that failed is the one that matters.
 

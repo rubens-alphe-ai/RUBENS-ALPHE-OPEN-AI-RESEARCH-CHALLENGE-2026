@@ -184,8 +184,23 @@ def summarise(records: list[dict], hop: int, control: str = CONTROL) -> dict:
     baseline = table.get(control)
     for name, row in table.items():
         if baseline and name != control:
-            paired = [100.0 * (a["grades"][key]["fact_accuracy"] - b["grades"][key]["fact_accuracy"])
-                      for a, b in zip(by_strategy[name], by_strategy[control])]
+            # Pair on the repeat number, never on list position. Zipping two
+            # lists is correct only while both hold the same repeats in the same
+            # order; one failure on either side shifts everything after it, and
+            # the "paired" interval quietly becomes an unpaired one. The failure
+            # counts stay equal, so `usability` passes it. It was live on a
+            # published number: vineyard's facts_only lost repeat 4, and the
+            # published +16.7/+17.5/+18.3 should read +15.8/+16.7/+16.7.
+            mine = {record["repeat"]: record for record in by_strategy[name]}
+            theirs = {record["repeat"]: record for record in by_strategy[control]}
+            paired = [100.0 * (mine[repeat]["grades"][key]["fact_accuracy"]
+                               - theirs[repeat]["grades"][key]["fact_accuracy"])
+                      for repeat in sorted(set(mine) & set(theirs))]
+            if not paired:
+                # No repeat completed in both arms: there is no paired
+                # comparison to make, and an unpaired one reported under the
+                # same field name would be worse than none.
+                continue
             mean, low, high = mean_ci(paired)
             row["vs_control_pp"] = round(mean, 1)
             row["vs_control_ci95"] = [round(low, 1), round(high, 1)]

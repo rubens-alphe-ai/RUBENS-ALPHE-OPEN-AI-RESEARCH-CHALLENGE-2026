@@ -1,0 +1,136 @@
+# Fail the build when a change to your memory or compaction pipeline quietly
+# destroys more of what it was supposed to carry.
+#
+# How the measurement works, in four lines: one model writes a handover note
+# from your document; a *different* model sees only that note and answers a
+# multiple-choice quiz whose answer key was frozen before the run; a script
+# compares letters. Questions about facts your document never contained can only
+# be answered "the text does not say", so invented facts are counted rather than
+# argued about. No model grades anything.
+#
+# THIS COSTS REAL MONEY. Every run makes real API calls to two models, and the
+# number of calls is `repeats x (deepest hop + number of depths measured)`. The
+# settings below are 6 repeats measured at one depth: 12 calls. Measuring at
+# depths 1, 3 and 5 instead would be 48. That is why this workflow is scheduled
+# and manually triggered and is NOT on `push` — a gate that runs on every commit
+# bills you for every commit and tells you nothing new most of the time.
+#
+# Copy this file to .github/workflows/ in your own repository.
+
+name: Memory gate
+
+on:
+  # Run it on a schedule, and by hand when you have changed a prompt, swapped a
+  # model version, or touched a chunking parameter. Those are the changes this
+  # catches; a README edit is not.
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  memory-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Measure the pipeline as it stands today.
+      #
+      # --document and --quiz are YOUR material: the document you want carried,
+      # and a quiz built from it with scripts/build_quiz_from_document.py. The
+      # quiz is written once and then frozen. If you regenerate it, the baseline
+      # below stops matching and the gate refuses to compare rather than
+      # reporting a drop that is really a change of subject.
+      #
+      # --repeats is the whole cost dial, and it is also the whole sensitivity
+      # dial. See the note at the bottom before lowering it.
+      - name: Measure what the handover keeps
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          python scripts/handoff_bench.py \
+            --document gate/document.md \
+            --quiz gate/quiz.json \
+            --config gate/run-config.json \
+            --out gate/run \
+            --strategies summary \
+            --repeats 6 \
+            --read-at 1
+
+      # Compare it with the recorded baseline and decide.
+      #
+      # Exit 0: no regression the run could detect.
+      # Exit 1: a real regression. Retention fell past both your declared margin
+      #         AND the run-to-run noise of the two runs being compared, or the
+      #         handover invented something it did not invent before.
+      # Exit 2: the gate could not tell — the run was unusable, the arm was
+      #         missing, or the baseline was recorded on different material.
+      #         This also fails the build, on purpose: an unmeasured run is not
+      #         a run without a regression.
+      #
+      # Read the whole verdict in the log, including on a pass. It always prints
+      # the smallest drop it could actually have detected, which is usually
+      # larger than people expect.
+      - name: Gate against the recorded baseline
+        run: |
+          python scripts/ci_gate.py \
+            --baseline gate/baseline.json \
+            --report gate/run/report.json \
+            --document gate/document.md \
+            --quiz gate/quiz.json \
+            --margin 8
+
+      # Keep the run, pass or fail. Every handover, every answer and the frozen
+      # key are in it, so any number in the verdict can be recomputed by someone
+      # who does not trust the verdict.
+      - name: Keep the evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: memory-gate-run
+          path: gate/run/
+
+# Recording the baseline, once, by hand. Run the same benchmark command as
+# above, then:
+#
+#   python scripts/ci_gate.py \
+#     --report gate/run/report.json \
+#     --arm summary --hop 1 \
+#     --document gate/document.md --quiz gate/quiz.json \
+#     --margin 8 \
+#     --write-baseline gate/baseline.json
+#
+# That records the numbers, the repeat count, the observed spread, and a hash of
+# the document and quiz it was measured against. Commit it. Re-record it only
+# deliberately, when you have accepted a new normal — re-recording after a
+# failure is how a gate becomes decoration.
+#
+# If you can afford a second measuring run at the same settings, pass it as
+# --replicate when you record the baseline. The gate will then use how far two
+# identical runs actually drifted as its noise floor instead of a modelled one.
+# That is the honest number and it is usually the wider one.
+#
+# ON SENSITIVITY, WHICH IS THE PART TO READ TWICE.
+#
+# This measurement is noisy. In the project this gate comes from, two identical
+# 6-repeat runs of the same arm disagreed by up to 8 percentage points. So at 6
+# repeats a gate cannot honestly detect a regression smaller than roughly 7
+# points on a stable pipeline, and on a variable one — the stored control arm
+# here has a standard deviation of about 17 points — it cannot detect one
+# smaller than about 26.
+#
+# The gate does not hide this. It prints its detection floor on every run and
+# tells you the repeat count that would reach the margin you declared. Expect
+# that number to be large: closing from 26 points to 5 on that control arm needs
+# about 94 repeats per run, roughly 750 model calls per gate run instead of 48.
+#
+# The practical advice is to set --margin to something the run can actually see
+# and treat this as a gate against large, obvious destruction — the kind a
+# changed prompt or a swapped model causes — not as a precision instrument. A
+# gate that fires on noise gets switched off within a week, and a switched-off
+# gate protects nothing.

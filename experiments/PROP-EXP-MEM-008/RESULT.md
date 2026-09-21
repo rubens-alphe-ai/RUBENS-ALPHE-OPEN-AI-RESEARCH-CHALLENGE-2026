@@ -1,5 +1,8 @@
 # PROP-EXP-MEM-008 — Result
 
+
+> **Corrected 2026-09-21.** Some numbers below moved after a defect was found in the code that produced them. The verdict is unchanged. See [`docs/CORRECTIONS-2026-09-21.md`](../../docs/CORRECTIONS-2026-09-21.md) for every number that moved and why the stored files were not overwritten.
+
 **The instruction helps**, on all three documents, under the rule frozen in
 `PROTOCOL.md` before the first trial: at hop 3 the checklist keeps at least
 10 points more facts than a free summary, with the lower bound of the 95 %
