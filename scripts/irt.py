@@ -63,7 +63,11 @@ What is wrong with it, stated in advance rather than in a footnote:
 - Marginal maximum likelihood — integrating the abilities out against a
   population distribution — is the better estimator and is not this. It needs
   quadrature and an EM loop, and the reason it is not here is effort, not
-  judgement.
+  judgement. But it is not a clean fix for the question this module asks:
+  a population prior shrinks both fits towards a common distribution, and
+  shrinking two estimates towards the same place makes them agree. It would
+  buy precision at the cost of biasing the invariance test towards the answer
+  "invariant", which is the answer under examination.
 
 Standard library only, on purpose. No numpy. A stranger should be able to run
 this with a stock Python and no install, because that is the product.
@@ -96,7 +100,6 @@ import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from item_analysis import from_table  # noqa: E402  (the one CSV reader; not modified)

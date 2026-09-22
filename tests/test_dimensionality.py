@@ -275,6 +275,21 @@ class NoiseEndToEndTests(unittest.TestCase):
         self.assertEqual(report["factors_retained"], 0)
         self.assertNotIn("loadings", report)
         self.assertIsNone(report["reliability"]["omega_total"])
+        self.assertTrue(any("no factor" in note
+                            for note in report["reliability"]["notes"]))
+
+    def test_a_negative_alpha_is_explained_rather_than_printed_as_a_small_number(self) -> None:
+        # Items that disagree with each other drive alpha below zero, where it
+        # is no longer a proportion of anything and must not be read as one.
+        # A and B are exact opposites; C is unrelated to both. The total score
+        # barely moves while the items move a lot, which is what drives alpha
+        # below zero.
+        columns = {"A": [1.0, 0.0] * 30, "B": [0.0, 1.0] * 30,
+                   "C": [1.0, 1.0, 0.0, 0.0] * 15}
+        report = dm.analyse(rows_from(columns), list(columns), replicates=20, seed=6)
+        self.assertLess(report["reliability"]["alpha"], 0)
+        self.assertTrue(any("negative" in note
+                            for note in report["reliability"]["notes"]))
 
     def test_constant_items_are_excluded_from_the_count_and_named(self) -> None:
         columns = {"A": [1.0, 0.0, 1.0, 0.0, 1.0, 0.0], "B": [1.0] * 6,

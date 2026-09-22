@@ -453,6 +453,20 @@ def analyse(rows: list[dict], items: list[str], max_factors: int = 8,
     }
     report["one_factor_fit"] = {"heywood_clamps": one["heywood_clamps"],
                                 "converged": one["converged"]}
+    notes = []
+    if report["reliability"]["alpha"] is not None and report["reliability"]["alpha"] < 0:
+        # Alpha below zero is not a small reliability. It means the average
+        # covariance between items is negative — items disagreeing with each
+        # other — and the usual reading of alpha as a proportion does not apply.
+        notes.append("alpha is negative: the average covariance between items is "
+                     "negative, so this is not a low reliability but an absence of "
+                     "a common scale")
+    if retained == 0:
+        notes.append("omega_unidimensional is reported for comparison only; parallel "
+                     "analysis retained no factor, so there is no common factor for "
+                     "it to be the saturation of")
+    if notes:
+        report["reliability"]["notes"] = notes
     if retained >= 1:
         many = principal_axis(corr, retained)
         rotated = varimax(many["loadings"])
