@@ -72,5 +72,61 @@ class RealQuizTests(unittest.TestCase):
         self.assertTrue({"Q28", "Q29", "Q30"} <= top, top)
 
 
+class EffectiveLengthTests(unittest.TestCase):
+    """The number a buyer reads: items counted against items measuring."""
+
+    def test_constants_do_not_count_towards_what_a_test_measures_with(self) -> None:
+        per_item = [{"item": "A", "difficulty": 1.0, "discrimination": None},
+                    {"item": "B", "difficulty": 0.5, "discrimination": 0.6},
+                    {"item": "C", "difficulty": 0.5, "discrimination": 0.02}]
+        got = ia.effective_length(per_item)
+        self.assertEqual(got["items_counted"], 3)
+        self.assertEqual(got["items_carrying"], 1)
+        self.assertEqual(got["carrying_items"], ["B"])
+        self.assertIn("3 items that measures with 1", got["reading"])
+
+    def test_our_own_quiz_measures_with_a_fraction_of_what_it_counts(self) -> None:
+        folder = ROOT / "experiments" / "PROP-EXP-MEM-007" / "results" / "quiz"
+        rows, _key, rendered = ia.responses([folder])
+        items = [item["id"] for item in rendered if item["kind"] == "fact"]
+        got = ia.effective_length(ia.analyse(rows, items))
+        self.assertLess(got["items_carrying"], got["items_counted"] / 3)
+
+class TableInputTests(unittest.TestCase):
+    """Anyone's harness can emit three columns; almost none emit more."""
+
+    def write(self, text: str) -> Path:
+        folder = Path(tempfile.mkdtemp())
+        path = folder / "responses.csv"
+        path.write_text(text, encoding="utf-8")
+        return path
+
+    def test_a_three_column_table_is_read_into_trials(self) -> None:
+        path = self.write("trial,item,correct\n1,A,1\n1,B,0\n2,A,1\n2,B,1\n3,A,0\n3,B,1\n")
+        rows, items = ia.from_table(path)
+        self.assertEqual(items, ["A", "B"])
+        self.assertEqual(len(rows), 3)
+
+    def test_words_and_numbers_both_read_as_correctness(self) -> None:
+        path = self.write("run_id,question_id,is_correct\n1,A,true\n1,B,fail\n"
+                          "2,A,PASS\n2,B,0\n3,A,0.9\n3,B,no\n")
+        rows, _items = ia.from_table(path)
+        self.assertEqual(rows[0]["A"], 1)
+        self.assertEqual(rows[0]["B"], 0)
+
+    def test_a_trial_missing_an_item_is_dropped_not_scored_zero(self) -> None:
+        # Filling a zero would turn an unanswered item into a wrong one, which
+        # is the difference between a gap in the data and a failure.
+        path = self.write("trial,item,correct\n1,A,1\n1,B,1\n2,A,1\n3,A,1\n3,B,0\n")
+        rows, _items = ia.from_table(path)
+        self.assertEqual(len(rows), 2)
+
+    def test_a_table_without_the_columns_says_which_are_missing(self) -> None:
+        path = self.write("a,b,c\n1,2,3\n")
+        with self.assertRaises(SystemExit) as caught:
+            ia.from_table(path)
+        self.assertIn("no column named", str(caught.exception))
+
+
 if __name__ == "__main__":
     unittest.main()

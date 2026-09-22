@@ -40,6 +40,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -133,22 +134,118 @@ def analyse(rows: list[dict], items: list[str]) -> list[dict]:
     return out
 
 
+def effective_length(per_item: list[dict]) -> dict:
+    """How many items are doing the work, against how many are being counted.
+
+    A test reports its length in items. What it actually measures with is the
+    subset that varies *and* relates to the rest: an item everyone passes
+    contributes a constant, and a constant carries no information about anyone.
+
+    This project's own quiz declares thirty-two fact questions and measures with
+    five. That gap is the number worth reporting, because a length everyone
+    quotes and nobody checks is the easiest thing in a benchmark to be wrong
+    about.
+
+    It is a count, deliberately, not an estimate from a latent-trait model.
+    Fitting one to five varying items would produce a more impressive number
+    resting on less.
+    """
+    carrying = [row for row in per_item
+                if row["discrimination"] is not None and row["discrimination"] >= WEAK
+                and FLOOR < row["difficulty"] < CEILING]
+    constant = [row for row in per_item if row["difficulty"] >= CEILING or row["difficulty"] <= FLOOR]
+    return {"items_counted": len(per_item), "items_carrying": len(carrying),
+            "items_no_one_gets_wrong_or_right": len(constant),
+            "share_carrying_pct": round(100.0 * len(carrying) / len(per_item), 1) if per_item else 0.0,
+            "carrying_items": [row["item"] for row in carrying],
+            "reading": ("a test of %d items that measures with %d"
+                        % (len(per_item), len(carrying)))}
+
+
+def from_table(path: Path) -> tuple[list[dict], list[str]]:
+    """Per-item responses from a plain table, so this runs on anyone's data.
+
+    Three columns, named in a header row: a trial identifier, an item
+    identifier, and whether that trial got that item right. Every evaluation
+    harness can emit that, and almost none emit anything richer — which is the
+    reason most benchmarks cannot be checked this way at all.
+
+    Accepts `1/0`, `true/false`, `correct/incorrect`, `pass/fail`, `yes/no`.
+    """
+    import csv
+
+    truthy = {"1", "true", "t", "yes", "y", "correct", "pass", "right"}
+    falsy = {"0", "false", "f", "no", "n", "incorrect", "fail", "wrong"}
+    by_trial: dict[str, dict[str, int]] = {}
+    order: list[str] = []
+    with path.open(encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        if reader.fieldnames is None or len(reader.fieldnames) < 3:
+            raise SystemExit("%s needs a header row with trial, item and correct columns" % path)
+        names = {name.strip().lower(): name for name in reader.fieldnames}
+
+        def column(*candidates: str) -> str:
+            for candidate in candidates:
+                if candidate in names:
+                    return names[candidate]
+            raise SystemExit("%s has no column named any of %s; found %s"
+                             % (path, " / ".join(candidates), ", ".join(reader.fieldnames)))
+
+        trial_col = column("trial", "trial_id", "run", "run_id", "sample", "example_id")
+        item_col = column("item", "item_id", "question", "question_id", "task", "id")
+        right_col = column("correct", "is_correct", "score", "right", "pass", "result")
+        for line in reader:
+            value = str(line[right_col]).strip().lower()
+            if value in truthy:
+                right = 1
+            elif value in falsy:
+                right = 0
+            else:
+                try:
+                    right = 1 if float(value) >= 0.5 else 0
+                except ValueError:
+                    raise SystemExit("cannot read %r in column %r as correct or incorrect"
+                                     % (line[right_col], right_col))
+            trial, item = str(line[trial_col]), str(line[item_col])
+            if item not in order:
+                order.append(item)
+            by_trial.setdefault(trial, {})[item] = right
+    # A trial missing an item cannot be scored on it, and quietly filling a zero
+    # would turn an absent answer into a wrong one.
+    complete = [row for row in by_trial.values() if len(row) == len(order)]
+    dropped = len(by_trial) - len(complete)
+    if dropped:
+        print("# %d of %d trials did not answer every item and were dropped"
+              % (dropped, len(by_trial)), file=sys.stderr)
+    return complete, order
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--quiz-results", type=Path, nargs="+", required=True,
+    parser.add_argument("--quiz-results", type=Path, nargs="*", default=[],
                         help="one or more folders of stored reader answers; pooled")
+    parser.add_argument("--table", type=Path,
+                        help="a CSV of trial,item,correct — any harness can emit this")
     parser.add_argument("--kind", default="fact", choices=("fact", "absent", "all"))
     args = parser.parse_args()
 
-    rows, _key, rendered = responses(args.quiz_results)
+    if bool(args.table) == bool(args.quiz_results):
+        raise SystemExit("give either --table or --quiz-results, not both and not neither")
+    if args.table:
+        rows, items = from_table(args.table)
+        source = str(args.table)
+    else:
+        rows, _key, rendered = responses(args.quiz_results)
+        items = [item["id"] for item in rendered if args.kind == "all" or item["kind"] == args.kind]
+        source = ", ".join(str(folder) for folder in args.quiz_results)
     if len(rows) < 3:
         raise SystemExit("only %d trials found; item statistics need more than that" % len(rows))
-    items = [item["id"] for item in rendered if args.kind == "all" or item["kind"] == args.kind]
-    report = {"record_version": "RA-PSI-ITEMS-V1", "trials": len(rows), "items": len(items),
-              "kind": args.kind, "alpha": alpha(rows, items),
-              "per_item": analyse(rows, items)}
-    flagged = [row for row in report["per_item"] if row["flags"]]
-    report["flagged"] = len(flagged)
+    per_item = analyse(rows, items)
+    report = {"record_version": "RA-PSI-ITEMS-V1", "source": source, "trials": len(rows),
+              "items": len(items), "kind": args.kind if not args.table else "from table",
+              "alpha": alpha(rows, items), "effective_length": effective_length(per_item),
+              "per_item": per_item}
+    report["flagged"] = sum(1 for row in per_item if row["flags"])
     print(json.dumps(report, indent=2, ensure_ascii=False))
 
 
