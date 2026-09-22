@@ -1,0 +1,227 @@
+{
+  "record_version": "RA-PSI-DETECTION-V1",
+  "generating_model": "two-parameter logistic; ability ~ N(0,1); healthy items difficulty ~ U(-0.8,0.8), discrimination ~ U(0.9,1.8); responses drawn independently",
+  "limit": "real benchmarks violate the independence and single-ability assumptions above, so these are an upper bound on detection and a lower bound on false alarms; a real dataset can only be harder",
+  "thresholds_used": {
+    "floor": 0.05,
+    "ceiling": 0.95,
+    "weak": 0.2,
+    "note": "taken from item_analysis.py unchanged; not tuned here"
+  },
+  "planted_per_dataset": {
+    "miskeyed": 3,
+    "dead": 3,
+    "noise": 3
+  },
+  "seed": 20260922,
+  "by_respondents": [
+    {
+      "respondents": 20,
+      "items": 29,
+      "healthy_items": 20,
+      "replications": 500,
+      "detection": {
+        "miskeyed": {
+          "planted": 1500,
+          "found": 1464,
+          "rate": 0.976,
+          "interval_95": [
+            0.967,
+            0.983
+          ]
+        },
+        "dead": {
+          "planted": 1500,
+          "found": 1416,
+          "rate": 0.944,
+          "interval_95": [
+            0.931,
+            0.955
+          ]
+        },
+        "noise": {
+          "planted": 1500,
+          "found": 1196,
+          "rate": 0.797,
+          "interval_95": [
+            0.776,
+            0.817
+          ]
+        }
+      },
+      "false_alarm": {
+        "healthy_items_examined": 10000,
+        "healthy_items_flagged": 1439,
+        "rate": 0.144,
+        "interval_95": [
+          0.137,
+          0.151
+        ],
+        "note": "a flag on a healthy item is counted against the tool even when the flag states something true of that sample, because the buyer reads it as a defect in their test"
+      },
+      "effective_length": {
+        "items_truly_carrying": 20,
+        "mean_reported_carrying": 17.78,
+        "bias": -2.22,
+        "note": "negative bias means the report understates how much of the test measures, which costs the buyer items they did not need to lose"
+      },
+      "alpha_undefined_in_runs": 0
+    },
+    {
+      "respondents": 50,
+      "items": 29,
+      "healthy_items": 20,
+      "replications": 500,
+      "detection": {
+        "miskeyed": {
+          "planted": 1500,
+          "found": 1498,
+          "rate": 0.999,
+          "interval_95": [
+            0.995,
+            1.0
+          ]
+        },
+        "dead": {
+          "planted": 1500,
+          "found": 1385,
+          "rate": 0.923,
+          "interval_95": [
+            0.909,
+            0.936
+          ]
+        },
+        "noise": {
+          "planted": 1500,
+          "found": 1378,
+          "rate": 0.919,
+          "interval_95": [
+            0.904,
+            0.931
+          ]
+        }
+      },
+      "false_alarm": {
+        "healthy_items_examined": 10000,
+        "healthy_items_flagged": 505,
+        "rate": 0.051,
+        "interval_95": [
+          0.046,
+          0.055
+        ],
+        "note": "a flag on a healthy item is counted against the tool even when the flag states something true of that sample, because the buyer reads it as a defect in their test"
+      },
+      "effective_length": {
+        "items_truly_carrying": 20,
+        "mean_reported_carrying": 19.26,
+        "bias": -0.74,
+        "note": "negative bias means the report understates how much of the test measures, which costs the buyer items they did not need to lose"
+      },
+      "alpha_undefined_in_runs": 0
+    },
+    {
+      "respondents": 100,
+      "items": 29,
+      "healthy_items": 20,
+      "replications": 500,
+      "detection": {
+        "miskeyed": {
+          "planted": 1500,
+          "found": 1500,
+          "rate": 1.0,
+          "interval_95": [
+            0.997,
+            1.0
+          ]
+        },
+        "dead": {
+          "planted": 1500,
+          "found": 1477,
+          "rate": 0.985,
+          "interval_95": [
+            0.977,
+            0.99
+          ]
+        },
+        "noise": {
+          "planted": 1500,
+          "found": 1461,
+          "rate": 0.974,
+          "interval_95": [
+            0.965,
+            0.981
+          ]
+        }
+      },
+      "false_alarm": {
+        "healthy_items_examined": 10000,
+        "healthy_items_flagged": 154,
+        "rate": 0.015,
+        "interval_95": [
+          0.013,
+          0.018
+        ],
+        "note": "a flag on a healthy item is counted against the tool even when the flag states something true of that sample, because the buyer reads it as a defect in their test"
+      },
+      "effective_length": {
+        "items_truly_carrying": 20,
+        "mean_reported_carrying": 19.78,
+        "bias": -0.22,
+        "note": "negative bias means the report understates how much of the test measures, which costs the buyer items they did not need to lose"
+      },
+      "alpha_undefined_in_runs": 0
+    },
+    {
+      "respondents": 200,
+      "items": 29,
+      "healthy_items": 20,
+      "replications": 500,
+      "detection": {
+        "miskeyed": {
+          "planted": 1500,
+          "found": 1500,
+          "rate": 1.0,
+          "interval_95": [
+            0.997,
+            1.0
+          ]
+        },
+        "dead": {
+          "planted": 1500,
+          "found": 1498,
+          "rate": 0.999,
+          "interval_95": [
+            0.995,
+            1.0
+          ]
+        },
+        "noise": {
+          "planted": 1500,
+          "found": 1496,
+          "rate": 0.997,
+          "interval_95": [
+            0.993,
+            0.999
+          ]
+        }
+      },
+      "false_alarm": {
+        "healthy_items_examined": 10000,
+        "healthy_items_flagged": 25,
+        "rate": 0.003,
+        "interval_95": [
+          0.002,
+          0.004
+        ],
+        "note": "a flag on a healthy item is counted against the tool even when the flag states something true of that sample, because the buyer reads it as a defect in their test"
+      },
+      "effective_length": {
+        "items_truly_carrying": 20,
+        "mean_reported_carrying": 19.96,
+        "bias": -0.04,
+        "note": "negative bias means the report understates how much of the test measures, which costs the buyer items they did not need to lose"
+      },
+      "alpha_undefined_in_runs": 0
+    }
+  ]
+}
