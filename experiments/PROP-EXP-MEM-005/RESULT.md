@@ -1,5 +1,8 @@
 # PROP-EXP-MEM-005 — Result
 
+
+> **Effective length, measured 2026-09-22.** This quiz declares 32 fact questions and measures with about six: twenty-four are answered correctly by every reader in every trial. The effect below is real and its direction replicates, but it rests on a handful of items, and that is why a different reader moves its magnitude. See [docs/CORRECTIONS-2026-09-21.md](../../docs/CORRECTIONS-2026-09-21.md) and `scripts/item_analysis.py`.
+
 **Decision: INCONCLUSIVE** (`CONFIDENCE_INTERVAL_SPANS_THRESHOLD`), decided
 2026-09-18 under the rule frozen in `PROTOCOL.md` (commit 828dd6f, before the
 first trial).
