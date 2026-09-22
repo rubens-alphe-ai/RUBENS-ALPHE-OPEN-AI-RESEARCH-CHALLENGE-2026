@@ -24,7 +24,7 @@ class DiscriminationTests(unittest.TestCase):
         rows = rows_from([[1, 1, 0], [1, 0, 1], [1, 1, 1], [1, 0, 0]], items)
         report = {row["item"]: row for row in ia.analyse(rows, items)}
         self.assertEqual(report["A"]["difficulty"], 1.0)
-        self.assertIn("everyone passes it", report["A"]["flags"])
+        self.assertTrue(any("pass it" in flag for flag in report["A"]["flags"]))
         self.assertIsNone(report["A"]["discrimination"])
 
     def test_discrimination_excludes_the_item_from_the_score_it_is_compared_to(self) -> None:
@@ -107,12 +107,22 @@ class TableInputTests(unittest.TestCase):
         self.assertEqual(items, ["A", "B"])
         self.assertEqual(len(rows), 3)
 
-    def test_words_and_numbers_both_read_as_correctness(self) -> None:
+    def test_words_and_binary_numbers_both_read_as_correctness(self) -> None:
         path = self.write("run_id,question_id,is_correct\n1,A,true\n1,B,fail\n"
-                          "2,A,PASS\n2,B,0\n3,A,0.9\n3,B,no\n")
+                          "2,A,PASS\n2,B,0\n3,A,1\n3,B,no\n")
         rows, _items = ia.from_table(path)
         self.assertEqual(rows[0]["A"], 1)
         self.assertEqual(rows[0]["B"], 0)
+
+    def test_a_graded_score_is_refused_rather_than_rounded(self) -> None:
+        # Rounding a 1-to-5 rubric here put every item at difficulty 1.0 and
+        # told its owner they had a test measuring with nothing. A healthy
+        # instrument declared dead, silently, is the worst answer available.
+        path = self.write("trial,item,score\n1,A,4\n1,B,2\n2,A,5\n2,B,3\n3,A,3\n3,B,1\n")
+        with self.assertRaises(SystemExit) as caught:
+            ia.from_table(path)
+        self.assertIn("graded score", str(caught.exception))
+        self.assertIn("graded_items.py", str(caught.exception))
 
     def test_a_trial_missing_an_item_is_dropped_not_scored_zero(self) -> None:
         # Filling a zero would turn an unanswered item into a wrong one, which

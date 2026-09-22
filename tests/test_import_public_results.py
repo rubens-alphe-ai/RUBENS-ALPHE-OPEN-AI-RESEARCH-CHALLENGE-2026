@@ -157,7 +157,7 @@ class EndToEndShapeTests(unittest.TestCase):
         self.assertEqual(len(loaded), 3)
         report = {row["item"]: row for row in ia.analyse(loaded, items)}
         self.assertEqual(report["id0"]["difficulty"], 1.0)
-        self.assertIn("everyone passes it", report["id0"]["flags"])
+        self.assertTrue(any("pass it" in flag for flag in report["id0"]["flags"]))
 
 
 if __name__ == "__main__":

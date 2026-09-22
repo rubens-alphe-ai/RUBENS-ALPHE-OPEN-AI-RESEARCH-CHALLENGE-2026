@@ -116,9 +116,9 @@ def analyse(rows: list[dict], items: list[str]) -> list[dict]:
         without = alpha(rows, [q for q in items if q != item])
         flags = []
         if difficulty >= CEILING:
-            flags.append("everyone passes it")
+            flags.append("all but at most %d in 100 pass it" % round(100 * (1 - CEILING)))
         if difficulty <= FLOOR:
-            flags.append("nobody passes it")
+            flags.append("all but at most %d in 100 fail it" % round(100 * FLOOR))
         if discrimination is None:
             flags.append("no variance, discrimination undefined")
         elif discrimination < 0:
@@ -155,7 +155,7 @@ def effective_length(per_item: list[dict]) -> dict:
                 and FLOOR < row["difficulty"] < CEILING]
     constant = [row for row in per_item if row["difficulty"] >= CEILING or row["difficulty"] <= FLOOR]
     return {"items_counted": len(per_item), "items_carrying": len(carrying),
-            "items_no_one_gets_wrong_or_right": len(constant),
+            "items_all_but_a_few_answer_alike": len(constant),
             "share_carrying_pct": round(100.0 * len(carrying) / len(per_item), 1) if per_item else 0.0,
             "carrying_items": [row["item"] for row in carrying],
             "reading": ("a test of %d items that measures with %d"
@@ -201,11 +201,25 @@ def from_table(path: Path) -> tuple[list[dict], list[str]]:
             elif value in falsy:
                 right = 0
             else:
+                # Thresholding a graded score here was silent and destructive. A
+                # 1-to-5 rubric arrived as all ones: every item at difficulty
+                # 1.0, alpha undefined, and the report told its owner they had
+                # "a test of 8 items that measures with 0". A healthy instrument
+                # declared dead, with no warning, is the worst answer this tool
+                # can give — so a value that is neither a word for correctness
+                # nor exactly 0 or 1 is refused, with somewhere to go.
                 try:
-                    right = 1 if float(value) >= 0.5 else 0
+                    number = float(value)
                 except ValueError:
                     raise SystemExit("cannot read %r in column %r as correct or incorrect"
                                      % (line[right_col], right_col))
+                if number not in (0.0, 1.0):
+                    raise SystemExit(
+                        "column %r holds %r, which is a graded score rather than correct or "
+                        "incorrect. Rounding it here would report your instrument as dead when it "
+                        "is not. Use scripts/graded_items.py, which takes the scale range."
+                        % (right_col, line[right_col]))
+                right = int(number)
             trial, item = str(line[trial_col]), str(line[item_col])
             if item not in order:
                 order.append(item)
