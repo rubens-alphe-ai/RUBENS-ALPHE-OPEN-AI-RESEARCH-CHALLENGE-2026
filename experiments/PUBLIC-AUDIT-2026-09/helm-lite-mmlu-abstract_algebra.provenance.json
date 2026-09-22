@@ -1,0 +1,838 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM lite, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "run_filter": "mmlu:subject=abstract_algebra",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=abstract_algebra,method=multiple_choice_joint"
+  ],
+  "table": "experiments\\PUBLIC-AUDIT-2026-09\\helm-lite-mmlu-abstract_algebra.csv",
+  "rows": 10101,
+  "models": 91,
+  "items_common_to_every_model": 111,
+  "items_seen_at_all": 111,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=01-ai_yi-34b",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=01-ai_yi-34b/per_instance_stats.json",
+      "per_instance_stats_sha256": "e8c30f1a7da55dd3c83699d41db0f14eaac1f912d6eda3d1f6170848c2a111e9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=01-ai_yi-34b/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=01-ai_yi-6b",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=01-ai_yi-6b/per_instance_stats.json",
+      "per_instance_stats_sha256": "40db6f5a644a5efca67d84acfb49909a7dc493f359d2b82be7a6ff26f41d6e3d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=01-ai_yi-6b/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=01-ai_yi-large-preview",
+      "suite": "v1.5.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=01-ai_yi-large-preview/per_instance_stats.json",
+      "per_instance_stats_sha256": "566f281843d638ac582490bba8c08b907ed8e5a9f0d35b14afa06ba3b26bc323",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=01-ai_yi-large-preview/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=AlephAlpha_luminous-base",
+      "suite": "v1.0.0",
+      "model": "AlephAlpha_luminous-base",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=AlephAlpha_luminous-base/per_instance_stats.json",
+      "per_instance_stats_sha256": "03e636b0822553d8d03908fd27209e012db912b3c68b3a9354e5957177356d30",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=AlephAlpha_luminous-base/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=AlephAlpha_luminous-extended",
+      "suite": "v1.0.0",
+      "model": "AlephAlpha_luminous-extended",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=AlephAlpha_luminous-extended/per_instance_stats.json",
+      "per_instance_stats_sha256": "9f748d463232fc48ff589e26261204f9f14407b2d14161425ce8a12abcf2286e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=AlephAlpha_luminous-extended/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=AlephAlpha_luminous-supreme",
+      "suite": "v1.0.0",
+      "model": "AlephAlpha_luminous-supreme",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=AlephAlpha_luminous-supreme/per_instance_stats.json",
+      "per_instance_stats_sha256": "d88ae7c3b795841b411744faf0265a458d306e5a4db889326257c825f5e54a91",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=AlephAlpha_luminous-supreme/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=ai21_j2-grande",
+      "suite": "v1.0.0",
+      "model": "ai21_j2-grande",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=ai21_j2-grande/per_instance_stats.json",
+      "per_instance_stats_sha256": "e140ba457ef93d14ccaa85c69982cb56e32718445ed537580b89ee0c32e8e81d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=ai21_j2-grande/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=ai21_j2-jumbo",
+      "suite": "v1.0.0",
+      "model": "ai21_j2-jumbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=ai21_j2-jumbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "f486a20dc7cf413e3d0a9b50892d03ccfb61cc486873842948d7b9ab6ba6e156",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=ai21_j2-jumbo/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=ai21_jamba-1.5-large",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=ai21_jamba-1.5-large/per_instance_stats.json",
+      "per_instance_stats_sha256": "d29e2d9f7c693fee3730a9f38ebc3d4f38b2a5d2affe94e54eb6d80b7942ff47",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=ai21_jamba-1.5-large/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=ai21_jamba-1.5-mini",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=ai21_jamba-1.5-mini/per_instance_stats.json",
+      "per_instance_stats_sha256": "c287120528f9766d02b502cd2fbe8d488065046abb3db24992672acdc819910e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=ai21_jamba-1.5-mini/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=ai21_jamba-instruct",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=ai21_jamba-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "b14e8689881903586bb6bcaf6ed4c1b512e0da7c0afe2261243fef0833ed3ed9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=ai21_jamba-instruct/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=allenai_olmo-7b",
+      "suite": "v1.2.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=allenai_olmo-7b/per_instance_stats.json",
+      "per_instance_stats_sha256": "0ef2e7653f1f0a61631ee1003f2ab51c61e294b736caba5ed7c74efccbc43cc8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=allenai_olmo-7b/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=amazon_nova-lite-v1:0",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=amazon_nova-lite-v1:0/per_instance_stats.json",
+      "per_instance_stats_sha256": "4b9c2a334ed7c2a643e6baeaa650601f30b30803d0bc32d40ea24f19adb3e8a6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=amazon_nova-lite-v1:0/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=amazon_nova-micro-v1:0",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=amazon_nova-micro-v1:0/per_instance_stats.json",
+      "per_instance_stats_sha256": "c5207720fd395c5bf89ba39cf00094edefb916d3a224ff627f9e85b663f2e0a8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=amazon_nova-micro-v1:0/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=amazon_nova-pro-v1:0",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=amazon_nova-pro-v1:0/per_instance_stats.json",
+      "per_instance_stats_sha256": "19ebcc96f5f354a5177593bf28d773172efff4fd69aabab59ce266ea3ba56116",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=amazon_nova-pro-v1:0/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-2.0",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-2.0/per_instance_stats.json",
+      "per_instance_stats_sha256": "3fb40481acc2890ff9181692ce75859e644fc7bf3ec77371da8578e0e757c80b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-2.0/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-2.1",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-2.1/per_instance_stats.json",
+      "per_instance_stats_sha256": "2e776e98d5182a5f7667f01ab50c1b826499ab61e09d0170605534def48379aa",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-2.1/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.12.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022/per_instance_stats.json",
+      "per_instance_stats_sha256": "d29400cd3ae634be758b40d1f7251eb88234d61380d47a7f27ebd82c4e0aba82",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.12.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620/per_instance_stats.json",
+      "per_instance_stats_sha256": "388a8d516f50bf08ec75b41d479ed822a78c5da25f127eceb3e3a80b04ea53f4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022/per_instance_stats.json",
+      "per_instance_stats_sha256": "5f98385fc9625e0b54abeb39f9c958480cf0aa53bb035b84abddfd1ecc1bcf78",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307",
+      "suite": "v1.3.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307/per_instance_stats.json",
+      "per_instance_stats_sha256": "5a3f23048dbaa556d09a7b106751de1bc7343847a0196b2db28d2164e65a876d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229",
+      "suite": "v1.3.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229/per_instance_stats.json",
+      "per_instance_stats_sha256": "580953cf0b283a32bc4c5d0d39058ebdfe55e6b3afe8cdec474d056de38f52fd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229",
+      "suite": "v1.3.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229/per_instance_stats.json",
+      "per_instance_stats_sha256": "dfc021279148a0d6bd660f9fab0647c9f6f0a1d41414cd3566bf6e36aa50bb1f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-instant-1.2",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-instant-1.2/per_instance_stats.json",
+      "per_instance_stats_sha256": "9d4e2d0435f27a55c8f53938e552c959b28d12869c8ac3b8038fb46b31e76167",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-instant-1.2/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-v1.3",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-v1.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-v1.3/per_instance_stats.json",
+      "per_instance_stats_sha256": "e1966d9130713d58e294651c05b368e04be3b4641d31d3a5389d3f9a878f2cda",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=anthropic_claude-v1.3/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=cohere_command",
+      "suite": "v1.0.0",
+      "model": "cohere_command",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=cohere_command/per_instance_stats.json",
+      "per_instance_stats_sha256": "4cb4edb8ade05b6a00c373bcfa4df3108ced59d5900f607db0d98793a1525b22",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=cohere_command/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=cohere_command-light",
+      "suite": "v1.0.0",
+      "model": "cohere_command-light",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=cohere_command-light/per_instance_stats.json",
+      "per_instance_stats_sha256": "edfe6ec46b2e540f0ed3f03e2ddd7e0e163c1e5195d299fce56f09deb54b58a6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=cohere_command-light/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=cohere_command-r",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=cohere_command-r/per_instance_stats.json",
+      "per_instance_stats_sha256": "2c4bc9f68b75f17f9cd08a10706d554f1df5b6ae36979ac0fadfbd1a4fc00ac3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=cohere_command-r/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=cohere_command-r-plus",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=cohere_command-r-plus/per_instance_stats.json",
+      "per_instance_stats_sha256": "58060440ec1e128d5af618c58de46ee3895dde6c4e2a779163bf5d9b060b7111",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=cohere_command-r-plus/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=databricks_dbrx-instruct",
+      "suite": "v1.3.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=databricks_dbrx-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "730675e2276c46fb85bdd3d9bc8a5eccdd38cd1f294c5a0afc26b78b1413da9a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=databricks_dbrx-instruct/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat",
+      "suite": "v1.3.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat/per_instance_stats.json",
+      "per_instance_stats_sha256": "eb3ee1e0dc3ca556a802a1e7defb245b5bd7732803e1c5d8aceb556a50d7b0a7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3/per_instance_stats.json",
+      "per_instance_stats_sha256": "9457b09d6e04b9c9f50e7d8167f28d53e947861e3d6740ac296cfb42602bec09",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemini-1.0-pro-002",
+      "suite": "v1.5.0",
+      "model": "google_gemini-1.0-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemini-1.0-pro-002/per_instance_stats.json",
+      "per_instance_stats_sha256": "0ffc8d41bced6e3b458898a979ab3f689f4ecce6dfeb93b6f3fe07096efdee0e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemini-1.0-pro-002/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemini-1.5-flash-001",
+      "suite": "v1.5.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemini-1.5-flash-001/per_instance_stats.json",
+      "per_instance_stats_sha256": "3113c85a3c062119bd1408a4644c2e07f73cbe78fa2d8f146948b19fca3218fc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemini-1.5-flash-001/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemini-1.5-flash-002",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemini-1.5-flash-002/per_instance_stats.json",
+      "per_instance_stats_sha256": "191795ce52b4af280b2782cd79193b7312848d668084c47e5ce94b4b727878c9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemini-1.5-flash-002/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemini-1.5-pro-001",
+      "suite": "v1.5.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemini-1.5-pro-001/per_instance_stats.json",
+      "per_instance_stats_sha256": "829a894129cb1a45db246c7970c8a05da6910cbade04e1db66d9b83769dda5cf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemini-1.5-pro-001/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemini-1.5-pro-002",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemini-1.5-pro-002/per_instance_stats.json",
+      "per_instance_stats_sha256": "589d38a971055e89479a772fb23529133bc30f831c9cb55702f2a884cb8e0824",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemini-1.5-pro-002/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.12.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp/per_instance_stats.json",
+      "per_instance_stats_sha256": "35f7b15344a0f35917d8c596f0b8c9969ddd07abf11ae04997f4050d27b7772c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.12.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemma-2-27b-it",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b-it",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemma-2-27b-it/per_instance_stats.json",
+      "per_instance_stats_sha256": "4b9dbd17c5d2d6182d866c48e9ace2cb907e4421f217274504fc0d3890768842",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemma-2-27b-it/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemma-2-9b-it",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b-it",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemma-2-9b-it/per_instance_stats.json",
+      "per_instance_stats_sha256": "228e23f7f8024072b993ef5dff7e4e14b8e6d84f3eed981428aab6cc3751c9c7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemma-2-9b-it/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemma-7b",
+      "suite": "v1.2.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemma-7b/per_instance_stats.json",
+      "per_instance_stats_sha256": "0e076b758bada4bde86ea3e40e14ca74532b74e8eada51b5c6b8b7ec17e18229",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_gemma-7b/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_text-bison@001",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_text-bison@001/per_instance_stats.json",
+      "per_instance_stats_sha256": "7021260a125774194c49aa906d0efcc6709515ce8f227912c5e2ca5a559212a4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_text-bison@001/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_text-unicorn@001",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_text-unicorn@001/per_instance_stats.json",
+      "per_instance_stats_sha256": "f439aec4a7f1e86a615a0dee2b5e232c8233f894aef2f5c3003c1f3d807ce93b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=google_text-unicorn@001/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-2-13b",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-2-13b/per_instance_stats.json",
+      "per_instance_stats_sha256": "55a44e82bd9d1f5f5ae5c8696cd83fd019b56eab5d7481468ee597b4168c7af8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-2-13b/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-2-70b",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-2-70b/per_instance_stats.json",
+      "per_instance_stats_sha256": "c386b52daa6a13465838c46a3a5a99fd2a948608c37ed6b86626c3a2517dbbad",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-2-70b/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-2-7b",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-2-7b/per_instance_stats.json",
+      "per_instance_stats_sha256": "2c17e28a764af2175b790270ea621db08bdab50f3d79d4d910220b4cb6e65fe2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-2-7b/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3-70b",
+      "suite": "v1.2.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3-70b/per_instance_stats.json",
+      "per_instance_stats_sha256": "4853ae52c292b354bc18bfdc4293781afe664457a4d9096e28d0f8310ddd7535",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3-70b/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3-8b",
+      "suite": "v1.2.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3-8b/per_instance_stats.json",
+      "per_instance_stats_sha256": "a2bcaca1c7949889dfeb6cd14de2e5a7f1291a010b1f2eee3884bded5d018901",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3-8b/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "fd8e2239d7ce1449bd5f0b23ab405c82996c9ec59916a19c740bbd290a04ff63",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "fba85db7890f698da5ff09894d5777a250a4465d764eed4bc8e068ec0b860c18",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "b0681529faefa2a1a30f0663724ea3592b45990781ea4b3d2a8babbaa4d5c642",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "16b6afbbcaecd019e6769ba70cf94ca9da38b9b2c5e4574a8fef8749ac7471f5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "be06d4c3a0750f9fafe11d6268144aaff6289a9ff8cfb7565a0255745043cd73",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.11.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "49d6c3738e26900b8e8dc21a0e6e8673021b905e93276780bb0ff5ec6c6c1778",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.11.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-65b",
+      "suite": "v1.0.0",
+      "model": "meta_llama-65b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-65b/per_instance_stats.json",
+      "per_instance_stats_sha256": "af3c2d582532e30f15b2fae42fcdeda3753dd4db289e07c1645256b0a25aab14",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=meta_llama-65b/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=microsoft_phi-2",
+      "suite": "v1.1.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.1.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=microsoft_phi-2/per_instance_stats.json",
+      "per_instance_stats_sha256": "70a963dbea4306b0414e9e31cc9b340f2595ea9703e04b05b55b19d4da3ae979",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.1.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=microsoft_phi-2/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "cb1e98fa76b91e27e14ecf7a56c58b82842403ee35dfcb34fbc72a9a63407fe9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "e045296b5c71b802a1f91016cc43182d53ba617f22f2b2387440f570b1ebf40e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3/per_instance_stats.json",
+      "per_instance_stats_sha256": "93cd6d7a874dd06e16245145264d528276130c7efc588f13d37f7d46bb440e81",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1/per_instance_stats.json",
+      "per_instance_stats_sha256": "9b1b4008915d9f3c97944255ba22e32557bd32695223bd10038b619e436afef1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mistral-large-2402",
+      "suite": "v1.3.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mistral-large-2402/per_instance_stats.json",
+      "per_instance_stats_sha256": "611fb111a73c26c9d9d71eb4cfc85c3c406cbb0604ebb7fa3aaec2c03c651f01",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mistral-large-2402/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mistral-large-2407",
+      "suite": "v1.6.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mistral-large-2407/per_instance_stats.json",
+      "per_instance_stats_sha256": "c5d57c12eb2de69fc57c2616e5500d7db549a0cc5de0364bf10bbae86db613da",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mistral-large-2407/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mistral-medium-2312",
+      "suite": "v1.1.0",
+      "model": "mistralai_mistral-medium-2312",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.1.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mistral-medium-2312/per_instance_stats.json",
+      "per_instance_stats_sha256": "54d6e5acd73061f99f921a7927b8cf9e4528465e3054e34f833f58173b0ca56b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.1.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mistral-medium-2312/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mistral-small-2402",
+      "suite": "v1.3.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mistral-small-2402/per_instance_stats.json",
+      "per_instance_stats_sha256": "6f40e3322beb4064d25b0b37824f47612979355639c981115035aad80f7c63b2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mistral-small-2402/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mixtral-8x22b",
+      "suite": "v1.2.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mixtral-8x22b/per_instance_stats.json",
+      "per_instance_stats_sha256": "7d7427cc21fed582f8be0d392ab89a450f69cd294fc2261afe34cbfd35c1b046",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mixtral-8x22b/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen/per_instance_stats.json",
+      "per_instance_stats_sha256": "aedbed100a68aac99af5d3fe5d1010108ca0832bd8bdd8570029de4657e838f3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407",
+      "suite": "v1.6.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407/per_instance_stats.json",
+      "per_instance_stats_sha256": "dd7ef03f5cf9c32d4321dda9caea3c97d5e345234f24d17fad6c66dd6de80b59",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0613",
+      "suite": "v1.0.0",
+      "model": "openai_gpt-3.5-turbo-0613",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0613/per_instance_stats.json",
+      "per_instance_stats_sha256": "1f7c7c88a5fb4e1ed4db17e645b143119353a7b7c724ab2c17a251add7b87039",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0613/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_gpt-4-0613",
+      "suite": "v1.0.0",
+      "model": "openai_gpt-4-0613",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_gpt-4-0613/per_instance_stats.json",
+      "per_instance_stats_sha256": "217ed4af3b1f29f5beb7ab9b70b7f0995d89d306f2358076ad3f2fa2926f4fcd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_gpt-4-0613/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_gpt-4-1106-preview",
+      "suite": "v1.0.0",
+      "model": "openai_gpt-4-1106-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_gpt-4-1106-preview/per_instance_stats.json",
+      "per_instance_stats_sha256": "2d8864b4b17def0d4f2adfdbb6f059fd2396d3d5cb1c5353939e1b1f804e40c3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_gpt-4-1106-preview/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_gpt-4-turbo-2024-04-09",
+      "suite": "v1.4.0",
+      "model": "openai_gpt-4-turbo-2024-04-09",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_gpt-4-turbo-2024-04-09/per_instance_stats.json",
+      "per_instance_stats_sha256": "f872d5d170f2db5e53f19db9905e6735b423511df4027cf01958188f8aeade18",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_gpt-4-turbo-2024-04-09/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_gpt-4o-2024-05-13",
+      "suite": "v1.4.0",
+      "model": "openai_gpt-4o-2024-05-13",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_gpt-4o-2024-05-13/per_instance_stats.json",
+      "per_instance_stats_sha256": "4d4217f78725380a4b0a75a385a529bc4061c4e68ab143e7a63025b4113aebff",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_gpt-4o-2024-05-13/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_gpt-4o-2024-08-06",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-4o-2024-08-06",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_gpt-4o-2024-08-06/per_instance_stats.json",
+      "per_instance_stats_sha256": "57607f89cb27d5893204c080ec029d589e9270c22dbb8d953d32fdeb0f2370b5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_gpt-4o-2024-08-06/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_gpt-4o-mini-2024-07-18",
+      "suite": "v1.6.0",
+      "model": "openai_gpt-4o-mini-2024-07-18",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_gpt-4o-mini-2024-07-18/per_instance_stats.json",
+      "per_instance_stats_sha256": "c6b91b74a3ea10fb1682242fc57cc4cb89303cfae52363032fb89c4f0c9f6bb6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_gpt-4o-mini-2024-07-18/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_text-davinci-002",
+      "suite": "v1.0.0",
+      "model": "openai_text-davinci-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_text-davinci-002/per_instance_stats.json",
+      "per_instance_stats_sha256": "e859b887650b4dd068c872dd968b1d8982c5269dbbfb00a9d2db3feb328fcfce",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_text-davinci-002/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_text-davinci-003",
+      "suite": "v1.0.0",
+      "model": "openai_text-davinci-003",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_text-davinci-003/per_instance_stats.json",
+      "per_instance_stats_sha256": "8629726f1ec90229844fdcafbc0ff8b4ade9a160645c31d638273e2899ad97d7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=openai_text-davinci-003/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen1.5-110b-chat",
+      "suite": "v1.4.0",
+      "model": "qwen_qwen1.5-110b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen1.5-110b-chat/per_instance_stats.json",
+      "per_instance_stats_sha256": "5180a013359f9c979d35e380f7b33c00ecae5fcd9fdfdb2f0ecbc1c5af904fcb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen1.5-110b-chat/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen1.5-14b",
+      "suite": "v1.2.0",
+      "model": "qwen_qwen1.5-14b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen1.5-14b/per_instance_stats.json",
+      "per_instance_stats_sha256": "39a63ca7445112aada718880b2d3c0d681aae34549608cb6c221bc0eab02e610",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen1.5-14b/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen1.5-32b",
+      "suite": "v1.2.0",
+      "model": "qwen_qwen1.5-32b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen1.5-32b/per_instance_stats.json",
+      "per_instance_stats_sha256": "aadb9c867581d1f55ecd8285cc143ec48799d8227623bcdb22036800417af4bb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen1.5-32b/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen1.5-72b",
+      "suite": "v1.2.0",
+      "model": "qwen_qwen1.5-72b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen1.5-72b/per_instance_stats.json",
+      "per_instance_stats_sha256": "17c636a8ad368fea167cc721546166df6e54f0ac57bd96d21277a38a24009f8e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen1.5-72b/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen1.5-7b",
+      "suite": "v1.2.0",
+      "model": "qwen_qwen1.5-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen1.5-7b/per_instance_stats.json",
+      "per_instance_stats_sha256": "5d7c047d6fde93d95fc9edf8f76b66391af1e47735a7f6d546996da048fb9b4f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen1.5-7b/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen2-72b-instruct",
+      "suite": "v1.4.0",
+      "model": "qwen_qwen2-72b-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen2-72b-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "d212bc3f14bacc578d5c002a69f664e2b3ba9149772dbc237b4151ea0cb2a184",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen2-72b-instruct/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen2.5-72b-instruct-turbo",
+      "suite": "v1.9.0",
+      "model": "qwen_qwen2.5-72b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen2.5-72b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "8eee449c7b5f854693dd06b174e6b396d4b891c8426382ba443fb1c3202cbdec",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen2.5-72b-instruct-turbo/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen2.5-7b-instruct-turbo",
+      "suite": "v1.9.0",
+      "model": "qwen_qwen2.5-7b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen2.5-7b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "597e89450bb58e0671264b48842f3aa47b3e64ecb94030edf6b7aea8ca329af3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=qwen_qwen2.5-7b-instruct-turbo/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=snowflake_snowflake-arctic-instruct",
+      "suite": "v1.4.0",
+      "model": "snowflake_snowflake-arctic-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=snowflake_snowflake-arctic-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "0cd57380360b2da5ae0d045048401831c2332e698aeeee25cd84df69f9024536",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=snowflake_snowflake-arctic-instruct/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=tiiuae_falcon-40b",
+      "suite": "v1.0.0",
+      "model": "tiiuae_falcon-40b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=tiiuae_falcon-40b/per_instance_stats.json",
+      "per_instance_stats_sha256": "048e8d0a324018a003a26992b7ff845dcff3781527d5c38c4de3d54e1012a57e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=tiiuae_falcon-40b/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=tiiuae_falcon-7b",
+      "suite": "v1.0.0",
+      "model": "tiiuae_falcon-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=tiiuae_falcon-7b/per_instance_stats.json",
+      "per_instance_stats_sha256": "00cb0f195df6971090f9e061d73d62510595435efdd98253150e10382e3bac5a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=tiiuae_falcon-7b/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=upstage_solar-pro-241126",
+      "suite": "v1.11.0",
+      "model": "upstage_solar-pro-241126",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.11.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=upstage_solar-pro-241126/per_instance_stats.json",
+      "per_instance_stats_sha256": "d0a25e704ab4e1f58e4047a5104db30ca675b168b636b999870fcda5494efb38",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.11.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=upstage_solar-pro-241126/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=writer_palmyra-x-004",
+      "suite": "v1.8.0",
+      "model": "writer_palmyra-x-004",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=writer_palmyra-x-004/per_instance_stats.json",
+      "per_instance_stats_sha256": "b07bc49ac4ac81e9b2942a7771515d479c7ede444642417118188703ec235510",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=writer_palmyra-x-004/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=writer_palmyra-x-v2",
+      "suite": "v1.0.0",
+      "model": "writer_palmyra-x-v2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=writer_palmyra-x-v2/per_instance_stats.json",
+      "per_instance_stats_sha256": "014d832e18e12d5a4376584f1973b091196b5ff70ff69d801aafd6ac73a7016b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=writer_palmyra-x-v2/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    },
+    {
+      "run": "mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=writer_palmyra-x-v3",
+      "suite": "v1.0.0",
+      "model": "writer_palmyra-x-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=writer_palmyra-x-v3/per_instance_stats.json",
+      "per_instance_stats_sha256": "0936764d057c167b04e5d692da14231fc537cd54a9b63b937805cc323666a40c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=abstract_algebra,method=multiple_choice_joint,model=writer_palmyra-x-v3/instances.json",
+      "instances_sha256": "cb4aaab601791e6f242cd8943c96e7c1ce821cb7a753044edec1c62e18fef51a"
+    }
+  ]
+}

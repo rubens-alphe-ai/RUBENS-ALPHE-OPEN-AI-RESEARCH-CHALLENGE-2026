@@ -1,0 +1,838 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM lite, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "run_filter": "mmlu:subject=econometrics",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=econometrics,method=multiple_choice_joint"
+  ],
+  "table": "experiments\\PUBLIC-AUDIT-2026-09\\helm-lite-mmlu-econometrics.csv",
+  "rows": 11466,
+  "models": 91,
+  "items_common_to_every_model": 126,
+  "items_seen_at_all": 126,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=01-ai_yi-34b",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=01-ai_yi-34b/per_instance_stats.json",
+      "per_instance_stats_sha256": "b4a028873f23b8dbdbdbb41e98b134ac6d929ce9fd3b0dcf0c545c74daaba931",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=01-ai_yi-34b/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=01-ai_yi-6b",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=01-ai_yi-6b/per_instance_stats.json",
+      "per_instance_stats_sha256": "daa2ba8383499699a3ca9cc5aa01a26d1349c3122ca1a43844e7b22bf6275b0f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=01-ai_yi-6b/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=01-ai_yi-large-preview",
+      "suite": "v1.5.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=01-ai_yi-large-preview/per_instance_stats.json",
+      "per_instance_stats_sha256": "f35596de0d66793c62364ea16ea97a6b68c73164d65f2331e2f354b55d52ab1a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=01-ai_yi-large-preview/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=AlephAlpha_luminous-base",
+      "suite": "v1.0.0",
+      "model": "AlephAlpha_luminous-base",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=AlephAlpha_luminous-base/per_instance_stats.json",
+      "per_instance_stats_sha256": "681f8d6612ed8cab04822771c00335ed1d3a0cf2c0bada29da4c4edb71883610",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=AlephAlpha_luminous-base/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=AlephAlpha_luminous-extended",
+      "suite": "v1.0.0",
+      "model": "AlephAlpha_luminous-extended",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=AlephAlpha_luminous-extended/per_instance_stats.json",
+      "per_instance_stats_sha256": "a79a85eac9b89096f3f39ca24a004d386862e141ae5369fe03b1c9c9a0d2aaf5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=AlephAlpha_luminous-extended/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=AlephAlpha_luminous-supreme",
+      "suite": "v1.0.0",
+      "model": "AlephAlpha_luminous-supreme",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=AlephAlpha_luminous-supreme/per_instance_stats.json",
+      "per_instance_stats_sha256": "73bdfe4d59a789fe709d6d24a4e8c6c074b57e01188bf4fdcd1743429440dcbf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=AlephAlpha_luminous-supreme/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=ai21_j2-grande",
+      "suite": "v1.0.0",
+      "model": "ai21_j2-grande",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=ai21_j2-grande/per_instance_stats.json",
+      "per_instance_stats_sha256": "fdf366380ac7d426fa1cd6dd8c4c5d70846934c01aff726a013f043571d8686e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=ai21_j2-grande/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=ai21_j2-jumbo",
+      "suite": "v1.0.0",
+      "model": "ai21_j2-jumbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=ai21_j2-jumbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "9152d1d16ca4531e6e98abd280ea6e8576a187a2a24662a84c775331f4004c0d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=ai21_j2-jumbo/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=ai21_jamba-1.5-large",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=ai21_jamba-1.5-large/per_instance_stats.json",
+      "per_instance_stats_sha256": "5b8edcfb64bcf0a79f911489b8bd6451f8c3495b2aa2b3ab94d63807ce5414a1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=ai21_jamba-1.5-large/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini/per_instance_stats.json",
+      "per_instance_stats_sha256": "a983850fc0ad1a4045f23e8eeaf893fbf39ed751cd8832c9700443cc592dc3c1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=ai21_jamba-instruct",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=ai21_jamba-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "be86e789567f33a415dc46309454488d03e7d33ebcd839a4264b18899d8a0b35",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=ai21_jamba-instruct/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=allenai_olmo-7b",
+      "suite": "v1.2.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=allenai_olmo-7b/per_instance_stats.json",
+      "per_instance_stats_sha256": "e109b342770cd61aecb842bff5dcda7b1f53938d3966695d1e8e00b7cf021049",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=allenai_olmo-7b/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0/per_instance_stats.json",
+      "per_instance_stats_sha256": "228755a181b3018d88d2e3d2d29740d4b2c524bcb2719706f2232d8970bb08f1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0/per_instance_stats.json",
+      "per_instance_stats_sha256": "f6928511beb555fd95d2f90d4b7f9060475c8814bca0e7a45be11c3033bc0bee",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0/per_instance_stats.json",
+      "per_instance_stats_sha256": "c2a9f32d4c7c4f0eaf1835032773b82e3a0bd76dabcf7fb3546cfa87398ce12c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-2.0",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-2.0/per_instance_stats.json",
+      "per_instance_stats_sha256": "593ee9b63f4a35cb847c3e8b2fe1c6c206bf24088cb5df0566180ca6e4cdcf8f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-2.0/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-2.1",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-2.1/per_instance_stats.json",
+      "per_instance_stats_sha256": "11dc5ce5056458d12e3483246d022ccf90711e4ffad8613f55dc28742a526c7d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-2.1/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.12.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022/per_instance_stats.json",
+      "per_instance_stats_sha256": "6e95f21689a8c83fe380fed08d1512e5130e3f69ca227db48429d0b6ab6c83ee",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.12.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620/per_instance_stats.json",
+      "per_instance_stats_sha256": "baeeae3ff7172c7d30a4b353dfa05aecc718f0a7aca13257e5fcb0994b81acb8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022/per_instance_stats.json",
+      "per_instance_stats_sha256": "c7b974124c8be958f4f737033ca178240d0293ec3ffd4ff9b4ad3faff87550a9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307",
+      "suite": "v1.3.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307/per_instance_stats.json",
+      "per_instance_stats_sha256": "8066fa155605090ede189cd780a51d8006aa56056e5559d11b9b9901e2390a82",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229",
+      "suite": "v1.3.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229/per_instance_stats.json",
+      "per_instance_stats_sha256": "328ff2510393602a9d2b10abeac4af21097476fe542750c4826f2c83efd48615",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229",
+      "suite": "v1.3.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229/per_instance_stats.json",
+      "per_instance_stats_sha256": "ea067bf3e2302878e6f8b8000c51ef1b83d2281043652742d010fb2d3a2bbd04",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2/per_instance_stats.json",
+      "per_instance_stats_sha256": "b6dbf24190de67ee028bb092c2c40b1f9173574a9fbf71e3ed5a6cd7a55455b3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-v1.3",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-v1.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-v1.3/per_instance_stats.json",
+      "per_instance_stats_sha256": "971b7701cf4e7ef894a800ef45afeb2cb654da46e40bcac0f8447805880ab89d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=anthropic_claude-v1.3/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=cohere_command",
+      "suite": "v1.0.0",
+      "model": "cohere_command",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=cohere_command/per_instance_stats.json",
+      "per_instance_stats_sha256": "ae13bf454e93749e1d87fe59a8b80ab5feca2ed6dac2940c3ef18719fc2db288",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=cohere_command/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=cohere_command-light",
+      "suite": "v1.0.0",
+      "model": "cohere_command-light",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=cohere_command-light/per_instance_stats.json",
+      "per_instance_stats_sha256": "63a911d89a713fb945933a75b2418f419e093c8f5df621f74038f37444b7b102",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=cohere_command-light/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=cohere_command-r",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=cohere_command-r/per_instance_stats.json",
+      "per_instance_stats_sha256": "67732f4230c1ed678449079ece97f7e2d7f098210c017a6cd7f2e5d4bf55135b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=cohere_command-r/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=cohere_command-r-plus",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=cohere_command-r-plus/per_instance_stats.json",
+      "per_instance_stats_sha256": "267e6f2241a23db0207ea1216a2b00cde57d3139db4477315152d65dc100c5fd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=cohere_command-r-plus/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=databricks_dbrx-instruct",
+      "suite": "v1.3.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=databricks_dbrx-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "3006be587fb72537317fcb708f52d20829a722dd1311a71c13d5fbb84d85df38",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=databricks_dbrx-instruct/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat",
+      "suite": "v1.3.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat/per_instance_stats.json",
+      "per_instance_stats_sha256": "7cc3182eec2a051b366e4b947ba3c2a01fe65ea80879e69aebf04801d89b3051",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3/per_instance_stats.json",
+      "per_instance_stats_sha256": "eeb2d93f44cb27c35471df830a9bb5c4c12a2c1ddd76df5ed3435d2cc504a109",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemini-1.0-pro-002",
+      "suite": "v1.5.0",
+      "model": "google_gemini-1.0-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemini-1.0-pro-002/per_instance_stats.json",
+      "per_instance_stats_sha256": "4b6b6ffb42dae6a8b5c7b9fc55facaf6cdb11b5669af05b6aaf4729874d362fd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemini-1.0-pro-002/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001",
+      "suite": "v1.5.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001/per_instance_stats.json",
+      "per_instance_stats_sha256": "4dac78c961cf028433d83096a81b7e49d33e2097522eee62853dd9a93563f766",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002/per_instance_stats.json",
+      "per_instance_stats_sha256": "c9c0371f8a73f9c47cb24d81ec7c83ffa1692d89f428c531da1d957947544123",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001",
+      "suite": "v1.5.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001/per_instance_stats.json",
+      "per_instance_stats_sha256": "9b2891bfa15506af79a90ed0a7a12b10e4b9c63daff7c8ba739fe9b728abb8c5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002/per_instance_stats.json",
+      "per_instance_stats_sha256": "f318fd416d66750a8f7e4413919e128b76e32be8458f84b5bbd075785b6794c8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.12.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp/per_instance_stats.json",
+      "per_instance_stats_sha256": "7c6dd97bc7e768ed032cb96cb6f0192f6fbddaa0fe4402bfce47b527562b4517",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.12.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemma-2-27b-it",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b-it",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemma-2-27b-it/per_instance_stats.json",
+      "per_instance_stats_sha256": "1863658f902891a7daa6ed0a58c0d00a35f945783e2693a8ea9740bda44221b6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemma-2-27b-it/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemma-2-9b-it",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b-it",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemma-2-9b-it/per_instance_stats.json",
+      "per_instance_stats_sha256": "90cbd846eab12128fb0d5dbe0dbfa214cdf7b29f624c852482bb5349b6262317",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemma-2-9b-it/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemma-7b",
+      "suite": "v1.2.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemma-7b/per_instance_stats.json",
+      "per_instance_stats_sha256": "50216cdd4bd3f2b188c204a5d04b42baf82c66651b8f0a246c583de66b8b0278",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_gemma-7b/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=google_text-bison@001",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_text-bison@001/per_instance_stats.json",
+      "per_instance_stats_sha256": "2d43816e4e4f5ea3559eb9ee8faed1f3c2f3b42a60798ba70e156fbeb1388055",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_text-bison@001/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=google_text-unicorn@001",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_text-unicorn@001/per_instance_stats.json",
+      "per_instance_stats_sha256": "4544cf4b23f99c0533d4765ac7b08b6cac46ee07a1985e9fb81940ea2bf76156",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=google_text-unicorn@001/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-2-13b",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-2-13b/per_instance_stats.json",
+      "per_instance_stats_sha256": "9c6159a0434d7867d81803af73340705bc2d417f7816145afa6a5bfdf3a4b79b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-2-13b/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-2-70b",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-2-70b/per_instance_stats.json",
+      "per_instance_stats_sha256": "fcdbb611e514e2e9032196f0a14568d8203cd017860e477c2f579780a300e08e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-2-70b/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-2-7b",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-2-7b/per_instance_stats.json",
+      "per_instance_stats_sha256": "292e1dc351c4e3d5a9cfaf22a77a50237c6a5988d2937095dfc9cee3f83107bc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-2-7b/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3-70b",
+      "suite": "v1.2.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3-70b/per_instance_stats.json",
+      "per_instance_stats_sha256": "0011b6b83ac016c909da1d6e83b5b42ea22de5de088b5e70e73ff2878b7487b9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3-70b/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3-8b",
+      "suite": "v1.2.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3-8b/per_instance_stats.json",
+      "per_instance_stats_sha256": "4716efb04125995b2f3073a4819bfc7561dae0d13e0d0dfcf483b4f64d3e88f0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3-8b/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "635ebcfbfde5f55e9de68ef29099a43e25e633dfd344b163add129e050ef7756",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "75439ffdc6816833a58e8c17399fa6d01f12279703669a20e3cfd8c2da7fd612",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "2fcc67c214662a7ef2ed433ec2c71718fd3fbf08042977f87f2cba3b464886e0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "18843af41a9af970e552ae74d0d47b093190abd450903fc4759a9109ec19ad80",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "f287648351036cee335e2a06ed0edbe8c065f8f80d4c7d6993ede6936069e943",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.11.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "591ce1303abecba1560513bd617734803f8af688ef8e7084424bd1294b4d8e8e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.11.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-65b",
+      "suite": "v1.0.0",
+      "model": "meta_llama-65b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-65b/per_instance_stats.json",
+      "per_instance_stats_sha256": "d81333eb2278addcfdb9c61fa854ec7e491cfd6fde7c7e2db7cca7597adeeac7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=meta_llama-65b/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=microsoft_phi-2",
+      "suite": "v1.1.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.1.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=microsoft_phi-2/per_instance_stats.json",
+      "per_instance_stats_sha256": "3775b274969fc00b03de5ab21869dcdf9b248e654dccb585b7e158238aca7937",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.1.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=microsoft_phi-2/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "d9938f9e1d2dc8b64e33fc5c223ee9c805ee843749eaa9581ff82f50cb3b5852",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "87fb8a66ff625208e53e600dce702996e7a505b15a5a1f09db8e0d4d8e10988c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3/per_instance_stats.json",
+      "per_instance_stats_sha256": "6f7e0acb128a1ae339145815cbec5945ecbfc342369524b20e25d470fe1442c9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1/per_instance_stats.json",
+      "per_instance_stats_sha256": "00e1cfb3b1c88fd17edec5d2710cb9eaf18494271710d1a4adbdcc3e87c6dff0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mistral-large-2402",
+      "suite": "v1.3.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mistral-large-2402/per_instance_stats.json",
+      "per_instance_stats_sha256": "50757f570adce1e7792ae1b22ab705c6bd1d3fcd865e0189ddf437c1fc0234fd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mistral-large-2402/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mistral-large-2407",
+      "suite": "v1.6.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mistral-large-2407/per_instance_stats.json",
+      "per_instance_stats_sha256": "9c716185959284f24a383f00afd2d47d2407e90f25a8efe2d248d33f8f38d4f6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mistral-large-2407/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mistral-medium-2312",
+      "suite": "v1.1.0",
+      "model": "mistralai_mistral-medium-2312",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.1.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mistral-medium-2312/per_instance_stats.json",
+      "per_instance_stats_sha256": "364c81d90588e7ded843e1f87a373d7a749fbdde5edb2998737844dd13ca2a2c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.1.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mistral-medium-2312/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mistral-small-2402",
+      "suite": "v1.3.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mistral-small-2402/per_instance_stats.json",
+      "per_instance_stats_sha256": "53e5bc693b0736fd792e06a4e21a90dff772cad635cc824ddde5f6847cc85fd0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mistral-small-2402/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b",
+      "suite": "v1.2.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b/per_instance_stats.json",
+      "per_instance_stats_sha256": "955f27e5d5ed85b37f8403b73bcfd86d400ed1de077c85589d131ceecf65fdf2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen/per_instance_stats.json",
+      "per_instance_stats_sha256": "51cea31cc225218ffd5147c4649c20c51633c7b72aef74153892544be23d183d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407",
+      "suite": "v1.6.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407/per_instance_stats.json",
+      "per_instance_stats_sha256": "570e0f2cf0f7a92b43f5b870b3f2b53083fb3e5e08561d15f75e28f41c8db47e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0613",
+      "suite": "v1.0.0",
+      "model": "openai_gpt-3.5-turbo-0613",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0613/per_instance_stats.json",
+      "per_instance_stats_sha256": "c24e3042a2dedc94c53472af3ce995732a5fa073e6ba9ba180c85e2203aa6429",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0613/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_gpt-4-0613",
+      "suite": "v1.0.0",
+      "model": "openai_gpt-4-0613",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_gpt-4-0613/per_instance_stats.json",
+      "per_instance_stats_sha256": "6d3dd5a5abd8772038d0d665837a88988cd29ff3c046d0949c9318a1ad13308e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_gpt-4-0613/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_gpt-4-1106-preview",
+      "suite": "v1.0.0",
+      "model": "openai_gpt-4-1106-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_gpt-4-1106-preview/per_instance_stats.json",
+      "per_instance_stats_sha256": "70c2c93ae9eb584aae24d94e80a7ab1fd9f8809262d118d8a7897c1b9fb497fa",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_gpt-4-1106-preview/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_gpt-4-turbo-2024-04-09",
+      "suite": "v1.4.0",
+      "model": "openai_gpt-4-turbo-2024-04-09",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_gpt-4-turbo-2024-04-09/per_instance_stats.json",
+      "per_instance_stats_sha256": "037a2cae1192092211cf1e59f49a2173db89eb1ce9b028d963edb7d51ffed24b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_gpt-4-turbo-2024-04-09/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_gpt-4o-2024-05-13",
+      "suite": "v1.4.0",
+      "model": "openai_gpt-4o-2024-05-13",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_gpt-4o-2024-05-13/per_instance_stats.json",
+      "per_instance_stats_sha256": "53f3ce601e09d8548ab6d107aef699ce9492ca22162b22aa0d96acb7b6914ffd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_gpt-4o-2024-05-13/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_gpt-4o-2024-08-06",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-4o-2024-08-06",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_gpt-4o-2024-08-06/per_instance_stats.json",
+      "per_instance_stats_sha256": "6004e08350f7f6b249c142013aba595fea913217f69414d703f35990116e350b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_gpt-4o-2024-08-06/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_gpt-4o-mini-2024-07-18",
+      "suite": "v1.6.0",
+      "model": "openai_gpt-4o-mini-2024-07-18",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_gpt-4o-mini-2024-07-18/per_instance_stats.json",
+      "per_instance_stats_sha256": "84aa8923abf11b4a36c1669bb5f7dee85a0d6b69b4fbf776ec784dbb76a4bdd5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_gpt-4o-mini-2024-07-18/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_text-davinci-002",
+      "suite": "v1.0.0",
+      "model": "openai_text-davinci-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_text-davinci-002/per_instance_stats.json",
+      "per_instance_stats_sha256": "4f048a57945d090df9f193b210a65591e3c93a8403e5106bf7ef9ff7b0cd5e8e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_text-davinci-002/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_text-davinci-003",
+      "suite": "v1.0.0",
+      "model": "openai_text-davinci-003",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_text-davinci-003/per_instance_stats.json",
+      "per_instance_stats_sha256": "2ffa9a5e3f32ab7abf1488bde97f132f94c3ed1930516f98deab848613d3144a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=openai_text-davinci-003/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen1.5-110b-chat",
+      "suite": "v1.4.0",
+      "model": "qwen_qwen1.5-110b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen1.5-110b-chat/per_instance_stats.json",
+      "per_instance_stats_sha256": "572f9f44c028127b5e5dce22a6de107f49584b0352b5968df46adefb22ce010e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen1.5-110b-chat/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen1.5-14b",
+      "suite": "v1.2.0",
+      "model": "qwen_qwen1.5-14b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen1.5-14b/per_instance_stats.json",
+      "per_instance_stats_sha256": "8f0635c70a1059f8e286329a89c4f79951df1c1d80d7a5597d38e47f0929321f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen1.5-14b/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen1.5-32b",
+      "suite": "v1.2.0",
+      "model": "qwen_qwen1.5-32b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen1.5-32b/per_instance_stats.json",
+      "per_instance_stats_sha256": "805dfde049cf1e8d90a24ac0903079acd1dc2fd5e08b7d46e9f7e5a3e0d94991",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen1.5-32b/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen1.5-72b",
+      "suite": "v1.2.0",
+      "model": "qwen_qwen1.5-72b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen1.5-72b/per_instance_stats.json",
+      "per_instance_stats_sha256": "a67352915accac9f63e362286491cb5eeee9ef6f0be04d05b0ff5458fa0960ab",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen1.5-72b/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen1.5-7b",
+      "suite": "v1.2.0",
+      "model": "qwen_qwen1.5-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen1.5-7b/per_instance_stats.json",
+      "per_instance_stats_sha256": "226b9b8f271822376ffe4828b6ccccce56f93c646df4f1540befb72fd1fbcef5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen1.5-7b/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen2-72b-instruct",
+      "suite": "v1.4.0",
+      "model": "qwen_qwen2-72b-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen2-72b-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "44afb38bc041cfcc551383fd559ab2b0ca230897e8bd84406e8ab65474602361",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen2-72b-instruct/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen2.5-72b-instruct-turbo",
+      "suite": "v1.9.0",
+      "model": "qwen_qwen2.5-72b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen2.5-72b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "44241c7b09b01a8da5417732232d6ecc36ff567ed6f57ba45a6966a9432eabf8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen2.5-72b-instruct-turbo/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen2.5-7b-instruct-turbo",
+      "suite": "v1.9.0",
+      "model": "qwen_qwen2.5-7b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen2.5-7b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "041b1e38729f04b6981654dd0ad9754187c58ceae7c6862e7269117775b32525",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=qwen_qwen2.5-7b-instruct-turbo/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=snowflake_snowflake-arctic-instruct",
+      "suite": "v1.4.0",
+      "model": "snowflake_snowflake-arctic-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=snowflake_snowflake-arctic-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "88ecc586ebb4cef18d2a17d4c63a99e36faf834d712a1cc9ae376be344de756d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=snowflake_snowflake-arctic-instruct/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=tiiuae_falcon-40b",
+      "suite": "v1.0.0",
+      "model": "tiiuae_falcon-40b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=tiiuae_falcon-40b/per_instance_stats.json",
+      "per_instance_stats_sha256": "6277379e76df8dbc288592ba5e73fb6203aa3d5a81a4a11b2e530f6d407f4949",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=tiiuae_falcon-40b/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=tiiuae_falcon-7b",
+      "suite": "v1.0.0",
+      "model": "tiiuae_falcon-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=tiiuae_falcon-7b/per_instance_stats.json",
+      "per_instance_stats_sha256": "8969e48cf5a5698321a73346eec0bee79f89b1b011bc03026fb461a2a133628a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=tiiuae_falcon-7b/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=upstage_solar-pro-241126",
+      "suite": "v1.11.0",
+      "model": "upstage_solar-pro-241126",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.11.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=upstage_solar-pro-241126/per_instance_stats.json",
+      "per_instance_stats_sha256": "ccb3b00d5fb84b3340d933504c01c764153723d8312834c73d37cdf321d2d052",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.11.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=upstage_solar-pro-241126/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=writer_palmyra-x-004",
+      "suite": "v1.8.0",
+      "model": "writer_palmyra-x-004",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=writer_palmyra-x-004/per_instance_stats.json",
+      "per_instance_stats_sha256": "ad1f2bf64553ca3ed68b76d0814fdd05396d43ad6211f14d47f0c49b4975a68c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=writer_palmyra-x-004/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=writer_palmyra-x-v2",
+      "suite": "v1.0.0",
+      "model": "writer_palmyra-x-v2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=writer_palmyra-x-v2/per_instance_stats.json",
+      "per_instance_stats_sha256": "8427f236d0e0dbf2ac0e51899bfcb60158d5a9278344a4fad6a533300efaa59f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=writer_palmyra-x-v2/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    },
+    {
+      "run": "mmlu:subject=econometrics,method=multiple_choice_joint,model=writer_palmyra-x-v3",
+      "suite": "v1.0.0",
+      "model": "writer_palmyra-x-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=writer_palmyra-x-v3/per_instance_stats.json",
+      "per_instance_stats_sha256": "b32128993b85387c2e99d785b295e6cf3cdb4d0b25a9c7148623ced08e3b86eb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/mmlu:subject=econometrics,method=multiple_choice_joint,model=writer_palmyra-x-v3/instances.json",
+      "instances_sha256": "a5da624bdff96e4c47c60673e7be75d4343cf034e62dc3d5346747fbcb31eff0"
+    }
+  ]
+}
