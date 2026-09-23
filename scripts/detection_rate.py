@@ -138,7 +138,10 @@ def interval(hits: int, total: int) -> list[float] | None:
 
 
 def characterise(respondents: int, healthy: int, planted: dict[str, int],
-                 replications: int, seed: int) -> dict:
+                 replications: int, seed: int, field: str = "flags") -> dict:
+    """`field` picks which judgement is being measured: the point-estimate
+    flags, or `flags_confident`, which fires only when the interval around the
+    estimate excludes the threshold."""
     rng = random.Random(seed)
     caught = {kind: 0 for kind in KINDS}
     present = {kind: 0 for kind in KINDS}
@@ -156,11 +159,11 @@ def characterise(respondents: int, healthy: int, planted: dict[str, int],
             kind = truth[row["item"]]
             if kind == "healthy":
                 healthy_seen += 1
-                if row["flags"]:
+                if row[field]:
                     healthy_flagged += 1
             else:
                 present[kind] += 1
-                if found(kind, row["flags"]):
+                if found(kind, row[field]):
                     caught[kind] += 1
         carrying_counts.append(ia.effective_length(per_item)["items_carrying"])
 
@@ -241,8 +244,18 @@ def main() -> None:
                             "note": "taken from item_analysis.py unchanged; not tuned here"},
         "planted_per_dataset": planted,
         "seed": args.seed,
+        "judgements_compared": {
+            "flags": "the threshold applied to the point estimate; what was shipped first",
+            "flags_confident": ("the threshold applied to the 95% interval around the "
+                                "estimate, so a flag fires only where a healthy item could "
+                                "not plausibly have produced the data"),
+        },
         "by_respondents": [characterise(n, args.healthy, planted, args.replications, args.seed)
                            for n in sorted(args.respondents)],
+        "by_respondents_confident": [
+            characterise(n, args.healthy, planted, args.replications, args.seed,
+                         field="flags_confident")
+            for n in sorted(args.respondents)],
     }
     print(json.dumps(report, indent=2, ensure_ascii=False))
 

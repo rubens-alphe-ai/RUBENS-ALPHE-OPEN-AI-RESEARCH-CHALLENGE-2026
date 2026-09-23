@@ -92,6 +92,42 @@ def correlation(a: list[float], b: list[float]) -> float | None:
     return num / den if den else None
 
 
+def correlation_interval(r: float | None, n: int) -> list[float] | None:
+    """A 95% interval for a correlation, by Fisher's transformation.
+
+    A discrimination is an estimate, and on twenty respondents it is a poor
+    one. Comparing that estimate to a fixed threshold as though it were exact
+    is what produced a false alarm on roughly one healthy item in seven at that
+    size (experiments/DETECTION-2026-09). The interval is what the threshold
+    should be compared against instead.
+
+    Needs four respondents for a standard error to exist at all, and a
+    correlation short of +/-1, since the transformation is unbounded there.
+    """
+    if r is None or n < 4 or abs(r) >= 1.0:
+        return None
+    z = math.atanh(r)
+    spread = 1.96 / math.sqrt(n - 3)
+    return [round(math.tanh(z - spread), 3), round(math.tanh(z + spread), 3)]
+
+
+def proportion_interval(hits: int, n: int) -> list[float] | None:
+    """A 95% Wilson interval for a difficulty.
+
+    Used for the same reason: an item passed by 19 of 20 sits at 0.95 and trips
+    the ceiling, but the data is consistent with a true rate near 0.75, which
+    would separate respondents perfectly well.
+    """
+    if n < 1:
+        return None
+    z = 1.96
+    p = hits / n
+    denominator = 1 + z * z / n
+    centre = (p + z * z / (2 * n)) / denominator
+    spread = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / denominator
+    return [round(max(0.0, centre - spread), 3), round(min(1.0, centre + spread), 3)]
+
+
 def alpha(rows: list[dict], items: list[str]) -> float | None:
     """Cronbach's alpha: how much of the score is the scale rather than luck."""
     k = len(items)
@@ -127,10 +163,41 @@ def analyse(rows: list[dict], items: list[str]) -> list[dict]:
             flags.append("unrelated to what the rest of the quiz measures")
         if whole is not None and without is not None and without > whole:
             flags.append("dropping it raises alpha from %.3f to %.3f" % (whole, without))
+
+        # The same judgements, made against the interval rather than the point
+        # estimate. A flag survives here only when the data could not plausibly
+        # have come from a healthy item. `flags` is left exactly as it was, so
+        # nothing already published moves; what a buyer is shown should be
+        # these.
+        d_interval = correlation_interval(discrimination, len(rows))
+        p_interval = proportion_interval(sum(scores), len(scores))
+        sure = []
+        if p_interval is not None and p_interval[0] >= CEILING:
+            sure.append("all but at most %d in 100 pass it" % round(100 * (1 - CEILING)))
+        if p_interval is not None and p_interval[1] <= FLOOR:
+            sure.append("all but at most %d in 100 fail it" % round(100 * FLOOR))
+        if discrimination is None:
+            sure.append("no variance, discrimination undefined")
+        elif abs(discrimination) >= 1.0 and len(rows) >= 4:
+            # Fisher's transformation is unbounded at +/-1, so there is no
+            # interval here -- and none is needed. An item every strong
+            # performance gets wrong and every weak one gets right is the
+            # clearest case there is, and letting the missing interval silence
+            # it would drop the most obvious defect of all.
+            if discrimination < 0:
+                sure.append("negative: better performances get it wrong")
+        elif d_interval is not None and d_interval[1] < 0:
+            sure.append("negative: better performances get it wrong")
+        elif d_interval is not None and d_interval[1] < WEAK:
+            sure.append("unrelated to what the rest of the quiz measures")
+
         out.append({"item": item, "difficulty": round(difficulty, 3),
                     "discrimination": None if discrimination is None else round(discrimination, 3),
+                    "difficulty_interval": p_interval,
+                    "discrimination_interval": d_interval,
                     "alpha_without": None if without is None else round(without, 3),
-                    "flags": flags})
+                    "flags": flags,
+                    "flags_confident": sure})
     return out
 
 

@@ -14,6 +14,10 @@
     "noise": 3
   },
   "seed": 20260922,
+  "judgements_compared": {
+    "flags": "the threshold applied to the point estimate; what was shipped first",
+    "flags_confident": "the threshold applied to the 95% interval around the estimate, so a flag fires only where a healthy item could not plausibly have produced the data"
+  },
   "by_respondents": [
     {
       "respondents": 20,
@@ -212,6 +216,216 @@
         "interval_95": [
           0.002,
           0.004
+        ],
+        "note": "a flag on a healthy item is counted against the tool even when the flag states something true of that sample, because the buyer reads it as a defect in their test"
+      },
+      "effective_length": {
+        "items_truly_carrying": 20,
+        "mean_reported_carrying": 19.96,
+        "bias": -0.04,
+        "note": "negative bias means the report understates how much of the test measures, which costs the buyer items they did not need to lose"
+      },
+      "alpha_undefined_in_runs": 0
+    }
+  ],
+  "by_respondents_confident": [
+    {
+      "respondents": 20,
+      "items": 29,
+      "healthy_items": 20,
+      "replications": 500,
+      "detection": {
+        "miskeyed": {
+          "planted": 1500,
+          "found": 750,
+          "rate": 0.5,
+          "interval_95": [
+            0.475,
+            0.525
+          ]
+        },
+        "dead": {
+          "planted": 1500,
+          "found": 1005,
+          "rate": 0.67,
+          "interval_95": [
+            0.646,
+            0.693
+          ]
+        },
+        "noise": {
+          "planted": 1500,
+          "found": 186,
+          "rate": 0.124,
+          "interval_95": [
+            0.108,
+            0.142
+          ]
+        }
+      },
+      "false_alarm": {
+        "healthy_items_examined": 10000,
+        "healthy_items_flagged": 17,
+        "rate": 0.002,
+        "interval_95": [
+          0.001,
+          0.003
+        ],
+        "note": "a flag on a healthy item is counted against the tool even when the flag states something true of that sample, because the buyer reads it as a defect in their test"
+      },
+      "effective_length": {
+        "items_truly_carrying": 20,
+        "mean_reported_carrying": 17.78,
+        "bias": -2.22,
+        "note": "negative bias means the report understates how much of the test measures, which costs the buyer items they did not need to lose"
+      },
+      "alpha_undefined_in_runs": 0
+    },
+    {
+      "respondents": 50,
+      "items": 29,
+      "healthy_items": 20,
+      "replications": 500,
+      "detection": {
+        "miskeyed": {
+          "planted": 1500,
+          "found": 1320,
+          "rate": 0.88,
+          "interval_95": [
+            0.863,
+            0.895
+          ]
+        },
+        "dead": {
+          "planted": 1500,
+          "found": 579,
+          "rate": 0.386,
+          "interval_95": [
+            0.362,
+            0.411
+          ]
+        },
+        "noise": {
+          "planted": 1500,
+          "found": 434,
+          "rate": 0.289,
+          "interval_95": [
+            0.267,
+            0.313
+          ]
+        }
+      },
+      "false_alarm": {
+        "healthy_items_examined": 10000,
+        "healthy_items_flagged": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          0.0
+        ],
+        "note": "a flag on a healthy item is counted against the tool even when the flag states something true of that sample, because the buyer reads it as a defect in their test"
+      },
+      "effective_length": {
+        "items_truly_carrying": 20,
+        "mean_reported_carrying": 19.26,
+        "bias": -0.74,
+        "note": "negative bias means the report understates how much of the test measures, which costs the buyer items they did not need to lose"
+      },
+      "alpha_undefined_in_runs": 0
+    },
+    {
+      "respondents": 100,
+      "items": 29,
+      "healthy_items": 20,
+      "replications": 500,
+      "detection": {
+        "miskeyed": {
+          "planted": 1500,
+          "found": 1482,
+          "rate": 0.988,
+          "interval_95": [
+            0.981,
+            0.992
+          ]
+        },
+        "dead": {
+          "planted": 1500,
+          "found": 211,
+          "rate": 0.141,
+          "interval_95": [
+            0.124,
+            0.159
+          ]
+        },
+        "noise": {
+          "planted": 1500,
+          "found": 725,
+          "rate": 0.483,
+          "interval_95": [
+            0.458,
+            0.509
+          ]
+        }
+      },
+      "false_alarm": {
+        "healthy_items_examined": 10000,
+        "healthy_items_flagged": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          0.0
+        ],
+        "note": "a flag on a healthy item is counted against the tool even when the flag states something true of that sample, because the buyer reads it as a defect in their test"
+      },
+      "effective_length": {
+        "items_truly_carrying": 20,
+        "mean_reported_carrying": 19.78,
+        "bias": -0.22,
+        "note": "negative bias means the report understates how much of the test measures, which costs the buyer items they did not need to lose"
+      },
+      "alpha_undefined_in_runs": 0
+    },
+    {
+      "respondents": 200,
+      "items": 29,
+      "healthy_items": 20,
+      "replications": 500,
+      "detection": {
+        "miskeyed": {
+          "planted": 1500,
+          "found": 1500,
+          "rate": 1.0,
+          "interval_95": [
+            0.997,
+            1.0
+          ]
+        },
+        "dead": {
+          "planted": 1500,
+          "found": 931,
+          "rate": 0.621,
+          "interval_95": [
+            0.596,
+            0.645
+          ]
+        },
+        "noise": {
+          "planted": 1500,
+          "found": 1180,
+          "rate": 0.787,
+          "interval_95": [
+            0.765,
+            0.807
+          ]
+        }
+      },
+      "false_alarm": {
+        "healthy_items_examined": 10000,
+        "healthy_items_flagged": 0,
+        "rate": 0.0,
+        "interval_95": [
+          0.0,
+          0.0
         ],
         "note": "a flag on a healthy item is counted against the tool even when the flag states something true of that sample, because the buyer reads it as a defect in their test"
       },

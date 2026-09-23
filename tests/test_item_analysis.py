@@ -92,6 +92,52 @@ class EffectiveLengthTests(unittest.TestCase):
         got = ia.effective_length(ia.analyse(rows, items))
         self.assertLess(got["items_carrying"], got["items_counted"] / 3)
 
+class ConfidenceTests(unittest.TestCase):
+    """A threshold belongs against the interval, not against the estimate."""
+
+    def test_an_interval_needs_enough_respondents_to_exist(self) -> None:
+        self.assertIsNone(ia.correlation_interval(0.5, 3))
+        self.assertIsNotNone(ia.correlation_interval(0.5, 30))
+
+    def test_a_perfect_correlation_has_no_interval_rather_than_a_wrong_one(self) -> None:
+        # Fisher's transformation is unbounded at +/-1; returning a made-up
+        # interval there would put a number where there is none.
+        self.assertIsNone(ia.correlation_interval(1.0, 50))
+        self.assertIsNone(ia.correlation_interval(-1.0, 50))
+
+    def test_more_respondents_narrow_the_interval(self) -> None:
+        few = ia.correlation_interval(0.4, 20)
+        many = ia.correlation_interval(0.4, 200)
+        self.assertLess(many[1] - many[0], few[1] - few[0])
+
+    def test_a_confident_flag_is_never_raised_where_the_plain_flag_is_not(self) -> None:
+        # The confident list is the plain list minus what the data cannot
+        # support. If it ever contained something extra, the two would be
+        # saying different things about the same item.
+        items = ["A", "B", "C", "D"]
+        rows = rows_from([[1, 1, 1, 1], [0, 0, 0, 0], [1, 1, 0, 0],
+                          [0, 0, 1, 1], [1, 0, 1, 0], [0, 1, 0, 1]], items)
+        for row in ia.analyse(rows, items):
+            self.assertTrue(set(row["flags_confident"]) <= set(row["flags"]), row)
+
+    def test_the_published_flags_are_left_exactly_as_they_were(self) -> None:
+        # Stored reports and the running survey both depend on `flags` meaning
+        # what it meant when they were written. The interval is additive.
+        items = ["A", "B", "C"]
+        rows = rows_from([[1, 1, 0], [1, 0, 1], [1, 1, 1], [1, 0, 0]], items)
+        report = {row["item"]: row for row in ia.analyse(rows, items)}
+        self.assertTrue(any("pass it" in flag for flag in report["A"]["flags"]))
+
+    def test_an_item_running_backwards_on_plenty_of_data_survives_the_interval(self) -> None:
+        items = ["A", "B", "C", "D", "E"]
+        pattern = []
+        for _ in range(30):
+            pattern.append([0, 1, 1, 1, 1])
+            pattern.append([1, 0, 0, 0, 0])
+        report = {row["item"]: row for row in ia.analyse(rows_from(pattern, items), items)}
+        self.assertTrue(any("negative" in flag for flag in report["A"]["flags_confident"]))
+
+
 class TableInputTests(unittest.TestCase):
     """Anyone's harness can emit three columns; almost none emit more."""
 
