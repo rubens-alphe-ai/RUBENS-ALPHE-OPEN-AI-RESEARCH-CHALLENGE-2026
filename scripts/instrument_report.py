@@ -35,15 +35,25 @@ Two refusals, and they are the point of the file:
   at all, and an item that still separates respondents cannot enter it however
   contested it is.
 
+And one optional section, off unless the buyer asks for it by naming their own
+numbers. The page states the saving in items and in runs; `--cost-per-run` and
+`--runs-per-year` restate it in money and in time. Nothing in it is measured.
+Every figure is the buyer's own rate multiplied by a count this page has already
+printed, and the page names which count — including the one it deliberately does
+*not* use, because the saving is quoted on the items this page will actually
+drop, never on the larger count of items that carry nothing.
+
   python scripts/instrument_report.py \\
       --report experiments/PUBLIC-AUDIT-2026-09/report-computer_security-top20.json \\
       --out report/ --instrument "MMLU computer_security" \\
-      --population "the 20 highest-scoring models in HELM Lite v1.13.0"
+      --population "the 20 highest-scoring models in HELM Lite v1.13.0" \\
+      --cost-per-run 0.004 --runs-per-year 12 --currency EUR
 """
 
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import math
 import sys
@@ -176,7 +186,372 @@ def resolution(report: dict) -> dict | None:
             "least_distinguishable_pct": 100.0 * least / k}
 
 
-def render(report: dict, instrument: str | None = None, population: str | None = None) -> str:
+# --------------------------------------------------------------------------
+# Costing: the same saving, in the buyer's money and the buyer's hours.
+#
+# The page already says "removing 78 of these 83 items removes 70% of the
+# runs". A buyer who signs cheques needs that in their own currency, and the
+# two numbers that convert it are theirs: what one item-run costs them and how
+# often they run the suite. So nothing below is measured, estimated or looked
+# up. Every figure is a rate the buyer stated multiplied by a count this page
+# has already printed, and the page prints the multiplication beside the
+# result so it can be checked without trusting it.
+#
+# Three refusals, and they are the reason this is a class rather than two
+# multiplications inline:
+#
+# * **The saving is quoted on the drop list, never on the count of items that
+#   carry nothing.** Those are different numbers — 78 and 107 on the audit's
+#   top-20 subset — because this page holds items back from deletion for
+#   reasons it has just finished explaining. Costing all 107 as removable would
+#   inflate the saving by a third using the very items the page refuses to
+#   delete, which is the single easiest way for a costing to lie.
+# * **A missing number is never filled in.** A cost per run with no
+#   runs-per-year does not mean once a year. It means the buyer did not say, so
+#   the run stops rather than invent a frequency for them.
+# * **A rate that cannot be true is refused, not rounded.** Zero, negative,
+#   non-numeric, nan, inf, a frequency below one run a year. Each exits naming
+#   which flag and what was wrong with it.
+
+
+def listed(parts: list[str]) -> str:
+    """"a; b; and c" — semicolons because each part already has commas in it."""
+    if not parts:
+        return "none of them reached the drop list"
+    if len(parts) == 1:
+        return parts[0]
+    return "%s; and %s" % ("; ".join(parts[:-1]), parts[-1])
+
+
+def plain(value: float) -> str:
+    """12 rather than 12.0, for a count the buyer typed as a whole number."""
+    return str(int(value)) if float(value).is_integer() else ("%g" % value)
+
+
+def money(amount: float, currency: str) -> str:
+    """`EUR 5.33`, and `EUR 0.004` for a rate a cent would round away to nothing."""
+    if 0 < abs(amount) < 0.01:
+        text = format(amount, ",.6f").rstrip("0")
+        return "%s %s" % (currency, text + "0" if text.endswith(".") else text)
+    return "%s %s" % (currency, format(amount, ",.2f"))
+
+
+def duration(seconds: float) -> str:
+    """Item-run time in the largest unit that does not hide the size of it."""
+    value, unit = ((seconds / 3600.0, "hours") if seconds >= 3600 else
+                   (seconds / 60.0, "minutes") if seconds >= 60 else (seconds, "seconds"))
+    text = format(value, ",.1f")
+    return "%s %s" % (text[:-2] if text.endswith(".0") else text, unit)
+
+
+def finite_number(raw: object, flag: str, what: str, example: str) -> float:
+    """A number this page can multiply, or an exit naming the flag that was wrong.
+
+    Written out rather than left to argparse's `type=float` so that a buyer who
+    typed a price with a currency symbol in it is told what to do about it, in
+    the voice of the rest of this file. ASCII only: this goes to stderr, and a
+    Windows console that cannot encode an em dash turns a refusal into a
+    traceback about the refusal.
+    """
+    try:
+        value = float(str(raw).strip())
+    except (TypeError, ValueError):
+        raise SystemExit("%s was given %r, which is not a number. Give %s as a plain decimal "
+                         "with no currency symbol, thousands separator or unit, for example "
+                         "%s %s." % (flag, raw, what, flag, example))
+    if not math.isfinite(value):
+        raise SystemExit("%s was given %r, which is not a finite number, so every figure "
+                         "derived from it would be meaningless. Give %s as a plain decimal, "
+                         "for example %s %s." % (flag, raw, what, flag, example))
+    return value
+
+
+def positive_number(raw: object, flag: str, what: str, example: str) -> float:
+    """A rate above zero. Zero is refused rather than costed: a page that prices
+    the runs at nothing reports every saving as free."""
+    value = finite_number(raw, flag, what, example)
+    if value <= 0:
+        raise SystemExit("%s was given %s, and %s of zero or less would make this page report "
+                         "a saving that is free or negative. If your runs genuinely cost you "
+                         "nothing, leave the costing flags off: the page is complete without "
+                         "them." % (flag, plain(value), what))
+    return value
+
+
+def read_cost_table(path: Path) -> dict[str, float]:
+    """Per-item costs from a two-column table, so the equal-cost assumption can go.
+
+    An item whose question and expected answer are long costs more to run than a
+    short one, sometimes by an order of magnitude. Where the buyer can say so
+    per item, the flat rate is not used at all and the page stops claiming the
+    items cost the same.
+
+    Columns named in a header row: an item identifier matching the one in the
+    analysis, and a cost. Same shape and the same column-naming tolerance as
+    `item_analysis.from_table`, because a harness that can emit one can emit
+    this.
+    """
+    costs: dict[str, float] = {}
+    with path.open(encoding="utf-8-sig", newline="") as handle:
+        reader = csv.DictReader(handle)
+        if reader.fieldnames is None or len(reader.fieldnames) < 2:
+            raise SystemExit("%s needs a header row with an item column and a cost column" % path)
+        names = {name.strip().lower(): name for name in reader.fieldnames}
+
+        def column(*candidates: str) -> str:
+            for candidate in candidates:
+                if candidate in names:
+                    return names[candidate]
+            raise SystemExit("%s has no column named any of %s; found %s"
+                             % (path, " / ".join(candidates), ", ".join(reader.fieldnames)))
+
+        item_col = column("item", "item_id", "question", "question_id", "task", "id")
+        cost_col = column("cost", "cost_per_run", "price", "amount", "spend", "unit_cost")
+        for line in reader:
+            item = str(line[item_col]).strip()
+            value = positive_number(line[cost_col], "--cost-table",
+                                    "the cost of item %r" % item, "0.004")
+            if item in costs and costs[item] != value:
+                raise SystemExit("%s gives item %r two different costs, %s and %s. One of them "
+                                 "is wrong and this page will not pick which."
+                                 % (path, item, plain(costs[item]), plain(value)))
+            costs[item] = value
+    if not costs:
+        raise SystemExit("%s has a header row and no costs under it" % path)
+    return costs
+
+
+class Costing:
+    """What the buyer said their runs cost. Held as an object so that no figure
+    on the page can be produced without the rate and the frequency that made it,
+    and so that the page can print the multiplication next to every result."""
+
+    def __init__(self, runs_per_year: float, currency: str = "EUR",
+                 cost_per_run: float | None = None,
+                 cost_by_item: dict[str, float] | None = None,
+                 cost_source: str | None = None,
+                 seconds_per_run: float | None = None) -> None:
+        self.runs_per_year = runs_per_year
+        self.currency = currency
+        self.cost_per_run = cost_per_run
+        self.cost_by_item = cost_by_item
+        self.cost_source = cost_source
+        self.seconds_per_run = seconds_per_run
+
+    @property
+    def priced(self) -> bool:
+        return self.cost_per_run is not None or self.cost_by_item is not None
+
+    @property
+    def timed(self) -> bool:
+        return self.seconds_per_run is not None
+
+    @property
+    def flat(self) -> bool:
+        """True when one rate is being applied to every item — the assumption
+        the page has to state out loud, because it is usually false."""
+        return self.cost_per_run is not None
+
+    @classmethod
+    def declared(cls, cost_per_run: object = None, runs_per_year: object = None,
+                 currency: object = "EUR", cost_table: Path | None = None,
+                 seconds_per_run: object = None) -> "Costing | None":
+        """Validate what the buyer typed, or refuse. None when they asked for no
+        costing at all, which is the default and leaves the page untouched."""
+        asked = [name for name, given in (("--cost-per-run", cost_per_run is not None),
+                                          ("--cost-table", cost_table is not None),
+                                          ("--seconds-per-run", seconds_per_run is not None),
+                                          ("--runs-per-year", runs_per_year is not None))
+                 if given]
+        if not asked:
+            return None
+        if cost_per_run is not None and cost_table is not None:
+            raise SystemExit("--cost-per-run and --cost-table both say what an item-run costs, "
+                             "and they disagree by construction. Give one: --cost-table when "
+                             "your items cost different amounts, --cost-per-run when one rate "
+                             "covers them all.")
+        if runs_per_year is None:
+            raise SystemExit("%s needs --runs-per-year beside it: a cost per run is not a cost "
+                             "per year until someone says how often the suite is run. This page "
+                             "will not assume a frequency you did not state."
+                             % " and ".join(asked))
+        if cost_per_run is None and cost_table is None and seconds_per_run is None:
+            raise SystemExit("--runs-per-year on its own says how often you run the suite but "
+                             "not what a run costs you. Add --cost-per-run (or --cost-table) "
+                             "for money, --seconds-per-run for time, or leave all of them off.")
+
+        runs = finite_number(runs_per_year, "--runs-per-year",
+                             "the number of times a year the whole suite is run", "12")
+        if runs < 1:
+            raise SystemExit("--runs-per-year was given %s. A suite run less than once a year "
+                             "has no annual cost to save, and scaling one year's figures by a "
+                             "fraction of a run would report a saving nobody banks. State how "
+                             "many times a year the whole suite runs, at least 1." % plain(runs))
+        name = str(currency if currency is not None else "").strip()
+        if not name:
+            raise SystemExit("--currency was given an empty value. Every money figure on this "
+                             "page is printed with its unit; leave the flag off to use EUR.")
+
+        rate = None if cost_per_run is None else positive_number(
+            cost_per_run, "--cost-per-run", "the money one item-run costs you", "0.004")
+        by_item = None if cost_table is None else read_cost_table(cost_table)
+        seconds = None if seconds_per_run is None else positive_number(
+            seconds_per_run, "--seconds-per-run", "the time one item-run takes", "12")
+        return cls(runs_per_year=runs, currency=name, cost_per_run=rate, cost_by_item=by_item,
+                   cost_source=None if cost_table is None else str(cost_table),
+                   seconds_per_run=seconds)
+
+    def covering(self, per_item: list[dict]) -> None:
+        """Refuse a cost table that does not price every item being counted.
+
+        A missing item cannot be priced at zero — that understates the suite and
+        overstates the share the drop list saves — and it cannot be priced at
+        the average, because there is no rate here to average.
+        """
+        if self.cost_by_item is None:
+            return
+        missing = [row["item"] for row in per_item if row["item"] not in self.cost_by_item]
+        if missing:
+            raise SystemExit("%s prices %d items, but the analysis counts %d and %s %s no cost "
+                             "in it. Every counted item needs a cost: filling a zero would "
+                             "understate what the suite costs you and overstate the share that "
+                             "dropping items gives back."
+                             % (self.cost_source, len(self.cost_by_item), len(per_item),
+                                naming([{"item": name} for name in missing]),
+                                "have" if len(missing) > 1 else "has"))
+
+    def annual_money(self, rows: list[dict]) -> float | None:
+        if not self.priced:
+            return None
+        if self.cost_by_item is not None:
+            per_pass = sum(self.cost_by_item[row["item"]] for row in rows)
+        else:
+            per_pass = self.cost_per_run * len(rows)
+        return per_pass * self.runs_per_year
+
+    def annual_seconds(self, rows: list[dict]) -> float | None:
+        if not self.timed:
+            return None
+        return self.seconds_per_run * len(rows) * self.runs_per_year
+
+    def money_working(self, rows: list[dict]) -> str:
+        """The multiplication, so the number can be checked rather than believed."""
+        if self.cost_by_item is not None:
+            return ("the %d per-item costs you gave, added up, times %s runs a year"
+                    % (len(rows), plain(self.runs_per_year)))
+        return ("%d items x %s an item-run x %s runs a year"
+                % (len(rows), money(self.cost_per_run, self.currency), plain(self.runs_per_year)))
+
+    def time_working(self, rows: list[dict]) -> str:
+        return ("%d items x %s an item-run x %s runs a year"
+                % (len(rows), duration(self.seconds_per_run), plain(self.runs_per_year)))
+
+
+def costing_section(costing: Costing, per_item: list[dict], carrying_items: list[str],
+                    droppable: list[dict], held_measuring: list[dict],
+                    held_backwards: list[dict]) -> list[str]:
+    """The money and the time, each tied to a count printed elsewhere on the page.
+
+    Three quantities, in the order a buyer reads them: what the whole suite
+    costs, what the part of it that carries nothing costs, and what can actually
+    be saved today. The third is smaller than the second and the paragraph after
+    them says why, because that gap is where a costing like this would otherwise
+    quietly overstate itself.
+    """
+    counted = len(per_item)
+    carrying = set(carrying_items)
+    dead = [row for row in per_item if row["item"] not in carrying]
+    held = len(held_measuring) + len(held_backwards)
+
+    lines = ["## What this costs you, in money and in hours", "",
+             "These are your numbers, not measurements. This page multiplies the rate you gave "
+             "by counts it has already printed above; it did not observe what anything costs "
+             "you.", ""]
+
+    if costing.priced:
+        lines += ["- **Running all %d items costs %s a year** — %s."
+                  % (counted, money(costing.annual_money(per_item), costing.currency),
+                     costing.money_working(per_item)),
+                  "- **The %d items that carry nothing cost %s of that** — %s."
+                  % (len(dead), money(costing.annual_money(dead), costing.currency),
+                     costing.money_working(dead))]
+        if droppable:
+            saving = costing.annual_money(droppable)
+            whole = costing.annual_money(per_item)
+            share = 100.0 * saving / whole if whole else 0.0
+            lines.append("- **Dropping the %d items this page puts on the drop list saves %s a "
+                         "year**, %.0f%% of what the suite costs you — %s."
+                         % (len(droppable), money(saving, costing.currency), share,
+                            costing.money_working(droppable)))
+        else:
+            lines.append("- **Nothing on this page can be dropped, so the saving available "
+                         "today is %s.** No item reached the drop list above, and this page "
+                         "will not cost an item as removable that it has not recommended "
+                         "removing." % money(0.0, costing.currency))
+    if costing.timed:
+        lines += ["- **Running all %d items takes %s of item-run time a year** — %s."
+                  % (counted, duration(costing.annual_seconds(per_item)),
+                     costing.time_working(per_item))]
+        if droppable:
+            lines.append("- **Dropping the %d items on the drop list gives back %s of that a "
+                         "year** — %s."
+                         % (len(droppable), duration(costing.annual_seconds(droppable)),
+                            costing.time_working(droppable)))
+        lines.append("  That is item-run time added up, not time on a clock. Runs that happen "
+                     "side by side finish sooner than this and the total spent is the same.")
+    lines.append("")
+
+    # The gap between "carries nothing" and "can be removed" is where a costing
+    # like this would overstate itself, so the page accounts for every item in
+    # it rather than for the ones with the tidiest explanation.
+    if len(dead) > len(droppable):
+        reasons = []
+        if held_measuring:
+            reasons.append("%d still %s respondents despite being answered the same way by "
+                           "almost everyone"
+                           % (len(held_measuring),
+                              "separate" if len(held_measuring) > 1 else "separates"))
+        if held_backwards:
+            reasons.append("%d %s waiting on the key check above, and a key cannot be checked "
+                           "after the item has been deleted"
+                           % (len(held_backwards), "are" if len(held_backwards) > 1 else "is"))
+        rest = len(dead) - len(droppable) - held
+        if rest:
+            reasons.append("%d do vary between respondents rather than being answered alike, so "
+                           "this page has not put %s on a deletion list at all"
+                           % (rest, "them" if rest > 1 else "it"))
+        lines += ["The saving is counted on the %d items on the drop list, not on all %d that "
+                  "carry nothing. Of the other %d: %s. Costing any of them as removable would "
+                  "put money on this page that the page has just declined to recommend you save."
+                  % (len(droppable), len(dead), len(dead) - len(droppable),
+                     listed(reasons)), ""]
+
+    if costing.flat:
+        lines += ["**This arithmetic assumes every item costs you the same to run.** That is "
+                  "usually false. A question with a long stem and a long expected answer costs "
+                  "several times what a short one costs, so if the items on the drop list are "
+                  "the short ones you will save less than the figure above, and if they are the "
+                  "long ones you will save more. Where you know the per-item cost, pass "
+                  "`--cost-table` with a cost for each item and this page will use yours "
+                  "instead of assuming.", ""]
+    else:
+        lines += ["These figures do not assume the items cost the same: each one is priced from "
+                  "the per-item costs you supplied in `%s`, so an item that costs more to run "
+                  "is worth more when it is dropped." % str(costing.cost_source).replace("\\", "/"),
+                  ""]
+
+    lines += ["It also assumes the only thing that goes away is the per-item cost you named. "
+              "Setting up the harness, reviewing the output and anything billed per run of the "
+              "whole suite rather than per item are unchanged by dropping items, and none of "
+              "them are in the figures above.", "",
+              "And it is a saving on this population. The drop list is what these respondents "
+              "made constant; a wider or narrower field would make a different set of items "
+              "constant, so re-run the analysis before banking the same number next year.", ""]
+    return lines
+
+
+def render(report: dict, instrument: str | None = None, population: str | None = None,
+           costing: Costing | None = None) -> str:
     if str(report.get("record_version", "")).startswith("RA-PSI-GRADED"):
         raise SystemExit("this reads the right/wrong record from item_analysis.py; a graded "
                          "record from graded_items.py has means instead of difficulties and "
@@ -322,6 +697,20 @@ def render(report: dict, instrument: str | None = None, population: str | None =
                      "appendix before relying on it.")
         lines.append("")
 
+    if costing is not None:
+        costing.covering(per_item)
+        # The set the short version calls "counted in the score and carry
+        # nothing" — taken from the record's own list so the costing cannot
+        # drift from the count printed at the top of the page.
+        carrying_items = length.get("carrying_items")
+        if carrying_items is None:
+            carrying_items = [row["item"] for row in per_item
+                              if row.get("discrimination") is not None
+                              and row["discrimination"] >= ia.WEAK
+                              and ia.FLOOR < row["difficulty"] < ia.CEILING]
+        lines += costing_section(costing, per_item, carrying_items, droppable,
+                                 held_measuring, held_backwards)
+
     lines += ["## How to disprove this page", "",
               "Nothing above is a judgement about the questions. Every line is arithmetic on "
               "the recorded responses, and the arithmetic is one command:", "",
@@ -380,17 +769,43 @@ def main() -> None:
     parser.add_argument("--instrument", help="what to call the test in the heading")
     parser.add_argument("--population", help="who sat it. Name them: every number on the page "
                                              "depends on this and the page says so.")
+    # Optional, and off by default: without them the page is exactly what it was
+    # before this costing existed. Taken as strings rather than floats so that a
+    # bad value is refused by this file, in this file's voice, instead of by
+    # argparse's.
+    parser.add_argument("--cost-per-run", help="what one item-run costs you, as a plain "
+                                               "decimal. Needs --runs-per-year beside it.")
+    parser.add_argument("--cost-table", type=Path,
+                        help="a CSV of item,cost giving what each item costs you, for when the "
+                             "items do not cost the same. Use instead of --cost-per-run.")
+    parser.add_argument("--runs-per-year", help="how many times a year the whole suite is run. "
+                                                "At least 1; never assumed.")
+    parser.add_argument("--seconds-per-run", help="how long one item-run takes, for the saving "
+                                                  "in hours as well as in money")
+    parser.add_argument("--currency", default="EUR",
+                        help="the unit every money figure is printed with (default EUR). This "
+                             "page converts nothing; it prints your rate in your unit.")
     args = parser.parse_args()
 
+    costing = Costing.declared(cost_per_run=args.cost_per_run, runs_per_year=args.runs_per_year,
+                               currency=args.currency, cost_table=args.cost_table,
+                               seconds_per_run=args.seconds_per_run)
     text = sys.stdin.read() if str(args.report) == "-" else args.report.read_text(encoding="utf-8")
     report = json.loads(text)
-    page = render(report, args.instrument, args.population)
+    page = render(report, args.instrument, args.population, costing)
     args.out.mkdir(parents=True, exist_ok=True)
     (args.out / "REPORT.md").write_text(page, encoding="utf-8")
-    print(json.dumps({"out": str(args.out / "REPORT.md"),
-                      "reading": report["effective_length"]["reading"],
-                      "items_running_backwards": len(negative_items(report["per_item"])),
-                      "population_named": bool(args.population)}, indent=2))
+    summary = {"out": str(args.out / "REPORT.md"),
+               "reading": report["effective_length"]["reading"],
+               "items_running_backwards": len(negative_items(report["per_item"])),
+               "population_named": bool(args.population)}
+    if costing is not None and costing.priced:
+        droppable, _measuring, _backwards = to_drop(report["per_item"])
+        summary["annual_saving"] = {
+            "currency": costing.currency,
+            "items_dropped": len(droppable),
+            "amount": round(costing.annual_money(droppable), 4)}
+    print(json.dumps(summary, indent=2))
 
 
 if __name__ == "__main__":
