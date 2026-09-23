@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evidence</title>
+<meta name="description" content="Every number this work claims, the file it came from, the rate at which the tool is wrong, and the occasions it proved its own authors wrong.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="audit.html">The audit</a>
+      <a href="evidence.html" aria-current="page">Evidence</a>
+      <a href="run-it-yourself.html">Run it yourself</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<h1>Evidence</h1>
+
+<p class="lede">Every figure below names the file it comes from. Those files are in a public
+repository with the data and the commands that produced them.</p>
+
+<h2>How often the audit is right</h2>
+
+<p>Defects were planted in synthetic data — an item scored against the wrong answer, an item nearly
+everyone passes, an item unrelated to ability — and counted. The truth was known before the tool
+ran, so its accuracy is stated rather than assumed.</p>
+
+<div class="scroll">
+<table>
+<tr><th>Respondents</th><th>&nbsp;</th><th class="num">Mis-keyed found</th><th class="num">Healthy falsely flagged</th></tr>
+<tr><td rowspan="2">20</td><td>screening</td><td class="num">0.976</td><td class="num">0.144</td></tr>
+<tr><td>asserting</td><td class="num">0.500</td><td class="num">0.002</td></tr>
+<tr><td rowspan="2">50</td><td>screening</td><td class="num">0.999</td><td class="num">0.051</td></tr>
+<tr><td>asserting</td><td class="num">0.880</td><td class="num">0.000</td></tr>
+<tr><td rowspan="2">200</td><td>screening</td><td class="num">1.000</td><td class="num">0.003</td></tr>
+<tr><td>asserting</td><td class="num">1.000</td><td class="num">0.000</td></tr>
+</table>
+</div>
+<span class="src">experiments/DETECTION-2026-09/RESULT.md — 500 replications, seed 20260922</span>
+
+<p>Detection is never quoted without false alarms. A tool that flags every item detects every
+defect; one that flags nothing never raises a false alarm. Either number alone recommends the
+opposite choice.</p>
+
+<div class="limit">
+<p><strong>The limit of this result.</strong> Responses came from a two-parameter logistic model with
+independent draws. Real benchmarks break that: items share topics and respondents share training
+data. So these are an <strong>upper bound on detection and a lower bound on false alarms</strong>.
+That sentence travels inside the data file as well as here, because a bound separated from its
+condition gets quoted as a guarantee.</p>
+</div>
+
+<h2>Two public benchmarks, audited</h2>
+
+<h3>A medical benchmark: 1 000 items, 91 models</h3>
+
+<div class="scroll">
+<table>
+<tr><th>&nbsp;</th><th class="num">Items carrying</th><th class="num">Alpha</th><th class="num">Running backwards</th></tr>
+<tr><td>All 91 models</td><td class="num">816 / 1000</td><td class="num">0.9944</td><td class="num">76</td></tr>
+<tr><td>Top 20 models</td><td class="num">204 / 1000</td><td class="num">0.9379</td><td class="num">138</td></tr>
+</table>
+</div>
+<span class="src">experiments/PUBLIC-AUDIT-2026-10/report-med_qa.json, report-med_qa-top20.json</span>
+
+<p><strong>The standard reliability score missed this.</strong> It moved from 0.9944 to 0.9379 while
+four fifths of the test stopped separating anyone. The mean correlation between items fell by a
+factor of ten over the same span; a thousand items manufacture a high alpha out of almost nothing.
+On the top-20 panel, 875 of the 1 000 items <em>raise</em> alpha when dropped.</p>
+
+<p class="small soft">This audit was pre-registered. Seven predictions were written and committed
+before the data was fetched; two failed. The failures are published unchanged, and one of them
+corrected an earlier claim of ours.
+<span class="src">experiments/PUBLIC-AUDIT-2026-10/PREREGISTRATION.md</span></p>
+
+<h3>A knowledge benchmark: 111 items, 91 models</h3>
+
+<div class="scroll">
+<table>
+<tr><th>&nbsp;</th><th class="num">Items carrying</th><th class="num">Alpha</th><th class="num">Running backwards</th></tr>
+<tr><td>All 91 models</td><td class="num">72 / 111</td><td class="num">0.948</td><td class="num">9</td></tr>
+<tr><td>Top 20 models</td><td class="num">4 / 111</td><td class="num">−0.442</td><td class="num">18</td></tr>
+</table>
+</div>
+<span class="src">experiments/PUBLIC-AUDIT-2026-09/report-computer_security.json, report-computer_security-top20.json</span>
+
+<p>A negative alpha is not a small reliability. It is negative average covariance between items:
+they contradict each other more than chance would produce, so no coherent scale is left on which to
+put one respondent ahead of another.</p>
+
+<h3>Precision at the top of the leaderboard</h3>
+
+<div class="scroll">
+<table>
+<tr><th>Where on the leaderboard</th><th class="num">Information</th><th class="num">Measurement error</th></tr>
+<tr><td>Median model</td><td class="num">24.87</td><td class="num">0.20</td></tr>
+<tr><td>Median of the top 20</td><td class="num">5.99</td><td class="num">0.41</td></tr>
+<tr><td>Strongest model</td><td class="num">0.17</td><td class="num">2.40</td></tr>
+</table>
+</div>
+<span class="src">scripts/irt.py on experiments/PUBLIC-AUDIT-2026-09/</span>
+
+<p>The models being chosen between are the ones the test separates least.</p>
+
+<h2>What the tool refuses to tell you</h2>
+
+<p>Every vendor shows what their tool outputs. The other list is longer and more useful.</p>
+
+<ul>
+<li>A graded score is <strong>refused, not rounded</strong>. Rounding a 1-to-5 rubric once reported a
+healthy instrument as measuring with nothing — silently.</li>
+<li>Alpha is <strong>undefined rather than zero</strong> when nothing varies. Zero says the test is
+unreliable; undefined says your data cannot tell you.</li>
+<li>A trial missing an item is <strong>dropped, not scored zero</strong>. Filling a zero turns an
+absent answer into a wrong one.</li>
+<li>An unmeasured field reports <strong>“unmeasured”, never 0 and never ok</strong>.</li>
+<li>There is <strong>no overall score</strong>, deliberately. An average lets a strong field hide a
+missing one.</li>
+<li>Item response theory answers <strong>“the question cannot be answered at this sample size”</strong>
+when the test has no power to distinguish the hypotheses.</li>
+<li>A factor resting on one respondent is <strong>flagged as resting on one respondent</strong>.</li>
+<li>A threshold is put against the <strong>interval</strong>, not the estimate — a refusal to assert
+from twenty respondents what twenty respondents cannot support.</li>
+</ul>
+<span class="src">docs/WHAT_THIS_REFUSES.md</span>
+
+<h2>Six times this work proved its own authors wrong</h2>
+
+<p>The fear anyone brings to an audit is that the auditor will say what the buyer wants to hear.
+There is no argument against that fear — only a record.</p>
+
+<ul>
+<li><strong>The tool contradicted its author.</strong> We recommended deleting four contested
+questions. Item analysis showed they were the four highest-discriminating items in the instrument.
+Deleting them would have removed most of what the test measured while leaving a page of numbers that
+still looked healthy. Pinned in a test so it cannot quietly disappear.</li>
+<li><strong>A quiz generator keyed three questions to the opposite of its own document.</strong> No
+correct option existed. The reader answered “the text does not say” in 24 runs of 24 and was marked
+wrong every time. It was right every time.</li>
+<li><strong>A benchmark paired its arms by list position</strong>, so one failure silently turned a
+paired confidence interval into an unpaired one — still printed, still narrow, no longer meaning
+what it said.</li>
+<li><strong>A healthy instrument was declared dead, silently</strong>, by a rounding rule. Alpha
+0.864 with 7 of 8 items carrying was reported as “a test of 8 items that measures with 0”.</li>
+<li><strong>An accusation against our own data was published, then retracted.</strong> So was a
+second claim, contradicted within the hour by a free check on data we already held.</li>
+<li><strong>The accuracy work found flaws in the accuracy claims it was built to support</strong> —
+the 14% false alarm rate above, and a detection rate that does not improve monotonically with sample
+size.</li>
+</ul>
+<span class="src">docs/CAUGHT_IN_OUR_OWN_WORK.md, docs/CORRECTIONS-2026-09-21.md</span>
+
+<p>Four of those six are defects we shipped. An auditor with no such record is not necessarily
+worse. There is simply no way to tell.</p>
+
+<h2>Not our work, and not commissioned by us</h2>
+
+<p>A systematic review of 445 benchmarks in wide use, 29 expert reviewers, Oxford Internet Institute,
+NeurIPS 2025:</p>
+
+<div class="scroll">
+<table>
+<tr><th>Of 445 benchmarks</th><th class="num">Share</th></tr>
+<tr><td>Use an uncertainty estimate or statistical test to compare results</td><td class="num">16.0%</td></tr>
+<tr><td>Present evidence for construct validity</td><td class="num">53.4%</td></tr>
+<tr><td>Define the phenomenon they measure</td><td class="num">78.2%</td></tr>
+<tr><td>…of those, a definition that is contested rather than agreed</td><td class="num">47.8%</td></tr>
+</table>
+</div>
+<p class="small soft"><a href="https://arxiv.org/abs/2511.04703">arxiv.org/abs/2511.04703</a></p>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>No trackers, no analytics, no cookies. There are no customers yet, so there are no
+    testimonials, logos or case studies here.</p>
+  </div>
+</footer>
+
+</body>
+</html>

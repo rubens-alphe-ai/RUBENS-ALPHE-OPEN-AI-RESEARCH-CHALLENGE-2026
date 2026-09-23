@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Run it yourself</title>
+<meta name="description" content="The free leaderboard check and the harness adapters: real commands that run on your machine, with nothing uploaded anywhere.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="audit.html">The audit</a>
+      <a href="evidence.html">Evidence</a>
+      <a href="run-it-yourself.html" aria-current="page">Run it yourself</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<h1>Run it yourself</h1>
+
+<p class="lede">Everything below runs on your machine and sends nothing anywhere. That is not a
+limitation we are dressing up: for a testing laboratory, a notified body or anyone under a
+confidentiality obligation, evaluation data cannot be uploaded to a stranger, and it does not have
+to be.</p>
+
+<p>Python 3, no dependencies outside the standard library.</p>
+
+<h2>1. The free check, from a public leaderboard</h2>
+
+<p>Needs only what is already published: model names and their scores, plus how many items the test
+has.</p>
+
+<pre><code>python scripts/leaderboard_check.py --table leaderboard.csv --items 1000</code></pre>
+
+<p>It reports how wide the ruler is, how many models cannot be told apart from the leader, how many
+adjacent pairs are closer together than the measurement error, and how many of the orderings in your
+top twenty the scores do not support.</p>
+
+<div class="limit">
+<p><strong>This is not the audit, and it says so on its own second page.</strong> An aggregate score
+cannot see a mis-keyed item, a dead item or the effective length — those need per-item data. A free
+check that lets you believe you have audited your benchmark has cost you more than it gave you.</p>
+</div>
+
+<p>It refuses rather than guesses. It will not run without the item count, because without it there
+is no sampling error and every claim it makes is built on one. And a board sitting entirely at or
+below 1.0 is refused rather than assumed: proportion and percentage differ by a factor of a hundred
+in the only quantity it computes, so a guess would not be a rounding, it would be the whole answer.</p>
+
+<h2>2. The real thing, from your harness logs</h2>
+
+<p>Four formats are read directly, so nobody has to write a converter before finding out whether
+they have a problem.</p>
+
+<div class="scroll">
+<table>
+<tr><th>Harness</th><th>What is read</th></tr>
+<tr><td><code>lm-evaluation-harness</code></td><td>the per-sample JSONL written by <code>--log_samples</code></td></tr>
+<tr><td><code>Inspect</code></td><td>the <code>.eval</code> log, per-sample scores</td></tr>
+<tr><td><code>promptfoo</code></td><td>the results JSON, one respondent per provider</td></tr>
+<tr><td><code>OpenAI Evals</code></td><td>the events JSONL</td></tr>
+</table>
+</div>
+
+<pre><code>python scripts/from_harness.py --out table.csv out/*/samples_*.jsonl
+python scripts/item_analysis.py --table table.csv</code></pre>
+
+<p>Each conversion writes a provenance record with a checksum per source file, so the table can be
+traced back to the logs it came from.</p>
+
+<div class="limit">
+<p><strong>One thing to check on your own logs.</strong> <code>lm-evaluation-harness</code> does not
+write the model name into its sample files at all. The respondent name is derived from the directory
+and the tool prints “derived from the directory name, not recorded in the log” every time it does
+so. If you ran two models into one directory on different tasks, tell it the labels explicitly.</p>
+</div>
+
+<h2>3. The plain table, from anything else</h2>
+
+<p>Three columns. Every harness on earth can emit this, because none of them can compute a score
+without it.</p>
+
+<pre><code>trial,item,correct
+gpt-x,q001,1
+gpt-x,q002,0
+claude-y,q001,1
+claude-y,q002,1</code></pre>
+
+<pre><code>python scripts/item_analysis.py --table responses.csv</code></pre>
+
+<p>Column names are matched loosely: <code>run_id</code>, <code>question_id</code>,
+<code>is_correct</code> and similar all work. Words are accepted as well as numbers —
+<code>true</code>, <code>pass</code>, <code>fail</code>, <code>no</code>.</p>
+
+<div class="limit">
+<p><strong>A graded score is refused, not rounded.</strong> If your correctness column holds a
+1-to-5 rubric, the tool stops and points you at the graded path, which takes the scale range.
+Rounding it silently once turned a healthy instrument — alpha 0.864, seven of eight items carrying —
+into a report saying “a test of 8 items that measures with 0”.</p>
+</div>
+
+<h2>4. The buyer-facing page, from a report</h2>
+
+<pre><code>python scripts/instrument_report.py --report report.json --out report-dir/</code></pre>
+
+<p>Add your own costs and it states the saving in money and hours, with each multiplication printed
+beside its result:</p>
+
+<pre><code>python scripts/instrument_report.py --report report.json --out report-dir/ \
+    --cost-per-run 0.004 --runs-per-year 12 --seconds-per-run 9</code></pre>
+
+<p>The costing is quoted only on items the page is willing to recommend deleting, and it states in
+its own words that it assumes every item costs the same to run — which is usually false, and which
+<code>--cost-table</code> lets you replace with your real numbers.</p>
+
+<h2>Where to get it</h2>
+
+<p>The code is public. The statistics in it are a century old and public too.</p>
+
+<p>If you would rather not read the output yourself, that is what the
+<a href="audit.html">audit</a> is. If you run it and want to argue with the result, that is welcome:
+write to <code>CONTACT_EMAIL_HERE</code>. Two of the corrections on the
+<a href="evidence.html">evidence page</a> came from someone objecting.</p>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>No trackers, no analytics, no cookies. Nothing on this site collects anything about you, and
+    nothing on this page uploads anything of yours.</p>
+  </div>
+</footer>
+
+</body>
+</html>

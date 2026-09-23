@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Item Audit</title>
+<meta name="description" content="A psychometric audit of AI evaluation benchmarks: which items are mis-keyed, which separate nobody, and whether your leaderboard means anything at the top.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <nav>
+      <a href="index.html" aria-current="page">Start</a>
+      <a href="audit.html">The audit</a>
+      <a href="evidence.html">Evidence</a>
+      <a href="run-it-yourself.html">Run it yourself</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<h1>Your benchmark counts more questions than it measures with.</h1>
+
+<p class="lede">We ran item statistics over a published medical benchmark: 1&nbsp;000 questions,
+91&nbsp;models. Across the whole field, 816 questions do some work. Across the
+<strong>top twenty models</strong> — the ones anybody is actually choosing between — <strong>204 do.</strong></p>
+
+<p>The reliability score everyone quotes did not notice. It read
+<strong>0.9944</strong> on the full field and <strong>0.9379</strong> on the top twenty.
+Almost unchanged, while four fifths of the test stopped separating anyone.</p>
+
+<span class="src">experiments/PUBLIC-AUDIT-2026-10/RESULT.md</span>
+
+<h2>What an audit tells you</h2>
+
+<table>
+<tr><th>Question</th><th>What the answer looks like</th></tr>
+<tr><td>Which items are mis-keyed?</td><td>Items your <em>better</em> models get wrong more often than your weaker ones. That is the signature of a wrong answer key.</td></tr>
+<tr><td>Which items separate nobody?</td><td>Every respondent answers them alike. You pay to run them and learn nothing.</td></tr>
+<tr><td>How long is the test, really?</td><td>Items counted against items carrying. On the benchmark above: 1&nbsp;000 against 204.</td></tr>
+<tr><td>Does the ranking hold at the top?</td><td>Measurement error at the top of the leaderboard, against the gaps you are ranking on.</td></tr>
+</table>
+
+<h2>The problem is not ours to prove</h2>
+
+<p>A systematic review of <strong>445 benchmarks</strong> in wide use, by 29 expert reviewers at the
+Oxford Internet Institute, found that <strong>16.0%</strong> use an uncertainty estimate or a
+statistical test when comparing results. Three of its eight recommendations — use statistical
+methods to compare models, conduct an error analysis, justify construct validity — are what this
+audit does.</p>
+
+<p class="small soft"><a href="https://arxiv.org/abs/2511.04703">Measuring what Matters: Construct Validity in Large Language Model Benchmarks</a>, NeurIPS 2025. Not our work, and not commissioned by us.</p>
+
+<h2>Price</h2>
+
+<table>
+<tr><th>&nbsp;</th><th class="num">Price</th><th>Turnaround</th></tr>
+<tr><td>Free scan — three numbers on your data</td><td class="num price">0 €</td><td>immediate</td></tr>
+<tr><td>One benchmark, full audit</td><td class="num price">1 900 €</td><td>5 days</td></tr>
+<tr><td>Your suite, up to 10 benchmarks</td><td class="num price">7 500 €</td><td>3 weeks</td></tr>
+<tr><td>Continuous checking in your CI</td><td class="num price">1 200 €/mo</td><td>ongoing</td></tr>
+<tr><td>Platform licence</td><td class="num price">18 000 €/yr</td><td>by contract</td></tr>
+</table>
+
+<div class="panel">
+<p><strong>If the audit finds neither a mis-keyed item nor redundancy above 20%, it is refunded.</strong></p>
+<p class="small soft">We do not know what is in your data. That uncertainty should sit with the seller, not with you.</p>
+</div>
+
+<h2>What you should know before buying</h2>
+
+<div class="limit">
+<p><strong>Below 50 respondents, the screening list over-accuses.</strong> About one healthy item in
+seven gets flagged. We measured this on data whose defects we planted ourselves, and we publish the
+rate rather than waiting for you to find it. Above 50 respondents the strict list finds 88% to 100%
+of mis-keyed items with no false alarm in 500 replications.</p>
+<span class="src">experiments/DETECTION-2026-09/RESULT.md</span>
+</div>
+
+<div class="limit">
+<p><strong>Those detection rates come from synthetic data and are an upper bound.</strong> Real
+benchmarks break the independence assumptions behind them, so a real dataset can only be harder.</p>
+</div>
+
+<div class="limit">
+<p><strong>It needs per-item data, and you will probably have to extract it.</strong> Your harness
+already produces it — it cannot compute a score without knowing which items were right — but it may
+not be lying around in a file. We read four common harness formats directly to shorten that job.</p>
+<span class="src">scripts/from_harness.py</span>
+</div>
+
+<h2>The code is public and the statistics are a century old</h2>
+
+<p>Item difficulty, discrimination, Cronbach's alpha, factor analysis, item response theory: all of
+it is public and has been for decades. Anyone can rebuild the scripts in a weekend.</p>
+
+<p>What is sold is the reading — and the list of cases where the obvious behaviour is wrong, which
+was assembled the expensive way, by getting several of them wrong first and publishing the
+corrections.</p>
+
+<p><a href="evidence.html">Every number on this site, with the file it came from →</a></p>
+
+<h2>Start</h2>
+
+<p>The free check needs only a public leaderboard, and runs on your machine. Nothing is uploaded
+anywhere.</p>
+
+<pre><code>python scripts/leaderboard_check.py --table leaderboard.csv --items 1000</code></pre>
+
+<p><a href="run-it-yourself.html">How to run it →</a> &nbsp;·&nbsp; <a href="audit.html">What the paid audit adds →</a></p>
+
+<p>To commission an audit, write to <code>CONTACT_EMAIL_HERE</code>.</p>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>No trackers, no analytics, no cookies on this site. Nothing here collects anything about you.</p>
+    <p>There are no customers yet, so there are no testimonials, logos or case studies on this site.
+    Every figure points at a file you can read.</p>
+  </div>
+</footer>
+
+</body>
+</html>
