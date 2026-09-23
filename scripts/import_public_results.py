@@ -61,6 +61,10 @@ USER_AGENT = "RA-PSI-public-audit/1.0 (psychometric re-analysis of published res
 INSTANCES = "instances.json"
 PER_INSTANCE_STATS = "per_instance_stats.json"
 
+# url -> when its bytes were actually served, filled in by `fetch`. A sha256
+# says what was fetched; only a date says when the bucket looked like that.
+RETRIEVED: dict[str, str] = {}
+
 
 def fetch(url: str, cache: Path | None, attempts: int = 4) -> bytes:
     """GET with an on-disk cache, because an audit gets re-run and the bucket is a guest.
@@ -72,6 +76,12 @@ def fetch(url: str, cache: Path | None, attempts: int = 4) -> bytes:
     key = hashlib.sha256(url.encode("utf-8")).hexdigest()[:24]
     cached = None if cache is None else cache / (key + ".json")
     if cached is not None and cached.is_file():
+        # A cached body was retrieved when it was cached, not now. Stamping the
+        # re-run's date on it would claim the source was checked today when it
+        # was not, which is the sort of small lie a provenance record exists to
+        # prevent.
+        RETRIEVED[url] = time.strftime("%Y-%m-%dT%H:%M:%SZ",
+                                       time.gmtime(cached.stat().st_mtime))
         return cached.read_bytes()
     quoted = urllib.parse.quote(url, safe=":/?&=%")
     last: Exception | None = None
@@ -91,6 +101,7 @@ def fetch(url: str, cache: Path | None, attempts: int = 4) -> bytes:
             time.sleep(1.5 * (attempt + 1))
     else:  # pragma: no cover - network
         raise SystemExit("could not fetch %s: %s" % (url, last))
+    RETRIEVED[url] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     if cached is not None:
         cached.parent.mkdir(parents=True, exist_ok=True)
         cached.write_bytes(body)
@@ -115,11 +126,31 @@ def release_manifest(project: str, release: str, cache: Path | None) -> dict:
 
 
 def split_run_name(run_name: str) -> tuple[str, str]:
-    """A HELM run name is a scenario and a model glued with commas. Separate them."""
-    parts = run_name.split(",")
-    model = next((p.split("=", 1)[1] for p in parts if p.startswith("model=")), "")
-    scenario = ",".join(p for p in parts if not p.startswith("model="))
-    return scenario, model
+    """A HELM run name is a scenario and a model glued together. Separate them.
+
+    Usually the glue is a comma: `mmlu:subject=econometrics,...,model=X`. But a
+    scenario with no arguments of its own has no comma to spare, and HELM writes
+    `med_qa:model=X` — the model hangs off the scenario's own colon. The comma
+    form alone returns an empty model name for every such run, which does not
+    fail: it pools all ninety-one models into one respondent, and an instrument
+    report on a single respondent is nonsense that still prints.
+
+    The colon is split on the *first* one, not the last, because model names
+    contain colons too (`amazon_nova-lite-v1:0`).
+    """
+    kept: list[str] = []
+    model = ""
+    for part in run_name.split(","):
+        if part.startswith("model="):
+            model = part.split("=", 1)[1]
+            continue
+        head, colon, tail = part.partition(":")
+        if colon and tail.startswith("model="):
+            model = tail.split("=", 1)[1]
+            kept.append(head)
+            continue
+        kept.append(part)
+    return ",".join(kept), model
 
 
 def short_scenario(scenario: str) -> str:
@@ -266,6 +297,14 @@ def gather(project: str, release: str, run_filter: str, metric: str,
     models_seen: set[str] = set()
     for name, suite in selected:
         scenario, model = split_run_name(name)
+        if not model:
+            # Every run must name its respondent. An unnamed one merges with
+            # every other unnamed one, which is the one failure mode here that
+            # produces a confident report instead of an error.
+            raise SystemExit(
+                "run %r does not name a model. Pooling it would merge distinct models into "
+                "one respondent and report the result as an instrument." % name
+            )
         if max_models is not None and model not in models_seen and len(models_seen) >= max_models:
             continue
         models_seen.add(model)
@@ -284,6 +323,7 @@ def gather(project: str, release: str, run_filter: str, metric: str,
             "per_instance_stats_sha256": hashlib.sha256(stats_raw).hexdigest(),
             "instances_url": inst_url,
             "instances_sha256": hashlib.sha256(inst_raw).hexdigest(),
+            "retrieved_utc": RETRIEVED.get(stats_url, ""),
         })
         print("  %-9s %s" % (suite, name), file=sys.stderr)
     return runs, provenance
@@ -323,6 +363,13 @@ def main() -> None:
     record = {
         "record_version": "RA-PSI-IMPORT-V1",
         "source": "HELM %s, release %s, %s" % (args.project, args.release, BUCKET),
+        # The span the downloads actually cover, taken from the files rather
+        # than from the clock, so a cached re-run does not claim the source was
+        # checked today when it was not.
+        "retrieved_utc_first": min((r["retrieved_utc"] for r in provenance if r["retrieved_utc"]),
+                                   default=""),
+        "retrieved_utc_last": max((r["retrieved_utc"] for r in provenance if r["retrieved_utc"]),
+                                  default=""),
         "run_filter": args.run_filter,
         "metric": args.metric,
         "metric_note": "already 0 or 1 in the source; no threshold was chosen",

@@ -1,0 +1,931 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM lite, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-23T00:01:41Z",
+  "retrieved_utc_last": "2026-09-23T00:10:20Z",
+  "run_filter": "med_qa:",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "med_qa"
+  ],
+  "table": "experiments\\PUBLIC-AUDIT-2026-10\\helm-lite-med_qa.csv",
+  "rows": 91000,
+  "models": 91,
+  "items_common_to_every_model": 1000,
+  "items_seen_at_all": 1000,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "med_qa:model=01-ai_yi-34b",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=01-ai_yi-34b/per_instance_stats.json",
+      "per_instance_stats_sha256": "6d729934b214784644c0eaee8ed05ddac2d0e54b7d672ad384d47b2dcc37a8e7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=01-ai_yi-34b/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:01:41Z"
+    },
+    {
+      "run": "med_qa:model=01-ai_yi-6b",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=01-ai_yi-6b/per_instance_stats.json",
+      "per_instance_stats_sha256": "1a009bdf425a4018a721b5dd80e964e1ead32b313c0b4aa5b8558d5e53a1533b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=01-ai_yi-6b/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:01:46Z"
+    },
+    {
+      "run": "med_qa:model=01-ai_yi-large-preview",
+      "suite": "v1.5.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/med_qa:model=01-ai_yi-large-preview/per_instance_stats.json",
+      "per_instance_stats_sha256": "223bf6e4494ab132111e2e9ed7898f503960033159c56c1c4dc6aa8752e0fb6f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/med_qa:model=01-ai_yi-large-preview/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:01:52Z"
+    },
+    {
+      "run": "med_qa:model=AlephAlpha_luminous-base",
+      "suite": "v1.0.0",
+      "model": "AlephAlpha_luminous-base",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=AlephAlpha_luminous-base/per_instance_stats.json",
+      "per_instance_stats_sha256": "bda452058035e61bfa2af1bfb3bdc96972d673aaf5039727ebe76cbb85d67392",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=AlephAlpha_luminous-base/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:02:00Z"
+    },
+    {
+      "run": "med_qa:model=AlephAlpha_luminous-extended",
+      "suite": "v1.0.0",
+      "model": "AlephAlpha_luminous-extended",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=AlephAlpha_luminous-extended/per_instance_stats.json",
+      "per_instance_stats_sha256": "240d1d34a377a179bb27e394420a62a77d078f4467b2335336803c82e0bd751f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=AlephAlpha_luminous-extended/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:02:05Z"
+    },
+    {
+      "run": "med_qa:model=AlephAlpha_luminous-supreme",
+      "suite": "v1.0.0",
+      "model": "AlephAlpha_luminous-supreme",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=AlephAlpha_luminous-supreme/per_instance_stats.json",
+      "per_instance_stats_sha256": "8531a6b3bd60bf121c9e7b1bd8ba29a1c6d1bd4f3f7d58427fb98147333b925d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=AlephAlpha_luminous-supreme/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:02:09Z"
+    },
+    {
+      "run": "med_qa:model=ai21_j2-grande",
+      "suite": "v1.0.0",
+      "model": "ai21_j2-grande",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=ai21_j2-grande/per_instance_stats.json",
+      "per_instance_stats_sha256": "d9ac3d97eeb726c9f1faed6ed8cea54a8c189dc4cc3ca84f379ed3c42d3d6a0f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=ai21_j2-grande/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:02:14Z"
+    },
+    {
+      "run": "med_qa:model=ai21_j2-jumbo",
+      "suite": "v1.0.0",
+      "model": "ai21_j2-jumbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=ai21_j2-jumbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "2d0468527b0f5171916656edf1496af5ed38aea30835369a8fbfdb2af9a555be",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=ai21_j2-jumbo/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:02:18Z"
+    },
+    {
+      "run": "med_qa:model=ai21_jamba-1.5-large",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/med_qa:model=ai21_jamba-1.5-large/per_instance_stats.json",
+      "per_instance_stats_sha256": "3b1e4eca4796699ee7e22645c6ee9b81e91baf6db02ccb78aaf2b1d51379c44b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/med_qa:model=ai21_jamba-1.5-large/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:02:24Z"
+    },
+    {
+      "run": "med_qa:model=ai21_jamba-1.5-mini",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/med_qa:model=ai21_jamba-1.5-mini/per_instance_stats.json",
+      "per_instance_stats_sha256": "88b9496cf4ffd117d1c7dc88fd2af31ffd64d5cc6130849584a937009ec144da",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/med_qa:model=ai21_jamba-1.5-mini/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:02:30Z"
+    },
+    {
+      "run": "med_qa:model=ai21_jamba-instruct",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/med_qa:model=ai21_jamba-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "dd180ccddcb0a48f00e959e4bc63059cf60a9bc94d4c4968a7af9015ee167905",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/med_qa:model=ai21_jamba-instruct/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:02:40Z"
+    },
+    {
+      "run": "med_qa:model=allenai_olmo-7b",
+      "suite": "v1.2.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/med_qa:model=allenai_olmo-7b/per_instance_stats.json",
+      "per_instance_stats_sha256": "98c012e9860da8d0d2962dd065e6030d8e1fb6a19e81a3a8a42992252c24c2bb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/med_qa:model=allenai_olmo-7b/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:02:45Z"
+    },
+    {
+      "run": "med_qa:model=amazon_nova-lite-v1:0",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/med_qa:model=amazon_nova-lite-v1:0/per_instance_stats.json",
+      "per_instance_stats_sha256": "04377b47499bb249e577f9636bcb9258e41334c71ae3877ea5704c2afe515886",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/med_qa:model=amazon_nova-lite-v1:0/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:02:49Z"
+    },
+    {
+      "run": "med_qa:model=amazon_nova-micro-v1:0",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/med_qa:model=amazon_nova-micro-v1:0/per_instance_stats.json",
+      "per_instance_stats_sha256": "a8b1cb00816a47604d4f8f5009b4440cdeef608de1b2407b4a959ac7c8147a35",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/med_qa:model=amazon_nova-micro-v1:0/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:02:54Z"
+    },
+    {
+      "run": "med_qa:model=amazon_nova-pro-v1:0",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/med_qa:model=amazon_nova-pro-v1:0/per_instance_stats.json",
+      "per_instance_stats_sha256": "cdb739113e9f33917241782e41438ff3235209679ac58974373a9fc3c4874e65",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/med_qa:model=amazon_nova-pro-v1:0/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:02:58Z"
+    },
+    {
+      "run": "med_qa:model=anthropic_claude-2.0",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=anthropic_claude-2.0/per_instance_stats.json",
+      "per_instance_stats_sha256": "80369d6a77810176770c2e7f5d51d87858935d14b2569ae2212c9033098ce0f7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=anthropic_claude-2.0/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:03:02Z"
+    },
+    {
+      "run": "med_qa:model=anthropic_claude-2.1",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=anthropic_claude-2.1/per_instance_stats.json",
+      "per_instance_stats_sha256": "f70d2922c88478aa59ba1af26ed42560e52cd2907b2ba40b1b806cd819a611c2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=anthropic_claude-2.1/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:03:06Z"
+    },
+    {
+      "run": "med_qa:model=anthropic_claude-3-5-haiku-20241022",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.12.0/med_qa:model=anthropic_claude-3-5-haiku-20241022/per_instance_stats.json",
+      "per_instance_stats_sha256": "999a3f65ba59f8cd99c2332fab9fee06e03e1b91eba733550c8bbac6e59621d2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.12.0/med_qa:model=anthropic_claude-3-5-haiku-20241022/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:03:16Z"
+    },
+    {
+      "run": "med_qa:model=anthropic_claude-3-5-sonnet-20240620",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/med_qa:model=anthropic_claude-3-5-sonnet-20240620/per_instance_stats.json",
+      "per_instance_stats_sha256": "c49d1bbc36848a7a4c8e7373917d6d4d7ca9b6474e1be7802c35e2575390efe7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/med_qa:model=anthropic_claude-3-5-sonnet-20240620/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:03:22Z"
+    },
+    {
+      "run": "med_qa:model=anthropic_claude-3-5-sonnet-20241022",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/med_qa:model=anthropic_claude-3-5-sonnet-20241022/per_instance_stats.json",
+      "per_instance_stats_sha256": "6956fb519b1601e15f3f63aea01a1b53baf98e66762c8f8048d886296db9ca3d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/med_qa:model=anthropic_claude-3-5-sonnet-20241022/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:03:27Z"
+    },
+    {
+      "run": "med_qa:model=anthropic_claude-3-haiku-20240307",
+      "suite": "v1.3.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/med_qa:model=anthropic_claude-3-haiku-20240307/per_instance_stats.json",
+      "per_instance_stats_sha256": "4a69d2adbf4ffdd84b455d5ed7283b08d7bb26b59131be0610f2ee02feb5322e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/med_qa:model=anthropic_claude-3-haiku-20240307/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:03:31Z"
+    },
+    {
+      "run": "med_qa:model=anthropic_claude-3-opus-20240229",
+      "suite": "v1.3.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/med_qa:model=anthropic_claude-3-opus-20240229/per_instance_stats.json",
+      "per_instance_stats_sha256": "3df59fe74b16a7b469aa2bc7b389e85cb0de2aa0cde428f3f02c4f631a38f98c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/med_qa:model=anthropic_claude-3-opus-20240229/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:03:35Z"
+    },
+    {
+      "run": "med_qa:model=anthropic_claude-3-sonnet-20240229",
+      "suite": "v1.3.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/med_qa:model=anthropic_claude-3-sonnet-20240229/per_instance_stats.json",
+      "per_instance_stats_sha256": "2b1cb82d88a16e17cdca774640a2826c062ee7174f382aa788edc464befa0d72",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/med_qa:model=anthropic_claude-3-sonnet-20240229/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:03:39Z"
+    },
+    {
+      "run": "med_qa:model=anthropic_claude-instant-1.2",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=anthropic_claude-instant-1.2/per_instance_stats.json",
+      "per_instance_stats_sha256": "673838481644ca7ce12d7a04ddc95f1e60384e51646cf552ffcb55abb434ca34",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=anthropic_claude-instant-1.2/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:03:47Z"
+    },
+    {
+      "run": "med_qa:model=anthropic_claude-v1.3",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-v1.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=anthropic_claude-v1.3/per_instance_stats.json",
+      "per_instance_stats_sha256": "d4ec43118b81161f1d1185bf23b9d559e5ce43343575bff79eaa6940796c8a57",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=anthropic_claude-v1.3/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:03:51Z"
+    },
+    {
+      "run": "med_qa:model=cohere_command",
+      "suite": "v1.0.0",
+      "model": "cohere_command",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=cohere_command/per_instance_stats.json",
+      "per_instance_stats_sha256": "b351e028e056a83ed7991d6a4e72d3206b0b6cddd3aa997383a25bde189a1724",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=cohere_command/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:03:55Z"
+    },
+    {
+      "run": "med_qa:model=cohere_command-light",
+      "suite": "v1.0.0",
+      "model": "cohere_command-light",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=cohere_command-light/per_instance_stats.json",
+      "per_instance_stats_sha256": "30465e524176d984aba47965b554086b7d19aec9a73bca95176cfe091858628c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=cohere_command-light/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:03:59Z"
+    },
+    {
+      "run": "med_qa:model=cohere_command-r",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/med_qa:model=cohere_command-r/per_instance_stats.json",
+      "per_instance_stats_sha256": "22bf8d6b8fe3ae6c04aa853b4b6fd26acdfac61319527abb01ddb8d463baf5b2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/med_qa:model=cohere_command-r/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:04:03Z"
+    },
+    {
+      "run": "med_qa:model=cohere_command-r-plus",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/med_qa:model=cohere_command-r-plus/per_instance_stats.json",
+      "per_instance_stats_sha256": "44dec0310d57c11180587972e975190601aab6adb6a0523820823aa2ab148e9f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/med_qa:model=cohere_command-r-plus/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:04:08Z"
+    },
+    {
+      "run": "med_qa:model=databricks_dbrx-instruct",
+      "suite": "v1.3.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/med_qa:model=databricks_dbrx-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "ea19801f7f5a335646a6b20d4cf8ad2dfb75fed8939f660af831566642614629",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/med_qa:model=databricks_dbrx-instruct/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:04:15Z"
+    },
+    {
+      "run": "med_qa:model=deepseek-ai_deepseek-llm-67b-chat",
+      "suite": "v1.3.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/med_qa:model=deepseek-ai_deepseek-llm-67b-chat/per_instance_stats.json",
+      "per_instance_stats_sha256": "44bb025f967dee0a72d8df13ecc49cefdc4a3d236d05c5a49e5a47a4718c9780",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/med_qa:model=deepseek-ai_deepseek-llm-67b-chat/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:04:19Z"
+    },
+    {
+      "run": "med_qa:model=deepseek-ai_deepseek-v3",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/med_qa:model=deepseek-ai_deepseek-v3/per_instance_stats.json",
+      "per_instance_stats_sha256": "15077a6d39eaf04607cb23d6b05272db64cb979fec1b5f32846b24a8702fc18e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/med_qa:model=deepseek-ai_deepseek-v3/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:04:23Z"
+    },
+    {
+      "run": "med_qa:model=google_gemini-1.0-pro-002",
+      "suite": "v1.5.0",
+      "model": "google_gemini-1.0-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/med_qa:model=google_gemini-1.0-pro-002/per_instance_stats.json",
+      "per_instance_stats_sha256": "9ca36b7d0de977604aa189b1d802e8bef42eac5fd7a5a368577c32ddb4dacfb7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/med_qa:model=google_gemini-1.0-pro-002/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:04:27Z"
+    },
+    {
+      "run": "med_qa:model=google_gemini-1.5-flash-001",
+      "suite": "v1.5.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/med_qa:model=google_gemini-1.5-flash-001/per_instance_stats.json",
+      "per_instance_stats_sha256": "a90b122e6378ba80602cbba3dadbb3b366d31c4cfcc3b0ad5529d105f608b19a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/med_qa:model=google_gemini-1.5-flash-001/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:04:31Z"
+    },
+    {
+      "run": "med_qa:model=google_gemini-1.5-flash-002",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/med_qa:model=google_gemini-1.5-flash-002/per_instance_stats.json",
+      "per_instance_stats_sha256": "b23c5dcfe1fcf57018f61afaec9117a233082b180e34800e26fce7fa4ff17329",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/med_qa:model=google_gemini-1.5-flash-002/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:04:34Z"
+    },
+    {
+      "run": "med_qa:model=google_gemini-1.5-pro-001",
+      "suite": "v1.5.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/med_qa:model=google_gemini-1.5-pro-001/per_instance_stats.json",
+      "per_instance_stats_sha256": "85c9086722d02ef31daf35252c6a3d30f940e80d86276091ca04852818cb67d6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/med_qa:model=google_gemini-1.5-pro-001/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:04:37Z"
+    },
+    {
+      "run": "med_qa:model=google_gemini-1.5-pro-002",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/med_qa:model=google_gemini-1.5-pro-002/per_instance_stats.json",
+      "per_instance_stats_sha256": "f639b9f578610eecfb7a27979d804740565e5789cff570e5919c90e23c4d6936",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/med_qa:model=google_gemini-1.5-pro-002/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:04:47Z"
+    },
+    {
+      "run": "med_qa:model=google_gemini-2.0-flash-exp",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.12.0/med_qa:model=google_gemini-2.0-flash-exp/per_instance_stats.json",
+      "per_instance_stats_sha256": "14ac7c83d90e3c5a3926bb73e06e9ccbebc909061af31da7b390d6f05ddbde73",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.12.0/med_qa:model=google_gemini-2.0-flash-exp/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:04:51Z"
+    },
+    {
+      "run": "med_qa:model=google_gemma-2-27b-it",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b-it",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/med_qa:model=google_gemma-2-27b-it/per_instance_stats.json",
+      "per_instance_stats_sha256": "6c29388bf28e7d56afc6019738bae1dd9b75ab5cc50124ff883735806343b0cd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/med_qa:model=google_gemma-2-27b-it/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:04:54Z"
+    },
+    {
+      "run": "med_qa:model=google_gemma-2-9b-it",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b-it",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/med_qa:model=google_gemma-2-9b-it/per_instance_stats.json",
+      "per_instance_stats_sha256": "ca2b678a20935c2201974b4dad6a946f276ac3b41002ba669c5eb63c0b520efe",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/med_qa:model=google_gemma-2-9b-it/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:04:58Z"
+    },
+    {
+      "run": "med_qa:model=google_gemma-7b",
+      "suite": "v1.2.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/med_qa:model=google_gemma-7b/per_instance_stats.json",
+      "per_instance_stats_sha256": "f7185ed6a2a3227bfc4b32844edb890890b8178e2a7bb73c218598cf41e3ebcf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/med_qa:model=google_gemma-7b/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:05:01Z"
+    },
+    {
+      "run": "med_qa:model=google_text-bison@001",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=google_text-bison@001/per_instance_stats.json",
+      "per_instance_stats_sha256": "723afd6aead5d4b09cb43271f4728eaa97660db5e4eec6f0fb70c44b1bf80405",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=google_text-bison@001/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:05:04Z"
+    },
+    {
+      "run": "med_qa:model=google_text-unicorn@001",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=google_text-unicorn@001/per_instance_stats.json",
+      "per_instance_stats_sha256": "952f3207eca7cec41c12c24f9b4e4f939cfc0660848d71370cd5d524ad7e87aa",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=google_text-unicorn@001/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:05:07Z"
+    },
+    {
+      "run": "med_qa:model=meta_llama-2-13b",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=meta_llama-2-13b/per_instance_stats.json",
+      "per_instance_stats_sha256": "82650c8dd484571c85ab533d75e6dbfadfa212c7f2c3011528512474ff81213b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=meta_llama-2-13b/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:05:10Z"
+    },
+    {
+      "run": "med_qa:model=meta_llama-2-70b",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=meta_llama-2-70b/per_instance_stats.json",
+      "per_instance_stats_sha256": "85ad787b01a8df5c1979327809e232b2c6e214da46f8d902d4b7c22d2c00ee43",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=meta_llama-2-70b/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:05:16Z"
+    },
+    {
+      "run": "med_qa:model=meta_llama-2-7b",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=meta_llama-2-7b/per_instance_stats.json",
+      "per_instance_stats_sha256": "f2b8c48426c42d14defd128d8bfff255e324bd3de629041e7f35fa6b6138cfaf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=meta_llama-2-7b/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:05:23Z"
+    },
+    {
+      "run": "med_qa:model=meta_llama-3-70b",
+      "suite": "v1.2.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/med_qa:model=meta_llama-3-70b/per_instance_stats.json",
+      "per_instance_stats_sha256": "22950c09c3086508c9f003beddfc1c3142590cc9bb91057fd5ed8b82fefceac2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/med_qa:model=meta_llama-3-70b/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:05:31Z"
+    },
+    {
+      "run": "med_qa:model=meta_llama-3-8b",
+      "suite": "v1.2.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/med_qa:model=meta_llama-3-8b/per_instance_stats.json",
+      "per_instance_stats_sha256": "a1a467dce258048044c93e7ff7235effb8a0ee6c518e0d2d057cff74efd1d8a9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/med_qa:model=meta_llama-3-8b/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:05:36Z"
+    },
+    {
+      "run": "med_qa:model=meta_llama-3.1-405b-instruct-turbo",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/med_qa:model=meta_llama-3.1-405b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "b7395cebe0b8e5dc5587ed9e5377ab4534039ab99bf4f8efff57bf8fb31b16b3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/med_qa:model=meta_llama-3.1-405b-instruct-turbo/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:05:39Z"
+    },
+    {
+      "run": "med_qa:model=meta_llama-3.1-70b-instruct-turbo",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/med_qa:model=meta_llama-3.1-70b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "29ef07bf22f079010f7a0b41ac94f839f27db27cbe179d1907267fab0421c819",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/med_qa:model=meta_llama-3.1-70b-instruct-turbo/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:05:42Z"
+    },
+    {
+      "run": "med_qa:model=meta_llama-3.1-8b-instruct-turbo",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/med_qa:model=meta_llama-3.1-8b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "9ab056de909d1786357014f3e4b83300c563d3720e61b2007319d728fb9ef9ad",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/med_qa:model=meta_llama-3.1-8b-instruct-turbo/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:05:45Z"
+    },
+    {
+      "run": "med_qa:model=meta_llama-3.2-11b-vision-instruct-turbo",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/med_qa:model=meta_llama-3.2-11b-vision-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "c24be4fe3a7027bbcb2c15e9b614210732cdfb21ee917ac94993af977b36a555",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/med_qa:model=meta_llama-3.2-11b-vision-instruct-turbo/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:05:49Z"
+    },
+    {
+      "run": "med_qa:model=meta_llama-3.2-90b-vision-instruct-turbo",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/med_qa:model=meta_llama-3.2-90b-vision-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "2889e757207b0384b322fc39e9458e13fac4d06facdde6d6872cc4fd1ce27c9b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/med_qa:model=meta_llama-3.2-90b-vision-instruct-turbo/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:05:52Z"
+    },
+    {
+      "run": "med_qa:model=meta_llama-3.3-70b-instruct-turbo",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.11.0/med_qa:model=meta_llama-3.3-70b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "010b8d3d63ac95555b4997159c56a31d4b94ae8d34c30324e9d883685957beea",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.11.0/med_qa:model=meta_llama-3.3-70b-instruct-turbo/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:05:55Z"
+    },
+    {
+      "run": "med_qa:model=meta_llama-65b",
+      "suite": "v1.0.0",
+      "model": "meta_llama-65b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=meta_llama-65b/per_instance_stats.json",
+      "per_instance_stats_sha256": "dd9246fa684f3ec304ac841bffc9540c809dd2e22242aeec7da045020f4c5a46",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=meta_llama-65b/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:05:59Z"
+    },
+    {
+      "run": "med_qa:model=microsoft_phi-2",
+      "suite": "v1.1.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.1.0/med_qa:model=microsoft_phi-2/per_instance_stats.json",
+      "per_instance_stats_sha256": "75aadefa97e6cdb669a8597a4d3e10b53e2162842224ae7f0b728fb4c7a579c5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.1.0/med_qa:model=microsoft_phi-2/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:06:10Z"
+    },
+    {
+      "run": "med_qa:model=microsoft_phi-3-medium-4k-instruct",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/med_qa:model=microsoft_phi-3-medium-4k-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "a14515d12bc289718bec5083fcd425b72175ec4a2b5bf99b5a5d953109fb30cd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/med_qa:model=microsoft_phi-3-medium-4k-instruct/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:06:15Z"
+    },
+    {
+      "run": "med_qa:model=microsoft_phi-3-small-8k-instruct",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/med_qa:model=microsoft_phi-3-small-8k-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "e5c8f38eec73727c58f64d6d2a5734c7bf7af6d3d24929dc91c7a465aaf4c451",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/med_qa:model=microsoft_phi-3-small-8k-instruct/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:06:18Z"
+    },
+    {
+      "run": "med_qa:model=mistralai_mistral-7b-instruct-v0.3",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/med_qa:model=mistralai_mistral-7b-instruct-v0.3/per_instance_stats.json",
+      "per_instance_stats_sha256": "82243b998156049d974d1b7d776f3d3930464b6cc1be66080c7c77d9831c520f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/med_qa:model=mistralai_mistral-7b-instruct-v0.3/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:06:38Z"
+    },
+    {
+      "run": "med_qa:model=mistralai_mistral-7b-v0.1",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=mistralai_mistral-7b-v0.1/per_instance_stats.json",
+      "per_instance_stats_sha256": "1822e684b29e83d6a5c181d2cb6a30611bb9d6cb128a76499a0ad5d882a94034",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=mistralai_mistral-7b-v0.1/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:06:47Z"
+    },
+    {
+      "run": "med_qa:model=mistralai_mistral-large-2402",
+      "suite": "v1.3.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/med_qa:model=mistralai_mistral-large-2402/per_instance_stats.json",
+      "per_instance_stats_sha256": "276a8e8db64e0ff851ba62748011df0f9a152a19c0a7f021fee06ec636f845b4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/med_qa:model=mistralai_mistral-large-2402/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:06:54Z"
+    },
+    {
+      "run": "med_qa:model=mistralai_mistral-large-2407",
+      "suite": "v1.6.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/med_qa:model=mistralai_mistral-large-2407/per_instance_stats.json",
+      "per_instance_stats_sha256": "1e3511452260fc03459f95bb5b95b03f9283c59a9bedf9f538cd22eeedab3298",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/med_qa:model=mistralai_mistral-large-2407/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:07:00Z"
+    },
+    {
+      "run": "med_qa:model=mistralai_mistral-medium-2312",
+      "suite": "v1.1.0",
+      "model": "mistralai_mistral-medium-2312",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.1.0/med_qa:model=mistralai_mistral-medium-2312/per_instance_stats.json",
+      "per_instance_stats_sha256": "a9c8e7114aecb058e199c2d66b506d70aea6c9bb92ffca5cfbabda28967913f0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.1.0/med_qa:model=mistralai_mistral-medium-2312/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:07:06Z"
+    },
+    {
+      "run": "med_qa:model=mistralai_mistral-small-2402",
+      "suite": "v1.3.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/med_qa:model=mistralai_mistral-small-2402/per_instance_stats.json",
+      "per_instance_stats_sha256": "797234e52edcfc70f3e67cd5c612aff93fe140780c3dda9976023fffb91722d7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/med_qa:model=mistralai_mistral-small-2402/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:07:12Z"
+    },
+    {
+      "run": "med_qa:model=mistralai_mixtral-8x22b",
+      "suite": "v1.2.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/med_qa:model=mistralai_mixtral-8x22b/per_instance_stats.json",
+      "per_instance_stats_sha256": "49c43f341b21f8c0181f3b48beced9c55b9db6d5bd36e35df23eaf08f7294425",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/med_qa:model=mistralai_mixtral-8x22b/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:07:18Z"
+    },
+    {
+      "run": "med_qa:model=mistralai_mixtral-8x7b-32kseqlen",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=mistralai_mixtral-8x7b-32kseqlen/per_instance_stats.json",
+      "per_instance_stats_sha256": "5e62b764e691e7229bcdeef54d7237f6a8522c842eab9e24b03cb7c972a81135",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=mistralai_mixtral-8x7b-32kseqlen/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:07:26Z"
+    },
+    {
+      "run": "med_qa:model=mistralai_open-mistral-nemo-2407",
+      "suite": "v1.6.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/med_qa:model=mistralai_open-mistral-nemo-2407/per_instance_stats.json",
+      "per_instance_stats_sha256": "f4d4abcfd0b6c8b8ce2604343d952bd7c5bf8160137cc9e77c70d908fb5489e1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/med_qa:model=mistralai_open-mistral-nemo-2407/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:07:32Z"
+    },
+    {
+      "run": "med_qa:model=openai_gpt-3.5-turbo-0613",
+      "suite": "v1.0.0",
+      "model": "openai_gpt-3.5-turbo-0613",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=openai_gpt-3.5-turbo-0613/per_instance_stats.json",
+      "per_instance_stats_sha256": "88debcba2249d2527beed09c5f965faf2e0552538718f9a04ac93ec8b7158def",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=openai_gpt-3.5-turbo-0613/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:07:38Z"
+    },
+    {
+      "run": "med_qa:model=openai_gpt-4-0613",
+      "suite": "v1.0.0",
+      "model": "openai_gpt-4-0613",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=openai_gpt-4-0613/per_instance_stats.json",
+      "per_instance_stats_sha256": "08d6668cda4419d9a52d8e489a6f16cdb765e0d2cec35d3c271a77649777f2a9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=openai_gpt-4-0613/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:07:49Z"
+    },
+    {
+      "run": "med_qa:model=openai_gpt-4-1106-preview",
+      "suite": "v1.0.0",
+      "model": "openai_gpt-4-1106-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=openai_gpt-4-1106-preview/per_instance_stats.json",
+      "per_instance_stats_sha256": "885e3fb5b70a5721e2177614ecb87426d82bf7483b09a150642fedb77fa1cf65",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=openai_gpt-4-1106-preview/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:08:00Z"
+    },
+    {
+      "run": "med_qa:model=openai_gpt-4-turbo-2024-04-09",
+      "suite": "v1.4.0",
+      "model": "openai_gpt-4-turbo-2024-04-09",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/med_qa:model=openai_gpt-4-turbo-2024-04-09/per_instance_stats.json",
+      "per_instance_stats_sha256": "c0491287d77b511f61248a5cf1f7c4db1e34cc161e0e68ee8eebcb2972e04c0c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/med_qa:model=openai_gpt-4-turbo-2024-04-09/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:08:07Z"
+    },
+    {
+      "run": "med_qa:model=openai_gpt-4o-2024-05-13",
+      "suite": "v1.4.0",
+      "model": "openai_gpt-4o-2024-05-13",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/med_qa:model=openai_gpt-4o-2024-05-13/per_instance_stats.json",
+      "per_instance_stats_sha256": "a336bf58ecc4a2012b9839dbd7d04c518763e3ec91356708a57344ee8913d528",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/med_qa:model=openai_gpt-4o-2024-05-13/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:08:13Z"
+    },
+    {
+      "run": "med_qa:model=openai_gpt-4o-2024-08-06",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-4o-2024-08-06",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/med_qa:model=openai_gpt-4o-2024-08-06/per_instance_stats.json",
+      "per_instance_stats_sha256": "40bc29a4758788bf85ce5260854b1154f64b061e7e5f5df23bbcebbbdb4aea83",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/med_qa:model=openai_gpt-4o-2024-08-06/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:08:19Z"
+    },
+    {
+      "run": "med_qa:model=openai_gpt-4o-mini-2024-07-18",
+      "suite": "v1.6.0",
+      "model": "openai_gpt-4o-mini-2024-07-18",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/med_qa:model=openai_gpt-4o-mini-2024-07-18/per_instance_stats.json",
+      "per_instance_stats_sha256": "69ca4b32c220dbb0bfc2a9630110ba856dd067ff339821396f59391e1868159b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/med_qa:model=openai_gpt-4o-mini-2024-07-18/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:08:25Z"
+    },
+    {
+      "run": "med_qa:model=openai_text-davinci-002",
+      "suite": "v1.0.0",
+      "model": "openai_text-davinci-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=openai_text-davinci-002/per_instance_stats.json",
+      "per_instance_stats_sha256": "d2eacb840be008e487cd6fc38769ad35228e41d90bdd9da83ffd9e4dc770f9e4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=openai_text-davinci-002/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:08:31Z"
+    },
+    {
+      "run": "med_qa:model=openai_text-davinci-003",
+      "suite": "v1.0.0",
+      "model": "openai_text-davinci-003",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=openai_text-davinci-003/per_instance_stats.json",
+      "per_instance_stats_sha256": "b0c24650162b4b6c4d10bb60116fce6c9b319211731c2dd44349979957a3d3f5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=openai_text-davinci-003/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:08:37Z"
+    },
+    {
+      "run": "med_qa:model=qwen_qwen1.5-110b-chat",
+      "suite": "v1.4.0",
+      "model": "qwen_qwen1.5-110b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/med_qa:model=qwen_qwen1.5-110b-chat/per_instance_stats.json",
+      "per_instance_stats_sha256": "163cdca1f31ea4582c5160c0df2b4494bdb74df0330463528eed450c9a4b55ca",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/med_qa:model=qwen_qwen1.5-110b-chat/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:08:43Z"
+    },
+    {
+      "run": "med_qa:model=qwen_qwen1.5-14b",
+      "suite": "v1.2.0",
+      "model": "qwen_qwen1.5-14b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/med_qa:model=qwen_qwen1.5-14b/per_instance_stats.json",
+      "per_instance_stats_sha256": "d901da824874e75e9cb5b90c178b2a318c546085ab422ef9b9f47bfaf43333f7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/med_qa:model=qwen_qwen1.5-14b/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:08:49Z"
+    },
+    {
+      "run": "med_qa:model=qwen_qwen1.5-32b",
+      "suite": "v1.2.0",
+      "model": "qwen_qwen1.5-32b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/med_qa:model=qwen_qwen1.5-32b/per_instance_stats.json",
+      "per_instance_stats_sha256": "909a5aa3c4a34df2440a4a5bfc09021b91c69f56cb766edfb343e0619bb72b33",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/med_qa:model=qwen_qwen1.5-32b/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:09:03Z"
+    },
+    {
+      "run": "med_qa:model=qwen_qwen1.5-72b",
+      "suite": "v1.2.0",
+      "model": "qwen_qwen1.5-72b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/med_qa:model=qwen_qwen1.5-72b/per_instance_stats.json",
+      "per_instance_stats_sha256": "a5a2ab5b10720ce2d36708a59bfafda8511ee1a38a0a48afe6376ba4a35dc96f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/med_qa:model=qwen_qwen1.5-72b/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:09:09Z"
+    },
+    {
+      "run": "med_qa:model=qwen_qwen1.5-7b",
+      "suite": "v1.2.0",
+      "model": "qwen_qwen1.5-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/med_qa:model=qwen_qwen1.5-7b/per_instance_stats.json",
+      "per_instance_stats_sha256": "81e289460c8106caaf7cc971bda46665d39fd8e66808b155c8ee695e8be3bccb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/med_qa:model=qwen_qwen1.5-7b/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:09:16Z"
+    },
+    {
+      "run": "med_qa:model=qwen_qwen2-72b-instruct",
+      "suite": "v1.4.0",
+      "model": "qwen_qwen2-72b-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/med_qa:model=qwen_qwen2-72b-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "2da3db1f2f5978264fcae3fbedcf92f89f7c31f27eef8648bfd4388abb7d2646",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/med_qa:model=qwen_qwen2-72b-instruct/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:09:22Z"
+    },
+    {
+      "run": "med_qa:model=qwen_qwen2.5-72b-instruct-turbo",
+      "suite": "v1.9.0",
+      "model": "qwen_qwen2.5-72b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/med_qa:model=qwen_qwen2.5-72b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "406e42cd70d62d23a4748a85a682a9ffd2d26192a9628f8ba2a0138df2a5641d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/med_qa:model=qwen_qwen2.5-72b-instruct-turbo/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:09:28Z"
+    },
+    {
+      "run": "med_qa:model=qwen_qwen2.5-7b-instruct-turbo",
+      "suite": "v1.9.0",
+      "model": "qwen_qwen2.5-7b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/med_qa:model=qwen_qwen2.5-7b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "95f3f828bae05c34813c072908b03202c5176bbb1636198010ca2a8277fdfc59",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/med_qa:model=qwen_qwen2.5-7b-instruct-turbo/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:09:34Z"
+    },
+    {
+      "run": "med_qa:model=snowflake_snowflake-arctic-instruct",
+      "suite": "v1.4.0",
+      "model": "snowflake_snowflake-arctic-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/med_qa:model=snowflake_snowflake-arctic-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "1f8b5f154adf345005f7f42da6fea7c7d903cfa9eeed37482d78b4ea9162b491",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/med_qa:model=snowflake_snowflake-arctic-instruct/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:09:41Z"
+    },
+    {
+      "run": "med_qa:model=tiiuae_falcon-40b",
+      "suite": "v1.0.0",
+      "model": "tiiuae_falcon-40b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=tiiuae_falcon-40b/per_instance_stats.json",
+      "per_instance_stats_sha256": "632a781e1c03126ef3fd1b296f11d4bd947f68066a8aeca0a979eedceb16300e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=tiiuae_falcon-40b/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:09:47Z"
+    },
+    {
+      "run": "med_qa:model=tiiuae_falcon-7b",
+      "suite": "v1.0.0",
+      "model": "tiiuae_falcon-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=tiiuae_falcon-7b/per_instance_stats.json",
+      "per_instance_stats_sha256": "24165219c31e47b7055af8b238ee57d51dd622677ee37781a6771342c7fc2545",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=tiiuae_falcon-7b/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:09:55Z"
+    },
+    {
+      "run": "med_qa:model=upstage_solar-pro-241126",
+      "suite": "v1.11.0",
+      "model": "upstage_solar-pro-241126",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.11.0/med_qa:model=upstage_solar-pro-241126/per_instance_stats.json",
+      "per_instance_stats_sha256": "991a576922c2a740738c8a40d8a96beec3d533b55e0f56883d43bbfb17398e33",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.11.0/med_qa:model=upstage_solar-pro-241126/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:10:01Z"
+    },
+    {
+      "run": "med_qa:model=writer_palmyra-x-004",
+      "suite": "v1.8.0",
+      "model": "writer_palmyra-x-004",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/med_qa:model=writer_palmyra-x-004/per_instance_stats.json",
+      "per_instance_stats_sha256": "d84c8df8127690e3bd863dbc3eb406a6efe22bbd3d0f18ec1082db9577630919",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/med_qa:model=writer_palmyra-x-004/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:10:07Z"
+    },
+    {
+      "run": "med_qa:model=writer_palmyra-x-v2",
+      "suite": "v1.0.0",
+      "model": "writer_palmyra-x-v2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=writer_palmyra-x-v2/per_instance_stats.json",
+      "per_instance_stats_sha256": "9d6eb480a42f1e4e65f49b8fa8422cc25c52debbe2c2d041276b33ed3dfd841c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=writer_palmyra-x-v2/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:10:14Z"
+    },
+    {
+      "run": "med_qa:model=writer_palmyra-x-v3",
+      "suite": "v1.0.0",
+      "model": "writer_palmyra-x-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=writer_palmyra-x-v3/per_instance_stats.json",
+      "per_instance_stats_sha256": "00f5151b26bfa83823b8113225238592b0c19ac294c6dd36db84b2d0cc7829e8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/med_qa:model=writer_palmyra-x-v3/instances.json",
+      "instances_sha256": "3b80d9db281936cf24054b8272161a1a583be3b7883ffa19cdab4653e0bd62b2",
+      "retrieved_utc": "2026-09-23T00:10:20Z"
+    }
+  ]
+}

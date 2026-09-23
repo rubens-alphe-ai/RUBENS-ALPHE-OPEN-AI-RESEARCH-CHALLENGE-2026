@@ -7,6 +7,7 @@ other and could be lined up wrongly.
 
 from __future__ import annotations
 
+import json
 import sys
 import unittest
 from pathlib import Path
@@ -59,6 +60,31 @@ class RunNameTests(unittest.TestCase):
         self.assertEqual(
             ipr.short_scenario("mmlu:subject=abstract_algebra,method=multiple_choice_joint"),
             "abstract_algebra")
+
+    def test_a_scenario_with_no_arguments_glues_its_model_on_with_a_colon(self) -> None:
+        # HELM writes `med_qa:model=X`, not `med_qa,model=X`. Reading only the
+        # comma form returns an empty model name for all ninety-one runs, which
+        # does not fail — it pools every model into one respondent and reports
+        # the result as an instrument.
+        scenario, model = ipr.split_run_name("med_qa:model=openai_gpt-4o-2024-08-06")
+        self.assertEqual(model, "openai_gpt-4o-2024-08-06")
+        self.assertEqual(scenario, "med_qa")
+
+    def test_a_model_name_containing_a_colon_survives_that(self) -> None:
+        scenario, model = ipr.split_run_name("med_qa:model=amazon_nova-lite-v1:0")
+        self.assertEqual(model, "amazon_nova-lite-v1:0")
+        self.assertEqual(scenario, "med_qa")
+
+    def test_the_comma_form_is_unaffected_by_the_colon_form(self) -> None:
+        scenario, model = ipr.split_run_name(
+            "legalbench:subset=proa,model=amazon_nova-lite-v1:0")
+        self.assertEqual(model, "amazon_nova-lite-v1:0")
+        self.assertEqual(scenario, "legalbench:subset=proa")
+
+    def test_a_scenario_key_that_is_not_the_model_is_left_where_it_was(self) -> None:
+        scenario, model = ipr.split_run_name("mmlu:subject=anatomy")
+        self.assertEqual(scenario, "mmlu:subject=anatomy")
+        self.assertEqual(model, "")
 
     def test_items_sort_by_their_number_rather_than_alphabetically(self) -> None:
         got = sorted(["id10", "id9", "id1"], key=ipr.sort_key)
@@ -132,6 +158,48 @@ class AssembleTests(unittest.TestCase):
         self.assertEqual({row["item"] for row in rows},
                          {"econometrics/id0", "anatomy/id0"})
         self.assertEqual(notes["items_common_to_every_model"], 2)
+
+
+class GatherTests(unittest.TestCase):
+    """The network is replaced; what is under test is the bookkeeping around it."""
+
+    def setUp(self) -> None:
+        self.served: dict[str, bytes] = {}
+        self.real_fetch, self.real_manifest = ipr.fetch, ipr.release_manifest
+        ipr.fetch = lambda url, cache, attempts=4: self.served[url]  # type: ignore[assignment]
+        ipr.RETRIEVED.clear()
+        self.addCleanup(self._restore)
+
+    def _restore(self) -> None:
+        ipr.fetch, ipr.release_manifest = self.real_fetch, self.real_manifest
+
+    def serve(self, runs: dict[str, str]) -> None:
+        ipr.release_manifest = lambda project, release, cache: dict(runs)  # type: ignore[assignment]
+        for name, suite in runs.items():
+            self.served[ipr.run_url("lite", suite, name, ipr.PER_INSTANCE_STATS)] = json.dumps(
+                [entry("id0", 1.0), entry("id1", 0.0)]).encode("utf-8")
+            self.served[ipr.run_url("lite", suite, name, ipr.INSTANCES)] = json.dumps(
+                [instance("id0", "q0"), instance("id1", "q1")]).encode("utf-8")
+
+    def test_a_run_that_does_not_name_a_model_is_refused_rather_than_pooled(self) -> None:
+        # This is the failure that produces a confident report instead of an
+        # error: every unnamed run merges into one respondent.
+        self.serve({"med_qa": "v1.0.0"})
+        with self.assertRaises(SystemExit) as raised:
+            ipr.gather("lite", "v1.13.0", "med_qa", "exact_match", None, None)
+        self.assertIn("does not name a model", str(raised.exception))
+
+    def test_provenance_records_when_each_file_was_served_not_when_the_report_was_written(self) -> None:
+        self.serve({"med_qa:model=a": "v1.0.0", "med_qa:model=b": "v1.2.0"})
+        ipr.RETRIEVED[ipr.run_url("lite", "v1.0.0", "med_qa:model=a",
+                                  ipr.PER_INSTANCE_STATS)] = "2020-01-01T00:00:00Z"
+        _runs, provenance = ipr.gather("lite", "v1.13.0", "med_qa", "exact_match", None, None)
+        self.assertEqual(len(provenance), 2)
+        dated = {record["model"]: record["retrieved_utc"] for record in provenance}
+        self.assertEqual(dated["a"], "2020-01-01T00:00:00Z")
+        for record in provenance:
+            self.assertTrue(record["per_instance_stats_url"].endswith(ipr.PER_INSTANCE_STATS))
+            self.assertEqual(len(record["instances_sha256"]), 64)
 
 
 class EndToEndShapeTests(unittest.TestCase):
