@@ -40,6 +40,7 @@ from __future__ import annotations
 import argparse
 import collections
 import json
+import shutil
 import subprocess
 import sys
 import time
@@ -204,6 +205,24 @@ def audit_one(entry: dict, out_dir: Path, cache: Path, max_models: int | None,
     return row
 
 
+def free_gigabytes(path: Path) -> float:
+    return shutil.disk_usage(path).free / (1024 ** 3)
+
+
+def prune(cache: Path) -> None:
+    """Throw the downloaded JSON away once a question-set is done with it.
+
+    Safe by construction: every file the import used is recorded in that set's
+    provenance manifest with its URL and its sha256, so the cache can be
+    rebuilt exactly and is never the record of anything. Keeping it is a
+    convenience, and at five gigabytes per twenty-eight question-sets it stops
+    being one on somebody's own laptop.
+    """
+    if cache.is_dir():
+        shutil.rmtree(cache, ignore_errors=True)
+    cache.mkdir(parents=True, exist_ok=True)
+
+
 def summarise(rows: list[dict]) -> dict:
     audited = [r for r in rows if r["status"] == "audited"]
     if not audited:
@@ -252,6 +271,10 @@ def main() -> None:
     parser.add_argument("--fewest-models", type=int, default=FEWEST_MODELS)
     parser.add_argument("--timeout", type=int, default=1800, help="seconds per import")
     parser.add_argument("--pause", type=float, default=1.0, help="seconds between sets")
+    parser.add_argument("--keep-cache", action="store_true",
+                        help="keep downloaded JSON between sets; costs gigabytes")
+    parser.add_argument("--stop-below-gb", type=float, default=15.0,
+                        help="stop rather than fill the disk below this much free space")
     args = parser.parse_args()
 
     if args.fewest_models < 20:
@@ -272,10 +295,33 @@ def main() -> None:
     print("# %d question-sets with at least %d models"
           % (len(entries), args.fewest_models), file=sys.stderr)
 
+    # A set already decided keeps its verdict: re-downloading gigabytes to be
+    # told the same refusal twice helps nobody.
+    settled = {}
+    record = args.out / "survey.json"
+    if record.is_file():
+        try:
+            for row in json.loads(record.read_text(encoding="utf-8")).get("sets", []):
+                settled[row["question_set"]] = row
+        except ValueError:
+            settled = {}
+    if settled:
+        print("# %d question-sets already settled and kept" % len(settled), file=sys.stderr)
+
     rows = []
     for index, entry in enumerate(entries, 1):
+        if entry["question_set"] in settled:
+            rows.append(settled[entry["question_set"]])
+            continue
+        free = free_gigabytes(args.out)
+        if free < args.stop_below_gb:
+            print("# STOPPING: %.1f GB free, below the %.1f GB floor. %d sets not attempted."
+                  % (free, args.stop_below_gb, len(entries) - index + 1), file=sys.stderr)
+            break
         row = audit_one(entry, args.out, args.cache, args.max_models, args.timeout)
         rows.append(row)
+        if not args.keep_cache:
+            prune(args.cache)
         print("# [%d/%d] %-8s %-52s %s"
               % (index, len(entries), row["project"], row["question_set"][:52],
                  row.get("reading", row.get("reason", ""))[:60]), file=sys.stderr)
