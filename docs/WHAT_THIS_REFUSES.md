@@ -38,6 +38,15 @@ looked for and the names it found, rather than guessing at column order.
 
 ## It refuses numbers the data cannot support
 
+**A threshold is put against the interval, not against the estimate.**
+A discrimination from twenty respondents is a poor estimate, and comparing it
+to a fixed cutoff as though it were exact accused roughly one healthy item in
+seven. The tool now produces two lists: what is worth looking at, and what the
+data will support in writing. Which one applies depends on how many
+respondents there are, and
+[the characterisation](../experiments/DETECTION-2026-09/RESULT.md) says where
+the line falls rather than leaving it to taste.
+
 **Alpha is undefined rather than zero when nothing varies.**
 A reliability of 0.0 says *this test is unreliable*. Undefined says *this data
 cannot tell you*. They are different statements and only one of them is true
@@ -98,6 +107,41 @@ instruction not to read them comes first.
 including the case where the confidence-interval clause binds harder than the
 threshold itself. Two pre-registered thresholds in this project were impossible
 when written, and neither was noticed until this check existed.
+
+## It refuses to let the free check pass for the paid one
+
+`leaderboard_check.py` reads only what is already public — model names and
+their scores — so that a stranger can get an alarming, honest number without
+extracting anything. Most of what it does is decline.
+
+**It will not run without being told how many items the test has.** Without
+that count there is no sampling error, and every claim it makes is built on
+one. It refuses in its own words rather than argparse's, because a reader told
+"argument required" invents a number.
+
+**It refuses to guess whether a score is a proportion or a percentage.** A
+board sitting entirely at or below 1.0 could be either, and the two readings
+differ by a factor of a hundred in the only quantity the tool computes. That is
+not a rounding, it is the whole answer, so it names both readings and stops.
+
+**It says in its own second section that it is not the audit.** Mis-keyed
+items, dead items and effective length each get named, with why an aggregate
+score cannot see them and what input can. Those three travel in the JSON record
+as well, so a caller cannot print the findings without them.
+
+**It refuses to convict a benchmark for clustering.** Models bunched at the top
+may simply be that close, and that possibility is listed first. Telling them
+apart needs per-item data, which the page says it does not offer.
+
+**It reports its errors in both directions.** Correlated items make the true
+error larger, so every tie it finds is an undercount; and because it compares
+models without pairing, every tie is also conservative against itself. The
+correct paired test needs the per-item table — which is the cleanest place the
+free check visibly stops.
+
+**It declines to cry wolf.** Where models are genuinely far apart it says so
+and writes a deliberately narrow clean bill, and a test pins that the alarmed
+wording is absent.
 
 ## It refuses to price what it has not counted
 
