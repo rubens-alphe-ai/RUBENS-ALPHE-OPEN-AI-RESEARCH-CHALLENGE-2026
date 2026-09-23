@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The audit</title>
+<meta name="description" content="What a benchmark audit delivers, what it costs, and the terms under which it is refunded.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="audit.html" aria-current="page">The audit</a>
+      <a href="evidence.html">Evidence</a>
+      <a href="run-it-yourself.html">Run it yourself</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<h1>The audit</h1>
+
+<p class="lede">You send a table of three columns: which respondent, which item, right or wrong.
+You get back a report naming the items that are broken, the items you can delete without changing a
+single ranking, and what your leaderboard can and cannot establish.</p>
+
+<h2>What you receive</h2>
+
+<h3>1. Items running backwards</h3>
+<p>Items your stronger respondents get wrong more often than your weaker ones, listed individually
+with the statistic behind each. This is almost always a wrong answer key rather than a hard
+question. Each item comes with the evidence, so your own subject expert can settle it.</p>
+<p class="small soft">We name them. We do not tell you to delete them — a key cannot be checked
+after the item is gone, and on our own quiz the four most contested items turned out to be the four
+highest-discriminating ones. <a href="evidence.html">That story, with the test that pins it →</a></p>
+
+<h3>2. The length you count against the length you measure with</h3>
+<p>Every item classified: carrying, answered alike by nearly everyone, or unrelated to what the rest
+measures. One sentence you can quote: <em>a test of N items that measures with M</em>.</p>
+
+<h3>3. A deletion plan, costed</h3>
+<p>Which items can go without moving any respondent's rank, what share of your runs that removes,
+and — if you tell us what a run costs you — what that is per year in your own currency. Every figure
+prints the multiplication beside it so it checks against the counts on the page.</p>
+<p class="small soft">The saving is quoted only on items the report is willing to recommend
+deleting, never on every item that carries nothing. The difference is accounted for in words.</p>
+
+<h3>4. What the ranking supports</h3>
+<p>Measurement precision at the top of your leaderboard against the gaps you are ranking on. On one
+public benchmark, the test carried 24.9 units of information at the median model and
+<strong>5.99</strong> at the median of the top twenty — measurement error widening from 0.20 to 0.41.</p>
+<span class="src">scripts/irt.py on experiments/PUBLIC-AUDIT-2026-09/</span>
+
+<h3>5. A screening list and an asserting list</h3>
+<p>Two lists, answering different questions: what is worth a look, and what the data will support in
+writing. Which one applies to you depends on how many respondents you have, and the report says
+which, rather than leaving it to taste.</p>
+
+<h2>Price</h2>
+
+<div class="scroll">
+<table>
+<tr><th>&nbsp;</th><th class="num">Price</th><th>Turnaround</th><th>What is in it</th></tr>
+<tr>
+  <td>Free scan</td><td class="num price">0 €</td><td>immediate</td>
+  <td>Three numbers on one table: effective length, items running backwards, alpha. No report, no interpretation.</td>
+</tr>
+<tr>
+  <td>One benchmark</td><td class="num price">1 900 €</td><td>5 days</td>
+  <td>All five sections above, the item-by-item evidence, and 30 minutes to go through it.</td>
+</tr>
+<tr>
+  <td>Your suite</td><td class="num price">7 500 €</td><td>3 weeks</td>
+  <td>Up to 10 benchmarks, plus whether they measure ten things or two, plus the analysis restricted to your leading models, plus a written statement a procurement team can use.</td>
+</tr>
+<tr>
+  <td>Continuous</td><td class="num price">1 200 €/mo</td><td>ongoing</td>
+  <td>The audit runs in your CI on every change to the suite and fails the build when an item turns negative or the effective length drops. Quarterly review.</td>
+</tr>
+<tr>
+  <td>Platform licence</td><td class="num price">18 000 €/yr</td><td>by contract</td>
+  <td>For an evaluation platform embedding the audit in its own product.</td>
+</tr>
+</table>
+</div>
+
+<div class="panel">
+<p><strong>Refund clause.</strong> If the audit finds neither an item running backwards nor
+redundancy above 20%, you pay nothing.</p>
+<p class="small soft">This is not generosity. We genuinely do not know what is in your data — the
+redundancy we have measured on public benchmarks runs from about a third to almost all of the test,
+and yours could be none. The clause puts that uncertainty on the seller, where it belongs.</p>
+</div>
+
+<h2>What we need from you</h2>
+
+<p>A table, in any of these shapes:</p>
+
+<pre><code>trial,item,correct
+gpt-x,q001,1
+gpt-x,q002,0
+claude-y,q001,1</code></pre>
+
+<p>Or the raw logs from <code>lm-evaluation-harness</code>, <code>Inspect</code>,
+<code>promptfoo</code> or <code>OpenAI Evals</code>, which we read directly.
+<a href="run-it-yourself.html">Details →</a></p>
+
+<p>Your harness already produces this. It cannot compute a score without knowing which items were
+right.</p>
+
+<h2>Where this does not work</h2>
+
+<div class="limit">
+<p><strong>Fewer than 30 respondents.</strong> Item statistics need respondents — models, runs,
+versions, whatever plays that part. Below 30 we will say so rather than produce a report; below 50
+the screening list flags about one healthy item in seven.</p>
+<span class="src">experiments/DETECTION-2026-09/RESULT.md</span>
+</div>
+
+<div class="limit">
+<p><strong>Graded scores.</strong> If your items are scored on a scale rather than right or wrong,
+the standard tool refuses the file rather than rounding it — rounding a 1-to-5 rubric once reported
+a perfectly healthy instrument as measuring with nothing. There is a separate path that takes the
+scale range.</p>
+<span class="src">scripts/graded_items.py</span>
+</div>
+
+<div class="limit">
+<p><strong>Items unrelated to the rest.</strong> This is the weakest of the three detections and
+stays under 0.8 even at two hundred respondents. That threshold sits close to ordinary sampling
+noise and no amount of care moves it much. We report it as the weak signal it is.</p>
+</div>
+
+<p>To commission an audit, or to ask whether your data fits: <code>CONTACT_EMAIL_HERE</code>.</p>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>No trackers, no analytics, no cookies. Every figure on this site points at a file in the
+    public repository.</p>
+  </div>
+</footer>
+
+</body>
+</html>
