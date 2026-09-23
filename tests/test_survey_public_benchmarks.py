@@ -69,6 +69,43 @@ class SummaryTests(unittest.TestCase):
         self.assertIn("DETECTION-2026-09", survey.summarise(rows)["note"])
 
 
+class FailureKindTests(unittest.TestCase):
+    """A dropped connection is not a verdict on somebody else's benchmark."""
+
+    def test_a_dropped_connection_is_not_a_refusal(self) -> None:
+        # The first run of this survey produced 107 of these and would have
+        # reported them as benchmarks that could not be audited -- a finding
+        # about other people's work invented out of our own rate limit.
+        self.assertEqual(survey.failure_kind(
+            "http.client.RemoteDisconnected: Remote end closed connection without response"),
+            "unreachable")
+        self.assertEqual(survey.failure_kind("could not fetch https://example/x"), "unreachable")
+        self.assertEqual(survey.failure_kind("import exceeded 1800s"), "unreachable")
+
+    def test_a_principled_refusal_is_about_their_data(self) -> None:
+        self.assertEqual(survey.failure_kind(
+            "records exact_match more than once for instance id1295; collapsing repeats into "
+            "one bit is a decision this import will not make silently"), "refused")
+        self.assertEqual(survey.failure_kind(
+            "nothing survived the join; refusing to write an empty table"), "refused")
+
+    def test_the_summary_keeps_the_two_apart_and_says_it_is_incomplete(self) -> None:
+        rows = [{"status": "audited", "respondents": 40, "items": 10, "items_carrying": 5,
+                 "share_carrying_pct": 50.0, "items_running_backwards": 0, "alpha": 0.8},
+                {"status": "failed", "reason": "metric not binary", "failure_kind": "refused"},
+                {"status": "failed", "reason": "could not fetch", "failure_kind": "unreachable"}]
+        got = survey.summarise(rows)
+        self.assertEqual(got["refused"], 1)
+        self.assertEqual(got["unreachable"], 1)
+        self.assertIn("INCOMPLETE", got["incomplete"])
+
+    def test_a_complete_run_claims_no_incompleteness(self) -> None:
+        rows = [{"status": "audited", "respondents": 40, "items": 10, "items_carrying": 5,
+                 "share_carrying_pct": 50.0, "items_running_backwards": 0, "alpha": 0.8},
+                {"status": "failed", "reason": "metric not binary", "failure_kind": "refused"}]
+        self.assertIsNone(survey.summarise(rows)["incomplete"])
+
+
 class RefusalTests(unittest.TestCase):
     def test_a_panel_too_small_to_report_from_is_refused(self) -> None:
         saved = sys.argv

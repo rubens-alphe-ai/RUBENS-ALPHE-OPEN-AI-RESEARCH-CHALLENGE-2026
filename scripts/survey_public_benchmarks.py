@@ -157,6 +157,7 @@ def audit_one(entry: dict, out_dir: Path, cache: Path, max_models: int | None,
         except subprocess.TimeoutExpired:
             row["status"] = "failed"
             row["reason"] = "import exceeded %ds" % timeout
+            row["failure_kind"] = "unreachable"
             return row
         if done.returncode != 0:
             row["status"] = "failed"
@@ -164,6 +165,7 @@ def audit_one(entry: dict, out_dir: Path, cache: Path, max_models: int | None,
             # line it printed rather than a generic exit code.
             message = (done.stderr or done.stdout or "").strip().splitlines()
             row["reason"] = message[-1][:300] if message else "exit %d" % done.returncode
+            row["failure_kind"] = failure_kind(row["reason"])
             return row
 
     try:
@@ -171,12 +173,14 @@ def audit_one(entry: dict, out_dir: Path, cache: Path, max_models: int | None,
     except SystemExit as refusal:
         row["status"] = "failed"
         row["reason"] = str(refusal)[:300]
+        row["failure_kind"] = failure_kind(row["reason"])
         return row
 
     if len(rows) < FEWEST_MODELS:
         row["status"] = "failed"
         row["reason"] = ("%d complete respondents after the join, below the %d this survey "
                          "reports from" % (len(rows), FEWEST_MODELS))
+        row["failure_kind"] = "refused"
         return row
 
     per_item = ia.analyse(rows, items)
@@ -203,6 +207,20 @@ def audit_one(entry: dict, out_dir: Path, cache: Path, max_models: int | None,
         "reading": length["reading"],
     })
     return row
+
+
+# A failure that is about the data is a finding. A failure that is about our
+# own connection is not, and letting the two share a column turns "we were
+# rate-limited" into "this benchmark could not be audited" -- a verdict on
+# somebody else's work that we would have invented.
+UNREACHABLE_MARKS = ("could not fetch", "RemoteDisconnected", "URLError", "HTTPError",
+                     "timed out", "ConnectionReset", "Connection aborted", "IncompleteRead",
+                     "exceeded", "TimeoutError")
+
+
+def failure_kind(reason: str) -> str:
+    """`refused` is about their data; `unreachable` is about our run."""
+    return "unreachable" if any(mark in reason for mark in UNREACHABLE_MARKS) else "refused"
 
 
 def free_gigabytes(path: Path) -> float:
@@ -236,8 +254,22 @@ def summarise(rows: list[dict]) -> dict:
         half = len(values) // 2
         return values[half] if len(values) % 2 else (values[half - 1] + values[half]) / 2
 
+    refused = [r for r in rows if r.get("failure_kind") == "refused"]
+    unreachable = [r for r in rows if r.get("failure_kind") == "unreachable"]
+    incomplete = None
+    if unreachable:
+        incomplete = (
+            "INCOMPLETE: %d of %d question-sets were never reached -- the source closed the "
+            "connection or timed out. Those sets carry NO verdict and must not be counted as "
+            "benchmarks that could not be audited; that would be a finding about somebody "
+            "else's work invented out of our own rate limit. Re-run to attempt them."
+            % (len(unreachable), len(rows)))
+
     return {
         "audited": len(audited),
+        "refused": len(refused),
+        "unreachable": len(unreachable),
+        "incomplete": incomplete,
         "failed": len(rows) - len(audited),
         "respondents_total_min": min(r["respondents"] for r in audited),
         "respondents_total_max": max(r["respondents"] for r in audited),
@@ -302,13 +334,21 @@ def main() -> None:
     if record.is_file():
         try:
             for row in json.loads(record.read_text(encoding="utf-8")).get("sets", []):
-                settled[row["question_set"]] = row
+                # A connection that dropped is not a verdict, and must never
+                # harden into one by being remembered. Only an audit and a
+                # principled refusal settle a set.
+                if row.get("status") == "failed" and "failure_kind" not in row:
+                    # Written before the two kinds were told apart.
+                    row["failure_kind"] = failure_kind(row.get("reason", ""))
+                if row.get("failure_kind") != "unreachable":
+                    settled[row["question_set"]] = row
         except ValueError:
             settled = {}
     if settled:
         print("# %d question-sets already settled and kept" % len(settled), file=sys.stderr)
 
     rows = []
+    consecutive_drops = 0
     for index, entry in enumerate(entries, 1):
         if entry["question_set"] in settled:
             rows.append(settled[entry["question_set"]])
@@ -322,6 +362,17 @@ def main() -> None:
         rows.append(row)
         if not args.keep_cache:
             prune(args.cache)
+        # The source closing the connection means we are asking too fast. Backing
+        # off is the only polite response, and pressing on produced 107
+        # unreachable sets in the first run of this survey.
+        if row.get("failure_kind") == "unreachable":
+            consecutive_drops += 1
+            backoff = min(args.pause * (2 ** consecutive_drops), 300.0)
+            print("# backing off %.0fs after %d dropped in a row"
+                  % (backoff, consecutive_drops), file=sys.stderr)
+            time.sleep(backoff)
+        else:
+            consecutive_drops = 0
         print("# [%d/%d] %-8s %-52s %s"
               % (index, len(entries), row["project"], row["question_set"][:52],
                  row.get("reading", row.get("reason", ""))[:60]), file=sys.stderr)
