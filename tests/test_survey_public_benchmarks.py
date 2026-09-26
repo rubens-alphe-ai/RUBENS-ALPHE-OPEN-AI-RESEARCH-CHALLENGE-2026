@@ -123,6 +123,18 @@ class FailureKindTests(unittest.TestCase):
         self.assertIsNone(survey.summarise(rows)["incomplete"])
 
 
+class RecordTests(unittest.TestCase):
+    def test_a_partial_run_keeps_every_set_it_did_not_touch(self) -> None:
+        # Two sets retried on their own once overwrote a 193-set record.
+        previous = {"a": {"question_set": "a", "status": "audited"},
+                    "b": {"question_set": "b", "status": "failed", "failure_kind": "refused"},
+                    "c": {"question_set": "c", "status": "failed", "failure_kind": "unreachable"}}
+        rows = [{"question_set": "c", "status": "audited"}]
+        whole = {row["question_set"]: row for row in survey.merge_record(rows, previous)}
+        self.assertEqual(sorted(whole), ["a", "b", "c"])
+        self.assertEqual(whole["c"]["status"], "audited")
+
+
 class RefusalTests(unittest.TestCase):
     def test_a_panel_too_small_to_report_from_is_refused(self) -> None:
         saved = sys.argv

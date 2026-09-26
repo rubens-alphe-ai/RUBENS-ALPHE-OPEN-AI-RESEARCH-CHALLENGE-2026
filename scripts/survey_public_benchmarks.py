@@ -277,6 +277,17 @@ def metric_refusal(question_set: str) -> str | None:
     return None
 
 
+def merge_record(rows: list[dict], previous: dict[str, dict]) -> list[dict]:
+    """This run's rows, plus every earlier row this run did not touch.
+
+    A run limited by --projects or --max-sets covers part of the field. Writing
+    only its own rows once replaced a 193-set record with 2 of them, and the
+    refusal reasons for the other 191 existed nowhere else.
+    """
+    touched = {row["question_set"] for row in rows}
+    return rows + [row for key, row in previous.items() if key not in touched]
+
+
 def free_gigabytes(path: Path) -> float:
     return shutil.disk_usage(path).free / (1024 ** 3)
 
@@ -384,10 +395,12 @@ def main() -> None:
     # A set already decided keeps its verdict: re-downloading gigabytes to be
     # told the same refusal twice helps nobody.
     settled = {}
+    previous = {}
     record = args.out / "survey.json"
     if record.is_file():
         try:
             for row in json.loads(record.read_text(encoding="utf-8")).get("sets", []):
+                previous[row["question_set"]] = row
                 # A connection that dropped is not a verdict, and must never
                 # harden into one by being remembered. Only an audit and a
                 # principled refusal settle a set.
@@ -439,16 +452,17 @@ def main() -> None:
         print("# [%d/%d] %-8s %-52s %s"
               % (index, len(entries), row["project"], row["question_set"][:52],
                  row.get("reading", row.get("reason", ""))[:60]), file=sys.stderr)
+        whole = merge_record(rows, previous)
         (args.out / "survey.json").write_text(
             json.dumps({"record_version": "RA-PSI-SURVEY-V1",
                         "fewest_models": args.fewest_models,
                         "max_models_per_set": args.max_models,
                         "discovery": discovery,
-                        "summary": summarise(rows), "sets": rows},
+                        "summary": summarise(whole), "sets": whole},
                        indent=2, ensure_ascii=False), encoding="utf-8")
         time.sleep(args.pause)
 
-    print(json.dumps(summarise(rows), indent=2, ensure_ascii=False))
+    print(json.dumps(summarise(merge_record(rows, previous)), indent=2, ensure_ascii=False))
 
 
 if __name__ == "__main__":
