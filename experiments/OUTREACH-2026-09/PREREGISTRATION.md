@@ -16,16 +16,37 @@ repository.
 
 | Group | Contacts | Why they were chosen |
 |---|---|---|
-| A — obliged | 3 | Conformity assessment and metrology bodies, for whom the EU AI Act (Art. 15) makes declared accuracy metrics a filing requirement |
-| B — deciding on published data | 3 | Organisations that publish, or choose models from, a leaderboard this project has already re-analysed, so the message carries a finding on data they rely on |
-| C — evaluation platforms | 4 | Vendors who could license the analysis into their own product |
+| A — already sell AI testing to regulated clients | 3 | They have the clients, the budget and the credibility this project lacks, and a reason to own a method competitors do not |
+| B — evaluation platforms | 3 | Vendors who could license the analysis into their own product |
+| C — deciding on published data | 3 | Organisations that publish, or choose models from, a leaderboard this project has already re-analysed, so the message carries a finding on data they rely on |
+| D — method | 1 | A metrology body, as a partner on method rather than a buyer |
 
 **The list is fixed and not published.** Naming prospects in public before
 contacting them would be poor form, so the named list and the drafted messages
 live outside version control. What is fixed here is their fingerprint:
 
-    sha256  0e2f9a9ccf46e7472f350df87cf6123dced92eaa70bc65e16e00fbe5b4b34a5e
+    sha256  8f78b7d3067f1d97141f6e9ec94724c1cc06ec1c809569912d3c8fdae536c075
     file    .private/outreach-2026-09.md
+
+### Amended before the first send
+
+The list first committed here (sha256 `0e2f9a9c…4b34a5e`) was revised on
+2026-09-26, before any message was sent, because it rested on a false premise.
+It treated the EU AI Act's high-risk obligations as applying from August 2026.
+The Digital Omnibus, Regulation (EU) 2026/1744, in force since 27 July 2026,
+moved them to 2 December 2027, and to 2 August 2028 for AI in regulated
+products; and no body had yet been designated to assess AI Act conformity. The
+three contacts chosen as "obliged" were not obliged to anything yet.
+
+Two conformity bodies and one evaluation vendor for whom no need or budget
+signal was found were replaced by three organisations that already sell AI
+testing or assurance to regulated clients. The reasoning, with sources, is in a
+buyer study kept beside the list:
+
+    sha256  aed6928f2b0383bc7d03211a2744a9a332a86726878b0c2827c894a5333641d8
+    file    .private/buyer-study-2026-09.md
+
+This is the last change to the list. Any later one is a new pre-registration.
 
 Anyone shown that file later can check it was not edited after today. Contacts
 are referred to below by number only.
@@ -51,7 +72,7 @@ this file as they happen, before the verdict is written.
   sales process and widen the contact list.
 - **Interest without demand** — at least three tier-1 and nothing higher. The
   finding lands and does not become a purchase. Next: a smaller paid first step,
-  and the obliged group before the others.
+  and group A before the others.
 - **Not yet known** — anything less.
 
 **"Stop" is not an available verdict at ten contacts, and that is deliberate.**
