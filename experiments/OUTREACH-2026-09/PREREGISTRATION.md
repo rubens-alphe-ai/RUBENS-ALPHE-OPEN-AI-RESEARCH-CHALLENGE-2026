@@ -1,5 +1,10 @@
 # Does anyone want this? Criteria fixed before the first message
 
+> **The list below is superseded by [version 2](PREREGISTRATION-v2.md),
+> written before any message was sent.** The tiers, outcomes, power table and
+> rules on what messages may claim in this file stand unchanged and govern
+> version 2. The record is kept there.
+
 Written 2026-09-26, before any prospect has been contacted, so the verdict
 cannot be fitted to whatever comes back. The project measures its experiments
 this way and measured its first outreach this way
