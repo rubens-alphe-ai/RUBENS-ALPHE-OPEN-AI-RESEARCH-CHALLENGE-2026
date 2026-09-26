@@ -64,12 +64,20 @@ condition gets quoted as a guarantee.</p>
 
 <div class="scroll">
 <table>
-<tr><th>&nbsp;</th><th class="num">Items carrying</th><th class="num">Alpha</th><th class="num">Running backwards</th></tr>
-<tr><td>All 91 models</td><td class="num">816 / 1000</td><td class="num">0.9944</td><td class="num">76</td></tr>
-<tr><td>Top 20 models</td><td class="num">204 / 1000</td><td class="num">0.9379</td><td class="num">138</td></tr>
+<tr><th>&nbsp;</th><th class="num">Items carrying</th><th class="num">Alpha</th><th class="num">Running backwards: strict / screening</th></tr>
+<tr><td>All 91 models</td><td class="num">816 / 1000</td><td class="num">0.9944</td><td class="num">25 / 76</td></tr>
+<tr><td>Top 20 models</td><td class="num">204 / 1000</td><td class="num">0.9379</td><td class="num">7 / 138</td></tr>
 </table>
 </div>
-<span class="src">experiments/PUBLIC-AUDIT-2026-10/report-med_qa.json, report-med_qa-top20.json</span>
+<span class="src">experiments/PUBLIC-AUDIT-2026-10/report-med_qa.json, report-med_qa-top20.json; strict list from scripts/item_analysis.py (flags_confident)</span>
+
+<div class="limit">
+<p><strong>These items are not claimed to be mis-keyed.</strong> An item that the stronger models
+get wrong is usually a wrong key — on MMLU, all five checked by hand were. On this medical benchmark
+they have not been checked, the audit itself says they do not look mis-keyed, and settling it needs
+clinical competence we do not have. At twenty respondents the screening count also includes about
+one healthy item in seven, which is why the strict count is so much smaller.</p>
+</div>
 
 <p><strong>The standard reliability score missed this.</strong> It moved from 0.9944 to 0.9379 while
 four fifths of the test stopped separating anyone. The mean correlation between items fell by a
@@ -85,9 +93,9 @@ corrected an earlier claim of ours.
 
 <div class="scroll">
 <table>
-<tr><th>&nbsp;</th><th class="num">Items carrying</th><th class="num">Alpha</th><th class="num">Running backwards</th></tr>
-<tr><td>All 91 models</td><td class="num">72 / 111</td><td class="num">0.948</td><td class="num">9</td></tr>
-<tr><td>Top 20 models</td><td class="num">4 / 111</td><td class="num">−0.442</td><td class="num">18</td></tr>
+<tr><th>&nbsp;</th><th class="num">Items carrying</th><th class="num">Alpha</th><th class="num">Running backwards: strict / screening</th></tr>
+<tr><td>All 91 models</td><td class="num">72 / 111</td><td class="num">0.948</td><td class="num">6 / 9</td></tr>
+<tr><td>Top 20 models</td><td class="num">4 / 111</td><td class="num">−0.442</td><td class="num">2 / 18</td></tr>
 </table>
 </div>
 <span class="src">experiments/PUBLIC-AUDIT-2026-09/report-computer_security.json, report-computer_security-top20.json</span>
