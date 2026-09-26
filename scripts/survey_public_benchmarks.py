@@ -141,6 +141,11 @@ def audit_one(entry: dict, out_dir: Path, cache: Path, max_models: int | None,
     row = {"project": entry["project"], "question_set": entry["question_set"],
            "models_available": entry["models_available"], "slug": name}
 
+    wrong_metric = metric_refusal(entry["question_set"])
+    if wrong_metric:
+        row.update({"status": "failed", "reason": wrong_metric, "failure_kind": "refused"})
+        return row
+
     if not table.is_file():
         command = [sys.executable, str(ROOT / "scripts" / "import_public_results.py"),
                    "--project", entry["project"], "--release", entry["release"],
@@ -210,17 +215,66 @@ def audit_one(entry: dict, out_dir: Path, cache: Path, max_models: int | None,
 
 
 # A failure that is about the data is a finding. A failure that is about our
-# own connection is not, and letting the two share a column turns "we were
+# own run is not, and letting the two share a column turns "we were
 # rate-limited" into "this benchmark could not be audited" -- a verdict on
 # somebody else's work that we would have invented.
-UNREACHABLE_MARKS = ("could not fetch", "RemoteDisconnected", "URLError", "HTTPError",
-                     "timed out", "ConnectionReset", "Connection aborted", "IncompleteRead",
-                     "exceeded", "TimeoutError")
+#
+# The first version of this recognised *our* failures by their wording and
+# called everything else a refusal. That is backwards: the space of ways a run
+# can break is open, and the first one it had not seen -- Windows failing to
+# start the import process, exit 3221225794 -- was filed as a refusal against 52
+# MMLU subjects that audit cleanly, and a refusal is never retried. A verdict
+# about somebody's data now needs positive evidence: one of the refusals the
+# importer and the table reader actually print. Anything else is ours.
+REFUSAL_MARKS = (
+    "more than once for instance",               # repeats we will not collapse
+    "which is not already right-or-wrong",       # a graded metric
+    "does not hold the same question across",    # ids that disagree
+    "does not name a model",                     # respondents we cannot tell apart
+    "no run in release",                         # nothing published under that name
+    "nothing survived the join",                 # no item every model answered
+    "wants a credential",                        # not public after all
+    "graded score", "cannot read", "no column named", "needs a header row",
+    "complete respondents after the join",       # too few models to report from
+    "official metric",                           # exact_match is not what it reports
+)
 
 
 def failure_kind(reason: str) -> str:
-    """`refused` is about their data; `unreachable` is about our run."""
-    return "unreachable" if any(mark in reason for mark in UNREACHABLE_MARKS) else "refused"
+    """`refused` is about their data, and only on positive evidence.
+
+    `unreachable` covers every way *we* failed to get an answer from their data:
+    a dropped connection, a timeout, a process that never started. None of
+    those says anything about the benchmark, so none of them settles a set.
+    """
+    return "refused" if any(mark in reason for mark in REFUSAL_MARKS) else "unreachable"
+
+
+# Scenarios HELM scores by something other than exact match. The stat is still
+# present in their files, and on a translation it is nearly always zero -- so
+# reading it produced "a test of 1000 items that measures with 20" for WMT, a
+# sentence about our choice of metric presented as a sentence about their
+# benchmark. The survey refuses these by name until it reads the metric each
+# one actually reports.
+OFFICIAL_METRIC = {
+    "wmt_14": "BLEU",
+    "summarization_cnndm": "ROUGE-2",
+    "summarization_xsum": "ROUGE-2",
+    "narrative_qa": "F1",
+    "natural_qa": "F1",
+    "quac": "F1",
+    "gsm": "exact match on the final number, under its own stat name",
+    "math": "equivalence to the reference, under its own stat name",
+}
+
+
+def metric_refusal(question_set: str) -> str | None:
+    scenario = question_set.split(":", 1)[0]
+    if scenario in OFFICIAL_METRIC:
+        return ("official metric for %s is %s, not exact_match; auditing exact_match here "
+                "would describe our choice of metric rather than the benchmark"
+                % (scenario, OFFICIAL_METRIC[scenario]))
+    return None
 
 
 def free_gigabytes(path: Path) -> float:
@@ -337,9 +391,18 @@ def main() -> None:
                 # A connection that dropped is not a verdict, and must never
                 # harden into one by being remembered. Only an audit and a
                 # principled refusal settle a set.
-                if row.get("status") == "failed" and "failure_kind" not in row:
-                    # Written before the two kinds were told apart.
+                if row.get("status") == "failed":
+                    # Re-judged every time, so a rule that improves also
+                    # releases the sets an older rule filed wrongly.
                     row["failure_kind"] = failure_kind(row.get("reason", ""))
+                wrong_metric = metric_refusal(row["question_set"])
+                if wrong_metric:
+                    # An audit already stored on the wrong metric is withdrawn,
+                    # not kept beside a note.
+                    row = {key: row[key] for key in ("project", "question_set",
+                                                      "models_available", "slug") if key in row}
+                    row.update({"status": "failed", "reason": wrong_metric,
+                                "failure_kind": "refused"})
                 if row.get("failure_kind") != "unreachable":
                     settled[row["question_set"]] = row
         except ValueError:

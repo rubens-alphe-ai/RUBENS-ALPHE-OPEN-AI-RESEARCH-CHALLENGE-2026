@@ -89,6 +89,23 @@ class FailureKindTests(unittest.TestCase):
         self.assertEqual(survey.failure_kind(
             "nothing survived the join; refusing to write an empty table"), "refused")
 
+    def test_a_process_that_never_started_is_not_a_refusal(self) -> None:
+        # Windows failing to launch the import (0xC0000142) was filed as a
+        # refusal against 52 MMLU subjects, and a refusal is never retried. A
+        # verdict about their data now needs a refusal we recognise.
+        self.assertEqual(survey.failure_kind("exit 3221225794"), "unreachable")
+        self.assertEqual(survey.failure_kind("some failure nobody has seen yet"), "unreachable")
+
+    def test_a_benchmark_scored_by_another_metric_is_refused_by_name(self) -> None:
+        # exact_match on a translation is nearly always zero, which produced
+        # "a test of 1000 items that measures with 20" for WMT -- a sentence
+        # about our metric, presented as one about their benchmark.
+        self.assertIn("BLEU", survey.metric_refusal("wmt_14:language_pair=fr-en"))
+        self.assertIsNone(survey.metric_refusal("med_qa"))
+        self.assertIsNone(survey.metric_refusal("mmlu:subject=anatomy,method=multiple_choice_joint"))
+        self.assertEqual(survey.failure_kind(survey.metric_refusal("wmt_14:language_pair=de-en")),
+                         "refused")
+
     def test_the_summary_keeps_the_two_apart_and_says_it_is_incomplete(self) -> None:
         rows = [{"status": "audited", "respondents": 40, "items": 10, "items_carrying": 5,
                  "share_carrying_pct": 50.0, "items_running_backwards": 0, "alpha": 0.8},
