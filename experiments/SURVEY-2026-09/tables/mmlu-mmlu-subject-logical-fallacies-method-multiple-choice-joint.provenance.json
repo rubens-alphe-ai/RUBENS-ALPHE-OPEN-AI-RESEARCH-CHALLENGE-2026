@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T05:57:33Z",
+  "retrieved_utc_last": "2026-09-26T06:02:06Z",
+  "run_filter": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=logical_fallacies,method=multiple_choice_joint,eval_split=test,groups=mmlu_logical_fallacies"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-logical-fallacies-method-multiple-choice-joint.csv",
+  "rows": 9780,
+  "models": 60,
+  "items_common_to_every_model": 163,
+  "items_seen_at_all": 163,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "51d4bea5d3e160ef76a599bdc23a2da8fe2a4eee603f5928f058315671d8ec3b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:57:33Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "d0859aa56cd86d808750d45fa7cb9cb9bf968cfc1dc86d891766e7083c4aedf1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:57:39Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "a9bf9a64d16ee2b08fe4cc33ae4388162d440296cf66cbaf622defb2ac0eecae",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:57:46Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "2d75f242e79af7bec2287ab6c33e1e87d81ed6cd2e617a87ab9a84111d5d54fc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:57:50Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "f2f186562ccb22d9fef9529c58a2e7202563071ffb028d1a4b639d92aadad0ec",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:57:57Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "d7312504137deb80ff7d406c5b68da955fd484b57198e0a8b5efc8b223719f7c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:58:03Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "ee9548a652db2a72ca7e92d250fbf90474efd393d67b08adfadb54fff80707e6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:58:07Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "a84d37e63c635e40919538321e59b81d86faca3a0b9ac2c9946988c79b29ad95",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:58:11Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "f690f7a88ff388a973b535d69e0f8f76caaf6859f3c140d69bd3b6df78faa8f6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:58:15Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "3a1c59fb2b3c38b15306201bafa4667de965763c57438252d1db10292d8423ca",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:58:19Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "3d0c1a85e24146253dd3176491bd57cea007974e1c0d625fcbbce09195ec5d22",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:58:23Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "5c0d3ca6d2a735076b20516c6db3159963e12e9548324653b4c07feb89677380",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:58:28Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "43ce60bcdb91b01dbff7e1affd51fdec61c5e860a8485260358332b363e22451",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:58:32Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "205b0cc7368b3e4174f33ad9aeb7fdbb930d380ceb1d836f6f235397f5ae5031",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:58:36Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "c30ddb8338cb3d2760b15cdf4e8479d76f438b393f6f3280183faba0d185ec5f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:58:40Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "58ec77246488dfdcada21ce14112e1e7f8d444b0cc8474488eee74a8cbab8e3f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:58:43Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "bbf1d05ad714b4c939ed2544a2fa72407fe7769a6002f53b454cb5205377c19e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:58:47Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "e43ee8df2ef79b567a1e6a75d4c2c543eb0ea394cf1c2974bb3d30875b1d327b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:58:52Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "0ff8144e833a793ddf5e86037e328ec0b2acf642a4ea0f1cc8e6f4fb7731e712",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:58:57Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "a4d61a6cc64e802a6e42433aea85cdd9b810462cd6465bc631934652420f4daa",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:59:07Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "8fd2f397f7fc0a0d8db0490936556d11a176218f757f24c6f177c98c596dc7e6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:59:13Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "e359f9f8f1e7c366d06d6815d492185427b79aee1f28b1403abd815661c27a11",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:59:17Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "72474629e7c306d6d2cb3a33086ead7ceb52221ce025d2c1bdd32f75ac01c69b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:59:21Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "704e4d84a9ee1d1a0b1d97339af3465fe5f722f56aec68ca53922b6086bd829c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:59:25Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "73c46688ad769c8aa6c665aedacf3ebd26f3644ffef0b96dc4f168bee9857987",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:59:29Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "120515679594665874c8c4666d7be160564f24a7a1af0af832065265d65ecbd7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:59:33Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "ca30e644a3dee3ab3598be934ec6015a37c9b6984aaf26597a4d612c6b143e37",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:59:36Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "f1bf1cf6352ee3bd094c54419c25a86c475f77e696610b9cd4849ab0822e5a6c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:59:40Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "3e6ba29006c9a2cccf1de7fe7dd37b7607444958cdf3fcaa7a6bbb258b696fd3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:59:44Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "efea39b187feace481f80b6f60b7ff205f96f2548461f2867f9487f516d9bf0d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:59:48Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "bdc77a5460bf9a69144db952f0d11cdbb5261a04940d16afd8ad6d4ceccc6f3c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T05:59:53Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "38e0103f2853176f2d457e9d2fb5bfcaff6accb944d9d3e79eb11928254c4975",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:00:01Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "20c0c1258df75e74afa298bf89a9b1b37bf6ab3567930a97e9c1ec42ba19222d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:00:05Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "e54e9d356d08b2878a83e795b5a4e6b07e7d371fb23b0ac328c0f0cd17b980a4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:00:09Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "85ca4b4f2f81c17b587766dff50c38c3d4d1c1b7c73c310029024fa631ae8f70",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:00:13Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "66bb718e898c03f9e828f905c4157631c0ade20f5a222de44bf60319602c9637",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:00:18Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "ca87d83b401a1c08800398ce1273aced563c066e62a7679ba5698e14928d9d40",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:00:30Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "25c5a6bd010a8893b2fc2a8c17f61432cf6932c8f6000587b6e28bd033376a8b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:00:35Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "84b39868b5965953a4bac5537f098d133385aa12a6a914817b2898a4465948b0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:00:40Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "77fa21fd64591f247890eafcb9ecbe242894ae8f7ad3e37fd696463b9c6d4a55",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:00:43Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "22942cf3b95532005f1c34cfb24ab699c1e0632a08da88461861a24f8761f376",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:00:47Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "09f800f2f576c509f23e5e441455fb19301e6bff2ce7b74050a7494a393ce2c3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:00:51Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "e1f1f45edea85382e99a63cfc6926291225bf414fe8c09bcb8e28d1c0affce88",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:00:54Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "2d671fb5ad899a3a370e78691ab80c33ca29c5dc652b4e8eb7bd4a73ebdd13d7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:00:58Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "933aff6386311afd4522f115ac8c0579ea67ee8478acec2a17f7463e2d1fb42f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:01:02Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "1328b48820749700df8f191e900e4b58a86818014cc1bf84a0d8fa990d4a17af",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:01:06Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "95369fd6a158586678fe1a61aa71b0bb7179d45ee40e75dc988181b5fedbc8b8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:01:10Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "48604ac6e32220dcc76f6d81014da796712a95c01fdad27fd3297da44085bc83",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:01:14Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "86366bf95136be1b0dc3de1140b5f69dad761122dafe07c21062707b8c56e88d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:01:19Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "187b1513820487dc2549d46a931650204c6a7c563f78a20f8406a539b9f2bae2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:01:23Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "38e6f3b213c65b7e354c934adc14769a9ca9de522b74cb1d14cd14b6a551b103",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:01:28Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "5593920a4dbcf798a8851f4ad775aeda0b62aaaf5c67ecfec97f6d8d61782d82",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:01:32Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "bbfe5a9ecb79543f164a7c97693fba4480c979c3712802378a976e07f776e458",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:01:36Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "78b9622e5b110f77b06ad7f7b565384c7f11f746b6a2bb3faef804933903a253",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:01:39Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "e8e1762c7f4f2dd97ee565e3052be3a86fa8207ff4ebe05b61de37bb7c3588d0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:01:44Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "ac81425c4173431b78dd656203d7669770429d442cd3194a463070cd2d2c3982",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:01:49Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "49d7196edd0ef587368f49ad8322800f269f869905b4f9a8b520107f92ec434f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:01:53Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "78be2d21cff716ecf6064562b3989d8253e643158be21e0244322f6aed84cab0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:01:57Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "ab04c482d9e2ec22a8120418abe4621819027e588e4e90a5adececfc5bfcfc4b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:02:02Z"
+    },
+    {
+      "run": "mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_logical_fallacies",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_logical_fallacies/per_instance_stats.json",
+      "per_instance_stats_sha256": "642ac74f55cf0dc71ef16a70967a9b24331fd24148107c2667f42a099cf26bb0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=logical_fallacies,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_logical_fallacies/instances.json",
+      "instances_sha256": "e144c50a3c606bfa198264f1260ab36a950b2dd7c1154d172b1ef172fe9ab0d9",
+      "retrieved_utc": "2026-09-26T06:02:06Z"
+    }
+  ]
+}

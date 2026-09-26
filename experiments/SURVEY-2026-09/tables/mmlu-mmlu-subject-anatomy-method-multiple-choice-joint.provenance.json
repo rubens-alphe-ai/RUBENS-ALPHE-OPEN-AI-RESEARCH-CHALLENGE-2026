@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T04:16:51Z",
+  "retrieved_utc_last": "2026-09-26T04:20:04Z",
+  "run_filter": "mmlu:subject=anatomy,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=anatomy,method=multiple_choice_joint,eval_split=test,groups=mmlu_anatomy"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-anatomy-method-multiple-choice-joint.csv",
+  "rows": 8100,
+  "models": 60,
+  "items_common_to_every_model": 135,
+  "items_seen_at_all": 135,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "922dcc99d9fad938e3fea02c8a6bc6eadf1adc11d89cdcd15f52c3687b6b65d7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:16:51Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "ef08b39a32798d45ec96792d0a14ff29e496de583feb0aa8e5df0612fac91a78",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:16:55Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "7439a5bd73b250aeadc64d853d925fa3e28901bcdad83c570bffd26ea25a1d98",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:16:58Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "1ff8ac24a49c284353af0cd792d907f45e273db36a8e17612f980097f419773e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:17:01Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "19dc8ab4d305db3e2ff7eb83433e54fcbbf960f53f4076c279d49b7bd970cbcf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:17:04Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "1643bb5b4be46aea8b3045ae5ebc537869e78aeae97e47ebb8ab2447c8a3c04d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:17:08Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "a6530907305e6ff135c6aea21a03c8e1cb6e38cc4a918c084abd170353ef2be9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:17:12Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "b371f86e681f6a02e862497a2889cb4928da756604d08c0ebcdc6bd92becc195",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:17:15Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "d75945c60385b1f7ebf2ac3f66614568785af37017957390e716a67c31c88a48",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:17:18Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "432732e1f983f4c88496a8aec8ebe493ef2bfe57f45d072443130400856bbcd8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:17:22Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "36687c85a87172d36e1297f3cd861919184dd16cd0694720deabdd36361e1586",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:17:25Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "1a60d5f40ecd07312dab877cbe11ec40d55b71cc8e06d1abb14b95108557f530",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:17:28Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "a6c79699f49598bf247564dc30320296cb99d2a8a43761e41a10a74784a02c30",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:17:32Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "d391cc64eef6e94fc58c080fb4e679c5e0616036bc25b52f89ddd4d5f3fa95c0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:17:35Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "74f0696d640add5b08c99f121d669ce5d62bac706e44cdb7ef38a504731b0f50",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:17:39Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "999473d76522697c2da89fc05088ef7107db731f1fc33dff782fd86c7cced2f0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:17:42Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "6071a123965ff6c5afe911683aa4a5fef2dbce7f205467055cd0a40b6d3f5b84",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:17:45Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "4d772494d537c4f4bfa81c7e250afd0fb3b5baf2d072bc9b23147f45f66b0dd7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:17:48Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "af31aba345253ca45a381aa864da3668cf0b120ba4fc7b73d264c7a18764ada8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:17:52Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "c24044d99108815378b096bdd267ba30590ecc48035446f4752d7a63627971b6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:17:55Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "185e6e3e58a26ce23233c948dbbbf3411f98f5db47494215d799abfc81cdedbf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:17:58Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "eaa76157a8e4e76d116d728c7d89267fcff6ae95fc25d3f8dca3c155e4380763",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:18:02Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "8e90ab89f1b79db5d24ca25b92657ba29f462c145e6007a3c202e69fec212ea9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:18:05Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "000e8d78b4187e96ff3afa19005d265950d1edc4b1173cdb6a40059afd9a350c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:18:08Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "0c264c3f35148feeed2bacbb97fb0c548af8fc1235dd0cbb01fb97d1bd3d39ab",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:18:11Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "fa0eabb23b8158e858c0a573307d919fb049b892aa2fbbf2b5a9f4b4c13d327c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:18:15Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "ba95cd5b62025398d3df6b269e3e6837d9138fe0e8ef865d01987880097bcb70",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:18:17Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "fcf5249c916a6d4f1e5f1a1b9810a72e1e4a582b9bc393f3755f3ee4119fcbac",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:18:21Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "c385a4b24cdafd259d80d2e1ef7dc8b8fa8bcd30528e80f58fd8bec89ae4818c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:18:24Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "8c28ca195e75632ff3f726e2caa56870ee71d84c5fe323812b6977eff8106bbf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:18:27Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "4414fddc60e9aba509b3001746cd57d8dc56430b93fa598792a13c0eb7e74631",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:18:30Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "401061f25135c97ddd7b7c129898e3688a21cc5454e16e711bf81ca0e8bcc5b2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:18:33Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "9a921edc5f6e9ca6c36d5a7acfdcb292dbf46e28309815001246a16d95855d52",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:18:36Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "2edc2a5f8955c5afad89d21e3e0b5e84d72db66302f5447a794a00e8a22b4ef0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:18:40Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "f337ed08f7b08e77c306151f5e5b71f1168986acfc4ced07bec1cb37ae82b5f4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:18:42Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "b638c6b64fcdbee8d912414f24cabe0fff1cf9dea43d92c766c52bcaba55eeff",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:18:47Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "c12e9cdcfc161d84d1492334c2cd8b0fa7b077686ad8d6c6b6d8a205ba852954",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:18:50Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "deecbf7c7c612fa57962db4506eb29f60405f8ed88c732f585110477c0e66353",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:18:53Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "96f03cbe519e69e9a06ea6b52b045034bd1afc84423b2ecd5a14f8be64fab9dd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:18:56Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "01d680942fda50e5f7cbc5f701f064548cdc0807fe82a644eded19de788f2a7e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:18:59Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "5d1c992f7543a0f7d89b8efb2e3ac9385211189353c7e0fcd22392262bc3c746",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:19:02Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "998f36ebff12d7045bca4d5abea4adf30cb08448afc082a2a78db46ee4d41465",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:19:06Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "347daa9d285f901218c115615be5be1867a758b581e76dd229d65842d2f45f8a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:19:09Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "460c0a5741e19ab01e2bdeccf9ebdda3e61e477525bf9af84618af891aaabe3a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:19:11Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "c3c9e6055aea6b180140d4dec13ba4cbe2c78c694875599021d684f895907926",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:19:14Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "ff859771b86f4213d4253791d4616f3215eebaeca6e089824a38a0368dc314a2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:19:17Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "031298538af29b6ebee014d714c57532aab0847e54fc3dcb2b4c6f212388738b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:19:21Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "70096f790d693703758f6d8b80ed6f12ebc70b001941e4eb7a1e8c247d6e10e6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:19:24Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "85bac2f5314f0b9e51ba32233923e6e9254b12a7cdbb5c0bc3f3f3e9b3e0de2f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:19:27Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "6faeee5f19a78e24fee9eeb16e41737afe2fb47698e1d5195cdea9d85750d50d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:19:31Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "500c1b618a55fc1cf2ee5506b311b85a87858b750f6fc2e25c6d9da7b899317d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:19:34Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "6273bfde78eb67be7d9c3381d9bf2f84d3cbcf042a42a9c574cd4a6458065357",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:19:38Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "94e2b7030ea71691c8171f8d7deae104ca8139d2e5c1cd29f3f648d5d8703dd9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:19:41Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "ddc7da42d6dd332b9f39452670e6f58d1219af1e4e7d0068ed9dd66ecf34bba5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:19:44Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "4f679e150b61edd39dbf8dd46aaca4edcfc862ab084ec0d9d929b7a829a2cb93",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:19:48Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "c275a38dafcb72c865a2604c9e46d9becdb87eca3b59792f778b148a5525b9ac",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:19:51Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "45359d0e22175ba729c482d28e4caa0456c40802e5ba918d37fd769cf7e4478e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:19:54Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "a0758e13911c78296a3e80322d3e877b97abb97721f44aeae3a6b458c61c8fe0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:19:58Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "df9b269b913b9330213b28cea95aad834848940fe24afcc0bb2a25f3da174cb3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:20:01Z"
+    },
+    {
+      "run": "mmlu:subject=anatomy,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_anatomy",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_anatomy/per_instance_stats.json",
+      "per_instance_stats_sha256": "4c8739064080368dfca5a92480ed2cb4cf8bebeaceaf211487ff56b4539c3375",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=anatomy,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_anatomy/instances.json",
+      "instances_sha256": "5030fbd76ab3de48228e1ce2c077e10ca38c6c8b2b5ec430bd159a8c18989478",
+      "retrieved_utc": "2026-09-26T04:20:04Z"
+    }
+  ]
+}

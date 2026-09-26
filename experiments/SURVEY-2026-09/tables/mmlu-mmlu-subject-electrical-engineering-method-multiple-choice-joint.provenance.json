@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T04:57:59Z",
+  "retrieved_utc_last": "2026-09-26T05:00:36Z",
+  "run_filter": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=electrical_engineering,method=multiple_choice_joint,eval_split=test,groups=mmlu_electrical_engineering"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-electrical-engineering-method-multiple-choice-joint.csv",
+  "rows": 8700,
+  "models": 60,
+  "items_common_to_every_model": 145,
+  "items_seen_at_all": 145,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "adfdef98158b72d400345c6bb835238185efa06b3834310dc1d316ecf4f321ad",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:57:59Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "6085cfca6a727cdc2d451787d3beb325ec2ce858a70bea5d4a8e2b66ef4c7e1b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:00Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "f5f369e096a0a15a356a475d217e69835ce1e4e22bd4875b79c4251ce8462e2f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:02Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "556f8e34588d30e0a9e212438d1b88f2fe374e64bf43e49160f997716a70146d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:04Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "06d28fda855270786b522b00194a043e34b8a1466c210037644107c4a46ea0ea",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:06Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "bc4a95179c888df3ef7bf50aa970e63bbe71a35fa0914b0d1ebd7e1a06ffe995",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:07Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "76da9cca7423de4dc4c5a64723b6e57b5ca2cb503c366de15fc40e4bc2e96a14",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:09Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "8d0672b73fdec46ea9b0a74570c8579def801f537c57ccb2ff6f3a567f1b915a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:11Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "77a7d1cd397ac34cd82e285c9c94d14dd4cc7f4fa58f22b00662468da2985f3a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:13Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "1d717135f5659e42fdaca6c587c922566884bb80292d285be1578d12516bcfeb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:16Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "ebb73864e03671661e09f85108a9a5993410d4ca7e41678aef34c33a80efd4c5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:18Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "8b282276fd13667411b6fbc5db8a170d62f864a0da9f7780e0cba62c9ccb11ce",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:20Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "33f431bdd478f6f25a60dc625628e4d05d06d75b1d70961d2f08c04f3d10f29d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:22Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "9c810b8631b9350bf422195a13919add3b595e0321ef24b7ef730c3cb86482ac",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:25Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "969a746cd25ca9782a47cc8bf9ffe9c5fef36de25bfa0c80edd9cd2d6eb11167",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:26Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "e307a8bd35e7ac6b2b355129dfdb5409a8557ef57c6a036a624d851283849d66",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:28Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "305a849b04650752a7c5c570d67459a4e7ccfd81cd9a7e2a89a2a5d7024b0765",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:30Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "ab431d6414bc2d66de95a88451552795693ad33e1e70ea0f6e9bc7548892be10",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:32Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "7ca64c8cb31aeb8addb81429caf0c8dfaf31f2abd7b2710b2bf490dce940bf86",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:34Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "4c1eebc3c13dfde6250d5f3b05667abaa956de9916de280529e5ac499cb00725",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:36Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "f39f12ebac6fad69371588baba2afcc629b11e26b847137ae8a184ff70f77dea",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:38Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "7875b7e7c9d622fef5c35caaaf7c8f987f5c9e6b9f60cab347fc76940477269c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:40Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "8aa66dcfab4e5494b5b620a3136d6a64f94163cf21c6dfddc6257a6c3b24bd61",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:43Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "ac99064a4078310726fc6cc230f5ff1e3b804283d6b6b99b3c8a1c7f2ccf01bc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:45Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "bf3b098f08070d152ad79b8bf2a2d5a0cfd15b572f86ddde8652e3c7c27afbdd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:47Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "b16cf2a19a6ad4a78119279e37faaa22d1c8d458b3bf76a5ecc59da194430571",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:50Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "638e750273bad9a89eb07dc04c9ee475c98eefa252f2223227f77f8ff5fcfee0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:54Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "4aee044f9434e7554ea7cc7168f39e2923053687daf95981865461397a4f4e69",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:56Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "96fb3034af4ae552521d861a548008f8a39cb1f80f927ea0dd899c30a24ea8e9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:57Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "73cde0e99d45066f703bf5ca17cf8c585a092430aeb3a221e228fc0167bfa729",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:58:59Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "2da0a292579ee8ae97e29c2a8c68064fad8f3deb4f91b9388fb6c05a76a939cf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:59:00Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "5eaacf34c66a6506d819b0d381bb090c579f71670d591baf13b0d70306227868",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:59:02Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "c5714bd5866a32208995fec9e3121eec6624f72b993e63139d7fda9c331cf14b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:59:04Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "d89c0773453266dc0b9405412e3ec7ad04d627571381e0133f93a133ae535d5b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:59:06Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "bb2bf06eb8e111a54761e28dffcc72c8d0fd9aea07602568b480fff462e4c53b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:59:08Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "acc6a82acf671a1e724960ade8d5324e8c8d6a69c06bec6368db5fc4396d983c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:59:10Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "f6a2320ff900bc37bb04d6eae147de8fbfdd79b71983bdef90a554d898f4dfa1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:59:13Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "f2eae11f95a089d91eca23cc631034986be93a3064c1588fbb86d7be5465d8b5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:59:15Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "d1109d99720c3b74b4a70018675764c9fc7c0753dd7f330da06c2d0697cff860",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:59:17Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "9d1e4ee08bade676f23179fa82140f9c6ee413fc0121edf9e78b49f9812ed9d6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:59:19Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "9d556c44021e2bf75fc0add64e37432aabe387a03e819ddbc2837b26e4f2ce79",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:59:21Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "28df572cde2d3c148927938a291fb698d8459ce0b5b401bfadc0ae1290716852",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:59:23Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "85b2ef00954c3727e6695afb99de703d168c314969d8edf385291c6a23389870",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:59:26Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "78d2988c339b82d9393b92f906decb1b9a704706c273823e27a77d4482e8084d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:59:30Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "b1f828dd17e7fef3563eb6c04b3b7cc97a298822b01493561748e7a9d35084ec",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:59:34Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "0c26418c9b1ed3e57a2890289ac32fc431a3daf2985bfe537e7049730354605b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:59:38Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "26720558e52d422881a03d23525865fe14481881d13e5ca78e36081d12a64fd5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:59:42Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "bfc24a6496b2fa37d87e1d44848cf8a8837e9324f6c56b6a1b3872f2182fdc7b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:59:45Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "74b3d9293daeb467bf47d2d6ebf599d29f11b44ad70dcc989851090821bc0f37",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:59:50Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "045d3cf8cde3340508c4e476e257112ed72793a3480e2fa7d5b2fa25b4f5b1ac",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:59:55Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "3b168da950b6611e891fcb5df346b7815f78b2a2e989ef05dbc2b0261391dc74",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T04:59:59Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "6a3bc5382af3714d777937ce349f1a62e9bd4b6f9fbe7bbb1b695044554d2fd9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T05:00:04Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "96ec1588ef3942a2332e124a6d6e87a88781318c654bbc9975cf29ae99366134",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T05:00:09Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "7194ee010198e752ead08e875b20c66550d68f1fd56feddf738b387c6511321f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T05:00:13Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "bf091b628657a25c50a3c21fc677760df77de03e2d8ffa78a4b10b971fac9616",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T05:00:17Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "d8d9ab18052d301febf77febe5a1c96df07b6f706a0e7b3734a0066c0551fbe1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T05:00:21Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "e2f12bdd9fc03c939aebd52a6f6f34193d8c37b41c04203cd98d38545ed85632",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T05:00:24Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "95948e5d9f825b4b5d00d98b2ff6f273624ed8302a5a2edc86c7315394890f63",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T05:00:28Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "8e8ba33fa3ae494ea7391d1776bb555e12c427e07a7d07cad1fcb9377c9c4142",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T05:00:32Z"
+    },
+    {
+      "run": "mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_electrical_engineering",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_electrical_engineering/per_instance_stats.json",
+      "per_instance_stats_sha256": "0c95bce42d95592675c6afebf7b362794b2983badec70af54ccb0346b659dca0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=electrical_engineering,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_electrical_engineering/instances.json",
+      "instances_sha256": "c62fe0cf0799e2a5b0a2ebfe70b284d52861820c893fdfcb2a26657d16420093",
+      "retrieved_utc": "2026-09-26T05:00:36Z"
+    }
+  ]
+}

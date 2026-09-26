@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T05:45:06Z",
+  "retrieved_utc_last": "2026-09-26T05:48:50Z",
+  "run_filter": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=human_sexuality,method=multiple_choice_joint,eval_split=test,groups=mmlu_human_sexuality"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-human-sexuality-method-multiple-choice-joint.csv",
+  "rows": 7860,
+  "models": 60,
+  "items_common_to_every_model": 131,
+  "items_seen_at_all": 131,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "819ea1fcf845b52c8ba8012fb72791f040c0c80a6e0bca52501acf380b40fb58",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:45:06Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "cb187e7b7bf1ad497d1621c61b1aea1bfc19ce2bfb3741b8ed5ff559718da29a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:45:10Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "2163a124278b572f365a92b3dfdeb94aa8d49334e654697ee6e3c3b37ca5ac19",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:45:13Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "d1b69e39e8d5fefb5df427a928919d5fa78f8469736e8f145d36f346c6455028",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:45:16Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "3f75780819123d8e00c939bf0bf2115fe9ab3d318cf75259ea62da772a3ded18",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:45:19Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "f384de4ca85730b4fc08b4287b34c22e77ba65c0dd9abd524a2b4e5c246e3ca7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:45:23Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "009b0aeba57637553e7eb0ae0eecb14fcdb36a0efc6fc5034bae330b0580da69",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:45:26Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "433425caadda07de016fed8e8bab7b352ba14ec0852aa2133bfd7f46d85953e5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:45:29Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "1a719cf3e22b6ff0db78b40be425d8421ec6471ab0973cf16ae91c2577ddc5b6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:45:33Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "cbefab1bc71b1379c605b50f134ee66b809f7818c7ee47e457598a812c12e16a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:45:36Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "c35fe3c455f124e192613d70f67c99b52b17c5a9c54fd1fe5dce1fed82b34ba7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:45:40Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "f4a7d71979bc1426332d1b0f6e5c9e7d0a9478f15688487e6f0bdd4fb436566f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:45:43Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "994df97fec176721658098dafdc75de137ed75e6fbea4bb8934da0c28dc15bf0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:45:47Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "41a32633d0358dad61393a6c302f6888d2ccf3f2332a1cbd436503a6b7c40ac3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:45:50Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "c1c7ca35a2bfa499790f244c2a606b136888329df1eb6f4dbc4fa97fd0d44992",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:45:53Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "b219eca554ff7466f104775ef15894609e5c9d0ade930e2c9316582cc870f04f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:45:57Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "a39de478ac47c5d0bc5e7c41186c64d6575c42bcd960f04c3d7691879ed09e5a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:46:00Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "15998456cd13ed6ad8bfc8f5551bea7609b68d6db9e5de182803e5800133c158",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:46:03Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "a9ceb5fd91b31b8988a4a1e76777bf5527b59712e3570d169127d66dcaf959b8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:46:06Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "afab4c09f89dfcc39e73d6c764757f088ef31aa52a0e2d123b5f6c4962ea5f22",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:46:09Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "c5fe2e9b551d4bff0507eae5194724c17f0432cff54db6d0d388272824ee6ed0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:46:13Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "3cb631a84b577da26971094c8e66f05638aed91220e5343404e097b056608c48",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:46:16Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "55a56b24863ac9e334acb674d1a291100560557dca3d94930e52ed8902390b35",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:46:19Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "303d735152615e22fcd01590cf900a9f1346e9d34697a746eec316063a500f3e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:46:23Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "f94458514f134f230fa927f4b3d610eb4612b6401d5630b26c822b3e481890a6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:46:27Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "4e40a34174bed8591d554f5ada8d02a903479069bbc810516c2786fdbdc66a32",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:46:31Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "9cc5219089b04cdedf5d9d5598dfa2e529e92d92f497b6b94fa7eae69e4b48f2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:46:34Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "82e846a9889b5942e23e466d9de5f0de43d33c6c683965c67a14a60572d34300",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:46:37Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "95969301cc7aeb8eb7ea58825ebd85374c2c049a4c4c4a18a20b3d089b7d0fd9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:46:41Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "74114221404854c935376f8a7a65098aabd4284bd34929144cb323141bb9a084",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:46:44Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "61fba5e89ac3133a1f6bd6b8a0bdcc6690a4082478c119f322753a96824ec2bd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:46:49Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "e582299b933d7729c178d48f0c737f3a4b4a20b9fa48d7da4e77f85367715e33",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:46:52Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "89a74aae9ca0d5590b1bb715d4af78bc86fe9282eb3e65bb84b2d634ad2beac4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:46:56Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "8e371cfba2854a480c5109440cab75f9f55bde1d62f05d378e2e89826962b078",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:46:59Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "93aa8280c4d21c47d912f701a4f7bd02f106b091a387a61a99c2711cb92b9539",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:47:02Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "1f7e0a29430c62e1b3cc2fa4065b2a783dab9a1f1912295785e2b0312d0a62b4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:47:07Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "c83ebdeb897e560d7e07791487627471809e2b4a213e1e012695d08113a61c40",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:47:11Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "7b50867786ffd02bf65852bab474a891f85972d959455d068cd407311db4a964",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:47:15Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "a460ebdbd94a7a9538e520dbe259c1a6f05b106b9fcc397b08f272521315392a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:47:18Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "7e1083aa4bc8ae13537a341cbc87e30008c7904bf75198552ee2117155b505e8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:47:22Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "937bcf4373ad48237a0485881d75cc8aa6ae473b5c069fe3809b62a02f1ffd83",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:47:26Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "3079e60e1a1218b7fea89da61845117ee85bcd3cfaba0b503ee3818196e6f70c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:47:30Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "8f1dce832a0c75e4ab322bcd48b651184cf618d488056313d86af3374fc68249",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:47:33Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "fffe0c850ab40a761765f66c78dd75324c083f8ad7fd7bfee6e41a589ce49895",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:47:38Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "1daa510e9af3aecc848fc1a8feb060433bd13cef585d30bc053de13fdf6c05bb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:47:41Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "2781236964abe0447337bbe57ae208b0eae14d7d8dc62bc4b59d21fc552ccfbe",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:47:46Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "cf4e1f5749c6e7b33b65934eaa58eb901d4e7f2f56a66e7f612672408afbb324",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:47:49Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "4d23c8a9f81a6d9675a9d1e9938ad20d47f4e47d86fc9b5369c99aebfa616043",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:47:53Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "0007cbefc6aebaa475fe47a5862b09648614f66ecd8687f2d59d09cb6fe0bd06",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:47:57Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "ff48f8a44cfeb23450df3770406ecb9ffd24575597166f6e29291773d2b6fb1c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:48:01Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "cf46080359ebc876e6c70c5ecd79d1392d27c454f19a4383fffc26bc6d82da10",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:48:11Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "0b2902cffbf24b60690324206243079e6e441942f9c812ecfbc741a59662f91d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:48:16Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "c49e5710b23013b8665c98679ed334129f96542960ab03ca8834d5477b6d3fbb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:48:23Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "581c205f66f345a5b15354bcb4bc427a5a3cff6a9f1ae07a7d4e143bc02cf482",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:48:27Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "51c9bedaca3fea182879c566462efa2c3a5c421b7c6c74c00459b0b69d4a2372",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:48:31Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "21bb826113f5441a0871a90592f144881e83b6142c3034f13f961216f5ab6cfe",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:48:34Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "59eafe7968a044d8a66ec6ad26ee0550830ada5bba0d7284daae37e6d5de8631",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:48:38Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "4e0db4fd486e244c4994cdd246da83460aa6a4b07c0fd9f085338c21aef15158",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:48:41Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "53e9fcc814c70fba69a0af484597d5a92dd82fba2cf00d4864a427385c536ae6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:48:45Z"
+    },
+    {
+      "run": "mmlu:subject=human_sexuality,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_human_sexuality",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_human_sexuality/per_instance_stats.json",
+      "per_instance_stats_sha256": "ff57ad80ff58ef7f88bcbc00246575cdef34378019d0aa06ad69e70ce143e63e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=human_sexuality,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_human_sexuality/instances.json",
+      "instances_sha256": "aadd62c680d52ace934976faa34b1ac849749b29815519a174e92b0b59bb0935",
+      "retrieved_utc": "2026-09-26T05:48:50Z"
+    }
+  ]
+}

@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T05:18:46Z",
+  "retrieved_utc_last": "2026-09-26T05:22:58Z",
+  "run_filter": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,eval_split=test,groups=mmlu_high_school_chemistry"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-high-school-chemistry-method-multiple-choice-joint.csv",
+  "rows": 12180,
+  "models": 60,
+  "items_common_to_every_model": 203,
+  "items_seen_at_all": 203,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "14e86aaa534e2b886181086a42b560b847159706db40a0ff728a8f4342b3a70e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:18:46Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "1693423a9e0b5718495016d380a2e6ed2dbe5bba8f1346b0049a8441466098ea",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:18:50Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "95118d527849525be361c7020dfcd4983d46c4abd8b5d8937474b1d2132c395c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:18:53Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "79f294eb9391c171f0cb7bbbbbb3ff0e570c9e2f7a1fa995d896bea36066781b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:18:57Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "304834569ecf7e510433cb8ceaaa9ebbaa49407e02b9917876f80eb5924d511f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:19:00Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "8e3f2512029a45cc1a7c2dccfdb76b32407a39607ffd20bb464eb4ea40e9bbbc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:19:04Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "ed765c1b3e2680f2424f981bd2b2d3531d08e37911ec9e437294db8f6df7cfa7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:19:08Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "1969b67b8fdbfee4f5e8686a651b810fb4caa9e9f307a720d1e189046a899bb2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:19:11Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "5c205327a9b37f57bb1cc5f9ae0757c5478fd9bd4fb8381b9d0615bf48f52bef",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:19:15Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "01c7a8dbd6f176fef6a408ff8d124ff65c56fc4527744d20db6f546dd84b391b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:19:19Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "7bb3ce714464d7d3f0d247cf9b861459a76a25d98e2fb15eba5b82c507392ba3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:19:23Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "49e6cf479ba737d157141b6863b6bbd6cb4e2cbaa52a4e205edbe97f99a3a68f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:19:27Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "35f75292379a0f291e1be46ac6f766062f9ffc0b0f6c8e11f5db066bef9c797c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:19:31Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "f276d3d18073df4a0f09f386518ed169f294cc5be5733f90990dde014b9aefc5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:19:36Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "84eb9e370bf11ae2d7612b842d259252c0afc7be880ca13e93b585e1f878567f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:19:40Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "d5ff2224ad12b764d4a5c6b6a6f0c7805e0d3970c292f7da13a4eb98da36cdb9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:19:44Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "22d93f50d270b0e5e3b89d328d8a19cc245e00f4590a7cf45b35c3af643e12d6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:19:47Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "a11ba2da9d2791af58271c558c26ae1b06725a0b1235b9e517291763f78b96a0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:19:52Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "7a1db4204b3cfefcc3a923cd4b83371878f30712e42d5a120201e9eecd447fa9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:19:57Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "b888ca711ac99cd8b187ff914a085cafc539c3be11bd78482433e3d8a2f7aed3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:20:02Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "61c1bbee36d6ff9901fddde5f61aa776f2354350e028bd14cc2265fae45daa0b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:20:11Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "1ee8a30690bd1f5f68102814be762049fd7839d50c96ac3ea782bd559994a979",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:20:15Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "c105d307cba027699ee9cad6c2efe9698a6c39f8e32dffc1d7f7aec1302ff2d9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:20:19Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "8e93b2ba9a07ec1f014ab0108580848e86183a5ec690beb4a8970e2b45c1776f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:20:23Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "a6ea81f91c37f1a4bb66e0beb849713066b9a1c797b703146ebcf8fce1c0261c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:20:27Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "535439435d4e3963df787c3d074473187c4f426d0622f9b676bb1a51a02ef67b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:20:31Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "ac79150eea9a722af0db089f349d0791a6989dd4fd8e4eee6e53776a5df01755",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:20:35Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "1b8bfbbec0cc87211643b396c4b3d2fc8741794f447afa65026c335acbbf9a14",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:20:39Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "6a3f791561c5e2c4102d5a34d17381665dd79c750f887bfcde7a988e0f5d1c6c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:20:43Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "35925c4b92673cf2f638df13d71d3afd78b1c643f6606c75bd59976e6a1881cf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:20:47Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "00c464c334201127bb7ba63d12aed7770edfee3ca4b999091f96f3f256feaed7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:20:51Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "dfa506a2be8e58f145616b486651438c712ebbf9272ee417d49cf8bca186edb3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:20:55Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "af846f997f0cd2b9b55d1a13ccee9f7858c7b110fcec6af8f27c4ba6f89bad1d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:21:03Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "956d71d04f04fc4fbbd812743e096474495c0277563944db03c60c1cf1d76135",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:21:07Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "90fba6799c8ceca44ce2a0299ac0b7d7a2b6b4816c214ed9693e2111c3478acf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:21:11Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "967eb64ef83693fef15f7456b67f59c78fb1183d39ed243b8c0b61bfb781a8bb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:21:15Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "06c3ea6853305d15d9f62e52c85cb033ae74432244cfdb06a843ac8b79d0986a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:21:19Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "b25b0f22d1d8339eddfe4b1f0d5f63b5af4075fdb31baf6ccb38a3ee550f6162",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:21:23Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "bf5fb359d6d74ea6e346ae3ef30fbbee23f496b8053a881c4ef385b27ec11bdd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:21:28Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "fbc2762383606633b2a8aebb7f3ecbc0817675efd5f30c63f9ca4a6296a2c164",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:21:31Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "93f1e047271217b74caa5d03e21ae3b76e3ef85903ff24f57e4388b0d366b182",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:21:35Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "d3074eb7f08ed83f1e1d3f750de4b4ee34d53cca8084d4afad3a264606e6f992",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:21:39Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "19986544de69746d2d7713e14ea6036c514db844751c3a1418c51f7779ed3f41",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:21:43Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "3eb13bacc39cb4e24682d5e16d10ca1f412230624a57cdf39e728853ee9f2680",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:21:50Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "8812e609e91679645f9d84b1dd006c5219fe16c1099018b147fbc16d61a3976e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:21:54Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "e679bc1a2000dbfaee5dc7dd0ee3f40971a9d21e2b2d371e63a8cd575ad0b29e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:21:58Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "4cfad3db51f3bfaf558af457d49825d6c16f5a063ef4cb4ec003055f432ba1db",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:22:02Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "35c7a7031566cb9801c5efc6ada9a783eccea29ef290ce5574e64998bafa9966",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:22:06Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "700dbb646e41174d9e81ba9fab6d00f28109742150c0abbda7904e746b2401ea",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:22:12Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "5e2c85c1eebd3fc639a106d75caabf120cb15aea7732cdffd340d13361fd01ef",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:22:16Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "1a628e5814a29589778bc82181994ac846bc55423031d1f490a638859410eb7a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:22:23Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "b78f25ae10adb717160f71ff236bcf1e7cab47adce4ad275724aa6541747f795",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:22:27Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "2cc23b3ba1c1c17e208a505f931198cd77e09e1988145a807781a5e1c72b9966",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:22:31Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "95701e01e96b5914c9ac3862229fbd10db0b2333a25543ffcf58b847217cbf34",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:22:35Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "249b37dd51b40a30f85dcc0c129eaf246ce709ecc1fdc7c23a26877d46f26755",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:22:39Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "9fb2c4adc029b81e1491978bb37611546db14fb2c184099ecf7d1886a2a92733",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:22:43Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "4d9c2abe1a3c5d75508a11d94bc254e2fb94313f7c9b113a4ba6b04bbb33067c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:22:47Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "9b6bd56136e48881fb7b71cdb225f036ab53d7d768b79f4e6d2333baf87c4de5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:22:50Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "e73af64fd99bf98bf4317189d6ea62210df31acaf5fd8ffb9b39b04e222553f1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:22:54Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_chemistry",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "19a3a0c27be433f1664dec7a68a14fdd3134c9490dc98c0e109bbd2b6c103664",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_chemistry,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_chemistry/instances.json",
+      "instances_sha256": "286bad1f44fbbb3b311bd595719d5349d1e0ecacda0eb1bc5ba850ff0d4767a8",
+      "retrieved_utc": "2026-09-26T05:22:58Z"
+    }
+  ]
+}

@@ -13,3 +13,9 @@ __pycache__/
 # pre-registration carries a sha256 of this folder's list instead, so the list
 # is fixed before anyone is contacted without naming anyone in public.
 .private/
+
+# Survey tables are rebuilt exactly from their provenance manifests (URL +
+# sha256 per file); 45 MB of CSV adds nothing a reader can check that the
+# manifests do not. The run log is working output, not a record.
+experiments/SURVEY-2026-09/tables/*.csv
+experiments/SURVEY-2026-09-run.log

@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T06:30:51Z",
+  "retrieved_utc_last": "2026-09-26T06:32:17Z",
+  "run_filter": "mmlu:subject=philosophy,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=philosophy,method=multiple_choice_joint,eval_split=test,groups=mmlu_philosophy"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-philosophy-method-multiple-choice-joint.csv",
+  "rows": 18660,
+  "models": 60,
+  "items_common_to_every_model": 311,
+  "items_seen_at_all": 311,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "778d94a428bc5e07ac5e3f94da2ae7033ed1f688eb509cf8d666e565e6441a8b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:30:51Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "a60afec2a7f724a80de0407b9cf38ff9b2f071fae80481bbf426daffb2a80bbc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:30:52Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "a26a9b84f5f15253312f7d0ed3d09ec0f05499353b84d482bf41fca348f07d13",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:30:53Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "dd1364de298caa983f73ef4863ed920a3a7e762ffd60d89bae39dd840db1f5ec",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:30:55Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "84e17a8936125df8ba2a505f8fe6279fc71f6153071981325f70f18bdfbcaa95",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:30:56Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "1e35fe6851e604aab1e4c88258535794ce932ee2532a3160eac216ff95b04967",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:30:58Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "b10ef18dac7f355a449cc90303079719a620f0136a3287271b69162b3ce392cd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:30:59Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "0e62543b61e9aa18abfd73567be5e1f4dd9fba936a39a7484e6120b8b805e079",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:01Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "b9eac7c981a6e83fb02a10f2f4f8cfcb9ee75440ed6b92783ef7aac5c13304a4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:02Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "1366c565608d897d47120a6979c9eb1c8c875ffa5c8ae3837e82f417f2df6553",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:04Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "d971654ffff9118cc727ee1d9ac80018badcdfa2fdcfa37d02db2db9aa07593b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:05Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "c8bde38088387d33bf7b8c24b19be4189cca8d68405097d55ad27f23f00f6aeb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:06Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "ba70da0f3b1d7d4f19c9cf1c34e98e61cdcf61f6f922e216b28af1b07997ecda",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:08Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "dd152c0c7000a06d17e5c47545fc856e3e6ba3fc7640a525fcb7ca41502c4bda",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:09Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "365292eb177465603bead8dd730753b96a45f207ce85b607d922fbaaa5ef67b7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:11Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "2f886a1fa8b2045f863113ac34df0fe32da4b96985d2c330e88da65d2de12a40",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:12Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "70710d8a6c690101b4f51d30d56235d5f8ae281de1012763106f8cfa3ebfeef2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:13Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "b17c902acf509519620404d604db8fc4162a4be04f4b86ec2512047b06cf9abb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:15Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "57ec55ad411fca50029aca9ab572c386809af76eb5cf7a6260f0e2b7b177c658",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:17Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "4db98128b8c85f949849a44b85e71fd5ffc5f23a9e8df579a9c153e014aadbc7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:18Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "672c372489ce111d798fff395f9e631e0f58a637a5d5fb3f00627c7c4286fcd6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:20Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "371bfee3a6f4762f4ee8cb4bd603504db99f063a6ae68934ec58bd6fab070c90",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:21Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "a7b1c9e65cc1e5ca97270d31610a58ad11959be27caab9e4e2f5abff4f1800ba",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:23Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "2e9c2054f2a359f1b6f7edb9f950abf74ff832898def878a52feca3a9f1fe0f0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:24Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "78fb35dd51653e0814ebb762f5d2442867099bbdc075123836a8938bbcbc7bf2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:25Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "a673a7fdbc619d3250d2a4fe06d586ca5060bd69aa2ea0becf6d2d892e375245",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:27Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "4e09197a533fa5641410f6dc8f59578d0882d7adc42e9cb2bcb1f703228eb146",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:29Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "a3519b6f0079a1e2d84bfb30913eff6a9e4c4d3493f2568b0ae22edb1b3b0138",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:30Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "0c0efa01f4a365fbeb9a872db67a736bb75cc796f0bc2c93af25af2cc0aead34",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:32Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "5283e7e58fc4f2e714f7414e3b439ee8e217c313db1cfb4f806d708a766dd26c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:34Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "e91e357e14dbb488c6e23ffa27160e11a117caaff144f4e5698381e702895cab",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:35Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "1084865e0de466a0c0c78288ea611b7a6db15a77abf4f94bee16b5af51987ec2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:37Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "a68ea74cfdbe148dc5fca9ff307ddf63e95b94f2e082969fbf4b8dd7ae8e19ca",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:39Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "20d7d0f348092d59622ce17d521513d4b9cc7a2a94b36923ab1049f4575000d4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:40Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "df9181d1acf80c1102b8e5571e9bf54a6a95101364975ee02301fed8bb04fd97",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:41Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "fd2697af5faa4c0df475b3c919b1f80f08f527abe5ad7005cf33368a6fe9b098",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:43Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "1bf834945fabe9a03a87571da476e6fbc7188d1bd73ad0fd2a1a244edb191377",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:45Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "624b32063f4192d958ac3c6669d1c7943a4164826b71059d31ad3e8768c1ab9c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:46Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "b10e48d7ce8bbfa0cf38ab0fffa54e27e59ce1b819259eb7ae471eea12c74c8c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:48Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "f0d021a8575b4956fb8378be8626bfffd9e9af9f05148471a51e84930f304452",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:50Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "5afe48c7f4b5817656f248ee2f4b5fd38205895a227a09670c954a40122c00da",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:51Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "82982be1ed050909953e3a0642f86f78037267518411754ba8c41a9d53e6ca70",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:52Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "3e29a45cfada5ea742b5a532d8d03eb5b6f5aa598a2fb0b359273884f0eb5eb1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:54Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "1b58d9ed0b3abad749346f4b73a822d1cb1a7c4143c2a07ec1f38c9c5ea8e183",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:55Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "592a3099e0b85b0947da6fbb44459106f07fbe580faa066071a787147b2e83fd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:56Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "acc21768931c3c2fa8dcdbba9cff13d81f45141385859d0aeef2b3bcd01357d9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:58Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "5acef5efba102cb06fec42e8a509c98a19a0f0697dbe5d9defd9d66668ea4e85",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:31:59Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "873aeb92279224cb107635cfc38f55a8f34debf575a04a33bf4758c04430618e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:32:00Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "af0f5797b1d9e333f17c72510fdf936130b147f623dbcede5400d07c7a1740ba",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:32:02Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "af8fa397d04a144ceb43806d60cfe451594dcfb8509f78049c6de3d52b236e7f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:32:03Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "e33a262c16a66247ddb61434228def1d9523f9518daf4b56457f78218cd8c419",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:32:05Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "347ad1d9ddb1aa5482fa5f8205185eada2c7fec2f87f4f291656073c87e5dc34",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:32:06Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "e0aad7e717536916064bcb3c041cb71604e27d00c97781a5437019dbd5b9514d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:32:08Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "7e9aec2c23400800b8cc8afa2042c3993fc9902392f047c9aacc51b904b1e4d5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:32:09Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "3d1df800b09fd074822c6fdb73a5b3ea4eb704e777f408148c4bf29d14bbb4fc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:32:10Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "7cc939d6e84e2175ea0970df041b0f4eb022cb85c99d0c4d3bbaf27f0e169518",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:32:12Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "58ed8c743d749494a3c53f1530ef85396ac3ab1c65dde47750a143af7c497917",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:32:13Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "83680aaaa801b01667e88ad672a91caa900a27688152cf394f0774bce27842c1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:32:14Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "454f2595f9662bc6035880463bc9dd039c2a26ab66086377e6ba79da793acdf5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:32:16Z"
+    },
+    {
+      "run": "mmlu:subject=philosophy,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_philosophy",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_philosophy/per_instance_stats.json",
+      "per_instance_stats_sha256": "e3310efd5031f9be912de2345a334e4a8f424db7d95746cb0e07ea2139b6ac31",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=philosophy,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_philosophy/instances.json",
+      "instances_sha256": "0f8436a89242e9b147ae66c40fc61b61cde3b3d0cbf5395cd9a8765be3e5a4a4",
+      "retrieved_utc": "2026-09-26T06:32:17Z"
+    }
+  ]
+}

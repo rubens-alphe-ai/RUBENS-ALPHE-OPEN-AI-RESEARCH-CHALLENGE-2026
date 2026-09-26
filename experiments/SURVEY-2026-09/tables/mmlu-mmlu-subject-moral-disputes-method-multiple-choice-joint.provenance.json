@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T06:18:24Z",
+  "retrieved_utc_last": "2026-09-26T06:22:08Z",
+  "run_filter": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=moral_disputes,method=multiple_choice_joint,eval_split=test,groups=mmlu_moral_disputes"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-moral-disputes-method-multiple-choice-joint.csv",
+  "rows": 20760,
+  "models": 60,
+  "items_common_to_every_model": 346,
+  "items_seen_at_all": 346,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "e3df48e57a57588d5d4245e75c3bde9d0f281768d8f7407b51814d0a12b716aa",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:18:24Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "83b2b2c5e93078fa3e5dd067bfe0d519f56823582b7d8fc1279565f9cc7079d3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:18:28Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "b9de3c49b831c0b1a72bdff61882a5e27c1e88073b1c0a8f41922e24686b25e2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:18:32Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "7d7bc439274af8631340851799e78164307e6bab3a8e8e0d1aadf9785d74c4ee",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:18:36Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "8e89467d644b38749ec788f53c0bf10a978242ad2768a812b39901cba6a5661d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:18:40Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "27aeadc20d373b5deb07d25567dbff0457abab2d0709023a8b2a50104db4453a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:18:44Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "b5fe45cc00f8df31c0ab42737f11d5d60ae4f949c74fbd09c09c1c850f0caf7b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:18:47Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "31913dc10f0fba1901ec23da89c51380a8c7cb01ee0335dd466d279041f5244d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:18:51Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "f1f71f179e3e55afc000ac96b71212bc3038e7314c8b8b7a7beb358f9190f9a6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:18:54Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "e9a0e870cbd3f00df514599ab77112cae5a7a04ce3025d240514c1c61592f8f0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:18:58Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "21239167a7a90b94ab7cc72a8727c7099fe790bb785d9639d77590eaa7daa866",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:19:02Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "f8bc3065eb5101b4a283a8b1f2c96b5e08b3d484199d0981ee9cafb2b38c183c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:19:06Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "b151187bc5e5fceb401561c45df109010b24c46c339eaa2689711658fd880504",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:19:10Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "bc64ec19c5c9b5319ed91f6d0d52168cde783f8ca7afb9935d8829dd7ad0327b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:19:13Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "ecbdde7be434e859d6bfe4109f847a168c0e7bfca1445682e86c9f78453ed617",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:19:17Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "7d59b0a7d65b7b54700561cb011c78f209ebe363e5d655ed35260c0af69e5ec2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:19:21Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "ac5f3768e57e6de21ef91a571ea7b16d002833a5bab8fe153d5bac722765e169",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:19:25Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "459239d69c4e3b2e81eee14cac870bbeb5e1d052ed28ac25f7126323b2ef1c19",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:19:29Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "6b6ded25068bea85993b7eb44b0dbb308d3408480fa95d38919ed34bd93e84c0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:19:33Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "5e07f9921e7fc6d48aab752b083a7cfcccf9870dcd8d594c27dbe9f1480c4bef",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:19:37Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "569f4185db417f97092f7dc483d191ab7f430ca42860f082423a1b5f3d6d2251",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:19:40Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "6fbe76b19afb71e974e001a227b0d3e7ba688c19dbae82c2b4c3ac2ff52f22c2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:19:44Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "78887394bbf2d8f7c662e3d56e2087f3c02b28fdc9a6c4b804f708013872d8ed",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:19:48Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "ec8cf214075c3739621bc0324a80cb9706c2f79e3a73fb5e4221d034dae96187",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:19:52Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "9cabfcb20adb02f5e5c1daeee21b8300c179e413461cf2a2f596fd0eb79f9f23",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:19:56Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "d7072a661ebffe7757b3bee167569b02265722504641341049893a55272fc2ec",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:19:59Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "640a801c3594ac2514ed01a5f626248e448fc28e92bb0ff7eff8ac38fd57de1a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:20:03Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "f5ff0cd1c0193b127c2ebb0d0dcf4f13fd85f0f0b96affac0eafe6acdac78480",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:20:07Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "96fe74f5c98687e691cda48dbd997bcce1f8b1a516018f331b4c031f6d0a51df",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:20:10Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "ae92b6709e1e695554402ba4f63365828cf0f09df8c07264e5b12f9deb771f88",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:20:14Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "cc4486a5c708eec167ae8248ea331047d2377e9565c2b1253f299c2a0c5d0a32",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:20:18Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "1dda89e53d352cb398e4c012536ff464642ede51d599f0e345c9c90bc538fec3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:20:22Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "3e12c010a92af921bb72d0ad9b4c5265a9db60b4000ff227292a27c15af2c16b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:20:26Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "4bd7975aba9ecae766704b00c174f0fecac6c5898c75989f45d8b170fc907cbb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:20:30Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "6805583227d0d7f5eef03bcacf3c1b257544ddb7d9c695d3ca3b2eef01e945f0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:20:33Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "5bff83ba469e2cf504514bc56b4f225d060bb4976cfec3cace6134b7f0881020",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:20:37Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "dc8bcf41cca429857fd2cb9cc7838c931b9abed8f6d5e77dd2ecfaed144a3118",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:20:41Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "6fd5265b24fda5c045a8fbe872bec980d39edeb674c34012011c522c3ed08f5e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:20:45Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "b5a609f48547e80403985ed2e3a8b8fc80c910a55f4ca7d9f96f31628f26cb4a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:20:49Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "da540536ce1a5841e62357da033e5f8b25769fc8c9b474f3c2f7f54fa125ce74",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:20:52Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "098ca9e1ce0892def886f8999aeccbafbe4b8ac90b1ed71d82a3293308365318",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:20:56Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "205a5bb3efd1c9f192e5b3ef52827efac3ca7febe6ffb5f6f9f7eb3a8bd21d62",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:21:00Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "9e91f36029a184c991832794ce82f5445ad19bc5ec1205ed697253311752eb8a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:21:04Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "eb451655c5f8a53953006c340100652c3e5aebf4c1e7af4044e1daeaaa3a5267",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:21:08Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "fb66b58011692032aed06d108dacaa03a72c729ded1fe62cb35059901806fd3a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:21:11Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "960ca890cf905df5e112b69cea0a2a8d80659ee8d284219f07aa0e3dbb7df4c1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:21:15Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "dd0ea810d9571196179476e6ce7dad44fc8bbf3dd98c3a15fa7b1287f7a2dcf3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:21:19Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "efdfa91332547ae02610a630a6664130d010f00cccdb516291bb811006f2a930",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:21:23Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "2d33be59f75eb4b2187980088ddee32f0563d2d763beed3dc7aaa5e0d290330c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:21:26Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "8475e273a00a1733a8cf5376610f467ff55bc6687934ce08401db423b6a299e3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:21:30Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "09b19de1db87724502d9f520bad8810c81ea305128fc8c87d511dde3fc50aede",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:21:34Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "aec2039c3b571bc5f0b3a1590a43ea6865e81175518611c1a78f3b28e93ba9b0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:21:38Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "1e4d9b1e9d79aeb00a0ee91f1296af91be11bd2985db498ff7f3965420bf0d79",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:21:42Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "9050d4eaa089cb54c1e143745cb49c9e7b89efaa3fa2143ee29c68ccf71ad715",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:21:45Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "b26943d4b366b0cea63bfd1a7975d5a2cf3492d1646d2f738b1b372b7f16f068",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:21:49Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "9a280033016339a9f3a4c3ad20c7d07b4b2c44ed87d7e50db13b970b2e93e4d6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:21:53Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "ecee7589f57eff5be2eb98ab26deb4e3fe77eec943c82a4d4890e3100185ad54",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:21:57Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "52ba8ef289f37e2cc451fe7ce1ab966650d1b79108207ede4b427d3339194956",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:22:01Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "9081352e85eb80e314e731158641cdd04c27169fb55382656a4544dc52ba7207",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:22:04Z"
+    },
+    {
+      "run": "mmlu:subject=moral_disputes,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_moral_disputes",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_moral_disputes/per_instance_stats.json",
+      "per_instance_stats_sha256": "ed2ab8af2eecc101f9518a822d0883b6d1b981329c52be2e3064174d3ec3a034",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=moral_disputes,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_moral_disputes/instances.json",
+      "instances_sha256": "2b370bdaeaec483792053f03b6019e7b9fe1f12ee271f412c3342b528c6693c7",
+      "retrieved_utc": "2026-09-26T06:22:08Z"
+    }
+  ]
+}

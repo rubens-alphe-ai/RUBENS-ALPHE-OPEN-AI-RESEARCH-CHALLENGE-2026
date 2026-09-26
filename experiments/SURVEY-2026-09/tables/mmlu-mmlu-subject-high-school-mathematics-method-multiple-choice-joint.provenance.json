@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T05:30:30Z",
+  "retrieved_utc_last": "2026-09-26T05:31:47Z",
+  "run_filter": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,eval_split=test,groups=mmlu_high_school_mathematics"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-high-school-mathematics-method-multiple-choice-joint.csv",
+  "rows": 16200,
+  "models": 60,
+  "items_common_to_every_model": 270,
+  "items_seen_at_all": 270,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "a61abbe4319d3d0de5674ae0afbe85068198fc82532c81055b363fa3ad3e0607",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:30Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "7966058364c368273650c0d3b2631713dce5a72c89374b2d523e242443be4296",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:31Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "13679dd1ff2a15ebac8255c60bd3be4d22790dab9027a4484c99fa879f59892d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:33Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "c2533c307b82ff8219730df71c1c29264b29424463ba98e05ab8db583bdf3399",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:34Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "d2faf995a16ed2dd10ac40fb372f4ff2b7fc921bd93391073348fb1fdef283f9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:35Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "4541ada405fdd7e46b54f8ab537056ccef8c1327cd1e3553b1307c2211cbbafa",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:36Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "930ed7267ccdf8f39f9ab794ff5f9a947dc732277ea0e5d80ef30568779b01b1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:38Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ddd2fda3cd93566c0bf4da39138e656b57c4980368fe1837f3fcadc4774d9e53",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:39Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b0f2f2f134ac087f01fb4d944907cab5ed4f492f832b6e6a6f6e8da92b70b755",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:40Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "242949314b86a7d6ed332fe51ef54558cbd3b545dc8319028e6129170cbbbe1d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:41Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "6b807f1d6c8ba1b8b098494da3221682cb483d929ffa22e438eb7222b3ecd353",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:42Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "515be12f09c0fc39fe7bca819fe9290ae73f16d4868ee4def8966f7bdc28b0f4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:44Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "c889c0fb865d88afd9d04fb1c9188d6b4397d9743c7a1f89827a672794c35f88",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:45Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "37f0567c293f3c93aa37c6e8e26980b11679356bd4af83fffb5cb73e9d716ade",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:46Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "72ed08bd88c76bcdbbbca40255772eb9afd049acc868f83b019a7cff2a803bfd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:47Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f3a8802f6ecd917d15baa27d99b068a896a565bb45d8723e54d64c2c5025b95d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:48Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "5247de0397e4e2fbb64fa1cfc6b2ab99b711e9a31bd2f08f53cac72c5806750b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:50Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "490c205a1fa178e0e7ccf2ccbef7b893f9ba7d244e93ddbe420c745c57d0eda1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:51Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "512eb439cfac6f72739211f5324681c517e9f32bfa46d05c838f07aee5acb934",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:52Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "af8aaada391f2b548585886f28e76340b8efbcbf3c60da5b9a6f8c517a8d1631",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:53Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "c10a371a4f2c5ddf9a65d76f60dcfd11f8b6be141051d9de27cf30db77c3ef83",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:54Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "8158cf8129aa37ebf12d4567ccfae7336f9b0d20b35443320c2eeaf42fc66d13",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:56Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f0bc2a640b61776059c2818ccdfe2412f85891ebab2193f8dbccf24b875bbf4d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:57Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "72951351a079d08a4b9acdedff13234706d4654aa97477815ccfbf35531d65a8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:58Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "180cdb9fd0730a2f5b67d504058d9452392f0bfa7b11cf518680362895bf2fbb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:30:59Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "c8367865d2fd234d4886bda87140c72463e15364419dd9e2ef7d8be7e6a6c0bd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:01Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "bb17149680aa6a80b57ab0789dcf66f5ae2118dc228fb17995583a35c00b90e7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:02Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f5dc35e745d01f37a1018237cd0f1ba849e1d3e0ff52df83ec3b763179f2149a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:03Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f5e47e6df880989d24aa25551293f4edd953ac3d90c885afd4fa197c3f07ffb0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:04Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0ab24083bcbeecabb40742aeb343110b81a60f1764424da30a6462e84f46835c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:06Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "a90ff9a69b7d7062746f9975fe9e5fca8abdb303526edea94dfda105e2856904",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:07Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e3575bfaf25294bb20619247314331ad6d4db6b5dabcc16b270e1c037b104bca",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:08Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "1fcfcbace121f64f70c94e48ba0ced30eec8de2dbee7b11e80eb245db46f7032",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:09Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "30d9a843320d10f33353b2f8d66adeecc78e9266211fda4891456c7bd4227621",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:11Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "53c128d894154b281c475f1b838cea115a2e7d8d5247cd3c0749d1247a1bd7e5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:12Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "8dfdb3e0e5e56067323a5e0e8ff499c33f49710eceda34f813656db326092d17",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:13Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "36095f9677a0eac3fc8444e2dda86b283055897325b1d4a2bb4b118ed584e06c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:14Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f355bc412c97e5e13c983131c09bd3964c6f5a8cd4c466cbafc0b55f7f3f448c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:16Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e92642e2baef2bd807f90451b80225f4c78a4050cffb3ce2a73c0ee17daf7445",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:17Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "a0e6d54cb027ab25f10e5cf85f10739c3534624996626c895d6385e226682574",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:18Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "aa39487bf0541946e81b41f8472f978726ccbc332cdc963317a19e0e88943b2c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:20Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "dc530d39d528f24c3a2444b91393ebd6fdfcb4581eabb3dfd70d81f2110b47ec",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:21Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0cd6ed7e211b3365164f324cc22187bd5104a6163e4bb5135b18183d50854151",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:22Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "089a458db1e4c601e6f6259747e07c2e7b0e42d3022d035bb63a98343059a52c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:24Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "230d4f83ba19862900b8f78dc8fad88212ab4294c0a4a7db3472638f6b5de0f0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:25Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b6794bbe76dbc1e8be99ad4b3b51f50cf5da1e15cea9f6579fb12538312ebc26",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:26Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "cf69d32fa30073ff2238871e48fb3e83925dfb2b6f6aa6745c96376aed5eb2d2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:28Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "c95c8cf98262d38c6f9660bd416cb9c8a3bd80b4de80a92d18dd685226c25d8c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:29Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "d0978cb6b754b6fd643f0ddec31c4325d58caae878c0ee3b2da4e7baba779aa5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:31Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b477896d73454be4bf5e41d5f584ac953fa9d1222e3a075291e758113adad4ec",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:32Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "dfbcac14d980d13a7b5b79339369f13b6f793c1fd0550234c8d349a33989da58",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:34Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "2f2a0ef4e0525afc58f9afb72b09901d126eb519ed98b8ba3c40d3a9ad2c48cb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:35Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "5bcf8c18828f832acf137e4e1cabbd323fe2cf8006fd6eb2c0aae4f5eb5513f4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:37Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "1b3e55c1f864dfc97b0094476e77ea53e378c1d077e5af6fc74105da5c398848",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:38Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b598fbb9f9f4111770290835dd507a2e2815c6f08840f9fcc2a41840147edbe4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:40Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "d61e1f3bc579a8bb3b8916a62fef01fc50cdc5a3e5cd6b9c519b41a9c4580735",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:42Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "58fd3e1afeb0ceb8772f9225dcaae369a0d8bbdef7361e3beef322427cf9124d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:43Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "a73ad660bcc26be2d2a3d13e6e67b4a66ca3ca6884ae5d22a1f6faf2f6a71c51",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:44Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ad5bcd37faf8d430ff9ec693c909ce938094d52a502f5495611ad4f7e9378a73",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:46Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_mathematics",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0ac9de97c342eead91e6956ba30fe88dee0e60aecaf0544725b9f01837a6efe2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_mathematics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_mathematics/instances.json",
+      "instances_sha256": "f74f408543361c4951124d447eeacba117c6d80338aa3a3a3e13d7e98acea9e5",
+      "retrieved_utc": "2026-09-26T05:31:47Z"
+    }
+  ]
+}

@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T05:10:18Z",
+  "retrieved_utc_last": "2026-09-26T05:13:39Z",
+  "run_filter": "mmlu:subject=global_facts,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=global_facts,method=multiple_choice_joint,eval_split=test,groups=mmlu_global_facts"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-global-facts-method-multiple-choice-joint.csv",
+  "rows": 6000,
+  "models": 60,
+  "items_common_to_every_model": 100,
+  "items_seen_at_all": 100,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "662c241baba36652ca1fa3b2674ff2f359ffd29bd44b85a319abfa37aaeefeba",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:10:18Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "b4e101193ab6c0f7dc7c5a226bf801aa019380e4d595c0a57b76143e688b84ba",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:10:21Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "6289183c9a5a744937892e59f0e5ca327d2a66fc3eafb522f4f0f2b043f5d7ef",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:10:25Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "10b7f5c6a0dffd2b7daf77ad09e2584213c86b4269ba4a5317493698b4d54537",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:10:28Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "93ffbd1d803926f6a839a6ac5d7f52fdc38cc1e1b6e21f2cda1ef774f07b129c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:10:31Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "85ccc4c6da6d073a08a22f5fbeaed5abd3328e10d02896306089ed926af89ffe",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:10:37Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "d590e129d3b94ddc273590d63e2a7ed715779b4b88ad73175c7c74bdd075837d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:10:41Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "44767c15cbe4a6e6977ab168fb48e86cf3afd4d3d9bdaf47b76941d80abb6d4b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:10:44Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "ee910a89828b9809c072854e6e45edb4d11a9028f8a9451c5bbc8c29c43c529a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:10:47Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "c6a3fdac4270fb03fb2352acb7593255a4b81fa54791131e0cf8a2013d3c010c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:10:51Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "0239301362b28b84cd66df76b748dd070cff4b48dac5573e9a22444bcb160ddb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:10:54Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "cedc6065ff1635cf7f5e2ea14d8027a7a3bd5fe57fa5658b7cfcb36b0b31be4f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:10:57Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "a798fca896bb579eb6fdfacacb324165e25d1b601c7039a4e3302acf8822a07b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:11:00Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "2847bd7e136656de9e52116107a9569ba2e6d756d68e5b087ca95b541316a2e0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:11:03Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "33237d5d10f9456a9c031dfa06cb5441f984c6e4ebf1bb6053e7e261bb400862",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:11:06Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "3ed9373b11c0a74df54b907e8664e695a5c304a15268bc9321c94af2d22c0e16",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:11:10Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "d90e6dcd7a14fc26989626aed29eb73a69dc83c30a89b51358e6fa880ea33cee",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:11:13Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "5cd8f5674abc86c3c5386bb290dfe1e6bf3138b98cb42fcd0b8cfb2e8107d551",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:11:15Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "bda6e326ac453d07ccfca2e035b38ff1b275dca64b3a7cf1e8482bffd8f8f139",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:11:18Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "981786167bf8c25092abb37b1bece4a0986ed21f95cfcf9460aff8a800b55a27",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:11:21Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "0eae162dc646a479912625c54b8d3f3854abd534c1c98ec35d69c618bf17c63a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:11:25Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "88b228d5b71b4f90a9dc7d0a6839816dce34dc9072b48d35aa7cced4d3d323fe",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:11:28Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "fffde5fad202922c90b7eed1e7dfafb81cd3eaad4a2cbc37d5bf13b694cd9bd8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:11:31Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "c2472a294e9450ed6492d64c9f335859b7259eaf3d2a2620d98e0a30f3e807bc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:11:34Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "628e46f329ccc90081fbe556928714dd0690ff9c1b10ab37bd3b242656ad0a14",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:11:38Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "f0be46d03cdc1ec0405d078acbfa9070b698c968045d15fb392507db295c391b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:11:41Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "5e37f70a7a1f5941bbc85e819cf6a192a42c04991702953f0100e5157e6bf5b3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:11:44Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "b2d5d62202dc57d0b15f54d98967613c6151e6ec2b82361686265ac9e30815c9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:11:47Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "e20ba7af75d8c81941e4a4d3e097b678763b5b60e425a5d1b4389485f7cd712d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:11:50Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "240422e216fbe6ea512eac1bd30780e0c2cb0f0e6e0a388b082c268442b143ef",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:11:52Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "6fc9879eaa48c7697ce4e4501188ef78d7eb8c70191dc2ef09c785147c2e7ff6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:11:55Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "78ac21c01d50ccd25607d2fb4d49248ad5b48fcab87100506d517bdbaa57242b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:11:58Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "39fc2aebdae4578ac980e366fbd6460764aa281e59dea436f4d35fad4f5646b0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:12:01Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "9e5477a8e4bfb746d99a3f1079230fb3eaeff262b631ff49582ed67cc72e47b5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:12:04Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "e6f7a0e755f05842135d0a0db7fa0942149809104f71d2b8923f0b03d7ce686e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:12:07Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "152efc7f2a3d918b864d9f294a0befc7dfc3d3a4d14c2310adcf8f9b385ae754",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:12:10Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "bb896eed78c6b46ec3864f991c83324520b1e36c9125a2803137a534f269ce32",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:12:14Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "064eb4737a7f420f5c68f092396efa6853d586aa1b24af555ca9fe80ce714eac",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:12:17Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "c91e4199eaf6b0dc58873205f8996931023602c5e324a380342ff6d20c9cb5a1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:12:20Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "8d9d3c6b5ea0d7ee8dd9c367f176249950ae540c69cd58e18b8a0587caa22705",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:12:23Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "1e955fd19c642275ae3f24d1960f97d40bf85685a8e6e2cdd752d267a9c7c9c8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:12:26Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "b8c73dadd8d0f6bfa0f4f852b495d7d3a22a42a34f3a7d5d84fac33bfa11e34d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:12:30Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "8f19d389b978bf71f8f91af9b5ede6201f05676673ee8f3e6746dba4b058a96b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:12:33Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "23a8220f8830b04b145cf777cb1255cace3bd4bf893110eee55354fc62331ac7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:12:36Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "dbee2a68a6e9dfc36fe8eb0e8f7a29e359fa48ccda640a15c85d17838a0abd87",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:12:39Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "e35d8a02cee18fa61d5de459c7904b55ed27996e86c01513fb95cd815d096899",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:12:42Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "f58e1e45d88da37d05d01473a9704216a6976265bfcf4cb65e60df8c41b9067d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:12:45Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "911ec1e9b64ac5f83f2eed409bba791228f9b8dcda9956cc4c939147487d7300",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:12:47Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "f34bcd1cedd0b5839cf2bcd6734114a96dc682a590142325253a823addbaa62e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:12:50Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "1db029bdcc89ca7e3c17f9ab29755a88764ed17934fe08c10a63eea816e5a3e4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:12:53Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "b74519f3d3eb60ef8e47ab8876fcd120ecfabd636b6eba00c3be164802fdab50",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:12:56Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "c1c72d6691bfa5994ed2af28dc4a4b7c5d6304a9b8ffb4509c249d363f1d8249",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:12:59Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "9fe3cfcc23a343b84e96f4d8935a21b34dc4dee94f33d5c1cc65c35d91e47ac0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:13:02Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "d7f4274ee3da83a3466d18b8f6891cc9a8bd74a0f88c9e794402ebdf143733c7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:13:05Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "2ca315518ca02237cce54c0d4da8ed11d2f67f277cdd93ac2d1a6e849292a365",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:13:10Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "f7288032f20ccad0d3c158d5af5f62029f017175a964d369b4a1655b20fb63d0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:13:15Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "da940dfbf7efcfb3803612010054badf857725f88b46d1025614a0256df8b95c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:13:29Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "3cfa7b1da7fc66a30aac96b87e59ee0de35506a87e2e5ed766d992977460a910",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:13:33Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "1bace6815b895e9ac5b5fb87dc5b79306f20a1d3d9512fbf2126d1dd7d38ba28",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:13:36Z"
+    },
+    {
+      "run": "mmlu:subject=global_facts,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_global_facts",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_global_facts/per_instance_stats.json",
+      "per_instance_stats_sha256": "bd77dec755962385a21802e76c26d00a1bc19fdc28e6f7f0d252241979cf4298",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=global_facts,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_global_facts/instances.json",
+      "instances_sha256": "45b5d0f8cb09f240a9a95b73297729de5e43ec44d5f92055260732bf60df4a40",
+      "retrieved_utc": "2026-09-26T05:13:39Z"
+    }
+  ]
+}

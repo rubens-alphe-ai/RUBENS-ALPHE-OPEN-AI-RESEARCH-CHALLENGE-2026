@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T04:56:07Z",
+  "retrieved_utc_last": "2026-09-26T04:57:52Z",
+  "run_filter": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=conceptual_physics,method=multiple_choice_joint,eval_split=test,groups=mmlu_conceptual_physics"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-conceptual-physics-method-multiple-choice-joint.csv",
+  "rows": 14100,
+  "models": 60,
+  "items_common_to_every_model": 235,
+  "items_seen_at_all": 235,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "8eb0c10fbadcc879227d0f619ea6e3cf95cb208278188e3af90d0679dbbbbd51",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:07Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "1d3e738fe1ad330926ec6892df86a50c6e7ba7d0c2323add335defeca6b4bc60",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:11Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "9cbfb6610d4f2639cc276a6bab924665d7fd74fa9a23ff54f57169d2b9a9d219",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:12Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "31bf6b9b997a5909888c767b8339c8cb3105ccc4a5b741c534278f9c581024a1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:16Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "9e519073bc1cd969fb9cdcb34846e36e6d91c96fe9250c070e03a554bc3a662b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:17Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "df30f595f85aed7e72317dd16b36d93f03c7f898812cf758d013b0df4673022b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:19Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "4297a432ade42a5ed1704b789926f2cf178926ab9b4feeeffcd4d57636b1b4c1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:21Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e92c85336b98de6654afae0a9d610e374b21379b8d365440843390c96a2464e3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:22Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ec06357e378146a394c2381d8ddd1f8c581d3fcea9bb06a4ca01093c12259c31",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:24Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "2b46a0ffaea3a1bede508add855deb36131a1aaf71466a3b9897d495166233ca",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:25Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b8d683658788f91e6ca22ba3c34ee43e6468692aa1c5ebe3da1eeb5268922191",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:27Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "db8bd71a111f7a143b0fa57db9b2b1923bdc467f0c87d4c4711dfd747d306f47",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:29Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "869381c1037738f39f3dc34542840a0fc269d5a0bde821a17ad2f89fd93ca787",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:31Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "426ae07cb4bf82dd94bbd98664bc7c9eb81eae3106213c4a911a238935912669",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:33Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e5ec2583536a2e35dd96253cf95e9bfffa98f4d8ca31cedbaa63a1a497153873",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:35Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "bf5a2acfd0a6de7301cf92a42ee4b31a07d82aacc690a48eb0cb13fa3c685b26",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:36Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f3beb4cbc94e2de9b45fb5d142cf96bc262e631d8888ac4b23cf6f0121d213cc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:38Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "c0f1631a0681b1ad87b96517b6114acb56dcd8d6d854baf0572536595be172d8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:39Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "3efb1bfd6a874391180c4a1d4c633c88eea1bd56faaf2b65213771441cf17443",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:41Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "65980c8dda38a6865ad8be604f01b702131f7f7d97fa71796b645c0417a4ed90",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:43Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "aed3371b0f39cc9470dba93f8aafcbf19fa419cc2108c752c04b87205f506218",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:44Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "076a188391862cd30d60f0e8df2b2b538a8c24cf4a997ae4c2917112d04309e6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:46Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "4912463ce5a685ade13d3fee0c0a81810df08c85926344850e4d63255c9a8880",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:47Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f349056295fc6bbca89759c600bb92b8e3e145bc707d8da45133489ada2722a5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:49Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "a75ed604d825f0cac4d2fe478dda2ed7d89eb64097a2133140c57100d3d5661a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:50Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "aec617d11d23398b0776fd4b0c3603faf028adf8fc24a5e8994d5820f13820d5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:51Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "878ebd5089815bfc536b09500de63875fa792e7693b01053749ab8b74d12926c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:53Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "434caa5ae5d03c2b4e3e4ed8fe196f2cc458a44869010cc092498f0dc8bafa55",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:54Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "8e663019ebbb7476c18ea921f1248713ab0ea6949eae8e48f960612f3aab4422",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:56Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0f47d4287e4d5ab977daea4c4e7cf9b7df3ac04e99b133cc2616da3e69baef31",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:57Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0cdd460073027d8773c0013563ba3c9c5c7d0a84446818b20476d633a7c6bedc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:56:59Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "81b82bea2e3667626f2bf5afcdc2df7138c76bbd5793e8cc54644586ac947ff9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:00Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "892f47e122ac22ca67919b7e47819dfdde8d6bf53767ab6015ae69d72bb71923",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:02Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "db75b8206894d5ee3470b666b862a4160d573f5c22d09cc78414ba7dbede3902",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:04Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "792338c033a72cf0d6951dda5e61e2d75676869e44bc25d3b2a1a8d7407d99db",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:05Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "9a33c9fd8fc860ba9734b4d7f49ee7ffc750b5ee31607638e6a7ecb2adc246cf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:07Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "46f3c8564bfe73fd4284ebb6836eab1361540e84ba39b817cf4918ebd6cac3a8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:08Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "cfd2f4f80aa9b92c396885d6b8920f2dd5b6991d0f027a822bbc2bb21e89ad5d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:10Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ea62041790af71fb750cf46fbbcec9abe8d764443dd769e155eefe14c3b84e83",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:11Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ecb936a3a0520889143d6352110fbb32bb664658e2929c1d3de43723601edeaf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:14Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "a040d9a9417c6bb2375a823542aa64a62ba6fc07485378eb4dd2143bbe1813f3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:15Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ff61121e9ea501318a25afcaed8c1f1f6ab2a89d8249fd0185381fb83dd3d3fe",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:17Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "4accaceadc6244dd11e1b51dba1a9f0e1d1c916f70d685cb773723629614891e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:18Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "bd21f41ddada626140ef6b0a6c0cb119c37f0557509f6226125c7695414200a7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:20Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "33d14847bd7b546e0b0148f584976e22068b30ba82731a6d45fa263e4e087d26",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:21Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f415dccdf4ceacc4484eb6dc8d8615cdc9843613768fd1b0a1cca2bc047708a2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:23Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "32e1ccd678e884f3432ad994e2caa8a3c48bff532d1bf6cf28aa787b81a5df01",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:25Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f666aa5020839371709bc48db50cb2b9cf1acb2dfb8a51a7a7d7a13a80c7d150",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:26Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b435514fa7e7605583ec335e98df5d50a911a49da01b5cb3b63edf3df88f2699",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:28Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b9c392c2c4487b2d48eb445147a5d95aad125afe9aa3e72815250acb9877741b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:30Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "9691d4b40687aa8af6bb2fc12412032d5c6ac0b21d342f0618e2c931b2621585",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:31Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b300b5febcabd3d392eff2111a814c67473b341467b5e87733aaa0f0e88dd122",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:33Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "4ee2fd81b10b5e0ad3424153d94ad75dd9cedf55794fc2c1d2871d817b0ea0b4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:34Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "cc4ec891a3e9026fe9499647abfd0508a0c1ece38a7df7a373735bf5e89aa6ec",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:36Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "7a65c58f3201e75cef236f2d5a278b71741256578018f754121687e9003c0b85",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:37Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "092a4cd57c9c23aa430ed39aca2676d74c99df422f1f60759226b01e213bf2c5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:39Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "fde5e976bfb20294bf5a06ba9bb81541d2d053532bf2be21eb9e2bdcc625454c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:41Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ac7bc7836108ab2c16afa27c111e4febad788727a4dc43fed272671f44ccd17e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:46Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "c1f6033b100185bec85f1b1f32d154cbcfc09a0751463c13ca936b9ecffc817d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:48Z"
+    },
+    {
+      "run": "mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_conceptual_physics",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_conceptual_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "5c0748fdf79597998c7142ca295bd2d9a55b79130859b338ca10f9b3daaf1a78",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=conceptual_physics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_conceptual_physics/instances.json",
+      "instances_sha256": "73b526226be19c8eab9178130a5a887e4445a7df097249f77df1e81ab4aed48e",
+      "retrieved_utc": "2026-09-26T04:57:52Z"
+    }
+  ]
+}

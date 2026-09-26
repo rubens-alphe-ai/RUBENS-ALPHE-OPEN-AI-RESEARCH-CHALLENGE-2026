@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T06:31:46Z",
+  "retrieved_utc_last": "2026-09-26T06:32:54Z",
+  "run_filter": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=college_chemistry,method=multiple_choice_joint,eval_split=test,groups=mmlu_college_chemistry"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-college-chemistry-method-multiple-choice-joint.csv",
+  "rows": 6000,
+  "models": 60,
+  "items_common_to_every_model": 100,
+  "items_seen_at_all": 100,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "7c10a5356d12dc911e3ff4db01b865a06dcb11795d35d5ac61ec29556e8b0d96",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:31:46Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "10f0353dacda2143b2d281ee9207a5c8b9bcc4c716c82764a82a42f084f12050",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:31:47Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "9f7dac3753709667eeefce0249b28ab80284d6c61e6e67e1b68e0d3db136450f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:31:48Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "42b1293310e3a364a76fde3120d52a5496dd913d1d85b077429f694cea0d69f7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:31:50Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "cdd9a557ae1daf0aca9b51933f356d5c0ba22ae67c7173b8dffc06674374b06a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:31:52Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "f4bc44e7180fc16c4391013973173489e2d06b50b0f2d06b9a8974d178a15bad",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:31:53Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "ba4e0543c72035940084d4ed1c34828449cc734d9fc8cceb320d6f3c388094ae",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:31:54Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "809b868fd76b5c9355b75ec4f289f04f82979b3484f8081f5d98bc84352f1006",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:31:55Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "4a751384ed9be57a6a77beef618549bca89a4d0de2d288cea9fda5d959ce0e80",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:31:56Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "da5fe894066fc129dca26907557a6c5ed435163585f436ff284b24e935114819",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:31:57Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "d94f03361cedb66fb04a5e9ec8ff94ef6251272d8dfa5b0cd928491429cd0f1a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:31:58Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "c417d1419a12c2d47e76abff8c3abdd5c61fc17c61bb0159dd30e05c8f645e28",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:31:59Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "30ca158f09d103ec30cc1a07b342c6b56933a6cdcb88a0b55d75cd4ab9812751",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:01Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "2a6b859a873b29c2fd4a05860fe909b2d9f31406267e8a655dc4f88d8501d63c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:02Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "1b914493d8593a0d99fa528c1f4a66ea895544a2875027ab23c57d327a22f649",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:03Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "c6e1481ba5a8c141e3289bac6b1cb4891313b442254b86b26e4bac506e95b596",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:04Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "7b80d11cb4f4e9e511bb679145f0ef436135c89da50751c9ce461bcf6ef9c6fe",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:05Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "15cf77cf5cacf3b029cc96e2baf797b188b83c75b9012395cf15d98cdcd243bf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:06Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "c588f7e0d268c9535c5ae2fcd7888b32868bb8718a7e441710a65694f899c00e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:08Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "6325f5d62eda682eeb0ff27e943a678623a7eb26971e33f433b4ed02d1187b36",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:09Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "f844ca0d4bd4fd46623db3ddbe9f96e2ebbfc493ed1ad293b03aef5432f9b914",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:10Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "75e6337d7e99b9729e21932d840e692f6f62056037073abb8487fad108af007a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:11Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "33eb6260fcc7789880018c5740b857b746d4fe249beb638d09e7dd79fabf2b33",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:12Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "1893fcad3365cab93feaa6900e00fd3b5525f830b26bbbd75ff1e083a049bc2d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:13Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "bf0ed4219ca32e998aa3d6d6fa406ca06a2df64ba77c63a4dac4078332aea4ee",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:15Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "d367159f6c141bb361b7b0388021cb524a69ae4f6c26fcd11c854c73432c397d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:16Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "d76f9b71a22c5ac7f865dcba781f271231f87ce1117abdf9606357120372964e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:17Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "5a9dc05a9fdaaa7fe893f5c5d50c2df6dd01a095268ec3f7d07ad5042eec369b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:18Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "142007598d26a80f5cffe31879bae367257446a599f93530ef6953f4dba1cf69",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:19Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "1179bad49a2b4cc4279abfe1ea55fbf6f4a5edf9baba4f19f56d7b08764e0957",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:20Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "045454d427dfa13ce7bb393673c0ae5eddfbdfe6c37294317833d9a4898674c4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:21Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "360717feff966a8e0cda410cac5f00c6ea6f09d9697a2193b0cc5064fdb9dd7b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:22Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "0da3afcc1ef7ac72945b8066b59432f32ecedff1c6b85fe0a21d6435481b62e6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:23Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "035bc92dbf95147cb135ddc1a703bf9d363595f5e0ec27cce57150bf70612da4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:24Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "7d7e36cfbc5a74435809248951c83e21e261c5f214737c165b693152b58effe9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:25Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "61caafe62a5386b7e9b0988003be961cdadc6882ae341bc47d617fda759a203c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:26Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "4c055fdfe43c2b20bf16833198c20b3d7e912fbc86de9ad1b6a39954eba9e1e5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:27Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "3ed2313c13b3998aa0911f15254da3b6708517618e17f4b7f1e88c3bb924306f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:28Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "d7f3d7ff253ac5d0f0dd1cef0c1be0140c138c44ce4e1124e2be647001bcd78a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:30Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "3bbb80e070c310c6d6e31a23ed08adcf84f3bedf4cfc2e588f8e44bc0391fcb0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:31Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "4762172b78593c27ef4928b3c8464cc459052d8135a198cd0dc7e402e84291a9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:32Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "e41772a5dbec26900866f8380210f8873d4d2923ee58b4f587a6baa454f5c593",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:33Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "87eb47ed41d4eab7f95fb6805084af57084811e6c6d125f07f2ad89a9cfb38e2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:34Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "e2f8c3e092c41f8339f473e55b2b979fd7c5b49b9161ed22ffa219de8d2546dd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:35Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "32fb5acb0a094ee833ecdae727a2405d84e6dcc4b0490a06bcd964bbe3f7a861",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:36Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "e7c22881c6b8fe95bc676616146ebc61af5c85af319ca0b2134a1ee808c3cca1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:37Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "d5277831b6c1e41592d7a3378900f70fb1346e3bd6ad97e9e08cdb4f1624b98e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:39Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "83131a14510ac02a678853c9490689d1393a4a861a56b58723a97681f3c229cb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:40Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "e7ff3bfc1973c17acf5eaa715f9a32208f0a4e5aa56abec7b43e71197436301a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:41Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "c34d457021f146b3acf08be4bd954611288a677422242f477c317b8ce14652bd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:42Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "099ed343fccb52cf4a968a111374b370e9525bebd326116dfa0d4bc3292667ce",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:43Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "7996858951501bfccfa9a71575ae404345adab3e62426f73aeb3c5a2452d09a5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:44Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "eba98fdcb939b0e2b2bd3b11abb2b7035914bae27945af66a26f9575fb9773f3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:45Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "b81aa9eb21730a322873ef1ffdceb20ac3c00b6714a9332cc6b853de593677f3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:47Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "c5c4b01e530bee54c62e0a3effe6fd13b7975c511909f7e646b771aa128066b8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:48Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "5660766346a84cd51ec84b1b56dbca388197709cb5018a2582d47bd8daf42113",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:50Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "d9ee91cc5c8e69310e40a38c6a9cca684942387e01f25445649f563ab014392f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:51Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "731882f3f6ec6728f0681a2bca7700f1894250107c1e7958da3164247f2b7795",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:52Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "47b875b7de0c3f4e21a28dfff5765e41a56d810c3428bdfa786c871028a47f10",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:53Z"
+    },
+    {
+      "run": "mmlu:subject=college_chemistry,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_college_chemistry",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_college_chemistry/per_instance_stats.json",
+      "per_instance_stats_sha256": "394197a9f0b5fbf96bb1ee19be812bf30f74a4e97634409257226acdedeb319a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_chemistry,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_college_chemistry/instances.json",
+      "instances_sha256": "d5a9baca443c67e6d8976710dafdc7b0b40542edd9bf73be4c4bc01572ed6966",
+      "retrieved_utc": "2026-09-26T06:32:54Z"
+    }
+  ]
+}

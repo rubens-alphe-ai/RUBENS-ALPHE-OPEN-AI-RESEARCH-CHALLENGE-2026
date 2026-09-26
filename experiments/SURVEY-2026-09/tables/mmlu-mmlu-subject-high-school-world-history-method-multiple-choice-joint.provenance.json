@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T05:38:53Z",
+  "retrieved_utc_last": "2026-09-26T05:41:18Z",
+  "run_filter": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=high_school_world_history,method=multiple_choice_joint,eval_split=test,groups=mmlu_high_school_world_history"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-high-school-world-history-method-multiple-choice-joint.csv",
+  "rows": 14220,
+  "models": 60,
+  "items_common_to_every_model": 237,
+  "items_seen_at_all": 237,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "b775a87332e00bc26d49b5a687cfe88311b13bb8a5351ed8cee339b458dbe652",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:38:53Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "00f2493efee79f6aa2dbeb5542d56a9acd51032024e1d4ffbbf3d0442b64d64d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:38:54Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "8c20412be51b074e0c1348232948eb8e142a5c15b208f4e210c00de8c7887ce0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:38:56Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "63381863136d69657fae7c5350a4232246400c344134b77724bbe0af354db174",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:38:57Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "17f8773823631722d3d779cd1c6de547f7d2ce546dfb3ebdd86a16a271a1681f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:38:59Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "ee616a72a7d436079a4ba6345d3d2900a19fda7097ece49df2ca369d4d1aefbd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:00Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "4e3d7df14ba87e7fc10ce14456f328f02126ed268e8cdf55dd211e267f02d269",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:01Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "83912f0db66bbea3245a5983b3e7416a2ed87b6a05b8bbb30990baeba5660102",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:03Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "75d463674d11efc4e9c624a2b0f218ae80b327716fc02754931b56a72f3e819c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:04Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "cf34790c77398a728eef5fd6228d833940a4a5da6cdefe47833009167268bb41",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:05Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "313a065448a7ec4f1a49d924234965ece754ff418e37d175119e7921817f4096",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:06Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "b26304fa85efc71831736648ee2056623c8279c7f0b93bba19a283e2ece03cd0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:08Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "366c53433530ff7fc9d612a50f4794ba8181699740e2d86903be7e267bf4a9f1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:09Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "a59b6260659b480230fd7da18dc847abe275eaafdf8db17383b38cd81c33d453",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:10Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "902b9dd0bb4da5c72dfcfb3fcc419ddafccc38da71ad4b5c7c971debb74b9f47",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:11Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "56c0b92468f88652d61dcc6e95739064248c6e2d231e6d1962b7ae7dd70a3d2b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:13Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "08939996c3dd7886277aeab889d2a5714595d48230133ba950aebd1651587ed7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:14Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "591ee924a01dd2b5c862f6808313332f52654bc7feb959e7b890a2ddb03a87b3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:15Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "88d46f07cd101a163d32dad863fdbc608953d1ebe1c51a4bf40adca2cbfbb7af",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:16Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "2d7a4eb08903ae5eb7b52bf84b336a0c06d2d3ccdfe381540f8ae90870f03fa5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:18Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "bbc4f8dcad8779c0e155f7b45014307cb49c28ad6aec77d3ca80e60caea7bd72",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:19Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "511b8d62450edf4957b223782c0c9d9e95b5b7270afc42d397f05bf47bec48c1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:20Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "14b712eddbaf6e646e89ad8a8e3a2578f14438706374e9b14ab345edc6f875f5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:21Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "663e7238542b1bfcae5d1f717c67846d4aa4c25410d7a13753994d2d8646803e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:23Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "8ff4f08c7a57522c110796d752e7b6fe31953bda2321c05e53bde51c97541fa9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:24Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "693304187615d4c1050b7f144ac0637629646e0cb629de7dbf9623714f8d0361",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:25Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "3733221ad443b71f7c71329610e00bb507dc6001351f7c121a16750fd7b5e7c8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:26Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "ff5464491f9c75a2c0e513d64defe2b96e69e3a8f30aaee356b70be938281a29",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:28Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "3144c6d790d87dee99c248926e2fe5adddce5a341a2f96480f89c54ae1e1a1a1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:29Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "825c852fdca0859b5526230357348c33ff87cd9e81060e40a7e90fe4b98529ae",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:30Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "522fb26066419ded8d31148306f80994524211a39de77cc3aa9c9e344c084681",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:31Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "9d6519a122895733907ddcdeb0ecd3e0e5de9dfe625a61d09de5616af166e855",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:33Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "18a1111cd921e976fe3623a8a3af18b60e3f23fef7c68fbdece4194503c03c66",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:37Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "850c335443bce56ff4c019e4594ab63d47b9234b37b3662c6dc4b40c03f86113",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:40Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "3b18d19f58a9e64179590dd11b9b65adcb5759961bf1c7520d36a4d297f2e1f3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:44Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "284a9a3e4554f194d420a8f58d8c912041e7ba4f894c3b2d6818dc9d944093f8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:48Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "9f2e82c499a56023c935152c910cdb9a82b33263797c86daf1190baa26a0c823",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:52Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "e1269f08dc4ace252f31bdc4b0f00eff821502abe3592fc91459dc31815b61b0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:55Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "a19a42204e74ddd1f69d6f2ae989bde1ab7128878ec61b8552727624cf603d68",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:39:59Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "83e97f40549e06bf5e8416f331b3039c4028ba603c1d01bf4b2f20cc08e93eda",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:40:03Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "7cb953448baaec56e9842a777494e0a44a7133b529df4b206c81758b857d10b2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:40:07Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "fee69d8a591f885081b706a8e1fc713d8ff886a001c482be8fcd50a72c7d7318",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:40:10Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "557af02553e6e2cc12b443a8e49583c505ce74ae7532daa78da2d6cc418713a3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:40:14Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "adbd5f5630665e425c34a5acecc218a35ef083b3af05180c65c7013b40ec5a64",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:40:18Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "ffd75a58474caddde921bf38e2b36d5cb4b8faabd0ae9765b57a00feececbef5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:40:22Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "4ed177aec3418dc741873dda6043be368b483f4fc543b61d4d04054065adbe24",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:40:26Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "4fae6d001d79a09a9f44eca123a5923fe0ffa85e716cbe24a6c43c937fd7fdfe",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:40:29Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "ff693fb9a08479f5ea209196429b6ee9aa9d683e50a577fe281cbe03b514f456",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:40:33Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "b6784cc26272e9bc75bef5a53f27704f1062512d7561a3671e08fe7c573a9baf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:40:37Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "21635b3b67be811e179e0c45aa3c7f8e4267dc36acd0c70c035d6842ccb51ef7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:40:40Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "0acc27f73062beed20a5abc1cb1fbd9d9e5dc26235ceba95126e7bad58ea29c7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:40:44Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "43d1d30e5ab157fb53a3c99c0bd354048facda8da943b6d7b5316610f133397a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:40:48Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "4d25bdfb82e65e24a5b3c3d4d3874ca5fd6a844b6e2d8a7bc1c99a758b431d1f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:40:52Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "9fb6cfd66e64ab386aa130519cb559452f92a0856394e3c1eecb227cb7f0e547",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:40:55Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "1fe44fa2abb39f08379d290bd0a39d869820cb43faf57061691d40854704b850",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:40:59Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "bf4bc011d8ef3d3fadf6dbe6f5cd3a7d8a1f371fdd6ba8db752f6b2c70c6bfc8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:41:03Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "9492b0d4115ce74258da747be522e33f2805a2631e4243e1f8a7566ba413cb3b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:41:07Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "d83e4b1348bd1e6174c1dc3a87d1ccb51ebadc1311df25f4e4d8ceacd5e6f394",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:41:11Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "139e96f1f2b45bd2a8289ddd4d6253b5820dc0f2c955757c0365c75d68ad973b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:41:14Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_world_history",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_world_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "9f893eff54d8541335fbe0ba07905b68898e9b31adc3f58a0431f7d51d2c27af",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_world_history,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_world_history/instances.json",
+      "instances_sha256": "b44ed33555d6310e440f50af0f55353f1b9c0340901916590c21e1cb4c6f3059",
+      "retrieved_utc": "2026-09-26T05:41:18Z"
+    }
+  ]
+}

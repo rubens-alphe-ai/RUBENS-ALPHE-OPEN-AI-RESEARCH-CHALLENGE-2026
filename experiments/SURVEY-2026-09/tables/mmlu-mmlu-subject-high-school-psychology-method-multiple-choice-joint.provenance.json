@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T05:34:20Z",
+  "retrieved_utc_last": "2026-09-26T05:36:04Z",
+  "run_filter": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=high_school_psychology,method=multiple_choice_joint,eval_split=test,groups=mmlu_high_school_psychology"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-high-school-psychology-method-multiple-choice-joint.csv",
+  "rows": 32700,
+  "models": 60,
+  "items_common_to_every_model": 545,
+  "items_seen_at_all": 545,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "48736a84d42771fd1b7596769de731d0c815aa47a6ffff00b804fe67e3a05c64",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:34:20Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "f8c58879cce6deb253b7e47e9b3f9e2951f4bdb3c9fee567e97ebec99b1fb0da",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:34:21Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "7d8b9233fa5b445d482c4dcc5c8d04e2d743b153e2bfbf947851c86bda78f5a4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:34:23Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "b2625eb9f7bf3ccb37f0b20544cb4fba3d4dbfc56d6f42a8c68438d06d43c3dd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:34:25Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "399dd319a6f0ac87899fe982f8674107bf95337772e874348ed8cf38b62b810f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:34:26Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "542d9fb95467184e32e37284af4fcc0731c9a271bb77dcab17f0d56a1f70d996",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:34:28Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "b12df41c613ce26acd57113862271bd94147c3bf35dedfc104d068b6291582a0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:34:30Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "91f40f3ad6d0406f1900d9cad3f44bafb60a8be2aa0a234c3c1896acfef2e740",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:34:32Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "cc3e917efa9497731ae7ac921327f9d9ba6229de5513cd4005344e0cd4ab5b2c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:34:36Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "a2170de5c365c4414d634b8bb663c412f789339252a687318e6e65af138a97b8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:34:40Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "d1f7fe4fb8096286f16d21620561b3ce4be04f59cf6ae525931f27951bf82166",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:34:41Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "1dd32750b0374907bebd25b35fc291a7ad288d220a1aadfec304c0d8409e6741",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:34:43Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "75dded9cfc13e84148eaeac21f48a9c2669169ee0728840378c2332b291b91d3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:34:45Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "7f27925799a780075aca85ccafdcb7614e9e35dc0b63be4e1f4ccda65a42bba7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:34:46Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "1927192168b191f4499817a769468427999b5867b3440e16e8531e37d32ce3ed",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:34:48Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "8684f29d5f42a6ceddb2594af7edabfccc2afe74524dea328399c82f4defad71",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:34:50Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "f98d35f18437247992cca4736ab3193d1a4d61961be219514e2e4eb462769073",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:34:51Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "4a8b1cd5b6bcf304dd3fe82905911f6e345423e142d86317788e8c69550bf050",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:34:53Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "3cf4198161cc9b2b87eb155efe64790ce5ceddb9ca7c52f8c5630be789d7599f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:34:55Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "94b5b95a2b78ba67b699ff56c90cbfbaf66c12e990fe5c7d7ec2b12cfe4c6e33",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:34:56Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "70fd6241cdd55ac1c79864e30173102ff51e126707e032683aac30907c285edf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:34:58Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "eff2ef2f07c52ddcf1bc43080b6754d50b9c29535dee812434bd7a9c4cb3b6a5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:00Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "fed7569a9d78141250c00c879b9ed46a4ce59f7c7af3de1f2415479a48f0981b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:01Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "61eec0a3c5f30ec76c7558aa29d82e34fdf5ce3358b22d19e3a542574bfeac4f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:03Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "8f42b6e01cf5a067f3469a691ee64f91a89e8f7683a1c8dd63e7460a24aab3ec",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:05Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "865536cc2989338aa98f62568daecfc70bf37da690ebd6228bd5f9b000eabaae",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:07Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "53b426c155751044136f3e0af1de317821915276dc29040a608101fd36ce4113",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:09Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "4941481ef8bb7bde13a1ff2cbe19e6bb0ff117609779d8be9560be56d8ece2e6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:11Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "3752cbfd613899cbdaf6ec455c4add48d8fd0f7227a1e4aaad24a7b1761b6588",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:12Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "64bde8cb91c16c0936cd46f58bf766e1560575867e777ae39c0ff6c7acd0e160",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:14Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "6c4342584f6e629c7578a9cac5a1d9e59c65e3d0bcf4cfb0871fa90dcd91a032",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:16Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "774d84d4d145a004ac5ce2805e1d542ce2c1ff8fd058c73436efdb1819ad3bd7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:17Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "3dde5c0a6d9df301bb657c8fa6f3309cae9ab3f39c8293c3a6d57c926182876c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:19Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "3a47eab0461ece65ee1f0aa17babc3249f3f743336d97e461b3d860cab2e89b1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:21Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "287e89b707fdfcfc137908d27064be9f948d20174b152cd551fee52dd73f17e1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:23Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "ab2a51ebddd09363329daeabafa1feb1664299f27f2b3901dc558a5f2bac7578",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:24Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "105cb98ba50421ca7f9d9dcae361f85ce2b247112d856e34be1d994260075dd1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:26Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "2a28c15e60c2c09faeb395cc43c22e8b52a4c62b255a147dfcc586951711693e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:27Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "54bae8b118ed8b2ea42d14fc8ba1d25701847818a35f802c82248673df94764c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:29Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "59305c4b7834669b46796b4ef182ed7cf8053de1670282e5958e864ee56c5f89",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:31Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "f7c00029008407f9e8fecfcb1768960c2c27bf41ce7b0195ec3d8ffb8486a6d5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:32Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "d9cb3997a1fb9640fa0efde15304909ba00ab685a92749c9f18274cbe8cd4f9f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:34Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "7865327eeb93835e111f2c2c238ead1ba027fb7814d51b959fa1cf5be4f4e0e3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:36Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "9d01f7f47549ac02549a3325f55413d7b75b7ad4d274353896726eeb90b2fef2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:37Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "3fb2b8d6ff00f70cd3a21e2ed79635f9f738e4f40e7bea0077bc41f289492fad",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:39Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "6fdea8606f193a37ab49ad5e40d8d395bc601b6fc89aa88db0f2e9d9e9645517",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:41Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "2d736db0a3b016000eb9253ec210d95765ab50dda4c9ec64acf7ad7f8fb5ffd8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:42Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "b70367d0d343fbd719b99e639da862219e120ba58659f3108d250e6c6e3747ee",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:44Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "ad96043cb5186fe5be3f234fc3a463991959851a3e776c094dfbf51d39709eca",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:46Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "6a47498ec475f89225d3f65f5df19b36eb103206010626c24d1cda46746d2979",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:47Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "e14bd95d5a09924816ff2766d8579526bb8952f014da6ffb110b1d45bb10d1c1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:49Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "9987bf22b8a71cbf43cdd441b481881824c61f9c23d8eec0045481619146c57c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:51Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "3bf7a4c1eca16afa90df40792df0a541cf086defe7bcf95245faaf39619f7991",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:53Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "a508c240dc2fcfb143e3dbec268b862f44817631b195beb873f80d7e354e58ab",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:54Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "06c7c8cb458b3b6ef0c5857e69be4f33dfa2585af33a5ccffad75645820fcb12",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:56Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "92ec45d8dad2aa0e4ca877f39c9421a5d49992d9abe59a231d784fba86841f74",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:57Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "124374c39b720af4b5f755d4c5e31df9c03e00aa27ab2627881e9a2b732f3608",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:35:59Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "3dc11cbd73ad6498b5292d421cd3d493a180439997e0b112de0d7d24e7851657",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:36:00Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "56078b88505c99167e898b3b1874a653a9f5850dd4680ae0e0a718bb64c0650d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:36:02Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_psychology",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "79b56fc1aa9a6884cb75a574fca35b7513952baed932a95aae17de4cf7d62093",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_psychology,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_psychology/instances.json",
+      "instances_sha256": "b011de6d050795d2de081c88873885698e251b522ca41dd346416a603f2afe6b",
+      "retrieved_utc": "2026-09-26T05:36:04Z"
+    }
+  ]
+}

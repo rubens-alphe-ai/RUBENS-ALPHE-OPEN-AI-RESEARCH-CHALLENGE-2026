@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T04:50:22Z",
+  "retrieved_utc_last": "2026-09-26T04:51:22Z",
+  "run_filter": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=college_computer_science,method=multiple_choice_joint,eval_split=test,groups=mmlu_college_computer_science"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-college-computer-science-method-multiple-choice-joint.csv",
+  "rows": 6000,
+  "models": 60,
+  "items_common_to_every_model": 100,
+  "items_seen_at_all": 100,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "b36d1156e93c6d038baf9b858e972705bb5c9bd30c44f37ccd0ca59db97bfbea",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:22Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "f95d8df00d0f69b79918e710763bc006767925e1a17a5c95a9930def991bbc2f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:23Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "a6efe7f36204b235367907a53b845f70e0bb4f92c4ddc2eea848491073370ee4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:24Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "0a7d177a6874e876ec377197772085e85bbd23c726a5f399c9c4cc73956bda9d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:25Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "7efa2cc1f98a8803703753a99ecf7c5474108969dcf2a7310fbba5b02377523d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:26Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "b874e5e4c04a2228f5d73561270e828cd3338372e3f80e24757ecea3ed465b02",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:27Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "35a2ad0e5dbfa7665ce1ec7138f706899b72ad3fb47a999af2db5b76e2123a99",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:28Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "d428283c325b7bcbd1f52aae792dd288b47cfa18bf841531c7f60b0b209da6e1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:29Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "3a4c4ff3b2bc8861f72f38c66ca19bc9ac3fb2891cff1cf6627cda95f8ea5c32",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:30Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "161c78200cf0cb3f7eef4089c66cd081c6d111ca23de2b847dca9498b7544891",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:31Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "8a98e3e2fc3528657f226bfd1b3702247ffbce234fd8643f6bdc2c3805cf2417",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:33Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "1e15abd4bf63aa5d102905d7ad4fa3336610ef5994f70fa49a2eed5ba9c7246e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:34Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "11802580f110db80da3ae5176ae95d6f5ad4cc65bbb4a496aff1804aa9e78d6c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:35Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "20fc384ea311d0afc0c0aa4a6801f5ac8cf54e27dd17ba3096fed2756ceb777e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:36Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "b041e78244c15fdbe485471aae63705efe09b6b22f0d57c40635c27c085c6353",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:37Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "168db3f08ff7af2ab9a9420f7a1b218c445113996f0ad96e401b53fa9afdff7f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:38Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "2ec3383840f565c9c045344d9f4ebcacd8a0f774bbdbbdaed9f14a32a65857fd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:39Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "fbd4cb708431c77289bc328a859e4fe137bf436fc5b483b483507eae8a82cb79",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:40Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "f85672f13bdb5b6ba9ce31fc56f5511f635a571c3e0f7f68b51c1eaadf31b909",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:41Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "a028cafb78d1e19cbe6dd72e75f763075e1eeee6dc20d1458a05fbfe9879b5c2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:42Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "db61e9da93aef7a9fa5b73ff75de3529188b89eb7cd1a2bddd6f34963596fc68",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:43Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "e02b2c7409a53040d8e25e7d5e4c0b5079b0917b624a61d5c37d03450573ea93",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:44Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "ba9ccf42ddff06fad728541670aeb9859101b1fcf4203c6da09c83dc29e7bced",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:45Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "6fa5c62365d0caaa9baa82b1fd09e37e37c99d360018fab121e77606e14e61fc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:46Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "cb675b7c20e45ad55526be4dff08919a2d20b63e9a1b49ae7d3878fe1b64a2b3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:47Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "118d514846d28954eba02f47382205ca37ff216d9556eae280f627ad505b5272",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:48Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "64ff4b85e0127526c8fa5eb1e114bbc83d07496157642d26714d639e234e900f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:49Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "b5a2a54e5af37612d86b55f8b896c87fc44e3309098dafc49e1193dfbc549f72",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:50Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "88e2129db223c897d89ce26c534b0f5187fdeb019dd6480b282858aafe059ad5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:51Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "1d36b3d91c0983d5130efd9b00f4729b998a52d6e8470bfb8e289bb4c42ca295",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:52Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "da7281bd042ea0ac910439930b77907ee55e09fb3d50a22d7084e8f227acb3f9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:53Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "006181c46d80ec6217dd05bb437fc84fa097982c678c6d5fdbd4545ffcf2bee8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:54Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "51ac503dbb4a6f9fa1d19bdeb54817b29ae9e31c8521bcec6e739d28f60bc57d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:55Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "0b39ac62ceb5e409f1e5015896757c72d780c7a21a8d14cbccf111963c301ba5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:56Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "8517244084f680428ea48be042ccf7e1bd10f07e48c5fe21b658b32a8d089b46",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:57Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "298d1b93eafafa23fc00e187898830c9f44452c2e056b37c2c9884133b360dba",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:58Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "d75dc690c5f5d8049b0b89b2aba6cad41f9a66ec995a4d33e45c7d0444a8e7d8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:50:59Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "560a8f382456b693920a01f25f3901be0bf92c265394f716d0a17b5d344beb52",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:00Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "b79da20f0febc1b4f7e19eb1367245ce98af6db565f086dda7d16ed395949540",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:01Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "d3be3ebb4492353fab29c5fbbe5379d22997b0ca2385660fbc14daf5e55223ba",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:02Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "52ee2d6dafc6b5d17cd07b1a32e474b4955964f91a606521f2c040afe72e3e76",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:03Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "415197071826337c72b6342a5a22f50c3b194a0cc741e0cfc2a590be42041c3d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:04Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "20007f81142144c9d741a69d85b353391f3ab8006f21dae5ae09dd86a270b902",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:06Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "83fb00b2c9a0e221a2448b0f0178167dab189f45d7f3c0af2f4b9575872ae8a7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:07Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "a661928f9e4b33b60752ac1cb21e82da8ad6afb71aa9982d5e64b48a63f7bd66",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:08Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "14dcc4aa3aca690d396d4b8e6b083c87e67509f7c5c3406b3c3f6f0463647c34",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:09Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "97650b2b8d640511531fe652385e273bbadee5e4b9c5e705dbc8738e36d95cf6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:10Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "da772b2527af3b709586ed6872a16fe4d046dd81563a9f689ec2e3374addccea",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:11Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "3ba446aa68fcba9b81a5aba236c9b81f3667a3613ec40c1ef19aec9896c49886",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:12Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "b44a4210253611b18a087011ac0813fa2816a753012137fa3dbdc9af1a7b5cd3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:13Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "5de281faa1d54b7172d5480cdf0bf57f5dcc545961d354f6c5477b3448607004",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:14Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "38d203e51615a8b238247a965d450df59fa90b75cd7feab623d71c4a30b3bd22",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:14Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "1d6cc51c778c25aa0989635aa47f3654eec732d58ed9dd094e7ed71279fd55ee",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:15Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "9cffdd0e6d56625eb97eb4a0ddac85af427080d5f4169a4ea1cfc78fb0a96177",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:16Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "06e3ed49f1a9d74b1751da834fb01f8ae13784367e4da1a7f01fcf2cbe30e18d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:17Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "20cdfcc1f70fa4a99775f4b7267c8951c9cf7f32d2b5be59357ca1c65b8a1e64",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:18Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "3cb89f2613cbae0fa24bebf5b7289995562ee010f7cd6f9888c56b5010261d5d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:20Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "c86e14958c49250c3a18592b9a22c6e479ac1413be14e9a2a05913859c949564",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:20Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "1ea4f5f32ae8be7fd94b989a214b78662b21c3fb87659d52ae54be49ed9406ff",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:21Z"
+    },
+    {
+      "run": "mmlu:subject=college_computer_science,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_college_computer_science",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_college_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "500f80d9ea3a02b3814c71aaf2126d4d60ad36e592bea2b47f87c95a12f3f525",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_computer_science,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_college_computer_science/instances.json",
+      "instances_sha256": "a09684a5b198088002c065ae29fa1f179203c9c26cec3e21757d6dc9aefb2fae",
+      "retrieved_utc": "2026-09-26T04:51:22Z"
+    }
+  ]
+}

@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T05:33:11Z",
+  "retrieved_utc_last": "2026-09-26T05:34:14Z",
+  "run_filter": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=high_school_physics,method=multiple_choice_joint,eval_split=test,groups=mmlu_high_school_physics"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-high-school-physics-method-multiple-choice-joint.csv",
+  "rows": 9060,
+  "models": 60,
+  "items_common_to_every_model": 151,
+  "items_seen_at_all": 151,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "cd469ee930d017d854f351e646b0ba8c3fdb4fa701f136cf9acd70bee3d80d53",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:11Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "31f12a8098a7ba1c6aa21fb305c5ecd48898d0b7305fc76517bba6bdadccd1c1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:12Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0fed4c507b893af85c2bd298d0d653376a75f5872d2569d182cc765270460bf6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:13Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "8a7f4450ebda6bb657f0264842c2da44e76b260545b096808eeeb988984e7824",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:14Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "211da0438d38e9d47a47a201f3ece9f2e44739dacf503f48003c6a1631496ae0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:16Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "1d2a9054ee7a4d93312f779c42f20215f5f66304b8b05c6fd194555059374463",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:17Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0f2b703e9f33fa658638a8c1308b944a480ec45952886358f45d24438d1bd13e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:18Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "01f6176e06dfdbd7eb5f0f25f7f87850515a6585fa6b97d00a2d70a0ca743e52",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:19Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "5c773c1f71bd7b1bda5db180483c53a47dea37282b1d2ddd30239cd97ba36d8b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:20Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "94e9e73a036eac1bbfa16b1d180cdddc3d27b3dbc1bd5931ff8aa02cb475de28",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:21Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0eecb9f670f6efcafebbee128189b50435172fab13a32b55760d352dc3821a96",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:22Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b752c0e6c12215506c5d402d0d18a47ec1b09067550a400e8375c8ddb74897e7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:23Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0fe819ee52c747d2fa8fd32518b26cbad8f78e013ec8a87dba3495e9aee5218e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:24Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "c7e8a3c696c9d642391034d44a819d8debfab289c4f3bf8be193240190fd4f72",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:25Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0f92d7c38c98054ec2551711273d06604d26880b79f0b16bdfbe24288870826a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:26Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "d6c25a8ada6c27393240794f7e2a86c23bf13fcebb8fdf72ba9f3e25942d6a26",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:27Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "a0b063e59896cb035e3637250ffebc09411822eb6e7a547aeb46139868fa70cd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:28Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "4f5e1a98260fcfe544fa42318576712798140c36c89f75118dccb1541167cdb6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:29Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f1f815c5d7c9c9c29455abdfc525dc0b94efeda62c5bc9c89cd77258483a68f3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:30Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "cd5280744d503fd66a25e4e2ca189f8b88b57131e6d156a2ebef8620b3834fb2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:31Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "a83c0657ede6badacbafa02cd0556d8a35b66f421d561bf1238178e0b90935a4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:33Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "2db1b19e23f4ee93cae0e3446c7ad90767127498c57774d15691923729fd3fae",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:34Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "82997a08a83f4d40f871c5f71cc7147cd07c869b4552cecf0fade7f7427d5c25",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:35Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "6955aebec3659863296d901910e63a2435af9bae6d3ade2e3fd428f8fd72d829",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:36Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "a554278196d5f2dc27a921bfafaba8d7bf262a05a5611a70d19819a1411bd80e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:37Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "1d23d9564e36fecd1a92bdd76f0ad4116dcd69d2d5854b013bcd5a018101bb92",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:38Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "db8bb4cfd1359ef937c048716db7a19c28d00b749a7c959a2f24a5d2b7500a3c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:39Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "c2f55ff9fc7282489d3a417b5327eb4ee16177cd189cc77fe36a6ab466fc390e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:40Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "96bd9a65f7e0fc17459e2bdb27b67c2190615da3dcaec74a4e5a974fdfcb43eb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:41Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f11ca6b4bd1189ffd571af884bb3750834ec42b476b23a4880b0a6c335fbb25b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:42Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "8da61c105106535a65c6d21d0b23297c098435a7ef5423d9a555f86826154530",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:43Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "5914ed769911b40397a50b974c894dd671ae97ae804975d699c7cf572f3ca2d1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:44Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "43467bbb5b6364180666ae33ba9c81b511da27e7477ae7a465efab9e097e5bbf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:45Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0504b2196f7203d6760eb48bba8fd5adab54a7370ff7181420e0d966bf42db8e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:46Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "8d20a3872b882edb07d25f5edddb3dc611a1cd2d1b2d4948d36a44b846d49ae3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:47Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "425776a10b197601313d743955a02b89ef3ea8192a5a168a65ce9c5785102c04",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:48Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "cb3750fdfbc00e9e09112e40d9e58b1c54e7223863fe01c320fbe2e702f06d95",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:49Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e258dd857b2ee17657dc64b9831cf2a6df62a3ab4f1c1ce8bc4f1ab178608beb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:50Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0468cffdca31f94a61acd1614133d4599862ac58617795e15b9dd27709950423",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:51Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "001ffb25d1cfe25105f5e60d9dd671daed732bcc0c2bfd7e9fcba6e36270f083",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:52Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e557dc7bf0505ba733165f19a9ab43096f1ccd8709bc5e9cef6aacf78a17f83e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:53Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b6b53d634db4ba8e9506ab15cb8fc2715dc1fc386746b9020aeb065cf085a7ca",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:55Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "86caf60d3e3902b03bf7d8c6b1311dc52501b8455fdd636da288c7721cfefed6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:56Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "6ef8ea6e66d4db1e8a0cff8f14ef044bb3992c2952ed840f7a1ec4b2f6fd4ee1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:57Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "9a22a744d5e642d776b0a7ec16585b607d93dcf494441d34bc9381411db65b63",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:58Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "1629a9e50cdede6d62fbb5b3e4efac0628f85cd6ce1d7abcb675ba72a105fa12",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:33:59Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b47160ea7abd0411079d5f2d454b7c63d817e5a07b9b86dd972bb6216f3d36e0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:34:00Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "569a49700fd3047cefd8124931b336d9be002fb6bb7e307206dbd6ca6e4a35aa",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:34:01Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "306cd978f620793b1f38ea175c68bef0a841c96a8e7d73208ab8faf5c8dbd0c6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:34:02Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "9c763e97c2b37bdfa2feeeccee64da7e40b53749417c2ca14593e2c89bf6df7c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:34:03Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f8c2c13fa6db9d8e5231590deb3509babf74adf6e7d76e7d53bf1d8d2c654a58",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:34:04Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "db767d9631e43558cb177e5ae419b78a060e9a037a7a8804b075f26d8ad8ae01",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:34:05Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "6cd0aa6c9ded2a6312bab841dffdcd6402187944bbaf653f4f539bd34f58ed3d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:34:06Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "4a64cc5490860d43c447a3442b76b06605179433dfc85f3f06f86babeb47c57e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:34:07Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "5fbd719faec92f57ac79c9774806060f4a0cd579a4f278bd1bfd044edce8dd2d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:34:09Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f2a94961feba2c73c631e1b90ffbf7062a1fa4c3721dcc8d9b26c2ac5ab69bd6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:34:10Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "c885e57ab08504c12e010552c9a2ed6d8cc90b826b0a4d73a20cdf9183ae1945",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:34:11Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "267ffb5f00cee467394887e1bde0e4df68e22d17f4ff1db6ba31090a0d7bfd19",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:34:12Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ac221aa6e6730c34c7ea003c6b948a5e8c4c465938b4d3d39c4541f1448bffd4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:34:13Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_physics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_physics",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_physics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e693aeaa22bfae89734a9c7a5d0d3d219e0dd876c1c17e669fdc55bfb1438aff",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_physics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_physics/instances.json",
+      "instances_sha256": "28f7d424960e8655a3d23e984bd5fe73e47cac7a6c7f6befecb58ad845ec83d7",
+      "retrieved_utc": "2026-09-26T05:34:14Z"
+    }
+  ]
+}

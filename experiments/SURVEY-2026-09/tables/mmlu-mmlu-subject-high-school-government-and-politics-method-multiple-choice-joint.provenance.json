@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T05:27:38Z",
+  "retrieved_utc_last": "2026-09-26T05:28:46Z",
+  "run_filter": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,eval_split=test,groups=mmlu_high_school_government_and_politics"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-high-school-government-and-politics-method-multiple-choice-joint.csv",
+  "rows": 11580,
+  "models": 60,
+  "items_common_to_every_model": 193,
+  "items_seen_at_all": 193,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "6a5ec185f94a2f8f6a969e3cf9a4aba327055cd21c7b318e093331bcbc13f4f9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:27:38Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "2bed3f55439378c3d1a4e3871938a4fd91c5eb069d82d7554fb3341141d0f647",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:27:40Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b29947a3d0b193a7ca273ed614ec8419651151aa783ebb7132fcba8dbe51db96",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:27:41Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "22e143e5237a0b9d79173ebc761bebd8c3dad6300a7a63f5ca172999d238f84f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:27:42Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "33d58d1c4c9858e8eb4f4de389605f9db7cd3c4f7ff9e7fe92d5b353c4d5e9a3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:27:43Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "aea0334f90e091333cb2dfd1062157c92933d3ef39b737e076421db40858b91f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:27:44Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "8ec6e318183dd9257be2f1ea9ea8ed84e03f5b6cf9adfab8ede9de522d09bc78",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:27:45Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e42fd5c691310ef478357676953b862a4f8481023dcae742fd9b85f1b2c87b5e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:27:46Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "5c4f084cb249a89f6d1009323b358aa1b93196f2ba164442456fd55e1346c96f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:27:47Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "8d6f59175333d528193524cfba800409d5bfe77073cbec818098cf66ed89be3e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:27:49Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "47b7112102e6bd88314d5b623c2998f8ddeb8b24592e9a1607b2f98d049aee40",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:27:50Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "53ba22b5ff8f62eaf55dbcf85e28b04ad62f28f9e0b562573840939b73b2298b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:27:51Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0bdf9c7b7af1e8946be8f88ff898c51afcb23234592785de02b35a1101850ba1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:27:52Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "cc07801a1650e1ddb9171530f8c24a0cdbcc0873f61b8f8849460d1bb5394d5a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:27:53Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0c5d60eea543a2b38fd3095fd61615cea2f2eeea7f5988eab3df8f1f2ee98b5c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:27:55Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b17fede2224a68b2b1fff30594ac78879339fd6855b4aabcf196c4dabd29fd57",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:27:56Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "fe126812eb62bc401ae310fb1b112f7a4eef6785ba342c2464a6be5339b5c328",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:27:57Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "9efb760b313dee331df710634417826ca4c1653494505121320da7ed8feb303d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:27:58Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "882e4723bd368b709f313aa082d11488e784ceb98dc2378793fa608b67e2c318",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:00Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "fcf76f9c22410fa4068deb24e973df3b6b130145fa87b8804b1bebcfdf7c54e2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:01Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "9f484e2eca58754f39b2ad17a9d87cbc7a26d08d6082f22faabc47e2ec2b094e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:02Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "1786b9523475c061d2477b90f9ae6b67bbd5cdd7379375e81e688e9768d59a68",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:03Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0f3d2ba86a038b7ce03360aa1fffabb313acc82624cc88c56fe0532e37741481",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:04Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "1b0e68d3c0a7fabab4f617daca99ec7366d7009213ebefc910bdf224f8cb6980",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:06Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "798ff832ade312acd2c7938d3e3e43a852096fac659a86378486b237a82eb699",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:07Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "69c65491c01116988836d8ba57146a8f4685bb0b97e63534004d0a4e137aff96",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:08Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "a0109fb35fef4ef919e1c7c200cb823eb7f9385c3a9245a870a77447dae2a284",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:09Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "34fcd120a88a62c81b810e2c9589fa841be496441a4b36e54d868b42719418b9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:10Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "1d7e541d93ae756a6be7e13458357a9e5fddb57fc88ae37963d7a9f402a3ed54",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:11Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "9a3194bf56186db48165f36a9fec44fbcd0d88f6f095e8a3b5af35139fafc6a1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:12Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e88928fbe3ec843e8e71bffa5ae9480df6b04f878b498b5004e9da21353273b8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:14Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "17a40e25243384e0e753acea1d349be5a32250f4b6f6177756b456de34b47189",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:15Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "936c44371341c37ca483dd973bcfe83e9f25b8fde2be2877f2e892d0a2e8818a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:16Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "7022cd133f56772f32508fac66d00db488101dbcbe4c3c077fda283b9e5629b9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:17Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "21bc7ba3919f29621f20bf3cce87223143684f538d2ce5fb4a09c86bf3916684",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:18Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ec234d7e186280f3d1f551ec0acd36d2ad12b0c1e76f8f5c418e2d750ac831dd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:19Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "67818bb856028d72b28619975421ae063c55914cb5bc5b90d9fa640cb1a4ea19",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:20Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "18f98892c98f030a2fc512dcebaa7c4dd7bd016e2608f2cf328ef01ce150676e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:21Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0891380306ab7aa8762888a7fb8f30fa183a34f9fe28cc5e2b30423d36f8ab80",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:23Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f6ef7265c14511b1946ffad1598a1e4e9322f3cb8b26aa9827127f38c7a5bb24",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:24Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f2184cc0cc0ac09a3109913a7c6ca1ac45fb0d8dad8835af1825231a2dc78f23",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:25Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "2e0253545863bb94a426c538650e2a4e5bc9664ec69eb7d6370a63937940b877",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:26Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "a9a78369da96b9001a1774cb9476b050943e999298bf8c682ca7ee49a9c65eb4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:27Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ff98a4c415090c394a4f6d9c12dcc6a386b6c5ace4a563b5cb56c5f991fdca20",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:28Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "a44d84fbfc011d17e0fe3abcbcf6b3fdd673e6e938be64bc97eb5ca147038bac",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:29Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "89b3b80aca426e32f3bea8af8e89da15d99e0980cef3b8bae199912afdc05058",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:30Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "3103dec567f90eb4b35e241059ccf1f296248d9b3e2cac26d5e5546e457595fa",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:32Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "5462d122885978b1988c992250fa973a1c116685496a9f0427966e21fe227e0d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:33Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "3fac8da4b06fc3498428e9736d926ded4f0e7e5ae8a52a011d5b87155a2f305c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:34Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "5e7a3968048fb81b9cd94ebb622e58a30cffaeba906ed1e9e1ca207988d3f326",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:35Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "869a324cc85ac1983de307410a85ba792f9a0c607bc47f6a5df7cdcf30da7350",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:36Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "d00856b5d8f8729dac391ed1811aef125defd16fbd2c56af30d534cfd6fc4b5d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:37Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e33bcff171ebb37ca4027443fc069f436c9d5ff8c3cf1edcde2c7366afc477c4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:38Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "c8bb246a11dfdf146abb7cc0a1f27ae2015e9a544de8ed61ca82c4ccd459ffda",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:40Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "9c24beec3a9f56c2c8bfa143062acd1b6208f983896e1f3f378716e432f4da66",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:41Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "c3840cf4e6df9cc8cf89721c9453e43a6b3a9a12026506560b59affc23b70226",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:42Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "8f9c71ef354b948bf303b7add87987535e12067089447b8d43d9f4146d5c5661",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:43Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ffef79e37d2cd40088e07e27c00dc86228cc7a50d92ee23521878a27b9b9923b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:44Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "9b182457dc2e4918db67b82c5285e92b7346dae661583f503e692799e2fc683e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:45Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_government_and_politics",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_government_and_politics/per_instance_stats.json",
+      "per_instance_stats_sha256": "088eb483b91df41c9d43b681a845072aa71e700f36b070363f5b8e948f446321",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_government_and_politics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_government_and_politics/instances.json",
+      "instances_sha256": "97bea4d75178fa86f9b9d5a3bb743403af6a4bb4c085801f4aadbbc08a5519d4",
+      "retrieved_utc": "2026-09-26T05:28:46Z"
+    }
+  ]
+}

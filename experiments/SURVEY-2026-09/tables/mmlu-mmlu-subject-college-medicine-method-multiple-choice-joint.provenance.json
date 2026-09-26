@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T04:52:34Z",
+  "retrieved_utc_last": "2026-09-26T04:54:25Z",
+  "run_filter": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=college_medicine,method=multiple_choice_joint,eval_split=test,groups=mmlu_college_medicine"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-college-medicine-method-multiple-choice-joint.csv",
+  "rows": 10380,
+  "models": 60,
+  "items_common_to_every_model": 173,
+  "items_seen_at_all": 173,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "57ff4bd4477a820e20b80f8bd6af5bee047029e3534f642092319a1c6fff3532",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:52:34Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "796311a37ad6900acdb4a2cbebff952d37fa22436f323d9b878d878d97c6611f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:52:36Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "a9ea70c8fa3d78aa6bf9f71c8a06fa1374236b02bf191a0afd21151bd21db9f6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:52:37Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "8ac39cb00cff9398be6f27cebaaf5502c0b887f283dbbff1f15b8a36ac55b3e7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:52:39Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "d388a327646fb8ea765f268bfb3bb04425a187c9305a0e6c85c22358a55d62af",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:52:42Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "fecbec0d6d553c87e4b5d1cf4f00a00180135594ec1970cdf2bc6a2bb815eed4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:52:43Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "4450e0b89145cb44fcda50ebc9acaa105833c61498f4b9d7d480d0518626c974",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:52:45Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "49f10eb527a8e43c749a18a0fc9c6a64aff3bf0ea2652a79a7f3a6b09710cd77",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:52:47Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "5bfbf383fbaa918cbf85fa39bddaae503973e71b1eceb58f8012a72b54cc39ea",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:52:49Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "e4e4c4f6221978b7d77cd21edd720c5d862843abb3124e1a08c1be8aac3bae02",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:52:51Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "f3392c5973466ac557a2178395c146978e0f878a10d998e840cc7d72da5f772f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:52:54Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "314ff82c1a0b01c11bf95733d3715828f039d85653229f177d6d0719eeb40c52",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:52:56Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "63b5c0618c77198985cccf942de5a033c026ec3a665ddafa3949a5ee7bb56a6e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:52:57Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "bdcd293014c270b8c46bec01e8c41f891c96da3b49bce15cf678d2dd696feec1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:00Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "91257115da2be7176af539af8f8fa5f16a4d65f13013673e93f0771e3c2b33da",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:02Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "45e7bded1fdf7c33144a4193bf59c2569e2a3e8b80e854149be229e79cc8a823",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:04Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "8738148cb077ab510dc3852a0e170bf50604de8554ae5133e7a76a89bd3f4720",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:06Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "84b422f89f2f28210e35205f23539678115c35ee85c179d03cb32987340d401b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:08Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "fda015278ca60fb488c50e37e436f7a43a1c9ef889f0a49765543a6fe9d198fe",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:10Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "4709385fd9493260238aa5486b2ec8f40136be8ea3cf80c13176b06ef997e4c2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:12Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "b817573c6eedde25fdc0f1406650a9a8b2cdfe54dbb3583e5ed285235a402793",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:14Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "94947805da688fcb35a66e7959a0312471a172fdbdab63debbdd243fefdd6443",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:15Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "499fc051261d0ba9bd90f43ade5901f06de8239c81b327ea99c334c0288d2787",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:17Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "a2a1ae7aa8d228662c1891207cb056a259d37f28ef0c531dad27ac2a6ec8cccd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:20Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "4f5f3b60a72e7ae1ad9d6098cbd74cf4c1d6b00b979ef7388767dcc765912bd8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:22Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "471f7f275b0bab1ca41aad622ec341dfa899d6ab2e0edfe341b57d819f6a97ec",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:24Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "a59c7d3f2e7ff83a0e85f7007a163291d77b4fd09d5a86620f6e288e72c244ab",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:26Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "3a5926ce864b7edcb5c2ebb12225077034465a93fb987598c4d829e2c0ae28da",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:28Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "7a9de68f5cb808f4c1bef54a003f433c884e517eb7bfc9cfb7027175fa8525d1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:29Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "0dfa09340c991261435991fcb4a85887a5e91c2901e016bcf46a0f8b8dc84071",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:30Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "27625dfaa92722cec1b6b2d5d3d01b7454af850f8cc06f9834ce2e812f2cd6a9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:32Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "771835117d6d955470ede70ad6c629083c37b61d6aeb7fd137eaa94d5a32a52f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:33Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "8088419dbf833fd29d4e7c8022813dc664d44b92d5a1052583a8657e6e55aaf4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:35Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "d87bc7b5cc2f48cf85b147b13df4d72d0d42006fa4f45ebc8789e5d43e9281f7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:36Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "22815608fb86ce5c58540ffd58549effcc06627b38ad428607cc91a52409dd4a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:38Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "24d19e6857e74d02865e1c488934611f2de3e2dbb29b8c25b264fc0dd45551be",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:39Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "c14a1d255ab316920912cedd3291c3ef3b57e6c5d7ec5a75dc279a3dc2309fad",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:41Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "9b6a27d5d00b03d76894a31ee13e7ea8947c88e9c392cb7cc16bd7bf92f4adc5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:43Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "d9ac2a217db098e752fae4330132ef61c58258f9674907d67c49787c16ea85f8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:45Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "33969e986f48e247830cee830b07a73a1ac8d5bbe6a824e913c9b5e35f5d559c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:47Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "76c87155fb06efabe32230467979282ca286927b71372ed9f3d5e31a7a2511a0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:48Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "9c1f2d5a04cbe8899a577a54cd5588b66f8d87f2a550664a1290c59a804ab291",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:50Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "babab11820ca5e5c022b348dae2fa43dbd6ebcc291711dad034dac8957d72a5b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:51Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "5860ee7240d5981c3ecc0d21167002d203d93c9ae364ec372f05c4e0aa54865e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:52Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "505322b59bd01f50f534820df7e288c5dc257933199a985e88196ed59c40e0a8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:55Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "d437db5126d3e1c5ffc650c5ee0fbae4156d770141741c31bdd4c89229ec1345",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:56Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "b67b81655b35a703cd2b3f93e6dacea91206f25d21b54b9f6772947f5d1c9b0d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:53:58Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "93fb8c53284866b946d51e263aa859d3a4f8ece36b8dafc76157683aab9ea96a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:54:01Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "958dc9c4783e626b5d63f3d8f83f9b3a66d3b01ba44c2aa9900199b094a3f444",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:54:04Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "350558011b1144aba9a8a68e396eded1241e405a4dab01fe4beb285cf5364014",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:54:05Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "da516fc31e1271daf35f940f3e6ec98c41043033bae96ba07c1e1d5eac70bb3f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:54:09Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "e6ca0dc87e747a28b496c06181928c0d6ed941f09e71639e74b64506888cd165",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:54:10Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "b4fb52af04d5b57e43093ec1be95d9e298df213e19c97f85304546d8ae7aeaf7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:54:12Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "156729d8add57c77e9c86c995a3d1d0679667ef08bdae7d977fdd96a0675248b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:54:13Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "83faa647a94ab0ae1666ef4429f20690b6b591964eb764e24c4c0760a2680d72",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:54:15Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "691058ac682d07974a23e749d7116d052deda31825b9173755b9a3cf374e1756",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:54:16Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "2197163613ed464ca3c67bd376aa235d2674a9cfdc8522d753df56cfc0ee89a5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:54:18Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "78044e64b598ab2bc178cb4085736e95b6efc035c1f096cdccd4108bd65ec05b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:54:20Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "e8d12ffde3696576ac7fa0c9af83f9ddc16e556b2c71a64f125d544fd9d74c98",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:54:22Z"
+    },
+    {
+      "run": "mmlu:subject=college_medicine,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_college_medicine",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_college_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "8cef610636baa35691761b81d1d31805910c0f2e6ae05f9abb6665a0236d72f2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_medicine,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_college_medicine/instances.json",
+      "instances_sha256": "cd19e0160eb2146af95312c1e775f31a0b16f1b2de18332c323c5c7a53e91f76",
+      "retrieved_utc": "2026-09-26T04:54:25Z"
+    }
+  ]
+}

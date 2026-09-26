@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T06:02:15Z",
+  "retrieved_utc_last": "2026-09-26T06:05:45Z",
+  "run_filter": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=machine_learning,method=multiple_choice_joint,eval_split=test,groups=mmlu_machine_learning"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-machine-learning-method-multiple-choice-joint.csv",
+  "rows": 6720,
+  "models": 60,
+  "items_common_to_every_model": 112,
+  "items_seen_at_all": 112,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "5b4f891d79ca0f072dbcf711310c7fb86a1c52921e66030385536354b2a8a4d8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:02:15Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "e3263ca9de48f7e6600bdecd8ddc69e753f6c473327cf262aaeb713d9f33f6a8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:02:19Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "a2c86932bef5ca05261401277ab55a38fc808c568714327c27ef9a9a115ed19e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:02:27Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "2ca94a3cc5a826e8a9c20a3f56bf716756b63899a7fca53752b7aa1de66b6e34",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:02:31Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "e555618729caf9c2323cf177c32d9651e8532fc036262a1e9da94fbfa77cd528",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:02:34Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "9f0aa159ff7ae2a36d9768a9755aaa65f5e5156c53ae48976de39dc4875b7c15",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:02:38Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "7d4cd64464d4f8ebe07eefbbe3c9ffd0b2bba65c79184d2cfbd464f2954c88bd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:02:42Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "5ccb1cf309fe1e2e6cc9160c36866dfe60b095578ccc7e0bde6284c07eae4b0e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:02:45Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "ee0825e1bffc417d3bd7be3f66b096756b61f731ca1e69114f1ae5808377b3ee",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:02:48Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "7b32b280d85f6e278cf64f8f7a44790fa5366a857295e340bd74921bd7a693c4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:02:51Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "4dbefb07b35f6f1b867381127f6b8d3433a1760eb74c02cfd7b5d34c32b60219",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:02:55Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "eecc8f3215d053ee29499e9a50267b3e9ebd70f8baaa22458da4bba6dfc05a8b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:03:00Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "c8fe6d8dc89b63cfa9c7445e3882e054944902021b911b4a1b6a17e5367806ac",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:03:03Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "1c404c0693734cdb7f8a12142cb7c48d95b957b5656d1ac801fb327f826514c0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:03:06Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "4524e0e5d70c9b6b93a3c7c6437c889fc330ff1b252f3d6f573dec8246a06e27",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:03:10Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "c8b9740ecbc370202656d97d9752e7417ac8203d84f837401b3359ca797875f3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:03:15Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "9177244a5fe21673644f361e28c614d59300c3d902be1e0535b37acfdb44218f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:03:18Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "b9ded6ed7d4dbdc461aba07a72b11a14da47ac8e0d4707b41b5e687b9f0e3f9b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:03:22Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "66e522592544e980b618f7ff02aa0b6ac1352b93baadc622c206f7b1bbd34e58",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:03:24Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "b2a47a5c5895ad21d2dac6e49250c7f3d4f978ac37ac2468b6dbd6d49275950a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:03:28Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "75597acace78354ab977d7b86861d1138fd95df07de7c7ccfaa0dd1bfc7a7204",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:03:34Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "9226ef961552e7e7cfd1482058e22e3b022e4286956681bf151f88ecde5bbd1a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:03:37Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "5305f7b36cb59cf0a3b04b0df5dc55304396568684ecb467f8b1b314c6b31073",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:03:41Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "768e65c358f5e7c907ce0e21d5850eeb4325d37d1e285ce82fe2022a87625f48",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:03:46Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "55aa7674f82a68f2a8a1570f10ecac3adf9b6a0b385f60ce596ecb81698edf6b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:03:50Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "aa32df1c19338486df4ce7443d771dc9894692ad891163ed2c967bad5f1d739b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:03:53Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "25aa50790a7d35387252db09be73c73571e453145f599d478546bed211813af4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:03:58Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "35a1f645bf41600e5cc298cc90cfe2a861044a1d984d06c9a1b2fe3c23983a4e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:04:01Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "cfb8bbc27232afc1d2b88474b6d3543b9458b79e203f5ec664bf74a85fd9cf97",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:04:04Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "1a883a4a5d6b457e9288ab82a881af2b3e8d40d8adab905589cd88b54aa3ad78",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:04:08Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "2faa90042bdb5868178e3010e4ad450ec41163b6903ca36b47349fb730df21f8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:04:11Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "a82ae2d1001336b841d898c63b27700806e85253c0b92d35f47d40cfd5a659d0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:04:15Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "5a3a4598ecd3fc8f93ea2d724209953cfd322243afbf4e023d3ff692ee7d0a67",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:04:18Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "c2e90ab5c37e4e0a2eaeaa942d1d777bafcbc3ac879d63146497c2ad2ce0a0db",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:04:22Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "f6f0f4391e7b0a972bb59c5577b1fe48ad17234b4a28800f06c44ecaf7b14994",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:04:26Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "921f1ed0f70b066a92af8809818c3b86666b3ef8a9397ced072ccb6a7823333b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:04:29Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "c50be6665e7af7c960d14d66daa41b5c658b02e92dc1eba4f28ce86e8f982527",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:04:32Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "88f4d052f63d78a3c7dc575f3147f8bc2b652315a08a7db1dc8134f467393767",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:04:35Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "5f725228b590ca376e3c9ad304465d0526b87d5cdf530cc105bf17c28b2ad3d9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:04:38Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "92646a3e92e90a07238861df90323ed64f7fb99c965157f30fffafc6db4ad2ad",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:04:42Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "2e4308a3bceb101673492e093e647a45acab02ff5d6c5ca0d9a11c8c21f82901",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:04:44Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "9eb4f57d8e115d7ef7e443ed18b880db674c05b1b2604df86b8b9d65bcfc6b9a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:04:48Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "17966cfdd5dc3490da58482091e39ff8f90b08181a7d9c3e8db63caaf03a23b8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:04:51Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "21ce8a2d3523bbffb90a2a23f92e6ef5be9b868b2f345e4408cfe2738e4b24d0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:04:53Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "d6c7e0e9b6bdd5d0fe7da2f1a22fc7b63a14f7a3561d25e27a5f491f4d076c1c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:04:57Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "fe26dcb03cc217f025981c10febb428de70ba75bb3f612255e87c31a5441253c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:05:00Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "f29c7905298ffdbf90003f6d008cbada88271a8616cfa9b4a9153b98b8a84f25",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:05:03Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "12d3a15d44727cd7d7be650895a741fe985f9fb1f350753f0afdfefef987a74c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:05:07Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "b34b6556f74985c8c5368ff80e0704a575789c1e6037562cca37d7151390dd42",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:05:10Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "2e696968e23819380fed31832dae7579da713a8a330fb291322987b1845b8e90",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:05:13Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "a487c2d16898eece0687ece259b5cbba2a9c65d6c380c6c39fab9fc521c9bda1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:05:17Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "718d480ce05c7912e36827e746746c39618b168f46ec656ee9ec3ca988dfbdb9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:05:20Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "e8da8636fd7ee5b8be9a05c9c9d3952f12e2a3a86f652f1abcc818ebca6c8bf8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:05:23Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "5a35d0cc6a61525757e20976b5bfa317aece63432ca41f6625e3fbfe5e3e1629",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:05:26Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "b8c3f3f46ae275d734c91c29be7271bf19778e7f0565bf0427d9877988c9baca",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:05:30Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "76504792443a89c5ba0aa757c824fc849bd23525075b0552d9fc0a9b37ad440e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:05:33Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "62414c3afc6d6f6ba35124b4674cc36f8dcdbae8ab0e94cbe5cfcbf16fb03f3b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:05:36Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "94549284c16983deb067fe829ea441f878311c411a7f2692e0cf48585a3ef9f6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:05:39Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "34f31f700bc944ac932c12bc2df82b3d8fe304644136ec0f793377e6158d7148",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:05:42Z"
+    },
+    {
+      "run": "mmlu:subject=machine_learning,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_machine_learning",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_machine_learning/per_instance_stats.json",
+      "per_instance_stats_sha256": "4ba5196461a56ad0dde6a8917c53408f2d3f5c482fb67df21d916f49360534f2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=machine_learning,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_machine_learning/instances.json",
+      "instances_sha256": "30532c4e1d5620b126ccc31516b07ea0119d1ffab6b458f63c8475e0be942305",
+      "retrieved_utc": "2026-09-26T06:05:45Z"
+    }
+  ]
+}

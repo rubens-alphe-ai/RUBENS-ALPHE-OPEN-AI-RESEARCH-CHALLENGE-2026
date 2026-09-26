@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T06:09:29Z",
+  "retrieved_utc_last": "2026-09-26T06:13:41Z",
+  "run_filter": "mmlu:subject=marketing,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=marketing,method=multiple_choice_joint,eval_split=test,groups=mmlu_marketing"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-marketing-method-multiple-choice-joint.csv",
+  "rows": 14040,
+  "models": 60,
+  "items_common_to_every_model": 234,
+  "items_seen_at_all": 234,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "a806e0841868712ad962f7080143d190e4339a0dd1882b01e9ed07e972663e67",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:09:29Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "015c9127b21594e600e8d68214cfe8b23166b0aa0dd640249b1e8644e503ced0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:09:33Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=marketing,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "da21e1dc36c6368baf08d23cb393eb907aadb436489045764f5bb1190721cffe",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=marketing,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:09:37Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=marketing,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "23769ca5d7709c989a52cfdfe045e507aed1b3ee49684bdb1e0a0c37e44d0f7c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=marketing,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:09:42Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=marketing,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "2acb8216e29da736dbeea0857c5474640e646621929eb3b5901acd76f6bb2690",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=marketing,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:09:46Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=marketing,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "fb54fd2fdd54b65d87f1739df8593e7d3eb65c3ddd948e99b28919ca213df617",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=marketing,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:09:50Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=marketing,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "d5012ce33fb272a04e6756e1fd767f31f21418ed7e9ce6f43f40c87932c3411e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=marketing,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:09:54Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=marketing,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "6b22db349e49c894b664e202b4a615b6f64700d3c09d62fa669065adfe948c7c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=marketing,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:09:58Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=marketing,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "a47f3b2a419439be0d35203d63004b5f855d14fc8edd070d71d6f45d9e55f013",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=marketing,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:10:01Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=marketing,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "e8ff28e2e69f6d3c79a9b96abd5c21b8b41fa6bd66187401b7b9ad66bd12592c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=marketing,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:10:05Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=marketing,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "b2b5361dbd0862ab4f25c6dde5bc174561b71dd66c3ec6ef42f3caddc0432bd6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=marketing,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:10:09Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "d664a8048e948a94ac1047aeb096bbd71bcf361808d3b46e473ac47e9467e1c6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:10:14Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "c56fba7d0c9d9d75c85f793155fb80123c501ead2760630b4d33cdf5147a42b3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:10:18Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "645ed8f718aec673db83605a7737598e4cc6366ac6769d295da3113e10adb1af",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:10:21Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "82f9676371d8f04c322b7f64cd48691dd8f0b8e7404d91bd8ef78fd9f1b1b7ca",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:10:25Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "66fcf641c0b69fbf6ee3c984c25fba4e66adce4419d791d05f82039acf48bad1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:10:29Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "6797abaf00d6bee9f0865acbde24d26aba41418c129f92970a3923436a30ab8e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:10:33Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "84ed16c0107dac95fb0f1733847db55af24a62aeb60b8339da1f6b428871d87f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:10:37Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "afec336bb74848ee207840122300666276d80b0e61106de5ce405e5b242ac193",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:10:41Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=marketing,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "5bb968a638cda26603747ac6d756f12e3b94f766869e539f39ae2c11e96e414f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=marketing,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:10:45Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=marketing,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "5bf430813b6c69d2b1e16b6a22c0feb2cd5d3d877439f7eea4bdc2da7609d9d4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=marketing,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:10:49Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=marketing,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "6385e93d1e81573df6c5854c546b811052fdab7de759fd6b56af32747bba794d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=marketing,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:10:55Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=marketing,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "a3b18f094b797967e458da9eccdefa2241159cef0d2396b7af2c43b763289b4b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=marketing,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:10:59Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=marketing,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "cbd91871ee51861779c846c2fd8b87467d8239ec70803775915b436ccf614ee6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=marketing,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:11:03Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "068f25f3d31dd897962ad0257f6350a66004488c40ad3f750c3879429723efbc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:11:07Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "dc59ed045a3fc683b27037619b14b7f403a4aee4a51355c41e1dc6968b9272dd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:11:11Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "aa13401b618552b46b8ed43cf286b81eff0ad2d1a117e32d73645b370b15ee47",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:11:15Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "0866d08eba33364696b90029a6134ebdfef1ed456f7ffcbdbe5facaa702c908a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:11:20Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "c37bfb8617fab62ea4dccfb8ad9f0af5f7c2a2f1e46912765c711503ec748f3f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:11:24Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "58fa77e9004f9cc673a3db2e55fce83fd416a6b152a24054e9b2d8ce4ce9883a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:11:28Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "40b3ccd6c07707359bc89cc058d1ed4273d71a62bd811dbca117cbc0c1a2b62d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:11:33Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "11c02a6f02f3c082a05267eefa41e40c9c4aea845614eaf743216987b9154bf1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:11:38Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "d64ac0126c460dba1dcd257d530bdb3beb780bc72ba982f0940b0b9fe1d61486",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:11:42Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "570197c98691e4c63406e4de5d5fffbdaf31dd7ca842998c93deff41deef16b5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:11:46Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "c9c65661327f5236873524313eef33b5f9a1175fa964d4f6091d4608c5e89d09",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:11:50Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "1bc951ae59a41261549c739f35d4dd2d8ca8f5c771ef48a2360a2d1ef767c538",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:11:54Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "5c9e62de244722439e96468e73d7056b2a241dd1e43645f1b3052362935228c4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:11:57Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "8c73299da6f15f4992a9601e797267faaf4b2128d7c40a08509b3d93db70bac1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:12:02Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "9ed6565e49acb4dbd76c6ad933c6bab69759e82456cca30c3d3a235d1be82aae",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:12:06Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "2a9afbb2b79367fa5cb7eaf3358e5f6dad2bb81706a93550a7c7931d909c977d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:12:10Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "f7b50ef09cf77b2141ac9d52d1644a109de328c516ef43dca5a2705b4ce29d42",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:12:13Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "72c874134999a1fa08969c17659c9ca51012f3da1c046eaee24d7d84d6e9a004",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:12:17Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "9f5b302f49209ffab5f9769ed8b1006b6456636174b36e2aac63d84bf120faa7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:12:21Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "d5a230745e460185a131ef504083ccdf8c7f52d321ad97d3d071b565afa5aadc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:12:25Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "37e51cc8e4e52551dfebad0614d3ab62070ba81873d0d5c82240869286864ded",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:12:30Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "644685d972d92cf6a77c20c5917acdf7a336b3174196fcf36d5038f1e25cbdf2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:12:34Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "a0e64459e244e8752cd98d8abb225fd18099618d769691d316edccc31fb5ba52",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:12:40Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "12ff7638703d921e5ea6ad30f138b5f108c318e097874ff4bdb294630ae0a9be",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=marketing,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:12:49Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "acf8a39b2f492bf6b5ff64d1dcb9f96f150dcc941ff3a1b3ee558c9e74cf1249",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:12:53Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=marketing,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "ef3dc344312879b45ee3f84e9a467c3d8262fb15a78c9f7b7abdcce759942463",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=marketing,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:12:58Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=marketing,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "36f8baa3ee6312fccb4de4f4abcca56aaa49213f0cf3042046e10c06608cf0dc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=marketing,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:13:02Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "df5966d885e1279c83e6dc7e8147ff7c2fe8449d8c494b8cc6ddf186dfcb14f0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:13:08Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "2200c59d9813540fdd040728ec77352be4f2a6ace760aeaa298ccabfa56d44b7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:13:11Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "f27c68a0b4d74496531d0157cba71c5c2cc2640251efa813489bd2f1d179a119",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:13:15Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "0819e8df952a3ee311977ca95bb698af6c5dc9876407b7f86584c7dbba5c508a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:13:19Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "6cdd49b030faa341ada682f11f468193e92f5991ce418471e2d91a25d170bdf0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:13:24Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "efd4aa351702c6df29b50cdd96e82d0d7058eb55db66cfdd196f656145028b86",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:13:28Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "2eebd53d3b7c7dacd0896064663ca38dc7f5e827ec14e2be834b7f0923aba851",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:13:32Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "8ea5336487b5800dd94531e387a1da705d424ff53b9dbd92d5ce42fa1c2fdd96",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=marketing,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:13:36Z"
+    },
+    {
+      "run": "mmlu:subject=marketing,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_marketing",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=marketing,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_marketing/per_instance_stats.json",
+      "per_instance_stats_sha256": "97f04eb23ff32e423390692ac1556b0585323fd0f320d3d14a6bf674d5f8beae",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=marketing,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_marketing/instances.json",
+      "instances_sha256": "7859dccf5d8c0d3f41a79b4efc9dcc13c5f344e546cde7caea5a3d18e7c5ddd5",
+      "retrieved_utc": "2026-09-26T06:13:41Z"
+    }
+  ]
+}

@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T06:57:10Z",
+  "retrieved_utc_last": "2026-09-26T06:58:24Z",
+  "run_filter": "mmlu:subject=world_religions,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=world_religions,method=multiple_choice_joint,eval_split=test,groups=mmlu_world_religions"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-world-religions-method-multiple-choice-joint.csv",
+  "rows": 10260,
+  "models": 60,
+  "items_common_to_every_model": 171,
+  "items_seen_at_all": 171,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "0484e92b8b7e74019b4215ccf731c60768e27b71901f51748dfffa3fcda93bb5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:10Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "32f0bdc14bec549a9539c11c37029da55c677bdb679766c0cb28413d080a0145",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:11Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "ac6928be880e0043b6ae475afa542e877681ad1b43d9a03856cc55a23fd65067",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:12Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "cafcdc9e3371a6720e3c912bdd49a6b43de20461f628a922762fd151fde7418a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:13Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "3c70cb5f73fdea2378e6a2c9b0f783ff867325b85d72bf26ad465d49fb1eab2f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:14Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "82b5a68bef9b68ea449b2b512d88fb3f24a7dbf87088ad688282482807c8c248",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:16Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "44e70de0c7db21457f3a177ac2a3cb9688c36fb502d6e27a42f86d80051617a7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:17Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "f114a4ceb915264015b383f1276a8a09b7871ee4d059f14de23f29bf044da533",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:18Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "73b52c517b30f5351fc6224f8370f911cbc47d6f5eddf4494175d5ca1f434033",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:19Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "5d849f2344d210b9c9e1bc3d8dac90893a1dfb0b5abbb4011d92e90c9cce4f94",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:20Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "978df842a3632a656b92800b083001745eba2656db47e12712b9c2ebc6e2f9ab",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:22Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "8675b79028973e32d5d5788701df6499994aa2e0d868c7bc677b2446a9ffacdd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:23Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "e0ef0a203a8ee7d2d6ad40e9b3b7d9d41c0a7bbee5bddda39f50f0c4b2385c62",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:24Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "7f771264a48bae9e99875b262336543a9343b412f86ebbec7496d7415fe7dcfd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:25Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "4833e14a53cebeea1c9502851bdd37f91490101851433bb883e0fd5f89e65d90",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:26Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "b4e9cd901c2774b5355a22799041064cd40498f36e8918eb7737024335f6c0db",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:28Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "72b54f970ab904c1cbedb3709593cf9c8d95b68a31a3cd56596d51aa1f819bf3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:29Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "fc826f6119b4aa9b54c0c8aad5de04c6885428c0f345c0f25a7fde5d16374d81",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:30Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "d9cb60d617ab468caf574507b9076615a347b7380b264a9400b46c335791b5b3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:31Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "5eda427a0909f32ddcc52c70580c987b1b10060dbc3110074a645002cbe58efe",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:32Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "3575177adb7cd85e2a3886d2c9acfcdd919766eb593a64323158a76bc84ae7d0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:34Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "115b10d1746f22759284e47144fca267a7478ba011e831415ec1f94a07f1e7c2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:35Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "22f01c64c1efcb5cff9c80577e79bfbbd5440042c5a8150a430e911e17da67c6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:36Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "f0d2c93161843ef5e97a69ec47233c134a06e13af290dee3a6cff3b8b2c60e4c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:37Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "2962362bb14c312acd1a865b4d94f01f197e680025f401f41076b7b590eca6e3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:39Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "21e829d9d2148404769ebd358be322c0f7b4f8d996f3aa572a8ec0bf62a31a21",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:40Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "33abcc225fc1b5b23d7a1046024ba2b37426c4154d97fd4f41fc03e262fc0644",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:41Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "aa4255e7a79a8f7e6d73c7c2d18ae75c6e321c3f003e068711146b7f489a5cdd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:42Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "069653ef52d7d52413e62bb48a07eff164bd193b46a4c58647132779e0ccb79a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:43Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "e37c65b96e5b402018980b0c77cf176f48c46f00d4020a49aae5e0c76e1c49cf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:44Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "454181667cce80827a5a901691b486bac27fa81705b43e21e48efea760f4db8a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:46Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "e03c782e4f5bf18925b1ee902dba3e7feba524d654e874513a36fb7021f9a0af",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:47Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "cedeff499b1aa2a059b819d5ce2016fe39764d8b8ca6673c2ed72ada0df1c52a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:48Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "ae6990307b9eed045451136b69ec306a135a0fcf2a0ced531e4e860448340720",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:49Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "bfa854dda1724b13dc2e025009c3a750910b16cf910ed245953bf1575878813f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:50Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "b74d1fd8be42c9b742858af04cbc0254726aba507c3789f1c9dd02d5a356081c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:52Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "7a28090715ba1e1d01274f33dabf70a1c3f1a5cf259a74e61778156020414fe5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:53Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "a14b87cfd271283ac1ea160252da507d34391e932c08aeba62db1abe4be7a966",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:54Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "b806d7c89947bbf3b2dc09e8c07bde98ff81a0eb02f7112f323564134d1928b6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:55Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "e5fa736051907d8a51abbfa029c8bbd29014b8e28216ae074717e09faab39a2c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:56Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "b605460696ce6d961d56888537fb95d90e12472b301d8f6ea6872b11d1942a8d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:58Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "fd0021aea41ee360c87db128bd0804d1bc0938aaef10cc64904043c35eb7e325",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:57:59Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "be38a3314eef52f14fafcf1d5663a61db0e1e6c795eb4066e6a29c8de68db837",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:58:00Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "abf714921a40a119f27ed6610db1a6f208556281b2a1fd7fa59a37e11238377f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:58:01Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "24e815dc67a4bdc716a67260b879d44d9d998561253c2c26e7163b44cc3afc2d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:58:02Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "79016d6f8cc2b22156b4b1c2c25ea02dc132f8121061cc4deac53a52b1e11b32",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:58:04Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "c9456ead1887f996f0a445ee3d1a0291b0f5720d7bc330b00cc5e28f73d7726d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:58:06Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "ed31050a22e7fdc5654e30570638d081c26a31bc9383d98c41264c2d0d4b8e8c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:58:07Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "39178c7a265c188072cdce81d9142f6b90fb72a9b22eb08f49a51b344ce055ec",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:58:08Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "ea7fc3b58a67da4e199382c8bb1683ac566e739b81409bb35c5451d885620cc0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:58:10Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "5d00acd87e7f99376317c6f13353f882a43bbd4d657a87884849a0ea03e30bf4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:58:11Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "aafc377dad7e4a65d583fabeb3f59284c5eb5ac5ddf59a5bf3f87883160e42b5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:58:13Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "bdc05437ffb965924fe57b1faaa9e7eac6dcc484832c0ab5e882c7baeb05aa0e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:58:14Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "1dd32c57198bace7a16c1ebe2a22a21a1fce4552de823fbe2d3ebd7b6f922701",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:58:16Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "a449d3888d5679bbd52775a0806e9a7d4af42b73782f2301db1c8880662ee276",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:58:17Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "492fbd0fda48a7095387a46df636e55e1214574270a307ccc39bc73b6209236e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:58:18Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "be3844064dd836223a3b7e3ffeaedf5118cbd13e2a9e93fba7a0b23fa3c9101e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:58:20Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "a951cb0fc1d2f99893cf62743b27d3fb3c92a77712678092de52be7e38b723fd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:58:21Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "3815735fd757935f0be42e91d20888366649bd26860837b3cfe216c93d34f8ed",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:58:23Z"
+    },
+    {
+      "run": "mmlu:subject=world_religions,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_world_religions",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_world_religions/per_instance_stats.json",
+      "per_instance_stats_sha256": "a2dffe6e807e1111629e3c1e5898b039c3d68a47b1c87a9a09b762394ceb4eb3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=world_religions,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_world_religions/instances.json",
+      "instances_sha256": "99f2cbb956daf5c94cfc06737d82529c93bd774b40bfc281dac424d486595381",
+      "retrieved_utc": "2026-09-26T06:58:24Z"
+    }
+  ]
+}

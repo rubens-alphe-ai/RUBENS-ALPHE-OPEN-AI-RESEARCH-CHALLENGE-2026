@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T06:55:58Z",
+  "retrieved_utc_last": "2026-09-26T06:57:01Z",
+  "run_filter": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,eval_split=test,groups=mmlu_us_foreign_policy"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-us-foreign-policy-method-multiple-choice-joint.csv",
+  "rows": 6000,
+  "models": 60,
+  "items_common_to_every_model": 100,
+  "items_seen_at_all": 100,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "363a62edaa7944736942c5bf5cfb14198863fe6633c260966b62ebb6cb4b5881",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:55:58Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "58ee02faa91f7951251508bd44b611c770d4a6896c1833d8a7ba76a99fbc6fcb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:55:59Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "29d02b39cd5570d2ea8bc20d2df71d236b047b60cad36f1b58b883cf4056f96c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:00Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "67141000dc3d8dd9e42fd9c3221e0a958f63dfb80b2c73d264ab3a8416fbc33d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:01Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "45818aecd0c93911c0157136e12e4e5a153969f3cf100b5c04f90d2a945b13cf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:02Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "4f61cd7333b49738aa13c2992e059949cf9b633dc9b5ed98d101d07da7276135",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:03Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "822887bcf3eefc779072c707b626624fe1970c8f2d50350a8d2d99bfcbfda82d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:04Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "862fdcc75243cdddd7453095bad3b259375b7356cf58729dd0b7c1beaee6770c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:05Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "ecc38a5b5e22d1473f4e86635e2f8d194a15fcac558921390981cfea62b3861b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:06Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "36a57d68e164321e0e6d078e21126a1236f9493070088e06041cd6036d55a9eb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:07Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "1fe58d3d752d2ddad586190aff1c345089d915d3dd6a86cbd63e96a27334defc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:08Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "64274136cd45207cda0c6e8e26418c03b2fd92196309d8b9cba60ade70a6e211",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:09Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "891b66be73ec07754fa33827afc35951e92defbc0aacd1e1a48dbbf1c570c492",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:10Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "8dec52073cc27e69b3aa51dfdb8f31737378dd569a08a3b3dab286c9242ce995",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:11Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "d4f3269dcb1e5ba21018bd050a669679624070eba7434ab5b47ea6999b471693",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:12Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "3cd5f43e8106b666d5689600ca755e9215003e4f0c1030192d78b3d3e092fda4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:13Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "471d5a65d735e3f3f676c28b61f0f2b35ed434d68315ec74f2062282c9509490",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:15Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "7f515d9f7fe11908c34500940a6bb569c8e937be2b9453acc571fa3350d7891e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:16Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "f62257ed9491847a4fbb2cc150007ca5a3f933af413937e79c8b1f65d21c670b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:17Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "41f52df83f8a4125eba6bc373bf875db17d0ded4d10291603954606c834d1072",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:18Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "c8f92b58ba3c581f48adb0ee396ef049687629274697c517e3ee363a5d001ed5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:19Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "390b6268e247ca6042af2ccd30eb432f910276e3d61f589369bd21f1775fe887",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:20Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "1957a2b1fad35fbf0337ae31c27a0ccd81ca374f9cdc2f17419ad2f1758fe823",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:21Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "43626794afdc7fb246e703923a7a1ddfa1ce67467620b6e8def54eaf9893612d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:22Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "7aaef2709c1c27c92373e4f11d4f1b86bb7fdab2a4059f27ec57864e1006ef87",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:23Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "772a64e0adf20a455a2822847637b3d5fcdbcf01bc90eb36316040c4769954ca",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:25Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "8c64fd18df8dece61c6c24c0c38652e2f363555e928c85b6526b655cad3452fa",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:26Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "f5769f2919ee6c227bc216657b14ecd4fd36d9d8e05b5bbdda4551572f207dcb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:27Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "d9bc544798118f7f3ad465db71dc11690e0a4a5b1d54d2af37d46b7ae47eff53",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:28Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "87b83bdd2b1397ae7be97e703bbef6be7148c7c2bbe967723d80d50de64fd483",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:29Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "62ab734d586228837b7c5098f0e5f42a7fb077f029beeda1f1b0e218009eccd6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:30Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "2595f882d1961802e86f2fe14d3d6a255068068f811eeb3e326608d220df1594",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:31Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "9a78870ebf691791a0f682d4ca68b0992279be1ecb9c0283d509b6768c02766c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:32Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "e43b80dcf6af10c6060b7b3a1231ef89d1ba4daac489e652eafe12da4d25057c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:33Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "8d9799a6f70d6fef324f877b25da67fd1cab680898e57acdfc56d5de073c7baf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:34Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "8cacce47282c8021b0dc114f850d777f7a01ea2b625b716aac0ed36aac1de1cf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:35Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "3c33c524cf1ec483a411cc88b92695b564dc458c9508cc3a991c5cf1b45491c1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:36Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "2fd14bd50595bff858e66519da22b415a2668504d72164b4f63f2029b13b0818",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:37Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "37a2ae16ffab7b977a738b538fdf25d28994720963890d78d676c3f6aeb1478f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:38Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "7fa423bee8d31400ef3501c87bbaaec738d2a2d9904987e35b80f187c13625a1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:39Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "70716d9d17eada6a84522a64bf101b37da4d0558508a4f5c95a79248c36036c5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:40Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "48694e2c69e4dfca68ed03833448647e688975026924e732868f4ea22b486932",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:41Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "b48c25fde0ec297748ef8f214f135927d665b03c366d8629a942570d3c8f8c3d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:42Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "5f3009c2a61e96184b6d812686e0269eaba6c1874ab8e425fa2f34cc56b0094b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:43Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "98d845c72a13beef28e4cdf1b9bc2a742e38a95587cb5520e5dab50395a973be",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:45Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "27734149fed794b2312b9295e049fe4252ed3536af475f1951b13dd7ac3bdca8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:46Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "5eb05382610587ceda034fc62a2a5ec46c916cb6dad640349e075c1ca9c0d8a8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:47Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "dfa23b0c00094fce7489db19a3287e633ecd3a72330fca58714d07a08d843584",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:48Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "be457a8fa8c23fffdc7fe8a754caea641d7822a3cc709ef6bb8ffe09908b8aea",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:49Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "d823dcbfa3680a138a985360aaa12305b0d6dac4cc223a4112be8a87533a45bd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:50Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "5e20b19110fd476ab9df75d27f6ee4347bd407ed74fb9572c7e3b1af3ec9aedf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:51Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "b0bf518e6e4531c53141e07e391bbfdef5588fc90370e6057d56a64dc6e45edf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:52Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "886e7f024d59a95b059f3d8ee0ec3b72d3486d418f91bd41ee81a933105e9a13",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:53Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "c1f887130e41418c5f728e40e57912a0aea676297c70d029ac08a3bb402f5d71",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:54Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "8d5b710198dc7d2d7d6baadf05fd49edf867ba54ff4f0b51c68fb48b2c8b7af8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:55Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "80d1a018c67aeeb999e11e9b1014a9bbe231350cd4a9e903b110387199c8137f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:56Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "ee70aa14241ca86d44fdf8e3fa74fc235299c813ebcbd018002fdae9efdaa79d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:58Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "dce93b246a4eead55fb9d72fe2904b87c3346dd81af8653c7dcded5f1e459d04",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:56:59Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "c81ffa2b9ec50f3d2199141835e2bccae40dac0e51b1040f7cb0d1270cce9d79",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:57:00Z"
+    },
+    {
+      "run": "mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_us_foreign_policy",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_us_foreign_policy/per_instance_stats.json",
+      "per_instance_stats_sha256": "205842b87b421e4a01f1e9a2faf6c376cc9b15b5ae84d6d27a209a8478863a64",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=us_foreign_policy,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_us_foreign_policy/instances.json",
+      "instances_sha256": "cf2d0b197751f74d9fb86e6e83aa7e49a35aab9d7febd60e43799a9fde4c4c8f",
+      "retrieved_utc": "2026-09-26T06:57:01Z"
+    }
+  ]
+}

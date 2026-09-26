@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T04:43:42Z",
+  "retrieved_utc_last": "2026-09-26T04:48:37Z",
+  "run_filter": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,eval_split=test,groups=mmlu_clinical_knowledge"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-clinical-knowledge-method-multiple-choice-joint.csv",
+  "rows": 15900,
+  "models": 60,
+  "items_common_to_every_model": 265,
+  "items_seen_at_all": 265,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "87290f88344a84bb33322564753ebf6d879d25c90d95dd0703de6c4320c64857",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:43:42Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "37f30d989185615eca5b43b6630f4a0a25a75245c822e23879c99ad1215ae0f6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:43:47Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "9670d48a30672a268f8a3b91524b45a4b67ec248ddc588ea6c4fd60a8d475ca0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:43:51Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "2bb25e7f7683d463119e5bc46e2bcf713ff526a213c981002829d5bbda9e3f6f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:43:56Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "1e29e5dad086208b780588ba1e4b9d485311dc9d550c5fc0a5edd2da861d08df",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:44:00Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "3f96354d97bc8d2ba5f98fd23cb31d152285b2c88eb6bd37cb131dd78c034123",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:44:06Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "3209cd780783725e204426331438cc7235b3167dd64ab721826c67a4e290e01e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:44:12Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "981bb62d14ea8ae2f17b7397378b53f058f0067921c8c2a40bc2c70339178864",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:44:16Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "eeb185979e0b088609fd218f7bf1a667146ff750e43d1eb5ca83574bdf66f148",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:44:22Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "92cf4910ef9f4eb33e25974d49ef4ff39825bd6442ecf0b72a0f9ba2520cbd43",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:44:28Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "0a5e0a038ebd35b9f45e74ba89d417202bc0314122c5ad554ac37a7812f09388",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:44:38Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "3782e0daaa722696d9504dbc848ded95318ca291e8d34ed0444ebfb9b383d887",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:44:43Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "b3c36160a4372c5888671f954dc5289f05c39abf59bb1a58f33ded35c7f1d668",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:44:46Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "5e99119a8053026dda41c773f4e78d9128534e540c7e79fe244e18c9a536416a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:44:51Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "d0910e27a0d5e8fb89c3d3cb394ad20860b7c147c22f1c062cb8f1a1832d594c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:44:56Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "c48bf7885fd149a13cda946e14e39466164d62a19198ffc59e1a4c298eb447d1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:44:59Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "9750048b96f750fd2e03020b8278ed116921f068b986172083d7ead13d45c3e5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:45:04Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "ada053354c989832ce6ca2aafa5b900078652dd8ad6ac52ae6f4ce54d3fc5645",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:45:09Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "ebe864cadec614e8a6a517e98c22c4282a284d5ba82e3195ec64067096650cc6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:45:13Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "b664d2e944977eba94a8d61f25cb3f61024d8e40155fe00ca72bd10d2be82a6a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:45:18Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "25e462f318928bd0b111c5a79f4f145c0e94c1e6625bd6b3f57fe62beb5d81a5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:45:23Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "8f8630a24fda660633420536d63652a0f365c60aef0e02acbe1de789b383e172",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:45:27Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "912fd4da57527a53107e96adc437dfbdcf9ac0fb9c83a925629f37d603baf223",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:45:32Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "46a697b54e63aa1a5f7b2d43baa55bb8fa8e6d141cad62871219bb6364dc5e3a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:45:38Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "aeb08c7f7308c65116b054b9899ad5bd8740937df8f9b3ff978a87cf9203a0d5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:45:44Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "6d9c80d8424a663994bdc03d972e9d10adf9ce763a513642e6ae0edd529387fa",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:45:49Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "3d645033a53f55ca6f35361dbf077d89afbc331e019a9267a1222951f930bd0c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:45:53Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "c37a090435b98eabbe5f17f28b45dfd2a2aa512fef3e7b1d7636111ac9b455cb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:45:59Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "78b01496bdca859a52caf93a5a6e290b04e5b055c91dedf0b6e7e441b104505c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:46:08Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "e996c026797843e7604cd0762cba55a8e3638ea332d80cedaf87eeb9f0d0b936",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:46:12Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "fcfe2eaec5cffc89755f1e34e7d2f35899002162eb78d9f5621f400f58cbfbfd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:46:17Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "6557c172afc0f381ddf1731da267b7d1b4193d685beebb1f328fb9d4737db2b9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:46:21Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "48b5328e06b538f3d1932af50d9e8626d7eeebe5b4292847db9b64a18631a4b9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:46:25Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "c361fb8b2d5ddfcc68f27ab05e52dab4abe0377d533c98a4afb0078548620272",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:46:30Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "934d0a0cf006ddf3a4add3c3fc6301bf3e7d350af0b61242970251db2dc46b7c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:46:34Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "67194a95e4b99d589941bc558a092980e13d03c9036cc39f7355976ddc928cda",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:46:38Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "2ad1c51dfc8e07f490c3f8b4ec612b8fc2f4408b8d366d02e902cb1f62708af3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:46:43Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "df811ddbb0c290c80073056616b6821abbc0f2862cfaf0d8c2ea3a0a5283c240",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:46:47Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "ac4ab7b0eed128879fe61ffa5525005855958d8cca14f477d603f1fffb2f002a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:46:51Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "46f9014e25f824140970e815adff9b72cf30f446448f67d72509edd6a7359810",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:46:56Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "4d5a9eb8fd5b1381eed0699c66064db1f543d1d1039228ce8b9531ac7fcf2ca7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:47:04Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "e0849075f4e9311a34afdf93145d04cfafe066f9ddc2dd5a19937fafec1be4cb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:47:08Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "dbf05887812d4a4876c87f3cd10e293cec7cdbb1ca0d3b08a46bdd0260487f2a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:47:13Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "0f6a47f8b6b1a855bb09dfe9b5a985841293a978db81b28b4ef2654a1d86b5f7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:47:18Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "a4b3edba30ceea467bc4a844a0eff7a6104e37a1228a6a06de8dabc85cbde831",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:47:22Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "b098d0f8a88810ca628bb319eb18df6d651bda498feb24a0048cfac497c6394f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:47:27Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "7d3c46d4cea23545c37afa7985d2f8cd876c1a93f029e2ab4a10ebc73b7ae02d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:47:31Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "0a87edab3faf971024ac40c6671d082a557cbc847067241cb1b1ff8d79263de9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:47:35Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "fc399b2924e074917a5813524fa0dd31f3040264e24c738c81a5903d78a88574",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:47:43Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "011081cf09b58bad0b831d621c02174bdc390f1ee19dab2a9afdb71432ef973e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:47:47Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "8b93ae9b77ea0975ab98afe6e2230fc03ec3030f681d05dd1a572baba3c64d69",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:47:52Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "a1e7cf4143e984f4b7a7311925aa16747414c6a261a5278e72443fff2de71c57",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:47:56Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "7fc68c54e42da297788bf989476cff68f47192022ed1a615422a75fe436aedac",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:48:01Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "7a6ef178f8c3c29636303ca5e4b78fd0c4dfd71a0100ec304a68e73f122de7ab",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:48:04Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "bca25014da17afbc8e83d1b6617b8836c059cc41897153074fa356b25bfd7e53",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:48:09Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "7db7b2c9f20a53b0e4bfdfe89d698a33aa713e4f303a57eddc7d71e03d17273f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:48:21Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "a2f7adc314504e173cb41485be36517355b3ee088ca4e6370ebe22108e3c2b86",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:48:24Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "7df0a100edd74d61dd60a26d4189cee0d3b824daf8df3bdfab8701b5236364ec",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:48:29Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "88c8b3e2c8a689ab14f059da0c8083d3a8f3686ac1e9e224bc6f6dfb41a021f1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:48:34Z"
+    },
+    {
+      "run": "mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_clinical_knowledge",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_clinical_knowledge/per_instance_stats.json",
+      "per_instance_stats_sha256": "e79562bf0835cdfdfd9bea720cd69b1e34413f5d723819e41b4dc972783c4306",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=clinical_knowledge,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_clinical_knowledge/instances.json",
+      "instances_sha256": "f3299295c348f991a4d74b2965942123616a4657d4c005ba7036665a6a19ecea",
+      "retrieved_utc": "2026-09-26T04:48:37Z"
+    }
+  ]
+}

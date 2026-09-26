@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T06:13:51Z",
+  "retrieved_utc_last": "2026-09-26T06:17:26Z",
+  "run_filter": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=medical_genetics,method=multiple_choice_joint,eval_split=test,groups=mmlu_medical_genetics"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-medical-genetics-method-multiple-choice-joint.csv",
+  "rows": 6000,
+  "models": 60,
+  "items_common_to_every_model": 100,
+  "items_seen_at_all": 100,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "baf8d5c50ec34cb2dab8e4ac18852772118f0038c181909e4acde5faf3faf5ce",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:13:51Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "7a07c2cab5ca799095df242858d2f794e6796bfe0a4d6144812b2643894f10fc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:13:54Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b677816bed8cc35957c11387ad35aef9fdec7dc43e74d7298af2541167b5cb11",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:13:58Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "d3f25377583a928f9301b0ca68200121aed8a94ce9932428c69fee02170363fb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:14:02Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "4bea49ebaf93cdd9da4cd81a45f6c341d20046ce6652deb0a1d7971575b317c7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:14:06Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "6a77088f0e5eead62e4b513fa1fb065edb0d4109afab1f869cebb40b45da1497",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:14:09Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "70cfe620bda0ad4ab827f9c76705de3fc27d9f024b8682597f0aacb7bf75726f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:14:13Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e1c63b7fd340bb9eb82066c98e9a9e3fdbc1ad283f08964e116797e644d4bcec",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:14:16Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ee5b0b204ff450235ddc56a109da73841cd7a98c9441e63d8bb7424678859137",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:14:19Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ced6c56cac6f5d60307e19d8d8ce9a095aae771119f5f0d39b1f8669a72ef09a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:14:24Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "6f1b35f1f084f0bc557ad87b1c7f90def1a5b09318f3ee291466d3cd18a29887",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:14:27Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0f8493e24ebc0bcdf612a2762fd5b914275f2350d1a4de56623eccbf097984c7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:14:31Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f93741b44554f7269cbb040e734cfdf65963c9573fad68733913a100d5886bef",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:14:35Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "7dc7ca6bd916f4bf1e223e409f39f8dca31d5ab110783b3c1769585ea1cb388f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:14:39Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "5da8675c535a324a64d335d528639bbd6e6f5005d49d5d92767a4444f897bd18",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:14:42Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f1153ac951060ec6fef5c924801f2b78235ba22e67be21e368132635e9a1076f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:14:45Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "d32126887ca45ae6739010a03267e1a1f912c33f064297a17a8d9b6a36a18d61",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:14:48Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "a9cc1387c95a3f532aa8ef47cef635a51a1a76ea6d94b04d19c4133522972f86",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:14:52Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "9587ee27cd18f176b5f4e235f2f6799957d287c45b6568b52dc5c01597aef1fd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:14:54Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "82db19de96fd1d154e98ceb0762ed15ad39b3ff981289311c9a4df69b56467d9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:14:57Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "d5883c36a3103b50b293dcabc4c05be1db6b5ea17da4021dad9dcedc0bc1062b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:15:02Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "396e5070dc3204ce0a21075f6b28f45a2f9d85111505bc0618e732b57bf9e05c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:15:05Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e16912baa0072dcb9059744ea51d840e2d3b104a1e93e28546dac5b4b0c821d3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:15:08Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "2e384d5d761f94e8d6235f17b265234330fbc96599a27f34e628560a28c64f5a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:15:24Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f9256fe7a66c9008a2e5f2e171ad7ffcf8a92e2cbc4eb06a245412124b7d0325",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:15:27Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "fb93ab5a060aa4775f7d01650b9e3ddc777702f91df442bb10235d987f406eab",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:15:31Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "3a0a3b4ec0996774940b36ab57591d0a4bb09e2afd4ef0f4140f5760e2453121",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:15:35Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "dab4e38bd7486848433d4d43554e41e22c4a99d2cd269b2614e94ed3d665d412",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:15:38Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "119387f98ce9c9303122895d8eb4613b7443b7eac5ab35fce89253d60805ad8d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:15:41Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "9513896177a21fedbf46806b7d5020a331a3ff98994c4c59305ef075b49e5871",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:15:46Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "22e11bc5650794dadd6454cb5e2224599c90717d8cf49593b089d373c227d0db",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:15:49Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "d22794760ec3368a10b4612ecbc446361017f0caca31ff433a4c7cf95925bda3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:15:52Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "59e80b90afb6675de48022867a4df73a8776ba6df04fa0daae74562ef637de23",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:15:55Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "9b869e87c14c986cd5f697d1930a984777d91b8f975ed9c2d0ed1e58a13944be",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:15:59Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0a07459d432ef5ddfd617e5f4c376c7b31fe9e2493ba528c8839353b196471a6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:16:02Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "2beb1108fbbba0b6cf6fca682f6ef8aa5ec806941b4ce2137dfa035fe0934e23",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:16:06Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "9afbb8d76b898d3a77fb7ae1506e940e995864ceed6627f39f103372e999e179",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:16:09Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "90a96c2e4e8e555d3d4cafb8fedc86603b8f372f9a0710c5211d04051fe935b1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:16:12Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "30b84bfa08d22b93b88fe72b9fa79289242a39ae2281644a0815e39b61ad63b1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:16:16Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ae51764346023d955701d65d63a689df9f9fa8231fb8d429275757ea90579055",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:16:20Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "da9db0150e7c57b6b7234985c88cb757f7ff8d247a800ef54083d4c5dbe34abc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:16:23Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "89de350007e55272237becd97f6d4db6f5560ff1c12ea2d0dd06ed40441e4d2c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:16:26Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ea67b0f76e7ce0ee000a9e2bdc2f6761014e6abdf84d093bd9f9f8a320efe4b4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:16:29Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "72dc52ca06d92d74f5c642a3c39b5a62b0ed92e66c51172b93e1ffba81e991c9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:16:33Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b91499a2411f79fb71b53d54eef7d2a295cd7f224c95bea53e48eaea6ac5d235",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:16:36Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "dd30395c2d674257f1997f6d6f592cd5787e000524a4960762ae647b2c91306a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:16:39Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "8afe15df3fd11cde105ce47b5cb140603a4d6b0cc5084c8e52cfe6c9fb133e2f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:16:42Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "8fdf2682818b6a68d2d26fda358600b4b4c19d0fb92061d14d5d4f8fd3e696d8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:16:46Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "370b3c60fb71fb72d2151d304ff73f6cf4f357fedc53c575433de8c1daf7bf95",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:16:49Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "8aa2f5bb6a74c43d4b747bdb484e5dfd4b5218b77e9d9a8344172c4c70939d96",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:16:52Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "af4956431865b8769ae5813f656d10ca9eb4c8d60537889c5162c399b37fd9f1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:16:56Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e72ebd3176e5fdb81dd102fe2d978ac0c833f69f2a09207900e829bd9809ca81",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:16:59Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "d74c35adb56099178cd9aa37148e366fe104bbd1f8f3583f2eac6a9242595014",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:17:02Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "16a5374042043b9d328e4a1d90b497238bc2f110c933a22dcb62d4b7edc3dd87",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:17:06Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "8e8a5cb7e8ea70dacefcca91d49de26a3159741a5003a545ab893eaa29a8a02f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:17:09Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ac31bc46530de4821700cc849c1b8d27a9531bebd56eda10780ef6e9ad6dc283",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:17:12Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b1fee87f5b2e992136c33d76dff1edff33912b7d75f71f1756b2d5619f3ec9fd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:17:16Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "dd3d2f4237fd635def215efb6c5a32a2951b54e08c1d0c3ac22a81e2acfb08b9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:17:19Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "2ea767d7886976306554287a858adb68b20baa470d028b3098910126cf80638d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:17:22Z"
+    },
+    {
+      "run": "mmlu:subject=medical_genetics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_medical_genetics",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_medical_genetics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f7062d64d12133f7c62645648b6eb3f05b643956336d614c8bb9960ab9a5c008",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=medical_genetics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_medical_genetics/instances.json",
+      "instances_sha256": "d7126b30ab9ea7e824e4d681ab00e5122d86fd5c6adfc2ca52d97c1c9df39acc",
+      "retrieved_utc": "2026-09-26T06:17:26Z"
+    }
+  ]
+}

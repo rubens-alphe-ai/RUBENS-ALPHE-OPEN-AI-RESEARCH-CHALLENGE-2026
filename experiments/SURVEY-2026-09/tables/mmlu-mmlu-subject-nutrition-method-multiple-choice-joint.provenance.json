@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T06:27:33Z",
+  "retrieved_utc_last": "2026-09-26T06:30:43Z",
+  "run_filter": "mmlu:subject=nutrition,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=nutrition,method=multiple_choice_joint,eval_split=test,groups=mmlu_nutrition"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-nutrition-method-multiple-choice-joint.csv",
+  "rows": 18360,
+  "models": 60,
+  "items_common_to_every_model": 306,
+  "items_seen_at_all": 306,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "a625c0276e39d1ab2efc3d2c0f156a55a9830c155f62df487292b2e2a9e99d6c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:27:33Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "5f637630bc230f6a08bd5b9cf21c20125684bef3958abef58531fe247ee18109",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:27:36Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "a47b9c2c563b22884519626e0c9df0b8afb13bf0a7f42496bc5e692838188b32",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:27:40Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "6a3db8675e7dfeda30eb6ac0422ef91426692658a5610d0dafd75e88a8642d04",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:27:44Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "0c16dff2ab13e6506b0d88210e85d06955e9e76fefdb7ed09c0b5ca8a7fdb9a6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:27:48Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "e87e536a07f9784899185d629ca47f94730155f56adbc7b6f493cc259744e51f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:27:51Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "5495e285d5c2ca52bfe0e2f741a6a17839cef206322bd2c5fd765b8390890c07",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:27:54Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "2cfb851f8666d9193547e27521d556a39124f61d6980d4643c9994f6457d621a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:27:58Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "0c8ddbee5894cad308f68c6c96d395c240a1c663a84951edfc6b8da13963d343",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:28:02Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "5c2f636182b0d5720349464028c735ffaa9578f75bf8debbfaf8c696540d2663",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:28:05Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "e70bff3b65fbaaa3dc1988e3061b5a89fca2365267f178ae4304d9857375171d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:28:09Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "e9a3dbcb1f6ba526f381c46921a07bf4cade25a8bce3f12f3c192dee9da4d17a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:28:13Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "6d8d8e5b4694cc1db255e2b3cd995c0c4b955b687e28501a628b6e91e0fb81fd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:28:17Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "23e380060ff4fe9ae4d4af8c6ce7c62bb881a56dc50dfff2b9db2f5e5e7bce47",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:28:20Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "04e204e0f74ac7e0b544eba1908674313eb8754e6de70ac246fb5f51fbf8683b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:28:24Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "5945a4a2b9579d37b53ef0fa04c6916f7aa13935c0640132fbd34ee1566dd2b7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:28:28Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "14c78d9c24010e2f263110f400c331d7fbfd0e651ab2789ee9c20bb712e773cc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:28:32Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "280f8a001d53eb38317f2769796e97a3a9b5dc3da5f2c1b6dea1eafb81c0fcae",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:28:35Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "c91985b832089ab0df09740a5563cb5275bcf7068782b8b2bb37385bd4067d7b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:28:39Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "dbd3a1c735db9763c576d1876a2a1697f24b038abc474cd83f9b040b7094b912",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:28:44Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "fe7c419dc3cb8faeb9c4e9bafb63867bfab77bf1ee7f592479513de7ca1ecb82",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:28:47Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "3c6b6b23c0e50313673c1f5e3d7268ab23acf440e434f56464662f1ded0c20a8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:28:51Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "084f725a5b7dc5f8f7c1ae8389aa5c15ddf38824e85ad07ae448ea164ee0667c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:28:54Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "0b71dcd440deeb51f596021cf0b628c59f29276f9a9a0c5fa44519ac445f8240",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:28:58Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "e71bc971d326b29a890effeb43faa136b6ca7ffff881745f127eaa9eefecdde9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:29:02Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "d131fc7ccf83bf4c217ec0b6bf6290145e665a6653dbbc713eb1d2779bff181f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:29:05Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "f2fab593f14271800816fb9647aca22c538c6a22558a3b860c9bd13d11180f90",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:29:09Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "2965eac0fbb186720a3507b4096c2ed988d14e1e8526898f18061d3130fd7139",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:29:13Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "311317db814dfd73501419cf004120af1507febbc13c9cf9964364836594eecc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:29:17Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "3efee508f36c3b9618f2310de7fd2e283a238f83ca31d490ac980f3ae93a6872",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:29:20Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "a303ea5990f2fdb04f0e4e0e3228bb433a312aaf9b73bff11e8273bc004a15b8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:29:24Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "d82db7bafe95f11548474abdd7cf37d3bea5c321a25c2a29461eabcdca08a134",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:29:28Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "fe2f69d5f1c57f092ba1724c7c6609a86ec45d19b7912bc629c85835a5db1125",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:29:31Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "70de9fc7388906df0c88399f696588dafda063ae54473dc47eedbdde9de2068b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:29:35Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "159984805d55e81ebebdd438ea71354353091ac7db1a4452133f0d08d56805df",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:29:38Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "6f63c0ade306278b9126cf720eb578e35e2a458f1436d9facdf8cadbeb614ff9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:29:42Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "bb38ed5130c383003c5c093af8c73422698e1072f3c5afc11490cde664a4a04a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:29:46Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "cb3631d85e1273fefb06f4391cdd780bc49432f1b29a28891593fc0b91659a64",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:29:49Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "91f54e340bc99b1712b4448e51e32be2008d96dd8783287ae6da0a70ea68aec9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:29:53Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "a46a1b1987055ba0fcd4fabb49e86b76021c6bc39cfe15816f7da30d5ded7153",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:29:57Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "e3c663a5422dce562947df6393e71ab896393cd07c02918b6f340a70d5c459aa",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:30:01Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "e38936c799dc71212d36d5a1c011c517f6621f2dbd63ae2bd43e8a60acfbd829",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:30:04Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "9d46df4ebab97687c17f7f44c420fa5287eda0cbc3b2f039b9c21ce2e4d9e64c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:30:08Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "98257756d1bac35729a873e462e19df08fd3b2741178b0c83f658169b8a3e166",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:30:12Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "ee5a3a65752d5137de2ee66ce0e915dc13e8bf539394a145c87c00f58fc31a66",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:30:15Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "ed8057e3347b6dfb86b33c4b28df9086356c36d58fa81cda9f2100d354acf0f7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:30:19Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "030c8dd582a3731b62cfbca6e29f0c47ad2ab778b2cf7362a8b80ea53cf9991b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:30:23Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "ca6bd3254210222ac5825aae3837037f1d34036cbf73cd9dab155b0b8e67199a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:30:27Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "8a4715e77e6120546b6bc28ebe484bd78445bdaab4d6af537d3151e82c96ae72",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:30:28Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "836e9a6349ba8d97cc356e3a70eeb17b61bb46f4a95af50385ebd93d1fa9bdb4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:30:29Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "28b0e8744aa1fb684d0ef5563ce96475d0cc8d8e349582d070b6cef9a08e0bc9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:30:31Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "c2710bf491d2da7d7757f3fde925ba36adb905ffd6a1f86c359248aacff3ce49",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:30:32Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "d965600003ef6c09e397252468325e8bcf982c371effef4ccfdfa5b9bc210f7d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:30:33Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "5ea077f7fe0617caf26c0f9139624c9c04f9b4305640a760bd25e03e3215c8f3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:30:35Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "2765ff2166af1ab6b64cbb74b05dd6f6887d1ff9c45e9e01f5312da9a289b479",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:30:36Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "87d026a978cb3866ed5c28f96ca5b044496e34fdcf9332d352d27c1a8a986135",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:30:38Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "8615548b86de2d0a6be1d8a39cebff4ddc1d3c66243b97f9a93e41cf1d2361b6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:30:39Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "2451797f24c84da5bdb4ef721e34287ca493a9f92f8081e5d5c6c78df1e5f7bd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:30:40Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "44072ca04cdea056988a00ba77118437a771e4edd58ae79b4fce2f2cc1227646",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:30:42Z"
+    },
+    {
+      "run": "mmlu:subject=nutrition,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_nutrition",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_nutrition/per_instance_stats.json",
+      "per_instance_stats_sha256": "874cf297ece564c1139ecca46a702b0fe11a1e196d996600da1d6cd553d02345",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=nutrition,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_nutrition/instances.json",
+      "instances_sha256": "3a46b9539847facb7d083ec7a0157d8873220bc9a4bb3fb74ba44ee7c5220647",
+      "retrieved_utc": "2026-09-26T06:30:43Z"
+    }
+  ]
+}

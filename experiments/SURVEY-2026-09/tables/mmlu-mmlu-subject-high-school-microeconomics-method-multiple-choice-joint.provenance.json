@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T05:31:54Z",
+  "retrieved_utc_last": "2026-09-26T05:33:05Z",
+  "run_filter": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,eval_split=test,groups=mmlu_high_school_microeconomics"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-high-school-microeconomics-method-multiple-choice-joint.csv",
+  "rows": 14280,
+  "models": 60,
+  "items_common_to_every_model": 238,
+  "items_seen_at_all": 238,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "327af7555917e4a7194717cf7947ac25148e4b2366ce733428b4e36b4a79cdd1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:31:54Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "63fc8ca7a34a24c1e6c3720fd098d5e2012e1633293d3fef862de26c1e1bfb43",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:31:55Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0cf52575d67a39caf97864fe32e017eff7f1d9af8a988673ae3ef2470fcb063b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:31:56Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "702c79e3690a1ac1c35bd7244000ede535cb53a75826f42e6b56edf0383c3f41",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:31:57Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ae789cc3341e21ff39746b26bb77b318d6bf90505fb4f9ea4f51dbfcf61f7ef6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:31:59Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "bfdd30573893bcf8945ae37f81c5f7e59f5f6179c974a988b00f5dcb7087a3e8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:00Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "8782e1f5e40ac616c2878473e9c49905f9e31444f34c424b13093e9d90b28de1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:01Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ad099df11d312eda86ca7d4b0c9eb5af09f46723bd59de29554a283b46a89ae5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:02Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f7d94b67e40a31dcae316c8eb65e27f758ab602decb804613d6518d224ae4f44",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:03Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "1fcde5368308a02444bb1d5c31deb299f7aa24b8dcbf79b509c5f65468c266d9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:05Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "627a4a4ad6f7c7238580cea8eb8d0e7043a0112e06b3a213b8392a847436bbec",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:06Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "c96747bcd55878e079a7903b188d4ddc372c6dfd919fbdefd599d088bf1cb6e8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:07Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "001167c7ad1ccb6a4af315bd2d790a48ada4fbbcd17224f0341801b04831ed42",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:08Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "122f56e39b56623c1d578e035e8252a73f55c90b3dc823add5a1020aa2c2eb1a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:09Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "8d0d1048052b948394d7d4cb2b0123f7c7080a44a11e68af09a8872e88e28290",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:11Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "12002f84910bf7f585a04e2dc89e557b0c5e243c8069f29b9bf019a953148581",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:12Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "3c19f7ada79cceb0c08dba8f0dae13e3da8fc36ba899af1f45b8734783841d24",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:13Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "1489b82d70644e539815a0abdd5d95918c70cbb9c1186cc802929b656ce15bfe",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:14Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "3f1e9e16d88f3a4c1c5d2348f3204d7af4dac1bab6d5f88d04a9b2db9f35d284",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:15Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "62ff12b0980b0010666529fb33814656ef3cf08b891d2e539ff0df01c0ce5090",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:16Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "cd29b6392cd8dcfd31b4098dc7738e69e2b2615a188411519e243d48a92cc8a3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:18Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "14162729e8dd2adec542e7bce972b714f02e23293463b5f8c7e73ce4bc9414c4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:19Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e704de8224fc4f07c41572db1c50ef2998c139104b1bcebbfaebb49b1409b139",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:20Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0104e3eb100b7d684c694a61356dc79565a6feaf23a370312011977001d2c721",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:21Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ee51837168ce1a66ffe1854c1197011851647c4b725c2414206a81d549b2615f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:23Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "91f59859d86aaca68c0b39b2670c56b35c44f79ede8067cd6f117e2f6b21d1a6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:24Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "8e277d122758c438bca59b7cc1d2fd5e4aa929743a5d46e41fc251807bf7845b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:25Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "deed36e33cc813c07637fdffe912c9c9bb01204d14c9bd7e0b9be36ba4ca2485",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:26Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f09125e5cb3a5481a46a47fa95a1b1d3d99e40a0588533bf10ba54ab813277cd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:27Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "c0d52b6eae6f3189f2a916453f6202caf68fe35d058dcc3289c9954c78f22e4d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:28Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "4823d3e981f7673f2871db514b6b0cc981ed12f5fbdab53b6c012287464e42bd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:30Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "79d1e0f8248f51b2e9cdd85932d8e6b659a757eaa36ad32ac2370220048cbc38",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:31Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "8b40f23a2dd030c9a52c67e66cb5c9035835639800a99439fdd431ae31bccd4c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:32Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "1e5790a06c01f1d5b621dc35d4e24f3cd7b3b59ca764e24d9a9e86dc3beca422",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:33Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "396717f667ba89b28aea8b6256619c729457948ee8de5a2bdad4ed6e7ba02724",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:34Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "701ff9898a48cd564bb26795bfd72e50adfdaff337bc01b359ee15e5eac13df8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:35Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "532095fe1455381718cdd01c6d6d9bf987515ff8f310ec8447073034514a3aa3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:37Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "15e822b016e1fe797eed3ac88d329b4b7ac55738928138ae89bca283536a07bb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:38Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "595e3c240fc932d1f8f846327f62aa41e2ed0cf985dc7e1f2dd19370d29ff241",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:39Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "d09dd28ade5aab6e89011288142ad85d59890263ebfcf56e94f08be0747d1d12",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:40Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0e53965e39121accd0c614215f886db897075c5167e793e730f43b7a85d6f545",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:42Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "1f29771b5767dbb9ae69bbcf001781868ce98e4d4977945832e342c2708dc700",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:43Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "15374256dfde8e3c749301af72522c01fc22de8f69d6f29bfa73be8757a403bf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:44Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "476ddf64daee4bccf81e73c4be9239c6295ba3a6c8b764ac34f331ace4b6c4ea",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:46Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "3cdf33ec154c4434abb0a9d51ce240c3794bdef2cb354f35b7300e1c0752f5c8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:47Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "03959db436003cc711cf2c2be9086ece6b44ad91c922c584e871871b7ea1c7b8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:48Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "70317ff8160cd8ffef36807ac7654f7698bbeeb0195b1e23579e246b1fff13cd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:49Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ef2cb3e9217ac753a32c9d95327f47224f48032fd3742343dc08e7ae1bebbf17",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:51Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "68b9a6593c70268789e0c50819a5736ce1c2f5c1b208c2f6599652f5b632bf63",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:52Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f6a7832e3e9d00680efedc763daf21e0a8b7e50cfc89792e459394b4fa193a49",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:53Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "d1b8fff462a487cca9f733641f03d4bd5a045f663627b59926bf7f1b3f39d2e0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:54Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "c6cdde9cbc0917ec3e566f19ca3c7781e97c659a383ae30be7c46cf57e573513",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:55Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "a6f0b49d052675cbf3c55f30658a9d10fa60ba82d680282f119f6ed979950a63",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:57Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "037c5ca60482a020c0483ef6a7db221b1ceb0f34df273527f787d207bce28f92",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:58Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "6f7ae1d7c1d308ae7cf3b744257f20ad3f7e4daa1fa1fded8b50f9b373725afb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:32:59Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "6362ed5d9a14ac8a1be21ba61cd2218a371415408f4e4731f68baa335d5b1de6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:33:00Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ae8137851d873750c631a589442a054cffc88815b4125fb296ece6d89d85b468",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:33:01Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "bfeca20859a0f966162c083ad01cd010ea117eb7809e3f954462dfeb2745c1ac",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:33:03Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "a2f8fc62e33b745b0bdac0a6cca39ca49af020f90ed69f08e56a649568d27bef",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:33:04Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_microeconomics",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_microeconomics/per_instance_stats.json",
+      "per_instance_stats_sha256": "9d0e4be5a9b5bd996f3bad333b7151cfad18944aab6e98c96ba73ef188645299",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_microeconomics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_microeconomics/instances.json",
+      "instances_sha256": "0583d1dc86de0ca06e50938dd9a01ba4418c0972c86713400847e5d0ccb2c7d1",
+      "retrieved_utc": "2026-09-26T05:33:05Z"
+    }
+  ]
+}

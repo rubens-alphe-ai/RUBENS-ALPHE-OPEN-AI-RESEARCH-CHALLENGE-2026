@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T06:49:41Z",
+  "retrieved_utc_last": "2026-09-26T06:52:30Z",
+  "run_filter": "mmlu:subject=security_studies,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=security_studies,method=multiple_choice_joint,eval_split=test,groups=mmlu_security_studies"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-security-studies-method-multiple-choice-joint.csv",
+  "rows": 14700,
+  "models": 60,
+  "items_common_to_every_model": 245,
+  "items_seen_at_all": 245,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "469e470fb9408882e17a614990b934b30d9dd1ecd4e7c71b9a25f10bfe314e45",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:49:41Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "757512487f949667c0f996c046dd7072435d272f538be173753a2b7398eabe9e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:49:42Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "1a859e2dfa38db2bac3faffee2148ec1bcb15ebea6831c94bba643a03bda7e7a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:49:45Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "cfe5c3681f3dfd935a8b5ada6ae122562b02b8d4ecfe082860fb8bf3e51f6742",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:49:46Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "a38e9f49bf0e0fa748caa1cd949ca7f2b0fd69e7c9b36ccc394984ca690e3c55",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:49:48Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "a40df39d48186bb6ca37cd8d718ceaa714514160017e7909b5559f607440623d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:49:49Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "473877ec1df6b736a276c1ca95f567bb4b5ddb247ee3759a510c971033307052",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:49:50Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "01fa27cf1b845e236c67260fa4e7b1b521cc3a901dd2d9a2d733ae116ee09987",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:49:52Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "4e0a92880a524f2be0c97f5db81e084aa60cd63174916ff01d517dcdc4ec119a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:49:54Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "8b4852f46971b0a65abc4ee4325c1597ca043d67d5fdc77732640567796b0ec1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:49:55Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "45116549d9637484e012f7535038da3fc3f3c7760913ec4b6bae97bb7adb0f2d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:49:56Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "5a3783a7e54a6af3ec8ce40f134a66ab780b726c53f41e71e151d30b00500215",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:49:58Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "d8fa2d03bd7db48be2b3a5f6400fdae5c0c7a9ffd26e48542a6c09d3b622c67d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:49:59Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "13e4842007ccbfbb94eb834c52f9d48510ed7457bf6b06fdbd100ec85173cb58",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:01Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "a56c0d7f7ecc141e9f061b11fe4a72ac353ec0745ee008d5715fa0dcaf7c704e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:02Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "30d8e9c592314e3386414d75266ae63be7fedd51251d792c88950de94f96969a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:04Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "22dca60568d7c32fe0ad588d09fe90863e2f65894b09da36d51816de166372c8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:05Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "53cbaad5cdb4139562dad277faf55732a63905df3ba23fff8c69b3fb8b85e4ca",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:07Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "bec02acf3f43cf6321a6a95c3aa5f387d94692f325298c2d3978be4cc933c250",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:08Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "5161ae971213e8f8d75679d9e125cdf197de93d1af9344d737b7d80d3b862aad",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:09Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "e309c086f5e6e115a5412cd020d06993ab86a07a2651dba82552bf61a16c9d93",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:10Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "5b2d80bfb897267751eb39a528d020b1bf8ee069a94d90db087419dea54dba3d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:12Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "d3e4182442690fdc49ac13703fbccfd2f14b5c0b7a2e735a895c1af9780cc862",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:13Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "9a05a5e892aaf047e9ad80a563b1b36488c737293c295c507856d4e3af9c4328",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:14Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "dfdfe070c06b07c5a0439cb818e5d1cb85d0ed2ee641b4aa6b4ca2b506135dbb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:16Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "261d84a5b479d613862c02979e821a65cfddee8e4711f0e77e91907295155cfd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:20Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "4477c89d233f6f874bc9c9c8a9c086d0021a200ba2d789d81bdbef824d344638",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:24Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "5eb9d29be9eeb0f1155545645bed58c0f3683452df7ca006869e1d98f062272d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:27Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "9965147eeca227cfc8e6e887bd0dcd4fac58d91cc7f4f30158f38097e0ff875f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:31Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "7f28ddaacb3ed4a1ef03f554b60ebabf092fcff8ca3ac98426fa582dfb403463",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:35Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "a78c9e90c141424bccdeabf5199bd4b3482ba705f1fa5347f8e5a8c64546ecd5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:39Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "323d6612bf1cb77af5caa96bfdd044ff15fb2c6e1d85a269bf388d801fc3ec83",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:43Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "ff55de481a0296a6bac62bcd927ade23e7ea61f6d798f4327d3b799e977ad931",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:46Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "17dd2e483cf2166bccbb8d5e9510b800b0eb64f8ce9f1de518b9f0bb5ee506a2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:51Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "03e87f8dccfc2beeaccbdb8cebd1e1064dffa6581eb02306c4f21aa0e795e05c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:54Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "8144256b7bbb13c3e94a5b13bbf5edc2f13e42a70aa8fcee5eb00e3796ca4247",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:50:58Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "ea6a221bc185d203aad2948860e1b6e2cd6faada9464a9a92160332cbb76fd28",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:51:02Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "18dfa372a7f045cd17e4163096fff56ad9c5efc886e7798d5a633d8463b8e18e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:51:06Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "51b7f435ad9b66d9eae93cfc2147b6ce99a1bafef51b4d9ed11eb1dfc83ed318",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:51:10Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "20424d5f7f30ede2f6c3e5d2d52180ffa880f48439c9f5a211b157e6aa3b461e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:51:14Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "e45cf28ab708264af6ac2a0a8f0e106f0eb74dc097ecab74f4ea141930fccaa0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:51:17Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "71226b31f11173cbf3269d809f5ba5807a86e1c2755b508e6778b472d197edb5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:51:21Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "5ab5839368b81332d9f7b60c65c14b3775c97e17dec51a8f39df9383f753d372",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:51:25Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "ec273cc71db08e292bdea21705ab377ed997847043a89199d3abdb4d9da5d477",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:51:29Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "ac371bdead19b66bad564ea74f98addb42b3a49b894f16efe57d1e7b6752f162",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:51:33Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "e42d5a7869d8880169d734d10506c152cc2b15ac8bd0e09b0a17310af39d84a6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:51:36Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "20fea95089c2487c2ed7f39b0f34d84c36f00e4e0fd45dd7ce301c6242608b53",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:51:40Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "a58a3b8a112160e357b30ef05a30c21c3f5bb4b2483a60b837fae500ec843bf4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:51:44Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "198957e943675e223f567e450c5520b6b268d5c188cb11f18b91c108aa6dbcd8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:51:48Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "55ee8f8cbed256bd38643912ddc656dcdce8d61305e3a744dbbe440b4a73df5a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:51:52Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "8f88aa246753ba81a5d04c8939b7a55b30e50b9a858a214f78e1db8507fceaca",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:51:55Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "4c9a5fddde2cd4d79d06e04e2d799f23ee93de7f64f648bce6ef118bf1ba6afc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:51:59Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "4f51824d15196344324fedf30823fd4ea147d730a34674be01ff188c095edfd8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:52:03Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "4c1fb17850cac0a60ac1cbc12a0eafb10449b728cbe5cfebbafe5f3b11d8c6fa",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:52:07Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "dbd043fe08215a05c0aa760c68a405ae8d47d122112ba2ba04b4c44db85e570a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:52:11Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "c562c7845d17df48f395b7eb7d12eabb9a84db8d63e4515b1433f5c5dc3543f3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:52:15Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "4eec99f3afa2da7a6a4d22a3a38220c7fb6b71f37f3f9ba6d4fefceb4808df20",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:52:18Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "8ea595f285454e286f86ca5ec47da7adaab52318def78f6d1761ab31aba9c065",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:52:22Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "85d2ffb7d631daa93df8750077f1c2b445e0a711089b7bd0ab1c8464d7a452a1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:52:26Z"
+    },
+    {
+      "run": "mmlu:subject=security_studies,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_security_studies",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_security_studies/per_instance_stats.json",
+      "per_instance_stats_sha256": "96fa5a43d4e3f04480e00260c626c038ecfa7b6c81e4f7a1d356a81bebf7a15d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=security_studies,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_security_studies/instances.json",
+      "instances_sha256": "90c37adb128f93a8d043f30bb94e2c4b693af424df40c64d58d4d1277d2f7056",
+      "retrieved_utc": "2026-09-26T06:52:30Z"
+    }
+  ]
+}

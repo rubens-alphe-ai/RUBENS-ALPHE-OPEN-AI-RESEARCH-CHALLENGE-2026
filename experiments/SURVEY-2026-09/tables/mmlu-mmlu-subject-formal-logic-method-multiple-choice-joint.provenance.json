@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T05:06:13Z",
+  "retrieved_utc_last": "2026-09-26T05:10:10Z",
+  "run_filter": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=formal_logic,method=multiple_choice_joint,eval_split=test,groups=mmlu_formal_logic"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-formal-logic-method-multiple-choice-joint.csv",
+  "rows": 7560,
+  "models": 60,
+  "items_common_to_every_model": 126,
+  "items_seen_at_all": 126,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "f563e9a0a0b79b6ca834d7f57639f8e5195412ec4e7465a7ac7cdb2aafa600a5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:06:13Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "39f2b003276e143e865aaee400eee123f2e26ce095fc3cd13473f2fc7e8f1d56",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:06:17Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "cd1f9ae69690995ebc96064d15310e27aa141441b6d722e317f264567b02953a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:06:20Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "edfe563db22ea162ef53c0447de376ebd75ace5606dda0b36bbe4618cf55f754",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:06:24Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "f82d7532c59275371f255fdd83c56523b0684375122a581f35ea7216acab697f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:06:29Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "d2e65faeb487a0e52ee7b7c7c32f1fb05afffb63ed5175acc7f44b45efcb4481",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:06:33Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "a44b49c4faeb003db3235f2f31dcded059b19c04163aa0fcadb4bc8d6bdb0ed0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:06:37Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "0b4dc860ec3c0d5c70c2defa13f6ca3fb0c8e797f610a1a9aae3502a582a22a7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:06:41Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "31b413984cd8fb232ec1027dd892fc7e19591bf822da5166e8511c86bfc2a2bd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:06:44Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "67c73aeccf56ac909bab75369cdaa780aa8f0f97d781c373db4e154bf6a3bf3f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:06:48Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "e2777d75d4c4e2aa732c146909b368d46e27c01b13c8b0c3a19f6899f68925a7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:06:52Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "cfc07b66496e4d114fd9963f5a160da27f5ece0edc55470a12f89a40f1c89d5b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:06:55Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "2ba20c99c5e4d04db95d6d003bab7e43ec90e1cd4f9a6d5178d33ccb7452dc2d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:06:59Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "b958536a6d25eae0d0d62987ef90df8066a26cc63769e50f02fd0590d5da7e27",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:07:03Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "3ac3ba566a2035356873262cf59a270a95045dc3372f2a1c1eac194e4255f684",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:07:07Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "24d99b45b03b089f4d35303f8876ebb533a79a8fddbb7a4cbf9fdcb453432629",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:07:12Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "d9c14177e6cfd95495d9379dae59647179c8742b185982853b1a97169003ca96",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:07:17Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "89761a05cecee90f01b1aa14e65ed6d076eff53912bcac7120790aec7f9d29fd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:07:21Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "0eac59bd383080e02c10a5f042c973ca31916f9a78db1d7cb126c95de89b9c58",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:07:24Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "e4d2e22985c7a0dcadd62319c6ee7666ac77653402c93a0b3641828986923e31",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:07:28Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "9de89d9a5eaed0ecee50e9a6d29116f00207c6d91dc8d6bcb9730918ada79f82",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:07:32Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "c80b107ee959eef2ef2a3f426830935a9af390bae9eaf12e0bae2452f43edc55",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:07:37Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "d90793afacb5731105bc6bd45c53fe228c9d93a68ad5501d2e31460f4c4a5407",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:07:43Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "e9831f897f54e7fd9a11785dd38da057c7ebdf0fed23d34d2e65bb2229e51893",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:07:47Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "0a56165152d1bcb74951f96b1b0eac4c27c121b3ed9c33415e524453d52b98b5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:07:51Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "50a32396890269e471c2b68a47daaf1f1e4d9ef372424135276b4738e819e32b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:07:55Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "919fe981b58e013b3953c61346539f2b2d672a739c10702202b03297bb3f776b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:07:58Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "a05f3f3b357ac6b03c225241a131650d222b9b4ed4c10f2cb0b072d17ab44f50",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:08:03Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "355a64235b666fa2bbcdec5b582b4f85ff9da7b39db0b3390e400a40b0bfc91e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:08:07Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "0b858f39e3a137f22ab253748e418a40e9f8b100582ace5d9d4e470a2f7f2f10",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:08:10Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "cef9dc532aecd7792366f1b223ce048828299e616f528972f6aaecdc45d2e80f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:08:14Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "68742eac376cd5b9ce99afa782878f9fe982d08f3253c1833fe408048876146e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:08:17Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "21faa46504a35563dee2ede403caaeab62b442168572ab19381bcef4bef195e1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:08:21Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "6c27cdb623ddc80935aa5a75148926c85552acbf3a64f232b000b06d0208f888",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:08:26Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "304b48163bb20b87f2f86cbf8679b71de122d4ed21817496d5723ce94d8c76f0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:08:30Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "697437cd9c6c6d78efc62ee9c279cd67e0d3945329c2ff4bc461370ae9959721",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:08:34Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "c47e33ceed0aa31b544919b5c7cbf5761ce45035f13f3eff98dd9cfd0ce13b33",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:08:41Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "4aab4acbe34fb6cbbc9666b741f42bc3e3080433cad8f6ba982ab41730fcfdb6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:08:45Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "a030b3933f56f45814e2fdbff8c4757e8cf9df100ad6b981985c7282adcea1e9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:08:49Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "b7e6bb044ce4ab28799f25934dbfcafdfc5cf4c475e903083c6a14e6928ff654",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:08:52Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "587d07bb6bb6fd5907158106dcae4aab10bdbdd2cceb1f6a8ddd28fba2341cac",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:08:55Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "850e88cd15f70429916df5e1e2fe2273bc7f5d47be8645738457cebb8d996983",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:09:00Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "61bbd51ee3c03aab1e73e537eadf8869be91ca64b3b9367511c8bed4f59db29e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:09:03Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "6461b577ad9ca9d9370acee923de7babb03af59e65db2957f1311e7423817d6d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:09:07Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "bc1f04ec12321b8f678125b007c6ed8584cbfc6ee8062bce9f49efba0f5e42f8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:09:11Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "f315ad4aa66226466a92f53fe77a90090cfa0c96da2222a0e008b8e96948c1ac",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:09:15Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "7262ee1787627ede8b8b0d8b19d3e10841ddc4cfd7c197d1f0a9b67f8fb3a8f0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:09:19Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "c0cabccbeb9c5a4037e1feaded31a017451d431a319b34bfa1c0203aa36cabf7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:09:23Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "01d6585826aef27bdc3f9f5c225f03cd70973cd67f668e9d23544f5858d34345",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:09:27Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "6aa3f47b615ad3f391fa894cbc864d2ae6534145af17dd3d89e0cc704cd86ac9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:09:31Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "3073ce6b137645540bfdb5688d08d512aea0b05ca9c21b6ff780014a2f9d6585",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:09:35Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "a2a25d6cc45e41d475b0be41e52581b58b132836a43c57d4eae805b1a7f0d98f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:09:39Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "78e96db6759f112c5cc11be7c930d2f0562478634d55951eff73b39cddb3b146",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:09:43Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "e8575577dc0a8800e36ce91abb4b924c027448d43b38b35bab3f689a9848abb1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:09:47Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "10bd28fe02aa3faac9c9166ecc96c0af36f6ff98dabd5bc82e57e7017cc6c604",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:09:51Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "e256a2b8dc7aa6585a587eb84a8749ae0ad08be58f4a92e4e6d7cb918f7700d4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:09:56Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "da00bb228a08cade2db3778926e7667d9e04a1f8454a23ac6cd11a0333b1aac7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:10:00Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "258c3a1d6e4a2c141d6a7cab90091cb184843c1dfd6872c985201b7bf39e73a9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:10:03Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "2fb2211bfb484fc3018607c618fbe7ee6554cb5c438c88cb05ac844f70ed62ef",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:10:06Z"
+    },
+    {
+      "run": "mmlu:subject=formal_logic,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_formal_logic",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_formal_logic/per_instance_stats.json",
+      "per_instance_stats_sha256": "b2489ecd00849d62ee07f7bc24f6937f1cd57dc66464a300fdf66bcf1504ebd1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=formal_logic,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_formal_logic/instances.json",
+      "instances_sha256": "b381b8c44ff34f9e359df1db7e60a603452a3c71906d91ee379be69cc9a4ebd7",
+      "retrieved_utc": "2026-09-26T05:10:10Z"
+    }
+  ]
+}

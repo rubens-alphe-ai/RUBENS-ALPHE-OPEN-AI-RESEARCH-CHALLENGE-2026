@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T05:37:34Z",
+  "retrieved_utc_last": "2026-09-26T05:38:47Z",
+  "run_filter": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=high_school_us_history,method=multiple_choice_joint,eval_split=test,groups=mmlu_high_school_us_history"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-high-school-us-history-method-multiple-choice-joint.csv",
+  "rows": 12240,
+  "models": 60,
+  "items_common_to_every_model": 204,
+  "items_seen_at_all": 204,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "62a2372ed0f95cf353854e1dab077d73248f393bd089f6ed33834b581b6635c2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:37:34Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "edfc73953affe3cb22bee560bb47659a3f274ffe4479dd10552ed09f99ee6641",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:37:35Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "c5be38b654b39b51a29131fc40672fe205f0d775b7b770af174a69f7d6432d54",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:37:36Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "2c73d714658ca9271ce9f60e49e16d00ecaa6f8d234f757d38b3915d93dc3300",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:37:38Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "e4a47278f4be814cbc85d835c3ea6f9853769dc9fc19c8f9283302e34c520f21",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:37:39Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "d6281e1f2a7ce9cc749b368b9af8a0df30ce38e4ee29cbff69e4acbeef622fd7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:37:40Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "7528f321b521b5015ad16eda0a5b24f40aafdbd74d1ff984d74199655acbada0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:37:42Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "968db59d446e6a46cd55a00ded2715cea803fd8bcb0c2cb4a41f69b28f4b7221",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:37:43Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "b0010d1596c502d4c1ecf3221123d18988cf523d775b8afa2d890a37d9b8a10a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:37:44Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "14b79f1ffdaec9996418953bf20accd5347e52a17f785b3f81cd7fddab0a6136",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:37:45Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "4ca7af87285917dd7cdd309af2ffcfeafdb30122d6f8f0f24ed081a897351fb1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:37:47Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "3e09c9090752ee0fb2f527c373bd3186f33db03da25c590ee91f908264a964a3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:37:48Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "581a02cc16f454bff56dec66504a6b2f1b04f7d9d586bf855e2a6c529bdefda7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:37:49Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "02126aeda62e75ae796f67af9c803de52a1be06b585eb1ff90185dd3ceff8f67",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:37:51Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "1c6d86c1301729c7443b0500dd3fd5a097eb016d3d1ea02ae44246550ce9755e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:37:52Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "654fd9d6d8f90b18b46b7233902c2f00cfaefe62ff6300d1519ac24e64c259c1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:37:53Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "713021021e3775cc7fdb133c0ee6f10f0f322cded62aa1dc8cdf906ad82af3e0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:37:54Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "ff4eec3db949e8296d7a539c68e4ac0f699c73a51c1d3e3ddc01457629ce6dfc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:37:55Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "17200ab2df850178fdd87dea0c37ba262f40bf3b46c22f4fa5acfde34d47ce38",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:37:56Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "4519035f703af6811b612ecf58804907acb5d64c270c0b1705ec99df3338774a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:37:58Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "0b1f9b37fa85f6a0ae1b47df9ed94e5bfabdbd7d099e1667e09bd61f74670317",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:37:59Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "fe5d6457df27aacae84f7acc8412e42d9a2d161722a504c7e72557b1d74f2ce6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:00Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "281cd14161a10edee75f7d9dac663970ed189293877caa1aef0fb4ce73e86008",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:01Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "c2ac195b2d80c7cc6a149121c7f9dafc0d818ffe2bd21490b4c4ffbf1f5555e3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:03Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "903afb4d07749a6cb18fb8c163e0f90bdb630f25c916f030396516c5576c97b4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:04Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "c02ae4a5dc43522698ba75b9a86c03b2c710195d3bf4d379f0774067af40db5e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:05Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "ef1268932dd93ba52daf086b328830b6e61de37aff9731c852cc0966b2151981",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:06Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "baed67cbad945a82fab33ecc523a55532dc4b99de6ee3bca6d6b51a2446d3aa1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:08Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "a3832f1f0c53bde650a40ab071b76fc52b0281765894404b5395972823ef66bd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:09Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "f5a503ed1874ff015407904510a200bc452c05854063403a52375a02ee6d2a9f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:10Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "0c5b0c07ce11ad04b8e8bd3ae2a4cf4e1387f679dd6a2f9e6181a8ecdeee142f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:11Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "8d36faf267e9f8190f2f286ab66fcdd7ce69f34eeecf4fbbb8b1cf462de61617",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:12Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "f44bbedd14b355701fbbc25184f39904ee5479fe886501aff366b9846b6e72b3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:14Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "1386336af2d1c80ecfb1f614cc606d8c7a3d41ef558df0d5618f98c18ccedce0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:15Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "01dc70b285379c633ad2d81a92a2006b6e81bfa627a7381ed8231506f5fc9908",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:16Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "2f819e47f1da900e22a38e8a64211581b7f352f85a0a9fd4f835d23023dc6b89",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:17Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "84de94d29be73e1e2b20a68cdb5a3aed4847d374b0c226c67e563e0de06fc640",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:19Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "a8c02da0fb9a7019935dfa7acf4e3daac920ac46d00c5b7ff583ce4f655165b5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:20Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "4e712fae592ead887a800b2dbeed61edc370811a4258c8459b17ec4f398948b7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:21Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "46693c41b919daddb031f2d5867f673b7646a66d242afb15a578876179609f07",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:22Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "7fb6856840822e96b16bb724e6adbb1ebf7877bbfdb23f19db109420149d1125",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:23Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "49302a2264078b0ed63750d727cc6eb15e857d2414e44b63b88de94e9a190a76",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:25Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "c60083ab7cd865527d2b30fabab4a4f86373b7ea7e73d3776506b526b12867a3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:26Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "23f35fa2703e35e63e06d17056607f6b26ea20da8a356c16dacc4f35a0e7b03a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:27Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "cb87cc6a7f5b893b1f2a81b5c117d61813814edaf555a83876ee2186938d2ef9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:28Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "4713a1cfa77a674ecf8bb01d33059ee92fb969b3fc20802bc47f58a969756353",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:29Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "6fb0c03fd03efb13c9833db073b2e1043a8f18876a56ca3139ffd87493ce19a7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:31Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "0178a11bd0d4f46790036a856688b2f23219bbd4c74230d7538317d92666fbee",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:32Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "ce1f6b570811a3d62fe67983eb10d5b6ad7ffa02d2d655d2dc9f554a7f08de24",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:33Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "170dbc33ee467127cd9d321929b1b045d47ce0a26b5d958c778b0141dae87393",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:34Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "268379c1bc9270a433b4e6fde26cd1fca49f36dec2288eaab9cbd2ed2f097d50",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:35Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "b26eada25ecb5a44617a2e2715f1744b401cc6adeae5422498891b4ee73d7d65",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:37Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "67478a90c451244d230e1b88ee1357552eca22c53fb19341f6e027e38beb31f6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:38Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "228b869796ed6e780b0f28ef66323247823d95c183c0171f7e63a79e5e4209db",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:39Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "08116c812cd6427fa30edfd249afc564cde5ff36058333f9310664e7f4bbe8e3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:40Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "92f43935a6c88fd9f13b0b244b7de52a61c88c6f85f51bd72171cd52aa7ff1fc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:42Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "26e6cb4c3332c149319451182bb92ee8c931dc59c59e69e94e9f82baf67ae5d7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:43Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "7ca2720e6fbce1eb4242769f8c2c1fe8000a82050cd5d2f2f662aac406fd1206",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:44Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "04f68fca887741861d4ff2dd44d5f8afc3473d46b8d23222032f3383675ea3d8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:45Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_us_history",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_us_history/per_instance_stats.json",
+      "per_instance_stats_sha256": "1e5c82e3359dbd0d320b89e302db5d517022c4f0c979d59ff6851d8b3144a1aa",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_us_history,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_us_history/instances.json",
+      "instances_sha256": "db1c82b6dac5eb38d9e2e17d30b650170d951a87023e152a9029f30c6fb0ca67",
+      "retrieved_utc": "2026-09-26T05:38:47Z"
+    }
+  ]
+}

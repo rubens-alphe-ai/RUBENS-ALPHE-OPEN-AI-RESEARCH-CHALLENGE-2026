@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T04:48:48Z",
+  "retrieved_utc_last": "2026-09-26T04:50:17Z",
+  "run_filter": "mmlu:subject=college_biology,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=college_biology,method=multiple_choice_joint,eval_split=test,groups=mmlu_college_biology"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-college-biology-method-multiple-choice-joint.csv",
+  "rows": 8640,
+  "models": 60,
+  "items_common_to_every_model": 144,
+  "items_seen_at_all": 144,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "c7ab9ee4aa1618dbd7fbaa386fb072341ae5e5bf754d186b2d71db52880a393c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:48:48Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "c3e8124f0685b1aa7ff51c6ab0a4f6e9f013f730533a07213433d312f97b52fd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:48:51Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "c5f98983a644f04d25e9ff6c6b396644a64299ee8270c643ff80c832ec94a080",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:48:55Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "4438512aa6d7a71e4ed814222daf2d8a1ce838cd3478e600cfb653e4f1045c7e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:48:58Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "d20fd532ac97b41e0de1050d2c37dbb7452d869409050add92040e9f8efbfd7b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:01Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "53a3dca19dc3ba652cd53e760513fbac29d59887a998b8142937d0384b665afa",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:04Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "6c569451c2021f4f23ec9424039efabb98772511fe21341c035ba6ae50d8a490",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:08Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "7b8ca9810700526ea0c8c9c133edb75d36007b1496b9368abe3af619d1b44716",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:11Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "da50186bd1ac466cc10cd0aee3585b6c9a98c2e34b814df1b926549c847c3e8b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:15Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "5e72e7ad43381800ed5fc2b237ce0ddf253493f9b01d5b11c1b2b4fd0ca881a5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:17Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "a87b6d2c564316d76875ab8944f442f6aa6fbb155f8a46f5e770e364986e19f4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:20Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "ec4d7e1f838df4df5e37da6de0be3195699d1acf400abe5a3b94ab7efd1284f2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:23Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "4dd942bd5d3a83a88148b38ecb22d78ac7dd8869b0c3449c031b70347ec05078",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:26Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "ebaaaee0c81bc9389c0012bedb343135f8318622764815e1bd9a863ef2307478",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:27Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "f5a19b4c05f82823bacc52dd6993a3fce3a8290b77f05eb94eff31f88c54ca12",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:28Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "4d9ad26539d8ea3cce336594a9c9f5fcd16cabdca8a7b6bb9f21f36e4a3e340f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:29Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "3d3c404bd3536051bb83a6adeb30a36f180e031282a49fd0e684737b40aef67f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:30Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "e3e793e6b6ee96e332a4456e26f651a9da2de78b2740906ab2c533c5d1afa40f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:32Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "c19ca0bc6ee946bc31578b7b04a506ee569b87bd73f91cbede964fbe6a4bb3a2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:33Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "20d5d7bd31371d84cdb9dd45a1a864095b1c2f43e5b877f482b1367b55a7a6d8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:34Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "29d167167418edd9c4fbae8fc1fda63aaf85f4831b9f38933006fdeb95b740ad",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:35Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "f7dcd7dabd3ac83b5e0d12d7e084b13a3fb2f4b4ff75f5a5d43a0a0b324a8857",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:36Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "9d89e397ae003add7135220cee4f0de5b2dd8daff888ea23dbbe6ea2ef03d52c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:37Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "9ae71485c2b1f74b9cbbb82ab25af82d211c9b6348347b161790241167538247",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:38Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "3606dffc90fc11f278b979f2045004b7f7e55af203087cfdc63508c2713bd41a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:39Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "a0c798b4bea120ca29191a842b8238113442b34d43328a51a00f8ad693101f0a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:40Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "8d960f9879f9ae34044e6806e61e1aa31f37142d1f9a95d0de3a3f5fe30a19a9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:41Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "109e7177a67785d6efecc1dc6ef7047f82b1192bfcaa1c61518cdd97b9fd5dc3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:42Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "96b0a61ac3b71b347c63e306d503470b9742744e54bd2d595ce777b40b8995e4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:44Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "55d5bdfad72924e6c666a71843868896d0d15b6eecc390c74bb4ca5cc93f08a4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:45Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "81e097e9ba119fec3c42dea7c05500f0f4ed9add882a8dc48d7e325df964253e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:46Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "0357e4d92f0779f831a92e59ffb5b0921251c5a86b32a76db7cc68d6decc5291",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:47Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "2839d94333cb8682e00d79fe87cd676d4f5cf81110c3c1b12b39bbcec634f8ea",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:48Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "277df7dc5f4b6f36d9bf79c82370eaf8702ceedc3e5c77f175dec41380a5d86d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:49Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "2a302d8ffe5ee270d7ded3008294dcbe3e05741b609f728717a72fe88e52dc79",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:50Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "1d62f527de52cacb54d22e114a9b1b6ca8d885f2deb61c99b0c4f7affb216869",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:51Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "dc8928a12afc8b985102d4abc638d362b131d1f0f3afd8bdeb209a8e2930887a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:52Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "9dda042b2245ea317b0f805e6222db72f037ed04d3af294dc215b0287811d60c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:53Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "6a8b5939a5f60e776aa42ab254f05d8ac2a34ea864ac11597e87bd774e4e8325",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:54Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "59cec4715b9a1594d4c957062b243c067b1b14b73102d954836fda5272647040",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:55Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "f59443db69e3e181bf1811ff093c680cc9666aff05261760079ba60bfb983f77",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:56Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "18805dd6179ce1f8bd225d65d07b5cd5759e373d25b5d68050be1377239d63b2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:57Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "85d3028b7615e1f8f08a67958db06f273968c3739bc24b0eef2d2df7b82db003",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:49:59Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "88424d29331d7a0b1cbd1aac0ccc2273189d423e644609f4689c54ac065de71e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:50:00Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "467093b55e21aab181a5d7f38fddca0745b22f1b0ca01d1d8a13067226c1bc32",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:50:01Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "94b6950c7de5427529faef98596ac69a00057b981ccda41592f4cf385dad1d82",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:50:02Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "70a4661a9044b5b8772e8c3c93085882062fa566ff0064b01efd7e07544ba8ba",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:50:03Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "bdc5e5daebcbaa27e5a6618b790e39aa11243ac8ea3fcf9cbc005b6a1cfc4fc4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:50:04Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "c5b20ab70fb1b177e5427e5a0f1c3f48c72da28bfd276e2d042a8e0355009d01",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:50:05Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "3ffd03a55ee04bdb83b92fc3509b5809a6310b259db82bf03295d900193c737d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:50:06Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "f228eea03e73dc7333292620b35c38a1deaf7b7804340bc36b5e94d0617cefc1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:50:07Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "a8ebbaf50f94d1000bb080f449d45585e608b5a3d97a98a3fe452972c6aedd57",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:50:08Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "0d7d8a29df3a75e2486afab5de294e5ac991f031ee7090e6229f742833a8f976",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:50:09Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "0f7d4109444aa92c7a743c506ca560ada3ba90fedc5f40024d5ecc65624612e3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:50:10Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "fb14f7cdc1f176702082b58f521d2b1ea8c75364141d7aceea759cf9687e2850",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:50:11Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "1ed29356399b5c576a307505c38786a702dc4747e01fcbd1bf5dca5edf720821",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:50:12Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "31754203ecd6b49c36a8571203e59d6269923c555e5a9f904366a8f1a30d8d9d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:50:14Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "301e81147e45cd266e18e338d554b0c9e0cf70f165ae78043ba7e8105a08432b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:50:15Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "81092fd7a65cc890c938d35fdde5d1a420aaf979b24f20bf1484ddf99727e02e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:50:16Z"
+    },
+    {
+      "run": "mmlu:subject=college_biology,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_college_biology",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_college_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "134ff0b477a911dab1778e29789c2e3e62b50a761c27601512b2a2f30e3775d8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_biology,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_college_biology/instances.json",
+      "instances_sha256": "e320274de58b5e947a5c29711277d4c3e4f41f303db5426c465238aa64205ebb",
+      "retrieved_utc": "2026-09-26T04:50:17Z"
+    }
+  ]
+}

@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T05:49:00Z",
+  "retrieved_utc_last": "2026-09-26T05:53:07Z",
+  "run_filter": "mmlu:subject=international_law,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=international_law,method=multiple_choice_joint,eval_split=test,groups=mmlu_international_law"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-international-law-method-multiple-choice-joint.csv",
+  "rows": 7260,
+  "models": 60,
+  "items_common_to_every_model": 121,
+  "items_seen_at_all": 121,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "ed0ddafdcfa5bf32745cf2d93fc9b73c152e8d9f95a438e84383771263b05a70",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:49:00Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "e3ece734cd84a47aa22e25e05834f735e089c8a367bb0855ca61f57d3dd64e21",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:49:05Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=international_law,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "dbc7f2052dc5f109335983055695b98d57f348ecaec5d0c0f903ab08ee85b584",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=international_law,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:49:08Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=international_law,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "0b26d5063a70ecd465f1661ceb10cf37de7bdeba5c1e4ce111e3e1b6b01f0092",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=international_law,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:49:13Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=international_law,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "a8b029b7aaa2159aeddcb0f36e8635128ace2abd3018cb64add5f8243ceacd33",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=international_law,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:49:16Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=international_law,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "fd545caefabd43910379064a3be30413b4bfa08a309213bc8d3776cf2e9878ce",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=international_law,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:49:21Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=international_law,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "2a39fe2dcdd00df1bd295f4681ad1cb733494c355a5d5c6293781839587f170a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=international_law,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:49:27Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=international_law,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "3f560b47ce83b93b46b73426f1fecf85d38559a95a2d6355aafcf93dc1bd4f11",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=international_law,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:49:30Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=international_law,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "20bf6dc417fb6a60332a5d0079057de565ef8ad57ff4a24b740ef810d37c7608",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=international_law,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:49:35Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=international_law,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "6a4db0385c46f29b7b5fbcbe7d02bead8e81edca092f89a9d35aaefd5a821a4f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=international_law,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:49:39Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=international_law,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "3e2ae32401d983c9165f6d14c6f54740854c31df9d94bed2978f09733e665aff",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=international_law,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:49:42Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "fdb9be308b13c4c22a49cea6620d55d956ebf332e7c07dfc790d7a474326693e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:49:46Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "5d075f65568a3a6f62dc39597a5f1ecab7354b8b916b5d6d34c6ca420c2e7872",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:49:50Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "e3ddc9e590c8d9af6a0a9303bd99da7eaa250b6e42e3ac6ce86bae6526192fc4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:49:54Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "6dbf60296cf894fc82e3493339cb4557c5438c2a6e332e0b5b53c173e6617732",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:49:58Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "cd65c3871fa63e01425b1e6af1d9d88f00a184e9a9d2117d53a6a5c29e07dbed",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:50:01Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "1139c05e52bb3c91923e9ee1031e07a4073eaa31e30c7967fb08f75fc4763bf2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:50:04Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "2e1a49211b0a2bd936e94cddc10f88a1f8519e258a00ff63c5dfbbce72681931",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:50:08Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "6526ac935cc8ddb312ae4407200a66d91eb8d1e84495a9d6d6313369e08ae30a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:50:12Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=international_law,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "ab4a3b2b492f56b94d18eb2c04d542d67061c4c6aa08b9c4f6cb4fecbae142d9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=international_law,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:50:15Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=international_law,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "004a23b8dd54af262c1e5e9e8fb1d99066c23231c4ffd224490c18c75ab5b1fa",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=international_law,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:50:21Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=international_law,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "623ccbd58ace0a64b2c4d016e51db749a3307aa1cd7d5b6cce99fa2bbe0057aa",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=international_law,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:50:24Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=international_law,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "ff5234bf8ed99b06ed59fef2bad198c133bc14249e70dc4731b863657e6df940",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=international_law,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:50:28Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=international_law,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "fa32a8fc3ce168fb2ac3e5ae4cb3006295b77d8d815bfdda86a24a3724993437",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=international_law,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:50:32Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "4a859076d1b9094240f1677b6b444741e065fc4c2fc9c873f3d2e1be3cceda97",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:50:36Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "8b4c0efd8891f5e4f2546f154376da1418637c18b42ce5ef42aec9958b163878",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:50:39Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "b1b9a84f4017c71a1c10b450b971250b3626c53bb47d64c1565b0ab8b92cc124",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:50:43Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "db12a3e1352f6e5768c1f2f122fa2874d46311856d1a374e09b635344744e9b7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:50:49Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "2690b2b0adec58ad7da2630d1dac255dedf15b2929b67f5361c8cbe55ca0cf38",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:50:59Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "f5bab43ecb1c525867b604d8665c716962f88765ca3ec36c598550888dc90efc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:51:03Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "7b9c0468445cc741c92ca83cc6b6b543a878b700f08196ee2a554f78450a512a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:51:09Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "ab6e2797f11347fa2768378aa1ff407a548e5f180ee941afaafb33a69e1e1bab",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:51:18Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "02e385c525b094ac93a0a09792ae493c2935f0c3758902d6dd17db928e90c171",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:51:22Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "0ec79fa891200c6d3778b1437961814bad8147c75feaeb76d05d1d26c0f0d093",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:51:26Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "f8d507815fdee8fea283736016ed91b144ecdce013c1fd1a293b62cb14baabf1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:51:30Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "0b753286d12810f713ca3b45597131ee8a1bf3d5467a48244df42eb5536cdc13",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:51:34Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "31caf7328d6f6389c447f31b4ef88bd1177f010037f994ba1d83d089cc093446",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:51:38Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "f8ed4ae9a9b08d88404136e8c69ae42d3248abe9d095e12e2dc1cc5ed03d107e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:51:42Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "fe178ea51e090a495603d892e579b7987ea13910541f5ae58de4a774934ee529",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:51:46Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "17c6616b5fd00282dcc0e872f8f12475777076bbc580b6710fff7bafa0367ae9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:51:49Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "58e03d957a320080403051dee4d6d1e603b3929008e4c66ab25d9d75ed0df88e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:51:53Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "059cb9c5cf8f043c97c52af3cd721dab5f9266ad82cb1ea68a122cc33aff05f0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:51:59Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "fd62f1c2e3fe4d3d78d8f0356008613ee734371ca9d06de22988e6906910081d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:52:01Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "bebf8e821aff46fd4883a82f3dd5d9e01ad7cf00406f1868aa81c29340aa6cae",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:52:06Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "908a105cfb4be2b47d612a54640c3333bb2018bbc84e8dc68e699b7a591cad4a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:52:10Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "8d19e82487f5baa707dabd90e578366625945f9c08f9096bb11c0ec29a3a7865",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:52:14Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "6ceeb65c6056db7d504beb59177c4e994ebc2d1e56922d65341dddc15bfa8890",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:52:19Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "cb15fb4c772c873d3f506771aa78263bce70b3a7356a244bf128dc76fd46c8d5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=international_law,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:52:22Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "364aea6747831933291acad2ce689985e22a650fd1fce52081c54e9bf50e42a9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:52:25Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=international_law,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "b2a7d535e43e3aceb27fd226fe659b3e47bb7893cdf4d98841357d161af6aa85",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=international_law,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:52:30Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=international_law,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "6d46b174d79acdef607905201a3e4898b82abe29d96b4992cc8ec61171361f7b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=international_law,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:52:33Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "0e8bab7621babd02c0ee590b9ce7bf751d23e81d8db6ea0e1e465b548c0bf595",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:52:37Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "7df21e4e14ddca7a90f200c599b67974542615026a61a859d79d24835cd3bd94",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:52:40Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "6c2199f28dae3cfd895e04009a63e158e5e500ade2a6e6c1ed7d2aeffba91c32",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:52:44Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "59cbf98d0c9f564f9c36a63efda9da139425b024de12399e0540d965fbcac524",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:52:47Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "10363d623afe79e8e3c101222b17d9d2c02c84ebd430cc3b167141373f91ad62",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:52:50Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "f0effb700928685900f17dba653f345ba421db9603047e287ccaa1ed582310c7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:52:54Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "8d717bd0e946dda5863eb9f2ff3597225a888647c7762deb4144e7b158f813af",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:52:57Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "b671e168b90a2c68c219c8998a6d8d51e1a0e6a5c647d716e85b070420a8f57e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=international_law,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:53:02Z"
+    },
+    {
+      "run": "mmlu:subject=international_law,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_international_law",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=international_law,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_international_law/per_instance_stats.json",
+      "per_instance_stats_sha256": "6a5cdbc8f85234a1765e289c7b0ab8bf2d25e88168c770b44c91884c81d7f327",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=international_law,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_international_law/instances.json",
+      "instances_sha256": "bdc87ac8bd5298788b65ab421898a75e4fefbc79e1da8ef6359db493e77f8355",
+      "retrieved_utc": "2026-09-26T05:53:07Z"
+    }
+  ]
+}

@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T05:23:07Z",
+  "retrieved_utc_last": "2026-09-26T05:25:03Z",
+  "run_filter": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,eval_split=test,groups=mmlu_high_school_computer_science"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-high-school-computer-science-method-multiple-choice-joint.csv",
+  "rows": 6000,
+  "models": 60,
+  "items_common_to_every_model": 100,
+  "items_seen_at_all": 100,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "6518c993a0c82640fb745dc42cba791c017b392137da65e4a5768488707a4e58",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:23:07Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "32eacf737dff881bed3145499adcde4bf1bd04341491602a5ce010dc078851c5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:23:10Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "ef31aedc2d9fded15e9eeacc6ea4f37046e43a5de549d280203fd3e154ca00d0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:23:13Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "ae32f5f458a3d591856fbf2e536c6442f2e989d3f731b19169b187290126f71c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:23:16Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "3ee59fd6a8e860540b94c819d0097b88ccb0bc85d762c713c1a9f15e67690b22",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:23:19Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "131ce2c5dd14667e1fe88d0fca79a34cfa4433047c989d42d8c769f61e1351cb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:23:22Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "f23252b80d9c32f4c9b556c1b792d0e0f1acfd05c3b4adba646c16a2292ea9cf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:23:25Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "5fd4e4837daaa06dabb104af8b4a0537512b4ece98453a508bf6c27669cb9769",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:23:28Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "2baeb86a6d7f4a1588ded0bf3d7c0e5ae8c49c16c5276a2b49bd1ebfa4c6fe9a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:23:32Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "d307e44f3c1ad16e8b628213d304bbf26842404efe3b0c22f53dcd8fe64a9657",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:23:35Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "e43c3d9578d541009fcba9dcaa08504637305ea50cb7ffd2ca2d3a7f716b4032",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:23:38Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "53e428ed7c899e4f12c7c7e7088e864aeedc5b08cd23a6023b1f865fc29d5a8e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:23:41Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "251791f9ea67a9500bbfe366798f0d32b6af040741c41956d178a648a78479d1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:23:44Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "4bd8770e86f55b2e3414e39aae73f1738e1b965a0009a5ec9e0c0a88a3938568",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:23:47Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "3a5c8af36e24f734535bbcebbaee3f9fd36075380f4dff837b9ba6da33ff42ad",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:23:50Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "56d3a0322cf1d9442e8e1704f8372660ce98967d8ccc2cbf2587ddb8a223f731",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:23:53Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "e6478af3e8f61924d5a06e5a4f3ccbc4407bbfb39d73885175afbc5b596ae9bb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:23:56Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "c2058e4e167bb357ec912763b4e4a45395e62fc22962a7a34120bb5a9e14f692",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:23:59Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "5a44decd53d3aeaf87b3c425bc85dbc4d92fd144928a9e72dc265e2e65164357",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:03Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "ec547f7e2896da628efb42408b638896472be0b9ffd1e496b3c768de30c94d1c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:06Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "a81eac7df6b469a465bc33384371e3bc4c536d3413a235eb2542556e77cae722",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:09Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "eeaa63ceefd23679ced35c2d513a3d42a2416001da0384d50037f808dd657fac",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:12Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "66efc14bb5e178ba8e79f5a40ce043ce3403e0439422f5e83d29fead02253067",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:15Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "e4e96b931a5ccd89b708eb9482c75ddde585f95b7e07af6bffb577a64542fda0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:18Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "aed5fdef5cd934d62d07b8e617d58cfe618c3a6cfdd284cff52fcdd8d53d5878",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:21Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "95c68a64f24ada0f3dae6567c528b8911281c94a19b555716a95229d85204209",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:24Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "bd06c742cfe2a5f2253a86b24960929f03a765173e73d7797254269ade11cbdf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:27Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "8158a4e726c322d3c86e14e2f01097072727fd30ad0a3534f9de85b84e7a1333",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:31Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "71fc59e329c72ca47778b2cb89b8735ad44ddb990a0011b126922ffd3fdd5bc8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:32Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "5034f24c541c12d2bb4b61cc6950635abfc1a218e0dd19f7f06e85d97b7c8f6a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:33Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "6ee27dc95bcdbf8509ea4efab37c44392b830fddfe8d584d1bf345eab8af186a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:34Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "aba4f3fc7acbf338fc96dc5b46a933634a35e07af2ed83ec9fac3c1220ce8b05",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:35Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "05a6fa6c19b29ca79a84bb9ad35c1bda7b58fcc215781023f8b4c9c503306e7a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:36Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "2c7ec2ba7ecd3f6684f88dec1e2c9cfa4fd20d5b93a190105c4eae92db0c056d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:37Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "6845dddecfa22a3354204f194c29f8f412369bdcb9ca1cc8574bf0df305862af",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:38Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "e984b78354bf05059b087108822542b9a43081c375e73f9bda2519dd5bf864e3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:39Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "2889d9b65e05b21b4d082ac6db9f08dd6c5ce5a0444a81aa84868dae56cecca5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:40Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "b4da6dc4200ec05583322b263cf4aeeb0bab119aac5aed6ea8d26c4e47507378",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:41Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "b20ca374d7e30a9e63303852d6f15e0c5c35a74384ef160ee7b56e7e956f5a8a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:42Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "4eb926a8c788c8facff7f72ad4565189686c8d64c3250f59164535c420f15da8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:43Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "7a811eea5ca92b19339d847574d8834c28fb12ef73ce3e2ebc4572c5492fb69c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:44Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "a5cbcd2b8ab324b5b466d23943a38d1c5cab46a06354f023593267d772379e0a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:45Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "da63569a825267147f6642e87bf376bbbb737325872076147949df72ad273b90",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:46Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "e554e4d750cd718af34c35815f6305f0645df97db8389b947346a26064e73ffc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:46Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "88998ff993bd3ce8a31468ebbd8d4a24841569586ebc6f16e8e596c22c30c793",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:47Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "cca3c786d55ec85080cb0e61ad1a16b4a2845389d7faffe83df53a72a5a6f2e0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:48Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "89c480bffab6784a9b52f9e66bea0bf3b4b83b3815ab67611970bdece0f790b8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:50Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "25fff2010c5c6bba94a57293154d1379f510dd595b5778861731a12680627c4e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:51Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "f1ce52cd518ebe09735d554d2dacf2ec4fffa724677ae95393f051d2fe804c2d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:52Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "862c251b664d795a206c92f73e6a1ad08f6b7189ba8be4539b8b69d72ae04b1c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:53Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "aa550023c61493143280afffaecd049c7b267348548ddd2d8363b32f367f6650",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:54Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "0ae9efccc3451ad870850d7c7db20c6eb62f915943b5a00c3f8c4328a3a98ae1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:55Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "39e589fab1651bcf79ef1a728bbb779d140d5994d8d5cca8af21383c0da93ea8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:56Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "0f333fd17e952e570aa90d90ab9b13fc57597c14e6f9a5c0e16c0c154b0a37db",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:57Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "50f479acb8abd37df126e3840fd32e3e1d24957f5e1efbec6df5716b85657c4e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:58Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "877fa9e72d671bccd03658c8687793758c57628b90e66a38bca7bd484afb1bc0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:24:59Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "88702e251c5a87356bd8c300b128b79a7483fc39bebdbc94732b7b89f3ede129",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:25:00Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "36bc61826d4172857f9fc12b582d7acd06ff4f5de9cf16bf83819beadeafb7b0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:25:01Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "eb72d1b5f45bb5c6ebc087e77006c1e2035044216eb4f34f3536db22592c3323",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:25:01Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_computer_science",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_computer_science/per_instance_stats.json",
+      "per_instance_stats_sha256": "ab7687a81fb7148d4ab194ecec7029d046527e9a7f26024d6496fd0957ecc84c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_computer_science,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_computer_science/instances.json",
+      "instances_sha256": "ac7dc6aa9188f51c9b2e7f009dc969c150da1190a15430951dc04f1dfb005309",
+      "retrieved_utc": "2026-09-26T05:25:03Z"
+    }
+  ]
+}

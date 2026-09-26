@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T06:41:39Z",
+  "retrieved_utc_last": "2026-09-26T06:45:50Z",
+  "run_filter": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=professional_medicine,method=multiple_choice_joint,eval_split=test,groups=mmlu_professional_medicine"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-professional-medicine-method-multiple-choice-joint.csv",
+  "rows": 16320,
+  "models": 60,
+  "items_common_to_every_model": 272,
+  "items_seen_at_all": 272,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "56917bbdc6e71f3daf5f647a9fc86c9b7a4caa6aa14a3c97246d3ffca6be826b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:41:39Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "06095cdd342cd57de256d76a8336ca8606a6b1ed94ac864d6d3d695f80d62ce5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:41:43Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "0b7c524776bfcf624a7a0b4b4d2737e37d763eb1268633c50318340e5c649a3a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:41:48Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "d7b94763cbcf4453a10945e7b104df9b3f22ed70ae485488a9895aadb0cde84c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:41:52Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "3f928d776133ec441dd5aa7b5a751dcdaf7df1ac36e974a86b065e9477e31cd9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:41:57Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "26ea03e007ba0a5972fee72107e8606710422dfc1ad5f6b3e6c9ba2ac31bc94b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:42:01Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "b08cac207267cc1783e8a59554f1dbd20f8300ac1ce1e29cb4e42b2d88a5195a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:42:06Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "ce3ffa69747389f29fe7ce96f74e4375d5ca0c2904556df734bb2aba00bd32d9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:42:10Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "8bbc7708bbaa15b376e14744ff86c69e8e5ddbdb4a1e65c8ac749e8e42cf8e9a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:42:15Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "5f3ca80d793ef8e1adcb0ab9dd8b2cc5f9d626b4301d40552d95de66260ce09a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:42:20Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "42ecf037d5116657eeb4d664eba6ef32f49a61fa220854558c6e2d6177bb2941",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:42:27Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "7f56a54cc92b96cda3df371c5472e9707352b8b7439504eca788c796513ae006",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:42:33Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "0aaf70e0875a634e48f26037c961aa78011e3da9594438b04635e913de468119",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:42:41Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "94ec433f16e05e3e592de79090d50d4f15cc07c3b43a9cb00825db43f3383928",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:42:45Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "473e7f4898829cd46e3422dce63a9e94b54ae6a1f6148cd9698442777238f043",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:42:50Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "98c479d2a9af8dad80febb86bcdd24bab81bb659e8b4e625f3289e133b833d11",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:42:56Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "699565ce9ff48ac6ebd7e1164ad8c3e61f9fa81de07d636c3a8460b75afbc4f8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:43:01Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "8f9f254bc8121fabb0ad39bdf49893fe1452a49511b1f1783d9bc655206ba694",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:43:05Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "7aec2bbfbcedf19940fcdfe641e55a4d59f00059d4c6da20b98685e51f2a8272",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:43:10Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "c0806172576ca50a1381c758f0e702f66ba424af7467fe9dfea5a4f3866ba002",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:43:14Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "94b4b92acc6c349d8d96caa30d127c75051efa996cd91d5a06b328c7ebbddcaf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:43:19Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "15b2d1c9b49bf3979ffd7641accef38383ea530a9224443a44e3355c0b10d33e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:43:24Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "85faae9c1c88ddd8007d73c2a57949bc1d260531d69ba818be4634e85b720017",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:43:29Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "41cecaf8f2144eba6adb736b0aaf92773f51dea1f717c9d94a3829b9e2c749a5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:43:36Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "05238639f54cb480480a8d4c916fe2d8145ea9ca04f93e0ec0b188bcb69eb38f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:43:41Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "ed771777a23a2b0be6d0c21ffad490bab42452b408308181aa1694ca1123949e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:43:46Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "8756e38684980faf68dcf1fd0eb780e9d2bcca2dc491ecae175c78f9fef14815",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:43:53Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "ab8a6ac2291f4186e2f23fb28327c54375de5b8ee16e3ea978c6afd15ecfead3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:43:58Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "a1cbf0c6a7bcb68d4ec13e9a8114942a6441c485931ae4a89d9373d6cb6f1668",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:44:06Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "65a1f440578b97637d7fa5e682e6c5733b88053277e07eb6050781925a965e67",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:44:11Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "dcce9a08b49427b221c433b1c1a1cf02d963d457d82728ef5ebef83219020f4e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:44:15Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "f95e64b4c3ca668946ccb334d36f0b8c21e2b2dfe4a7e80c906637a67ca6fb5d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:44:20Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "50334b18bda405fe2e454a43a6733399d3622ec9184b5dc0f064cca148fdde81",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:44:24Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "3252e368b317db5315c814df50acb706b01e78049023ee4f6601f88f1eaa3e0e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:44:28Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "13c3e7f668c2653ee1a7fcb577b624c1b63e5288a0f76749c4235ceff95f7da2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:44:32Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "a517fcdb7d519b96ef986b52ce6986b8065834e46b76c2eac9744d6573d7385a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:44:40Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "2a6bdaffcebc0e0bf52a0c7c01fb7fdd4b3cd2655e41de046638aa272e78602b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:44:46Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "1e3d7cfc79b015e255fed3f37f5ad6aff5f13f4cc3388c2af15a2e6c77938aa6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:44:51Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "df914344dd6264cee9aac0f9875cc690c35ef4c6d9d90082510c2e505579b2fc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:44:56Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "ddc86aa4c12298c76e2c57ec508397fcef977ba5fdef8700025f7221663e70f9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:45:01Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "1864a18675547fc010640070eec936130c2e160f69df206a141edffe9a7182d5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:45:05Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "6f11cd3f9f8cfbeece6c2cae8441018ee790d319a06a080e02b4e4755cbf6c95",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:45:09Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "715c2699fb0b5c4230766365ee9e211e3e7efb224a1ace3838217a236c59ccd7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:45:14Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "d5532d30695266414f981ceef3595986966d39cd3fc423b29128032129e061d5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:45:22Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "e04d3006ff77c9f982fb7c5d61edfddc01115eae267deb750859beb9b2dfbf2a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:45:27Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "07f6412b964f4bce2ad80146f210fcbaa3923d05f4dd699f9175ecf409a2ce55",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:45:29Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "7773c8ea32a8bdb4c58e4f1d2b378b03c42fb4aec33238be811e571aea89001b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:45:30Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "cec62c11f8ac8e63ed143a1e2d2fd79cc7b594ebf57ddc9c88ac1449cf5212b3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:45:33Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "7ec8581cd3c1672ff2abffc821bc68009c4de49e71572cddaad86e20b7beadd4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:45:35Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "b8a5260d822523584cfd8d05873b11b1c64286398375994bfc317f57b78bad73",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:45:36Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "b706309bf2350faab5c63e230a1429cb7f9f962fd5bbbccea14dea2213fb918b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:45:38Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "08771876d141e9e7a5e1af77f3289a154a2a1f09701b2280eb1a734a89486a71",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:45:39Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "1509733ab76223a905723817d1e058013307159a762bc4f4805673733aaac5df",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:45:40Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "44acf125ed11c3abeb61f752479c485459a02bfd75eab17653b5aff6fcaf47fd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:45:42Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "75e5287e4ef9fd72520a251037e503c27526bbff54e8bf8c38decc6a86042ac0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:45:43Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "3b461a168757109dbf7cf2e7a236669afb23e64008e6c160f2ee964b11feab3f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:45:44Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "16ae1a31936cf279f1919639dc292507044bf70ccdf60ced9e9f4b7d06b87d95",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:45:46Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "cb27ac36bc2dd61096854f09526c52b8cb2d6c1163bb3f3e1ee9414c84711bd9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:45:47Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "342f391f5f71f12db7a9b688e6cb2793a874459aa782a04926d393f9713ec93d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:45:48Z"
+    },
+    {
+      "run": "mmlu:subject=professional_medicine,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_professional_medicine",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_professional_medicine/per_instance_stats.json",
+      "per_instance_stats_sha256": "18bf4168b2667fbaed41eb420593d636912f69196338256dd3932cee8c1f5b45",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_medicine,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_professional_medicine/instances.json",
+      "instances_sha256": "abc4fba82f2c14bf20fd0f94b0424fe9e74fe07c1cd28150e1be44ae172fc738",
+      "retrieved_utc": "2026-09-26T06:45:50Z"
+    }
+  ]
+}

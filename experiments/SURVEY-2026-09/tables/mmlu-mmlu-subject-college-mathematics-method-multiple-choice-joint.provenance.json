@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T04:51:28Z",
+  "retrieved_utc_last": "2026-09-26T04:52:28Z",
+  "run_filter": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=college_mathematics,method=multiple_choice_joint,eval_split=test,groups=mmlu_college_mathematics"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-college-mathematics-method-multiple-choice-joint.csv",
+  "rows": 6000,
+  "models": 60,
+  "items_common_to_every_model": 100,
+  "items_seen_at_all": 100,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "65f3ae2813b530b639880c58181def1e7e52573b8734d7990d111f27778f4094",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:28Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b4842db24a4f63726079edec34cd271ab5cc8c55261bd0bae91bd2925ae1aa84",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:29Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0db16ad82642862daa0f74cae8b49c07324f252dc0e78743572b785428c9bbf7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:30Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "180d4f556564a5063134dbdaeeb23f0e206ba16987ec335499fa50268b584bf9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:31Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b89843accd4064ec317822c8ee49fd6c5bd6f2a5efc54fb8feabbefdb558af64",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:32Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "4f78da46afc0837831b4cd41ead1072cd62cc40b574302677b3658dfe32c4e25",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:33Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f08478e74d51290861611b813851a79734b65de101425dcaf715fc249bdf3346",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:34Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0db2f6dc888cda43213b29e01bbf83e934834e07a12aaa60324b6ed207712337",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:35Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "422b11e8f6f387687031ea20dd220be9b0397b8e008db961caba116f7037a856",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:36Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "50ac3d345efa1aaf4a799c1d62d4d4cbd3161dd83b03985cde5cc353baca0e88",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:37Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "2dcf48fc486c98fae0908818b58ee65d2c160e4663d0b0cc4221d30cc17e9717",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:38Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f4b7a8f09b64476e2c96eafc98b7978fdbe56e6fda320cd902776bba5fa5a878",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:39Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "5c52c69008bc01fd027ba20f8389258ba32a1913c9076d827b83573d1b34e187",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:40Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "66b7d74497eedd3aa311390bdedeea8d84109dad048b41ded31b71d1902f8679",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:41Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "26ed452bc988b725c7e963fd0bdb1aa5385113ae6ff787eb5c655eacec2414e5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:43Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "0e3bf32fd816869dc97fa41d14e4f03be1dae40f3105297c5314e98782020d50",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:44Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "bc8bdf919fe4833c5eba6660d90646fc940a44959461465ac6f2bc511923fcfe",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:45Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e56a2f7e130956605ca8732c3d9ef5dd3304188e9bc79c6535a975f22cc776f9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:46Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "1d2f209dc6f250a4bbd9def77ad4e6a57c211ff3c52f5a06362d52e13cb67ef6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:47Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "9ac8562aa414e27c3075f4125fe97a5c02c96450518e02fa0ee688766864ebe9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:48Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "4fa66c1fd4f18bd1914fec68390f9dad7785c7de4f38b6678c7d369c97d5e2cf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:49Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "7bbba6e73394f971d1896e955163b5bb8fa527c192711c535c166b04c08d7286",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:50Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "72a477c4e467e97da2db3ba19a9e1bb91b5818792ef467716cf7e279d23b7ab9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:51Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ba0d2fee5a94d2bb7732ba15022de4e4d6cea1151197f4e0b273af3f3e40f0ec",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:52Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "3d32b4aa5d7ae3a5c755708ccc3a870a07464a20cae1ef8c9217f9470aa40e96",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:53Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "01f5d7f6cf5436bb257c92467ec8d6e6fdbcb6d7f30e45d664dc95d6fad20132",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:53Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "54bc5c08197126c74ae99073642d8c4e793689f717f5e4855cbc3519d5596144",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:54Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "20be5a2a2ed39e33663397664eaa2953bde4f4f4493a6d71d1afa270b7aace80",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:55Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "3adef5cb604c922ce296d01d5a2865ebf377656b5c223881a41990d079a33377",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:56Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "bdecf7b10f8d3b9db3c89ad8ae1be75edaefdfbdc4ee60a060dbbab1682950b5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:57Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f41d93abdea0c8773308d53fad933415d1479cd1b2e4ed26a4c5797ce1245c6f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:58Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "de3aa2af821e8e94d3af64ae7907b0078bd045821b06b504f7338fca4854fc9e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:51:59Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "71fe9d202edbb126e6ad564d0751e36eedf896338f225c5b3cb7fa25f921c277",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:00Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "657892bf58b01106a82285ea664284fb19581b67d958b323a45448ed6b4b1b73",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:01Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "319c6e3cc7fcc74af49ae0fc87760e2d03698d08c4d673fd25bc4cc468e71cea",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:02Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "79961430b624c1bc2093f6fecea544688e5767db2c8bddf0aa9ec2047f5e3f2b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:03Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f147beaffe1ad4dd57328f0b6184af2b2b8cbd819fdae3e9f43ca96377ebbace",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:04Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e17487bc92ea771db739f88a341a3816d519ed740defbc63be4c9be022c70541",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:05Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "bbf09745c5bb351b867c45f204aaa5c2978c9e42c0e4039db73770f3298a519a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:06Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "fd4e53340fb47a87728dfd0db429435371aa561b3fec5219d6f5b5abc3dc8720",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:07Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "cdcd816fae1dde836db53f2b9eb47d4d81abb1ef5571ad7820c16d9f1bf5967f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:08Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ff96c984ca8a5f148f95c5ee22ec10d78416d0d63180f94da988915a2c27e15c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:09Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e77f6f70b76e8bb8de47cee190736da6086e4d6e364854940ec47b8cb4481b93",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:10Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "3699a31836b6f72e25599d0bdc877113faafff08fc0f9400bb3dfd8c433d2701",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:11Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "fc677b822f38e4f825f3b27c540b0c77febd9847c335fdf54d0b2c982041020f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:12Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "97ee02647ab533440fce1df60ed54e27d83f73d7961f0bf4cb08b2dd85b0538e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:13Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "9cda15d0e22c4158d1e60b30a2e695bff99c4ea5ecdf820eb0652cf22cb6d942",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:14Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "240fc3d1a82ad37a7864b831b027fbbb139244bdf509cff3f7647c0d5b0c26b7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:15Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "d59e86a75d6ba7f630034b66e3e273c4b956748fe19717869b9f80fb03073ae2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:16Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "90edc5bcd4791d986f7778f8a478f79c155ded75ae01c4d8a76858349f7b738a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:17Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "756ff9b9057eae15da73888e3c9ff29d8dd01cbac75b4038b93a52db3304ade1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:18Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "96ef2723324eea495d69887b743c951794b8c9bbd2fc9f32dc907abfcc7fd163",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:19Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "883636f24e6ce45e15cc9ef8036d0777781b0c93347d6948b5a0e1fcde85dcf8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:20Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "1ae4d157729e2073cec7dc25aac66e387aaaf57b3aafefebbe645d88857c9bc8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:21Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "75c0032a09bf706ea74e8cb09b2ad7c5b2b6ae563e96cf5d330334cf14d28d4c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:22Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "2d78941b9df41ef7cb5d604a339828b63919e61df4fd933aae159c587bfbfe7a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:23Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e8542ce338db37c765b48fe92e8ab8b24cccbeb827af9369bb94043f4cabf210",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:24Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "a9c26a12f219228a0ca36f021aeb0d1fde8c69847fed7597b32880b15b413523",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:25Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "8a9d8eb7b154b762a981d0acb2064e004d9357ef5b0d9471464c8f80abed6927",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:27Z"
+    },
+    {
+      "run": "mmlu:subject=college_mathematics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_college_mathematics",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_college_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ce3cc85089937b2f1e0dda8ffe28dd3cfba9fa201a3b420381c54a8833978983",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=college_mathematics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_college_mathematics/instances.json",
+      "instances_sha256": "9dd5c363c62fd16cbc8d058cc79ebe806e84b63d193ffea20aeff2dceace01f8",
+      "retrieved_utc": "2026-09-26T04:52:28Z"
+    }
+  ]
+}

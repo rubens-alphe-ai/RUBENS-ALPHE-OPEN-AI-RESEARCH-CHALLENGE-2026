@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T06:22:20Z",
+  "retrieved_utc_last": "2026-09-26T06:27:01Z",
+  "run_filter": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=moral_scenarios,method=multiple_choice_joint,eval_split=test,groups=mmlu_moral_scenarios"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-moral-scenarios-method-multiple-choice-joint.csv",
+  "rows": 53700,
+  "models": 60,
+  "items_common_to_every_model": 895,
+  "items_seen_at_all": 895,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "1cce3b122db1e399276df98c020979459fce44f42cf2d45fe4aab883ac1cf91c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:22:20Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "0e08088562102f4f06e250f4152236c76eb3624b8cb797723d3dd9a0179ba299",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:22:25Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "06a1539f470d47b446a6611c2fc2517772719e6732c7698b95468c55494eb839",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:22:30Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "5b427c14fcaa3f5dce29e01e437526546d4653b72b68d13fbcc265bd0d05153a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:22:35Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "2ba2fc5277d824b5ff6fd0128bc5e1826055170f0ceeb50cb45d82a2722a78b7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:22:39Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "18e462b1f860149bb0160d400a4676ea3726c0257731d7be3b5833b427d57dec",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:22:44Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "70a203055197458b70073e7b71d394f6a9e1732a12c17a44bde5da0cdb2fd484",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:22:48Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "f9457ebb3157e27aa657c7e99cbdc9034efa7b50baeff7f1815ee0d38b380e86",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:22:53Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "325664199011152dce4015925641e70021a8be60d9f05abe8060e49746e56e35",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:22:58Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "2eafe9cea0aabe92b0190d19cc19ea744cffc58cb75dab9e3cff5bec46be35fb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:23:03Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "543f94822e30cef7b82db1825e25c2000e7bf043c7ebc6e357a6c1f70748b272",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:23:07Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "e66cd1848038f252106ea2ca984018d0557a26185272037c524aa747cb07b01f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:23:12Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "2a982c9c8404a3043ed85602ae71a42d3371971d79bd9004188028bef3530709",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:23:17Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "928eb2bb76cd1767a5d63b8140ffba64d4137904b91a148e74cd238af21dd05f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:23:22Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "56a736fe364297f452ce7604cb94ae31fc62aafc843d86ea7ea79a8413fbe050",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:23:27Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "f975f91d2a403fd7f48cfa2492e00f0f60c86c80c2405f22e4cf08dede33fbe1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:23:33Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "dffe8d68500cebb6f7d784d305c7664caa0a3afecdad1a783bf74d7cb95033c8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:23:37Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "5ad668ba5dbe8eb84c5d5829edf451ce9c73d3337eb2b06fa612db192c57bf09",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:23:42Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "50664cfb53080d4b615f7ee621ec43f267134658bc9aa90ff1ada6398443659b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:23:47Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "5a0b65446137aa89982001c8f98052c7c40cfd9d69e3a4462fbecf0419f15c0f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:23:52Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "0f2f75b717416dd4a9bee415629d3e8a9fb6b72a6633d3a175a450719f6ce887",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:23:56Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "16f0492b3f716fa3246a705e68052ff6dc5b04e91ef4c71c543421a037277f3a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:24:01Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "a78357b717bdb9f4694a289c9e28721cb2a91f607cc63588cd785fc1a359972e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:24:06Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "05cfb297c4158ad16de33df7ad4e03c2955bd0089ced13ed67a9342e431fea3f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:24:11Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "b922e2ed0d23abf86bec46024c22e13fd95d01d3248cb23743f69d16caa2314d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:24:16Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "5d7039d59818dc8ab97d4646b32de7ac3dba411b94d3c90cb9a532700f58da0e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:24:20Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "fd97b419e3e5c5619628ac17eb442fb202ce2c1c14d2806d11aa159ec3aced6c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:24:25Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "d202a7279e2dd801bb13ef2c18c84bdb96e132884d59ebc4bcda7695a9e62df4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:24:30Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "6a1d10de34ccaef15aa88b7921c80d082928124a28335414092310590536bd92",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:24:34Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "6d4c513399b71e510871b1fff3f521acc8f1d22894018da317635871d7df2620",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:24:39Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "ddd72e5b7a92b42e463833416fc1864de5e9dd9990702a4b5099fec2fb05fc93",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:24:44Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "8eb4b6ef3d76a468bbe5dd6b83e93e00716b622417f6a15f73f7ed0b42f9b0a4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:24:48Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "6b566f63e06544eae110a9327188df295298219bc6f24624014899df3fe0d722",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:24:53Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "31ee02f5ee28a6e1304b352d3adc8337b982c011ed253119c92ab7f9ddb076ed",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:24:58Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "317c2030d1a5a3a742a0394ad490b67d7f944525fb4473aee524c460f0e7f197",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:25:02Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "71d6bcd687d35f5d438fd15ffc24c54482988701ae372b2f199965909617ebb7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:25:07Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "dfd0279f415aabc0d9e18ab1e56f77a4c5d94c067e72eb703fbc5c16cd3ff4fa",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:25:12Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "cf4c9cd84972d0f18018fe546833f38a88065de655a0cfae121fbbacc1c67c91",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:25:17Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "ecb88376ddda454f336a84c5b01721d2081982b6a89c2597f29b5fd23731119e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:25:21Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "9db6aaa8281a9afba581ee17ff6f32b7366b87c314800ddedb029ba56d4cbd28",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:25:26Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "801f09f2050640006b85730df479e279e05284e5eae5cf63a1ca70721fc8ac64",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:25:31Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "f3f03bc2ce62879f4ed371bba6d4b1920c5e68e985a365430623c6a6e309ee8b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:25:35Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "9c7cf3561255aacd767297ce10662bc4a7f298ae7bac7b44c3977684262b4ff4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:25:40Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "661e289adcefc3609e60b8b7ee0bf5b0e91ce04e198b75612754fb3a6bd32671",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:25:45Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "4b10f6802a85c7685f18ffa8c35de14691b26bb52244c1a73c441208545e4aba",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:25:50Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "dab5fd22c27d9f9d5b952c7ab241232482e18a20e952989e26c2016ab17e73b9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:25:55Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "4296aebbd2e94ff4a7cc15bd5fef57c56e5ce09292b151bde320c4f35b145632",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:26:00Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "812f693f27a4d89d05ec8c9a7e75e8fde3ce53ea7feee0ded446218fbd3148f8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:26:05Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "1119ea5f77d74e0ddc858e0b499cb9a1b0b35df1dd241d13ff8aa332bdd27d56",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:26:09Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "86c91741a54f6911d2a4897136ff0a9e50f0660e79a3c33ff8622742724d482f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:26:14Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "846660c9a919f380c6cff3dabb772fb57c2bd5f4eca7453d91b2bedc8ce122a6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:26:19Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "93acc931918c42d44152ed7faf40775ac67e67645517af6cfa0a62b445773e9e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:26:24Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "ee50a4c3e2b7ced18b6bb4556de5668643aedd37c6d506c0af0fe7282cc01c28",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:26:29Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "4a24995630453f7d57e22badee69a637f0845558dee459b9d401a8c5576b7876",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:26:34Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "285ba6f6aa7e3bbfe41b4d18044720f39ca30378056ce437ef8ed0f6765aed7c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:26:38Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "2b5f18412b14c1b59ac2da8da60b9ac4fe4aeea14f2b6ebad1cb7dc24e6857b8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:26:43Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "5cee15d93380900766b2263b8bdaa8d1dc03f86446ef35ab9f95c3f0d496fd18",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:26:47Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "198c23c062a1f08b2ee3db847ffb21c5634dd41fa451dc8c96c1c939ae1e887a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:26:52Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "be81311b9c6c9b57b7bb45c285efe9e50a49fda45384d41ee3af29f34fb8db0b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:26:57Z"
+    },
+    {
+      "run": "mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_moral_scenarios",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_moral_scenarios/per_instance_stats.json",
+      "per_instance_stats_sha256": "090b4f3d05420a745d69d2c70f6b83b8d121357e1f7cb19c3d5228b6638d32cf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=moral_scenarios,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_moral_scenarios/instances.json",
+      "instances_sha256": "9ba4a1324775d27446e478e365a4c82628fe62bb90cd764068ff1559d00358a4",
+      "retrieved_utc": "2026-09-26T06:27:01Z"
+    }
+  ]
+}

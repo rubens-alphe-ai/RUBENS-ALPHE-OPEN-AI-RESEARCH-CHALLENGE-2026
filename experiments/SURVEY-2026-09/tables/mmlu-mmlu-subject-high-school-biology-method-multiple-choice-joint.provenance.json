@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T05:13:48Z",
+  "retrieved_utc_last": "2026-09-26T05:18:35Z",
+  "run_filter": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=high_school_biology,method=multiple_choice_joint,eval_split=test,groups=mmlu_high_school_biology"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-high-school-biology-method-multiple-choice-joint.csv",
+  "rows": 18600,
+  "models": 60,
+  "items_common_to_every_model": 310,
+  "items_seen_at_all": 310,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "817f562689be8b1e5fa19f34beb434250e05385817f642b8f127e55878e9c932",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:13:48Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "1d280c42e0f84bcd26ca3d24b8aef81d7866f5528b6382bc1d0fd16e2c2db78c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:13:52Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "0789f0f33cd2a635e9f13787cddfd9d7c8d006e7d142a356a2804980fcce30ae",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:13:56Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "b4190387f6834dcd6d4cc48abd3be1590949cf741b1355d49f45931339406b23",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:14:00Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "e9c342e9d085671ab485697e943030ad54a4665369cd9b287b9ce29fbb895cd1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:14:03Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "f0c85e6182f9124851114d556fbe6b16301f479ab0131e8b4321b2bef971cd09",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:14:07Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "6ca2052baf44e98e6b4163017e770f2bb727a3e5221b2cd3743bda10ee091a28",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:14:11Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "99be7e293d139193cce03680d8ce2aa269c0bac91ed640ebfd3101687bafa4ea",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:14:15Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "c4442f32fd5633fab9fa5cbd26db15bc9d136701fb9e89c9fc5f7af0cd48edd2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:14:19Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "9fa2d37174541eb5fab95c5164b2d18fefb95a0d6ab329583c9b16171f297b48",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:14:23Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "085f4b793b151a0447eb92457890f13e1b8b770c5dcfc9c06c0087477a5525d0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:14:26Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "ca292aec5247f37fc5eaed4178404f751a6192724c9950a44c421bcbe76af2c6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:14:27Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "b47f9e9180d66667ad3ce86d0abd9a03d5a121dc1395a3bd2bb495f1190525b6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:14:30Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "8287dc9f8d2d5b871e449ceb0ecccbdc645aff2f1c0f775d37ca182685f2ca91",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:14:34Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "2761ae33f863bd3754e57610cda7838dada2eb43ea3115c4d6704f653c6da0c7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:14:37Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "08f8880ec78dbdd47fc4a450a91de8b3ae23fd654221f9420e7da19097b0c6bb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:14:41Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "e7e4f63a69b71ee45c91ce27988b7c0c869d7faa44b8f4740f394632c5d84962",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:14:45Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "16ead67b48b4743a6cbc1676c9c5088aeada36968191db6c02ac99450131e752",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:14:49Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "5cde7923341f98af8de3285a9e87e900e82ca1074613d6a4e11d3bb77a54f0a1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:14:53Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "d4419c4917450c5bb1beeb3c36cd44bba1228410869c4b4bc3ff3e2d8aff7db2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:14:57Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "73044cf7b9970005be3d59c452bfeded829c69586e43238970108b10f550bec7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:15:05Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "bac0a8373a132d2fe31ff0130629597aa3235a8d872cd0cddf1e6a1f61c2f8fd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:15:09Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "469b12e14c6c51f71f0b113d5d2cef16acff26fa57ed0b821a54beecb231fdbe",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:15:14Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "057ba1b9d3a49a279e5d8d263b362989596e2955756f9e8fc4c96619904f7452",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:15:18Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "58920f75e79a6253f13bd53b2bb2b5b21cee64fabb8ff6aa07aa41f7a49c0ea3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:15:23Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "396dd45e630f51e6d69d5487917790da24689d4c0ee6c78f4b4450edfd9e02c6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:15:26Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "5d2866b03a765a00061ca753e8f2901861ff8802eee8bfd4b26c0c24a6110576",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:15:30Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "f42dbb7aaddbbd8ec61680877408b14d9d9c0429a337ecf4b051f856c7fbe4e4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:15:35Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "bf783d2b45ca724d3cb36ec45b9433f360ffc32846fc550fe189533e0636d3dd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:15:38Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "d60db5639f8f35e1e05b6247d0e5370063a6e8d75cd44a9f2fe72a9df317feb4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:15:47Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "71d34ec9af08f50400be82066543ba05e877a3d5fef264b79c9dce8add2761bf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:15:56Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "a7a88cc744e341e81507438b26f4a51ce217757c21f30bc7e0fd8314ae8598a3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:16:02Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "105dada7bbfd8ead7c82f71063ee3532bd8b612518d5c25038f318f7e1e3fe88",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:16:11Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "27e2169cd7c0b4492dda709e61b3bd1390318fd15aa9abd6289a8aa229299359",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:16:42Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "65013bb833edfc6d005a974caef228a42e8294b166fd5f40e83ea027c2616368",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:16:47Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "9bcd080000d4b0f30b1c80190e027a5ba5aed8f185c08a8673597200b15a7748",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:16:54Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "e85355bcaff4ad571e1664253bdef68b7db08da8533da2b5bdb30f6564a10a3a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:16:58Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "cda2c7b09be4a88237b8587a42da13de426514e0b187f5ece889ecacf8944bb4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:17:02Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "e05b29c2489434a3845e9bf1a3847aecdeae1047636a44ead72fb75aef82e174",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:17:06Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "fb0f65265754a62be77da14b4236ffeee50aac0254a3c031fabbef341bbf313b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:17:12Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "0395a9785b203e9708f36a40608a4a26e22129cc7124b4ba7fb34cda97adf8cf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:17:19Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "4b5e01c61e9994c31ce5d095bfc984a9cf7dd8b062460515c061c15c05b605b4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:17:24Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "4f454a82d21af4d8cbecd92ca68784918ee942e0007ab7fd19356ee7844f1ab8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:17:29Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "9edbdb26e5740b1a13320231683f870635240b27fb906e14096382b628c67b8a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:17:33Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "c3ab0c6dee1dbaefd216a30fdf71c3852881bb53679a58cdb7da093b7f221dbf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:17:37Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "3094fdfedaf9014e73d2604756f5dc642eaabcc3843f290337663836b78e9b66",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:17:41Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "5aad3e2fa7dcc4a6d7b9d7908d0257f5eaa9c0ed036363863466071e5c0efaf7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:17:44Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "edc876367c4c1dd48ce01718b7ef714b79086ad2bf15b88d2c3f25d7c7ae78df",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:17:48Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "448eb38e3c26a277ff2481d168109f86ca7239d12c5d912eed77de5bf28568dc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:17:52Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "5ce836cc42c7ac772aecafbdaffa2e05f8a815f714515b3e31929885d1a58614",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:17:56Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "aca4c34e8955111667e600b1ac3544e1eb6b6286824129a1f653789cfa6ef14b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:18:00Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "6efe9e44cf67f2fa43664b9eed1d166118a0a101b90137fe9d1e777e68eaefc5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:18:04Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "03bd9f00b36a610cf7e4f5f77c1a1a3f940e253e2f240377ff2780964815ec07",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:18:07Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "dc20e5eb8415bc0a2559dce80076ffa2c97c7922fde1b1c373c247955ca7f353",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:18:11Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "72bfc0a58fac0fda09ab2d756ad306d28c6aad49e96deaf2891077203da7eea8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:18:15Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "8ff509adb7d67d4b899cf41081f9687c4c4fd6db2bad7f43774a91e182cd3c9d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:18:19Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "cf864993102652cb772feebf8bc85c929a701312344d0ea81aad7486e2e1f015",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:18:23Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "7f21c04aa3a2b98510d1980b2b1eba73a5762bd92a6f082de60a3aae3ee356a9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:18:27Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "7162c9900dee111dd06d5a7e80aa250faa60fd5bf72cfbad4c6690fd60450b42",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:18:31Z"
+    },
+    {
+      "run": "mmlu:subject=high_school_biology,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_biology",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_biology/per_instance_stats.json",
+      "per_instance_stats_sha256": "5f29d51d2885b36ca917e1adf0e6996c3c6a60307ba8012b254aa4dc5c6e8359",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=high_school_biology,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_high_school_biology/instances.json",
+      "instances_sha256": "4c96703feb3a369fc3a12b18d57435c607c56235fd22c3162facaeabda585bda",
+      "retrieved_utc": "2026-09-26T05:18:35Z"
+    }
+  ]
+}

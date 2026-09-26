@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM lite, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-23T23:51:20Z",
+  "retrieved_utc_last": "2026-09-23T23:56:15Z",
+  "run_filter": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "commonsense:dataset=openbookqa,method=multiple_choice_joint"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\lite-commonsense-dataset-openbookqa-method-multiple-choice-joint.csv",
+  "rows": 30000,
+  "models": 60,
+  "items_common_to_every_model": 500,
+  "items_seen_at_all": 500,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=01-ai_yi-34b",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=01-ai_yi-34b/per_instance_stats.json",
+      "per_instance_stats_sha256": "16830af0a185fd1055daf2747f4fa28f18c843302e03154a8d0d4b7f21cfe822",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=01-ai_yi-34b/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:51:20Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=01-ai_yi-6b",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=01-ai_yi-6b/per_instance_stats.json",
+      "per_instance_stats_sha256": "03b69b177766afb908bb0c1bf7bdaaa732223cd2ac0b8b0befc8a9b99ec6d89c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=01-ai_yi-6b/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:51:25Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=01-ai_yi-large-preview",
+      "suite": "v1.5.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=01-ai_yi-large-preview/per_instance_stats.json",
+      "per_instance_stats_sha256": "c605016ff86ea523a6204a1fddcd9366299430c4f46898cf7bce653d9da9efa3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=01-ai_yi-large-preview/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:51:30Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=AlephAlpha_luminous-base",
+      "suite": "v1.0.0",
+      "model": "AlephAlpha_luminous-base",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=AlephAlpha_luminous-base/per_instance_stats.json",
+      "per_instance_stats_sha256": "9260b9b9c04faebb85bb9ebcdc590e5536a62126387bb47e1586a4886a3522d7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=AlephAlpha_luminous-base/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:51:35Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=AlephAlpha_luminous-extended",
+      "suite": "v1.0.0",
+      "model": "AlephAlpha_luminous-extended",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=AlephAlpha_luminous-extended/per_instance_stats.json",
+      "per_instance_stats_sha256": "06d988d04ce38c55a39dfe470bd33ea49a6af6c4b6b9a74ffe62ee5bc7d987cc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=AlephAlpha_luminous-extended/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:51:41Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=AlephAlpha_luminous-supreme",
+      "suite": "v1.0.0",
+      "model": "AlephAlpha_luminous-supreme",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=AlephAlpha_luminous-supreme/per_instance_stats.json",
+      "per_instance_stats_sha256": "703cd77c1ee86aef1f490ad08bad70932d7d376a025deb41282af00df256a3ce",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=AlephAlpha_luminous-supreme/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:51:46Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=ai21_j2-grande",
+      "suite": "v1.0.0",
+      "model": "ai21_j2-grande",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=ai21_j2-grande/per_instance_stats.json",
+      "per_instance_stats_sha256": "7195508ad65b8429775d8817916124db36526558da9292831f13f17125e11c8e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=ai21_j2-grande/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:51:50Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=ai21_j2-jumbo",
+      "suite": "v1.0.0",
+      "model": "ai21_j2-jumbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=ai21_j2-jumbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "5858b94ba88d1d7f30365d51da5c515161a2bf02c4e93027d5887486b51b1fc7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=ai21_j2-jumbo/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:51:55Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=ai21_jamba-1.5-large",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=ai21_jamba-1.5-large/per_instance_stats.json",
+      "per_instance_stats_sha256": "7625017c7a184c6930fe6197f539a1b81ef23fe8cb7bada097cda5e0ae84a44d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=ai21_jamba-1.5-large/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:52:00Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=ai21_jamba-1.5-mini",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=ai21_jamba-1.5-mini/per_instance_stats.json",
+      "per_instance_stats_sha256": "961879b5a3dee4e4b9062e7d0d98504d4f9a9a5eb0211cc00b99d2fecc0f9022",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.8.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=ai21_jamba-1.5-mini/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:52:05Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=ai21_jamba-instruct",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=ai21_jamba-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "1c873c3cde6b10a594d82d44c5b9e516ba09b072b6bd442fefd9efefe76ea4a2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=ai21_jamba-instruct/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:52:10Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=allenai_olmo-7b",
+      "suite": "v1.2.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=allenai_olmo-7b/per_instance_stats.json",
+      "per_instance_stats_sha256": "68a90999746c693d9d94b4932bafabcf4ac3eeeb73bfb33204b062e8c417fff0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=allenai_olmo-7b/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:52:14Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=amazon_nova-lite-v1:0",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=amazon_nova-lite-v1:0/per_instance_stats.json",
+      "per_instance_stats_sha256": "241442cefc9a982a7cec70394adbde3b2b1dd1df6f0a17cb8b6feb94c897ccea",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=amazon_nova-lite-v1:0/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:52:19Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=amazon_nova-micro-v1:0",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=amazon_nova-micro-v1:0/per_instance_stats.json",
+      "per_instance_stats_sha256": "a3087c575eea610555cea9c83eb8e73fd7a589591ecc81568e9a7aa5a244f086",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=amazon_nova-micro-v1:0/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:52:24Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=amazon_nova-pro-v1:0",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=amazon_nova-pro-v1:0/per_instance_stats.json",
+      "per_instance_stats_sha256": "015797a88606b5ca87c4e233939c24f49ded34bbba9077b4c0fcca3557750263",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=amazon_nova-pro-v1:0/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:52:30Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-2.0",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-2.0/per_instance_stats.json",
+      "per_instance_stats_sha256": "bb00f37f81574aa78a0194872ef3b28c0703660b00e07d80a9cee2ed2fe93c32",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-2.0/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:52:36Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-2.1",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-2.1/per_instance_stats.json",
+      "per_instance_stats_sha256": "5c1b44e7f7184306a2b17cce6e05c131e5abc54dc06b32bea792193e6994cf39",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-2.1/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:52:40Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.12.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022/per_instance_stats.json",
+      "per_instance_stats_sha256": "a48ede79041198f17b00fd34cda9ee3a0c610353288968cd0e72baa09471a465",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.12.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:52:45Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620/per_instance_stats.json",
+      "per_instance_stats_sha256": "e45fdb97de4600187df99e9bf3c433665ed7d96286df43bae93b4e92baf908e1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:52:50Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022/per_instance_stats.json",
+      "per_instance_stats_sha256": "0a04f34c02c74d7c8d3639d74855cbad206174fa58c2673dd2013fe6e0bfd03c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:52:56Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307",
+      "suite": "v1.3.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307/per_instance_stats.json",
+      "per_instance_stats_sha256": "853c7a36224f56b646b94003202a36013477b7db21c543d1b084ff107e162920",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:53:02Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229",
+      "suite": "v1.3.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229/per_instance_stats.json",
+      "per_instance_stats_sha256": "159c50ba1d4dce11c95bc6e3bd48f3171b21f7a929343b008421aa1013c53c09",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:53:07Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229",
+      "suite": "v1.3.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229/per_instance_stats.json",
+      "per_instance_stats_sha256": "317b7ed85a027d149f8d96541d36727b152755e1e8c4eb411fcc0aaaf27f1b66",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:53:12Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-instant-1.2",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-instant-1.2/per_instance_stats.json",
+      "per_instance_stats_sha256": "e031db5168e8115d41c02b11e6e530a1a6e62f8e608b25b3f0e02b1aae06fa88",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-instant-1.2/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:53:17Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-v1.3",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-v1.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-v1.3/per_instance_stats.json",
+      "per_instance_stats_sha256": "067504cde18aababefa367e6f19b11c03512cf7975991270cbebfee894859726",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=anthropic_claude-v1.3/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:53:23Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=cohere_command",
+      "suite": "v1.0.0",
+      "model": "cohere_command",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=cohere_command/per_instance_stats.json",
+      "per_instance_stats_sha256": "7d093ed781e8509edee57cd1bef2491e7231e7e384cffd47af0ebd928d404f6e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=cohere_command/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:53:30Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=cohere_command-light",
+      "suite": "v1.0.0",
+      "model": "cohere_command-light",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=cohere_command-light/per_instance_stats.json",
+      "per_instance_stats_sha256": "d9322aecfd789cf9d95c017cece0373c7be8e3a7a17db8f65c74f82398704add",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=cohere_command-light/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:53:36Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=cohere_command-r",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=cohere_command-r/per_instance_stats.json",
+      "per_instance_stats_sha256": "b2e887a52b17fbef8e50cca9dfccf11623af0e0bea9f8b22a693758da1162442",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=cohere_command-r/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:53:42Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=cohere_command-r-plus",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=cohere_command-r-plus/per_instance_stats.json",
+      "per_instance_stats_sha256": "899f094064256b0ad0a03f7351c5376865f54e8605970f13c4be160eaa3c3ef2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=cohere_command-r-plus/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:53:47Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=databricks_dbrx-instruct",
+      "suite": "v1.3.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=databricks_dbrx-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "a2a1465c1e7e6398521b0e3e06675dcb7abc0dbac406cb11b5cce3a99c84ccf5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=databricks_dbrx-instruct/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:53:52Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat",
+      "suite": "v1.3.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat/per_instance_stats.json",
+      "per_instance_stats_sha256": "c00b026253a6d2f8e14a0666fceda3eac383c1edb0b6d8e6dc55306471835fd8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.3.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:53:58Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3/per_instance_stats.json",
+      "per_instance_stats_sha256": "cad4833e7e8a2549dc3bd985c8135db4de2645377cd328e3aabaa405cba76b45",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.13.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:54:06Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemini-1.0-pro-002",
+      "suite": "v1.5.0",
+      "model": "google_gemini-1.0-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemini-1.0-pro-002/per_instance_stats.json",
+      "per_instance_stats_sha256": "29ca7b3c66f12bfef1ef337dd0acdceaf6a65a7df90fcd1b5104d665cfffe4bc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemini-1.0-pro-002/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:54:10Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemini-1.5-flash-001",
+      "suite": "v1.5.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemini-1.5-flash-001/per_instance_stats.json",
+      "per_instance_stats_sha256": "123b302b019164a0f1d19965c0fbfaefc1906144b9870b47c8014bf792fdb052",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemini-1.5-flash-001/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:54:15Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemini-1.5-flash-002",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemini-1.5-flash-002/per_instance_stats.json",
+      "per_instance_stats_sha256": "232e96acadbee861cbc3984c50d8c6baef669ab5a9deb5ae36ab7ca5f1d5324e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemini-1.5-flash-002/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:54:19Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemini-1.5-pro-001",
+      "suite": "v1.5.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemini-1.5-pro-001/per_instance_stats.json",
+      "per_instance_stats_sha256": "55ae1b628777e39e5ee9a1a25b0d99dadf67c85d197d6101090ff82471deb5cc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.5.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemini-1.5-pro-001/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:54:24Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemini-1.5-pro-002",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemini-1.5-pro-002/per_instance_stats.json",
+      "per_instance_stats_sha256": "4a4ef361499c7f0d8a483baf36fdbe0a09c9c2d4fe877ec6769c18c26e21b98b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.10.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemini-1.5-pro-002/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:54:29Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.12.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp/per_instance_stats.json",
+      "per_instance_stats_sha256": "68eb7fa043b989dab1c8245c9351c8d1b7e4266d4b9bf75fd57e9373e32af63b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.12.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:54:33Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemma-2-27b-it",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b-it",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemma-2-27b-it/per_instance_stats.json",
+      "per_instance_stats_sha256": "7dbd0d1263318297c29b11478f75ffa9fa5d49e5b7a8ccbab140e56fd67988cc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemma-2-27b-it/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:54:39Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemma-2-9b-it",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b-it",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemma-2-9b-it/per_instance_stats.json",
+      "per_instance_stats_sha256": "e9ea022112d4908d0d57d908b34efd9fc86bf38ab05b62d7eabc40ed540eea05",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemma-2-9b-it/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:54:43Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemma-7b",
+      "suite": "v1.2.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemma-7b/per_instance_stats.json",
+      "per_instance_stats_sha256": "c661f73082f227d6a8ac30399e6886daefd4e245ba8950feadb1299b93a22ff5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_gemma-7b/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:54:48Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_text-bison@001",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_text-bison@001/per_instance_stats.json",
+      "per_instance_stats_sha256": "9f95f012eddbfda087dc68b9dda091607f4dacab6cf866fbc3dcfd6fc8f635de",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_text-bison@001/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:54:52Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_text-unicorn@001",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_text-unicorn@001/per_instance_stats.json",
+      "per_instance_stats_sha256": "2d085fb4b45c7d2f2ef0fd51cac737b8f11a05746d83fc307578349452bdda19",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=google_text-unicorn@001/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:54:57Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-2-13b",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-2-13b/per_instance_stats.json",
+      "per_instance_stats_sha256": "065852fc82238cda78ae0366e1790f1ed79c4891cc04aa9ac53ae31b36e2d182",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-2-13b/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:55:01Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-2-70b",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-2-70b/per_instance_stats.json",
+      "per_instance_stats_sha256": "1125192defc2bcabd0ad92bad061f587db6b0981cd5a24058663e47a9eeccb52",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-2-70b/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:55:06Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-2-7b",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-2-7b/per_instance_stats.json",
+      "per_instance_stats_sha256": "512efe9375376589946703e72b59d9c2b03f1295f9866d5f9e3e8a5c53ccce67",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-2-7b/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:55:10Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3-70b",
+      "suite": "v1.2.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3-70b/per_instance_stats.json",
+      "per_instance_stats_sha256": "d0f8847011b569703b2ccdb40ed2c28f4f9dfc23f0b2db5de476122122d6c78f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3-70b/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:55:15Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3-8b",
+      "suite": "v1.2.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3-8b/per_instance_stats.json",
+      "per_instance_stats_sha256": "06d8b0905b83a268932316c90abb8b0af43473c6449042106489d490a97e83c1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.2.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3-8b/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:55:19Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "145ca70c1fc3003f1894817dd1dda1c015cdad59fc9e8df3eb4b9764a9af3dcd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:55:24Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "295a37e749a3f174d43bf1957f08658fa34c39b0ac8cff191a200bc8803e8063",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:55:28Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "66893de0b0cc086f57b7661b4f3dad46b48378bb710a53e19640aea67c61cbfc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.7.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:55:33Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "dc7223a6eee66181b5a05330126ef785c9e8d58a0156206efb854ba0f281fa79",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:55:38Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "03b21c074242f09320f72b612b4a9f48e483f538c5ce0de841f30e65745ca86b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.9.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:55:42Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.11.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo/per_instance_stats.json",
+      "per_instance_stats_sha256": "00b27fe9ca80359134afdc37e4b80b97a170a1ebe0d9d49e8da82fb6e500388e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.11.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:55:47Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-65b",
+      "suite": "v1.0.0",
+      "model": "meta_llama-65b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-65b/per_instance_stats.json",
+      "per_instance_stats_sha256": "f5f1bd8d6cf3b5914380a1f06cae83f3b3292fa5aad24065ababa4f144d4a9ae",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=meta_llama-65b/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:55:51Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=microsoft_phi-2",
+      "suite": "v1.1.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.1.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=microsoft_phi-2/per_instance_stats.json",
+      "per_instance_stats_sha256": "a7033964da5b98abbe274db6ad9630a0a970b278492c4bc38fe5da14d9b99bac",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.1.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=microsoft_phi-2/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:55:56Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "1fdfbdb7fb7943d1dac9fa545b8742a01e681fa61a2e4e4b0b00d28f3aa6433d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:56:00Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct/per_instance_stats.json",
+      "per_instance_stats_sha256": "aad45b669edda632a135c27888ce642a0879cfd75073e7b3591f4c03e9bd11c9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.6.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:56:06Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3/per_instance_stats.json",
+      "per_instance_stats_sha256": "575402816392004365eccece55255c3cf745fbf9302352ce6db99c3c87a02a65",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.4.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:56:11Z"
+    },
+    {
+      "run": "commonsense:dataset=openbookqa,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1/per_instance_stats.json",
+      "per_instance_stats_sha256": "812161a085afca7bdf98ed6c59e6b811163d2ef84dc0c3f6ac4829937c18f6ba",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/lite/benchmark_output/runs/v1.0.0/commonsense:dataset=openbookqa,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1/instances.json",
+      "instances_sha256": "fa6dd7e8c7ac9c335fc6af5bdc3efe7552845d47ed091b4473a95629553656eb",
+      "retrieved_utc": "2026-09-23T23:56:15Z"
+    }
+  ]
+}

@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T05:00:45Z",
+  "retrieved_utc_last": "2026-09-26T05:05:59Z",
+  "run_filter": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,eval_split=test,groups=mmlu_elementary_mathematics"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-elementary-mathematics-method-multiple-choice-joint.csv",
+  "rows": 22680,
+  "models": 60,
+  "items_common_to_every_model": 378,
+  "items_seen_at_all": 378,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e046e4eb46ba8aca1ab4bcd6d3df66c1e4627f408a3ced9bb4eba339c7d0560d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:00:45Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "09766545eddfb838cbad8eada235fda9c25695dcd5c980d8ef3248d61b65ac35",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:00:49Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "278f37dcbebdc5e7d27f2af649ee3567334c2f7f231cabe504cd70396fea3ace",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:00:53Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "8c40e43e52dd8b0ba680a08178afcbed504b84967f7a9b8e3b0396580ccd388f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:00:57Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "69bdf99f6a7644383cb71fb35b7a2990b83218f99957f572acc5ac45c509f5bd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:01:05Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e8ce9a13eb860f8dcfbcf62108e10603acdcef7e252a4adb879f98f94baf3adc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:01:10Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ef5748e8c255abe9e31963d9f3dbb823c1d1825b4816dc09ecdf6288012d252a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:01:15Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b32d8bcc12e7da810b4c1895bc5bc6ce151394f3f19691610cd2c19eeafee5b3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:01:22Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "990b37edffeaa962e865d10da3d970650238b08bbb0fd4ed9e6081f8682780d0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:01:26Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ea51ba46c5c0db15492a5abb13abe9c5e51df4b0aadc502679b6cf3dc8cfbe28",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:01:32Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "58073937f54d6520015855b96e2e2531b0a01ec442a09bc2f632863169cb349c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:01:36Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b4f786035f835e72ba35503b176de8035a63d9fa30dd6dbf41b184d3263e5584",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:01:41Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b3925644057cae27961e1c6a236d570a206fe137f3a57a574cac01d1e8182945",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:01:46Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "82bf97044af9a40c152027defbd76564b10552c8b45ec25df2bfbff813247569",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:01:51Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "2e8eb5c5bd68edbdb255051eaf6bbf41cdbf36bd0d41adb35bb55954fef4f863",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:01:55Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "153dc1ed4d0dffe4d260195aaa84322ee192107757421460b295c3232abdd990",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:02:00Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "13355d677f8cf615a5475ad2a94a3ea823a75ba2c2e4d2db72b8b69f02a18660",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:02:04Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "68f09d07cc7bc1edc6e419efe34354c3ff27d05b40f4d16f178fc7a7ca075d19",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:02:09Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "c1748f7d42165d93fdfd15fd9dc3466b6664515e54e1f2501b11001cb34049cf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:02:14Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "14400427d24060a31684901e4904b86588add7206f0e0b29f310a28207f7de3b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:02:19Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "759c0cd89b279b2b07cace0e2ad5795a1043d773af9d5f84f8c91379e195fe60",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:02:24Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "39176910ec66ddd94493903afc3eac9add9b30b73f732664fcd247c3a8f448a0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:02:28Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "c7c5cc8b74839aa661999a2245bdb924d52e8155de6a6710a88738a2f2104bee",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:02:33Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "8379b9acfeafd02a14e81e376464859a291618ff20318e76529bbf48cc983da9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:02:38Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "280a386784919c566bb720e558d32db542d02a588d0352e3b487c9526d498934",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:02:48Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "7f37fa2aea5f5bcaed86a250e0eba0050297049c89344cee494ba42c8e6a331b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:02:53Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "a0dbad943aa7195f0100355fb6f382e56a2c0d8bdbc9f45b9acdcc307fdeb1d6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:02:57Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "955f7cd4820edf9339d187a8f90a8886a8bd02408aa54778fe76fc6c2d4deda1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:03:06Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "3b94802b1958414566e7d6f3fa94d975fff8cb2e2b1012cb6f6ad0691f7778ed",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:03:11Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f9d487e6f49e627fe559ad7f71c403c29d716894e3292ce6aa0d73433eb456c4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:03:17Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "35427ea960ec518a8021cb4c6c05c6df2c09fc2d693b35614735e8b406753d41",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:03:20Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "6d5c1a71a9acdd272d8c88fdda27774ce9a65a212b8677647492c0547a6b174e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:03:26Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "a8c06901bef74e3f92ae2c995a7e714679fc69c58cc04b8e2665e921f5af385c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:03:30Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "64ea95b0a759b6a2f869da5500e49149ae2975a003d1a6873f0cc8e32a114131",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:03:36Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "13c673e5be9dbae7432c2d2653a422daf32e73b68c311ae6f9a8c6a2a82ec918",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:03:41Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e0dc06b8b3b602a1b8fc0d4618948da30cf5e04611b719c76819731b05e2b1b0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:03:58Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "e012f66809e7c762a671c1eac37a43a28abe63f0fb872101a5c78928ad98499a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:04:02Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "f1d162338145ab1d910e65f61119935569a6c4f69a8ef43e780558291c208368",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:04:05Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "6bcee5766ed3e81ad2c3ff90d100f6a8703668c392a9ef38d202cebfe8617678",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:04:11Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ead8e319927c566510037386c218167f82345958ab49d8b94b0b14984254eb72",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:04:15Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "64163c3d31508b123f0294d7299ec27a916dbbe14b7756b7c199e43aef6504ac",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:04:20Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "57de1918a92be8e655c20c95d49e4ef5e387909830dedbe44b6a23eafc058749",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:04:24Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "ee73b1092a591300090474baac6d947af2283825ac5666479544173afe11c12f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:04:29Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "c23851614619f2d872267e9fc96dd736efc9d24d533a2be5eaab03caa4bf262c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:04:35Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "681de58bf0ae5560fa12774d4826594f163c15687b49fe9dfa450d3ab8b83b59",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:04:39Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "2aa62351b3aa3ace5b7c0a8f124a4fd12c7bcb9d3f760515e1b141f2d5124384",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:04:44Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "1cc3edc2f42d96c70edaef535b3e9af23df43210ca4a349b182d8c61475e5256",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:04:49Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "a7200aa4cfc58593d472662b913c536413d66519b0cef868624a98f67dd52d41",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:04:55Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "614cb11037fe89cd20590f79c3cfdf1e8f09274391f6d6d049a937799a337cac",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:05:00Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "7e4467db445f4943927ca689fbaf7751002bd4c78a81120b2c64cc5efed32031",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:05:05Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "c51e0f7719b2faf4d925b467682c6e88390756dd8dae6b17b77da2e8a4e7e674",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:05:09Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "eed088696e34362559ea97691a558d0310f36cedd0dedee4e87ecdaece3486d6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:05:14Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "5a11c2657d563dd9b140dba2a4e8bb13bf9f1d5111d6b9defbec6dc9cd8603f5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:05:18Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "5555e8841b63cab2cb7249a0607b5165098b83539fc2a7a0f4a9805ad8856b84",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:05:23Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "4ae40aefa56c8cd3b803cb423ea52c076bf82f36237ec37f1cd3d30005bc42ed",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:05:32Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "1bd38eed56d3325cc1262cb4832a5dbe591e6132eb91f84fd256ea3bf793bb4c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:05:38Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "b30d8196e8c7d9f2510dcd80192e545258916ccb2366be55d94e334de29124c5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:05:42Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "3aafe8a7cbc53510f35cf83029e6fd7fb78de643fdbf073b841b158ba4c4badc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:05:47Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "944f6c0aa3069cac45f29c84d9c6f57d74d13b911d9a4d41615be9f06b18eea7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:05:55Z"
+    },
+    {
+      "run": "mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_elementary_mathematics",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_elementary_mathematics/per_instance_stats.json",
+      "per_instance_stats_sha256": "a36e79b341d506e975ebe10494080b2922535c42586a52402fcdfcb9b7b1674b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=elementary_mathematics,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_elementary_mathematics/instances.json",
+      "instances_sha256": "10ccd347ba439cf58e6e0f8463b94f01db39158041db216d93ab347e7cfa21a2",
+      "retrieved_utc": "2026-09-26T05:05:59Z"
+    }
+  ]
+}

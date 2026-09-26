@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T06:45:58Z",
+  "retrieved_utc_last": "2026-09-26T06:48:14Z",
+  "run_filter": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=professional_psychology,method=multiple_choice_joint,eval_split=test,groups=mmlu_professional_psychology"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-professional-psychology-method-multiple-choice-joint.csv",
+  "rows": 36720,
+  "models": 60,
+  "items_common_to_every_model": 612,
+  "items_seen_at_all": 612,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "bcfd335a4798c607b10ce20e5c1ae0672c94af3185407b8228d1a5671c09da85",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:45:58Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "7e0d10ad43bd8782fab7fc363bf7f0c43886ea030ebf6e1557cb8d5d5a565e48",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:45:59Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "085b40b18fdd2feb038611dc78194efcc2452d63983a072868bc2958c62edce4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:02Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "96ca2db834ce7e0d9ed740180fbf1b01203b2bee4980b2725b41ccd729d893fd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:05Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "800aac111b1318d24bb2cd60e9229ae12df379a70344814bdd0b388592ece47b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:07Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "98c96c0ee159e54fed235da9a1d96657a5a45da8d87789657f35a3ec37e5f159",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:10Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "77650a600c48dd5e42e8d69a76e6ef8827370ac396e15f2e27fc8db240f530d9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:12Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "c2c5fa815c0ea3db12de3563bfffd252af6d265edf749adf754202ad0cb9ab8e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:15Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "d9e903ba7246ca26ec9e854b5de5923fedf5a120716d13d5980d72647a694211",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:16Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "0aaf4794c347f466bcf8520c289d8cc469dc50698e0616f1aa6c4503b85d7fe7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:19Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "788c1c2a98e8e888d23edf508aad0549d1cfea755931dbc5e21e1668f31d5b38",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:22Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "bf5e651417caad5e58e4b3554bd8027ab328f55f8ff48383e0713dd647403a96",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:24Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "47802bfe78b67b6dfa06bd55af987b320f8a5ea075d9c9cff26a0ce19c4e83da",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:26Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "5263744cbd33e43edf9b08d3d3011360bf252adf8970f9b3cde93f976b5b04fb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:28Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "49cc78c2db3ab3a40cfc222a188526cfb0a8807b1a186eb6c5011cd7fd31feb8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:31Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "7f3e8dfa59555734e9ade01e221bfc928b7203418511d3f0bd8c3e1d88bc7f7d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:34Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "3d273f8e7ab25f33627289fa836d6fde3bb404ecaea2e4c406098896fbe8aa16",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:36Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "b04280eab277191c7a7a204bd1b8138667c70379b9d0a80868a3a09687ae8c2e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:39Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "730cc7868186219020469171979e61af476b1d0d8b4960f89086795ce5477d34",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:41Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "4201eb8af0ed7b42b89b48594d3d678b3449a125352978e4622f393e238f6580",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:45Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "adb2e9880f798c1b91399d96bdefd1502c6c9f072127ecd777881dbabf2d8963",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:46Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "544354ccfe1a024904278a5a8eed65ed09a79793f9cd2ed66843fac2092802f9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:48Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "a1568e3a4d715e6cff0160a7ab490140ed5ef7be7a9417a296b7944b3f1f6690",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:51Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "8c37533a03b37c4dadcea0847b8f2b3f95dcf1964759ff2256aafecd9f0954eb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:53Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "63558cd680969128cf1446c029d04ee221f8b161feeb732880b38c80eba36b52",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:56Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "f23b2d0bf6f4a085c68589b55f52b8cffd413478c1ca33f4d44af1ea981295b4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:46:58Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "b2e4daf2548e0f44f843ca82d2c04a81da8bac4fb4970911222bb3806745e8fe",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:01Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "437a971fd19b2b7793594a3e153386a2fcf9857385d000a61feef5b476eaa150",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:03Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "8a2a015f7c01bbf741746be44ee0a18e9bf523ef7303ae8549b5bf63f585a912",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:05Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "9ee5bbdd34efe8b1bf652a33c3f1e89cf582b5b8e37aaf930aa6fd827c92bf9f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:07Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "d2ef7e1ac77c216e8699811414096310db6b0861b24476feef63281fecbbf2b8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:09Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "4ef9b3f24b0dca3d995e035f94918faffa41bf11d659670efd921c2a73835540",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:11Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "7fed0de5db8dfa8d7c62417195b094894e589c9240b71a10d4b8920804c93815",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:13Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "70ea7bf639c8e30dd6e3235919ed2ab7482d8060114a46b49491b39cee39db4b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:15Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "3be743cd9a6be72a2bfd4fd24fdc292ffe4199d42011f7d6f9df0225585596ab",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:18Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "267bc2cece00aaac9496ef8443acaeeac9a3d56657603a52635d4106ad03036b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:20Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "4324f0f981510c93efce3cd7743c10ae13dc6b2625f10c8247ef74d1a8842d62",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:22Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "ef9eb38ca312362c832126312fba74b8d19006eb53ffec785a144186c16fd7fc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:24Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "b7c1edbcae9296cebd76fa797c0389cb8c31513751ac59522763df418231a14d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:26Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "b5e52c9f9522a3a56ac8fbe8aca46ace52304cd06793326ed322696bfd055230",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:28Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "63b7bfe940154ce73445e4567f6c112cf7e4c32c21935222f1f41e9f2466959c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:31Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "43fe549b325758b5ddfe09df26f5c50370efa051d61b9bc381b3c89a0bf247a5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:33Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "b4ac9e044030938570cb7f9a883db0d1a9cddd9d034a0f7a3b7088e35029f5a8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:35Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "a66df0912184a4930edbeef36758384aa47e5f66a4023d392403ea87bb3d0a3f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:37Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "f488e9bb6abc7d7b09519b2ff365775762560dded28dc8693be3ef4da5142a98",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:39Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "eafc22bafeb73ba63e6a092c370e67dff1b24bb001097eb73c6b39bdc4a57351",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:42Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "c3e5324d52aea13193ec8262f7f274578209078a6cc38c422d9dfc1b589bd71f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:44Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "c4f54360f7d748850cfbf030f61c84d7810c2393f58e25e384f995867be61841",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:46Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "4f4e385b55cb4c39e8fc7fdddc03690cedd8fed877c1d604ae8e9e15ccfbefc4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:48Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "2556fadc1eb48870dedae5f4236957c6b4d26f781f18adee19d3bd4333a0e305",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:50Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "7d20c43c78e80c7b7bd7a2bc5fd7c28ab3f92f50522bbba1811ac337b01de5f6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:52Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "72e932fa85004841756c95927a237524a99c779d9c8f597195a6825e1c655b65",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:54Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "0aa50c0ad357fdadf94692c4331b9094c61c3492a637167863767c974876d74f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:47:56Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "b74a17500b9224a0fd4a0c27a1ef7d0d410580a5060d41ec0f7ab2abbbd5e5cb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:48:02Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "fe653f7c9ca14275645648deb24312f6341a9918ddea0cbea8d7da9f8d5ff39f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:48:00Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "7319001216f1aa8b859d8bd3f73a96ad3466695f72a6fd125019dff756bbe4fc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:48:03Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "4b88b3890c887116c7f3046fceaa009b5adf0028d9e9088b1f416f28efbf5236",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:48:06Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "24b8687e234b8ce9b5742d6daa6243c49f1886e4d40be23151811e8f66af597f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:48:10Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "2ec7e9e10deb89994b8c3522cc79b4fb2f16623359317a6c4c4d7aa6c90fa003",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:48:14Z"
+    },
+    {
+      "run": "mmlu:subject=professional_psychology,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_professional_psychology",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_professional_psychology/per_instance_stats.json",
+      "per_instance_stats_sha256": "257cf56d8f8b4acb802193909551e3466b41ef455b27e8e22c72ef40170f5f7a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_psychology,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_professional_psychology/instances.json",
+      "instances_sha256": "aca10ac2dbf38c10559d266f2cf84945d678732b0ff63e127e4d1ffaaf993efc",
+      "retrieved_utc": "2026-09-26T06:48:13Z"
+    }
+  ]
+}

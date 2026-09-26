@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T06:55:58Z",
+  "retrieved_utc_last": "2026-09-26T06:57:04Z",
+  "run_filter": "mmlu:subject=virology,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=virology,method=multiple_choice_joint,eval_split=test,groups=mmlu_virology"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-virology-method-multiple-choice-joint.csv",
+  "rows": 9960,
+  "models": 60,
+  "items_common_to_every_model": 166,
+  "items_seen_at_all": 166,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "04f897f7281a2c7c3a83bf975789be268c8087f98d53ba7308482762fef8c540",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:55:58Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "edcff0f9a76d56cb37c95783ae7302b0561c4e2d60cd994fb8d5a306c136be14",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:55:59Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=virology,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "aa1b1dbd45cd7c43e7a83924f3222a50bbcfdb46869022920f59909b65786aa5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=virology,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:00Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=virology,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "42b7656caa11beeb4be5cce9435fb04e663cf842944c3fe24bbdf08435caf1f7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=virology,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:01Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=virology,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "8277f4d8813c99907d17bc139f3a486db50bf810fe9118817a8ff0c0c69b1a1d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=virology,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:02Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=virology,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "f274901a0f1f8da18dae3e76e9b14f49b8de3e82a11e07a7d57cde09c89608e4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=virology,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:03Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=virology,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "c8e1103095f500ec3c55ad2e99f22ada0d8f0114206a0f7caf993646d5fe0497",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=virology,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:04Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=virology,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "37346f541e963bd5cfaf88243b4cc50addc45145799706ca933c47a57566b90a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=virology,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:06Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=virology,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "7d88fb090c690f8e3b59044a5ddce1cfe4ba8b8222205b66d7ae560cee06fa2d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=virology,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:07Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=virology,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "74e1b7cb83fb3869c2832f3e33382057037bdaf9bb04bd41d445e1b2f94ab3c6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=virology,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:08Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=virology,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "4707570626db748b153612f7a776ddec4aeb5b5c8ae267f07bd9024a76bf8e07",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=virology,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:09Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "c027c966dea0c69c53d0e8daae0855edabcffc06363309024f1990dea5397ab6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:10Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "cef03f2c77f53a7ebfe17b4f85ce092fd47c3282b203ea5114d82f3236341d54",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:11Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "045dc4a0bab8839a72963ad5a7d33314c7438133a892aa3102ba1ab7fcd36a7c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:12Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "9765192aa31ae8ea4e629f659e38175775e47ef00e44575b3832c133ee3e7fd3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:13Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "e905c3cc483dd427b4551e64c071fd483544868b111871caf373787a6750bcd8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:14Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "594f91b61127df7eed7d3eaa06164ff21d7414d82a899f48a1498027353f1bfc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:16Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "7e8ce6e4455110698a6cf551a33c95cd77d8e7dca2515ef2e56eb1c518f1f319",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:17Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "8d29bae078b458f2a15db5c2c9253fdd3cc3d4867789e8bc755a5b624ab6510a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:18Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=virology,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "c4f866231ac19b7ac64469538ea3b11cd973a8663417ecf94d3e4f85bae6ebd9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=virology,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:19Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=virology,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "7a1f47ee7d3a3a5f4090d3843e86715b71e314f3a5305e4f22f2c80013645dc1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=virology,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:20Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=virology,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "93ea1a6d593db59da6cae78e06344a0b11914cb5ab32471281960572cd0bbaaa",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=virology,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:21Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=virology,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "09961486e6a084b2ddce4c7289a8ba6669563284ebc18c6c4ced6be91f0a3822",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=virology,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:22Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=virology,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "a99fad23d8e020bb74f3a93b9cd3b280ee954159ab2e0285d327b3486ac92bec",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=virology,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:23Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "aef6e164e2b1cdb261d44029dee7fc6aad990b62cd844b48331c345fa2da2ca1",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:24Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "bb2422d4e4dfcd9cb315f027f788c29b7ea0166b476b4a2b3ded610df6c9d8e6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:25Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "719bbb07253e3a2475b8b113904a4b57407c0097e9a38bfaa36d587980012406",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:26Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "bdc02b2cd1b9a04e1c952a16e3961c27e42c68cac6e1b53489427dc32c95915e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:28Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "171c0637c5f598877db6bdafe92dc1406f06af3333a89660a16f2298da1227e3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:29Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "30896a48d510ee655f32089ba0c630d194c280daca324ee6f0be344263c5def8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:30Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "4a4ab2ebcbf81e1a453817a26b06a5137376fbbcaddcdf6ac163ec38a4bf7631",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:31Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "9ade5f061e8e18f0bb7c7176a346c63b65c0defabbf035c5fb27ce917ad423b8",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:32Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "a3dfb738fea4d70c71ecc944b9181e0ba8fa99eb5da53b8b27cdfa95536ecd62",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:33Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "fc7a60efec95b368385f1e4f4ba1fa961edc9dc96fa5fdfb95ee73f2d60290bc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:34Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "0ecc687f43ba2637fd08578cb014980a3329b69ae6d223f469adc9e98fbd098d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:35Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "c2ae0cf2c51df0e1a05b945b0cd1bd56f4da277768848f0dfaf7800c39f2d6be",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:37Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "0de23b86b778737cfdf54fa0c7249e98e605e4e2fcb611ad66c24af9e0b89ada",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:38Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "e7e10c48d178046639b2018dbd7d2bf28d180896bd395d07ea03f4e0b16d5531",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:39Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "a64cf8fb7060abbbf71bd36125a7dada51c2acf193bb90439fd17cbb2cb96af5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:40Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "ec3f78be07819f994e7b89f41b30e3591d6de84be6c0c2c5699a9844cfc38c1b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:41Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "73d37b7439dfd2b5f1d37964992532bd7a042ec8cf8cbcdb1b0960a15ed9f47e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:42Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "7d97d13fc59112491d91e36338ac5599c98ae92b3f4bd129c66fbe8f7fbe3ebb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:43Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "d1997a889f1b21334dd38fcc5f1bd51e7623c1182e88a2697611cfd2df004c64",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:44Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "a80baee9ece1419682404683b54ee4d7ea120582bf844cec62d230890786274b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:46Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "c065edc585723b58917a1a304d01a2929c0e78366b1da8a78f18690e84e6ae35",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:47Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "be57455cbea8ab9b83d6bd4c08f940eab649406c939a8d216c3b80bc7971c70e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:48Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "e68df00fbc150cff46203a8005142672b6dc8c761a57ed62a945f23963af8798",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:49Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "64bb4268afcdb99974dc65de647b4457942d04c6299b5d2a55ef3faf3c0ee476",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=virology,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:50Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "6e881490b90a823b9a0014b9727f7fec777381f22c54bcbe0806bf361fa85b9e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:51Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=virology,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "31ac4c32c2d1df9673ea29bd624a0ce2953abab7198858d8520e73b8d8beb9b0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=virology,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:52Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=virology,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "4b868fd609fd624817a225c29e8925a92474b439b9039ec00cfe1ab683e109b2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=virology,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:54Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "d6887ccfa7ccaf111e29ffbda43e322d8cbbae0d698d14cbc5f59793ddba769f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:55Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "6a556627e777e52931ffef4fd5ac4a43025ca740cfc3a2ab67ae8e3c1a5c191b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:56Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "070a807fdb8637ad9e43c6044d94dedf3c134ae912fde37bdff9cb681b644e29",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:57Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "e82983ef0285a0dc500d19a76759c827895ba69c241b518ab8a5c1d34f8c0a7f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:56:58Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "53bb54c3da4260a54b80b44eb79324759eb6268cf0bf936d77119c4b11b3d2de",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:57:00Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "5a2a8fa63c9c3cafce95bef79918fe474403277d37aec388bda4c962395d65b6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:57:01Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "886a8dba0836fb6054dc7b5b3515be438e4fa49c27956410739c188f9c464ebe",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:57:02Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "fc4609459b55a5c969c525778373d74e018f5ae960a65c2dd21a50795135cf6d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=virology,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:57:03Z"
+    },
+    {
+      "run": "mmlu:subject=virology,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_virology",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=virology,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_virology/per_instance_stats.json",
+      "per_instance_stats_sha256": "a0ce016e4966bb7adbe72dc764effdb61963480e5c1dcda366488468e11c2317",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=virology,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_virology/instances.json",
+      "instances_sha256": "f31a925d0e8ae8e6f9c5d5a43defa1c6d342698405cb4fd7b3d8b7c19e2635c4",
+      "retrieved_utc": "2026-09-26T06:57:04Z"
+    }
+  ]
+}

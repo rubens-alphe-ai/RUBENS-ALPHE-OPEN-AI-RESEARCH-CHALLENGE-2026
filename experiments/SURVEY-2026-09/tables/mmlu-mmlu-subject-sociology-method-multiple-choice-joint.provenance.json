@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T06:52:40Z",
+  "retrieved_utc_last": "2026-09-26T06:55:52Z",
+  "run_filter": "mmlu:subject=sociology,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=sociology,method=multiple_choice_joint,eval_split=test,groups=mmlu_sociology"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-sociology-method-multiple-choice-joint.csv",
+  "rows": 12060,
+  "models": 60,
+  "items_common_to_every_model": 201,
+  "items_seen_at_all": 201,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "656847c7b3d43d8b84478249d39053228d3d6d76e0fa963734e8d7c3f3a4357c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:52:40Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "8abbef97510cc3ae096314644bea19ca79e8e04eaf716bfb0545e6c83d6f5a06",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:52:44Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=sociology,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "bc11edd63b7877559034bf37b053ab7c1ff5b0de1cfc629a7167cf982d8ad4a2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=sociology,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:52:46Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=sociology,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "79e4428fafc41bba14aac4bd43ff0fc55479bdcf3071a560678085c087cf3509",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=sociology,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:52:50Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=sociology,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "bee40a89e55b5a3e6a7c3e89de62d6f849663b6804700dd697652c2c3ff2ae4a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=sociology,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:52:54Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=sociology,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "88e1fa9297234553b8238768d354a673a3a390a72425309b78b14e3dda313672",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=sociology,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:52:57Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=sociology,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "112ce9bdf094a82931c4227e2067d437d33585f67ea15d28e6bd57e5b6d8f5cf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=sociology,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:53:01Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=sociology,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "47581858f0c8a69de1088c74d8501f14607d8c7e946e33c1d8e0f144996c4a9a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=sociology,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:53:04Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=sociology,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "38bcb86b0aa7091412113dd428ee41cfe0379254ebda1a525046b5f702cbc665",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=sociology,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:53:08Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=sociology,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "49da6f3d7f5e253300afe66905d0c5dec9bfe597d7c20ded2de58916a419c86d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=sociology,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:53:12Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=sociology,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "78ab345bdb1036db681074cd74b257ec57990e553a355bac6080a593b06de029",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=sociology,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:53:16Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "5183b6b2c8adbea851820f1def43097ee0516f430384d6b45df2b179c2baf22d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:53:21Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "7f50dc8d480d0297917641fb821af3b672657b0d2c4b99a4cc41ba2b52f3ec84",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:53:25Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "9517959d642b2ee95d6e0927e91bbaae2f98e2a22f8dc39585faafcdbf44b0ae",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:53:28Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "253a5a07d393093ed32e98c2f8c1d03ffef7398daa5288ba933881a6d9c25518",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:53:32Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "c1e108eb150b69701e0980cdb86d5f8658c1f0ec43e04eec71d8710b120adaf7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:53:35Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "e71cc9edcd35fce49422ce47c7ded8a6bc5374cb0ba31f41ebbf989c48832efb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:53:39Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "9072c61bc7c6fc915bd0aa14e57474c9a937ef8b33b8638396bb1871e26fe260",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:53:42Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "b655025f575cda93e0d32570b2021900ff3d824f0fd4b06fa7924954080d5cb4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:53:46Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=sociology,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "eb8ef59c988cb7096718e858f592e0b11dd9d130f4a218f4b7afe85b48a99673",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=sociology,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:53:50Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=sociology,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "5ff78a6691eeb7bebb8eb5c603abb9fcc03ed68c8b6f2ab027f34776400b9dfd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=sociology,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:53:54Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=sociology,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "ec1aca098fe088c97a92b2b9537d10277214974f48fe978b68677ac0c1de69bf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=sociology,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:53:58Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=sociology,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "23e8d18c7448355ae23207be6e4c7375cb708d950db09cac1cf3b1116eace6eb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=sociology,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:54:02Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=sociology,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "2e1fe84325f26c643596a3ef70ef3d3a3f24873b2772c9864f325abe3a1de4c2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=sociology,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:54:05Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "1bc1997c074e28a9d99e763c59a2771c671a3532038cf94dab0d59e66278519f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:54:09Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "116c27cddb89126c4b295a1d4b532ffbbf8f9272f751db83ccabc90cb5a83fe6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:54:12Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "f103a5c6a2f076d1e83655860ff0a6e61a056bacce8245332cbcbe29c946304f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:54:14Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "e4d52a96014dcfe5d2b24abf698de3fd6f00db5138318741292d33be89f2fbf6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:54:18Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "d569c7f164ca591a186a78b44952b455a1a87015a3012eaed73689e4b458f3ec",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:54:21Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "0fbb5fbb9433305063cb2854afb9b0a7377c2f1eeb5cf18e71e4cfec9dfd2fbc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:54:25Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "6ad8115273ff1206536227e77ac9bee21120cf64a2698c7cb81ea17c5e7f9c7c",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:54:28Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "6bc2627be91364d8d409ed8e1850264ab026ef5561cd40ecfd8698dea5843522",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:54:32Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "90ba948469cb1a5824cb8ad9266451cb1dc7a9b17f796eab7a90b62d24a019ed",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:54:36Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "ce0b615da809494cdaf7db5c3a88477fb52f83c0b31816cf4d47c1d11101fb60",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:54:39Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "c789139ea7f891412a3da9b220d134f1b28e6205985016d950e404f2f7ed0e6e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:54:43Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "e01c14c143462c62fa6551cd77b63ce1d47e51a9b7f68d32d5e6d218e207d109",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:54:46Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "d3a4fea1bddcba5371cb9095b4ed7e95d14eabd79283443d2ae05454ed3193be",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:54:50Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "accf16ef6469c40b272d6d677c429b32d384b7519f8b38468db47ed5bbade9fc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:54:53Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "d42c968a060e7d68b8adc7503f54a628b866f94044ee574d5ef52eb09f2795bf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:54:56Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "a6e9155849181b45591b78de79088bd242e27b602293f5ad314a259aaf1e7a91",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:55:00Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "38a5f8362e77873f8ab6489a17c9f308eaaadfd2ec041e36747d83439a8a8aa4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:55:03Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "3472c8fde300af81bf13fcbfdc2b1688411bc46b8915f78c10b8590994c9dd48",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:55:07Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "5f7ac512b44af93f356874323766176b8c5b61e7b5be6b82d6c953e70c340610",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:55:10Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "56c59e8d0ed4fb2125c15680f94def5a00edc33aaec49df7d99cbf23cb3c76ab",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:55:14Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "8a55b06c232562a5826786ac2780af326db8040d2a1578663cd08b54c499f411",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:55:17Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "51ed55913c26d72eeda01757e5c53d43335026769f454ee6bf619c854e51ff3d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:55:21Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "481cdb21cd13f8d196ee8c92472c126fde63791a88847e59f02ed18b245acca4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:55:25Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "7d71f92d5c816ec75c84f3c3446c5e81020ece426c384579ddf0540b8056a784",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=sociology,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:55:28Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "066f0bf70c00ab07487b13430e450feee0b5e20539eeba09fdc2155d3d2477c7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:55:31Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=sociology,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "d0e2d98d858ba8918f61d7be781ea246a148508d1a15a4a3a56080aec5d353b6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=sociology,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:55:35Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=sociology,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "777e5bf80c73018696f05ed65c421c4fa1df1c20150daede5e559676105db6c9",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=sociology,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:55:38Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "29bac5a63c1a4586233909981bd20a9cf13dac5f7bdb8c23a7c0e08095728b2b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:55:40Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "2115939c3f6722c30631b2b61fa176dcbd5b1793768de2d1132b82e69563f3bd",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:55:42Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "a2e5b177a965f2cd716c511e521e467079d9a820f92fc1d969a9addf7a408982",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:55:43Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "48252ae3a329a0734916ebaff7bde02783bc0dc5b8840a4373a09cd37fc06ec7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:55:45Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "e9dac8c40a009f32683a0272cfe3ce99a077a85ef2f2637868b2cdc78a5b942b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:55:47Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "04ebae8b16f617d2b9a0654cb046e666763e21a61de8a6db3d6bd0a7477e4726",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:55:48Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "388e53b865cf44dceca04df637555e3c8f6885ddff580359ae44a57d48e6ad36",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:55:49Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "b26b3ff445d9afb589b557b31cd8ae647e991d945e11433508c2bb94a62eb1f0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=sociology,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:55:51Z"
+    },
+    {
+      "run": "mmlu:subject=sociology,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_sociology",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=sociology,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_sociology/per_instance_stats.json",
+      "per_instance_stats_sha256": "4b92344026ad39714e9fe69b6e07992cf8d7a32a035565fd566cc47d801c00dc",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=sociology,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_sociology/instances.json",
+      "instances_sha256": "d643f42a303f6b92016ae045dda3e963274d99ea7c5d600b6592b95873ed3fa5",
+      "retrieved_utc": "2026-09-26T06:55:52Z"
+    }
+  ]
+}

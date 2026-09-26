@@ -1,0 +1,621 @@
+{
+  "record_version": "RA-PSI-IMPORT-V1",
+  "source": "HELM mmlu, release v1.13.0, https://storage.googleapis.com/crfm-helm-public",
+  "retrieved_utc_first": "2026-09-26T06:33:58Z",
+  "retrieved_utc_last": "2026-09-26T06:35:20Z",
+  "run_filter": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=",
+  "metric": "exact_match",
+  "metric_note": "already 0 or 1 in the source; no threshold was chosen",
+  "scenarios": [
+    "mmlu:subject=professional_accounting,method=multiple_choice_joint,eval_split=test,groups=mmlu_professional_accounting"
+  ],
+  "table": "experiments\\SURVEY-2026-09\\tables\\mmlu-mmlu-subject-professional-accounting-method-multiple-choice-joint.csv",
+  "rows": 16920,
+  "models": 60,
+  "items_common_to_every_model": 282,
+  "items_seen_at_all": 282,
+  "items_dropped_for_not_being_universal": [],
+  "models_that_were_missing_an_item": [],
+  "runs": [
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-34b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "18e6bfd15c915cf384d26c2cf5369ef57e72843fe47930b35107569f951afb68",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=01-ai_yi-34b,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:33:58Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.0.0",
+      "model": "01-ai_yi-6b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "829da72cd2dfc1f8e2e6e4d1e1669e972c15b0e7cf3f0a7f535be34b5a6afb3a",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=01-ai_yi-6b,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:33:59Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.4.0",
+      "model": "01-ai_yi-large-preview",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "4f110cb54d171b21d1b01c5490425063a7cf68fc963838cd4485c1ca9c8112c4",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=01-ai_yi-large-preview,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:01Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-large",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "51e13130ebe73714b4de8a5cd2e56e79295a4f9bb4cf027318063cb27bae5f21",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=ai21_jamba-1.5-large,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:02Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.8.0",
+      "model": "ai21_jamba-1.5-mini",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "d820fc4958fd9227fe2baaedbe2c4841d093310931485222e8f629f37685d84e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.8.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=ai21_jamba-1.5-mini,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:03Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.6.0",
+      "model": "ai21_jamba-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "cfb1da3ed56d20c7374ea2ababa056375e4d6d07171ca705e95a0ebbed60750b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=ai21_jamba-instruct,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:05Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.4.0",
+      "model": "allenai_olmo-1.7-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "40137727ffab1e521fda830330f845041bf41aa846174e0980614ea8634ea8be",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=allenai_olmo-1.7-7b,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:06Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.1.0",
+      "model": "allenai_olmo-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "e37b7f98365d869ad57f76576b7559060adc9817c69e06e558caaf46b702c381",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=allenai_olmo-7b,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:07Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-lite-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "e3da9386ff923061d4cdbee94ed7d08ac24d0f2732b056de16afeec857463291",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=amazon_nova-lite-v1:0,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:09Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-micro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "76eb947592fc4b332dbdf0f3693d2a603b53c31f509b33243ad7beea3d5d40ed",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=amazon_nova-micro-v1:0,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:10Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.13.0",
+      "model": "amazon_nova-pro-v1:0",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "a258d278107629f01098ab7a1c0dbf1d87e110d32b6755fad891f26aa878868e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=amazon_nova-pro-v1:0,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:11Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-2.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "a1ee86483682336ceeaae29bf44def024cdd18ffe54ee0c4dfed79b1d8f80448",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-2.1,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:13Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.12.0",
+      "model": "anthropic_claude-3-5-haiku-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "c218e272c6c2fb4650d72e1d0b5f7615a074949e3352993d3f4264c3f661587e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-3-5-haiku-20241022,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:14Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.5.0",
+      "model": "anthropic_claude-3-5-sonnet-20240620",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "d1bd64a75286610ae638bc0da3fc251ba7d6dabcbe3a98dd5b0807229341a2f3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.5.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20240620,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:15Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.10.0",
+      "model": "anthropic_claude-3-5-sonnet-20241022",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "a16136c6f728e2ba13261edf04c86bfe53788c94bd6cedd45b5064a0a30737c3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-3-5-sonnet-20241022,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:17Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-haiku-20240307",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "0ddc46c72c4fce9dca6be255a902c6896364f77ab6d37e2d65a683bb6bae12e6",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-3-haiku-20240307,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:18Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-opus-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "9a21649c24e1b483c631408be9a77c1de3dde1c59cac6c4cd6fe45eb6a7bda82",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-3-opus-20240229,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:19Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-3-sonnet-20240229",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "97f27b9e0b45f2b81399e3f1774e5dcb4f46d18cc02b46c8c606d8f023517042",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-3-sonnet-20240229,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:21Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.0.0",
+      "model": "anthropic_claude-instant-1.2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "b4b25797e1927ce232d0bd94a9eea1593037acc5ccdc63972bba09f8542e89d5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=anthropic_claude-instant-1.2,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:22Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "da80bcd5b6269aa48e1ad48caefa617067b9c21f68bb7378e205e197af453452",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=cohere_command-r,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:24Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.4.0",
+      "model": "cohere_command-r-plus",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "ae8fcee9b60c7233de736d329d6694731a0cac12ca2e17d8ea05bb9cadeeff73",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=cohere_command-r-plus,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:25Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.2.0",
+      "model": "databricks_dbrx-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "b33a25fdb0fbe87ad799279ad62740435fb4a86c32b060685ce5622022079cad",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=databricks_dbrx-instruct,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:27Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.2.0",
+      "model": "deepseek-ai_deepseek-llm-67b-chat",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "fac5301f099edc9f054334bb3b364769241f46ce0e82e56df0e7b38474e8ec1e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=deepseek-ai_deepseek-llm-67b-chat,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:28Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.13.0",
+      "model": "deepseek-ai_deepseek-v3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "f07d28d335a07a93836273bda38a5a8df90fb9f38d3a4fcb20fb294ed313017b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.13.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=deepseek-ai_deepseek-v3,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:30Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.0.0",
+      "model": "google_gemini-1.0-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "ccc23d2aa5683a1fc0f9ea5331dd15c0ebf040fc699677c1afd5ba2d94fb3b54",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-1.0-pro-001,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:31Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-flash-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "6ab3b0f464e3cdefa23043818b72b6eca04fe4054d55250828a2659700929c54",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-1.5-flash-001,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:33Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-flash-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "83d2f0b2939b7b6796b54b96d81847ce1bae50f37eccea0f5e4d03b89fe1b308",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-1.5-flash-002,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:34Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.3.0",
+      "model": "google_gemini-1.5-flash-preview-0514",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "09986ae31157496aae0f12c1d9e71ab4ff30ac11c55c1d9957c5f15fb295bd1d",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.3.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-1.5-flash-preview-0514,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:36Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.4.0",
+      "model": "google_gemini-1.5-pro-001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "dc098350e1697500b52b415934a6b94b3584b62425b6723269afd2790576cc99",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-1.5-pro-001,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:38Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.10.0",
+      "model": "google_gemini-1.5-pro-002",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "a7943a2b4193291203adbe3d371291cfce4df5dd172a787e7d5432ce18fcd863",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-1.5-pro-002,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:39Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.2.0",
+      "model": "google_gemini-1.5-pro-preview-0409",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "3abbdbda75064bdcbcecf5270b28a9412421ef655555cb1cb49045927f289621",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-1.5-pro-preview-0409,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:40Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.12.0",
+      "model": "google_gemini-2.0-flash-exp",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "f0ceff8d4ca3e7756247c08986191635092100402ce91b36ac4fad4eb1274f66",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.12.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemini-2.0-flash-exp,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:42Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-27b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "9bdad1c5b10d1b76ced70008e9acb855c92fe2f7b9cd54ada1fc6a4fe00f7aa2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemma-2-27b,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:43Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.6.0",
+      "model": "google_gemma-2-9b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "231b7125fb26752ade5413498ae4c5a93aceff47192dade2b477e58ae426b880",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemma-2-9b,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:44Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.1.0",
+      "model": "google_gemma-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "778a9a870cae2e21e7a3b9b3acc15ec0076ee708ef2cd81ad7c1bf1a8580c9a0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_gemma-7b,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:45Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.0.0",
+      "model": "google_text-bison@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "f1f1d16ef47494b9c5c5860f6e7cdf19779b1894ca6d76b618595adbd0ec314b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_text-bison@001,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:47Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.0.0",
+      "model": "google_text-unicorn@001",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "6a0e3a3ab39c0c339d562d4e726303bdf4933dfeed486b9cf90bf394ed6f8e71",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=google_text-unicorn@001,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:48Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-13b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "332fa2f20c5803bd22bfbe5ff6a8aa50f387673c5a2aa4b125e88ed7b8550cbb",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-2-13b,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:49Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "e8fe2f542a405eb44382641021f1065159fc74cc71ab379336f3d67f14738066",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-2-70b,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:51Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.0.0",
+      "model": "meta_llama-2-7b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "5484d95ebe884ffcab46f53fe7e6c58e90395bd5a038e68d2c9b8a899ab743b5",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-2-7b,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:52Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-70b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "0bd35cd43bb6b84beed6f0ac29c0466cd2dbd956b69d8f2a0449b138feee55e0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3-70b,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:53Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.1.0",
+      "model": "meta_llama-3-8b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "11028096e32bc8684f3a2fb503e0289a0e47fb8f8ee3b304a51db0603d90469b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3-8b,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:55Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-405b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "76d79d89ea397cf7913e6dbac103a6a438715dc2473183a49694475b47c45840",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3.1-405b-instruct-turbo,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:56Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "da6082edef96b8368a8a2f7b47337eb1f64cdf528465bd0da3ae6ff895689baf",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3.1-70b-instruct-turbo,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:58Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.7.0",
+      "model": "meta_llama-3.1-8b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "6a05e26bc07325377cc3e69e6abd6f44ba26c5dc6d5f3c87b2e06348e522385f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3.1-8b-instruct-turbo,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:34:59Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-11b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "a26db01a8a9eda1035660ea0b89c197e8516a3b22d259c97819c856b38d849f3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3.2-11b-vision-instruct-turbo,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:35:00Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.9.0",
+      "model": "meta_llama-3.2-90b-vision-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "e666b66b6a8d5d707a0384cdf2150032202987dd9da1cdde2c9a377c5416d996",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.9.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3.2-90b-vision-instruct-turbo,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:35:02Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.11.0",
+      "model": "meta_llama-3.3-70b-instruct-turbo",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "e02f7cbdd10100fffe3d351596245ad495b5bd4904ae16ec84bfff9b40bd474b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.11.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=meta_llama-3.3-70b-instruct-turbo,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:35:03Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.0.0",
+      "model": "microsoft_phi-2",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "e571baead3443fe1dfe61f6571b1a39493a00195c5a0510ac4e6a76f1cf388f7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=microsoft_phi-2,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:35:04Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-medium-4k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "ed0b429d090cb452d6c4bb660d9d4283febb15903340c809fcd4352957018ea0",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=microsoft_phi-3-medium-4k-instruct,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:35:06Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.6.0",
+      "model": "microsoft_phi-3-small-8k-instruct",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "fa114f8599e73e9e15f1d4e3b063ad43c6c7db7ff000a2791196623d6348d902",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.6.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=microsoft_phi-3-small-8k-instruct,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:35:08Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.4.0",
+      "model": "mistralai_mistral-7b-instruct-v0.3",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "cc24abcf3ebd11d357fd595964a80b60a5e44867fe99413d9947e7eea5dfed1b",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.4.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_mistral-7b-instruct-v0.3,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:35:10Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.0.0",
+      "model": "mistralai_mistral-7b-v0.1",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "ccedf7fd4822fe0d6462e711f816cd71fe76cb2e739d774f139aef9be0940ae7",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_mistral-7b-v0.1,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:35:11Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-large-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "b5f9176f0b36aeeb81a5c9f8b3f9cc2a710a58650f4a21e62a8360d4f55df590",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_mistral-large-2402,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:35:12Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.7.0",
+      "model": "mistralai_mistral-large-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "eb5e42cdddb4a403c1083a9d49460272392c5f207c6a63fa96f005edeb9b2c61",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_mistral-large-2407,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:35:14Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.2.0",
+      "model": "mistralai_mistral-small-2402",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "c4d6eb98c79e19fd87295cad26637cbfc472c673a682f8470a3ac47e67bb8ef2",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.2.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_mistral-small-2402,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:35:15Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.1.0",
+      "model": "mistralai_mixtral-8x22b",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "7ec290e291d68b3cfe9a97aa2f1099513f2f9e5d2fb9b4de33692ff534e2ac10",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.1.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_mixtral-8x22b,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:35:16Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.0.0",
+      "model": "mistralai_mixtral-8x7b-32kseqlen",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "96934e407bcee4ec549777d00f5298d3f77569b26e4449cf646e2296ebad9f4e",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.0.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_mixtral-8x7b-32kseqlen,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:35:18Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.7.0",
+      "model": "mistralai_open-mistral-nemo-2407",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "5818a27d22dface2d7b56ad38e89893ebf7886d4873c9e38ceff2434e5dcebc3",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.7.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=mistralai_open-mistral-nemo-2407,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:35:19Z"
+    },
+    {
+      "run": "mmlu:subject=professional_accounting,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_professional_accounting",
+      "suite": "v1.10.0",
+      "model": "openai_gpt-3.5-turbo-0125",
+      "per_instance_stats_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_professional_accounting/per_instance_stats.json",
+      "per_instance_stats_sha256": "042bbaf32d893e931d870e4d1300d136ab33a089370308d5be2a05b90048065f",
+      "instances_url": "https://storage.googleapis.com/crfm-helm-public/mmlu/benchmark_output/runs/v1.10.0/mmlu:subject=professional_accounting,method=multiple_choice_joint,model=openai_gpt-3.5-turbo-0125,eval_split=test,groups=mmlu_professional_accounting/instances.json",
+      "instances_sha256": "66dfa4392da67fb0e6a971089a27da90ec16f228e2e5a42494999564db4e12ae",
+      "retrieved_utc": "2026-09-26T06:35:20Z"
+    }
+  ]
+}
