@@ -52,3 +52,5 @@ message is sent, under the rules of version 1.
 
 | Contact | Group | Sent | Reminder | Tier | Quotation |
 |---|---|---|---|---|---|
+| 9 | C | 2026-09-26 |  | pending |  |
+| 8 | C | not delivered | | | Email to the address in the project's own metadata bounced on 2026-09-26 (550 5.1.1 user unknown). To be resent through the project's public issue tracker, the message adapted to that channel; the list file is unchanged. |
