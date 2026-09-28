@@ -54,6 +54,8 @@ Outreach to organisations **outside** the ten is logged separately and is not
 counted in this verdict, so the pre-registered test stays the test it was
 declared to be. It started on 2026-09-28.
 
+Channel adaptations, recorded 2026-09-28 before any of them was used: most sales forms reject a personal mail address and route a message to a demo request. Six contacts are therefore approached first through a short professional-network invitation (under 200 characters) followed, once accepted, by the pre-registered message unchanged; when a form is used instead, its message opens with one line stating that it proposes a partnership and is not a demo request. The fingerprinted list is unchanged.
+
 | Contact | Group | Sent | Reminder | Tier | Quotation |
 |---|---|---|---|---|---|
 | 9 | C | 2026-09-26 |  | pending |  |
