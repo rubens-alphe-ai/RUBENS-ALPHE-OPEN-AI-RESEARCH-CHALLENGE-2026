@@ -1,6 +1,6 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-09-27T04:30:45.153985+00:00",
+  "generated_at_utc": "2026-09-28T04:33:24.788109+00:00",
   "source": "OpenAlex public API",
   "queries": [
     "persistent agent memory",
@@ -9,6 +9,16 @@
     "metacognition self-improving AI agents"
   ],
   "papers": [
+    {
+      "title": "Attacker-Controlled Inference: How Context Poisoning, Speculative Disclosure, Memory Persistence, and Privilege Hierarchy Failures Converge on a Candidate Framework for LLM Agent Runtime Exploitation",
+      "url": "https://doi.org/10.5281/zenodo.20641803",
+      "openalex_id": "https://openalex.org/W7164299835",
+      "doi": "https://doi.org/10.5281/zenodo.20641803",
+      "published": "2026-09-26",
+      "summary": "Version 3 (2026-09-26). Version 3 corrects a misattributed citation and several overstated readings, found by an independent audit of version 2 and by a second review of the corrected draft. (1) The figures for context-based adversarial attacks on code generators (10.7x, from 3.5% to 37.4%; 100% on GPT-3.5-Turbo; 60-100% cross-model transfer; 2,800 experiments) and the phrase \"systemic architectural vulnerabilities rather than model-specific flaws\" were credited to arXiv:2606.10860. They come from arXiv:2606.10945 (Del Orbe, Hastings and Vaidyan), and they are now cited to it. arXiv:2606.10860 is still cited, only for the instruction-hierarchy (GW-DPO) material it contains. (2) An 81% detection rate is no longer read as \"19% of attacks succeed\". (3) A deployment claim is no longer attributed to the conceptual AOS paper (arXiv:2606.01508). (4) The claim that tool responses are \"architecturally indistinguishable\" from system messages is replaced with the source's own statement (arXiv:2606.02240). (5) Membrane (arXiv:2606.05743) is described as the jailbreak guardrail it is, not as a filter for an agent's external memory. (6) The delegation-observability result (arXiv:2606.09692) is stated within its own scope. (7) The shared-mechanism bridge is narrowed to the three injection classes. Speculative tool-call disclosure is an outbound leak, not an injection, and partial counter-evid",
+      "relevance_score": 13,
+      "matched_query": "persistent agent memory"
+    },
     {
       "title": "DevMemory: A Structured Memory Management Architecture for Persistent Knowledge in AI Coding Agents",
       "url": "https://doi.org/10.5281/zenodo.19324575",
@@ -40,12 +50,32 @@
       "matched_query": "persistent agent memory"
     },
     {
+      "title": "Attack Surface Proliferation in Agentic AI: How Tool Calls, Memory Persistence, Skill Ecosystems, and Payment Rails Compose Into a Systemic Threat",
+      "url": "https://doi.org/10.5281/zenodo.20525492",
+      "openalex_id": "https://openalex.org/W7163389061",
+      "doi": "https://doi.org/10.5281/zenodo.20525492",
+      "published": "2026-09-26",
+      "summary": "This version (2026-09-26) corrects a citation error found by an automated check and confirmed by hand against the arXiv abstracts. Version 2 cited the identifier 2605.30998 for the ClawTrojan multi-step trojan benchmark and its DASGuard defense; that identifier is a security analysis of x402 payments, and ClawTrojan is arXiv:2605.31042. All six trojan citations are corrected. The x402 payment-layer claims keep arXiv:2605.30998, which is right for them, and the version 2 caveats warning that the two topics shared one identifier are replaced with what that paper's abstract reports. An unsupported phrase (\"or redirect funds\") and a pointer to internal drafting instructions are removed. The thesis is unchanged. This version has not had a full claim-by-claim audit. The full list of corrections is at the top of the PDF. The deployment of large language model (LLM) agents into production environments has outpaced the security frameworks designed to contain them. This paper argues a candidate structural pattern worth investigating: the attack surface of agentic AI systems is not additive across components but compositional, meaning that tool invocation, persistent memory, third-party skill ecosystems, and machine-to-machine payment rails each introduce independent vulnerabilities that compound when combined in a single agent harness. This is a heuristic reading, not a formal derivation",
+      "relevance_score": 10,
+      "matched_query": "persistent agent memory"
+    },
+    {
       "title": "Write-Time Admission Control for Persistent-Memory Security in LLM Agents",
       "url": "https://doi.org/10.17632/m8xf3cdjwb.1",
       "openalex_id": "https://openalex.org/W7165161310",
       "doi": "https://doi.org/10.17632/m8xf3cdjwb.1",
       "published": "2027-01-01",
       "summary": "",
+      "relevance_score": 9,
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "Runtime Integrity Without Attestation: How Agent-Facing Tool Surfaces, Speculative Dispatch, and Memory Poisoning Converge on a Shared Execution-Layer Threat Model",
+      "url": "https://doi.org/10.5281/zenodo.20579699",
+      "openalex_id": "https://openalex.org/W7163806442",
+      "doi": "https://doi.org/10.5281/zenodo.20579699",
+      "published": "2026-09-26",
+      "summary": "Version 3 (2026-09-26). Version 3 corrects errors found by an independent audit of version 2 and by a second review of the corrected draft. (1) The ClawTrojan/DASGuard work (95.5% attack success rate) was cited as arXiv:2605.30998, which is an unrelated paper on x402 payments. The correct source is arXiv:2605.31042 (Tan et al.). All citations, including this record's list of cited preprints, have been corrected; the figures were accurate to the correct paper. (2) An unfounded remark that \"GPT-5.4\" was an unverifiable internal label has been removed. (3) The Recuse Signal result is updated to the current v4 of arXiv:2606.06460. Recusal at the access door is model-dependent, ranging from 100% down to 55-75%, and a mid-task in-band halt is weaker. The v1 figure of 100% recusal is superseded. (4) Overstated readings of the ClawTrojan and MemPoison abstracts have been corrected. The claim that agents hold \"OAuth tokens\" is replaced with what arXiv:2606.06460 supports (real credentials used over SSH). The SCHEME monitoring figure is given as 100% (Gemini) and 81% (Codex) rather than \"near-100%\". (5) Two cross-paper generalizations are narrowed. The first is that all six attack surfaces exploit temporal decoupling of authorization and execution, which no source states in those terms and which is now presented as this synthesis's reading. The second is that all succeed against correctl",
       "relevance_score": 9,
       "matched_query": "persistent agent memory"
     },
@@ -70,33 +100,13 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "《AI Self-Iteration Optimization at the Limit: Applied Technologies, Mathematical Dynamics, Verification Architectures, and Safe Recursive Improvement》 is a flagship-scale research volume exploring how artificial intelligence systems may improve their own capabilities through structured, measurable, and verifiable iterative processes.",
-      "url": "https://doi.org/10.5281/zenodo.22949609",
-      "openalex_id": "https://openalex.org/W7214321370",
-      "doi": "https://doi.org/10.5281/zenodo.22949609",
-      "published": "2026-09-25",
-      "summary": "《AI Self-Iteration Optimization at the Limit: Applied Technologies, Mathematical Dynamics, Verification Architectures, and Safe Recursive Improvement》 is a flagship-scale research volume exploring how artificial intelligence systems may improve their own capabilities through structured, measurable, and verifiable iterative processes. Rather than treating self-improvement as an abstract or unlimited form of recursive intelligence, this book approaches it as an engineering problem. The central question is: How can an AI system improve itself repeatedly without losing reliability, alignment, auditability, or the ability to recover from failure? The book examines self-iteration across multiple layers, including model refinement, code generation and revision, tool use, memory systems, evaluator design, automated experimentation, research acceleration, multi-agent collaboration, architecture search, feedback loops, verification pipelines, rollback systems, safety retention, and governance. A major focus of the work is the distinction between apparent improvement and verified improvement. An optimization process may increase a benchmark score while simultaneously introducing hidden errors, reward hacking, evaluator manipulation, distributional fragility, or safety degradation. For this reason, the book develops recursive improvement as a controlled cycle: Proposal → Evaluation → Verif",
-      "relevance_score": 9,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "《AI Self-Iteration Optimization at the Limit: Applied Technologies, Mathematical Dynamics, Verification Architectures, and Safe Recursive Improvement》 is a flagship-scale research volume exploring how artificial intelligence systems may improve their own capabilities through structured, measurable, and verifiable iterative processes.",
-      "url": "https://doi.org/10.5281/zenodo.22949608",
-      "openalex_id": "https://openalex.org/W7214383311",
-      "doi": "https://doi.org/10.5281/zenodo.22949608",
-      "published": "2026-09-25",
-      "summary": "《AI Self-Iteration Optimization at the Limit: Applied Technologies, Mathematical Dynamics, Verification Architectures, and Safe Recursive Improvement》 is a flagship-scale research volume exploring how artificial intelligence systems may improve their own capabilities through structured, measurable, and verifiable iterative processes. Rather than treating self-improvement as an abstract or unlimited form of recursive intelligence, this book approaches it as an engineering problem. The central question is: How can an AI system improve itself repeatedly without losing reliability, alignment, auditability, or the ability to recover from failure? The book examines self-iteration across multiple layers, including model refinement, code generation and revision, tool use, memory systems, evaluator design, automated experimentation, research acceleration, multi-agent collaboration, architecture search, feedback loops, verification pipelines, rollback systems, safety retention, and governance. A major focus of the work is the distinction between apparent improvement and verified improvement. An optimization process may increase a benchmark score while simultaneously introducing hidden errors, reward hacking, evaluator manipulation, distributional fragility, or safety degradation. For this reason, the book develops recursive improvement as a controlled cycle: Proposal → Evaluation → Verif",
-      "relevance_score": 9,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "Automated Conjecture Resolution with Formal Verification",
-      "url": "https://doi.org/10.70777/si.v3i3.18746",
-      "openalex_id": "https://openalex.org/W7151534166",
-      "doi": "https://doi.org/10.70777/si.v3i3.18746",
-      "published": "2026-09-25",
-      "summary": "Recent advances in large language models (LLMs) have significantly improved their ability to perform mathematical reasoning, extending from elementary problem solving to increasingly capable performance on research-level problems. However, reliably solving and verifying such problems remains challenging due to the inherent ambiguity of natural language reasoning. In this paper, we propose an automated framework for tackling research-level mathematical problems that integrates natural language reasoning with formal verification, enabling end-to-end problem solving with minimal human intervention. Our framework consists of two components: an informal reasoning agent, Rethlas, and a formal verification agent, Archon. Rethlas mimics the workflow of human mathematicians by combining reasoning primitives with our mathematical theorem search engine, Matlas, to explore solution strategies and construct candidate proofs. Archon, equipped with our formal theorem search engine LeanSearch, translates informal arguments into fully formalized Lean 4 projects through structured task decomposition, iterative refinement, and automated proof synthesis, ensuring machine-checkable correctness. Using this framework, we automatically resolve an open problem in commutative algebra proposed by D. D. Anderson (2014) and formally verify the resulting proof in Lean 4 with essentially no human involvement",
-      "relevance_score": 7,
+      "title": "Organizational Memory for Agentic Business Process Execution",
+      "url": "https://doi.org/10.1007/978-3-032-36710-5_14",
+      "openalex_id": "https://openalex.org/W7167618784",
+      "doi": "https://doi.org/10.1007/978-3-032-36710-5_14",
+      "published": "2026-09-26",
+      "summary": "",
+      "relevance_score": 6,
       "matched_query": "persistent agent memory"
     },
     {
@@ -110,6 +120,16 @@
       "matched_query": "automated AI research experimentation"
     },
     {
+      "title": "Embodied Agentic Harnesses for Physical Intelligence A Survey",
+      "url": "https://doi.org/10.31224/8297",
+      "openalex_id": "https://openalex.org/W7214224302",
+      "doi": "https://doi.org/10.31224/8297",
+      "published": "2026-09-24",
+      "summary": "Embodied agents depend on more than the capabilities of a language, vision-language, or action model. They require a runtime that grounds observations, coordinates executable capabilities, monitors outcomes, and manages intervention when physical execution diverges from a plan. This survey examines embodied agentic harnesses as this runtime control plane. We distinguish four logical responsibilities—reasoning, runtime governance, skill execution, and hardware interfacing—and separate essential execution services from optional prediction, persistent memory, and adaptation mechanisms. A contract-based formulation connects skill preconditions, resource ownership, interruption, postconditions, and trace collection without assuming that every system implements an identical stack. We organize the literature by mechanisms rather than publication period: grounding and composition, state and memory, scheduling and coordination, verification and recovery, and adaptation. Complementary descriptors record the execution interface, intervention timescale, adaptation target, and evidence setting. The synthesis connects LLM and agent foundations, VLA policies, world models, and predictive-action models to affordance-based planning, programmatic control, memory-guided orchestration, agent operating systems, and evolving runtime critics. It distinguishes operational harnesses from infrastructure",
+      "relevance_score": 6,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
       "title": "Developing a Generative AI Agent to Support Science Curiosity: A Theory-Informed Development and Initial Evaluation Study",
       "url": "https://doi.org/10.21203/rs.3.rs-10653499/v1",
       "openalex_id": "https://openalex.org/W7214228664",
@@ -118,6 +138,16 @@
       "summary": "",
       "relevance_score": 6,
       "matched_query": "metacognition self-improving AI agents"
+    },
+    {
+      "title": "Internet of Things: Foundations and Research Directions",
+      "url": "https://doi.org/10.65725/rchub/9788199461949",
+      "openalex_id": "https://openalex.org/W7214481710",
+      "doi": "https://doi.org/10.65725/rchub/9788199461949",
+      "published": "2026-09-26",
+      "summary": "HTTP/2 (Hypertext Transfer Protocol Version 2) 4.4.5 Comparative Analysis 4.4.6 Future Outlook of Application Protocols 4.5 Standardization, Interoperability, and Performance Evaluation 4.5.1 Standardization in IoT 4.5.2Interoperability in IoT 4.5.3Performance Evaluation of IoT Systems 4.5.4Challenges and Research Opportunities 4.6 Conclusion 5 Middleware and Cloud/Fog/Edge Integration 5.1 Role of Middleware in IoT Ecosystems 5.1.1Definition and Core Functions of Middleware 5.1.2Middleware Architecture in IoT 5.1.3Role of Middleware in IoT Ecosystems 5.1.4Types of IoT Middleware 5.1.5Real-World Examples of Middleware in IoT 5.1.6Challenges in IoT Middleware 5.1.7Future Directions 5.1.8Middleware for Digital Twins 5.2 Service Discovery, Interoperability, and Context Management 5.2.1 Service Discovery in IoT 5.2.2 Interoperability in IoT 5.2.3 Context Management in IoT 5.2.4 Importance in IoT Ecosystems 5.2.5 Challenges and Future Research Directions 5.3 Cloud Computing in IoT: Benefits and Limitations 5.3.1water level, drum rotation, and timers.It was efficient, but isolated-no remote control, no data sharing.Thus, embedded systems formed the building blocks of IoT, even though they lacked connectivity. Networked Embedded Systems and M2M CommunicationBy the 1990s and early 2000s, the need for remote monitoring and automation led to the rise of networked embedded systems.Devices ",
+      "relevance_score": 5,
+      "matched_query": "automated AI research experimentation"
     },
     {
       "title": "Self-Evolving Recommendation System: End-To-End Autonomous Model Optimization With LLM Agents",
@@ -150,12 +180,12 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Designing a human-in-the-loop AI iterative process for research writing: a framework for preserving productive struggle",
-      "url": "https://doi.org/10.3389/fcomp.2026.1947835",
-      "openalex_id": "https://openalex.org/W7214071012",
-      "doi": "https://doi.org/10.3389/fcomp.2026.1947835",
-      "published": "2026-09-23",
-      "summary": "This Hypothesis and Theory paper addresses a design problem at the center of AI-assisted research writing: which cognitive demands should AI reduce, and which must remain the writer’s own work. Generative AI can absorb the effort of drafting, organizing, and synthesizing prose, but that same effort is where understanding takes shape. Recent empirical work documents reduced neural engagement, weaker recall of one’s own writing, and a diminished sense of authorship among writers who rely heavily on AI assistance. The paper grounds this problem in cognitive load theory, which distinguishes intrinsic load (the element interactivity a task inherently requires) from extraneous load (demands that do not contribute to learning), and which treats germane processes as the working memory resources a writer allocates to intrinsic load. It draws on productive struggle and generative processing to explain why germane processing cannot be offloaded: when a tool performs the work, the processing does not transfer to the writer; it does not occur. Two research questions are posed. First, which cognitive demands in research writing constitute extraneous load that AI could reduce, and which require germane processing that must remain the writer’s own. Second, how can human-in-the-loop AI collaboration be designed across the phases of research writing so that this distinction is operationalized th",
+      "title": "Little Scientist: architecture and implementation of a controlled artificial intelligence agent for scientific and technological literacy in basic education",
+      "url": "https://doi.org/10.54901/educa.v9-816",
+      "openalex_id": "https://openalex.org/W7214239016",
+      "doi": "https://doi.org/10.54901/educa.v9-816",
+      "published": "2026-09-24",
+      "summary": "The objective of this study is to analyze the development and implementation of a controlled artificial intelligence agent, named Little Scientist (Cientista Mirim), aimed at supporting K-12 students in the process of Scientific-Technological Literacy (AlfaCT). The research problem investigates how a supervised AI architecture restricted to a curated document corpus can foster critical thinking, investigative reasoning, and intellectual curiosity without incurring the epistemological risks of hallucination and plagiarism typical of general generative models. The methodology is exploratory with a qualitative approach, structured across four dimensions: definition of the pedagogical scope, computational architecture based on Retrieval-Augmented Generation (RAG), interface configuration in guided wizard and free modes with persona support, and rigorous response control tied to a vector database (sqlite-vec in SQLite, with 1536-dimensional vectors hosted on Azure). The results demonstrate that Little Scientist acts as an effective cognitive mediator, offering personalized support, transparency through prompt metacognition, and full source traceability via precise citation of files, pages, and lines. A key pedagogical differentiator is the agent's ability to explicitly state when information is absent from the corpus, modeling the scientific attitude of acknowledging knowledge limit",
       "relevance_score": 5,
       "matched_query": "metacognition self-improving AI agents"
     },
@@ -190,6 +220,26 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
+      "title": "Agent Behavior Mining: Generative AI Agent Governance in Business Processes",
+      "url": "https://doi.org/10.1007/978-3-032-37777-7_44",
+      "openalex_id": "https://openalex.org/W7165619874",
+      "doi": "https://doi.org/10.1007/978-3-032-37777-7_44",
+      "published": "2026-09-26",
+      "summary": "",
+      "relevance_score": 3,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "Using Process Mining to Generate AI Agents from Software Engineering Process Records",
+      "url": "https://doi.org/10.1007/978-3-032-36710-5_10",
+      "openalex_id": "https://openalex.org/W7167637066",
+      "doi": "https://doi.org/10.1007/978-3-032-36710-5_10",
+      "published": "2026-09-26",
+      "summary": "",
+      "relevance_score": 3,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
       "title": "AutoRecLab: An Autonomous Recommender Systems Lab",
       "url": "https://doi.org/10.1145/3773078.3841273",
       "openalex_id": "https://openalex.org/W7213877475",
@@ -210,72 +260,12 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Multi-paradigm simulation approach for building permit process optimisation",
-      "url": "https://doi.org/10.1016/j.autcon.2026.107254",
-      "openalex_id": "https://openalex.org/W7128957782",
-      "doi": "https://doi.org/10.1016/j.autcon.2026.107254",
-      "published": "2026-09-23",
-      "summary": "Coordinating multiple stakeholders in building permit processes is a complex challenge in construction management. This paper examines whether a multi-paradigm simulation approach can model and improve stakeholder coordination in such permit systems. A simulation framework combining agent-based modelling, system dynamics, and genetic algorithms is developed under a complex adaptive systems paradigm and validated against regulatory benchmarks and an empirical permit process structure. The model automates scenario evaluation through rule-based stakeholder behaviour, enabling computational analysis of coordination bottlenecks, performance trade-offs, and synchronisation effects. Findings highlight that treating building permit systems as adaptive coordination networks can improve regulatory performance under fixed structural conditions. The approach offers a foundation for simulation-based building permit process tools and research on automating governance processes in complex regulatory environments.",
-      "relevance_score": 3,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Polymer Informatics in the Era of Foundation Models: From Representation to Autonomous Design",
-      "url": "https://doi.org/10.26434/chemrxiv.15009334/v1",
-      "openalex_id": "https://openalex.org/W7214107647",
-      "doi": "https://doi.org/10.26434/chemrxiv.15009334/v1",
-      "published": "2026-09-23",
-      "summary": "Foundation models, pretrained on broad datasets and adapted to multiple tasks, offer a way to reuse chemical knowledge across polymer property prediction and inverse design. Realizing this opportunity requires connecting learned representations to materials whose properties also depend on molecular populations, formulation, processing, and measurement conditions. Here, we review advances in polymer foundation models and the data, representations, and experimental workflows that support their use in materials design. We organize these developments around the polymer material state, a description linking chemical identity to molecular distributions, architecture, morphology, and preparation history relevant to a target property. This organization connects data resources and pretraining strategies to questions about what models learn, how that knowledge transfers, and which experimental choices it can support. We compare learning objectives and adaptation methods, examine representations of polymer chemistry and state, and follow inverse design from candidate generation through synthesis and processing to validation. Pretrained models now support prediction across multiple properties and generation for specified targets, with selected polymer candidates reaching synthesis and thermal characterization. Broader polymer design campaigns show how precursor accessibility, polymerizatio",
-      "relevance_score": 3,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Can Artificial Intelligence be Socratic?",
-      "url": "https://doi.org/10.6001/fil-soc.2026.37.3.12",
-      "openalex_id": "https://openalex.org/W7214066852",
-      "doi": "https://doi.org/10.6001/fil-soc.2026.37.3.12",
-      "published": "2026-09-23",
-      "summary": "This essay introduces the concept of Socratic Intelligence (SI) and proposes five premises: (1) artificial and human agents learn through observation, interaction, and reflective examination of those interactions; (2) what is learned depends on metacognition and reinforcement; (3) SI comprises five interlocking dimensions: epistemic curiosity, critical self-awareness, assumption analysis, dialogical competence, and intellectual humility; (4) Generative SI, embedded in Intelligent Tutoring Systems (ITS) or Large Language Models (LLMs), can scaffold human learning; and (5) Generative SI can apply the Socratic method recursively to a system’s own computational processes as a form of internal epistemic self-regulation. We situate SI within several philosophical traditions: Plato’s elenchus and docta ignorantia, Aristotle’s phronesis, virtue epistemology on intellectual humility, Dreyfus’s critique of cognitivism, and recent epistemology of LLMs. We argue that SI construct gives the philosophy of AI a normative vocabulary that interfaces classical philosophy with current machine-learning practice.",
-      "relevance_score": 3,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
-      "title": "From automated scoring to learning diagnosis: a mechanism study of AI-supported formative assessment in English writing",
-      "url": "https://doi.org/10.3389/fpsyg.2026.1905455",
-      "openalex_id": "https://openalex.org/W7214079160",
-      "doi": "https://doi.org/10.3389/fpsyg.2026.1905455",
-      "published": "2026-09-23",
-      "summary": "Introduction AI-supported writing assessment can provide rapid scores and issue-level comments, yet its formative value depends on how students and teachers interpret and act on that information. This study examined this process in a university English writing course. Methods Two pre-existing intact classes comprising 96 students (48 per class) completed three writing-feedback-revision cycles. The Control class received AI scores/standard feedback, routine teacher checking, and revision. The Diagnostic Review class received DeepSeek-R1 issue-level diagnoses, completed an interpretation sheet, revised independently, underwent structured teacher review and reassessment, and recorded a reflection. Measures included diagnostic accuracy, feedback actionability, feedback comprehension, self-assessment accuracy, revision quality, reflection quality, misunderstanding codes, and teacher review activity. Mixed-effects models with student random intercepts were used for analysis. Results The Diagnostic Review class showed higher scores for diagnostic accuracy, actionability, comprehension, revision quality, and self-assessment accuracy. Group-by-cycle interactions were significant for diagnostic accuracy, comprehension, revision quality, and self-assessment accuracy, whereas the actionability interaction was not. Feedback comprehension showed the strongest bivariate association with revis",
-      "relevance_score": 3,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
-      "title": "From Tool to Teacher: Rethinking Search Systems as Instructive Interfaces",
-      "url": "http://orcid.org/0000-0002-5791-0641>",
-      "openalex_id": "https://openalex.org/W7214092235",
-      "doi": "https://doi.org/10.5283/epub.80792",
-      "published": "2026-09-23",
-      "summary": "Information access systems such as search engines and generative AI are central to how people seek, evaluate, and interpret information. Yet most systems are designed to optimise retrieval rather than to help users develop better search strategies or critical awareness. This paper introduces a pedagogical perspective on information access, conceptualising search and conversational systems as instructive interfaces that can teach, guide, and scaffold users’ learning. We draw on seven didactic frameworks from education and behavioural science to analyse how existing and emerging system features, including query suggestions, source labels, and conversational or agentic AI, support or limit user learning. Using two illustrative search tasks, we demonstrate how different design choices promote skills such as critical evaluation, metacognitive reflection, and strategy transfer. The paper contributes a conceptual lens for evaluating the instructional value of information access systems and outlines design implications for technologies that foster more effective, reflective, and resilient information seekers.",
-      "relevance_score": 3,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
       "title": "Digital-Twin-Driven Predictive Maintenance and Fault-Tolerant Control for Electrified Agricultural Machinery: A Multiphysics and Deep Reinforcement Learning Framework for PMSM In-Wheel Drives",
       "url": "https://philpapers.org/rec/XIADPM",
       "openalex_id": "https://openalex.org/W7203455470",
       "doi": "https://doi.org/10.17613/765dw-e3t58",
       "published": "2026-12-31",
       "summary": "Electrified agricultural machinery increasingly relies on permanent-magnet synchronous motor drives that must remain dependable under variable traction, terrain-induced vibration, thermal cycling, contamination, and intermittent duty. Existing work offers mature methods for motor fault diagnosis, digital twins, predictive maintenance, and distributed-drive fault-tolerant control, but their health information is often not shared across diagnosis, maintenance, and control. This article develops a multiphysics digital-twin framework in which electrical, thermal, mechanical, and vibrational evidence maintains a probabilistic health belief that constrains both supervisory maintenance decisions and torque redistribution. The framework formalizes observability, uncertainty-aware health factors, deterministic safety shielding, multi-rate fallback logic, and agriculture-specific traction constraints. Reproducible low-fidelity numerical studies provide preliminary support for context-conditioned residual diagnosis and the revised thermal-continuity trade-off underlying health-aware derating, including robustness and sensitivity analyses. They do not validate sim-to-real transfer or the reinforcement-learning policy itself; those hypotheses remain open for dynamometer and hardware-in-the-loop testing. The results are therefore interpreted as mechanism-level evidence rather than field-perf",
-      "relevance_score": 2,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "AI for Mathematics: Progress, Challenges, and Prospects",
-      "url": "https://doi.org/10.70777/si.v3i3.18747",
-      "openalex_id": "https://openalex.org/W7125151750",
-      "doi": "https://doi.org/10.70777/si.v3i3.18747",
-      "published": "2026-09-25",
-      "summary": "AI for Mathematics (AI4Math) has emerged as a distinct field that leverages machine learning to navigate mathematical landscapes historically intractable for early symbolic systems. While mid-20th-century symbolic approaches successfully automated formal logic, they faced severe scalability limitations due to the combinatorial explosion of the search space. The recent integration of data-driven approaches has revitalized this pursuit. In this review, we provide a systematic overview of AI4Math, highlighting its primary focus on developing AI models to support mathematical research. Crucially, we emphasize that this is not merely the application of AI to mathematical activities; it also encompasses the development of stronger AI systems where the rigorous nature of mathematics serves as a premier testbed for advancing general reasoning capabilities. We categorize existing research into two complementary directions: problem-specific modeling, involving the design of specialized architectures for distinct mathematical tasks, and general-purpose modeling, focusing on foundation models capable of broader reasoning, retrieval, and exploratory workflows. We conclude by discussing key challenges and prospects, advocating for AI systems that go beyond facilitating formal correctness to enabling the discovery of meaningful results and unified theories, recognizing that the true value of ",
       "relevance_score": 2,
       "matched_query": "persistent agent memory"
     },
@@ -300,14 +290,24 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Bridging Knowledge Gaps in Clinical AI: An Activity Theory Perspective on Interdisciplinary Data Work for Telehealth",
-      "url": "https://doi.org/10.1145/3816905",
-      "openalex_id": "https://openalex.org/W4403818803",
-      "doi": "https://doi.org/10.1145/3816905",
-      "published": "2026-09-23",
-      "summary": "Advanced AI technologies are increasingly integrated into clinical domains to advance patient care. The design and development of clinical AI technologies necessitate seamless collaboration between clinical and technical experts. However, such interdisciplinary teams are often unsuccessful, with a lack of systematic analysis of collaboration barriers and coping strategies. This work examines two clinical AI collaborations in the context of speech-language pathology via semi-structured interviews with six clinical and seven technical experts. Using Activity Theory (AT) as our analytical lens, we examine persistent knowledge gaps and collaboration tensions across clinical and technical workflows, and show how clinical data can function as boundary objects while interdisciplinary collaborators may act as knowledge brokers to help address these challenges. Our findings contribute to CSCW research on interdisciplinary teams’ data work by showing how shared clinical data, boundary objects, and broker roles shape coordination in early-stage clinical AI collaboration, and by providing insights into best practices for future collaboration.",
+      "title": "From capability to assertability: epistemic regulation of LLM-mediated claim presentation",
+      "url": "https://doi.org/10.1007/s10676-026-09922-0",
+      "openalex_id": "https://openalex.org/W7214388558",
+      "doi": "https://doi.org/10.1007/s10676-026-09922-0",
+      "published": "2026-09-25",
+      "summary": "Abstract Improvements in large language model (LLM) capability can increase accuracy, reasoning, and access to relevant information while leaving unassessed whether a particular output is appropriately presented for epistemic uptake. This creates an evaluative gap: first-order capability metrics can register genuine gains while leaving claim-presentation conditions underdetermined. LLM outputs increasingly occupy assertion-like roles without thereby acquiring the standing of accountable asserters. We develop assertability as a relational normative status of an output-in-practice, determined by the evidential and contextual conditions governing its presentation. One such condition is the evidence frame: the set of sources admissible as grounds within an interaction. A true answer, or one well supported outside the governing frame, may therefore remain non-assertable when it relies on an inadmissible evidential basis. To address this capability–assertability gap, we use epistemic regulation to denote the normative-functional regulation of whether and how an LLM-mediated output is presented for epistemic uptake in light of the conditions bearing on its assertability. We organize the framework across four regulatory loci—assertoric force, evidential grounding, evidential candor, and epistemic response selection. The framework is normative-functional, while its realization may be di",
       "relevance_score": 2,
-      "matched_query": "cross-model handoff language model agents"
+      "matched_query": "metacognition self-improving AI agents"
+    },
+    {
+      "title": "When algorithms evaluate people: how AI video interviews relate to employability confidence and organizational attractiveness",
+      "url": "https://doi.org/10.3389/fpsyg.2026.1927892",
+      "openalex_id": "https://openalex.org/W7214398828",
+      "doi": "https://doi.org/10.3389/fpsyg.2026.1927892",
+      "published": "2026-09-25",
+      "summary": "Algorithmic evaluation is increasingly entering high-stakes social contexts, including recruitment, where young people are assessed before any human interaction occurs. AI video interviews are one such setting; they are largely one-directional, opaque, and often provide no feedback about how applicants are evaluated. This study examines how such AI-mediated evaluation relates to two socially consequential perceptions among university students: confidence in their own employability and trust-related evaluations of organizations that deploy AI-based assessment. Drawing on Situated Expectancy-Value Theory (SEVT), we distinguish between expectancy beliefs—whether one can succeed—and value beliefs—whether the outcome is worth pursuing, and develop a dual-pathway model in which expectancy-related individual factors (AI literacy, metacognition, need for cognition, and technology anxiety) are associated with perceived employability, while value-related process perceptions (procedural justice and algorithmic transparency) are associated with organizational attractiveness, with social comparison orientation and AI usage experience as boundary conditions. Using data from 520 Chinese university students analyzed with PLS-SEM, we find that all four expectancy-related factors are independently associated with perceived employability, and that procedural justice and algorithmic transparency a",
+      "relevance_score": 2,
+      "matched_query": "metacognition self-improving AI agents"
     }
   ],
   "paper_count": 30,
