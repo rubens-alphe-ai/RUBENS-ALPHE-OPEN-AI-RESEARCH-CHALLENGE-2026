@@ -50,6 +50,10 @@ Send dates, replies and tiers are appended below as they happen. Nothing above
 this line is edited after the first send. Verdict 21 days after the tenth
 message is sent, under the rules of version 1.
 
+Outreach to organisations **outside** the ten is logged separately and is not
+counted in this verdict, so the pre-registered test stays the test it was
+declared to be. It started on 2026-09-28.
+
 | Contact | Group | Sent | Reminder | Tier | Quotation |
 |---|---|---|---|---|---|
 | 9 | C | 2026-09-26 |  | pending |  |
