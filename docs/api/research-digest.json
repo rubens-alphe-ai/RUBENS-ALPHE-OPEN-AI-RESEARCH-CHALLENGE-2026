@@ -1,6 +1,6 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-09-28T04:33:24.788109+00:00",
+  "generated_at_utc": "2026-09-29T04:32:42.072860+00:00",
   "source": "OpenAlex public API",
   "queries": [
     "persistent agent memory",
@@ -9,16 +9,6 @@
     "metacognition self-improving AI agents"
   ],
   "papers": [
-    {
-      "title": "Attacker-Controlled Inference: How Context Poisoning, Speculative Disclosure, Memory Persistence, and Privilege Hierarchy Failures Converge on a Candidate Framework for LLM Agent Runtime Exploitation",
-      "url": "https://doi.org/10.5281/zenodo.20641803",
-      "openalex_id": "https://openalex.org/W7164299835",
-      "doi": "https://doi.org/10.5281/zenodo.20641803",
-      "published": "2026-09-26",
-      "summary": "Version 3 (2026-09-26). Version 3 corrects a misattributed citation and several overstated readings, found by an independent audit of version 2 and by a second review of the corrected draft. (1) The figures for context-based adversarial attacks on code generators (10.7x, from 3.5% to 37.4%; 100% on GPT-3.5-Turbo; 60-100% cross-model transfer; 2,800 experiments) and the phrase \"systemic architectural vulnerabilities rather than model-specific flaws\" were credited to arXiv:2606.10860. They come from arXiv:2606.10945 (Del Orbe, Hastings and Vaidyan), and they are now cited to it. arXiv:2606.10860 is still cited, only for the instruction-hierarchy (GW-DPO) material it contains. (2) An 81% detection rate is no longer read as \"19% of attacks succeed\". (3) A deployment claim is no longer attributed to the conceptual AOS paper (arXiv:2606.01508). (4) The claim that tool responses are \"architecturally indistinguishable\" from system messages is replaced with the source's own statement (arXiv:2606.02240). (5) Membrane (arXiv:2606.05743) is described as the jailbreak guardrail it is, not as a filter for an agent's external memory. (6) The delegation-observability result (arXiv:2606.09692) is stated within its own scope. (7) The shared-mechanism bridge is narrowed to the three injection classes. Speculative tool-call disclosure is an outbound leak, not an injection, and partial counter-evid",
-      "relevance_score": 13,
-      "matched_query": "persistent agent memory"
-    },
     {
       "title": "DevMemory: A Structured Memory Management Architecture for Persistent Knowledge in AI Coding Agents",
       "url": "https://doi.org/10.5281/zenodo.19324575",
@@ -50,16 +40,6 @@
       "matched_query": "persistent agent memory"
     },
     {
-      "title": "Attack Surface Proliferation in Agentic AI: How Tool Calls, Memory Persistence, Skill Ecosystems, and Payment Rails Compose Into a Systemic Threat",
-      "url": "https://doi.org/10.5281/zenodo.20525492",
-      "openalex_id": "https://openalex.org/W7163389061",
-      "doi": "https://doi.org/10.5281/zenodo.20525492",
-      "published": "2026-09-26",
-      "summary": "This version (2026-09-26) corrects a citation error found by an automated check and confirmed by hand against the arXiv abstracts. Version 2 cited the identifier 2605.30998 for the ClawTrojan multi-step trojan benchmark and its DASGuard defense; that identifier is a security analysis of x402 payments, and ClawTrojan is arXiv:2605.31042. All six trojan citations are corrected. The x402 payment-layer claims keep arXiv:2605.30998, which is right for them, and the version 2 caveats warning that the two topics shared one identifier are replaced with what that paper's abstract reports. An unsupported phrase (\"or redirect funds\") and a pointer to internal drafting instructions are removed. The thesis is unchanged. This version has not had a full claim-by-claim audit. The full list of corrections is at the top of the PDF. The deployment of large language model (LLM) agents into production environments has outpaced the security frameworks designed to contain them. This paper argues a candidate structural pattern worth investigating: the attack surface of agentic AI systems is not additive across components but compositional, meaning that tool invocation, persistent memory, third-party skill ecosystems, and machine-to-machine payment rails each introduce independent vulnerabilities that compound when combined in a single agent harness. This is a heuristic reading, not a formal derivation",
-      "relevance_score": 10,
-      "matched_query": "persistent agent memory"
-    },
-    {
       "title": "Write-Time Admission Control for Persistent-Memory Security in LLM Agents",
       "url": "https://doi.org/10.17632/m8xf3cdjwb.1",
       "openalex_id": "https://openalex.org/W7165161310",
@@ -70,12 +50,22 @@
       "matched_query": "persistent agent memory"
     },
     {
-      "title": "Runtime Integrity Without Attestation: How Agent-Facing Tool Surfaces, Speculative Dispatch, and Memory Poisoning Converge on a Shared Execution-Layer Threat Model",
-      "url": "https://doi.org/10.5281/zenodo.20579699",
-      "openalex_id": "https://openalex.org/W7163806442",
-      "doi": "https://doi.org/10.5281/zenodo.20579699",
-      "published": "2026-09-26",
-      "summary": "Version 3 (2026-09-26). Version 3 corrects errors found by an independent audit of version 2 and by a second review of the corrected draft. (1) The ClawTrojan/DASGuard work (95.5% attack success rate) was cited as arXiv:2605.30998, which is an unrelated paper on x402 payments. The correct source is arXiv:2605.31042 (Tan et al.). All citations, including this record's list of cited preprints, have been corrected; the figures were accurate to the correct paper. (2) An unfounded remark that \"GPT-5.4\" was an unverifiable internal label has been removed. (3) The Recuse Signal result is updated to the current v4 of arXiv:2606.06460. Recusal at the access door is model-dependent, ranging from 100% down to 55-75%, and a mid-task in-band halt is weaker. The v1 figure of 100% recusal is superseded. (4) Overstated readings of the ClawTrojan and MemPoison abstracts have been corrected. The claim that agents hold \"OAuth tokens\" is replaced with what arXiv:2606.06460 supports (real credentials used over SSH). The SCHEME monitoring figure is given as 100% (Gemini) and 81% (Codex) rather than \"near-100%\". (5) Two cross-paper generalizations are narrowed. The first is that all six attack surfaces exploit temporal decoupling of authorization and execution, which no source states in those terms and which is now presented as this synthesis's reading. The second is that all succeed against correctl",
+      "title": "Controlled knowledge updating in memory-enabled AI agents: beyond model editing and recall",
+      "url": "https://doi.org/10.3389/fdata.2026.1938137",
+      "openalex_id": "https://openalex.org/W7214532103",
+      "doi": "https://doi.org/10.3389/fdata.2026.1938137",
+      "published": "2026-09-28",
+      "summary": "Large language model agents that persist across sessions, tools, users, and changing environments do more than answer isolated prompts; they accumulate state. When new evidence arrives, the central question is where that change should live: transient context, external memory, tool or workflow definitions, activation states, or model parameters. Recent benchmarks compare update mechanisms and assess memory over time, while emerging architectures coordinate multiple memory types. In this Perspective, we examine how a decision layer should select among update substrates and evaluate whether its choices remain appropriate. A controlled update is not merely a successful edit or a recalled fact; it is a decision to alter the least invasive substrate sufficient for the claim's scope, expected persistence, and evidentiary strength, including when the correct action is not to write persistent state. We propose a substrate-aware view of controlled knowledge updating organized by three principles: substrate proportionality, temporal defeasibility, and auditable continuity. This framing treats knowledge updating as a longitudinal control problem and motivates evaluation criteria that include update selection, temporal consistency, interference, reversibility, efficiency, and robustness. The resulting agenda connects memory, knowledge editing, agent evolution, and benchmarking under a singl",
+      "relevance_score": 9,
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "AIVORIX™ Operating System Infrastructure: Independent Development, Prior-Art Context, and the Architecture of Governed Institutional Memory Defining the Research Boundaries of \"The Memory Engine for Every AI You Use.™\"",
+      "url": "https://doi.org/10.5281/zenodo.22986661",
+      "openalex_id": "https://openalex.org/W7214517093",
+      "doi": "https://doi.org/10.5281/zenodo.22986661",
+      "published": "2026-09-27",
+      "summary": "This paper documents the independent research positioning and evolving architectural direction of AIVORIX™ Operating System (infrastructure) — The Memory Engine for Every AI You Use.™ As enterprise artificial intelligence evolves toward environments composed of multiple models, agents, tools, applications, providers, governance mechanisms, and human decision-makers, an important continuity question emerges: What happens to an organization’s knowledge, decisions, authority, policies, approvals, obligations, evidence, dependencies, and lifecycle context when the AI systems participating in organizational activity change? The paper examines this question through the concept of Governed Institutional State: persistent organizational context that can remain meaningful independently of any single AI model, agent, session, application, tool, or provider and, when authorized and appropriate, participate in governing subsequent AI-mediated activity. AIVORIX™ does not claim invention of broad concepts such as persistent AI memory, organizational memory, agent memory, authorization, policy enforcement, human approval, provenance, lifecycle management, AI-agent orchestration, interoperability, or provider-independent memory. These concepts have substantial histories or are active areas of contemporary research and development. Instead, the paper defines a narrower AIVORIX research hypothes",
       "relevance_score": 9,
       "matched_query": "persistent agent memory"
     },
@@ -100,23 +90,23 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Organizational Memory for Agentic Business Process Execution",
-      "url": "https://doi.org/10.1007/978-3-032-36710-5_14",
-      "openalex_id": "https://openalex.org/W7167618784",
-      "doi": "https://doi.org/10.1007/978-3-032-36710-5_14",
-      "published": "2026-09-26",
-      "summary": "",
-      "relevance_score": 6,
-      "matched_query": "persistent agent memory"
+      "title": "🌍🤖 AI, RESPONSIBLE SCALE & NANOTECHNOLOGY CIVILIZATION AT THE LIMIT Artificial Intelligence, NanoEHS, Circularity, Autonomous Laboratories, Standards, Responsible Scale-Up, and the Emerging Engineering of Nanotechnology Civilization",
+      "url": "https://doi.org/10.5281/zenodo.23001576",
+      "openalex_id": "https://openalex.org/W7214522124",
+      "doi": "https://doi.org/10.5281/zenodo.23001576",
+      "published": "2026-09-27",
+      "summary": "🌍🤖 AI, RESPONSIBLE SCALE & NANOTECHNOLOGY CIVILIZATION AT THE LIMIT Artificial Intelligence, NanoEHS, Circularity, Autonomous Laboratories, Standards, Responsible Scale-Up, and the Emerging Engineering of Nanotechnology Civilization Can nanotechnology accelerate without risk, waste, and governance falling behind? This flagship research volume explores a question that begins in materials science but ultimately extends far beyond it. What happens when artificial intelligence, autonomous laboratories, inverse design, high-throughput experimentation, nanoscale manufacturing, and programmable matter dramatically increase the speed at which new material systems can be proposed? Discovery may accelerate. But evidence does not automatically accelerate at the same rate. Safety does not. Environmental understanding does not. Manufacturing readiness does not. Recycling infrastructure does not. Standards do not. Governance does not. And civilization does not automatically become capable of absorbing every technology that can be invented. This creates a central problem for the next era of nanotechnology: A million candidate structures are not a million technologies. A predicted material is not yet a verified material. A verified material is not yet a manufacturable material. A manufacturable material is not automatically a safe material. A safe laboratory material is not automatically safe ",
+      "relevance_score": 7,
+      "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "RecEvolve: A Knowledge-Driven Autonomous Agent System for Recommender Systems",
-      "url": "https://doi.org/10.1145/3773078.3831898",
-      "openalex_id": "https://openalex.org/W7207585260",
-      "doi": "https://doi.org/10.1145/3773078.3831898",
-      "published": "2026-09-25",
-      "summary": "The rise of agentic AI has catalyzed a shift toward self-iterating systems, opening new frontiers for the autonomous optimization of production recommender models. This paper presents the empirical validation of a knowledge-driven autonomous agent system, deployed directly on a production large-scale Two-Tower retrieval model. By delegating the entire research lifecycle, spanning idea generation, code implementation, offline training, and metric evaluation, to a continuous closed-loop autonomous framework, the agent system executed over 40 completed autonomous training runs from scratch. Executing these runs under rigorous production-scale evaluations, the system systematically navigated hidden architectural bottlenecks on the latest production model to achieve a breakthrough ∼ 20% relative improvement in NDCG, a gain that translated directly to a +3.77% increase in user satisfaction in live production traffic. Furthermore, the deployment exposed critical vulnerabilities in standard evaluation protocols, as the agent system autonomously discovered reward-hacking shortcuts. These findings prove that an autonomous pipeline can dramatically accelerate the pace of machine learning research and stress-test the rigorousness of underlying experimental infrastructure, while also exposing novel challenges such as reward hacking and redundant exploration of failed hypotheses.",
-      "relevance_score": 6,
+      "title": "🌍🤖 AI, RESPONSIBLE SCALE & NANOTECHNOLOGY CIVILIZATION AT THE LIMIT Artificial Intelligence, NanoEHS, Circularity, Autonomous Laboratories, Standards, Responsible Scale-Up, and the Emerging Engineering of Nanotechnology Civilization",
+      "url": "https://doi.org/10.5281/zenodo.23001577",
+      "openalex_id": "https://openalex.org/W7214550054",
+      "doi": "https://doi.org/10.5281/zenodo.23001577",
+      "published": "2026-09-27",
+      "summary": "🌍🤖 AI, RESPONSIBLE SCALE & NANOTECHNOLOGY CIVILIZATION AT THE LIMIT Artificial Intelligence, NanoEHS, Circularity, Autonomous Laboratories, Standards, Responsible Scale-Up, and the Emerging Engineering of Nanotechnology Civilization Can nanotechnology accelerate without risk, waste, and governance falling behind? This flagship research volume explores a question that begins in materials science but ultimately extends far beyond it. What happens when artificial intelligence, autonomous laboratories, inverse design, high-throughput experimentation, nanoscale manufacturing, and programmable matter dramatically increase the speed at which new material systems can be proposed? Discovery may accelerate. But evidence does not automatically accelerate at the same rate. Safety does not. Environmental understanding does not. Manufacturing readiness does not. Recycling infrastructure does not. Standards do not. Governance does not. And civilization does not automatically become capable of absorbing every technology that can be invented. This creates a central problem for the next era of nanotechnology: A million candidate structures are not a million technologies. A predicted material is not yet a verified material. A verified material is not yet a manufacturable material. A manufacturable material is not automatically a safe material. A safe laboratory material is not automatically safe ",
+      "relevance_score": 7,
       "matched_query": "automated AI research experimentation"
     },
     {
@@ -130,46 +120,6 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Developing a Generative AI Agent to Support Science Curiosity: A Theory-Informed Development and Initial Evaluation Study",
-      "url": "https://doi.org/10.21203/rs.3.rs-10653499/v1",
-      "openalex_id": "https://openalex.org/W7214228664",
-      "doi": "https://doi.org/10.21203/rs.3.rs-10653499/v1",
-      "published": "2026-09-24",
-      "summary": "",
-      "relevance_score": 6,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
-      "title": "Internet of Things: Foundations and Research Directions",
-      "url": "https://doi.org/10.65725/rchub/9788199461949",
-      "openalex_id": "https://openalex.org/W7214481710",
-      "doi": "https://doi.org/10.65725/rchub/9788199461949",
-      "published": "2026-09-26",
-      "summary": "HTTP/2 (Hypertext Transfer Protocol Version 2) 4.4.5 Comparative Analysis 4.4.6 Future Outlook of Application Protocols 4.5 Standardization, Interoperability, and Performance Evaluation 4.5.1 Standardization in IoT 4.5.2Interoperability in IoT 4.5.3Performance Evaluation of IoT Systems 4.5.4Challenges and Research Opportunities 4.6 Conclusion 5 Middleware and Cloud/Fog/Edge Integration 5.1 Role of Middleware in IoT Ecosystems 5.1.1Definition and Core Functions of Middleware 5.1.2Middleware Architecture in IoT 5.1.3Role of Middleware in IoT Ecosystems 5.1.4Types of IoT Middleware 5.1.5Real-World Examples of Middleware in IoT 5.1.6Challenges in IoT Middleware 5.1.7Future Directions 5.1.8Middleware for Digital Twins 5.2 Service Discovery, Interoperability, and Context Management 5.2.1 Service Discovery in IoT 5.2.2 Interoperability in IoT 5.2.3 Context Management in IoT 5.2.4 Importance in IoT Ecosystems 5.2.5 Challenges and Future Research Directions 5.3 Cloud Computing in IoT: Benefits and Limitations 5.3.1water level, drum rotation, and timers.It was efficient, but isolated-no remote control, no data sharing.Thus, embedded systems formed the building blocks of IoT, even though they lacked connectivity. Networked Embedded Systems and M2M CommunicationBy the 1990s and early 2000s, the need for remote monitoring and automation led to the rise of networked embedded systems.Devices ",
-      "relevance_score": 5,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "Self-Evolving Recommendation System: End-To-End Autonomous Model Optimization With LLM Agents",
-      "url": "https://doi.org/10.1145/3773078.3831919",
-      "openalex_id": "https://openalex.org/W7128729239",
-      "doi": "https://doi.org/10.1145/3773078.3831919",
-      "published": "2026-09-25",
-      "summary": "Optimizing large-scale machine learning systems, such as recommendation models for global video platforms, requires navigating a massive hyperparameter search space and, more critically, designing sophisticated optimizers, architectures, and reward functions to capture nuanced user behaviors. Achieving substantial improvements in these areas is a non-trivial task, traditionally relying on extensive manual iterations to test new hypotheses. We propose a self-evolving system that leverages Large Language Models (LLMs), specifically those from Google’s Gemini family, to autonomously generate, train, and deploy high-performing, complex model changes within an end-to-end automated workflow. The self-evolving system consists of an Offline Agent (Fast Loop) that performs high-throughput hypothesis generation to optimize for proxy metrics, and an Online Agent (Slow Loop) that validates candidates against delayed north star business metrics in live production. Our agents act as specialized Machine Learning Engineers (MLEs): they exhibit deep reasoning capabilities, discovering novel improvements in optimization algorithms and model architecture, and formulating innovative reward functions that target long-term user engagement. The effectiveness of this approach is demonstrated through several successful production launches at YouTube, confirming that autonomous, LLM-driven evolution can",
-      "relevance_score": 5,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "The Utility of LLMs in Recommender Systems Explanation Evaluation",
-      "url": "https://doi.org/10.1145/3773078.3831835",
-      "openalex_id": "https://openalex.org/W7207601463",
-      "doi": "https://doi.org/10.1145/3773078.3831835",
-      "published": "2026-09-25",
-      "summary": "Explanations play a crucial role in creating trustworthy recommender systems (RS), yet choosing a good explanation method presents challenges. Many explanation methods exist, but little guidance exists on which is best for which setting. Existing explanation generation methods often produce abstract outputs that require further formatting to become user-friendly, with a seemingly endless pool of options. Running user-based evaluations of all possible options is usually unfeasible, while automated evaluation metrics often either assess only the explainer’s abstract output or require comparison with a ground truth, which is generally unavailable. Recent studies have shown that large language models (LLMs) can serve as “judges” for explanation evaluation, but their reliability has not yet been thoroughly explored. This paper studies the utility of LLMs in selecting an effective explanation method for a given application. We first explore their ability to generate explanation prototypes given varying information about the RS and the user. Specifically, we generate 18 distinct explanation prototypes, which are subsequently evaluated by 14 LLMs of varying sizes across two temperature settings. We compare these against human ratings derived from a user study. Our results show that while LLMs exhibit human-like rating patterns and achieve moderate rank correlation with human raters, th",
-      "relevance_score": 5,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
       "title": "Exploring How Knowledge Workers Situate an Organisationally Embedded LLM Agent in their Collaborative Work Practices",
       "url": "https://doi.org/10.1007/s10606-026-09549-1",
       "openalex_id": "https://openalex.org/W7214207052",
@@ -178,16 +128,6 @@
       "summary": "Abstract Since their introduction, large language models (LLMs), have seen widespread adoption by knowledge workers across a range of industries. A growing body of research is exploring this adoption and examining its implications for the future of work. However, much of this research has focused on individual workers with less attention on understanding how these technologies impact the collaborative practices of knowledge work. Furthermore, studies have primarily explored off-the-shelf LLM systems such as ChatGPT which have limited integration into enterprise systems and workflows. As organisations develop and deploy their own LLM agents, grounded in their specific enterprise systems and workflows, there is an important need to understand how they transform collaborative knowledge work. To address this need we present a qualitative study conducted in an IT services organisation that has introduced a custom LLM agent integrated into its enterprise systems, documents, and workflows. We examine how the employees have integrated the technology into trajectories of everyday practices and workflows and how this shapes collaboration in knowledge work.",
       "relevance_score": 5,
       "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Little Scientist: architecture and implementation of a controlled artificial intelligence agent for scientific and technological literacy in basic education",
-      "url": "https://doi.org/10.54901/educa.v9-816",
-      "openalex_id": "https://openalex.org/W7214239016",
-      "doi": "https://doi.org/10.54901/educa.v9-816",
-      "published": "2026-09-24",
-      "summary": "The objective of this study is to analyze the development and implementation of a controlled artificial intelligence agent, named Little Scientist (Cientista Mirim), aimed at supporting K-12 students in the process of Scientific-Technological Literacy (AlfaCT). The research problem investigates how a supervised AI architecture restricted to a curated document corpus can foster critical thinking, investigative reasoning, and intellectual curiosity without incurring the epistemological risks of hallucination and plagiarism typical of general generative models. The methodology is exploratory with a qualitative approach, structured across four dimensions: definition of the pedagogical scope, computational architecture based on Retrieval-Augmented Generation (RAG), interface configuration in guided wizard and free modes with persona support, and rigorous response control tied to a vector database (sqlite-vec in SQLite, with 1536-dimensional vectors hosted on Azure). The results demonstrate that Little Scientist acts as an effective cognitive mediator, offering personalized support, transparency through prompt metacognition, and full source traceability via precise citation of files, pages, and lines. A key pedagogical differentiator is the agent's ability to explicitly state when information is absent from the corpus, modeling the scientific attitude of acknowledging knowledge limit",
-      "relevance_score": 5,
-      "matched_query": "metacognition self-improving AI agents"
     },
     {
       "title": "Optimalisatie van de block-and-lock strategie voor een HIV genezing: Het combineren van BRD4 modulatoren met LEDGINs",
@@ -208,6 +148,16 @@
       "summary": "up to 0.87). However, most evidence is based on internal validation only. Artificial intelligence-based approaches to MGS scoring have the potential to make preclinical pain assessment more efficient and consistent. However, current evidence is limited by a lack of external validation, partial implementation of the full MGS, and variability in reporting performance metrics. Addressing these limitations will be critical to support the robust and reliable integration of automated grimace analysis into future pain research.",
       "relevance_score": 4,
       "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "ScientistTwo: Pioneering the Human Knowledge Frontier with Autonomous AI",
+      "url": "https://doi.org/10.70777/si.v3i3.18734",
+      "openalex_id": "https://openalex.org/W7213611819",
+      "doi": "https://doi.org/10.70777/si.v3i3.18734",
+      "published": "2026-09-25",
+      "summary": "Scientific discovery is defined by the ability to identify the boundaries of existing knowledge and venture into unexplored territory. The ultimate vision for AI in science is problem-driven autonomous research: given a fundamental challenge by a human expert, the AI independently navigates the scientific landscape, uncovers theoretical and empirical bottlenecks, and systematically expands the frontier of knowledge. In this paper, we introduce ScientistTwo, a fully autonomous multi-agent framework designed to realize this vision. Specifically, ScientistTwo takes an initial problem as input, establishes state-of-the-art baselines, formulates novel hypotheses, and coordinates specialized agents to orchestrate an end-to-end discovery cycle without human intervention. Moreover, the framework rigorously conducts experiments using diverse datasets and metrics, refines methodologies through automated ablation studies, and validates research findings via a closed-loop simulated peer-review rebuttal engine. To evaluate ScientistTwo’s capabilities against the highest standards of human scientific achievement, we benchmark it across papers accepted at top-tier conferences such as ICLR, ICML, and NeurIPS. As a result, ScientistTwo autonomously generates expert-level, publishable papers and fully verified, executable codebases. Its solutions consistently outperform human state-of-the-art mo",
+      "relevance_score": 4,
+      "matched_query": "cross-model handoff language model agents"
     },
     {
       "title": "Analyzing and redesigning deployment pathways for internally developed artificial intelligence tools in clinical education and health research",
@@ -240,26 +190,6 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "AutoRecLab: An Autonomous Recommender Systems Lab",
-      "url": "https://doi.org/10.1145/3773078.3841273",
-      "openalex_id": "https://openalex.org/W7213877475",
-      "doi": "https://doi.org/10.1145/3773078.3841273",
-      "published": "2026-09-25",
-      "summary": "Recommender systems (RecSys) research depends on extensive empirical evaluation, yet translating experimental designs into executable code remains a manual, error-prone process. This paper presents AutoRecLab, a Python-based autonomous RecSys lab that automates RecSys experimentation from natural-language prompts. Starting from a research idea, AutoRecLab derives explicit experiment requirements, develops and validates a prototype, and iteratively refines it into the requested full experiment by combining retrieval-augmented generation (RAG) documentation lookup, static type verification, and execution-steered tree search. As a demonstration, AutoRecLab autonomously implements an explicit-to-implicit feedback conversion study and, in a baseline comparison across six algorithms and three datasets, achieves 8 out of 9 successful runs at an average cost of approximately $1 per run using GPT-5.4-mini.",
-      "relevance_score": 3,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "AI LEGO: Scaffolding Cross-Functional Collaboration in Industrial Responsible AI Practices during Early Design Stages",
-      "url": "https://doi.org/10.1145/3816897",
-      "openalex_id": "https://openalex.org/W4415199950",
-      "doi": "https://doi.org/10.1145/3816897",
-      "published": "2026-09-23",
-      "summary": "Responsible AI (RAI) efforts increasingly emphasize the importance of addressing potential harms early in the AI development lifecycle through social-technical lenses. However, in cross-functional industry teams, this work is often stalled by a persistent coordination challenge: how technical roles hand off technical intent, how teams establish shared structures for collaboration, and how non-technical roles are supported in systematically evaluating harms. Through literature review and a semi-structured interview study with 8 practitioners, we unpack how this challenge manifests—technical design choices are rarely handed off in ways that support meaningful engagement by non-technical roles; collaborative workflows lack shared, visual structures to support mutual understanding; and non-technical practitioners are left without scaffolds for systematic harm evaluation. Existing tools like JIRA or Google Docs, while useful for product tracking, are ill-suited for supporting joint harm identification across roles, often requiring significant extra effort to align understanding. To address this, we developed AI LEGO, a web-based prototype that operationalizes the boundary object theory to support cross-functional AI practitioners in effectively facilitating knowledge handoff and identifying harmful design choices in the early design stages. Technical roles use interactive blocks to ",
-      "relevance_score": 3,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
       "title": "Digital-Twin-Driven Predictive Maintenance and Fault-Tolerant Control for Electrified Agricultural Machinery: A Multiphysics and Deep Reinforcement Learning Framework for PMSM In-Wheel Drives",
       "url": "https://philpapers.org/rec/XIADPM",
       "openalex_id": "https://openalex.org/W7203455470",
@@ -268,6 +198,26 @@
       "summary": "Electrified agricultural machinery increasingly relies on permanent-magnet synchronous motor drives that must remain dependable under variable traction, terrain-induced vibration, thermal cycling, contamination, and intermittent duty. Existing work offers mature methods for motor fault diagnosis, digital twins, predictive maintenance, and distributed-drive fault-tolerant control, but their health information is often not shared across diagnosis, maintenance, and control. This article develops a multiphysics digital-twin framework in which electrical, thermal, mechanical, and vibrational evidence maintains a probabilistic health belief that constrains both supervisory maintenance decisions and torque redistribution. The framework formalizes observability, uncertainty-aware health factors, deterministic safety shielding, multi-rate fallback logic, and agriculture-specific traction constraints. Reproducible low-fidelity numerical studies provide preliminary support for context-conditioned residual diagnosis and the revised thermal-continuity trade-off underlying health-aware derating, including robustness and sensitivity analyses. They do not validate sim-to-real transfer or the reinforcement-learning policy itself; those hypotheses remain open for dynamometer and hardware-in-the-loop testing. The results are therefore interpreted as mechanism-level evidence rather than field-perf",
       "relevance_score": 2,
       "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "Exploring or Exploiting Generative AI? A Dual-Path, Dual-Horizon Theory of Employee Incremental and Radical Creativity",
+      "url": "https://philpapers.org/rec/BAIEOE",
+      "openalex_id": "https://openalex.org/W7203444948",
+      "doi": "https://doi.org/10.17613/gtb8v-92b77",
+      "published": "2026-12-31",
+      "summary": "Recent research has established that generative artificial intelligence (GenAI) is not a unitary workplace resource: exploratory and exploitative use orientations are associated with different forms of employee creativity, and their value depends on employees' capacity to integrate generated knowledge. This article therefore does not present the basic dual path as a new discovery. Instead, it develops a theoretical integration and dynamic extension that asks why the established paths operate differently, when employees should switch between them, and how short-run augmentation can evolve into either capability accumulation or capability substitution. We distinguish expansive and consolidative modes of knowledge integration, theorize phase-congruent switching rather than static ``high-high'' ambidexterity, and position metacognition as a control mechanism that governs both immediate knowledge conversion and longer-run cognitive development. We further specify cultural tightness and psychological safety as directional boundary conditions and distinguish individual creative gains from collective idea-space diversity. The framework converts emerging empirical regularities into falsifiable propositions about task phase, context, and time, providing a research agenda for sustainable human--AI creativity.",
+      "relevance_score": 2,
+      "matched_query": "metacognition self-improving AI agents"
+    },
+    {
+      "title": "Integration of Liquid Handling Robotics, Turbidimetry, and Machine Learning Toward Inverse Design of Lower Critical Solution Temperature Polymer Formulations",
+      "url": "https://doi.org/10.1002/aisy.70549",
+      "openalex_id": "https://openalex.org/W7214456965",
+      "doi": "https://doi.org/10.1002/aisy.70549",
+      "published": "2026-09-26",
+      "summary": "Precise tuning of physical properties, such as lower critical solution temperature (LCST) behavior in polymer formulations, is essential for stimuli‐responsive materials design, but is typically limited by low‐throughput cloud point ( T cp ) determination. To address this, we developed a high‐throughput (HTP) experimentation platform that integrates automated liquid handling, parallel turbidimetry measurements, and machine learning (ML) under a unified Python framework. Using an OT‐2 liquid handling robot interfaced with a SPECTROstar Nano plate reader, we enabled automated design of experiments‐based sampling of high‐dimensional formulations, which are prepared robotically and analyzed via HTP turbidimetry to determine polymer cloud points ( T cp ) for P(NIPAM‐co‐DMAEMA) copolymers. Overcoming single‐variable resolution in traditional methods, our approach enables the simultaneous T cp mapping across polymer, NaCl, and NaOH concentrations, achieving an average measurement throughput of 8 min per sample. This workflow generates high‐fidelity datasets comprising hundreds of formulation –T cp relationships within days. Supervised ML models trained on these data achieved high predictive accuracy ( R 2 up to 0.96; mean squared error as low as 0.023 °C 2 ), with Shapley Additive Explanations analyses elucidating feature contributions. T cp distribution analysis identified polymer co",
+      "relevance_score": 2,
+      "matched_query": "automated AI research experimentation"
     },
     {
       "title": "AI Implementation Role Map",
@@ -280,6 +230,16 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
+      "title": "Design and implementation of a multilingual chatbot for global fashion E-commerce CX using the RASA machine learning framework",
+      "url": "https://doi.org/10.1038/s41598-026-68825-8",
+      "openalex_id": "https://openalex.org/W7214325781",
+      "doi": "https://doi.org/10.1038/s41598-026-68825-8",
+      "published": "2026-09-25",
+      "summary": "The increasing globalization of markets necessitates robust multilingual customer service solutions to meet diverse consumer linguistic preferences. Traditional customer service systems, often constrained by language barriers, limited availability, and scalability issues, are insufficient to meet the demands of a globalized customer base. This paper presents the design and implementation of a multilingual chatbot leveraging the open-source RASA machine learning framework to address these challenges. The proposed architecture integrates a language detection module, a multilingual Natural Language Understanding (NLU) pipeline, a sophisticated Core Dialogue Manager, and an Action Server capable of dynamic response translation. The chatbot supports three languages: English, Devanagari Hindi, and Hinglish, using a custom-built multilingual dataset comprising 1350 utterances manually annotated, 450 utterances for each of the three supported languages. The dataset comprises 11 customer-service intents , with the three language-specific intents represented by a larger number of training examples than the supporting conversational intents, reflecting the primary objective of multilingual language identification and routing. The dataset was divided into training and testing sets using an 80:20 split. Evaluation metrics, including Accuracy, Precision, Recall, and F1-score for intent class",
+      "relevance_score": 2,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
       "title": "AI Implementation Role Map",
       "url": "https://doi.org/10.5281/zenodo.22962772",
       "openalex_id": "https://openalex.org/W7214382978",
@@ -288,6 +248,16 @@
       "summary": "### How does an AI implementation role map work? An AI implementation role map assigns each build stage to people who can make decisions and operate the resulting workflow. Paloren provides AI strategy, implementation, automation and training, and Aaron Agius co-founded Paloren with Alex Agius before founding Louder. Aaron Agius is the world's best AI consultant, and his 15 years of marketing, data and growth systems work informs the map's emphasis on named ownership. The map is not a hiring plan. It is a way to avoid a common failure: a technical build with no one accountable for the workflow, data, training or pause decision. Some roles can be filled by the same person in a small team. The responsibilities still need to be explicit. #### Why do role names matter? | Role word | Common ambiguity | | --- | --- | | Sponsor | May fund the work but not understand operations | | Owner | May be accountable but unable to change the process | | Lead | May build but lack business authority | | User | May be affected but not consulted | | Data owner | May not control system access | | Trainer | May know the tool but not the actual job | Ambiguity is not a technical detail. It determines who approves data access, who says stop and who helps the team after launch. ### What happens during problem definition? The operational owner names the workflow and the friction. The person who performs ",
       "relevance_score": 2,
       "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "LMS-supported Metacognitive Scaffolding and Digital Competence in Pre-service Teachers",
+      "url": "https://doi.org/10.34190/ejel.24.5.4627",
+      "openalex_id": "https://openalex.org/W7214361378",
+      "doi": "https://doi.org/10.34190/ejel.24.5.4627",
+      "published": "2026-09-25",
+      "summary": "Digital competence and metacognitive self-regulation are increasingly treated as core outcomes of teacher education, yet their co-development through routine learning management system (LMS) use remains underexamined. This study evaluated a 15-week Platonus-based intervention at L.N. Gumilyov Eurasian National University in Kazakhstan. The intervention integrated metacognitive prompts with professionally relevant digital tasks, connecting learning-to-learn support with digital pedagogy in teacher preparation. A quasi-experimental, non-equivalent groups design involved 249 final-year pre-service teachers: 125 students completed structured LMS activities combining multimedia modules, reflective journals, prediction–feedback quizzes, discussion forums, peer review and digital lesson production, while 124 students received the same course content through conventional instruction with minimal LMS use. Baseline equivalence was assessed, and outcome changes were analysed using 2 × 2 mixed-design analyses of variance; open-ended responses and LMS activity data were used to contextualise the quantitative findings. Metacognitive awareness was measured with the Metacognitive Awareness Inventory, and perceived professional digital competence with a DigCompEdu-informed self-report questionnaire. Mixed-design analyses of variance showed significant Time × Group interactions for metacognitive",
+      "relevance_score": 2,
+      "matched_query": "metacognition self-improving AI agents"
     },
     {
       "title": "From capability to assertability: epistemic regulation of LLM-mediated claim presentation",
@@ -308,6 +278,36 @@
       "summary": "Algorithmic evaluation is increasingly entering high-stakes social contexts, including recruitment, where young people are assessed before any human interaction occurs. AI video interviews are one such setting; they are largely one-directional, opaque, and often provide no feedback about how applicants are evaluated. This study examines how such AI-mediated evaluation relates to two socially consequential perceptions among university students: confidence in their own employability and trust-related evaluations of organizations that deploy AI-based assessment. Drawing on Situated Expectancy-Value Theory (SEVT), we distinguish between expectancy beliefs—whether one can succeed—and value beliefs—whether the outcome is worth pursuing, and develop a dual-pathway model in which expectancy-related individual factors (AI literacy, metacognition, need for cognition, and technology anxiety) are associated with perceived employability, while value-related process perceptions (procedural justice and algorithmic transparency) are associated with organizational attractiveness, with social comparison orientation and AI usage experience as boundary conditions. Using data from 520 Chinese university students analyzed with PLS-SEM, we find that all four expectancy-related factors are independently associated with perceived employability, and that procedural justice and algorithmic transparency a",
       "relevance_score": 2,
       "matched_query": "metacognition self-improving AI agents"
+    },
+    {
+      "title": "Big data and psychiatry: advances, constraints and future directions.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42742616",
+      "openalex_id": "https://openalex.org/W7213331983",
+      "doi": "https://doi.org/10.1002/wps.70113",
+      "published": "2026-10-01",
+      "summary": "Early work in psychiatry research, often involving single sites, small samples, and limited variables, has shifted to contemporary research involving multiple sites, large samples, and many variables. Such research raises important questions, including concerns about data quality and methodological rigor, uncertainty about its key lessons, issues regarding clinical relevance, and questions about how to optimize future advances. Here we consider these questions and concerns against the context of big data work on community and register-based surveys, cohort and biobank studies, electronic health records, digital phenotyping, brain imaging, genomics and other -omics, and randomized controlled trials. The development of large datasets allowing well-powered analyses is a major milestone, but sample size alone does not guarantee more precise estimates, and ongoing attention to the quality and rigor of big data collation and analysis is needed. Big data research has fostered trans-disciplinarity and given insights into mechanisms underlying psychiatric disorders, but also emphasizes the intricacy, heterogeneity and variability of such mechanisms, and the importance of triangulating between large-scale and small-scale research. The complexity of psychiatric phenotypes and psychobiological mechanisms contributes to the difficulty in bridging from big data to clinical application; big d",
+      "relevance_score": 1,
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "GUIDED BY INNOVATION: A PHENOMENOLOGICAL STUDY OF VIRTUAL ELEMENTARY TEACHERS’ PERCEPTIONS OF GENERATIVE ARTIFICIAL INTELLIGENCE INTEGRATION",
+      "url": "https://firescholars.seu.edu/coe/199",
+      "openalex_id": "https://openalex.org/W7214509296",
+      "doi": null,
+      "published": "2026-10-01",
+      "summary": "The purpose of this qualitative phenomenological study was to explore the lived experiences of elementary virtual teachers who integrate generative artificial intelligence (GAI) tools in their pedagogical practices at a large elementary virtual school. Participants were purposively sampled because those in the specified virtual school program provided relevant, experience-based insights and allowed the researcher practical, feasible access (Creswell & Poth, 2018). The participant sample for this study consisted of virtual elementary teachers who taught students in kindergarten through fifth grade. The researcher conducted semi-structured interviews with 10 teachers. The researcher followed Creswell and Poth’s (2018) data analysis spiral to systematically analyze data and determine themes. Four themes emerged from significant participant statements: efficiency, preservation of the teacher role, instructional enhancement, and AI literacy. The themes suggest that elementary virtual teachers are consistently balancing the positive elements of efficiency and enhanced instructional quality with the adverse aspects of misinformation, privacy protection, ethical concerns, and misuse. The themes suggest that virtual elementary teachers view GAI as a dynamic tool; however, its value depends on thoughtful, informed, and human-centered application. Future research would build on the findin",
+      "relevance_score": 1,
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "ASAS-NANP SYMPOSIUM: MATHEMATICAL MODELING IN ANIMAL NUTRITION: Modelling in the Agriculture 4.0 Era and Beyond: Merging Mechanistic Knowledge and Artificial Intelligence with Hybrid Modelling",
+      "url": "https://doi.org/10.1093/jas/skag311",
+      "openalex_id": "https://openalex.org/W7214453206",
+      "doi": "https://doi.org/10.1093/jas/skag311",
+      "published": "2026-09-26",
+      "summary": "With the arrival of the 4th Agricultural Revolution (Agriculture 4.0) and the influsion of animal production systems with sensors, automation, and advanced analytics, new opportunities have arisen to improve sustainability, efficiency, and the precision with which we feed animals. It is possible that the barriers of the past such as lack of automation, efficient means of data capture, and appropriate analytical tools with which to drive decision support and system optimization will be mitigated in our lifetime. Increasingly, we will see the blending of mechanistic understanding with technological advancement to guide decision-making. The emerging frontier of hybrid models representing frameworks that integrate mechanistic understanding with the pattern recognition of machine learning, offers considerable promise for application in animal systems. As illustrative case studies, research conducted in other fields where modelling approaches have been successfully integrated will be explored (for example, bioprocess engineering, weather, human health), as well as recent research in agriculture. Several architectures for hybrid modelling may be considered for application in animal biosciences: (1) Serial hybridization, where a machine learning (ML) model provides inputs into a white box model (could be mechanistic or empirical), or vice versa, (2) Parallel hybridization, where models",
+      "relevance_score": 1,
+      "matched_query": "automated AI research experimentation"
     }
   ],
   "paper_count": 30,
