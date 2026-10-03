@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comprendre l'indice de discrimination de Moodle</title>
+<meta name="description" content="Indice de facilité, indice de discrimination : ce que disent les statistiques de quiz de Moodle, comment les lire, et quoi faire d'une question signalée.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <nav>
+      <a href="fr.html">Item Audit</a>
+      <a href="ecoles.html">Écoles</a>
+      <a href="qcm.html">Vérifier un QCM</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<h1>Comprendre l'indice de discrimination de Moodle</h1>
+
+<p class="lede">Le rapport de statistiques des quiz de Moodle affiche pour chaque question un indice de facilité et un indice
+de discrimination. Voici ce qu'ils veulent dire, comment les lire, et quoi faire d'une question signalée.</p>
+
+<h2>L'indice de facilité</h2>
+
+<p>C'est la note moyenne obtenue à la question, en pourcentage. Une question réussie par 90&nbsp;% des élèves est très
+facile&nbsp;; à 20&nbsp;%, elle est très difficile. Ni l'un ni l'autre n'est une faute en soi&nbsp;: une question très
+facile rassure, une question très difficile repère les meilleurs. Mais une question que tout le monde réussit ne sert
+pas à classer.</p>
+
+<h2>L'indice de discrimination</h2>
+
+<p>D'après la documentation de Moodle, c'est la corrélation entre le score à cette question et le score à l'ensemble
+du quiz. En clair&nbsp;: les élèves qui réussissent cette question réussissent-ils aussi le reste&nbsp;?</p>
+
+<ul>
+<li><strong>Nettement positif</strong>&nbsp;: la question distingue bien les élèves qui maîtrisent de ceux qui ne
+maîtrisent pas. C'est ce qu'on veut.</li>
+<li><strong>Proche de zéro</strong>&nbsp;: la question est réussie ou ratée sans lien avec le niveau. Énoncé ambigu,
+question hors sujet, ou réponse devinée.</li>
+<li><strong>Négatif</strong>&nbsp;: les meilleurs élèves la réussissent <em>moins</em> que les autres. C'est le signal
+habituel d'un corrigé faux, ou d'une question piège qui trompe ceux qui réfléchissent.</li>
+</ul>
+
+<p>Dans notre outil, nous considérons qu'une question «&nbsp;ne départage pas&nbsp;» en dessous de 0,15, et nous
+signalons toute valeur négative. Ce sont des repères pratiques, pas des lois&nbsp;: avec une petite classe, l'indice
+bouge beaucoup d'une session à l'autre.</p>
+
+<h2>Ce que le rapport de Moodle ne fait pas</h2>
+
+<p>Toujours d'après sa documentation, le rapport aide à repérer les questions problématiques, mais ne propose pas la
+réponse probablement juste et ne recalcule pas les notes&nbsp;: c'est à l'enseignant de modifier la question ou de
+relancer la notation. Pour savoir quelle réponse vos meilleurs élèves ont choisie à la place, regardez l'analyse des
+réponses de la question, ou <a href="qcm.html">collez vos résultats dans notre outil gratuit</a>, qui le fait pour
+toutes les questions à la fois.</p>
+
+<h2>Quoi faire d'une question signalée</h2>
+
+<ol>
+<li><strong>Relisez le corrigé.</strong> C'est la cause la plus simple, et la plus rapide à réparer.</li>
+<li><strong>Relisez l'énoncé</strong> comme un élève&nbsp;: une double négation, un mot ambigu, deux réponses
+défendables&nbsp;?</li>
+<li><strong>Décidez</strong>&nbsp;: corriger le corrigé, accepter deux réponses, ou retirer la question. Puis
+recalculez les notes avant de les publier.</li>
+</ol>
+
+<div class="panel">
+<p><strong><a href="qcm.html">Analyser mon quiz gratuitement →</a></strong> · <a href="corrige-qcm-faux.html">Comment savoir si un corrigé est faux</a></p>
+</div>
+
+<p class="small soft">Documentation Moodle «&nbsp;Quiz statistics report&nbsp;», consultée le 3 octobre 2026. Item Audit
+n'est pas lié à Moodle. Contact&nbsp;: rubens.alphe0@gmail.com</p>
+
+</main>
+</body>
+</html>
