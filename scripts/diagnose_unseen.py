@@ -56,7 +56,7 @@ BATCHES_PER_SUBJECT, PER_BATCH = 5, 5
 SAMPLE, PLANTED = 300, 60
 BUDGET_USD = 7.0
 WRITER = "google/gemini-3.6-flash"
-SOLVERS = ("minimax/minimax-m3", "mistralai/mistral-large-2512")
+SOLVERS = ("minimax/minimax-m3", "qwen/qwen3.5-122b-a10b")
 DIAGNOSER = "deepseek/deepseek-v4.1-flash"
 LETTERS = "ABCD"
 

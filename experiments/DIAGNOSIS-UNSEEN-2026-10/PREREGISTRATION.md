@@ -69,3 +69,23 @@ written, solved or diagnosed, and nothing had been spent. The cap is raised to
 7 USD (`BUDGET_USD` in `scripts/diagnose_unseen.py`). Nothing else changes:
 the models, the sample, the planting, the prompt, the settings and the
 thresholds stay as written above.
+
+## Amendment 2, 2026-10-03T17:35:50Z (clock), before any diagnosis
+
+The cleaning stage stalled on one solver. In about an hour,
+`mistralai/mistral-large-2512` returned HTTP 429 (rate-limited upstream) 246
+times and answered 164 of the roughly 480 questions. At that pace it would
+need about two more hours.
+
+- **The change.** The second solver becomes `qwen/qwen3.5-122b-a10b`, from
+  another family again (Alibaba). Every question is solved by MiniMax and
+  Qwen, and the cleaning rule is unchanged: both must choose the key.
+- **Mistral's answers.** The 164 answers already given stay on disk under
+  `solved/` and are not used.
+- **What was seen.** No question had been planted or shown to the diagnoser,
+  and no diagnosis existed. The only data looked at was the count of solved
+  files and the error log.
+- **Why this model.** `qwen3.5-122b-a10b` was preferred to the larger
+  `qwen3.5-397b-a17b` so that the pessimistic estimate stays under the 7 USD
+  cap (6.18 USD). Only the second solver changes. The writer, the diagnoser,
+  the prompt, the sample, the planting and the thresholds stay as written.
