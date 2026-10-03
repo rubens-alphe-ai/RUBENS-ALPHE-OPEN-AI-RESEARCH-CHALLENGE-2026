@@ -31,7 +31,7 @@ import re
 import sys
 from pathlib import Path
 
-NEGATION = re.compile(r"\b(pas|ni|jamais|aucune?|not|no|never|nor|without|sans)\b", re.I)
+NEGATION = re.compile(r"(\b(ne|pas|ni|jamais|aucune?|not|no|never|nor|without|sans)\b|\bn['’])", re.I)
 
 RULES = [
     ("exclusivity",

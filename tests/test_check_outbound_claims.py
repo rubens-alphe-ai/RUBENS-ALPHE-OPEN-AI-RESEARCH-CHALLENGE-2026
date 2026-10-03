@@ -72,3 +72,9 @@ class AllowedTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class FrenchNegationTests(unittest.TestCase):
+    def test_ne_before_the_word_counts_as_a_negation(self) -> None:
+        self.assertEqual(rules("Ce que nous ne garantissons pas : un résultat particulier."), set())
+        self.assertIn("guarantee", rules("Résultat garanti en 48 heures."))
