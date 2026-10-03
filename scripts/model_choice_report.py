@@ -175,7 +175,7 @@ th{font-weight:600}.num{text-align:right;font-variant-numeric:tabular-nums;white
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--table", type=Path, required=True)
-    parser.add_argument("--models", required=True, help="comma-separated trial names, at most five")
+    parser.add_argument("--models", required=True, help="comma-separated trial names, at most six")
     parser.add_argument("--labels", type=Path, help="JSON {trial: display name}")
     parser.add_argument("--prices", type=Path, help="JSON {trial: [input $/M tokens, output $/M tokens]}")
     parser.add_argument("--title", required=True)
@@ -183,8 +183,8 @@ def main() -> None:
     parser.add_argument("--out", type=Path, required=True)
     args = parser.parse_args()
     models = [m.strip() for m in args.models.split(",") if m.strip()]
-    if not 2 <= len(models) <= 5:
-        raise SystemExit("give between two and five models")
+    if not 2 <= len(models) <= 6:
+        raise SystemExit("give between two and six models")
     by = load_table(args.table)
     missing = [m for m in models if m not in by]
     if missing:
