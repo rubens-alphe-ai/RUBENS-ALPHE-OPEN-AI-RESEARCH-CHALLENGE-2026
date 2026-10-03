@@ -1,0 +1,159 @@
+{
+ "record_version": "RA-PSI-LAUNCH-CHECK-V1",
+ "model": "gpt-6.1-sol",
+ "source": "Epoch AI, Capabilities & benchmarking, https://epoch.ai/benchmarks, CC BY 4.0",
+ "rule": "95%, unpaired, Epoch's published standard errors, best setting per model, no multiple-comparison correction",
+ "summary": {
+  "benchmarks": 9,
+  "first_alone": 1,
+  "level_with_the_best_other": 2,
+  "lead_established": 0,
+  "behind_and_gap_established": 1
+ },
+ "benchmarks": [
+  {
+   "benchmark": "frontiermath_tier_4_v2",
+   "setting": "gpt-6.1-sol_max",
+   "score_pct": 100.0,
+   "rank": 1,
+   "models_compared": 64,
+   "best_other": "gpt-6-astra_high",
+   "best_other_pct": 97.6,
+   "gap_pts": 2.4,
+   "gap_interval_95_pts": [
+    -2.3,
+    7.1
+   ],
+   "not_separated_from": 3,
+   "reading": "first, but the lead is not established at this sample size"
+  },
+  {
+   "benchmark": "frontiermath_tiers_1_3_v2",
+   "setting": "gpt-6.1-sol_max",
+   "score_pct": 93.7,
+   "rank": 1,
+   "models_compared": 81,
+   "best_other": "gpt-6-astra_max",
+   "best_other_pct": 93.7,
+   "gap_pts": 0.0,
+   "gap_interval_95_pts": [
+    -4.0,
+    4.0
+   ],
+   "not_separated_from": 5,
+   "reading": "level with the best other model"
+  },
+  {
+   "benchmark": "otis_mock_aime_2024_2025",
+   "setting": "gpt-6.1-sol_max",
+   "score_pct": 100.0,
+   "rank": 1,
+   "models_compared": 197,
+   "best_other": "claude-sonnet-5-5_max",
+   "best_other_pct": 100.0,
+   "gap_pts": 0.0,
+   "gap_interval_95_pts": [
+    0.0,
+    0.0
+   ],
+   "not_separated_from": 37,
+   "reading": "level with the best other model"
+  },
+  {
+   "benchmark": "simpleqa_verified",
+   "setting": "gpt-6.1-sol_max",
+   "score_pct": 73.9,
+   "rank": 2,
+   "models_compared": 77,
+   "best_other": "gpt-6-astra_max",
+   "best_other_pct": 75.6,
+   "gap_pts": -1.7,
+   "gap_interval_95_pts": [
+    -5.5,
+    2.1
+   ],
+   "not_separated_from": 5,
+   "reading": "behind the leader, but not separated from it"
+  },
+  {
+   "benchmark": "furniture_assembly",
+   "setting": "gpt-6.1-sol_max",
+   "score_pct": 80.0,
+   "rank": 2,
+   "models_compared": 29,
+   "best_other": "claude-opus-5-5_max",
+   "best_other_pct": 83.3,
+   "gap_pts": -3.3,
+   "gap_interval_95_pts": [
+    -16.7,
+    10.0
+   ],
+   "not_separated_from": 4,
+   "reading": "behind the leader, but not separated from it"
+  },
+  {
+   "benchmark": "mystery_game_puzzles",
+   "setting": "gpt-6.1-sol_max",
+   "score_pct": 80.0,
+   "rank": 2,
+   "models_compared": 73,
+   "best_other": "gpt-6-astra_max",
+   "best_other_pct": 84.0,
+   "gap_pts": -4.0,
+   "gap_interval_95_pts": [
+    -14.7,
+    6.7
+   ],
+   "not_separated_from": 2,
+   "reading": "behind the leader, but not separated from it"
+  },
+  {
+   "benchmark": "gpqa_diamond",
+   "setting": "gpt-6.1-sol_max",
+   "score_pct": 95.4,
+   "rank": 3,
+   "models_compared": 219,
+   "best_other": "gpt-6-astra_max",
+   "best_other_pct": 95.8,
+   "gap_pts": -0.4,
+   "gap_interval_95_pts": [
+    -4.2,
+    3.4
+   ],
+   "not_separated_from": 31,
+   "reading": "behind the leader, but not separated from it"
+  },
+  {
+   "benchmark": "chess_puzzles",
+   "setting": "gpt-6.1-sol_max",
+   "score_pct": 61.0,
+   "rank": 4,
+   "models_compared": 141,
+   "best_other": "gpt-6-astra_max",
+   "best_other_pct": 72.0,
+   "gap_pts": -11.0,
+   "gap_interval_95_pts": [
+    -24.1,
+    2.1
+   ],
+   "not_separated_from": 11,
+   "reading": "behind the leader, but not separated from it"
+  },
+  {
+   "benchmark": "ebr_bench",
+   "setting": "gpt-6.1-sol_max",
+   "score_pct": 54.3,
+   "rank": 4,
+   "models_compared": 11,
+   "best_other": "gpt-6-astra_max",
+   "best_other_pct": 76.2,
+   "gap_pts": -21.9,
+   "gap_interval_95_pts": [
+    -41.8,
+    -2.0
+   ],
+   "not_separated_from": 5,
+   "reading": "behind the leader, and the gap is established"
+  }
+ ]
+}
