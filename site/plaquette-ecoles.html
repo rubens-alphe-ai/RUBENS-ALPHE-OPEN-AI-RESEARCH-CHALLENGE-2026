@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Item Audit Écoles — des examens justes</title>
+<meta name="description" content="Une page pour comprendre Item Audit Écoles : repérer les corrigés faux et les questions mal faites de vos QCM, et recalculer les notes.">
+<link rel="stylesheet" href="style.css">
+<style>
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+.card { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: var(--panel); display: grid; gap: 6px; align-content: start; }
+.card .price { font-family: var(--mono); font-weight: 600; }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<p class="small soft">Item Audit Écoles · plaquette · octobre 2026</p>
+<h1>Des examens justes pour vos élèves.</h1>
+
+<p class="lede">Un corrigé faux pénalise d'abord les élèves qui ont trouvé la bonne réponse. Nous le repérons à partir des
+réponses de vos élèves, nous proposons la réponse probablement juste, et nous recalculons les notes avant que vous les
+publiiez.</p>
+
+<h2>Comment ça marche</h2>
+<ol>
+<li>Vous exportez les réponses de l'examen (Moodle, Google Forms, tableur).</li>
+<li>Nous analysons chaque question&nbsp;: réussite, capacité à départager, réponses des meilleurs et des plus faibles.</li>
+<li>Vous recevez les questions à revoir, la correction proposée, et les notes de toute la classe selon chaque décision.</li>
+</ol>
+
+<h2>Les formules</h2>
+<div class="grid">
+<div class="card"><strong>Outil en ligne</strong><span>Pour essayer, sans limite. Rien n'est envoyé&nbsp;: tout se calcule dans le navigateur.</span><span class="price">gratuit</span></div>
+<div class="card"><strong>Rapport détaillé</strong><span>Un examen qui compte, expliqué question par question, notes recalculées. Payé après réception.</span><span class="price">29 € · 48 h</span></div>
+<div class="card"><strong>Pack formateur</strong><span>Toutes vos sessions suivies dans le temps, avec alertes.</span><span class="price">9 € / mois</span></div>
+<div class="card"><strong>Établissement</strong><span>Tous vos enseignants, un tableau de bord par matière et par classe, un bilan annuel pour la direction. <a href="exemple-etablissement/index.html">Exemple</a></span><span class="price">49 € / mois</span></div>
+</div>
+<p><strong>Universités, concours, titres professionnels&nbsp;:</strong> audit de vos examens à grande échelle, avant chaque session. Sur devis.</p>
+
+<h2>Le bon moment</h2>
+<p>Entre la correction et la publication des notes&nbsp;: partiels de décembre et de janvier, bacs blancs, examens de fin
+d'année. C'est là qu'une erreur coûte le moins cher à réparer.</p>
+
+<div class="panel">
+<p><strong>Établissements pilotes&nbsp;:</strong> les cinq premiers paient moitié prix la première année, contre un court témoignage.</p>
+<p>Essayer&nbsp;: <a href="qcm.html">vérifier un QCM</a> · Exemple&nbsp;: <a href="exemple-rapport-qcm.html">rapport d'une classe</a></p>
+<p>Rubens Alphe — <code>rubens.alphe0@gmail.com</code></p>
+</div>
+
+<p class="small soft">Un signal dit quoi relire, il ne prouve pas l'erreur&nbsp;: la décision reste à l'enseignant. Avec une petite classe, environ une question saine sur sept peut être signalée par hasard (experiments/DETECTION-2026-09).</p>
+
+</main>
+</body>
+</html>

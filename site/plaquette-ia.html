@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Item Audit — choisir et vérifier vos IA</title>
+<meta name="description" content="Une page pour comprendre Item Audit : quels écarts entre IA sont réels, sur vos tâches, et ce que cela change pour votre budget.">
+<link rel="stylesheet" href="style.css">
+<style>
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+.card { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: var(--panel); display: grid; gap: 6px; align-content: start; }
+.card .price { font-family: var(--mono); font-weight: 600; }
+.big { font-size: 1.6rem; font-weight: 700; font-family: var(--mono); }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<p class="small soft">Item Audit · plaquette · octobre 2026</p>
+<h1>Votre IA est-elle vraiment meilleure, ou seulement mieux classée&nbsp;?</h1>
+
+<p class="lede">Nous disons quels écarts entre modèles d'IA sont réels sur <em>vos</em> tâches, et ce que cela change
+pour votre budget. Chaque conclusion vient avec son incertitude.</p>
+
+<h2>Trois chiffres, tous publics et vérifiables</h2>
+<div class="grid">
+<div class="card"><span class="big">10 / 13</span><span>grands benchmarks où le premier n'est pas séparable du cinquième (barres d'erreur d'Epoch AI)</span></div>
+<div class="card"><span class="big">×22</span><span>d'écart de prix de sortie entre quatre modèles de programmation dont aucun n'est démontré meilleur que les autres</span></div>
+<div class="card"><span class="big">40&nbsp;%</span><span>des tâches de SWE-bench Verified suffisent à classer les 10 modèles sortis ensuite comme le test complet</span></div>
+</div>
+<p class="small soft">Sources : experiments/LEADERBOARD-REALITY-2026-10, exemple-rapport.html, experiments/COMPRESSION-SWEBENCH-2026-10 sur notre dépôt public.</p>
+
+<h2>Ce que nous faisons</h2>
+<div class="grid">
+<div class="card"><strong>Choix de modèle vérifié</strong><span>Jusqu'à 5 modèles sur vos tâches, comparés par paires. Quel modèle est démontré meilleur, lesquels ne se départagent pas, et ce qu'ils coûtent.</span><span class="price">4 900 € · 3 semaines</span></div>
+<div class="card"><strong>Vérification d'un écart</strong><span>Un écart annoncé entre deux modèles tient-il sur vos résultats question par question&nbsp;? Test apparié exact.</span><span class="price">1 500 € · 48 h</span></div>
+<div class="card"><strong>Benchmark raccourci</strong><span>Les questions qui décident vraiment, pour évaluer sur une fraction des questions avec les mêmes conclusions.</span><span class="price">4 900 €</span></div>
+<div class="card"><strong>Veille modèles</strong><span>À chaque nouvelle IA, en 48&nbsp;h&nbsp;: est-elle vraiment meilleure pour vous&nbsp;?</span><span class="price">1 200 € / mois</span></div>
+</div>
+
+<h2>Pourquoi nous croire</h2>
+<ul>
+<li>Nos résultats sont <strong>pré-inscrits</strong> : les seuils sont publiés avant le calcul.</li>
+<li>Notre méthode est <strong>vérifiée contre des experts humains</strong> (5&nbsp;005 questions relues).</li>
+<li>Nous publions <strong>nos erreurs</strong> et nos taux de fausses alertes.</li>
+<li>Conclure qu'aucun écart n'est établi est un <strong>résultat livré</strong>, souvent le plus utile.</li>
+</ul>
+
+<div class="panel">
+<p><strong>Nos cinq premiers clients paient moitié prix</strong>, en échange d'un court témoignage.</p>
+<p>Exemple de rapport&nbsp;: <a href="exemple-rapport.html">cinq IA de programmation sur 454 tâches</a> · Calculateur gratuit&nbsp;: <a href="https://claude.ai/artifact/RVYRDkJ2SPUwCnwcHK1Jgv">l'écart est-il réel&nbsp;?</a></p>
+<p>Rubens Alphe — <code>rubens.alphe0@gmail.com</code></p>
+</div>
+
+</main>
+</body>
+</html>
