@@ -36,6 +36,16 @@ class CaughtTests(unittest.TestCase):
         self.assertIn("guarantee", rules("Savings guaranteed within a month."))
 
 
+class EquivalenceTests(unittest.TestCase):
+    def test_no_gap_read_as_equal_is_caught(self) -> None:
+        self.assertIn("equivalence", rules("Les deux modèles se valent sur vos tâches."))
+        self.assertIn("equivalence", rules("The cheaper model is as good as the leader."))
+
+    def test_a_question_or_a_negation_passes(self) -> None:
+        self.assertEqual(rules("Un modèle moins cher ferait-il aussi bien ? Un modèle moins cher est-il aussi bon ?"), set())
+        self.assertEqual(rules("Not established does not mean they are equivalent."), set())
+
+
 class AllowedTests(unittest.TestCase):
     def test_negated_certification_and_guarantee_pass(self) -> None:
         self.assertEqual(rules("Ce n'est pas une certification, et aucune économie n'est garantie."), set())

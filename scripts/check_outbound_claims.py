@@ -15,6 +15,8 @@ draft, a message or a strategy note — and turned out to be false or unsupporte
 - **AI Act already in force for high-risk systems** — their obligations apply
   from 2 December 2027, or 2 August 2028 for AI in regulated products.
 - **certification, guarantees, customers** — there are none.
+- **equivalence** — reading "no established gap" as "the two models are as
+  good as each other". Caught by the other agent before a send.
 
 It is a tripwire, not a judge: a flagged line is a line a person must read
 before the text goes out. A clean run is not proof that a text is true — only
@@ -50,6 +52,11 @@ RULES = [
      re.compile(r"\b(nos clients|nos références|our (clients|customers)|customers include|trusted by|"
                 r"utilisé par|used by)\b", re.I),
      "There are no customers yet."),
+    ("equivalence",
+     re.compile(r"\b(se valent|aussi bons?|aussi bonnes?|équivalents?|équivalentes?|identiques? en qualité|"
+                r"as good as|equally good|equivalent|on par with|just as good)\b", re.I),
+     "A gap that is not established does not show that two models are equal. Say 'not shown to be "
+     "better' or 'not shown to be behind'. Allowed only as a question or in a negation."),
     ("screening-as-verdict",
      re.compile(r"\b(138|324)\b[^.\n]{0,40}\b(clés?|keys?|erreurs?|errors?|mis-?keyed|fausses?|wrong)", re.I),
      "Screening counts are not verdicts: say 'on the strict list' and give the strict count."),
@@ -77,7 +84,9 @@ def check(text: str) -> list[tuple[int, str, str, str]]:
         for name, pattern, why in RULES:
             for match in pattern.finditer(sentence):
                 before = sentence[:match.start()]
-                if name in ("certification", "guarantee") and NEGATION.search(before):
+                if name in ("certification", "guarantee", "equivalence") and NEGATION.search(before):
+                    continue
+                if name == "equivalence" and sentence.rstrip().endswith("?"):
                     continue
                 found.append((number, name, sentence.strip(), why))
                 break
