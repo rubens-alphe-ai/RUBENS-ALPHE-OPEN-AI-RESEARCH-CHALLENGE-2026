@@ -12,6 +12,7 @@
 <header class="site">
   <div class="wrap">
     <nav>
+      <a href="fr.html">Français</a>
       <a href="index.html">Start</a>
       <a href="audit.html">The audit</a>
       <a href="evidence.html" aria-current="page">Evidence</a>
@@ -57,6 +58,31 @@ data. So these are an <strong>upper bound on detection and a lower bound on fals
 That sentence travels inside the data file as well as here, because a bound separated from its
 condition gets quoted as a guarantee.</p>
 </div>
+
+<h2>Checked against human experts</h2>
+
+<p><strong>The flags find real key errors.</strong> On 5&nbsp;005 MMLU items relabelled by experts
+(MMLU-Redux 2.0, CC BY 4.0), the 7% of items on the screening list hold 54% of the expert-found key
+errors: 11.1% of flagged items carry one, against 0.8% of the rest (×14.6). On the strict list the
+rate is 21.9%. All four pre-registered predictions held. Most flagged items are still fine: a flag
+says what to read first.</p>
+<span class="src">experiments/VALIDATION-REDUX-2026-10/RESULT.md</span>
+
+<p><strong>A cheap model can say what is probably wrong.</strong> Blind to the flag,
+deepseek-v4.1-flash judged the 371 flagged items. Among those it called mis-keyed, 43% carry an
+expert-found key error, against 11% for the flag alone; it named 24 of the 41. Repeated on 300
+questions written the same day, with a wrong key planted in 60, it caught 59, named the right
+answer each time, and called none of the 240 clean questions wrong, so the first result does not
+rest on memorised public data. Planted errors are easier than natural ones: quote the 43%.</p>
+<span class="src">experiments/DIAGNOSIS-REDUX-2026-10/RESULT.md · experiments/DIAGNOSIS-UNSEEN-2026-10/RESULT.md</span>
+
+<h2>Leaderboards, read with their own error bars</h2>
+
+<p>On 13 benchmarks published by Epoch AI with a standard error per model, none of the nine
+neighbouring orderings in the top ten is supported, and on 10 of them the first model cannot be
+separated from the fifth. On release day, GPT-6.1 Sol was first alone on 1 of 9 comparable
+benchmarks, inside the error bars.</p>
+<span class="src">experiments/LEADERBOARD-REALITY-2026-10/RESULT.md · experiments/LAUNCH-CHECK-2026-10/RESULT.md</span>
 
 <h2>Two public benchmarks, audited</h2>
 
