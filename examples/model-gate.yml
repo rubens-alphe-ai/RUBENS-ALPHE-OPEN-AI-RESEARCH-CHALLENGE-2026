@@ -1,0 +1,67 @@
+# Block a model switch that your own evaluation does not support.
+#
+# You keep two result files in your repository, one per model, with columns
+# `item,correct` (1 or 0 per evaluation item):
+#
+#   evals/current.csv    results of the model in production
+#   evals/candidate.csv  results of the model you want to switch to
+#
+# Your evaluation harness already produces this per-item information: it could
+# not compute a score otherwise. The gate compares the two item by item (exact
+# McNemar test) and fails the pull request according to the policy below.
+#
+#   require: better     -> pass only if the candidate is shown better at 95%
+#                          (use when you switch to gain quality)
+#   require: not-worse  -> pass unless the candidate is shown worse at 95%
+#                          (use when you switch to save money; the log says how
+#                          large a loss could have gone undetected)
+#
+# No model is called and nothing leaves the runner. It costs nothing to run.
+#
+# Copy this file to .github/workflows/ in your own repository.
+
+name: Model gate
+
+on:
+  pull_request:
+    paths:
+      - "evals/**"
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch the gate (pinned to a reviewed commit)
+        uses: actions/checkout@v4
+        with:
+          repository: rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026
+          ref: guard/budget          # pin to a commit SHA in production
+          path: item-audit
+          sparse-checkout: |
+            scripts/model_gate.py
+            scripts/claim_check.py
+          sparse-checkout-cone-mode: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compare the candidate with the current model
+        run: |
+          python item-audit/scripts/model_gate.py \
+            --current evals/current.csv \
+            --candidate evals/candidate.csv \
+            --require better \
+            --json model-gate.json
+
+      - name: Keep the full result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: model-gate
+          path: model-gate.json
