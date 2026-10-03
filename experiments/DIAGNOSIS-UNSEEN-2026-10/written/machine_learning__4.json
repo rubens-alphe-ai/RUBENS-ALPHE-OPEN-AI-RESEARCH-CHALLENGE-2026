@@ -1,0 +1,54 @@
+{
+ "questions": [
+  {
+   "question": "In statistical learning theory, what does a uniform convergence bound guarantee regarding the empirical risk $R_{emp}(h)$ and true risk $R(h)$ over a hypothesis space $\\mathcal{H}$?",
+   "options": [
+    "It guarantees that with high probability, the difference between true risk and empirical risk is bounded simultaneously for all hypotheses in $\\mathcal{H}$.",
+    "It guarantees that for a specific chosen hypothesis $h$, the empirical risk converges to zero as the sample size approaches infinity.",
+    "It guarantees that the true risk of any hypothesis is strictly lower than its empirical risk for finite sample sizes.",
+    "It guarantees that the gradient of the loss function converges uniformly to zero at the global minimum."
+   ],
+   "answer": "A"
+  },
+  {
+   "question": "In a standard Variational Autoencoder (VAE), why is the reparameterization trick necessary during optimization using gradient descent?",
+   "options": [
+    "It eliminates the need to calculate the Kullback-Leibler (KL) divergence between the prior and approximate posterior distributions.",
+    "It enforces the approximate posterior distribution $q_\\phi(z|x)$ to remain orthogonal to the prior $p(z)$.",
+    "Standard backpropagation cannot pass gradients through stochastic sampling operations, so sampling $z \\sim \\mathcal{N}(\\mu, \\Sigma)$ is reformulated as a deterministic function with an independent noise source $\\epsilon \\sim \\mathcal{N}(0, I)$.",
+    "It dynamically scales the reconstruction loss to prevent mode collapse during early training epochs."
+   ],
+   "answer": "C"
+  },
+  {
+   "question": "Wasserstein Generative Adversarial Networks (WGANs) replace the Jensen-Shannon divergence used in standard GANs with the Earth Mover's (Wasserstein-1) Distance. What primary optimization advantage does this offer?",
+   "options": [
+    "The Wasserstein distance is strictly bounded between 0 and 1, preventing exploding gradients in the critic.",
+    "The Wasserstein distance completely eliminates the need for any Lipschitz continuity constraints on the critic network.",
+    "The Wasserstein distance allows the generator to be optimized without evaluating loss from the critic network.",
+    "The Wasserstein distance provides a smooth, continuous gradient almost everywhere for the generator, even when the support of the real and generated distributions do not overlap."
+   ],
+   "answer": "D"
+  },
+  {
+   "question": "When expanding its tree structure, what mathematical approximation does XGBoost use to optimize its customized, regularized objective function at each step?",
+   "options": [
+    "A first-order Taylor expansion of the loss function, equivalent to standard gradient descent.",
+    "A second-order Taylor expansion of the loss function around the current prediction, utilizing both first and second-order gradients.",
+    "A Markov Chain Monte Carlo (MCMC) approximation of the loss function space.",
+    "A variational approximation that converts non-convex loss terms into convex sub-problems."
+   ],
+   "answer": "B"
+  },
+  {
+   "question": "In semantic attribute-based Zero-Shot Learning (ZSL) for visual classification, how does a trained model classify test instances belonging to unseen classes?",
+   "options": [
+    "By mapping visual features of the image into a shared semantic embedding space and finding the nearest class using predefined semantic attribute vectors.",
+    "By fine-tuning the output classification layer on a small set of unlabeled test samples via semi-supervised learning.",
+    "By generating synthetic images for all unseen classes using a conditional GAN trained exclusively on test images.",
+    "By randomly expanding the final classification layer and performing a single gradient update per test sample."
+   ],
+   "answer": "A"
+  }
+ ]
+}

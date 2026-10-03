@@ -1,0 +1,54 @@
+{
+ "questions": [
+  {
+   "question": "In key exchange protocols, what fundamental security property does Perfect Forward Secrecy (PFS) provide?",
+   "options": [
+    "It ensures that compromising a server's long-term private key does not expose session keys established in past communications.",
+    "It guarantees that symmetric session keys can be safely reused across multiple sessions without losing security assurances.",
+    "It automatically revokes compromised public key certificates in real time across distributed PKI nodes.",
+    "It prevents quantum computers from executing Shor's algorithm on asymmetric key pairs."
+   ],
+   "answer": "A"
+  },
+  {
+   "question": "Shor's algorithm threatens modern asymmetric cryptosystems because it can solve which mathematical problems in polynomial time on a quantum computer?",
+   "options": [
+    "Finding SHA-256 hash collisions and preimage attacks",
+    "Integer factorization and the discrete logarithm problem",
+    "Shortest vector problems in lattice-based cryptography",
+    "Symmetric block cipher key expansion and substitution box inversion"
+   ],
+   "answer": "B"
+  },
+  {
+   "question": "Which mechanism allows a Return-Oriented Programming (ROP) attack to successfully execute arbitrary malicious logic while bypassing Data Execution Prevention (DEP / NX bit)?",
+   "options": [
+    "Dynamically compiling shellcode into memory marked as read-write-execute at runtime",
+    "Injecting instructions directly into the non-executable stack and executing them via a stack pivot",
+    "Chaining together short sequence snippets of existing executable code ('gadgets') ending in return instructions",
+    "Overwriting kernel page tables to remove memory protection flags globally across user space"
+   ],
+   "answer": "C"
+  },
+  {
+   "question": "Web browsers enforce the Same-Origin Policy (SOP) to isolate document contexts. Which exact combination of elements defines an 'origin'?",
+   "options": [
+    "IP address, subnet mask, and URL path",
+    "Domain name, HTTP headers, and user session ID",
+    "TLS certificate thumbprint, protocol, and query parameters",
+    "Protocol (scheme), hostname (domain), and port number"
+   ],
+   "answer": "D"
+  },
+  {
+   "question": "A software application checks a user's permission to access a file and subsequently opens that file in a separate system call. If an unprivileged user replaces the target file with a symbolic link to a protected system file between these two operations, what vulnerability is being exploited?",
+   "options": [
+    "Integer Overflow",
+    "Time-of-Check to Time-of-Use (TOCTOU) race condition",
+    "Format String Injection",
+    "Use-After-Free (UAF)"
+   ],
+   "answer": "B"
+  }
+ ]
+}

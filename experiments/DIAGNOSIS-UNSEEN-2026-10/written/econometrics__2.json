@@ -1,0 +1,54 @@
+{
+ "questions": [
+  {
+   "question": "In a distributed lag model $Y_t = \\alpha + \\beta_0 X_t + \\beta_1 X_{t-1} + \\dots + u_t$ where lag weights decay geometrically ($\\beta_k = \\beta_0 \\lambda^k$ with $0 < \\lambda < 1$), applying the Koyck transformation produces $Y_t = \\alpha(1-\\lambda) + \\lambda Y_{t-1} + \\beta_0 X_t + v_t$. What is the primary econometric problem created by this transformation?",
+   "options": [
+    "The composite error term becomes $v_t = u_t - \\lambda u_{t-1}$, which is correlated with the regressor $Y_{t-1}$, rendering OLS inconsistent.",
+    "The error term $v_t$ exhibits pure heteroskedasticity proportional to $X_t$, rendering OLS biased but consistent.",
+    "The transformation induces exact multicollinearity between $Y_{t-1}$ and $X_t$, making OLS non-estimable.",
+    "The error term $v_t$ becomes completely deterministic, violating the zero conditional mean assumption."
+   ],
+   "answer": "A"
+  },
+  {
+   "question": "When nonparametrically estimating a conditional expectation $E[Y|X=x]$, how does local linear regression compare to the standard Nadaraya-Watson (local constant) kernel estimator near the boundaries of the support of $X$?",
+   "options": [
+    "Local linear regression exhibits boundary bias of order $O(h)$, whereas Nadaraya-Watson achieves $O(h^2)$ bias automatically.",
+    "Both estimators suffer equally from $O(h)$ boundary bias, but local linear regression has lower asymptotic variance.",
+    "Nadaraya-Watson exhibits $O(h)$ boundary bias, whereas local linear regression automatically adapts at boundaries to maintain $O(h^2)$ bias.",
+    "Local linear regression requires the bandwidth $h \\to \\infty$ near boundaries, converting it into a global linear model."
+   ],
+   "answer": "C"
+  },
+  {
+   "question": "In Maximum Likelihood Estimation (MLE) under standard regularity conditions and correct model specification, what does the Information Matrix Equality establish regarding the Fisher Information Matrix $I(\\theta)$?",
+   "options": [
+    "$I(\\theta) = E\\left[\\frac{\\partial^2 \\ln L}{\\partial \\theta \\partial \\theta'}\\right] = -E\\left[\\left(\\frac{\\partial \\ln L}{\\partial \\theta}\\right)\\left(\\frac{\\partial \\ln L}{\\partial \\theta}\\right)'\\right]$",
+    "$I(\\theta) = \\text{Var}\\left(\\frac{\\partial^2 \\ln L}{\\partial \\theta \\partial \\theta'}\\right) + E\\left[\\frac{\\partial \\ln L}{\\partial \\theta}\\right]$",
+    "$I(\\theta) = \\left(E\\left[\\frac{\\partial \\ln L}{\\partial \\theta}\\right]\\right)^{-1}$",
+    "$I(\\theta) = -E\\left[\\frac{\\partial^2 \\ln L}{\\partial \\theta \\partial \\theta'}\\right] = E\\left[\\left(\\frac{\\partial \\ln L}{\\partial \\theta}\\right)\\left(\\frac{\\partial \\ln L}{\\partial \\theta}\\right)'\\right]$"
+   ],
+   "answer": "D"
+  },
+  {
+   "question": "Suppose the true data generating process is $Y = \\beta_0 + \\beta_1 X_1 + \\beta_2 X_2 + u$, where $E[u|X_1, X_2] = 0$. If an researcher omits $X_2$ and estimates $Y = \\alpha_0 + \\alpha_1 X_1 + e$ via OLS, what is the probability limit of the estimator $\\hat{\\alpha}_1$?",
+   "options": [
+    "\\text{plim } \\hat{\\alpha}_1 = \\beta_1 + \\beta_2 \\frac{\\text{Cov}(X_1, X_2)}{\\text{Var}(X_2)}",
+    "\\text{plim } \\hat{\\alpha}_1 = \\beta_1 + \\beta_2 \\frac{\\text{Cov}(X_1, X_2)}{\\text{Var}(X_1)}",
+    "\\text{plim } \\hat{\\alpha}_1 = \\beta_1 - \\beta_2 \\frac{\\text{Cov}(X_1, X_2)}{\\text{Var}(X_1)}",
+    "\\text{plim } \\hat{\\alpha}_1 = \\beta_1 \\cdot \\frac{\\text{Cov}(X_1, X_2)}{\\text{Var}(X_1)} + \\beta_2"
+   ],
+   "answer": "B"
+  },
+  {
+   "question": "In Instrumental Variables (IV) / Generalized Method of Moments (GMM) estimation with $L$ instruments and $K$ endogenous regressors ($L > K$), what is the null hypothesis ($H_0$) and asymptotic distribution of Hansen's $J$-statistic?",
+   "options": [
+    "$H_0$: All $L$ instruments are invalid; $J \\sim \\chi^2(L + K)$",
+    "$H_0$: At least one instrument is valid; $J \\sim \\chi^2(K)$",
+    "$H_0$: All $L$ moment conditions are valid (instruments are exogenous); $J \\sim \\chi^2(L - K)$",
+    "$H_0$: The endogenous regressors are actually exogenous; $J \\sim F(L-K, N-L)$"
+   ],
+   "answer": "C"
+  }
+ ]
+}

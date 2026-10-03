@@ -1,0 +1,54 @@
+{
+ "questions": [
+  {
+   "question": "In a panel data model $y_{it} = \\beta x_{it} + \\alpha_i + u_{it}$ with $T > 2$, which of the following statements correctly describes the relative efficiency of the Fixed Effects (FE) and First-Difference (FD) estimators under different serial correlation structures of the idiosyncratic error $u_{it}$?",
+   "options": [
+    "FE is always strictly more efficient than FD regardless of the error structure because FE uses all time periods simultaneously.",
+    "If the idiosyncratic error $u_{it}$ is serially uncorrelated (i.i.d.), FE is more efficient than FD; however, if $u_{it}$ follows a random walk, FD is more efficient than FE.",
+    "FD is always preferred over FE when $N$ is small and $T$ is large because FD completely eliminates $x_{it}$ collinearity.",
+    "Both estimators yield identical numerical estimates for any $T \\ge 2$, regardless of the autocorrelation in $u_{it}$."
+   ],
+   "answer": "B"
+  },
+  {
+   "question": "Consider a Generalized Method of Moments (GMM) model with $K$ parameters to be estimated and $L$ moment conditions, where $L > K$. What are the null hypothesis and asymptotic distribution of Hansen's $J$-test for overidentifying restrictions?",
+   "options": [
+    "$H_0$: The instruments are correlated with the structural errors; the test statistic follows a $\\chi^2(L + K)$ distribution.",
+    "$H_0$: The structural parameters are jointly zero; the test statistic follows an $F(K, L-K)$ distribution.",
+    "$H_0$: All moment conditions are correctly specified (valid instruments); the test statistic follows a $\\chi^2(L - K)$ distribution.",
+    "$H_0$: The structural errors are homoskedastic; the test statistic follows a $t$-distribution with $L-K$ degrees of freedom."
+   ],
+   "answer": "C"
+  },
+  {
+   "question": "In the Heckman two-step correction method for sample selection bias, how is the Inverse Mills Ratio incorporated, and what does a statistically significant coefficient on this variable in the second stage indicate?",
+   "options": [
+    "It is used as an instrument in a second-stage 2SLS regression; significance indicates that the selection equation is overidentified.",
+    "It replaces the structural dependent variable in the second step; significance indicates that the outcome equation exhibits heteroskedasticity.",
+    "It is subtracted from the sample variance; significance indicates that the selection bias has been fully eliminated.",
+    "It is included as an additional regressor in the second-stage outcome equation; significance indicates a non-zero correlation between unobservables in the selection and outcome equations, confirming selection bias."
+   ],
+   "answer": "D"
+  },
+  {
+   "question": "When estimating a linear model with a single endogenous regressor using Instrumental Variables (IV / 2SLS), what is a major consequence of weak instruments, and what standard diagnostic rule of thumb is used to evaluate instrument strength?",
+   "options": [
+    "Weak instruments can bias 2SLS estimates toward OLS estimates and distort inference; a common diagnostic rule is checking whether the first-stage $F$-statistic exceeds 10.",
+    "Weak instruments decrease the standard errors of 2SLS estimates; a common diagnostic rule is checking whether the Sargan $J$-statistic exceeds 10.",
+    "Weak instruments lead to perfect multicollinearity among exogenous regressors; a common diagnostic rule is checking whether the variance inflation factor (VIF) is below 5.",
+    "Weak instruments render the IV estimator inconsistent as $N \\to \\infty$; a common diagnostic rule is checking whether the Durbin-Watson statistic is close to 2.0."
+   ],
+   "answer": "A"
+  },
+  {
+   "question": "In time series econometrics, the Johansen procedure tests for cointegration among $n$ non-stationary $I(1)$ series using a Vector Error Correction Model (VECM). What are the null and alternative hypotheses for the Johansen Maximum Eigenvalue test when evaluating a cointegrating rank $r_0$?",
+   "options": [
+    "$H_0: r = r_0$ versus $H_1: r = r_0 + 1$",
+    "$H_0: r \\le r_0$ versus $H_1: r > r_0$",
+    "$H_0: r = 0$ versus $H_1: r = n$",
+    "$H_0: r \\ge r_0$ versus $H_1: r < r_0$"
+   ],
+   "answer": "A"
+  }
+ ]
+}

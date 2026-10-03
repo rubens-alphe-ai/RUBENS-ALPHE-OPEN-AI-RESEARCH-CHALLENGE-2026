@@ -1,0 +1,54 @@
+{
+ "questions": [
+  {
+   "question": "In a Support Vector Machine using a Radial Basis Function (RBF) kernel K(x, x') = exp(-γ ||x - x'||²), how does increasing the hyperparameter γ affect the model's decision boundary and bias-variance tradeoff?",
+   "options": [
+    "It forces the decision boundary to become strictly linear, maximizing the margin.",
+    "It makes the decision boundary more complex and localized, decreasing bias and increasing variance.",
+    "It smoothes the decision boundary, increasing bias and decreasing variance.",
+    "It increases the margin width, reducing the total number of support vectors selected."
+   ],
+   "answer": "B"
+  },
+  {
+   "question": "In Low-Rank Adaptation (LoRA) for parameter-efficient fine-tuning of large language models, how is a pre-trained weight matrix W₀ ∈ ℝ^(d × k) updated during training?",
+   "options": [
+    "W₀ is completely re-initialized and factorized into two low-rank matrices using Singular Value Decomposition before full gradient updates.",
+    "Sparse gradient masks are applied to W₀, setting (1-p)% of its parameters to zero while fine-tuning the remaining non-zero weights.",
+    "W₀ remains frozen, and the weight update ΔW is modeled as the product of two trainable low-rank matrices B ∈ ℝ^(d × r) and A ∈ ℝ^(r × k), where r ≪ min(d, k).",
+    "W₀ is projected into a lower-dimensional subspace via a fixed random orthogonal matrix, where standard SGD optimization is performed."
+   ],
+   "answer": "C"
+  },
+  {
+   "question": "When using Mutual Information I(X; Y) for feature selection in machine learning, which of the following statements best describes its primary advantage over Pearson's correlation coefficient?",
+   "options": [
+    "Mutual Information captures both linear and non-linear statistical dependencies between variables, whereas Pearson's correlation measures only linear relationships.",
+    "Mutual Information is strictly bounded between -1 and 1, making threshold selection invariant to feature scaling.",
+    "Mutual Information relies on parametric assumptions that X and Y follow a joint Gaussian distribution.",
+    "Mutual Information guarantees that selecting the top k individual features yields the globally optimal feature subset without information redundancy."
+   ],
+   "answer": "A"
+  },
+  {
+   "question": "In the context of deep generative modeling, what fundamental properties must a transformation function f: ℝ^d → ℝ^d satisfy to serve as a valid layer in a Normalizing Flow?",
+   "options": [
+    "f must be a non-invertible projection to compress high-dimensional input features down to a latent manifold.",
+    "f must be an isometric linear operator that preserves Euclidean distance across transformations.",
+    "f must map continuous input distributions directly into a discrete empirical probability mass function.",
+    "f must be bijective (invertible) and differentiable, with a computationally tractable Jacobian determinant."
+   ],
+   "answer": "D"
+  },
+  {
+   "question": "In anomaly detection, how does Schölkopf's One-Class Support Vector Machine (One-Class SVM) formulate its optimization problem in the kernel feature space?",
+   "options": [
+    "It constructs a maximum-margin hyperplane that separates the normal training data points from the origin in the kernel-defined feature space.",
+    "It generates synthetic uniform noise to serve as explicit negative class samples for standard binary classification.",
+    "It computes the minimum enclosing hypersphere around the mean vector and marks all points outside as anomalous.",
+    "It fits a multivariate Gaussian mixture to the data and applies thresholding based on Mahalanobis distance."
+   ],
+   "answer": "A"
+  }
+ ]
+}

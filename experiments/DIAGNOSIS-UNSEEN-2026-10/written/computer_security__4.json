@@ -1,0 +1,54 @@
+{
+ "questions": [
+  {
+   "question": "In WPA3-Personal, which key exchange mechanism replaces the WPA2 Pre-Shared Key (PSK) 4-way handshake to prevent offline dictionary attacks?",
+   "options": [
+    "Simultaneous Authentication of Equals (SAE)",
+    "Extensible Authentication Protocol (EAP-TLS)",
+    "Temporal Key Integrity Protocol (TKIP)",
+    "Elliptic Curve Diffie-Hellman Ephemeral with Preshared Key (ECDHE-PSK)"
+   ],
+   "answer": "A"
+  },
+  {
+   "question": "Which of the following best describes a 'virtual machine escape' attack in a cloud virtualization environment?",
+   "options": [
+    "An attacker spoofs a hypervisor migration protocol to clone a running VM instance to an unauthorized physical server.",
+    "An attacker gains root privileges on a guest OS and uses it to sniff virtual switch traffic bound for adjacent VMs.",
+    "An attacker executes code within a guest virtual machine that exploits a vulnerability in the hypervisor to execute arbitrary code on the host operating system.",
+    "An attacker bypasses virtual firewalls by encapsulating malicious payload data within legitimate HTTP/2 streams."
+   ],
+   "answer": "C"
+  },
+  {
+   "question": "An application receives an XML payload containing `<!DOCTYPE foo [ <!ENTITY xxe SYSTEM \"file:///etc/passwd\"> ]>`. Which parser configuration is the most effective primary mitigation against this XML External Entity (XXE) vulnerability?",
+   "options": [
+    "Sanitizing the incoming payload using a URL-encoding filter before parsing.",
+    "Restricting file system permissions on `/etc/passwd` so the application process cannot read it.",
+    "Validating the incoming XML payload against a pre-compiled XML Schema Definition (XSD).",
+    "Completely disabling Document Type Definitions (DTDs) or external entity resolution in the XML parser configuration."
+   ],
+   "answer": "D"
+  },
+  {
+   "question": "In a Zero Trust Architecture (ZTA) complying with NIST SP 800-207, what is the primary responsiblity of the Policy Enforcement Point (PEP)?",
+   "options": [
+    "It serves as the authoritative identity provider that issues OAuth2 tokens to authenticated users.",
+    "It directly enables, monitors, and terminates the connection between a subject and an enterprise resource based on commands from the Policy Administrator.",
+    "It evaluates business rules and threat intelligence to generate the final grant-or-deny decision.",
+    "It dynamically calculates real-time risk scores for continuous user evaluation using machine learning models."
+   ],
+   "answer": "B"
+  },
+  {
+   "question": "How does the WebAuthn standard (a core component of FIDO2) inherently provide protection against credential phishing attacks during user authentication?",
+   "options": [
+    "By encrypting the user's master password using a client-side public key before transmitting it over TLS.",
+    "By embedding a time-based dynamic OTP algorithm directly into the browser's network stack.",
+    "By cryptographically binding the generated assertion signature to the verified origin (domain name) of the relying party.",
+    "By enforcing a mandatory biometric scan that cannot be converted to digital tokens or relayed over intermediaries."
+   ],
+   "answer": "C"
+  }
+ ]
+}

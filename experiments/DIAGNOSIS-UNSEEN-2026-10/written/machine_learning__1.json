@@ -1,0 +1,54 @@
+{
+ "questions": [
+  {
+   "question": "In Factorization Machines (FMs), how is the computational complexity of evaluating all pairwise feature interactions reduced from $O(k d^2)$ to $O(k d)$, where $d$ is the number of features and $k$ is the dimensionality of the factorized vectors?",
+   "options": [
+    "By assuming that feature interaction vectors are sparse and setting higher-order terms to zero.",
+    "By reformulating the sum of pairwise dot products using an algebraic identity that computes the square of sums minus the sum of squares.",
+    "By projecting the input features into a low-dimensional space using Principal Component Analysis prior to calculating interactions.",
+    "By enforcing strict orthogonality constraints on the latent factor matrix during optimization."
+   ],
+   "answer": "B"
+  },
+  {
+   "question": "In Gaussian Process Regression with kernel function $K$, noise variance $\\sigma_n^2$, and training data inputs $X$, what is the correct analytical expression for the predictive variance at a single unseen test point $\\mathbf{x}_*$?",
+   "options": [
+    "$\\text{Var}(f_*) = K(\\mathbf{x}_*, \\mathbf{x}_*) - \\mathbf{k}_*^T (K(X, X) + \\sigma_n^2 I)^{-1} \\mathbf{k}_*$",
+    "$\\text{Var}(f_*) = K(\\mathbf{x}_*, \\mathbf{x}_*) + \\mathbf{k}_*^T (K(X, X) - \\sigma_n^2 I)^{-1} \\mathbf{k}_*$",
+    "$\\text{Var}(f_*) = \\mathbf{k}_*^T K(X, X)^{-1} \\mathbf{k}_* + \\sigma_n^2$",
+    "$\\text{Var}(f_*) = K(\\mathbf{x}_*, \\mathbf{x}_*) - \\mathbf{k}_*^T K(X,X)^{-1} \\mathbf{k}_* + \\sigma_n^2 I$"
+   ],
+   "answer": "A"
+  },
+  {
+   "question": "Which dynamic programming algorithm is used to find the single most likely sequence of hidden states (the MAP state sequence) given an observation sequence in a Hidden Markov Model (HMM)?",
+   "options": [
+    "The Forward algorithm",
+    "The Baum-Welch algorithm",
+    "The Viterbi algorithm",
+    "The Backward algorithm"
+   ],
+   "answer": "C"
+  },
+  {
+   "question": "In the Isolation Forest algorithm for anomaly detection, why do anomalous data points typically exhibit significantly shorter average path lengths in the isolation trees compared to normal points?",
+   "options": [
+    "Anomalies have a higher local density, causing them to be isolated into leaf nodes earlier.",
+    "Anomalies are few in number and possess attribute values distinct from normal points, requiring fewer random recursive splits to be isolated.",
+    "Isolation trees utilize Euclidean distance metrics to explicitly isolate distant points at shallow tree depths.",
+    "Anomalies are systematically partitioned into root nodes during the supervised training phase."
+   ],
+   "answer": "B"
+  },
+  {
+   "question": "How does the Jensen-Shannon (JS) divergence differ fundamentally from the standard Kullback-Leibler (KL) divergence between two probability distributions $P$ and $Q$?",
+   "options": [
+    "JS divergence is asymmetric, whereas KL divergence is symmetric.",
+    "JS divergence can take negative values when distributions overlap significantly, whereas KL divergence is strictly non-negative.",
+    "JS divergence is valid only for discrete probability distributions, whereas KL divergence applies only to continuous distributions.",
+    "JS divergence is symmetric and bounded between 0 and 1 (when using base-2 logarithm), whereas KL divergence is asymmetric and unbounded."
+   ],
+   "answer": "D"
+  }
+ ]
+}

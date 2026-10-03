@@ -1,0 +1,54 @@
+{
+ "questions": [
+  {
+   "question": "Under the null hypothesis ($H_0$) of the Hausman specification test comparing Fixed Effects (FE) and Random Effects (RE) panel data estimators, which of the following statements is correct?",
+   "options": [
+    "Both FE and RE estimators are consistent, but the RE estimator is asymptotically efficient.",
+    "Only the FE estimator is consistent, while the RE estimator is inconsistent.",
+    "Both FE and RE estimators are inconsistent due to unobserved heterogeneity.",
+    "The RE estimator is consistent and efficient, but the FE estimator is inconsistent."
+   ],
+   "answer": "A"
+  },
+  {
+   "question": "In a binary probit model $P(Y=1|X) = \\Phi(X\\beta)$, where $\\Phi(\\cdot)$ is the standard normal cumulative distribution function, how is the marginal effect of a continuous regressor $X_j$ calculated?",
+   "options": [
+    "It is constant and equal to the coefficient $\\beta_j$.",
+    "It is given by $\\phi(X\\beta)\\beta_j$, where $\\phi(\\cdot)$ is the standard normal probability density function.",
+    "It is equal to $\\ln(\\beta_j) \\Phi(X\\beta)$ and is restricted to be positive.",
+    "It is calculated as $\\Phi(\\beta_j)$ and does not depend on the values of the other regressors."
+   ],
+   "answer": "B"
+  },
+  {
+   "question": "Unlike Ordinary Least Squares (OLS) which minimizes the sum of squared residuals, linear Quantile Regression for the $\\tau$-th conditional quantile (where $\\tau \\in (0,1)$) estimates parameters by minimizing which objective function?",
+   "options": [
+    "\\sum_{i=1}^n (y_i - x_i'\\beta)^2 \\cdot \\tau",
+    "\\sum_{i=1}^n |y_i - x_i'\\beta|^\\tau",
+    "\\sum_{i=1}^n \\rho_\\tau(y_i - x_i'\\beta), \\text{ where } \\rho_\\tau(u) = u(\\tau - \\mathbb{I}(u < 0)) \\text{ is the check loss function}",
+    "\\sum_{i=1}^n \\ln(1 + e^{\\tau(y_i - x_i'\\beta)})"
+   ],
+   "answer": "C"
+  },
+  {
+   "question": "Consider a standard Type I Tobit model $y_i^* = x_i'\\beta + \\varepsilon_i$ with $y_i = \\max(0, y_i^*)$. If an economist estimates this model using Ordinary Least Squares (OLS) on the full sample (including zero values), what is the statistical consequence on the resulting parameter estimates?",
+   "options": [
+    "The estimates remain unbiased and consistent, but standard errors are underestimated.",
+    "The estimates remain unbiased, but suffer from extreme variance inflation.",
+    "The estimates are consistent only if the proportion of zero observations exceeds 50%.",
+    "The estimates are biased and attenuated toward zero due to sample censoring."
+   ],
+   "answer": "D"
+  },
+  {
+   "question": "In Vector Autoregression (VAR) analysis, applying a recursive identification scheme via Cholesky decomposition of the error covariance matrix implies which of the following?",
+   "options": [
+    "The contemporaneous matrix of structural interactions is lower triangular, making the ordering of variables in the VAR system consequential for impulse response functions.",
+    "All variables in the system affect each other contemporaneously with equal magnitude.",
+    "Long-run restrictions are automatically imposed such that all shocks have strictly transitory effects.",
+    "The reduced-form errors across all equations are assumed to be uncorrelated without requiring structural assumptions."
+   ],
+   "answer": "A"
+  }
+ ]
+}

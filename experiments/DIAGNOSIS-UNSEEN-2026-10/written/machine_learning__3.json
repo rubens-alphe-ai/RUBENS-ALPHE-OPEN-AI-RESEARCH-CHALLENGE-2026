@@ -1,0 +1,54 @@
+{
+ "questions": [
+  {
+   "question": "In Probably Approximately Correct (PAC) learning for a finite hypothesis space $H$, how does the required sample complexity $m$ scale with respect to the error parameter $\\epsilon$ and the confidence parameter $\\delta$?",
+   "options": [
+    "Logarithmically with $1/\\epsilon$ and linearly with $1/\\delta$",
+    "Linearly with $1/\\epsilon$ and logarithmically with $1/\\delta$",
+    "Quadratically with $1/\\epsilon$ and exponentially with $1/\\delta$",
+    "Linearly with both $1/\\epsilon$ and $1/\\delta$"
+   ],
+   "answer": "B"
+  },
+  {
+   "question": "In Reinforcement Learning, what is a key algorithmic difference between model-free Temporal Difference learning (TD(0)) and Monte Carlo (MC) methods for policy evaluation?",
+   "options": [
+    "TD(0) updates value estimates after every step using bootstrapping, whereas MC methods wait until the end of an episode to update based on the full cumulative return.",
+    "MC methods rely on explicit knowledge of state transition probabilities, whereas TD(0) learns directly from sampled experience.",
+    "TD(0) produces unbiased value estimates with high variance, whereas MC methods produce biased estimates with lower variance.",
+    "MC methods can only be applied to continuing non-episodic tasks, whereas TD(0) requires episodic tasks with defined terminal states."
+   ],
+   "answer": "A"
+  },
+  {
+   "question": "In a soft-margin Support Vector Machine (SVM) classifier, what is the effect of setting a very large value for the regularization hyperparameter $C$?",
+   "options": [
+    "It widens the decision margin and increases tolerance for misclassified training points.",
+    "It applies strong L2 regularization to the weight vector, forcing all weights closer to zero.",
+    "It heavily penalizes slack variables, resulting in a narrower margin and a higher risk of overfitting to the training data.",
+    "It transforms the objective into an unconstrained optimization problem equivalent to standard linear regression."
+   ],
+   "answer": "C"
+  },
+  {
+   "question": "In t-Distributed Stochastic Neighbor Embedding (t-SNE), what primary issue does using a heavy-tailed Student-t distribution (with 1 degree of freedom) in the low-dimensional map space address?",
+   "options": [
+    "Non-convexity of the Kullback-Leibler divergence objective function.",
+    "High computational complexity of calculating pairwise high-dimensional probabilities.",
+    "Vanishing gradients during the early-exaggeration optimization phase.",
+    "The 'crowding problem,' where moderate distances in high dimensions cannot be preserved in low dimensions without collapsing distinct clusters together."
+   ],
+   "answer": "D"
+  },
+  {
+   "question": "When applying Principal Component Analysis (PCA) to a mean-centered dataset $X$ of shape $n \\times p$, how are the principal component directions (loadings) related to the Singular Value Decomposition (SVD) $X = U \\Sigma V^T$?",
+   "options": [
+    "The principal component directions correspond to the right singular vectors (columns of $V$).",
+    "The principal component directions correspond to the left singular vectors (columns of $U$).",
+    "The principal component directions correspond to the non-zero singular values on the diagonal of $\\Sigma$.",
+    "The principal component directions correspond to the inverted covariance matrix $U \\Sigma^{-1} V^T$."
+   ],
+   "answer": "A"
+  }
+ ]
+}

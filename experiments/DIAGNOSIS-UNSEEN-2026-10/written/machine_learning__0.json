@@ -1,0 +1,54 @@
+{
+ "questions": [
+  {
+   "question": "In standard AdaBoost for binary classification with labels y_i ∈ {-1, +1}, how are the unnormalized sample weights w_i updated at iteration t after selecting a weak classifier h_t(x) with weighted error ε_t and weight coefficient α_t = 0.5 * ln((1 - ε_t) / ε_t)?",
+   "options": [
+    "w_i^{(t+1)} = w_i^{(t)} * exp(-α_t * y_i * h_t(x_i))",
+    "w_i^{(t+1)} = w_i^{(t)} * exp(α_t * y_i * h_t(x_i))",
+    "w_i^{(t+1)} = w_i^{(t)} * (1 - α_t * y_i * h_t(x_i))",
+    "w_i^{(t+1)} = w_i^{(t)} * (ε_t / (1 - ε_t)) * y_i * h_t(x_i)"
+   ],
+   "answer": "A"
+  },
+  {
+   "question": "In the context of the Bias-Variance decomposition for mean squared error (MSE) where y = f(x) + ε with noise ε ~ N(0, σ^2), what happens to the irreducible error term as model complexity increases?",
+   "options": [
+    "It decreases asymptotically towards zero.",
+    "It increases proportionally to the variance of the model.",
+    "It remains constant because it depends solely on the noise in the true data generating process.",
+    "It fluctuates depending on whether regularization is applied."
+   ],
+   "answer": "C"
+  },
+  {
+   "question": "Why is nested cross-validation preferred over standard (single-loop) cross-validation when evaluating a model that also requires hyperparameter tuning?",
+   "options": [
+    "Standard cross-validation can only be applied to linear models.",
+    "Nested cross-validation guarantees that the training set size remains equal to the original dataset size.",
+    "Standard cross-validation eliminates model variance completely, leading to underestimation of uncertainty.",
+    "Standard cross-validation yields optimistically biased performance estimates because hyperparameter tuning leaks test-fold information into model selection."
+   ],
+   "answer": "D"
+  },
+  {
+   "question": "A node in a binary decision tree contains 10 training samples: 7 belong to Class 1 and 3 belong to Class 2. What is the Gini impurity of this node?",
+   "options": [
+    "0.21",
+    "0.42",
+    "0.50",
+    "0.58"
+   ],
+   "answer": "B"
+  },
+  {
+   "question": "In the Expectation-Maximization (EM) algorithm applied to Gaussian Mixture Models, which operation takes place specifically during the Maximization (M) step?",
+   "options": [
+    "Parameters (means, covariances, mixing coefficients) are updated by maximizing the expected log-likelihood calculated in the E-step.",
+    "Posterior probabilities (responsibilities) for latent cluster assignments are calculated using current parameter estimates.",
+    "The number of mixture components K is dynamically adjusted to maximize the Bayesian Information Criterion.",
+    "The complete-data log-likelihood is lowered to guarantee monotonic algorithm convergence."
+   ],
+   "answer": "A"
+  }
+ ]
+}

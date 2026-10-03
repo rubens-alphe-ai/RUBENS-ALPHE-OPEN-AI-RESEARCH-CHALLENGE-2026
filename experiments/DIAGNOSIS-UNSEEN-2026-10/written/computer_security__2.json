@@ -1,0 +1,54 @@
+{
+ "questions": [
+  {
+   "question": "In a standard Kerberos v5 authentication protocol exchange, what is the primary role of the Ticket Granting Service (TGS)?",
+   "options": [
+    "To authenticate the user's initial login credentials and issue the Ticket Granting Ticket (TGT).",
+    "To issue service tickets to authenticated clients requesting access to specific application servers.",
+    "To store and synchronize the master database of user password hashes across all domain controllers.",
+    "To validate digital certificates against a central Certificate Revocation List (CRL)."
+   ],
+   "answer": "B"
+  },
+  {
+   "question": "A web security analyst discovers a Local File Inclusion (LFI) vulnerability in an application where file uploads are disabled. Which technique can be leveraged to escalate this LFI to Remote Code Execution (RCE)?",
+   "options": [
+    "Injecting executable PHP code into the User-Agent header and including the server's access log file.",
+    "Executing a UNION-based SQL injection to dump the database user table containing password hashes.",
+    "Sending a crafted HTTP POST request containing directory traversal sequences appended to the query string.",
+    "Exploiting a cross-origin resource sharing (CORS) misconfiguration to extract the server's private key."
+   ],
+   "answer": "A"
+  },
+  {
+   "question": "Why is HMAC (Hash-based Message Authentication Code) resistant to length extension attacks that affect simple secret-prefix MAC constructions like H(k || m) when using Merkle-Dåmgård hash functions?",
+   "options": [
+    "HMAC encrypts the output digest using an asymmetric key pair before transmission.",
+    "HMAC truncates the hash output to half its size, removing the state required to extend the message.",
+    "HMAC uses a nested structure involving two calls to the hash function with differently padded derived keys: H(K_out || H(K_in || m)).",
+    "HMAC replaces the underlying cryptographic hash function with a non-linear block cipher in Cipher Block Chaining mode."
+   ],
+   "answer": "C"
+  },
+  {
+   "question": "In Galois/Counter Mode (AES-GCM) authenticated encryption, what severe cryptographic failure occurs if an attacker observes two distinct ciphertexts encrypted with the same key and Initialization Vector (IV/nonce)?",
+   "options": [
+    "The attacker can derive the GHASH authentication key, enabling ciphertext forgery and loss of integrity guarantees.",
+    "The AES master key is immediately exposed due to polynomial factorization of the cipher state.",
+    "The cipher gracefully degrades to Cipher Block Chaining (CBC) mode, preserving confidentiality.",
+    "The recipient's decryption routine fails, triggering an unhandled system crash and denial of service."
+   ],
+   "answer": "A"
+  },
+  {
+   "question": "What specific vulnerability in public OAuth 2.0 clients (such as native mobile applications) does the Proof Key for Code Exchange (PKCE) extension address?",
+   "options": [
+    "Server-Side Request Forgery (SSRF) against the client application's backend API.",
+    "Brute-force password spraying attacks against the authorization server's endpoint.",
+    "Man-in-the-Middle (MitM) packet manipulation on TLS-encrypted backchannel communications.",
+    "Authorization code interception attacks where a malicious app registers a custom URI scheme to hijack incoming codes."
+   ],
+   "answer": "D"
+  }
+ ]
+}

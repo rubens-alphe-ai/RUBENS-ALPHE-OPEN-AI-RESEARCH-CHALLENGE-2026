@@ -1,0 +1,54 @@
+{
+ "questions": [
+  {
+   "question": "In time series econometrics, the Augmented Dickey-Fuller (ADF) test and the Kwiatkowski-Phillips-Schmidt-Shin (KPSS) test are commonly used together to test for stationarity. What are the null hypotheses for these two tests?",
+   "options": [
+    "ADF: $H_0$ is stationarity; KPSS: $H_0$ is unit root",
+    "ADF: $H_0$ is unit root; KPSS: $H_0$ is stationarity",
+    "ADF: $H_0$ is no autocorrelation; KPSS: $H_0$ is unit root",
+    "ADF: $H_0$ is unit root; KPSS: $H_0$ is structural break"
+   ],
+   "answer": "B"
+  },
+  {
+   "question": "Suppose you are modeling two non-stationary $I(1)$ macro time series variables, $Y_t$ and $X_t$. Under what condition is a Vector Error Correction Model (VECM) appropriate instead of a standard Vector Autoregression (VAR) in first differences?",
+   "options": [
+    "When $Y_t$ and $X_t$ are cointegrated, meaning a linear combination of them is stationary $I(0)$",
+    "When $Y_t$ and $X_t$ exhibit conditional heteroskedasticity following a GARCH process",
+    "When $Y_t$ and $X_t$ are stationary in levels and have zero mean",
+    "When the lag length selected by the Akaike Information Criterion (AIC) is zero"
+   ],
+   "answer": "A"
+  },
+  {
+   "question": "In Instrumental Variables (IV) estimation, what is the primary consequence of relying on 'weak instruments' (instruments that have a very low correlation with the endogenous regressor)?",
+   "options": [
+    "The 2SLS estimator becomes strictly unbiased, but its standard errors shrink to zero",
+    "The first-stage regression $R^2$ approaches 1, causing severe collinearity",
+    "The 2SLS estimator can be heavily biased toward the OLS estimator, and standard asymptotic confidence intervals become highly unreliable",
+    "The standard errors of the 2SLS estimates automatically adjust to follow an exact finite-sample Student's t distribution"
+   ],
+   "answer": "C"
+  },
+  {
+   "question": "Consider a standard GARCH(1,1) process for return residuals: $\\sigma_t^2 = \\omega + \\alpha \\epsilon_{t-1}^2 + \\beta \\sigma_{t-1}^2$, where $\\omega > 0, \\alpha \\ge 0, \\beta \\ge 0$. What is the condition required for this GARCH process to be covariance stationary?",
+   "options": [
+    "\\alpha + \\beta > 1",
+    "\\alpha = \\beta",
+    "\\alpha + \\beta = 1",
+    "\\alpha + \\beta < 1"
+   ],
+   "answer": "D"
+  },
+  {
+   "question": "In panel data analysis, how does the 'Within Estimator' (Fixed Effects) eliminate time-invariant unobserved individual heterogeneity ($c_i$)?",
+   "options": [
+    "By regressing pooled cross-sections on individual-specific time trends",
+    "By instrumenting the individual effects using group-level medians",
+    "By demeaning each variable by subtracting its individual-specific time average",
+    "By taking the log-differences of the variables across consecutive cross-sectional units"
+   ],
+   "answer": "C"
+  }
+ ]
+}

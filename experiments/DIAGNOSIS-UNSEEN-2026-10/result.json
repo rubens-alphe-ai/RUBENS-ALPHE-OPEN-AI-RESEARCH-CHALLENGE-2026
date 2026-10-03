@@ -1,0 +1,2763 @@
+{
+ "record_version": "RA-PSI-DIAGNOSIS-UNSEEN-V1",
+ "preregistration": "experiments/DIAGNOSIS-UNSEEN-2026-10/PREREGISTRATION.md",
+ "writer": "google/gemini-3.6-flash",
+ "solvers": [
+  "minimax/minimax-m3",
+  "qwen/qwen3.5-122b-a10b"
+ ],
+ "diagnoser": "deepseek/deepseek-v4.1-flash",
+ "scored_at_utc": "2026-10-03T17:52:24.377359+00:00",
+ "written": 466,
+ "clean": 428,
+ "sample": 300,
+ "planted": 60,
+ "base_rate": 0.2,
+ "U1_precision_of_KEY_WRONG": {
+  "hits": 59,
+  "n": 59,
+  "rate": 1.0,
+  "interval_95": [
+   0.939,
+   1.0
+  ]
+ },
+ "U2_planted_errors_called_KEY_WRONG": {
+  "hits": 59,
+  "n": 60,
+  "rate": 0.983,
+  "interval_95": [
+   0.911,
+   0.997
+  ]
+ },
+ "U3_KEY_WRONG_on_clean_items": {
+  "hits": 0,
+  "n": 240,
+  "rate": 0.0,
+  "interval_95": [
+   0.0,
+   0.016
+  ]
+ },
+ "U4_correct_option_named_when_caught": {
+  "hits": 59,
+  "n": 59,
+  "rate": 1.0,
+  "interval_95": [
+   0.939,
+   1.0
+  ]
+ },
+ "no_verdict": 3,
+ "any_non_ok_on_clean_items": 0,
+ "exploratory_precision_at_flagged_prevalence_0_111": 1.0,
+ "predictions": {
+  "U1_precision_ge_0_40_and_lower_bound_above_0_20": "held",
+  "U2_recall_ge_0_50": "held",
+  "U3_false_key_wrong_on_clean_le_0_10": "held",
+  "U4_names_original_key_ge_0_80_when_caught": "held"
+ },
+ "items": [
+  {
+   "id": "anatomy-2-4",
+   "subject": "anatomy",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "nutrition-0-2",
+   "subject": "nutrition",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "anatomy-0-2",
+   "subject": "anatomy",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "high_school_statistics-0-2",
+   "subject": "high school statistics",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "college_chemistry-0-1",
+   "subject": "college chemistry",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "machine_learning-2-2",
+   "subject": "machine learning",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "econometrics-2-4",
+   "subject": "econometrics",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "medical_genetics-0-1",
+   "subject": "medical genetics",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "college_biology-1-2",
+   "subject": "college biology",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "nutrition-1-2",
+   "subject": "nutrition",
+   "planted": true,
+   "key": "B",
+   "original_key": "D",
+   "verdict": "KEY_WRONG",
+   "best_option": "D"
+  },
+  {
+   "id": "international_law-0-4",
+   "subject": "international law",
+   "planted": true,
+   "key": "D",
+   "original_key": "B",
+   "verdict": "KEY_WRONG",
+   "best_option": "B"
+  },
+  {
+   "id": "machine_learning-4-2",
+   "subject": "machine learning",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "econometrics-3-4",
+   "subject": "econometrics",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "astronomy-0-1",
+   "subject": "astronomy",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "anatomy-1-4",
+   "subject": "anatomy",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "philosophy-1-0",
+   "subject": "philosophy",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "jurisprudence-4-4",
+   "subject": "jurisprudence",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "high_school_statistics-4-3",
+   "subject": "high school statistics",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "professional_medicine-4-0",
+   "subject": "professional medicine",
+   "planted": true,
+   "key": "C",
+   "original_key": "B",
+   "verdict": "KEY_WRONG",
+   "best_option": "B"
+  },
+  {
+   "id": "college_biology-3-1",
+   "subject": "college biology",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "nutrition-2-4",
+   "subject": "nutrition",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "professional_medicine-0-2",
+   "subject": "professional medicine",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "college_biology-3-3",
+   "subject": "college biology",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "world_history-1-1",
+   "subject": "world history",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "machine_learning-3-4",
+   "subject": "machine learning",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "astronomy-1-0",
+   "subject": "astronomy",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "philosophy-2-0",
+   "subject": "philosophy",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "computer_security-1-0",
+   "subject": "computer security",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "medical_genetics-4-1",
+   "subject": "medical genetics",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "machine_learning-1-4",
+   "subject": "machine learning",
+   "planted": true,
+   "key": "B",
+   "original_key": "D",
+   "verdict": "KEY_WRONG",
+   "best_option": "D"
+  },
+  {
+   "id": "world_history-2-1",
+   "subject": "world history",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "computer_security-1-3",
+   "subject": "computer security",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "econometrics-4-2",
+   "subject": "econometrics",
+   "planted": true,
+   "key": "B",
+   "original_key": "C",
+   "verdict": "KEY_WRONG",
+   "best_option": "C"
+  },
+  {
+   "id": "high_school_statistics-0-3",
+   "subject": "high school statistics",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "nutrition-4-0",
+   "subject": "nutrition",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "electrical_engineering-4-4",
+   "subject": "electrical engineering",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "anatomy-3-3",
+   "subject": "anatomy",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "computer_security-3-4",
+   "subject": "computer security",
+   "planted": true,
+   "key": "A",
+   "original_key": "B",
+   "verdict": "KEY_WRONG",
+   "best_option": "B"
+  },
+  {
+   "id": "college_chemistry-4-4",
+   "subject": "college chemistry",
+   "planted": true,
+   "key": "B",
+   "original_key": "D",
+   "verdict": "KEY_WRONG",
+   "best_option": "D"
+  },
+  {
+   "id": "machine_learning-3-3",
+   "subject": "machine learning",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "philosophy-3-3",
+   "subject": "philosophy",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "professional_accounting-4-2",
+   "subject": "professional accounting",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "anatomy-3-4",
+   "subject": "anatomy",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "electrical_engineering-1-4",
+   "subject": "electrical engineering",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "jurisprudence-2-2",
+   "subject": "jurisprudence",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "high_school_statistics-2-3",
+   "subject": "high school statistics",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "anatomy-3-1",
+   "subject": "anatomy",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "college_physics-0-2",
+   "subject": "college physics",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "astronomy-4-1",
+   "subject": "astronomy",
+   "planted": true,
+   "key": "C",
+   "original_key": "B",
+   "verdict": "KEY_WRONG",
+   "best_option": "B"
+  },
+  {
+   "id": "philosophy-2-3",
+   "subject": "philosophy",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "electrical_engineering-2-1",
+   "subject": "electrical engineering",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "microeconomics-3-2",
+   "subject": "microeconomics",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "philosophy-4-3",
+   "subject": "philosophy",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "econometrics-3-0",
+   "subject": "econometrics",
+   "planted": true,
+   "key": "C",
+   "original_key": "A",
+   "verdict": "KEY_WRONG",
+   "best_option": "A"
+  },
+  {
+   "id": "econometrics-4-1",
+   "subject": "econometrics",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "jurisprudence-3-0",
+   "subject": "jurisprudence",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "computer_security-0-0",
+   "subject": "computer security",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "college_biology-3-2",
+   "subject": "college biology",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "machine_learning-4-3",
+   "subject": "machine learning",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "electrical_engineering-1-0",
+   "subject": "electrical engineering",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "international_law-2-3",
+   "subject": "international law",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "philosophy-0-3",
+   "subject": "philosophy",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "college_chemistry-0-3",
+   "subject": "college chemistry",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "electrical_engineering-0-0",
+   "subject": "electrical engineering",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "world_history-0-4",
+   "subject": "world history",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "college_physics-2-1",
+   "subject": "college physics",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "electrical_engineering-0-4",
+   "subject": "electrical engineering",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "computer_security-3-2",
+   "subject": "computer security",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "college_chemistry-4-3",
+   "subject": "college chemistry",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "college_biology-2-4",
+   "subject": "college biology",
+   "planted": true,
+   "key": "A",
+   "original_key": "C",
+   "verdict": "KEY_WRONG",
+   "best_option": "C"
+  },
+  {
+   "id": "professional_accounting-1-4",
+   "subject": "professional accounting",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "medical_genetics-2-1",
+   "subject": "medical genetics",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "professional_medicine-0-0",
+   "subject": "professional medicine",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "medical_genetics-2-3",
+   "subject": "medical genetics",
+   "planted": true,
+   "key": "B",
+   "original_key": "D",
+   "verdict": "KEY_WRONG",
+   "best_option": "D"
+  },
+  {
+   "id": "astronomy-3-3",
+   "subject": "astronomy",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "machine_learning-4-0",
+   "subject": "machine learning",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "college_chemistry-4-0",
+   "subject": "college chemistry",
+   "planted": true,
+   "key": "B",
+   "original_key": "D",
+   "verdict": "KEY_WRONG",
+   "best_option": "D"
+  },
+  {
+   "id": "international_law-4-3",
+   "subject": "international law",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "anatomy-0-4",
+   "subject": "anatomy",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "professional_accounting-0-4",
+   "subject": "professional accounting",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "anatomy-3-0",
+   "subject": "anatomy",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "professional_medicine-3-0",
+   "subject": "professional medicine",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "computer_security-2-2",
+   "subject": "computer security",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "medical_genetics-2-4",
+   "subject": "medical genetics",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "astronomy-4-4",
+   "subject": "astronomy",
+   "planted": true,
+   "key": "C",
+   "original_key": "B",
+   "verdict": "KEY_WRONG",
+   "best_option": "B"
+  },
+  {
+   "id": "nutrition-4-2",
+   "subject": "nutrition",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "machine_learning-2-3",
+   "subject": "machine learning",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "anatomy-4-1",
+   "subject": "anatomy",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "international_law-3-1",
+   "subject": "international law",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "machine_learning-2-0",
+   "subject": "machine learning",
+   "planted": true,
+   "key": "A",
+   "original_key": "B",
+   "verdict": "KEY_WRONG",
+   "best_option": "B"
+  },
+  {
+   "id": "machine_learning-2-4",
+   "subject": "machine learning",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "machine_learning-4-4",
+   "subject": "machine learning",
+   "planted": true,
+   "key": "C",
+   "original_key": "A",
+   "verdict": "KEY_WRONG",
+   "best_option": "A"
+  },
+  {
+   "id": "computer_security-3-0",
+   "subject": "computer security",
+   "planted": true,
+   "key": "D",
+   "original_key": "A",
+   "verdict": "KEY_WRONG",
+   "best_option": "A"
+  },
+  {
+   "id": "medical_genetics-0-3",
+   "subject": "medical genetics",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "electrical_engineering-4-2",
+   "subject": "electrical engineering",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "microeconomics-3-1",
+   "subject": "microeconomics",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "international_law-4-1",
+   "subject": "international law",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "computer_security-4-2",
+   "subject": "computer security",
+   "planted": true,
+   "key": "A",
+   "original_key": "D",
+   "verdict": "KEY_WRONG",
+   "best_option": "D"
+  },
+  {
+   "id": "college_biology-0-0",
+   "subject": "college biology",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "college_chemistry-3-1",
+   "subject": "college chemistry",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "anatomy-1-3",
+   "subject": "anatomy",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "electrical_engineering-2-4",
+   "subject": "electrical engineering",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "astronomy-0-0",
+   "subject": "astronomy",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "nutrition-2-0",
+   "subject": "nutrition",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "philosophy-2-1",
+   "subject": "philosophy",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "philosophy-1-1",
+   "subject": "philosophy",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "college_physics-2-3",
+   "subject": "college physics",
+   "planted": true,
+   "key": "A",
+   "original_key": "C",
+   "verdict": "KEY_WRONG",
+   "best_option": "C"
+  },
+  {
+   "id": "international_law-3-4",
+   "subject": "international law",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "philosophy-0-0",
+   "subject": "philosophy",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "professional_medicine-0-4",
+   "subject": "professional medicine",
+   "planted": true,
+   "key": "B",
+   "original_key": "C",
+   "verdict": "KEY_WRONG",
+   "best_option": "C"
+  },
+  {
+   "id": "jurisprudence-1-3",
+   "subject": "jurisprudence",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "professional_medicine-2-3",
+   "subject": "professional medicine",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "college_biology-1-1",
+   "subject": "college biology",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "computer_security-4-3",
+   "subject": "computer security",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "nutrition-3-2",
+   "subject": "nutrition",
+   "planted": true,
+   "key": "A",
+   "original_key": "C",
+   "verdict": "KEY_WRONG",
+   "best_option": "C"
+  },
+  {
+   "id": "nutrition-4-1",
+   "subject": "nutrition",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "machine_learning-3-1",
+   "subject": "machine learning",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "medical_genetics-1-1",
+   "subject": "medical genetics",
+   "planted": true,
+   "key": "A",
+   "original_key": "C",
+   "verdict": "KEY_WRONG",
+   "best_option": "C"
+  },
+  {
+   "id": "astronomy-3-0",
+   "subject": "astronomy",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "college_biology-3-4",
+   "subject": "college biology",
+   "planted": true,
+   "key": "D",
+   "original_key": "B",
+   "verdict": "KEY_WRONG",
+   "best_option": "B"
+  },
+  {
+   "id": "college_physics-0-0",
+   "subject": "college physics",
+   "planted": true,
+   "key": "B",
+   "original_key": "A",
+   "verdict": "KEY_WRONG",
+   "best_option": "A"
+  },
+  {
+   "id": "professional_accounting-3-4",
+   "subject": "professional accounting",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "medical_genetics-0-0",
+   "subject": "medical genetics",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "NO_VERDICT",
+   "best_option": null
+  },
+  {
+   "id": "international_law-1-1",
+   "subject": "international law",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "nutrition-1-1",
+   "subject": "nutrition",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "college_physics-2-2",
+   "subject": "college physics",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "astronomy-0-4",
+   "subject": "astronomy",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "computer_security-2-4",
+   "subject": "computer security",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "nutrition-4-3",
+   "subject": "nutrition",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "high_school_statistics-1-4",
+   "subject": "high school statistics",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "computer_security-2-1",
+   "subject": "computer security",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "nutrition-2-1",
+   "subject": "nutrition",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "nutrition-1-3",
+   "subject": "nutrition",
+   "planted": true,
+   "key": "C",
+   "original_key": "B",
+   "verdict": "KEY_WRONG",
+   "best_option": "B"
+  },
+  {
+   "id": "professional_accounting-3-2",
+   "subject": "professional accounting",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "econometrics-2-0",
+   "subject": "econometrics",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "college_biology-4-4",
+   "subject": "college biology",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "electrical_engineering-1-2",
+   "subject": "electrical engineering",
+   "planted": true,
+   "key": "B",
+   "original_key": "A",
+   "verdict": "KEY_WRONG",
+   "best_option": "A"
+  },
+  {
+   "id": "college_chemistry-0-2",
+   "subject": "college chemistry",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "nutrition-3-4",
+   "subject": "nutrition",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "machine_learning-2-1",
+   "subject": "machine learning",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "anatomy-2-2",
+   "subject": "anatomy",
+   "planted": true,
+   "key": "D",
+   "original_key": "C",
+   "verdict": "KEY_WRONG",
+   "best_option": "C"
+  },
+  {
+   "id": "high_school_statistics-0-4",
+   "subject": "high school statistics",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "college_physics-4-1",
+   "subject": "college physics",
+   "planted": true,
+   "key": "D",
+   "original_key": "C",
+   "verdict": "KEY_WRONG",
+   "best_option": "C"
+  },
+  {
+   "id": "anatomy-1-0",
+   "subject": "anatomy",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "electrical_engineering-1-3",
+   "subject": "electrical engineering",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "philosophy-2-2",
+   "subject": "philosophy",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "college_physics-4-3",
+   "subject": "college physics",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "jurisprudence-3-4",
+   "subject": "jurisprudence",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "computer_security-1-2",
+   "subject": "computer security",
+   "planted": true,
+   "key": "C",
+   "original_key": "A",
+   "verdict": "KEY_WRONG",
+   "best_option": "A"
+  },
+  {
+   "id": "anatomy-4-4",
+   "subject": "anatomy",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "astronomy-3-4",
+   "subject": "astronomy",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "econometrics-4-4",
+   "subject": "econometrics",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "computer_security-1-1",
+   "subject": "computer security",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "philosophy-0-1",
+   "subject": "philosophy",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "microeconomics-0-1",
+   "subject": "microeconomics",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "NO_VERDICT",
+   "best_option": null
+  },
+  {
+   "id": "college_biology-0-3",
+   "subject": "college biology",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "anatomy-0-3",
+   "subject": "anatomy",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "international_law-0-1",
+   "subject": "international law",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "jurisprudence-2-0",
+   "subject": "jurisprudence",
+   "planted": true,
+   "key": "C",
+   "original_key": "A",
+   "verdict": "KEY_WRONG",
+   "best_option": "A"
+  },
+  {
+   "id": "computer_security-0-2",
+   "subject": "computer security",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "international_law-1-2",
+   "subject": "international law",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "nutrition-2-2",
+   "subject": "nutrition",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "medical_genetics-4-2",
+   "subject": "medical genetics",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "world_history-1-3",
+   "subject": "world history",
+   "planted": true,
+   "key": "C",
+   "original_key": "D",
+   "verdict": "KEY_WRONG",
+   "best_option": "D"
+  },
+  {
+   "id": "high_school_statistics-4-2",
+   "subject": "high school statistics",
+   "planted": true,
+   "key": "D",
+   "original_key": "C",
+   "verdict": "KEY_WRONG",
+   "best_option": "C"
+  },
+  {
+   "id": "philosophy-2-4",
+   "subject": "philosophy",
+   "planted": true,
+   "key": "C",
+   "original_key": "B",
+   "verdict": "KEY_WRONG",
+   "best_option": "B"
+  },
+  {
+   "id": "college_biology-2-0",
+   "subject": "college biology",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "international_law-1-3",
+   "subject": "international law",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "high_school_statistics-3-0",
+   "subject": "high school statistics",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "machine_learning-1-0",
+   "subject": "machine learning",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "machine_learning-0-1",
+   "subject": "machine learning",
+   "planted": true,
+   "key": "B",
+   "original_key": "C",
+   "verdict": "KEY_WRONG",
+   "best_option": "C"
+  },
+  {
+   "id": "high_school_statistics-1-0",
+   "subject": "high school statistics",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "college_chemistry-3-0",
+   "subject": "college chemistry",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "international_law-4-0",
+   "subject": "international law",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "philosophy-0-2",
+   "subject": "philosophy",
+   "planted": true,
+   "key": "B",
+   "original_key": "D",
+   "verdict": "KEY_WRONG",
+   "best_option": "D"
+  },
+  {
+   "id": "jurisprudence-0-0",
+   "subject": "jurisprudence",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "college_physics-4-2",
+   "subject": "college physics",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "microeconomics-2-0",
+   "subject": "microeconomics",
+   "planted": true,
+   "key": "A",
+   "original_key": "B",
+   "verdict": "KEY_WRONG",
+   "best_option": "B"
+  },
+  {
+   "id": "jurisprudence-1-4",
+   "subject": "jurisprudence",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "college_biology-4-2",
+   "subject": "college biology",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "medical_genetics-3-0",
+   "subject": "medical genetics",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "jurisprudence-2-3",
+   "subject": "jurisprudence",
+   "planted": true,
+   "key": "C",
+   "original_key": "D",
+   "verdict": "KEY_WRONG",
+   "best_option": "D"
+  },
+  {
+   "id": "high_school_statistics-0-0",
+   "subject": "high school statistics",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "machine_learning-3-2",
+   "subject": "machine learning",
+   "planted": true,
+   "key": "B",
+   "original_key": "C",
+   "verdict": "KEY_WRONG",
+   "best_option": "C"
+  },
+  {
+   "id": "professional_medicine-1-3",
+   "subject": "professional medicine",
+   "planted": true,
+   "key": "B",
+   "original_key": "D",
+   "verdict": "KEY_WRONG",
+   "best_option": "D"
+  },
+  {
+   "id": "medical_genetics-2-2",
+   "subject": "medical genetics",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "jurisprudence-1-2",
+   "subject": "jurisprudence",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "professional_medicine-0-3",
+   "subject": "professional medicine",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "college_physics-0-4",
+   "subject": "college physics",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "college_chemistry-1-1",
+   "subject": "college chemistry",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "international_law-2-1",
+   "subject": "international law",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "computer_security-0-1",
+   "subject": "computer security",
+   "planted": true,
+   "key": "C",
+   "original_key": "D",
+   "verdict": "KEY_WRONG",
+   "best_option": "D"
+  },
+  {
+   "id": "astronomy-4-0",
+   "subject": "astronomy",
+   "planted": true,
+   "key": "C",
+   "original_key": "A",
+   "verdict": "KEY_WRONG",
+   "best_option": "A"
+  },
+  {
+   "id": "college_physics-0-1",
+   "subject": "college physics",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "professional_accounting-2-3",
+   "subject": "professional accounting",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "professional_accounting-3-3",
+   "subject": "professional accounting",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "nutrition-0-0",
+   "subject": "nutrition",
+   "planted": true,
+   "key": "C",
+   "original_key": "B",
+   "verdict": "KEY_WRONG",
+   "best_option": "B"
+  },
+  {
+   "id": "international_law-4-4",
+   "subject": "international law",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "professional_accounting-0-3",
+   "subject": "professional accounting",
+   "planted": true,
+   "key": "B",
+   "original_key": "D",
+   "verdict": "KEY_WRONG",
+   "best_option": "D"
+  },
+  {
+   "id": "jurisprudence-3-2",
+   "subject": "jurisprudence",
+   "planted": true,
+   "key": "B",
+   "original_key": "C",
+   "verdict": "KEY_WRONG",
+   "best_option": "C"
+  },
+  {
+   "id": "medical_genetics-4-0",
+   "subject": "medical genetics",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "machine_learning-0-4",
+   "subject": "machine learning",
+   "planted": true,
+   "key": "C",
+   "original_key": "A",
+   "verdict": "KEY_WRONG",
+   "best_option": "A"
+  },
+  {
+   "id": "astronomy-1-3",
+   "subject": "astronomy",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "anatomy-2-3",
+   "subject": "anatomy",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "professional_accounting-0-2",
+   "subject": "professional accounting",
+   "planted": true,
+   "key": "D",
+   "original_key": "B",
+   "verdict": "KEY_WRONG",
+   "best_option": "B"
+  },
+  {
+   "id": "professional_accounting-0-1",
+   "subject": "professional accounting",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "econometrics-0-4",
+   "subject": "econometrics",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "world_history-1-2",
+   "subject": "world history",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "college_chemistry-2-2",
+   "subject": "college chemistry",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "high_school_statistics-3-2",
+   "subject": "high school statistics",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "nutrition-3-0",
+   "subject": "nutrition",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "jurisprudence-2-4",
+   "subject": "jurisprudence",
+   "planted": true,
+   "key": "A",
+   "original_key": "C",
+   "verdict": "KEY_WRONG",
+   "best_option": "C"
+  },
+  {
+   "id": "jurisprudence-1-1",
+   "subject": "jurisprudence",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "electrical_engineering-4-0",
+   "subject": "electrical engineering",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "jurisprudence-4-1",
+   "subject": "jurisprudence",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "college_biology-1-4",
+   "subject": "college biology",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "computer_security-4-1",
+   "subject": "computer security",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "professional_medicine-3-3",
+   "subject": "professional medicine",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "anatomy-3-2",
+   "subject": "anatomy",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "philosophy-1-2",
+   "subject": "philosophy",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "astronomy-2-0",
+   "subject": "astronomy",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "jurisprudence-0-2",
+   "subject": "jurisprudence",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "world_history-2-0",
+   "subject": "world history",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "nutrition-1-4",
+   "subject": "nutrition",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "international_law-2-4",
+   "subject": "international law",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "computer_security-4-4",
+   "subject": "computer security",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "econometrics-1-2",
+   "subject": "econometrics",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "professional_accounting-1-1",
+   "subject": "professional accounting",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "philosophy-3-4",
+   "subject": "philosophy",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "international_law-0-2",
+   "subject": "international law",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "microeconomics-2-4",
+   "subject": "microeconomics",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "jurisprudence-0-1",
+   "subject": "jurisprudence",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "jurisprudence-2-1",
+   "subject": "jurisprudence",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "professional_medicine-1-1",
+   "subject": "professional medicine",
+   "planted": true,
+   "key": "A",
+   "original_key": "B",
+   "verdict": "KEY_WRONG",
+   "best_option": "B"
+  },
+  {
+   "id": "astronomy-2-2",
+   "subject": "astronomy",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "professional_accounting-4-3",
+   "subject": "professional accounting",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "college_physics-0-3",
+   "subject": "college physics",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "professional_medicine-2-4",
+   "subject": "professional medicine",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "college_chemistry-2-1",
+   "subject": "college chemistry",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "philosophy-3-2",
+   "subject": "philosophy",
+   "planted": true,
+   "key": "B",
+   "original_key": "C",
+   "verdict": "KEY_WRONG",
+   "best_option": "C"
+  },
+  {
+   "id": "college_biology-4-3",
+   "subject": "college biology",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "college_biology-2-2",
+   "subject": "college biology",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "econometrics-4-0",
+   "subject": "econometrics",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "high_school_statistics-2-0",
+   "subject": "high school statistics",
+   "planted": true,
+   "key": "D",
+   "original_key": "B",
+   "verdict": "KEY_WRONG",
+   "best_option": "B"
+  },
+  {
+   "id": "nutrition-0-1",
+   "subject": "nutrition",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "jurisprudence-0-3",
+   "subject": "jurisprudence",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "astronomy-2-3",
+   "subject": "astronomy",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "astronomy-2-4",
+   "subject": "astronomy",
+   "planted": true,
+   "key": "A",
+   "original_key": "B",
+   "verdict": "KEY_WRONG",
+   "best_option": "B"
+  },
+  {
+   "id": "microeconomics-3-0",
+   "subject": "microeconomics",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "high_school_statistics-4-4",
+   "subject": "high school statistics",
+   "planted": true,
+   "key": "C",
+   "original_key": "B",
+   "verdict": "KEY_WRONG",
+   "best_option": "B"
+  },
+  {
+   "id": "high_school_statistics-2-2",
+   "subject": "high school statistics",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "computer_security-0-4",
+   "subject": "computer security",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "anatomy-2-0",
+   "subject": "anatomy",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "professional_accounting-2-4",
+   "subject": "professional accounting",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "professional_accounting-1-2",
+   "subject": "professional accounting",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "computer_security-2-0",
+   "subject": "computer security",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "college_chemistry-0-4",
+   "subject": "college chemistry",
+   "planted": true,
+   "key": "B",
+   "original_key": "A",
+   "verdict": "KEY_WRONG",
+   "best_option": "A"
+  },
+  {
+   "id": "nutrition-1-0",
+   "subject": "nutrition",
+   "planted": true,
+   "key": "D",
+   "original_key": "B",
+   "verdict": "KEY_WRONG",
+   "best_option": "B"
+  },
+  {
+   "id": "international_law-4-2",
+   "subject": "international law",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "college_chemistry-0-0",
+   "subject": "college chemistry",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "anatomy-0-1",
+   "subject": "anatomy",
+   "planted": true,
+   "key": "D",
+   "original_key": "A",
+   "verdict": "KEY_WRONG",
+   "best_option": "A"
+  },
+  {
+   "id": "medical_genetics-3-2",
+   "subject": "medical genetics",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "electrical_engineering-0-3",
+   "subject": "electrical engineering",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "jurisprudence-3-1",
+   "subject": "jurisprudence",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "college_chemistry-2-0",
+   "subject": "college chemistry",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "medical_genetics-4-3",
+   "subject": "medical genetics",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "college_chemistry-3-3",
+   "subject": "college chemistry",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "philosophy-1-3",
+   "subject": "philosophy",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "electrical_engineering-2-0",
+   "subject": "electrical engineering",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "jurisprudence-1-0",
+   "subject": "jurisprudence",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "world_history-1-0",
+   "subject": "world history",
+   "planted": true,
+   "key": "B",
+   "original_key": "C",
+   "verdict": "KEY_WRONG",
+   "best_option": "C"
+  },
+  {
+   "id": "anatomy-1-2",
+   "subject": "anatomy",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "college_biology-0-4",
+   "subject": "college biology",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "world_history-2-3",
+   "subject": "world history",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "college_chemistry-4-2",
+   "subject": "college chemistry",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "college_chemistry-1-3",
+   "subject": "college chemistry",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "nutrition-4-4",
+   "subject": "nutrition",
+   "planted": true,
+   "key": "A",
+   "original_key": "B",
+   "verdict": "KEY_WRONG",
+   "best_option": "B"
+  },
+  {
+   "id": "college_biology-4-0",
+   "subject": "college biology",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "high_school_statistics-3-4",
+   "subject": "high school statistics",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "econometrics-3-3",
+   "subject": "econometrics",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "international_law-1-4",
+   "subject": "international law",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "econometrics-1-1",
+   "subject": "econometrics",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "medical_genetics-0-4",
+   "subject": "medical genetics",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "nutrition-3-3",
+   "subject": "nutrition",
+   "planted": true,
+   "key": "C",
+   "original_key": "D",
+   "verdict": "KEY_WRONG",
+   "best_option": "D"
+  },
+  {
+   "id": "college_chemistry-1-4",
+   "subject": "college chemistry",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "nutrition-0-3",
+   "subject": "nutrition",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "anatomy-2-1",
+   "subject": "anatomy",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "anatomy-4-2",
+   "subject": "anatomy",
+   "planted": true,
+   "key": "A",
+   "original_key": "B",
+   "verdict": "KEY_WRONG",
+   "best_option": "B"
+  },
+  {
+   "id": "microeconomics-3-3",
+   "subject": "microeconomics",
+   "planted": true,
+   "key": "C",
+   "original_key": "B",
+   "verdict": "NO_VERDICT",
+   "best_option": null
+  },
+  {
+   "id": "world_history-0-2",
+   "subject": "world history",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "medical_genetics-2-0",
+   "subject": "medical genetics",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "computer_security-2-3",
+   "subject": "computer security",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "college_biology-1-0",
+   "subject": "college biology",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "professional_accounting-3-0",
+   "subject": "professional accounting",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "medical_genetics-3-4",
+   "subject": "medical genetics",
+   "planted": false,
+   "key": "B",
+   "original_key": "B",
+   "verdict": "KEY_OK",
+   "best_option": "B"
+  },
+  {
+   "id": "professional_medicine-3-2",
+   "subject": "professional medicine",
+   "planted": true,
+   "key": "C",
+   "original_key": "A",
+   "verdict": "KEY_WRONG",
+   "best_option": "A"
+  },
+  {
+   "id": "high_school_statistics-2-1",
+   "subject": "high school statistics",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  },
+  {
+   "id": "astronomy-1-2",
+   "subject": "astronomy",
+   "planted": false,
+   "key": "C",
+   "original_key": "C",
+   "verdict": "KEY_OK",
+   "best_option": "C"
+  },
+  {
+   "id": "microeconomics-0-3",
+   "subject": "microeconomics",
+   "planted": false,
+   "key": "D",
+   "original_key": "D",
+   "verdict": "KEY_OK",
+   "best_option": "D"
+  },
+  {
+   "id": "virology-2-2",
+   "subject": "virology",
+   "planted": false,
+   "key": "A",
+   "original_key": "A",
+   "verdict": "KEY_OK",
+   "best_option": "A"
+  }
+ ]
+}

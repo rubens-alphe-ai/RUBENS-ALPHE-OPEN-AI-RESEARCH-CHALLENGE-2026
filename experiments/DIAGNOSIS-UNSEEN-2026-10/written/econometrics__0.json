@@ -1,0 +1,54 @@
+{
+ "questions": [
+  {
+   "question": "Consider a stationary AR(1) process $y_t = \\rho y_{t-1} + \\varepsilon_t$, where $\\varepsilon_t \\sim \\text{i.i.d.}(0, \\sigma^2)$ and $|\\rho| < 1$. What is the theoretical autocovariance at lag 2, $\\gamma(2)$?",
+   "options": [
+    "$\\frac{\\rho^2 \\sigma^2}{1 - \\rho^2}$",
+    "$\\frac{\\rho \\sigma^2}{1 - \\rho^2}$",
+    "$\\rho^2 \\sigma^2$",
+    "$\\frac{\\sigma^2}{(1 - \\rho)^2}$"
+   ],
+   "answer": "A"
+  },
+  {
+   "question": "In the standard Breusch-Pagan test for heteroskedasticity, what serves as the dependent variable in the auxiliary regression?",
+   "options": [
+    "The absolute values of the structural residuals, $|\\hat{u}_i|$",
+    "The squared residuals from the original OLS estimation, $\\hat{u}_i^2$",
+    "The natural logarithm of the original dependent variable, $\\ln(Y_i)$",
+    "The estimated conditional variance of the regressors, $\\widehat{\\text{Var}}(X_i)$"
+   ],
+   "answer": "B"
+  },
+  {
+   "question": "Suppose two economic time series $X_t$ and $Y_t$ are both integrated of order 1, denoted $I(1)$. Which condition implies that $X_t$ and $Y_t$ are cointegrated?",
+   "options": [
+    "Taking the second difference of both series yields stationary processes.",
+    "The cross-correlation between the first-differenced series $\\Delta X_t$ and $\\Delta Y_t$ is zero for all lags.",
+    "There exists a linear combination $Y_t - \\beta X_t$ that is integrated of order 0, $I(0)$.",
+    "The two series share identical deterministic trends but have uncorrelated stochastic components."
+   ],
+   "answer": "C"
+  },
+  {
+   "question": "In empirical microeconometrics using Difference-in-Differences (DiD), what is the primary identifying assumption required to obtain an unbiased estimate of the Average Treatment Effect on the Treated (ATT)?",
+   "options": [
+    "The treatment variable must be randomly assigned at each time period across units.",
+    "The outcome variable for both control and treatment groups must follow a stationary Normal distribution.",
+    "The baseline values of the outcome variable prior to treatment must be identical across both groups.",
+    "In the absence of treatment, the average outcome of the treatment group would have evolved in parallel with the average outcome of the control group."
+   ],
+   "answer": "D"
+  },
+  {
+   "question": "In an Instrumental Variables (IV) regression model with a single endogenous regressor $X$ and structural error term $u$, which condition defines the requirement of 'instrument relevance' for a candidate instrument $Z$?",
+   "options": [
+    "$\\text{Cov}(Z, X) \\neq 0$",
+    "$\\text{Cov}(Z, u) = 0$",
+    "$\\text{Var}(Z) > \\text{Var}(X)$",
+    "$\\mathbb{E}[u \\mid Z] = 1$"
+   ],
+   "answer": "A"
+  }
+ ]
+}
