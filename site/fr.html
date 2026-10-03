@@ -45,6 +45,8 @@ suffisent pour savoir si un écart dépasse le bruit. Le calcul se fait dans vot
 <tr><td><strong>Vérification d'un écart</strong> — un écart annoncé entre deux modèles tient-il sur vos résultats question par question&nbsp;? (test apparié exact)</td><td class="num price">1 500 €</td><td>48 h</td></tr>
 <tr><td><strong>Audit d'un test</strong> — les questions de votre benchmark qui mesurent mal, classées pour être relues en premier, avec leur défaut probable</td><td class="num price">1 900 €</td><td>5 jours</td></tr>
 <tr><td>Votre suite de tests, jusqu'à 10 benchmarks</td><td class="num price">7 500 €</td><td>3 semaines</td></tr>
+<tr><td><strong>Benchmark raccourci</strong> — nous choisissons les questions qui décident vraiment, pour lancer vos évaluations sur une fraction des questions avec les mêmes conclusions&nbsp;; la sélection est vérifiée sur des modèles qu'elle n'a jamais vus</td><td class="num price">4 900 €</td><td>3 semaines</td></tr>
+<tr><td><strong>Veille modèles</strong> — à chaque sortie d'une nouvelle IA, en 48&nbsp;h&nbsp;: est-elle vraiment meilleure sur vos tâches, et que changer vous ferait-il gagner&nbsp;? Sélection de questions rafraîchie chaque trimestre</td><td class="num price">1 200 €/mois</td><td>en continu</td></tr>
 </table>
 
 <p><strong>Nos cinq premiers clients paient moitié prix</strong>, en échange d'un court témoignage public.
@@ -67,6 +69,13 @@ nous-mêmes glissé 60 erreurs, il en trouve 59, sans aucune fausse alerte&nbsp;
 pas d'une mémoire des questions publiques. Les erreurs glissées sont plus faciles à voir que les
 vraies&nbsp;; ce sont les chiffres sur les vraies erreurs (43&nbsp;%) qu'il faut retenir.</p>
 <span class="src">experiments/DIAGNOSIS-REDUX-2026-10/RESULT.md · experiments/DIAGNOSIS-UNSEEN-2026-10/RESULT.md</span>
+
+<p><strong>Moins de questions, mêmes décisions.</strong> Sur SWE-bench Verified, 40&nbsp;% des problèmes,
+choisis en regardant seulement les 20 modèles les plus anciens, classent les 10 modèles sortis ensuite
+comme le test complet (corrélation de rang 0,988), et les 20 écarts établis gardent tous leur sens.
+Un tirage au hasard de la même taille fait nettement moins bien (médiane 0,878). Une sélection vieillit
+avec les modèles&nbsp;: elle se rafraîchit.</p>
+<span class="src">experiments/COMPRESSION-SWEBENCH-2026-10/RESULT.md</span>
 
 <p><strong>Un exemple le jour d'une sortie.</strong> GPT-6.1 Sol, sorti le 29 septembre 2026, est
 seul premier sur 1 des 9 benchmarks comparables des données d'Epoch AI, et cette avance reste dans

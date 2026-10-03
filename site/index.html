@@ -48,6 +48,15 @@ models, and which do not.</p>
 
 <span class="src">experiments/LEADERBOARD-REALITY-2026-10/RESULT.md — data: Epoch AI, CC BY 4.0; the analysis is ours</span>
 
+<h2>Fewer items, the same decisions</h2>
+
+<p>On SWE-bench Verified, 40% of the problems, chosen by looking only at the 20 earliest models, rank
+the 10 models released afterwards as the full benchmark does (Spearman 0.988), and all 20 supported
+pairwise orders keep their direction. A random 40% does clearly worse (median 0.878). A selection ages
+as models improve, so it is refreshed.</p>
+
+<span class="src">experiments/COMPRESSION-SWEBENCH-2026-10/RESULT.md — pre-registered</span>
+
 <h2>What an audit tells you</h2>
 
 <table>
@@ -77,7 +86,8 @@ audit does.</p>
 <tr><td><strong>Benchmark claim check</strong> — does a published gap between two models hold?</td><td class="num price">1 500 €</td><td>48 hours</td></tr>
 <tr><td>One benchmark, full audit</td><td class="num price">1 900 €</td><td>5 days</td></tr>
 <tr><td>Your suite, up to 10 benchmarks</td><td class="num price">7 500 €</td><td>3 weeks</td></tr>
-<tr><td>Continuous checking in your CI</td><td class="num price">1 200 €/mo</td><td>ongoing</td></tr>
+<tr><td><strong>Shortened benchmark</strong> — the items that actually decide, so your evaluations run on a fraction of the items and reach the same conclusions; checked on models the selection never saw</td><td class="num price">4 900 €</td><td>3 weeks</td></tr>
+<tr><td><strong>Model watch</strong> — each time a new model is released, within 48 hours: is it really better on your tasks, and what would switching gain you? Item selection refreshed every quarter</td><td class="num price">1 200 €/mo</td><td>ongoing</td></tr>
 <tr><td>Platform licence</td><td class="num price">18 000 €/yr</td><td>by contract</td></tr>
 </table>
 
