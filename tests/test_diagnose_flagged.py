@@ -23,6 +23,11 @@ class ParseTests(unittest.TestCase):
         got = df.parse('Here: {"verdict": "key_wrong", "best_option": "c", "reason": "C is right"} done')
         self.assertEqual((got["verdict"], got["best_option"]), ("KEY_WRONG", "C"))
 
+    def test_a_verdict_without_an_option_is_read(self) -> None:
+        # Stopped the first run: best_option null raised instead of parsing.
+        self.assertIsNone(df.parse('{"verdict": "UNCLEAR", "best_option": null}')["best_option"])
+        self.assertIsNone(df.parse('{"verdict": "UNCLEAR", "best_option": ""}')["best_option"])
+
     def test_an_unknown_verdict_is_unusable(self) -> None:
         self.assertIsNone(df.parse('{"verdict": "MAYBE"}'))
         self.assertIsNone(df.parse("no json at all"))

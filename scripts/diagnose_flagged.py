@@ -120,7 +120,7 @@ def parse(content: str) -> dict | None:
         return None
     best = data.get("best_option")
     best = str(best).strip().upper()[:1] if best else None
-    return {"verdict": verdict, "best_option": best if best in LETTERS else None,
+    return {"verdict": verdict, "best_option": best if best and best in LETTERS else None,
             "reason": str(data.get("reason", ""))[:400]}
 
 
