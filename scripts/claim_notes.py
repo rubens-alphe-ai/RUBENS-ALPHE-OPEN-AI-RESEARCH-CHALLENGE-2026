@@ -18,7 +18,6 @@ from collections import defaultdict
 from pathlib import Path
 
 GITHUB = "https://github.com/rubens-alphe-ai/RUBENS-ALPHE-OPEN-AI-RESEARCH-CHALLENGE-2026"
-CALCULATOR = "[calculator link, once shared]"
 
 # Scores at chance level on these benchmarks mark a research toy, not a buyer.
 CHANCE = {"HellaSwag": 0.30, "ARC-Challenge": 0.30, "ARC-Easy": 0.30}
@@ -52,7 +51,7 @@ def is_toy(record: dict) -> bool:
     return False
 
 
-def note(org: str, records: list[dict]) -> str:
+def note(org: str, records: list[dict], contact: str, calculator: str) -> str:
     main = max(records, key=lambda r: r.get("likes") or 0)
     comparisons = [(r["model"].split("/", 1)[1], c) for r in records for c in r["comparisons"]]
     ahead_open = [x for x in comparisons if x[1]["gap_pts"] > 0 and not x[1]["established"]]
@@ -80,12 +79,13 @@ def note(org: str, records: list[dict]) -> str:
                     % ", ".join(sorted({c["benchmark"] for _, c in ahead_shown})))
     body += ["",
              "Method: unpaired comparison of two proportions, using the size of the public test set; it is the "
-             "conservative reading. Free calculator: %s. Code and validation: %s." % (CALCULATOR, GITHUB),
+             "conservative reading. Free calculator: %s. Code and validation: %s." % (calculator, GITHUB),
              "",
              "If this isn't relevant, a one-word reply is enough and I won't write again.",
              "",
              "Rubens Alphe",
-             "Item Audit"]
+             "Item Audit",
+             contact]
     subject = "%s: which of your benchmark gaps are established?" % main["model"].split("/", 1)[1]
     return "\n".join(["## %s" % org, "",
                       "- Models: %s" % ", ".join(r["model"] for r in records),
@@ -98,6 +98,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--scan", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--contact", default="[contact address]", help="reply address printed under the signature")
+    parser.add_argument("--calculator", default="[calculator link]")
     args = parser.parse_args()
     scan = json.loads(args.scan.read_text(encoding="utf-8"))
     by_org: dict[str, list[dict]] = defaultdict(list)
@@ -111,7 +113,7 @@ def main() -> None:
             "public use. %d organisations, %d comparisons, %d established and %d not established."
             % (len(by_org), scan["summary"]["comparisons"], scan["summary"]["established"],
                scan["summary"]["not_established"]), ""]
-    args.out.write_text("\n".join(head + [note(org, recs) for org, recs in ordered]), encoding="utf-8")
+    args.out.write_text("\n".join(head + [note(org, recs, args.contact, args.calculator) for org, recs in ordered]), encoding="utf-8")
     print("%d notes written to %s" % (len(by_org), args.out))
 
 
