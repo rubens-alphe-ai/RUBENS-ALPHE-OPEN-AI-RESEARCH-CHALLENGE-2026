@@ -54,7 +54,7 @@ SUBJECTS = ["anatomy", "astronomy", "college biology", "college chemistry", "col
             "world history"]
 BATCHES_PER_SUBJECT, PER_BATCH = 5, 5
 SAMPLE, PLANTED = 300, 60
-BUDGET_USD = 5.0
+BUDGET_USD = 7.0
 WRITER = "google/gemini-3.6-flash"
 SOLVERS = ("minimax/minimax-m3", "mistralai/mistral-large-2512")
 DIAGNOSER = "deepseek/deepseek-v4.1-flash"

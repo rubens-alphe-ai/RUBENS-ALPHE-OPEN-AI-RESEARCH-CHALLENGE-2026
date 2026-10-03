@@ -60,3 +60,12 @@ the 11.1% key-error prevalence of the flagged items in the first study.
 model's verdict is a useful first sort, and it does not rest on memorisation.
 **If this one fails,** the first study's result is treated as possibly
 memorised and is not sold as a capability.
+
+## Amendment, 2026-10-03T16:36:04Z (clock), before any data
+
+On the first launch, the script's budget guard refused to run: its
+pessimistic estimate was 5.63 USD, above the 5 USD cap. No question had been
+written, solved or diagnosed, and nothing had been spent. The cap is raised to
+7 USD (`BUDGET_USD` in `scripts/diagnose_unseen.py`). Nothing else changes:
+the models, the sample, the planting, the prompt, the settings and the
+thresholds stay as written above.
