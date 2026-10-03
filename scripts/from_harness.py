@@ -68,7 +68,9 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
+import io
 import json
+import struct
 import sys
 import zipfile
 from pathlib import Path
@@ -244,6 +246,37 @@ def read_lm_eval(path: Path, label: str | None, metric: str | None,
 # Inspect (UK AI Security Institute)
 # --------------------------------------------------------------------------
 
+ZIP_ZSTD = 93
+
+
+def read_member(archive: zipfile.ZipFile, path: Path, name: str) -> bytes:
+    """One member of an .eval archive, whatever Inspect compressed it with.
+
+    Older Inspect versions write deflate, which the standard library reads.
+    Newer ones write zstd, which it does not: `zipfile` raised "That
+    compression method is not supported" on half of Epoch AI's public
+    SWE-bench logs. The site said this tool reads Inspect logs directly; for
+    those logs it did not, and a client would have found out before we did.
+    """
+    info = archive.getinfo(name)
+    if info.compress_type != ZIP_ZSTD:
+        return archive.read(name)
+    try:
+        import zstandard
+    except ImportError:
+        raise SystemExit(
+            "%s is compressed with zstd, which newer versions of Inspect write and Python's "
+            "standard library cannot read. Install the `zstandard` package "
+            "(pip install zstandard) and run again; nothing was read from this log." % path)
+    with open(path, "rb") as raw:
+        raw.seek(info.header_offset)
+        local = raw.read(30)
+        name_len, extra_len = struct.unpack("<HH", local[26:30])
+        raw.seek(info.header_offset + 30 + name_len + extra_len)
+        data = raw.read(info.compress_size)
+    return zstandard.ZstdDecompressor().stream_reader(io.BytesIO(data)).read()
+
+
 def load_inspect(path: Path) -> tuple[dict, list[dict]]:
     """Header and samples, from either the zip form or the plain JSON form."""
     if zipfile.is_zipfile(path):
@@ -252,10 +285,23 @@ def load_inspect(path: Path) -> tuple[dict, list[dict]]:
             if HEADER_JSON not in names:
                 raise SystemExit("%s is a zip with no %s, so it is not an Inspect .eval log"
                                  % (path, HEADER_JSON))
-            header = json.loads(archive.read(HEADER_JSON).decode("utf-8"))
-            entries = sorted(n for n in names
-                             if n.startswith(SAMPLES_DIR) and n.endswith(".json"))
-            samples = [json.loads(archive.read(n).decode("utf-8")) for n in entries]
+            header = json.loads(read_member(archive, path, HEADER_JSON).decode("utf-8"))
+            samples = None
+            if "summaries.json" in names:
+                # Recent summaries carry id, epoch, input, target and scores --
+                # everything read here -- without the transcript. On an agent
+                # benchmark the transcripts are the whole archive: a 1.1 GB
+                # SWE-bench log ran out of memory when every sample was
+                # loaded, while its summaries are 3.5 MB. Summaries without
+                # scores exist too, so they are used only when every one is
+                # scored; otherwise the samples are read as before.
+                summaries = json.loads(read_member(archive, path, "summaries.json").decode("utf-8"))
+                if summaries and all(isinstance(s, dict) and "scores" in s for s in summaries):
+                    samples = summaries
+            if samples is None:
+                entries = sorted(n for n in names
+                                 if n.startswith(SAMPLES_DIR) and n.endswith(".json"))
+                samples = [json.loads(read_member(archive, path, n).decode("utf-8")) for n in entries]
         return header, samples
     try:
         document = json.loads(path.read_text(encoding="utf-8"))

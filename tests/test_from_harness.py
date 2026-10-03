@@ -693,5 +693,39 @@ class MalformedIsRefused(Temp):
         self.assertIn("header.json", str(caught.exception))
 
 
+class ZstdLogs(unittest.TestCase):
+    """Newer Inspect versions compress .eval members with zstd."""
+
+    def zstd_flagged_zip(self) -> Path:
+        # A stored archive whose members are relabelled as zstd (method 93):
+        # the shape of the logs that broke the adapter, without needing a zstd
+        # writer in the standard library.
+        folder = Path(tempfile.mkdtemp())
+        path = folder / "log.eval"
+        with zipfile.ZipFile(path, "w", zipfile.ZIP_STORED) as archive:
+            archive.writestr("header.json", "{}")
+        data = bytearray(path.read_bytes())
+        for signature, field in ((b"PK\x03\x04", 8), (b"PK\x01\x02", 10)):
+            start = data.find(signature)
+            while start >= 0:
+                data[start + field:start + field + 2] = (93).to_bytes(2, "little")
+                start = data.find(signature, start + 4)
+        path.write_bytes(bytes(data))
+        return path
+
+    def test_a_zstd_log_is_refused_with_the_fix_named_when_the_package_is_missing(self) -> None:
+        # It used to fail with "That compression method is not supported",
+        # which tells a user nothing about what to do.
+        try:
+            import zstandard  # noqa: F401
+            self.skipTest("zstandard is installed here, so the refusal path cannot be exercised")
+        except ImportError:
+            pass
+        with self.assertRaises(SystemExit) as caught:
+            fh.load_inspect(self.zstd_flagged_zip())
+        self.assertIn("zstandard", str(caught.exception))
+        self.assertIn("zstd", str(caught.exception))
+
+
 if __name__ == "__main__":
     unittest.main()

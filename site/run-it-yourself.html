@@ -29,7 +29,8 @@ limitation we are dressing up: for a testing laboratory, a notified body or anyo
 confidentiality obligation, evaluation data cannot be uploaded to a stranger, and it does not have
 to be.</p>
 
-<p>Python 3, no dependencies outside the standard library.</p>
+<p>Python 3, no dependencies outside the standard library — except one, for recent Inspect logs,
+named below.</p>
 
 <h2>1. The free check, from a public leaderboard</h2>
 
@@ -62,7 +63,7 @@ they have a problem.</p>
 <table>
 <tr><th>Harness</th><th>What is read</th></tr>
 <tr><td><code>lm-evaluation-harness</code></td><td>the per-sample JSONL written by <code>--log_samples</code></td></tr>
-<tr><td><code>Inspect</code></td><td>the <code>.eval</code> log, per-sample scores</td></tr>
+<tr><td><code>Inspect</code></td><td>the <code>.eval</code> log, per-sample scores — read from its summaries, so a multi-gigabyte agent log is not loaded whole. Logs written by newer Inspect versions are zstd-compressed and need one package: <code>pip install zstandard</code>. Without it, the tool says so and reads nothing.</td></tr>
 <tr><td><code>promptfoo</code></td><td>the results JSON, one respondent per provider</td></tr>
 <tr><td><code>OpenAI Evals</code></td><td>the events JSONL</td></tr>
 </table>
