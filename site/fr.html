@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Item Audit — en français</title>
+<meta name="description" content="Votre IA est-elle vraiment meilleure, ou seulement mieux classée ? Comparaison statistique de modèles d'IA sur vos propres tâches, et audit des questions de vos tests.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <nav>
+      <a href="fr.html" aria-current="page">Français</a>
+      <a href="index.html">English</a>
+      <a href="audit.html">The audit</a>
+      <a href="evidence.html">Evidence</a>
+      <a href="run-it-yourself.html">Run it yourself</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<h1>Votre IA est-elle vraiment meilleure, ou seulement mieux classée&nbsp;?</h1>
+
+<p class="lede">Sur <strong>10 des 13</strong> grands benchmarks publiés par Epoch AI, le modèle classé
+premier n'est pas séparable du cinquième, avec les barres d'erreur publiées par Epoch AI elle-même.
+Choisir une IA sur un classement, c'est souvent payer plus cher pour un écart qui n'est pas démontré.</p>
+
+<span class="src">experiments/LEADERBOARD-REALITY-2026-10/RESULT.md — données : Epoch AI, CC BY 4.0 ; l'analyse est la nôtre</span>
+
+<div class="panel">
+<p><strong>Testez vos propres chiffres, gratuitement.</strong> Deux scores et un nombre de questions
+suffisent pour savoir si un écart dépasse le bruit. Le calcul se fait dans votre navigateur&nbsp;:
+<a href="https://claude.ai/artifact/RVYRDkJ2SPUwCnwcHK1Jgv">L'écart est-il réel&nbsp;?</a></p>
+</div>
+
+<h2>Ce que nous faisons</h2>
+
+<table>
+<tr><th>Offre</th><th class="num">Prix</th><th>Délai</th></tr>
+<tr><td><strong>Choix de modèle vérifié</strong> — jusqu'à 5 modèles d'IA comparés sur vos propres tâches, réponse par réponse&nbsp;; nous disons quels écarts sont réels et lesquels sont du bruit</td><td class="num price">4 900 €</td><td>3 semaines</td></tr>
+<tr><td><strong>Vérification d'un écart</strong> — un écart annoncé entre deux modèles tient-il sur vos résultats question par question&nbsp;? (test apparié exact)</td><td class="num price">1 500 €</td><td>48 h</td></tr>
+<tr><td><strong>Audit d'un test</strong> — les questions de votre benchmark qui mesurent mal, classées pour être relues en premier, avec leur défaut probable</td><td class="num price">1 900 €</td><td>5 jours</td></tr>
+<tr><td>Votre suite de tests, jusqu'à 10 benchmarks</td><td class="num price">7 500 €</td><td>3 semaines</td></tr>
+</table>
+
+<p><strong>Nos cinq premiers clients paient moitié prix</strong>, en échange d'un court témoignage public.
+Conclure qu'aucun écart n'est établi est un résultat livré, et souvent le plus utile&nbsp;: il évite
+de payer plus cher pour rien.</p>
+
+<h2>Pourquoi nous croire&nbsp;: tout est mesuré, publié, et pré-inscrit</h2>
+
+<p><strong>Nos signaux trouvent les vraies erreurs.</strong> Sur 5&nbsp;005 questions du benchmark MMLU
+relues par des experts (MMLU-Redux), relire les 7&nbsp;% de questions que nous signalons suffit à
+trouver 54&nbsp;% des clés de correction fausses. Une question signalée a 14,6 fois plus de chances
+d'avoir une clé fausse qu'une question non signalée. Les quatre prédictions avaient été écrites avant
+de regarder les données.</p>
+<span class="src">experiments/VALIDATION-REDUX-2026-10/RESULT.md</span>
+
+<p><strong>Nous disons ce qui cloche, pas seulement où regarder.</strong> Un modèle d'IA peu coûteux relit
+chaque question signalée. Quand il la juge mal corrigée, les experts lui donnent raison dans 43&nbsp;%
+des cas, contre 11&nbsp;% pour le signal seul. Refait sur 300 questions inédites où nous avions
+nous-mêmes glissé 60 erreurs, il en trouve 59, sans aucune fausse alerte&nbsp;: son jugement ne vient
+pas d'une mémoire des questions publiques. Les erreurs glissées sont plus faciles à voir que les
+vraies&nbsp;; ce sont les chiffres sur les vraies erreurs (43&nbsp;%) qu'il faut retenir.</p>
+<span class="src">experiments/DIAGNOSIS-REDUX-2026-10/RESULT.md · experiments/DIAGNOSIS-UNSEEN-2026-10/RESULT.md</span>
+
+<p><strong>Un exemple le jour d'une sortie.</strong> GPT-6.1 Sol, sorti le 29 septembre 2026, est
+seul premier sur 1 des 9 benchmarks comparables des données d'Epoch AI, et cette avance reste dans
+les barres d'erreur. Un modèle du groupe de tête, pas un modèle démontré premier.</p>
+<span class="src">experiments/LAUNCH-CHECK-2026-10/RESULT.md</span>
+
+<h2>Ce qu'il faut savoir avant d'acheter</h2>
+
+<div class="limit">
+<p><strong>Un signal dit quoi relire en premier, pas où est l'erreur.</strong> Parmi les questions
+signalées, la majorité sont saines&nbsp;; c'est pour cela que nous publions la précision, et que le
+diagnostic par l'IA est présenté comme un tri, pas comme un verdict.</p>
+</div>
+
+<div class="limit">
+<p><strong>L'audit d'un test demande au moins 30 modèles répondants</strong> (50 pour la liste stricte).
+Pour comparer vos 5 modèles, nous vérifions les questions sur un panel séparé d'au moins 30 modèles.</p>
+</div>
+
+<div class="limit">
+<p><strong>La vérification d'un écart demande vos résultats question par question.</strong> Votre outil
+d'évaluation les produit déjà&nbsp;; nous lisons directement plusieurs formats courants.</p>
+</div>
+
+<div class="limit">
+<p><strong>Ce n'est pas une certification.</strong> C'est une mesure, avec son incertitude, sur vos
+données.</p>
+</div>
+
+<h2>Contact</h2>
+
+<p>Rubens Alphe — Item Audit — <code>rubens.alphe0@gmail.com</code></p>
+<p class="small soft">Décrivez votre cas en deux lignes&nbsp;: nous répondons si nos méthodes s'y
+appliquent, et ce qu'elles ne peuvent pas dire.</p>
+
+<p><a href="evidence.html">Chaque chiffre de ce site, avec le fichier dont il vient (en anglais) →</a></p>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>Aucun traceur, aucune statistique de visite, aucun cookie sur ce site.</p>
+    <p>Nous n'avons pas encore de clients&nbsp;: il n'y a donc ni témoignage, ni logo, ni étude de cas
+    sur ce site. Chaque chiffre renvoie à un fichier public.</p>
+  </div>
+</footer>
+
+</body>
+</html>
