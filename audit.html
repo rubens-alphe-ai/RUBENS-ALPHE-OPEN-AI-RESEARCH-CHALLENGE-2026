@@ -86,6 +86,28 @@ can be run on your side with the same tools, and we read the results.</p>
 <p class="small soft">Price: 4 900 €, three weeks, model usage included. Re-running the comparison
 when a new model is released can be added as a monthly service.</p>
 
+<h2>Benchmark claim check</h2>
+
+<p>For an investor reviewing a startup, or a team about to publish a result: "model A beats model B
+on benchmark X" — does the gap hold?</p>
+
+<p>With per-item results, both models answered the same questions, so the test is paired: only the
+questions on which they disagree say which is better. The check reports the gap with its 95%
+interval, whether the data support it, and — when they do not — roughly how many questions it would
+take to settle it. On SWE-bench Verified, for example, the gap between the first and second models
+holds (4.4 points, exact McNemar p = 0.01); the 1.1-point gap between the second and third does not,
+and settling it would take about 6,700 problems against the 454 the test has.</p>
+
+<span class="src">scripts/claim_check.py; experiments/SWEBENCH-ITEMS-2026-10/RESULT.md — data: Epoch AI, CC BY 4.0</span>
+
+<div class="limit">
+<p><strong>It needs per-item results.</strong> With aggregate scores only, it says what the scores can
+and cannot establish, which is much less. It is not a certification, and it says nothing about
+whether the benchmark measures what its name promises — that is the full audit.</p>
+</div>
+
+<p class="small soft">Price: 1 500 €, delivered within 48 hours of receiving the results.</p>
+
 <h2>Price</h2>
 
 <div class="scroll">
@@ -98,6 +120,10 @@ when a new model is released can be added as a monthly service.</p>
 <tr>
   <td><strong>Verified model choice</strong></td><td class="num price">4 900 €</td><td>3 weeks</td>
   <td>Up to five models on up to 300 items from your own tasks, compared answer by answer, with the evaluation itself checked item by item. Model usage included.</td>
+</tr>
+<tr>
+  <td><strong>Benchmark claim check</strong></td><td class="num price">1 500 €</td><td>48 hours</td>
+  <td>Whether a stated gap between two models holds on the items both answered: the gap with its interval, the paired test, and how many items would settle it if it does not.</td>
 </tr>
 <tr>
   <td>One benchmark</td><td class="num price">1 900 €</td><td>5 days</td>
