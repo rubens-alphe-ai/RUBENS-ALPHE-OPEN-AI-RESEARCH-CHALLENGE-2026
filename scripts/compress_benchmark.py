@@ -18,6 +18,7 @@ Both are compared with random subsets of the same size, so that the value of
 choosing the items, as opposed to merely using fewer, is measured too.
 
   python scripts/compress_benchmark.py --table swe.csv --epoch-zip epoch.zip --benchmark swe_bench_verified --out result.json
+  python scripts/compress_benchmark.py --table medqa.csv --dates-json dates.json --window 30 --benchmark med_qa --out result.json
 """
 
 from __future__ import annotations
@@ -54,11 +55,14 @@ def release_dates(zip_path: Path, benchmark: str) -> dict[str, str]:
     return {r["Model version"]: r.get("Release date") or "" for r in rows}
 
 
-def split(models: list[str], dates: dict[str, str]) -> tuple[list[str], list[str]]:
+def split(models: list[str], dates: dict[str, str], window: int | None = None) -> tuple[list[str], list[str]]:
+    """Order by release date; keep the `window` most recent; the first 20 train, the rest test."""
     missing = [m for m in models if not dates.get(m)]
     if missing:
         raise SystemExit("no release date for %s" % ", ".join(missing))
     ordered = sorted(models, key=lambda m: (dates[m], m))
+    if window:
+        ordered = ordered[-window:]
     return ordered[:TRAIN_COUNT], ordered[TRAIN_COUNT:]
 
 
@@ -118,7 +122,9 @@ def random_baseline(by, test, full, size, draws, rng) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--table", type=Path, required=True)
-    parser.add_argument("--epoch-zip", type=Path, required=True)
+    parser.add_argument("--epoch-zip", type=Path, help="release dates from Epoch AI's bundle")
+    parser.add_argument("--dates-json", type=Path, help="release dates as a JSON object {model: YYYY-MM-DD}")
+    parser.add_argument("--window", type=int, help="keep only this many most recent models")
     parser.add_argument("--benchmark", required=True)
     parser.add_argument("--out", type=Path, required=True)
     args = parser.parse_args()
@@ -126,7 +132,13 @@ def main() -> None:
     by = load_table(args.table)
     models = sorted(by)
     items = sorted(set.intersection(*(set(by[m]) for m in models)))
-    train, test = split(models, release_dates(args.epoch_zip, args.benchmark))
+    if args.dates_json:
+        dates = json.loads(args.dates_json.read_text(encoding="utf-8"))
+    elif args.epoch_zip:
+        dates = release_dates(args.epoch_zip, args.benchmark)
+    else:
+        raise SystemExit("give --epoch-zip or --dates-json")
+    train, test = split(models, dates, args.window)
     rules = select(by, train, items)
     rng = random.Random(SEED)
     record = {"record_version": "RA-PSI-COMPRESSION-V1", "benchmark": args.benchmark, "items": len(items),
