@@ -98,7 +98,7 @@ def draft(model: str, date: str, results: list[dict], snapshot: str) -> str:
                      % (r["benchmark"], r["score_pct"], r["rank"], r["models_compared"], r["best_other"],
                         r["best_other_pct"], r["gap_pts"], lo, hi, r["reading"]))
     head = ["# Draft barometer post: %s" % model, "",
-            "Draft only. Nothing has been published. Rubens approves before any publication; run "
+            "Draft only. Nothing has been published. the owner approves each publication; run "
             "`check_outbound_claims.py` on the final text.", ""]
     return "\n".join(head + fr + [""] + en + [""] + table) + "\n"
 

@@ -162,7 +162,7 @@ th{font-weight:600}.num{text-align:right;font-variant-numeric:tabular-nums;white
 def page(title: str, body: str) -> str:
     return ("<!DOCTYPE html><html lang=fr><head><meta charset=utf-8><meta name=viewport content='width=device-width, initial-scale=1'>"
             "<title>%s</title><style>%s</style></head><body><main class=wrap>%s"
-            "<p class='small soft'>Item Audit — rubens.alphe0@gmail.com. Méthode : analyse classique des items "
+            "<p class='small soft'>Item Audit. Méthode : analyse classique des items "
             "(taux de réussite, corrélation point-bisériale corrigée, KR-20). Un signal dit quoi relire ; il ne prouve pas "
             "l'erreur. Ce rapport n'est pas une certification de votre examen.</p></main></body></html>"
             % (html.escape(title), STYLE, body))

@@ -83,8 +83,7 @@ def note(org: str, records: list[dict], contact: str, calculator: str) -> str:
              "",
              "If this isn't relevant, a one-word reply is enough and I won't write again.",
              "",
-             "Rubens Alphe",
-             "Item Audit",
+             "L'équipe Item Audit",
              contact]
     subject = "%s: which of your benchmark gaps are established?" % main["model"].split("/", 1)[1]
     return "\n".join(["## %s" % org, "",
