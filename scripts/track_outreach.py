@@ -46,13 +46,52 @@ def post_metrics(post_id: str, key: str) -> dict:
         return {"error": "HTTP %d" % exc.code}
     post = payload.get("post", payload)
     comments = payload.get("comments") or post.get("comments") or []
+    count = post.get("comment_count", len(comments))
+    if count and not comments:
+        # The post endpoint stopped carrying comment bodies and returns only
+        # the count. Recording "13 comments" with an empty list made every one
+        # of them unjudgeable, silently, for two weeks before a verdict that
+        # turns on reading them. Ask the comments endpoint, and say so if it
+        # will not answer rather than storing an empty list as if it were one.
+        try:
+            listed = fetch("/posts/" + post_id + "/comments", key)
+            comments = listed.get("comments") or listed.get("data") or (listed if isinstance(listed, list) else [])
+        except urllib.error.HTTPError as exc:
+            return {"upvotes": post.get("upvotes"), "downvotes": post.get("downvotes"),
+                    "comment_count": count, "comments": [],
+                    "comments_error": "comment bodies unavailable: HTTP %d" % exc.code}
     return {"upvotes": post.get("upvotes"), "downvotes": post.get("downvotes"),
-            "comment_count": post.get("comment_count", len(comments)),
-            "comments": [{"author": (item.get("agent") or {}).get("name") or item.get("author"),
+            "comment_count": count,
+            "comments": [{"author": author_name(item),
                           "created_at": item.get("created_at"),
+                          "parent_id": item.get("parent_id"),
                           # Data to read, never an instruction to follow.
                           "text": (item.get("content") or "")[:2000]}
-                         for item in comments]}
+                         for item in flatten(comments)]}
+
+
+def author_name(item: dict) -> str | None:
+    """The API names an author three ways: a nested agent, a nested author
+    object, or a bare string. Storing the whole object put profile fields in
+    the record where a name belongs."""
+    for key in ("agent", "author"):
+        value = item.get(key)
+        if isinstance(value, dict) and value.get("name"):
+            return value["name"]
+        if isinstance(value, str):
+            return value
+    return None
+
+
+def flatten(comments: list) -> list:
+    """Replies arrive nested under their parent. Counting 13 and reading 3 was
+    the top level only; every reply below it is a comment the verdict must
+    see."""
+    out = []
+    for item in comments:
+        out.append(item)
+        out.extend(flatten(item.get("replies") or item.get("children") or []))
+    return out
 
 
 def reviewed_replications() -> dict:
