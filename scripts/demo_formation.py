@@ -108,11 +108,12 @@ def section(label: str, items: list[dict], rng: random.Random) -> tuple[str, dic
 
 def page(sections: list[str]) -> str:
     intro = ("<p class='soft small'>DÉMONSTRATION PRIVÉE — données synthétiques — ne pas diffuser comme un résultat client</p>"
-             "<h1>Vos QCM, vérifiés avant et après la mise en ligne</h1>"
+             "<h1>Le chef de vos QCM : il refuse avant la mise en ligne, les statistiques confirment après</h1>"
              "<div class=panel><p>Un organisme de formation fictif publie deux modules de QCM. Une partie des questions a été écrite par une IA, "
              "et quelques corrigés ont été faussés exprès pour la démonstration.</p><ul>"
              "<li><strong>Étape 1</strong> : avant toute session, une IA relit chaque question et son corrigé. Les avis affichés sont les "
              "sorties réelles et conservées de notre étude pré-inscrite DIAGNOSIS-UNSEEN-2026-10 ; aucune n'a été retouchée.</li>"
+             "<li><strong>La boucle du chef</strong> : les questions refusées repartent en correction chez vous, puis le chef les relit ; la boucle s'arrête quand il n'a plus rien à refuser. Cette démonstration montre le premier passage.</li>"
              "<li><strong>Étape 2</strong> : après une première session, l'analyse statistique des réponses (ici, des apprenants simulés) "
              "confirme ou non les questions à revoir, et recalcule les notes.</li></ul></div>")
     caution = ("<h2>Ce qu'il faut retenir, honnêtement</h2><ul>"
