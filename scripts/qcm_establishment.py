@@ -37,7 +37,10 @@ def build(src: Path, out: Path, name: str) -> dict:
     exams = []
     for path in sorted(src.glob("*.csv")):
         meta = describe(path)
-        data = qr.parse(path.read_text(encoding="utf-8-sig"))
+        try:
+            data = qr.parse(path.read_text(encoding="utf-8-sig"))
+        except qr.InputError as exc:
+            raise SystemExit("%s refusé : %s" % (path.name, exc))
         result = qr.analyse(data)
         report = "rapport-%s.html" % qr.strip_accents(path.stem).replace(" ", "_")
         (out / report).write_text(qr.single_report("%s — %s — %s" % (meta["subject"], meta["class"], meta["date"]), data, result),

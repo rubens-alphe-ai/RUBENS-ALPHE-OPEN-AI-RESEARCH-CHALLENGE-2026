@@ -38,28 +38,59 @@ def strip_accents(text: str) -> str:
     return "".join(c for c in unicodedata.normalize("NFD", text) if unicodedata.category(c) != "Mn")
 
 
+class InputError(ValueError):
+    """The file does not follow the input contract; the message says what to fix."""
+
+
 def parse(text: str) -> dict:
+    """Read a class file under a strict contract, refusing anything it would have to guess.
+
+    - A header row with a name column and at least two questions.
+    - At most one key row (CORRIGÉ / CLÉ / KEY / RÉPONSES), with an answer for
+      every question.
+    - Every row has exactly as many cells as the header.
+    - With a key: an empty answer means "no answer" and is marked wrong.
+    - Without a key: every cell is 0 or 1. Letters, partial credit (0.5) and
+      empty cells are refused, because their meaning would be a guess.
+    """
     lines = [l for l in text.replace("\r", "").split("\n") if l.strip()]
     if len(lines) < 3:
-        raise SystemExit("need a header and at least two rows")
+        raise InputError("Il faut une ligne d'en-tête et au moins deux lignes de réponses.")
     sep = max([";", "\t", ","], key=lambda s: lines[0].count(s))
     rows = [[c.strip() for c in l.split(sep)] for l in lines]
+    width = len(rows[0])
     head = rows[0][1:]
+    if len(head) < 2 or any(not q for q in head):
+        raise InputError("L'en-tête doit nommer au moins deux questions, sans colonne vide.")
     key, people = None, []
-    for r in rows[1:]:
+    for number, r in enumerate(rows[1:], start=2):
+        if len(r) != width:
+            raise InputError("Ligne %d : %d cases au lieu de %d. Chaque ligne doit avoir autant de cases que l'en-tête."
+                             % (number, len(r), width))
         if strip_accents(r[0]).upper() in KEY_NAMES:
+            if key is not None:
+                raise InputError("Ligne %d : une deuxième ligne de corrigé. Il n'en faut qu'une." % number)
             key = [c.upper() for c in r[1:]]
+            if any(not c for c in key):
+                raise InputError("Ligne %d : le corrigé doit donner une réponse pour chaque question." % number)
         else:
-            people.append(r)
-    names = [r[0] for r in people]
+            people.append((number, r))
+    if len(people) < 5:
+        raise InputError("Il faut au moins cinq répondants pour qu'une statistique ait un sens.")
+    names = [r[0] for _, r in people]
     if key is None:
-        scored = [[1 if (r[j + 1] if j + 1 < len(r) else "") == "1" else 0 for j in range(len(head))] for r in people]
+        scored = []
+        for number, r in people:
+            cells = r[1:]
+            bad = [c for c in cells if c not in ("0", "1")]
+            if bad:
+                raise InputError("Ligne %d : « %s » n'est ni 0 ni 1. Sans ligne de corrigé, chaque case doit valoir 0 ou 1 "
+                                 "(pas de lettre, de case vide ni de note partielle)." % (number, bad[0]))
+            scored.append([int(c) for c in cells])
         answers = None
     else:
-        answers = [[(r[j + 1] if j + 1 < len(r) else "").upper() for j in range(len(head))] for r in people]
+        answers = [[c.upper() for c in r[1:]] for _, r in people]
         scored = [[1 if a and a == key[j] else 0 for j, a in enumerate(row)] for row in answers]
-    if len(scored) < 5:
-        raise SystemExit("need at least five respondents")
     return {"head": head, "key": key, "names": names, "answers": answers, "scored": scored}
 
 
@@ -177,7 +208,7 @@ def single_report(name: str, d: dict, a: dict) -> str:
     if suspects:
         summary.append("<li><strong>Corrigé suspect :</strong> %s. Les élèves les plus forts y choisissent majoritairement une "
                        "autre lettre que celle du corrigé.</li>" % ", ".join(
-                           "%s (corrigé %s, les plus forts répondent %s)" % (e(it["q"]), d["key"][it["j"]], it["suggestion"]) for it in suspects))
+                           "%s (corrigé %s, les plus forts répondent %s)" % (e(it["q"]), e(d["key"][it["j"]]), e(it["suggestion"])) for it in suspects))
     if weak:
         summary.append("<li><strong>À relire :</strong> %s. Elles ne départagent pas les élèves, ou les forts y réussissent "
                        "moins bien.</li>" % ", ".join(e(it["q"]) for it in weak))
@@ -195,10 +226,10 @@ def single_report(name: str, d: dict, a: dict) -> str:
         if it["dist"]:
             def fmt(c):
                 total = sum(c.values())
-                return " · ".join("%s %d %%" % (k, round(100 * v / total)) for k, v in sorted(c.items()))
+                return " · ".join("%s %d %%" % (e(k), round(100 * v / total)) for k, v in sorted(c.items()))
             dist = "Plus forts : %s<br>Plus faibles : %s" % (fmt(it["dist"]["top"]), fmt(it["dist"]["bottom"]))
         rows.append("<tr><td><strong>%s</strong>%s</td><td class=num>%d %%</td><td class=num>%s</td><td class=l%d>%s</td><td class=small>%s</td></tr>"
-                    % (e(it["q"]), " (corrigé %s)" % d["key"][it["j"]] if d["key"] else "", round(100 * it["p"]), fr(it["r"]),
+                    % (e(it["q"]), " (corrigé %s)" % e(d["key"][it["j"]]) if d["key"] else "", round(100 * it["p"]), fr(it["r"]),
                        it["level"], it["verdict"], dist))
     srows = []
     for s in a["students"]:
@@ -264,7 +295,10 @@ def main() -> None:
     parser.add_argument("files", nargs="+", type=Path, help="one CSV per session, oldest first")
     parser.add_argument("--out", type=Path, required=True)
     args = parser.parse_args()
-    parsed = [parse(f.read_text(encoding="utf-8-sig")) for f in args.files]
+    try:
+        parsed = [parse(f.read_text(encoding="utf-8-sig")) for f in args.files]
+    except InputError as exc:
+        raise SystemExit("Fichier refusé : %s" % exc)
     analyses = [analyse(d) for d in parsed]
     if len(args.files) == 1:
         out = single_report(args.files[0].stem, parsed[0], analyses[0])
