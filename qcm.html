@@ -94,7 +94,7 @@ a { color: var(--blue); }
     <h2 id="in-title">Vos réponses</h2>
     <span class="example" id="example-note">Exemple chargé : une classe fictive de 28 élèves, 12 questions</span>
     <textarea id="data" spellcheck="false" aria-describedby="format-hint"></textarea>
-    <p class="hint" id="format-hint">Format : une ligne d'en-tête (Nom, Q1, Q2…), une ligne <strong>CORRIGÉ</strong> avec les bonnes lettres, puis une ligne par élève avec ses lettres. Les cases vides comptent comme fausses. Vous pouvez aussi coller des 0 et des 1 (sans ligne CORRIGÉ). Séparateurs acceptés : point-virgule, virgule ou tabulation (copier-coller depuis Excel).</p>
+    <p class="hint" id="format-hint">Format : une ligne d'en-tête (Nom, Q1, Q2…), une ligne <strong>CORRIGÉ</strong> avec les bonnes lettres, puis une ligne par élève avec ses lettres. Une réponse vide compte comme fausse. Vous pouvez aussi coller des 0 et des 1 sans ligne CORRIGÉ (sans case vide ni note partielle). Séparateurs acceptés : point-virgule, virgule ou tabulation (copier-coller depuis Excel).</p>
     <div class="row">
       <button id="analyse" type="button">Analyser</button>
       <label class="file" for="file">Ouvrir un fichier CSV<input id="file" type="file" accept=".csv,.txt,.tsv"></label>
@@ -172,9 +172,14 @@ a { color: var(--blue); }
     var head = rows[0].slice(1);
     if (head.length < 3) throw new Error("Il faut au moins 3 questions (colonnes après le nom).");
     var keyRow = null, people = [];
-    rows.slice(1).forEach(function (r) {
+    rows.slice(1).forEach(function (r, i) {
+      if (r.length !== rows[0].length) throw new Error("Ligne " + (i + 2) + " : " + r.length + " cases au lieu de " + rows[0].length + ". Chaque ligne doit avoir autant de cases que l'en-tête.");
       var name = (r[0] || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toUpperCase();
-      if (name === "CORRIGE" || name === "CLE" || name === "KEY" || name === "REPONSES") keyRow = r.slice(1);
+      if (name === "CORRIGE" || name === "CLE" || name === "KEY" || name === "REPONSES") {
+        if (keyRow) throw new Error("Ligne " + (i + 2) + " : une deuxième ligne de corrigé. Il n'en faut qu'une.");
+        keyRow = r.slice(1);
+        if (keyRow.some(function (c) { return !c; })) throw new Error("Le corrigé doit donner une réponse pour chaque question.");
+      }
       else people.push(r);
     });
     var binary = !keyRow;
@@ -182,7 +187,7 @@ a { color: var(--blue); }
       return head.map(function (_, j) {
         var v = (r[j + 1] || "").toUpperCase();
         if (binary) {
-          if (v !== "0" && v !== "1" && v !== "") throw new Error("Sans ligne CORRIGÉ, chaque case doit valoir 0 ou 1 (« " + v + " » trouvé ligne " + r[0] + ").");
+          if (v !== "0" && v !== "1") throw new Error("Sans ligne CORRIGÉ, chaque case doit valoir 0 ou 1, sans case vide ni note partielle (« " + v + " » trouvé pour " + r[0] + ").");
           return v === "1" ? 1 : 0;
         }
         return v && v === (keyRow[j] || "").toUpperCase() ? 1 : 0;
@@ -254,7 +259,7 @@ a { color: var(--blue); }
       rows.map(function (it) {
         var cls = it.level === 3 ? "pen" : it.level >= 1 ? "amber" : "ok";
         var hint = "";
-        if (it.suggestion && it.level === 3) hint = "Les meilleurs élèves répondent surtout <strong>" + it.suggestion.letter + "</strong> (" + Math.round(100 * it.suggestion.share) + " %) alors que le corrigé dit <strong>" + (it.suggestion.keyed || "—") + "</strong>. Vérifiez si la bonne réponse n'est pas " + it.suggestion.letter + ".";
+        if (it.suggestion && it.level === 3) hint = "Les meilleurs élèves répondent surtout <strong>" + esc(it.suggestion.letter) + "</strong> (" + Math.round(100 * it.suggestion.share) + " %) alors que le corrigé dit <strong>" + esc(it.suggestion.keyed || "—") + "</strong>. Vérifiez si la bonne réponse n'est pas " + esc(it.suggestion.letter) + ".";
         else if (it.verdict === "À relire") hint = "Les élèves forts la réussissent un peu moins que les autres : relisez l'énoncé et le corrigé, sans conclure trop vite.";
         else if (it.level === 2) hint = "Réussie ou ratée au hasard : énoncé ambigu, ou question qui ne mesure pas la même chose que le reste.";
         else if (it.verdict === "Très facile") hint = "Presque tout le monde réussit : utile pour rassurer, inutile pour classer.";
