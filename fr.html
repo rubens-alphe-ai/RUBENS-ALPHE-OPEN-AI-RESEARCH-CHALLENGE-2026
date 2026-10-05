@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Item Audit</title>
 <meta name="description" content="Nous repérons les questions mal corrigées dans vos QCM, avant et après la mise en ligne, et nous vous disons si l'IA que vous payez vaut vraiment son prix.">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -36,17 +36,27 @@ expliquons pourquoi, avant que vos apprenants ne les découvrent.</p>
 <h2 id="exemple">Un exemple concret</h2>
 
 <div class="panel qcm-example">
-<p class="small soft">Exemple fictif, tiré de notre démonstration.</p>
-<p><strong>Dans une formule Excel, à quoi sert le symbole $ dans <code>$A$1</code>&nbsp;?</strong></p>
+<p class="small soft">Exemple fictif.</p>
+
+<p class="stage">1. La question, telle qu'elle a été publiée</p>
+<p><strong>Quelle est la capitale de l'Australie&nbsp;?</strong></p>
 <ol type="A">
-<li>Convertir la valeur en devise monétaire</li>
-<li class="right">Figer la référence de la cellule quand on recopie la formule</li>
-<li class="wrong">Indiquer que la cellule contient une formule complexe <span>← corrigé publié</span></li>
-<li>Masquer la cellule à l'impression</li>
+<li class="wrong">Sydney <span>← corrigé publié</span></li>
+<li class="right">Canberra</li>
+<li>Melbourne</li>
+<li>Perth</li>
 </ol>
-<p><strong>Notre relecture&nbsp;:</strong> « Le symbole $ sert à figer la référence quand on recopie la
-formule&nbsp;: la bonne réponse est B, et non C. »</p>
-<p class="small soft">Avec ce corrigé, tous les apprenants qui savent utiliser Excel auraient perdu le point.</p>
+
+<p class="stage">2. Ce que nous vous signalons</p>
+<p class="verdict">«&nbsp;Corrigé probablement faux&nbsp;: la capitale de l'Australie est Canberra (B). Sydney est la plus grande ville, pas la capitale.&nbsp;»</p>
+
+<p class="stage">3. Ce que cela change pour vos élèves</p>
+<div class="scroll"><table>
+<tr><th>Élève</th><th>Réponse</th><th class="num">Avant</th><th class="num">Après</th></tr>
+<tr><td>Léa</td><td>Canberra</td><td class="num">0</td><td class="num"><strong>1</strong></td></tr>
+<tr><td>Hugo</td><td>Sydney</td><td class="num">1</td><td class="num"><strong>0</strong></td></tr>
+</table></div>
+<p class="small soft">Léa avait raison et perdait son point&nbsp;; Hugo se trompait et le gagnait. Une seule question mal corrigée suffit à fausser un classement.</p>
 </div>
 
 <h2>Comment ça marche</h2>
