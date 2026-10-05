@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Item Audit · Modèles d'IA</title>
+<meta name="description" content="Comparaison de modèles d'IA sur vos propres tâches : quels écarts sont statistiquement établis, et ce que coûte chaque choix. Les données peuvent rester chez vous.">
+<link rel="stylesheet" href="../style.css?v=4">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="./">Item Audit · IA</a>
+    <nav>
+      <a href="#resultat">Résultat</a>
+      <a href="#methode">Méthode</a>
+      <a href="#offres">Offres</a>
+      <a href="#donnees">Données</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<h1>Quel modèle d'IA, à quel prix, sur vos tâches à vous.</h1>
+
+<p class="lede">Nous comparons jusqu'à 5 modèles sur vos propres tâches, réponse par réponse. Vous savez quels écarts
+sont réels, lesquels ne sont que du bruit, et ce que chaque choix coûte au prix catalogue.</p>
+
+<div class="cta"><a class="btn" href="#contact">Parler de votre cas</a><a class="btn ghost" href="../exemple-rapport.html">Voir un exemple de rapport</a></div>
+
+<h2 id="resultat">Un résultat récent</h2>
+
+<p>6 modèles sur 300 tâches de bureau en français dont la réponse est calculée (factures, congés RH, délais juridiques,
+service client, dosages). Protocole fixé et publié avant de lancer les modèles.</p>
+
+<div class="scroll"><table>
+<tr><th>Modèle</th><th class="num">Réussite</th><th class="num">Prix<th class="num">Prix catalogue (entrée / sortie, $ par million de jetons)</th>nbsp;$/M jetons (entrée / sortie)</th></tr>
+<tr><td>openai/gpt-6.1-sol</td><td class="num">99,7&nbsp;%</td><td class="num">2,00 / 10,00</td></tr>
+<tr><td>anthropic/claude-sonnet-5.5</td><td class="num">99,0&nbsp;%</td><td class="num">2,00 / 10,00</td></tr>
+<tr><td><strong>openai/gpt-6-luna</strong></td><td class="num"><strong>99,0&nbsp;%</strong></td><td class="num"><strong>0,10 / 0,50</strong></td></tr>
+<tr><td>google/gemini-3.5-flash</td><td class="num">97,0&nbsp;%</td><td class="num">1,50 / 9,00</td></tr>
+<tr><td>deepseek/deepseek-v4-pro</td><td class="num">94,3&nbsp;%</td><td class="num">0,21 / 0,42</td></tr>
+<tr><td>mistralai/mistral-medium-3.1</td><td class="num">93,3&nbsp;%</td><td class="num">0,40 / 2,00</td></tr>
+</table></div>
+
+<ul>
+<li><strong>Le modèle d'entrée de gamme (gpt-6-luna) n'est pas démontré derrière les deux modèles phares</strong>, pour un prix
+catalogue 20 fois plus bas. Ne pas être démontré derrière ne veut pas dire être aussi bon&nbsp;: il faudrait environ
+1&nbsp;200 tâches pour détecter un écart de cette taille.</li>
+<li>Deux modèles sont démontrés derrière les trois premiers (écarts de 4,7 à 6,3 points, test de McNemar exact).</li>
+<li>261 tâches sur 300 donnent le même résultat à tous&nbsp;: le classement se joue sur 39 tâches.</li>
+</ul>
+
+<div class="limit">
+<p><strong>Ce résultat vaut pour ces tâches et ces réglages</strong> (effort de raisonnement faible, 2&nbsp;000 jetons de
+sortie, une réponse manquante compte comme fausse). Sur vos tâches, l'ordre peut être différent&nbsp;: c'est exactement
+ce que nous mesurons.</p>
+</div>
+<span class="src">Source&nbsp;: étude FR-BUSINESS-2026-10, réponses brutes et analyse fournies sur demande.</span>
+
+<p>Plus largement, les classements publics tranchent rarement&nbsp;: sur 10 des 13 benchmarks publiés par Epoch AI,
+le premier modèle n'est pas séparable du cinquième avec les barres d'erreur publiées.</p>
+
+<h2 id="methode">Méthode</h2>
+
+<ol class="steps">
+<li><strong>Vos tâches.</strong> 100 à 300 cas représentatifs de votre usage, avec la réponse attendue ou une grille de correction. Nous pouvons les construire avec vous.</li>
+<li><strong>Les mêmes conditions pour tous.</strong> Même prompt, mêmes réglages, mêmes cas&nbsp;; chaque réponse est conservée.</li>
+<li><strong>Des comparaisons appariées.</strong> Chaque paire de modèles est comparée cas par cas (test exact), avec l'écart et son intervalle de confiance.</li>
+<li><strong>Un rapport lisible par un décideur.</strong> Les écarts établis, ceux qui ne le sont pas, le coût par cas, et ce qu'il faudrait mesurer pour trancher.</li>
+</ol>
+
+<p class="small soft">Nous ne transformons jamais «&nbsp;pas d'écart démontré&nbsp;» en «&nbsp;équivalent&nbsp;». Conclure qu'aucun écart n'est
+établi est un résultat livré, et souvent le plus utile&nbsp;: il évite de payer plus cher sans raison.</p>
+
+<h2 id="offres">Offres</h2>
+
+<div class="scroll"><table>
+<tr><th>Offre</th><th class="num">Prix HT</th><th>Délai</th></tr>
+<tr><td><strong>Choix de modèle vérifié</strong>&nbsp;: jusqu'à 5 modèles sur vos tâches, rapport et restitution</td><td class="num price">4 900 €</td><td>3 semaines</td></tr>
+<tr><td><strong>Vérification d'un écart</strong>&nbsp;: un écart annoncé entre deux modèles tient-il sur vos résultats cas par cas&nbsp;?</td><td class="num price">1 500 €</td><td>48 h</td></tr>
+<tr><td><strong>Veille modèles</strong>&nbsp;: à chaque nouvelle sortie, le nouveau modèle testé sur vos tâches en 48&nbsp;h</td><td class="num price">1 200 €/mois</td><td>en continu</td></tr>
+</table></div>
+
+<p class="small soft">Nos cinq premiers clients paient moitié prix, en échange d'un court témoignage.</p>
+
+<h2 id="donnees">Vos données</h2>
+
+<ul>
+<li><strong>Elles peuvent rester chez vous.</strong> Nos scripts peuvent tourner sur votre infrastructure, avec vos clés d'API&nbsp;; nous n'avons alors besoin que des résultats cas par cas.</li>
+<li>Sinon, nous utilisons uniquement les données que vous choisissez de nous confier, sous accord de confidentialité, et nous les supprimons après la mission.</li>
+<li>Aucun résultat client n'est publié sans accord écrit.</li>
+</ul>
+
+<div class="panel" id="contact">
+<p><strong>Décrivez votre usage en deux lignes</strong> (tâche, modèles envisagés, volume)&nbsp;: nous vous disons si une comparaison
+peut trancher, et ce qu'elle ne pourra pas dire. <code>contact@itemaudit.fr</code></p>
+</div>
+
+<p class="small soft">Item Audit audite aussi des questionnaires et des tests&nbsp;: <a href="../fr.html">itemaudit.fr</a>.</p>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>Aucun traceur, aucun cookie sur ce site.</p>
+  </div>
+</footer>
+
+</body>
+</html>
