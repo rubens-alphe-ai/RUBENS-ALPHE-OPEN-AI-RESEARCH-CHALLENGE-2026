@@ -391,3 +391,25 @@ footer.site p { color: var(--ink-soft); }
 .choice span { color: var(--ink-soft); font-size: 0.92rem; }
 .choice em { font-style: normal; color: var(--accent); font-weight: 700; font-size: 0.9rem; }
 @media (prefers-reduced-motion: reduce) { .choice, .choice:hover { transition: none; transform: none; } }
+
+/* Home page: a worked QCM example, numbered steps, short FAQ */
+.qcm-example ol { padding-left: 1.6rem; }
+.qcm-example li { margin: 0.3rem 0; }
+.qcm-example li.right { color: var(--ok); font-weight: 600; }
+.qcm-example li.wrong { text-decoration: line-through; text-decoration-color: var(--warn-edge); }
+.qcm-example li.wrong span { text-decoration: none; display: inline-block; color: var(--warn-edge); font-size: 0.88rem; font-weight: 600; }
+
+.steps { counter-reset: step; list-style: none; padding-left: 0; }
+.steps li { counter-increment: step; position: relative; padding-left: 2.6rem; margin: 0.9rem 0; }
+.steps li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: 0.05rem;
+  width: 1.8rem; height: 1.8rem; border-radius: 50%;
+  display: grid; place-items: center;
+  font: 800 0.95rem/1 var(--display);
+  background: var(--accent-soft); color: var(--accent);
+}
+
+.faq details { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 0.7rem 1rem; margin: 0.5rem 0; }
+.faq summary { cursor: pointer; font-weight: 600; }
+.faq details p { margin: 0.6rem 0 0; color: var(--ink-soft); }
