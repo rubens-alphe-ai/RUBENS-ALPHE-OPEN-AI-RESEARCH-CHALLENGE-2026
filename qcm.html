@@ -107,6 +107,7 @@ a { color: var(--blue); }
     <h2 id="out-title">Le diagnostic</h2>
     <div class="tiles" id="tiles"></div>
     <p class="banner" id="banner" hidden></p>
+    <p class="banner" id="balance" hidden></p>
     <div class="scroll"><table id="table"></table></div>
     <p class="hint">Discrimination : corrélation entre la réussite à la question et le reste du test. Négative, elle veut dire que les élèves les plus forts réussissent <em>moins</em> cette question que les autres : c'est la signature habituelle d'un corrigé faux ou d'une question piège. Un signal dit quoi relire en premier ; il ne prouve pas l'erreur.</p>
   </section>
@@ -238,7 +239,26 @@ a { color: var(--blue); }
     var mean = totals.reduce(function (a, b) { return a + b; }, 0) / n;
     var variance = totals.reduce(function (a, t) { return a + (t - mean) * (t - mean); }, 0) / n;
     var kr20 = variance > 0 ? (k / (k - 1)) * (1 - pq / variance) : null;
-    return { n: n, k: k, items: items, mean: mean, kr20: kr20 };
+    return { n: n, k: k, items: items, mean: mean, kr20: kr20, balance: balance(d) };
+  }
+
+  // One letter holding the answer more often than chance allows: exact binomial tail, Bonferroni over the letters, p < 0.01.
+  // The number of options is taken as the highest letter seen in the key or the answers (at least 4).
+  function balance(d) {
+    if (!d.answers) return null;
+    var keys = d.key.map(function (c) { return (c || "").toUpperCase(); }).filter(function (c) { return /^[A-Z]$/.test(c); });
+    if (keys.length < 10) return null;
+    var seen = keys.concat([].concat.apply([], d.answers)).filter(function (c) { return /^[A-Z]$/.test(c); });
+    var m = Math.max(4, Math.max.apply(null, seen.map(function (c) { return c.charCodeAt(0) - 64; })));
+    var counts = {};
+    keys.forEach(function (c) { counts[c] = (counts[c] || 0) + 1; });
+    var top = Object.keys(counts).sort(function (a, b) { return counts[b] - counts[a]; })[0];
+    var n = keys.length, x = counts[top], q = 1 / m, pmf = Math.pow(1 - q, n), tail = 0;
+    for (var j = 0; j <= n; j++) {
+      if (j >= x) tail += pmf;
+      pmf = pmf * (n - j) / (j + 1) * q / (1 - q);
+    }
+    return tail * m < 0.01 ? { letter: top, x: x, n: n, m: m } : null;
   }
 
   function render(res) {
@@ -254,6 +274,10 @@ a { color: var(--blue); }
       banner.hidden = false;
       banner.textContent = "Avec moins de 30 répondants, les signaux sont moins sûrs : dans nos mesures à 20 répondants, environ 1 question saine sur 7 recevait une discrimination négative par hasard, alors que presque tous les vrais corrigés faux en recevaient une. Relisez les questions signalées avant de conclure.";
     } else banner.hidden = true;
+    var b = res.balance, box = $("balance");
+    box.hidden = !b;
+    box.textContent = !b ? "" : "La bonne réponse est " + b.letter + " dans " + b.x + " questions sur " + b.n + ". Un candidat qui répondrait toujours " +
+      b.letter + " obtiendrait " + Math.round(100 * b.x / b.n) + " %, au lieu d'environ " + Math.round(100 / b.m) + " % au hasard. Répartissez les bonnes réponses entre les lettres.";
     var rows = res.items.slice().sort(function (a, b) { return b.level - a.level || (a.r === null ? -1 : b.r === null ? 1 : a.r - b.r); });
     $("table").innerHTML = "<tr><th>Question</th><th>Réussite</th><th>Discrimination</th><th>Diagnostic</th><th>Piste</th></tr>" +
       rows.map(function (it) {
