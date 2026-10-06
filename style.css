@@ -359,8 +359,13 @@ footer.site p { color: var(--ink-soft); }
 @media (max-width: 560px) {
   body { font-size: 16px; }
   .wrap { padding-inline: 16px; }
-  header.site .wrap { gap: 0.6rem; }
+  /* On a phone every menu item stays visible: the menu wraps under the brand instead of scrolling sideways
+     with a hidden scrollbar, which visitors never discover. The header no longer sticks, to keep the screen. */
+  header.site { position: static; }
+  header.site .wrap { gap: 0.4rem; flex-wrap: wrap; }
   .brand { font-size: 1rem; }
+  nav { flex-wrap: wrap; overflow: visible; margin-left: 0; width: 100%; gap: 0.2rem; }
+  nav a { padding: 0.38rem 0.6rem; font-size: 0.88rem; }
   h2 { font-size: 1.28rem; }
   .lede { font-size: 1.08rem; }
 }
