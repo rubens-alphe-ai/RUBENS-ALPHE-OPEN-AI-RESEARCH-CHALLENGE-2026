@@ -1,6 +1,6 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-10-08T04:35:24.975176+00:00",
+  "generated_at_utc": "2026-10-09T04:35:54.904115+00:00",
   "source": "OpenAlex public API",
   "queries": [
     "persistent agent memory",
@@ -9,36 +9,6 @@
     "metacognition self-improving AI agents"
   ],
   "papers": [
-    {
-      "title": "DevMemory: A Structured Memory Management Architecture for Persistent Knowledge in AI Coding Agents",
-      "url": "https://doi.org/10.5281/zenodo.19324575",
-      "openalex_id": "https://openalex.org/W7143401746",
-      "doi": "https://doi.org/10.5281/zenodo.19324575",
-      "published": "2026-10-22",
-      "summary": "AI coding agents operate without persistent memory; useful outputs produced in one session are unavailable in the next, and information from one project never transfers to another. We present DevMemory, a structured memory management architecture that brings trust-scored, cross-scope knowledge retrieval to AI coding agents. Borrowing organizational categories from Tulving’s (1972) episodic-semantic-procedural taxonomy in cognitive psychology, DevMemory classifies stored information into three types across three hierarchical scopes (agent, project, organizational), governed by a formal trust scoring model with temporal decay, contradiction handling, and reinforcement-based promotion. The architecture introduces four key contributions: (1) a principled adaptation of cognitive memory categories to software development retrieval contexts, (2) a continuous trust function that computes information reliability as a product of provenance, recency, contradiction, and reinforcement signals, (3) a token-efficient retrieval pipeline that deduplicates and budget-packs results to maximize information density within context window constraints, and (4) a tool interface design that consolidates 17 operations into 5 LLM-optimized tools, reducing system prompt overhead by 33%. The system is implemented as an open-source MCP (Model Context Protocol) server, validated by 325 automated tests spannin",
-      "relevance_score": 12,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "ceceli33/titan-cognitive-core-v2: AKBASCORE MAM — Persistent Associative Machine Memory: Endogenous Recall Traces and 128-Way Model-Native Numerical Memory Retrieval",
-      "url": "https://doi.org/10.5281/zenodo.23127433",
-      "openalex_id": "https://openalex.org/W7219141203",
-      "doi": "https://doi.org/10.5281/zenodo.23127433",
-      "published": "2026-10-06",
-      "summary": "AKBASCORE MAM — PERSISTENT ASSOCIATIVE MACHINE MEMORY Public Technical Disclosure · Reproducible Implementation · Experimental Record · 2026 Developer / Technical Origin: Mustafa Akbaş Project: AKBASCORE MAM — Persistent Associative Machine Memory Reference Model: Qwen/Qwen2.5-7B-Instruct Experimental Lineage: TEST523 → TEST524 This release publicly documents and provides an executable implementation of AKBASCORE MAM, an experimental external-memory architecture in which a frozen transformer participates directly in the formation and associative retrieval of model-derived numerical memory without modifying its model weights. The disclosed mechanism separates source-derived memory from the trainable parameters of the language model and from the original human-readable source used to form that memory. In the demonstrated configuration, a natural-language question interacts with an active numerical A memory inside a frozen Qwen2.5-7B-Instruct model. Native question-dependent attention at layer 23, head 12 (L23H12) produces an endogenous recall trace designated ÇAĞRIİZ. That trace weights the active A memory's layer-2 V state and forms a 512-number numerical address. The resulting address is compared by maximum cosine similarity against independently forged numerical address structures belonging to all 128 B memories in the experimental bank. The highest numerical match selects the",
-      "relevance_score": 11,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "History Is Not Memory: Stake, continual learning, and persistent AI agents",
-      "url": "https://doi.org/10.5281/zenodo.23170702",
-      "openalex_id": "https://openalex.org/W7220357627",
-      "doi": "https://doi.org/10.5281/zenodo.23170702",
-      "published": "2026-10-06",
-      "summary": "The preprint of History Is Not Memory: Stake, continual learning, and persistent AI agents, with the verifiable records that stand behind every number in it. Persistent AI agents keep memories, update their weights and carry self-descriptions from one session to the next, which makes them look historical. The paper asks what that history is made of, and measures it. Replace an agent's accumulated state with an equivalent copy and record the residue, defined against the noise of an independent replay: a short proposition shows that an exact copy of a digital state leaves zero residue whenever two assumptions hold — the state is completely enumerated, and the computation is the same wherever the copy runs. The measurement then runs, under a preregistration and two independent audits, on a language agent learning continually over 42 sessions with five simulated users. Its past sits in two carriers, memory and weights, and it is path dependent: after a preference reversal the old preference resists the new one. Halting the agent, resuming it in a new process or copying it left no residue, down to the last stored bit. Copying its memory alone lost most of what it knew. Its account of itself followed the memory file: with only its weights it acted on preferences it could not report, and with another user's memory it described that user's preferences as its own. Two registered expecta",
-      "relevance_score": 10,
-      "matched_query": "persistent agent memory"
-    },
     {
       "title": "kadubon/collective-intelligence-overlay: v0.5.1",
       "url": "https://doi.org/10.5281/zenodo.23007665",
@@ -60,14 +30,24 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Write-Time Admission Control for Persistent-Memory Security in LLM Agents",
-      "url": "https://doi.org/10.17632/m8xf3cdjwb.1",
-      "openalex_id": "https://openalex.org/W7165161310",
-      "doi": "https://doi.org/10.17632/m8xf3cdjwb.1",
-      "published": "2027-01-01",
-      "summary": "",
-      "relevance_score": 9,
+      "title": "Game theory driven multi-agent framework mitigates language model hallucination",
+      "url": "https://doi.org/10.1038/s41467-026-78213-5",
+      "openalex_id": "https://openalex.org/W7167903135",
+      "doi": "https://doi.org/10.1038/s41467-026-78213-5",
+      "published": "2026-10-07",
+      "summary": "The application of lightweight Large Language Models in rule-based scientific domains remains severely limited by their tendency to mimic linguistic patterns rather than reproduce axiomatic reasoning, causing frequent hallucinations. Here, we show that G-Frame, an adaptive multi-agent framework integrating Bayesian and team game principles, establishes an automated closed-loop for high-quality data synthesis and model training. By forcing the internalization of domain constraints through structured reasoning, we synthesized a specialized corpus of 363,045 chains-of-thought and 199,589 question-answer pairs. The resulting 7B model OmniChem achieves performance parity with GPT 4o mini on custom benchmarks and ChemBench while exhibiting a 79.46% reduction in hallucinations relative to its base architecture. We further demonstrate the advanced capabilities of OmniChem in molecular design and synthesis planning. This work establishes a scalable paradigm utilizing adaptive multi-agents to overcome inherent reasoning deficiencies, offering a feasible pathway for accelerating knowledge discovery in specialized scientific fields.",
+      "relevance_score": 8,
       "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "Authorship responsibilities of scientists who use AI research agents",
+      "url": "https://doi.org/10.3389/fgene.2026.1954843",
+      "openalex_id": "https://openalex.org/W7220861580",
+      "doi": "https://doi.org/10.3389/fgene.2026.1954843",
+      "published": "2026-10-07",
+      "summary": "The advent of artificial intelligence (AI) tools capable of performing research independently, which we call AI research agents (AIRAs) is likely to significantly impact how science is planned, performed, reviewed, evaluated, and communicated. However, the expected gains in efficiency and productivity from the deployment of AIRAs should not undermine science’s epistemic and ethical values, such as accountability, transparency, reproducibility, and rigor. In this paper, we revisit the AI authorship debate in light of the reported capabilities of AIRAs and argue that these tools do not qualify for authorship because they cannot be held morally responsible for their contributions. We also reject the use of the term “scientist” to refer to these tools and argue that human scientists who use AIRAs have three key authorship responsibilities: (1) to carefully oversee and manage AIRAs; (2) to accurately and appropriately disclose AIRAs’ contribution to research; and (3) to be accountable for research involving AIRAs by addressing questions and concerns raised by the scientific community and the public. Finally, we consider some related researcher responsibilities that are topics for future research, including the obligation to monitor, audit, and evaluate the performance of AIRAs and the obligation to address the social, economic, legal, and environmental implications of using AIRAs.",
+      "relevance_score": 7,
+      "matched_query": "metacognition self-improving AI agents"
     },
     {
       "title": "Hierarchical Multi-Agent Reasoning Systems for Knowledge-Grounded Material Substitution",
@@ -80,36 +60,6 @@
       "matched_query": "persistent agent memory"
     },
     {
-      "title": "Benchmark-Driven Selection of AI Can Improve Capabilities of Reasoning Language Models in Epistemology",
-      "url": "https://doi.org/10.1017/epi.2026.10139",
-      "openalex_id": "https://openalex.org/W7202140691",
-      "doi": "https://doi.org/10.1017/epi.2026.10139",
-      "published": "2026-10-06",
-      "summary": "Abstract Evaluation of reasoning language models gained importance after it was observed that they can combine their existing capabilities into novel traces of intermediate steps before task completion and that the traces can sometimes help them to generalize better than past models. We show that better performance results not only from test time algorithmic improvements or model sizes but also from letting tasks from impactful benchmarks inspire curricula for learning. We call this benchmark-driven selection of AI and show its effects on DeepSeek-R1, the first open-weight large reasoning model, using a novel sequential decision-making problem that we contributed to the philosophy category of Humanity’s Last Exam, a frontier academic AI benchmark. Steering development of AI by impactful benchmarks trades evaluation for learning and makes novelty of test tasks key for measuring generalization capabilities of reasoning models. Consequently, some benchmarks inspire curricula for post-training that improve external validity of the models. Understanding public benchmarks as mere test sets risks confusing unseen tasks measuring uncontaminated generalization with known tasks that improve external validity. This paper explores new avenues for experimentation in epistemology and shows that formal AI evaluation problems are helpful for understanding model capabilities and their evolution",
-      "relevance_score": 5,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "A context-aware multimodal multi-agent deep reinforcement learning framework for autonomous personalized education",
-      "url": "https://doi.org/10.1007/s10791-026-10639-3",
-      "openalex_id": "https://openalex.org/W7220374705",
-      "doi": "https://doi.org/10.1007/s10791-026-10639-3",
-      "published": "2026-10-05",
-      "summary": "Abstract This paper introduces the Context-Aware Multi-Agent Deep Reinforcement Learning (CA-MA-DRL) framework for personalised digital education, shifting from passive analytics to autonomous decision-making agents. The framework integrates Multimodal Learning Analytics with advanced coordination mechanisms, fusing heterogeneous data from LMS platforms, virtual classrooms, and AR/VR environments to construct context-aware representations capturing cognitive, affective, and behavioural states. Student and Teacher Agents employ DQN and Actor-Critic architectures with formalised negotiation protocols, while Human-in-the-loop oversight ensures instructor authority through explainable AI. This is a conceptual architecture paper: we contribute a fully specified design, a reference implementation configuration grounded in the authors’ previously validated CA-MA-DRL deployment, and a pre-specified multi-phase evaluation protocol, rather than a completed empirical study. A structured eight-dimension capability assessment—an analytical design comparison rather than a measurement of performance—indicates a substantially higher aggregate capability for CA-MA-DRL than for the LLM Multi-Agent and Rule-Based ITS baselines, with full per-dimension scores reported in the paper. The framework is designed to address the accuracy-scalability trade-off through shared policy networks with meta-lear",
-      "relevance_score": 5,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
-      "title": "Agency, Cognition and Mathematical Learning in Agentic Human–AI Ecosystems",
-      "url": "https://doi.org/10.12688/f1000research.190761.1",
-      "openalex_id": "https://openalex.org/W7220420722",
-      "doi": "https://doi.org/10.12688/f1000research.190761.1",
-      "published": "2026-10-05",
-      "summary": "Background The rise of artificial intelligence systems that can make their own goals plan several steps and take initiative in tasks that involve people is changing how students learn math. Earlier technology was mostly a tool thatwaited for instructions. Currently, agentic AI systems are becoming increasingly popular. They share the initiative to negotiate goals and help manage parts of learning with the student. This change raises several questions. How is agency shared? What does this mean for thinking? How good is the math understanding that comes from the long-term collaboration between humans and AI? Methods This article introduces an idea called the agency-cognition–mathematics (ACM) model. The model blends theories on agency, ideas on distributed and situated thinking, and research on how people learn math. It also examines research on agentic AI in education. Results This study shows how agency can be seen in a spectrum. On one end AI is a tool for this purpose. Finally, AI is a delegate who helps make decisions. It also explains how using AI to think and regulate learning changes how students practice metacognition. This article discusses how a student’s math identity and the power to know what they can do are either strengthened or weakened in environments where humans and AI work together. Conclusion This article offers design rules for teachers, thoughts on ethics,",
-      "relevance_score": 5,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
       "title": "Design and Evaluation of Lightweight Cryptographic Primitives for Secure Communication in Resource-Constrained LPWAN Devices",
       "url": "https://ecejournals.in/index.php/ESA/article/view/396",
       "openalex_id": "https://openalex.org/W7219816712",
@@ -118,6 +68,16 @@
       "summary": "The fast growth of Low-Power Wide-Area Networks (LPWANs) within the scope of Internet of Things (IoT) brought up the urgent questions of secure communications in highly resource-limited settings. As a robust AES and RSA conventional cryptographic scheme, it applied a heavy burden to the embedded LPWAN nodes with limited memory capacity, computing ability, and power supplies. With this in mind, to fill this gap we suggest a set of lightweight cryptographic primitives that can be utilized in secure communication in LPWAN protocols including LoRaWAN and NB-IoT. The suite contains optimized versions of block ciphers (e.g. PRESENT, Speck), stream ciphers (e.g. Trivium), and hash functions (e.g. PHOTON, SPONGENT), benchmarked on microcontrollers with ultra-low power including STM32L0 and nRF52840. Security tests are done on differential, linear, and replay attacks and the performance tests on flash/RAM usage, latency, and energy consumption. Findings show that the PRESENT cipher implemented together with the SPONGENT hash-function decreases the memory demand by 52 percent, and energy utilization by 37 percent as contrasted to AES-CCM, with no foundational security promises damaged. These results highlight the ability to implement lightweight cryptography in the IoT system based on the LPWAN and maintain the data confidentiality, integrity, and authentication and at the same time supp",
       "relevance_score": 4,
       "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "An Explainable Rule-Based Resume-Job Description Skill Matching System with LLM-Assisted Feedback",
+      "url": "https://doi.org/10.22214/ijraset.2026.85033",
+      "openalex_id": "https://openalex.org/W7220831646",
+      "doi": "https://doi.org/10.22214/ijraset.2026.85033",
+      "published": "2026-10-07",
+      "summary": "Automated resume screening and Applicant Tracking Systems (ATS) increasingly incorporate machine learning components and neural language models. While deep learning methods can capture complex linguistic patterns, their computational overhead, potential opacity, and sensitivity to unvetted training distributions pose practical and ethical challenges for lightweight, transparent academic deployments. In this paper, we describe an open, lightweight, and explainable resume–job description matching system that couples deterministic rule-based information extraction with optional Large Language Model (LLM) qualitative feedback. The core pipeline processes PDF, DOCX, and plain-text resumes, detects functional sections, extracts technical competencies using an auditable 108-skill taxonomy, and evaluates resume–job description compatibility using explicit set operations and a bounded 100-point heuristic score covering Skills, Experience, Projects, Education, and Certifications. To benchmark the pipeline without making real-world recruitment claims, we developed a deterministic synthetic evaluation harness containing 100 resumes, 20 job descriptions, 320 evaluation pairs, and 20 candidate ranking cohorts. Under the synthetic benchmark, the system achieved F1-scores of 0.791 for skill extraction, 0.827 for education, 0.772 for experience, 0.759 for projects, and 0.865 for missing-skill i",
+      "relevance_score": 4,
+      "matched_query": "automated AI research experimentation"
     },
     {
       "title": "TRIAGE: Severity-Ranked Multi-Agent Failure Attribution",
@@ -130,44 +90,54 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "An AI agent-based smart campus management platform",
-      "url": "https://doi.org/10.3389/fphy.2026.1953080",
-      "openalex_id": "https://openalex.org/W7215093771",
-      "doi": "https://doi.org/10.3389/fphy.2026.1953080",
-      "published": "2026-10-02",
-      "summary": "The continuing digital transformation of higher education has produced large volumes of heterogeneous campus data, including network access records, wireless access-point mappings, academic information, security alerts, and institutional documents. These resources are often isolated across operational systems and therefore remain difficult to trace, integrate, interpret and use in a timely manner. This paper presents the design of an AI agent-based smart campus management platform intended to convert such fragmented data into a governed and explainable basis for campus operations and student services. The proposed work combines multisource data acquisition, layered data governance, Wi-Fi-based student trajectory reconstruction, spatiotemporal behavior analysis, anomalous traffic detection, interactive visualization, automated reporting, and conversational analysis. Its technical route separates transactional and analytical workloads through MySQL and ClickHouse, uses Kafka for stream ingestion and decoupling, employs Redis and scheduled jobs for responsive services, and introduces an AI Agent with retrieval-augmented generation (RAG) for tool-mediated data queries and knowledge-grounded responses. The platform is organized as a modular, independently deployable system for a single institution and incorporates role-based access control, desensitization, audit trails, and control",
-      "relevance_score": 4,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Mnemosyne",
-      "url": "https://doi.org/10.5281/zenodo.23087867",
-      "openalex_id": "https://openalex.org/W7215093709",
-      "doi": "https://doi.org/10.5281/zenodo.23087867",
-      "published": "2026-10-06",
-      "summary": "Counter-Cognitive Warfare: Automatically intercepts, parses, and maps hostile disinformation and narrative manipulation campaigns in real time using multi-agent AI orchestration. Hardened Voice Command: Processes battlefield command-and-control (C2) instructions through a FIPS-compliant, far-field 6-microphone array that isolates voice inputs in high-noise, combat-strained environments. Autonomous Sensor Fusion: Ingests live tactical video links, radar data, and drone feeds at the edge, converting raw battlefield telemetry into structured intelligence without requiring a persistent cloud connection. Long-Term AI Memory Storage: Syncs localized operational logs securely back to cloud memory archives nightly, building a permanent, tamper-proof audit trail for after-action legal and strategic review. Yes. Language and memory are the core, but the spec also takes in battlefield data and treats it as another feed for the same analytic stack. The original appliance is built around speech, text, and stored \"AI memories\": narrative detection, archetype filtering, a tactical planner, and a retrieval engine. On top of that, the expanded design pulls in field data and routes it to the same GPUs and pattern matchers. - Drone and fixed EO/IR video, decoded in hardware and run through the A100s. The Jetson can strip that down to detections and keyframes when the link is thin.- Radar, via an ",
+      "title": "Minos: A Multi-agent Collaborative Framework for Provenance-Based Backward Tracking",
+      "url": "https://doi.org/10.1007/978-3-032-38692-2_19",
+      "openalex_id": "https://openalex.org/W7167101603",
+      "doi": "https://doi.org/10.1007/978-3-032-38692-2_19",
+      "published": "2026-10-07",
+      "summary": "",
       "relevance_score": 3,
       "matched_query": "persistent agent memory"
     },
     {
-      "title": "Large Language Models for Code Generation from Multilingual Prompts: A Curated Benchmark and a Study on Code Quality",
-      "url": "https://doi.org/10.1145/3845994",
-      "openalex_id": "https://openalex.org/W7169615406",
-      "doi": "https://doi.org/10.1145/3845994",
-      "published": "2026-10-06",
-      "summary": "Large Language Models (LLMs) perform differently on identical tasks when prompted in different languages—a phenomenon known as language bias. Although well-documented for general text generation, the extent to which language bias affects code generation quality and programming conventions remains largely unexplored. To address this gap, we investigate how the natural language used to describe programming tasks influences the quality of source code generated by three prominent LLMs: GPT-4o mini , DeepSeek, and Claude. Our study includes 460 coding tasks spanning Python (230 tasks) and Java (230 tasks). We translate and manually curate the original English prompts into four diverse languages: Chinese, Hindi, Spanish, and Italian, ensuring linguistic accuracy while preserving technical meaning. We evaluate the resulting code across multiple dimensions: functional correctness through test passage rates, structural quality via established code metrics, potential issues identified by static analysis tools, and lexical characteristics, including the natural language used in identifiers and comments. Results indicate that (i) source code generated from the English queries is not necessarily better in terms of passed test and quality metrics, (ii) the quality for different languages varies depending on the programming language and LLM being used, and (iii) the generated code tends to co",
+      "title": "TACTIC-KG: Toward Small Agent Teams for Cyber Threat Intelligence Knowledge Graph Construction",
+      "url": "https://doi.org/10.1007/978-3-032-38692-2_24",
+      "openalex_id": "https://openalex.org/W7167590387",
+      "doi": "https://doi.org/10.1007/978-3-032-38692-2_24",
+      "published": "2026-10-07",
+      "summary": "",
+      "relevance_score": 3,
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "Automated Intrusion Detection and Prevention System using Machine Learning",
+      "url": "https://doi.org/10.25258/ijddt.16.57s.164",
+      "openalex_id": "https://openalex.org/W7220835735",
+      "doi": "https://doi.org/10.25258/ijddt.16.57s.164",
+      "published": "2026-10-07",
+      "summary": "Cyberspace is becoming a growing arena of threats and intrusion detection systems have become an important challenge in the network.Conventional signature-based solutions are no longer sufficient to cope with this increasing complexity.This paper introduces an Automated Intrusion Detection and Prevention System (AIDPS) based on NSL-KDD dataset.It uses a combination of supervised and unsupervised machine learning to identify and categorize network-based attacks in real-time.Seven types of attacks, including DDoS, Brute Force, Port Scanning, Botnet Activities, Privilege Escalation, Service Exploits, and SQL Injection, were classified and tested using six classification algorithms: Random Forest, Extra Trees, Decision Tree, AdaBoost, K-Nearest Neighbors, and XGBoost.Random Forest showed the best performance with the accuracy of 98.12% and F1 score of 0.9813 in the test set of 29704 samples.Additionally, an ensemble Voting Classifier, consisting of the top three algorithms was designed and tested.In addition to the model training, a live prediction module was created that determines the classification of new network traffic records in real time and provides an attack type and confidence score for each record, as well as an overall network threat assessment.An automated IP blocking service which enforces firewall rules to iptables on Linux and netsh on Windows.A custom Flask web das",
+      "relevance_score": 3,
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "Beyond Scalar Objectives: Expert-Feedback-Driven Autonomous Experimentation for Scientific Discovery at the Nanoscale",
+      "url": "https://doi.org/10.1021/acsnano.6c09449",
+      "openalex_id": "https://openalex.org/W7162124772",
+      "doi": "https://doi.org/10.1021/acsnano.6c09449",
+      "published": "2026-10-07",
+      "summary": "Abstract Self-driving laboratories or autonomous experimentation are emerging as transformative platforms for accelerating scientific discovery. Bayesian optimization (BO) is among the most widely used machine learning frameworks in self-driving laboratories, but these BO-based frameworks rely on predefined scalar descriptors to guide experimentation. This limits their ability to handle complex phenomena that are difficult to formalize as scalar descriptors. In many situations, the determination of an appropriate scalar descriptor can be challenging, and may fail to capture subtle yet scientifically important phenomena apparent to experts with interdisciplinary insight. This problem is particularly pronounced in nanoscale imaging experiments, where strong local heterogeneity, multidimensional observations, and emergent physical behaviors often cannot be effectively represented using scalar metrics. To overcome this limitation, here we develop deep-kernel pairwise learning (DKPL), an approach for autonomous microscopy experiments which incorporates human expertise and interdisciplinary scientific knowledge into an active learning loop. Instead of relying on explicit scalar objectives, DKPL enables experts to directly evaluate which experimental output is more promising using interdisciplinary knowledge. DKPL then learns a latent utility function from these expert judgments to gu",
       "relevance_score": 3,
       "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "BSS-YOLO: honey peach ripeness detection in complex orchard scenes under simulated adverse-weather conditions and its implications for fruit industry management",
-      "url": "https://doi.org/10.3389/fpls.2026.1929998",
-      "openalex_id": "https://openalex.org/W7220657844",
-      "doi": "https://doi.org/10.3389/fpls.2026.1929998",
-      "published": "2026-10-06",
-      "summary": "Accurate honey peach ripeness detection in natural orchards remains challenging because complex orchard factors, including strong illumination, fruit occlusion and overlap, target-scale variation, and weather-related image degradation such as haze and rainfall, can degrade image quality and weaken the visual discrimination among different ripeness stages. To improve ripeness detection under such interference, this study proposes an improved YOLOv12s-based method termed BiFPN–SCSA–SD-DIoU YOLO (BSS-YOLO). First, a multi-meteorological honey peach ripeness data set is constructed by combining field-collected orchard images with physics-driven haze and rainfall simulation, providing diverse weather-degraded samples for model training and evaluation. Second, a Spatial-Channel Synergistic Attention (SCSA) mechanism is embedded into the backbone network to strengthen the representation of ripeness-related regions while suppressing weather-induced background interference. Third, a Weighted Bidirectional Feature Pyramid Network (BiFPN) is introduced into the neck to enhance adaptive multi-scale feature fusion for peaches with different sizes and occlusion levels. Furthermore, a scale-dynamic distance intersection over union (SD-DIoU) loss function is adopted to improve bounding box regression stability for multi-scale targets under the evaluated simulated fog- and rain-degraded conditi",
+      "title": "Beyond think-aloud: Toward a representational–recursive agenda for multimodal process-tracing research in learning and instruction",
+      "url": "https://doi.org/10.1016/j.learninstruc.2026.102486",
+      "openalex_id": "https://openalex.org/W7220726914",
+      "doi": "https://doi.org/10.1016/j.learninstruc.2026.102486",
+      "published": "2026-10-07",
+      "summary": "Background Think-aloud traditionally has been conceptualized as a means of accessing cognitive processes through verbal report. The nine studies in this special issue reveal a broader methodological transition in which verbal protocols increasingly are combined with eye tracking, retrospective cueing, classroom observation, qualitative and quantitative coding, process mining, and epistemic network analysis. Purpose This meta-commentary synthesizes the nine studies together with Hu and Gao's commentary on culturally aware think-aloud research and considers what they collectively imply for the future of process-tracing research in learning and instruction. Results The special issue demonstrates that contemporary process tracing is becoming multimodal, transformational, and implicitly mixed methodological. However, greater methodological sophistication also creates new inferential problems: different traces represent different aspects of cognition; transformations can alter what is represented; integration often remains implicit; ecological validity is relational rather than merely situational; and verbalization itself is culturally situated. Building on these observations, I propose a representational–recursive perspective in which process-tracing research is organized around the design, transformation, integration, and recursive interrogation of multiple representations. I exten",
       "relevance_score": 3,
-      "matched_query": "automated AI research experimentation"
+      "matched_query": "metacognition self-improving AI agents"
     },
     {
       "title": "Ensemble LLM Consensus Architectures for Deterministic Trade Signal Generation: An Empirical Study of Multi-Persona AI Panels in Retail FinTech Applications",
@@ -176,36 +146,6 @@
       "doi": "https://doi.org/10.68414/hmxy3672",
       "published": "2026-10-05",
       "summary": "This paper presents an empirical study of a multi-persona large language model (LLM) consensus architecture deployed in a live retail FinTech platform for equity and options trade signal generation. Grounded in a prior quantitative trading framework (Anton, 2025) and building upon academic antecedents in multi-agent LLM systems (Xiao et al., 2024), the Edge Stack Trading platform deploys a six-persona AI analyst panel producing structured, constrained verdicts across a real-time multi-signal scoring architecture. Analysis of nine live trade reports generated between April and May 2026 reports a preliminary 87.5% directional accuracy rate across eight assessable signals in an exploratory proof-of-concept evaluation, with unanimous panel consensus strongly correlated with system confidence extremes. Inter-model disagreement functions as an auditable risk signal, and model API failures produce identifiable, recoverable degradation patterns consistent with graceful degradation requirements for financial AI systems. The architecture addresses the 2026 conference theme of Reliable and Deterministic AI for Financial Systems through structured verdict formats, role-constrained persona prompting, and explicit multi-signal deterministic scoring as mechanisms for AI governance in retail financial decision support. One incorrect signal (Palantir) reveals a boundary condition in which extre",
-      "relevance_score": 3,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Little Brains, Big Feats: Exploring Compact Language Models",
-      "url": "https://doi.org/10.1007/978-3-032-37682-4_25",
-      "openalex_id": "https://openalex.org/W7166698010",
-      "doi": "https://doi.org/10.1007/978-3-032-37682-4_25",
-      "published": "2026-10-05",
-      "summary": "",
-      "relevance_score": 3,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "Developing Sustainable Chemistry with AI",
-      "url": "https://doi.org/10.1021/acs.accounts.6c00552",
-      "openalex_id": "https://openalex.org/W7213528288",
-      "doi": "https://doi.org/10.1021/acs.accounts.6c00552",
-      "published": "2026-10-05",
-      "summary": "Conspectus Today we are experiencing an unprecedentedly rapid transformation of science, driven by advances in computing and artificial intelligence (AI). At the same time, there are growing cumulative pressures of climate change impacts that not only affect economies but are creating significant societal challenges. The confluence of technology push and environmental–socioeconomic pressures is promoting the development of sustainable chemistry. The link between the transition to sustainability in chemistry and the digital transformation of R&D and manufacturing has been the long-standing focus in our research (Fantke, P.; et al. Chem 2021, 7, 2866 doi: 10.1016/j.chempr.2021.09.012). Sustainability is not a feature of a single chemical product or a process. It is incorrect to talk about “sustainable polyethylene”, as such narrow framing will miss many issues in the more holistic system that not only includes the cradle-to-grave life cycle emission impacts of polyethylene but also considers all aspects of equity, impact on biodiversity, resilience of supply chains, etc. Sustainable chemistry makes sense only as a complex system. An analysis of complex systems requires large amounts of data and the use of appropriate analytical tools, such as advanced machine learning techniques. The chemical industry has been an early adopter of digital technologies, motivated by the inherent co",
-      "relevance_score": 3,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "Federated lineage and metadata intelligence: A framework for scalable data governance in distributed enterprise architectures",
-      "url": "https://al-kindipublisher.com/index.php/jcsts/article/view/13604",
-      "openalex_id": "https://openalex.org/W7219636332",
-      "doi": "https://doi.org/10.32996/jcsts.2026.8.10.2",
-      "published": "2026-10-03",
-      "summary": "Large enterprises with heterogeneous distributed data platforms cannot achieve end-to-end verifiable data lineage through a centralized metadata architecture, including Data Mesh and Lakehouse architectures with domain-based data ownership.Traditional centralized data lineage solutions lack the scalability to meet the requirements of distributed data platforms with siloed domains, heterogeneous execution engines, and decentralized architecture. Presented here is the Federated Lineage and Metadata Intelligence Framework (FLMIF): a five-layer architectural model to facilitate balancing between domain autonomy and organizational governance in large regulated organizations. FLMIF enables automated lineage capture from heterogeneous execution engines using the OpenLineage standard, ML-based metadata inference and enrichment, multi-dimensional lineage quality scoring, policy-driven federated governance without central bottlenecks, and continuous evidence automation for regulatory compliance. The framework is developed using a Design Science Research method and assessed with a scenario-based architecture evaluation against regulatory and architectural requirements (BCBS 239, GDPR, SOX, DORA, EU AI Act). Relative to centralized and manually maintained approaches, FLMIF is projected to materially improve lineage coverage, substantially reduce the manual effort of compliance-evidence col",
       "relevance_score": 3,
       "matched_query": "cross-model handoff language model agents"
     },
@@ -223,41 +163,41 @@
       "title": "Exploring or Exploiting Generative AI? A Dual-Path, Dual-Horizon Theory of Employee Incremental and Radical Creativity",
       "url": "https://philpapers.org/rec/BAIEOE",
       "openalex_id": "https://openalex.org/W7203444948",
-      "doi": "https://doi.org/10.17613/gtb8v-92b77",
+      "doi": "https://doi.org/10.17613/yh16p-7xe23",
       "published": "2026-12-31",
       "summary": "Recent research has established that generative artificial intelligence (GenAI) is not a unitary workplace resource: exploratory and exploitative use orientations are associated with different forms of employee creativity, and their value depends on employees' capacity to integrate generated knowledge. This article therefore does not present the basic dual path as a new discovery. Instead, it develops a theoretical integration and dynamic extension that asks why the established paths operate differently, when employees should switch between them, and how short-run augmentation can evolve into either capability accumulation or capability substitution. We distinguish expansive and consolidative modes of knowledge integration, theorize phase-congruent switching rather than static ``high-high'' ambidexterity, and position metacognition as a control mechanism that governs both immediate knowledge conversion and longer-run cognitive development. We further specify cultural tightness and psychological safety as directional boundary conditions and distinguish individual creative gains from collective idea-space diversity. The framework converts emerging empirical regularities into falsifiable propositions about task phase, context, and time, providing a research agenda for sustainable human--AI creativity.",
       "relevance_score": 2,
       "matched_query": "metacognition self-improving AI agents"
     },
     {
-      "title": "A resource-aware framework for energy and bandwidth efficient IoT intrusion detection using lightweight federated learning over SDN",
-      "url": "https://doi.org/10.1038/s41598-026-74166-3",
-      "openalex_id": "https://openalex.org/W7220377077",
-      "doi": "https://doi.org/10.1038/s41598-026-74166-3",
-      "published": "2026-10-06",
-      "summary": "The rapid growth of Internet of Things (IoT) deployments has widened the network attack surface while increasing the cost of centralised intrusion detection, particularly when raw traffic must be moved to remote servers. We propose HFL-SDN-IDS, a hierarchical, resource-aware framework that combines a lightweight federated intrusion-detection model, two-tier aggregation, and an SDN-assisted enforcement layer. The contribution is a system-level co-design rather than a new federated aggregation rule. Experiments use five benchmark datasets-CICIDS-2017, N-BaIoT, TON_IoT, Edge-IIoTset, and UNSW-NB15. Under the default CICIDS-2017 configuration ( \\(N=100\\) , \\(K=10\\) , \\(\\alpha =0.5\\) ), the retained aggregate comparison reports 98.93% detection accuracy, 18.4 MB/round of model-based communication accounting, and 3.87 J/round of model-based energy consumption, compared with 38.6 MB/round and 9.82 J/round for FedAvg. In the fixed 10,000-sample six-family classification evaluation used for class-wise reporting, HFL-SDN-IDS achieves 98.6% accuracy, 98.6% weighted F1, and 96.9% Macro-F1. These values correspond to 52.3% lower reported bandwidth and 60.6% lower reported energy, while convergence is reached in 31.3% fewer communication rounds. In the scalability study, the reported HFL-SDN-IDS bandwidth increases from 18.4 MB/round at \\(N=100\\) to 41.6 MB/round at \\(N=1{,}000\\) ; the corre",
-      "relevance_score": 2,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "Self-regulated learning in the development of teachers' digital competencies—a systematic literature review",
-      "url": "https://doi.org/10.3389/feduc.2026.1893589",
-      "openalex_id": "https://openalex.org/W7220357918",
-      "doi": "https://doi.org/10.3389/feduc.2026.1893589",
-      "published": "2026-10-05",
-      "summary": "Introduction Digitalization places growing demands on teachers needing to prepare young people for life in increasingly digital environments. Challenges such as limited resources for teacher training and fast-paced developments in the field make self-regulated learning indispensable for equipping teachers with the necessary digital competences. Methods This study investigates the state of the art in this field and explores the interrelation of teachers' professional digital competence with self-regulated learning through a systematic literature review. Findings from the analysis of 17 studies published between 2009 and 2023 were analyzed. Results The reviewed works indicate a strong relationship between the concepts of digital competence and self-regulated learning through metacognition and highlight promising approaches for supporting preservice and in-service teachers in developing their digital competences in a self-regulated manner. Discussion Technological support systems such as personalized learning environments and metacognitive scaffolding hold potential for supporting such competence development. Nevertheless, it becomes evident that self-regulated learning thrives when complemented by collaborative learning and innovative learner-centered class formats, highlighting the potential that heutagogy holds for teacher education. These findings provide valuable insights for",
+      "title": "Teachers’ self-regulated learning profiles in artificial intelligence contexts: implications for differentiated professional development",
+      "url": "https://doi.org/10.3389/fpsyg.2026.1885895",
+      "openalex_id": "https://openalex.org/W7220837398",
+      "doi": "https://doi.org/10.3389/fpsyg.2026.1885895",
+      "published": "2026-10-07",
+      "summary": "Introduction The rapid integration of artificial intelligence (AI) into education requires teachers to develop new competencies and manage their own learning. While research has examined teachers’ AI attitudes, acceptance, and literacy, less is known about how they regulate their learning in AI contexts. This study examined teachers’ self-regulated learning (SRL) profiles and their associations with demographic characteristics and AI-related experience. Methods In a descriptive survey, 213 in-service teachers completed the Artificial Intelligence Self-Regulated Learning Scale for Teachers (AI-SRLS). Two-Step Cluster Analysis was conducted using five dimensions: task planning, self-monitoring, help seeking, institutional support, and self-evaluation. Results Two profiles emerged: High Strategic Learners, who scored consistently higher across all five dimensions, and Limited Strategy Users, who reported comparatively lower strategy use. Profile membership was significantly associated with prior AI experience and AI-related training. Gender, age, and professional experience did not significantly differentiate the profiles. Discussion Teachers’ AI-related SRL strategies co-occur in distinct profiles, supporting a differentiated approach to professional development. Teachers with limited strategy use may benefit from structured guidance, scaffolded AI learning opportunities, and str",
       "relevance_score": 2,
       "matched_query": "metacognition self-improving AI agents"
     },
     {
-      "title": "Beyond the black box in healthcare operations: a structured literature review and governance framework for explainable AI in clinical process intelligence systems",
-      "url": "https://doi.org/10.3389/frai.2026.1864565",
-      "openalex_id": "https://openalex.org/W7216422476",
-      "doi": "https://doi.org/10.3389/frai.2026.1864565",
-      "published": "2026-10-02",
-      "summary": "Background Healthcare artificial intelligence has produced substantial diagnostic capabilities, yet clinical operations remain underserved by AI transparency research. Existing reviews of Explainable AI (XAI) in healthcare concentrate on diagnostic imaging, oncology, radiology, and clinical decision support. The governance needs of clinical process intelligence (CPI) systems, which support patient flow, resource allocation, throughput management, and care coordination, remain comparatively underdeveloped. Objective This original research article reports a structured literature review with systematic search and screening, followed by framework development. It characterizes healthcare XAI research across application domains and introduces the CPI-XAI Governance Framework, a theory-informed model for operationalizing algorithmic transparency as an organizational information-systems capability in clinical process intelligence environments. Methods We searched PubMed/MEDLINE, Scopus, Web of Science, IEEE Xplore, ACM Digital Library, and CINAHL for peer-reviewed studies published from January 2015 to April 2026. Screening and extraction used transparent procedures adapted from PRISMA flow-reporting practices. Two authors independently screened records and extracted domain, XAI method, setting, evaluation, and governance variables; disagreements were resolved by author adjudication. F",
+      "title": "Drivers of blockchain technology adoption in construction supply chains: a systematic literature review and scientometric synthesis",
+      "url": "https://doi.org/10.1108/mscra-04-2026-0049",
+      "openalex_id": "https://openalex.org/W7220839989",
+      "doi": "https://doi.org/10.1108/mscra-04-2026-0049",
+      "published": "2026-10-07",
+      "summary": "Purpose Blockchain technology (BT) has attracted growing attention in construction supply chain management (CSCM), yet existing research predominantly emphasises applications, technical architectures and barriers, providing limited understanding of the pressures motivating adoption. This study, therefore, systematically identifies and synthesises the drivers of BT adoption in construction supply chains (CSCs). Design/methodology/approach A systematic literature review, conducted using the Scopus database, yielded 493 records. Following screening, 145 publications were retained for scientometric analysis, with 40 subsequently selected for qualitative content analysis. Findings The findings identify five interrelated driver themes: information governance; transactional and operational pressures; digital integration; sustainability and institutional pressures; and strategic and contextual pressures. Information fragmentation, limited visibility, trust and accountability deficits, coordination inefficiencies and unreliable provenance emerged as the most prominent motivations. However, driver salience varies across clients, contractors, subcontractors, suppliers, regulators and other supply-chain actors, demonstrating that adoption is a negotiated network-level decision rather than a uniform organisational response. Originality/value The findings provide a theoretically grounded bas",
       "relevance_score": 2,
-      "matched_query": "cross-model handoff language model agents"
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "From answer machine to collaborative partner: impact of structured generative AI training on scientific problem solving in STEM education",
+      "url": "https://doi.org/10.1186/s40594-026-00652-9",
+      "openalex_id": "https://openalex.org/W7220709456",
+      "doi": "https://doi.org/10.1186/s40594-026-00652-9",
+      "published": "2026-10-06",
+      "summary": "Abstract Background Generative AI (GenAI) holds great potential for STEM education, especially in the context of problem-solving tasks, but unguided use often leads to metacognitive laziness, where students treat the technology as an answer machine rather than a collaborative partner. On the basis of Zimmerman’s self-regulated learning (SRL) framework and cognitive load theory (CLT), our randomized controlled trial (RCT; N = 95) investigated whether a structured, SRL-aligned scaffolding training session could improve students’ AI-assisted revision performance in electromagnetism problems. The experimental group ( n = 50) received the designed training, which emphasized the nature of GenAI, the SRL-aligned prompting strategy, and the remediation strategy for GenAI deficiencies. The control group ( n = 45) received problem-solving instruction without specific AI guidance. After completing the Conceptual Survey of Electricity and Magnetism (CSEM) independently, both groups subsequently conversed with the large language model Doubao to revise their responses. Results Independent samples t tests revealed that the experimental group showed greater AI-assisted revision performance ( d = 0.81, p < 0.001) than did the control group. The experimental group reported comparable overall cognitive load, despite a marginal elevation in the intrinsic cognitive load. Robust linear models showed",
+      "relevance_score": 2,
+      "matched_query": "metacognition self-improving AI agents"
     },
     {
       "title": "Video and digital games: Historical controversies, benefits, and risks for children and adolescents",
@@ -280,14 +220,64 @@
       "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "Association between affective temperaments and thalamic nuclei volumes",
-      "url": "https://doi.org/10.3389/fpsyt.2026.1947058",
-      "openalex_id": "https://openalex.org/W7220704621",
-      "doi": "https://doi.org/10.3389/fpsyt.2026.1947058",
-      "published": "2026-10-06",
-      "summary": "Introduction Affective temperaments are stable, biologically based traits that may represent subclinical manifestations or premorbid phenotypes of mood disorders. The thalamus is increasingly recognized as an active component of distributed neural networks involved in cognition, emotion, and behavioral regulation. We focused on the thalamus and conducted an exploratory analysis of the associations between affective temperaments and the volumes of thalamic nuclei in healthy participants. Method This study included 43 healthy right-handed participants. Affective temperament was assessed using the Temperament Evaluation of Memphis, Pisa, Paris, and San Diego Autoquestionnaire. T1-weighted structural magnetic resonance imaging data were acquired using a 3T scanner and processed with FreeSurfer version 7.1.1 to obtain the estimated total intracranial volume (eTIV) and the volumes of 52 thalamic regions, comprising 25 bilateral thalamic nuclei and the bilateral whole thalamus. The primary analyses were partial Spearman correlations adjusted for age, sex, and eTIV. Given that 52 thalamic regions and five affective temperaments were examined, Bonferroni correction was applied to control the family-wise error rate for multiple comparisons. Statistical significance was defined as a Bonferroni-corrected threshold of P < 0.00019 (0.05/[52 × 5]). Additional analyses adjusted for age, sex, a",
+      "title": "Design of a tetravalent dengue vaccine incorporating T-cell epitopes from NS3 and NS5 proteins and B-cell epitopes from the envelope protein using an immunoinformatics approach",
+      "url": "https://doi.org/10.3389/fcimb.2026.1934834",
+      "openalex_id": "https://openalex.org/W7211947195",
+      "doi": "https://doi.org/10.3389/fcimb.2026.1934834",
+      "published": "2026-10-07",
+      "summary": "Dengue virus remains a major global health threat due to its four antigenically diverse serotypes and limited treatment and vaccine options. This study aimed to design and evaluate a rational tetravalent multi-epitope vaccine capable of eliciting broad cross-serotype immune responses against dengue virus. An immunoinformatics-driven strategy was employed to identify CTL, HTL, and B-cell epitopes from the NS3, NS5, and envelope domain III proteins of DENV-1 to DENV-4 based on antigenicity, allergenicity, and predicted immunogenic potential, followed by assessment of HLA population coverage. Among the selected CTL epitopes, three were completely conserved across all four serotypes, while one HTL epitope showed the highest conservation among the selected MHC class II epitopes. High-scoring linear B-cell epitopes were identified across EDIII of all four DENV serotypes, with several closely matching experimentally validated epitopes and predominantly localizing to the FG loop and DIII–DI hinge regions. The combined MHC class I and II population coverage reached 98.05% worldwide. The final vaccine construct comprised 584 amino acids incorporating 11 CTL, 14 HTL, and 7 B-cell epitopes linked to an N-terminal β-defensin adjuvant. Molecular docking, MM/GBSA calculations, and 200 ns molecular dynamics simulations demonstrated stable interactions with both TLR2 and TLR4/MD2 complexes, wit",
+      "relevance_score": 1,
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "The Dunning–Kruger effect does not account for Covid-scepticism or vaccine hesitancy",
+      "url": "https://doi.org/10.1098/rsos.260147",
+      "openalex_id": "https://openalex.org/W7220744310",
+      "doi": "https://doi.org/10.1098/rsos.260147",
+      "published": "2026-10-07",
+      "summary": "Abstract Vaccine-scepticism and vaccine hesitancy are sometimes explained using the Dunning–Kruger effect (DKE), which posits that individuals with low knowledge in relevant domains are overconfident in their understanding. However, prior evidence often relies on discrepancy-based measures of self-overestimation that are susceptible to statistical artefacts. It, therefore, remains unclear whether vaccine-scepticism genuinely reflects the defining features of the DKE. During the Covid-19 pandemic, a large UK sample (n = 537) completed a newly developed Covid-scepticism (CS) scale, with a knowledge test assessing biological knowledge and probabilistic reasoning, relevant to a viral pandemic. Item-level confidence ratings for each knowledge judgement were used to derive a measure of metacognitive bias, which indexes a person's overall tendency towards low or high confidence. Higher CS was associated with lower levels of knowledge. The relationship with low knowledge was strongest for sceptical attitudes towards vaccines and endorsement of conspiracy-adjacent beliefs. However, lower knowledge was not associated with overconfidence, as predicted by DKE accounts. Instead, metacognitive bias increased with knowledge, and higher vaccine-scepticism predicted lower overall confidence. These findings provide little support for accounts of vaccine-scepticism based primarily on the popular ",
+      "relevance_score": 1,
+      "matched_query": "metacognition self-improving AI agents"
+    },
+    {
+      "title": "Attracting International Patients through Digital Marketing and Partnerships",
+      "url": "https://doi.org/10.25258/ijddt.16.57s.167",
+      "openalex_id": "https://openalex.org/W7220869321",
+      "doi": "https://doi.org/10.25258/ijddt.16.57s.167",
+      "published": "2026-10-07",
+      "summary": "BackgroundMedical tourism has emerged as a significant segment of the global healthcare economy.The global market was valued at approximately USD 54.6 billion in 2022 and is projected to reach USD 273.4 billion by 2030 at a CAGR of approximately 22.1%.[1]Digital marketing and strategic institutional partnerships are the two pivotal mechanisms through which healthcare providers attract patients internationally.[2] Methods A narrative review was conducted drawing on peer-reviewed publications, industry reports, and institutional case studies published between 2010 and 2024. ResultsTargeted digital marketing campaigns significantly increase international patient inquiries when integrated with robust partnership networks, accreditation signals, and culturally adapted communication.[3] Multilingual content, patient testimonials, and telehealth pre-consultation services are particularly effective.Institutions combining digital channels with government, insurance, and corporate partnerships demonstrated the highest growth in international patient revenues.[4]Conclusion A synergistic digital-partnership model, supported by regulatory compliance, cultural competence, and analytics-driven optimisation, represents the most effective strategy for attracting and retaining international patients.[5]Future research should focus on longitudinal outcome measurement and the emerging role of arti",
+      "relevance_score": 1,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "An AI-Driven Roadmap for the Development of Alkali Metal-Modified BiFeO3 Multiferroics",
+      "url": "https://doi.org/10.31875/2410-4701.2026.13.08",
+      "openalex_id": "https://openalex.org/W7220851496",
+      "doi": "https://doi.org/10.31875/2410-4701.2026.13.08",
+      "published": "2026-10-07",
+      "summary": "Bismuth ferrite (BiFeO3) is one of the most promising single-phase multiferroic materials because it coexists with ferroelectric and antiferromagnetic ordering at room temperature. Nevertheless, it has intrinsic limitations for practical applications, including high leakage current, poor magnetization due to cycloidal spin structures, and phase instability. This review is a detailed discussion of the basic physics behind BiFeO3, its crystal structure, the origin of ferroelectricity, magnetic ordering, as well as the magnetoelectric coupling mechanism. The alkali metal (Li, Na, K, Rb, Cs) substitution is of particular interest, as it has been found to be a useful approach to design structural distortion, defect chemistry, polarization behavior, and magnetic interactions. In addition, the shortcomings of traditional experimental methods in the optimization of dopant content and processing are mentioned. To address these problems, new artificial intelligence (AI) and machine learning (ML) methods are pointed out as effective means to speed up the exploration of materials, forecast structure-property correlations, and design high-performance multiferroics. Lastly, a roadmap for the systematic creation of alkali metal-modified BiFeO3 systems is suggested, which offers perspectives on the subsequent generation of versatile materials and applications in devices.",
       "relevance_score": 1,
       "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "A multidimensional analysis of generative AI adoption in academia: synthesizing TAM3 and UTAUT2 frameworks to predict students’ attitudes and learning effectiveness",
+      "url": "https://doi.org/10.3389/frai.2026.1897946",
+      "openalex_id": "https://openalex.org/W7220852431",
+      "doi": "https://doi.org/10.3389/frai.2026.1897946",
+      "published": "2026-10-07",
+      "summary": "The rapid integration of generative artificial intelligence (GenAI) tools into higher education raises important questions regarding their impact on student learning. Based on established technology acceptance frameworks, this study develops and empirically tests an integrative model that explains students’ attitudes toward GenAI tools and their perceived learning effectiveness. Data were collected from 566 undergraduate students using a structured questionnaire. The main findings indicate that prior experience, perceived merits, and training in using GenAI tools are positively associated with and constitute strong predictors of both attitudes of students toward GenAI use and perceived learning effectiveness, while ethical knowledge and technological orientation do not emerge as significant predictors. Perceived drawbacks are also significant, suggesting that ambivalence and concerns about GenAI can diminish students’ positive attitudes and reduce their perceived usefulness. Differences across gender further suggest that technology adoption processes are not uniform but contingent upon user characteristics. Theoretically, this study contributes to the literature by extending technology acceptance models into the domain of GenAI and by linking attitudinal constructs with learning-related outcomes within a unified framework. Practically, the findings suggest that higher education",
+      "relevance_score": 1,
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "Device-First Continuum AI: Low-Latency, Resilient, and Cost-Efficient Autonomous Operations for the Energy Sector",
+      "url": "https://doi.org/10.69709/caic.2026.142241",
+      "openalex_id": "https://openalex.org/W7220705313",
+      "doi": "https://doi.org/10.69709/caic.2026.142241",
+      "published": "2026-10-06",
+      "summary": "Industrial automation in the energy sector requires AI that remains operational regardless of network conditions, a requirement that cloud-centric architectures cannot meet in remote oil fields, offshore platforms, and other disconnected environments. This paper evaluates Device-First Continuum AI (DFC-AI), an architecture in which intelligent agents originate on the end device and escalate across the continuum to a gateway or the cloud only when a task exceeds local capability. This study contributes a benchmark-grounded comparison of three architectures—cloud-centric, gateway-based, and device-first—on latency, resilience, and cost, along with a model that explains the results and the conditions under which the device-first advantage holds. Across simulations of drone inspection, sensor-network, and worker-safety deployments, DFC-AI delivers large reductions in both latency and energy, maintains near-full capability when the cloud is unreachable and when an individual node fails, and runs at a small fraction of the cost of either alternative. Cloud-centric systems fail completely on disconnection, while gateway-based systems, although they survive a cloud outage, concentrate risk at a single aggregation node whose loss disables every device it serves and can cost more than the cloud they were meant to replace. The advantage is largest for the predominantly local workloads typ",
+      "relevance_score": 1,
+      "matched_query": "cross-model handoff language model agents"
     },
     {
       "title": "Neurodiversity and generative AI in higher education: A sequential multi-method qualitative study of students’ interactions, motivations, and strategies",
@@ -296,6 +286,16 @@
       "doi": "https://doi.org/10.1016/j.ijer.2026.103135",
       "published": "2026-10-06",
       "summary": "Neurodivergent students have been largely overlooked in research examining student experiences with generative AI (GenAI) in higher education, creating critical knowledge gaps about inclusive educational technology use. This sequential multi-method qualitative study examined how neurodivergent students (NDS) and neurotypical students (NTS) interact with and experience GenAI in academic contexts. Using a sequential design, we employed a virtual revisit think-aloud protocol with 24 university students (12 NDS, 12 NTS) completing an academic task using Microsoft Copilot, followed by focus groups with 14 participants (7 NDS, 7 NTS) to contextualise these task-based behaviours through broader GenAI perceptions. A neurodivergent research advisory board co-designed all procedures. Three themes emerged: approaching the task efficiently, evaluating and refining output, and maintaining academic integrity. While both groups demonstrated strategic GenAI use, neurodivergent participants in this sample explicitly described their cognitive processing needs, using GenAI to manage energy, and humanising some AI interactions. In the neurodivergent focus group, students described GenAI as essential scaffolding for managing academic demands, though this created complex tensions around authenticity and over-reliance. Interface design challenges seemed to particularly disadvantage users with executi",
+      "relevance_score": 1,
+      "matched_query": "metacognition self-improving AI agents"
+    },
+    {
+      "title": "AI-ASSISTED CO-CREATIVE MULTIMODAL STORYTELLING IN ENGLISH: ENGAGEMENT, MOTIVATION AND VOCABULARY USE IN A SIXTH-GRADE PRIMARY SCHOOL INTERVENTION",
+      "url": "https://doi.org/10.30574/gjeta.2026.29.1.0281",
+      "openalex_id": "https://openalex.org/W7220705065",
+      "doi": "https://doi.org/10.30574/gjeta.2026.29.1.0281",
+      "published": "2026-10-06",
+      "summary": "This paper presents an educational intervention of artificial intelligence (AI)-assisted co-creative multimodal storytelling, implemented in the English course with 48 sixth-grade students at a public primary school. Students composed short descriptive paragraphs about imaginary creatures, received narrative expansions of their texts from an AI tool, and created multimodal artworks that incorporated words and phrases from these expansions. The evaluation of the intervention was based on structured observation, organized around four dimensions of motivation. The records indicate increased engagement and creative initiative, more intensive peer collaboration and the spontaneous use of new descriptive vocabulary in students' multimodal products and oral presentations. As no assessment of written production was conducted before and after the intervention, the findings are limited to observed engagement and language use.",
       "relevance_score": 1,
       "matched_query": "metacognition self-improving AI agents"
     },
