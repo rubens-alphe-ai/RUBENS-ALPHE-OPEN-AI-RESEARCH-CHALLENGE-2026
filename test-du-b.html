@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Examen civique : votre QCM d'entraînement est-il biaisé ? Le test du B — Item Audit</title>
+<meta name="description" content="Sur 5 des 7 sites d'entraînement mesurés, la bonne réponse est le plus souvent B. Comment le repérer en une minute.">
+<link rel="stylesheet" href="style.css?v=5">
+<style>
+.calc{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;max-width:22rem}
+.calc label{display:flex;flex-direction:column;font-weight:600}
+.calc input{font:inherit;padding:.4rem;margin-top:.2rem;width:100%}
+#verdict{margin-top:.8rem;font-weight:600}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="fr.html">Item Audit</a>
+    <nav>
+      <a href="fr.html">Accueil</a>
+      <a href="formation.html">Formation</a>
+      <a href="ecoles.html">Écoles</a>
+      <a href="ia/">Entreprises</a>
+      <a href="qcm.html">Essai gratuit</a>
+      <a href="en.html">English</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<h1>Votre QCM d'entraînement à l'examen civique est-il biaisé&nbsp;?</h1>
+
+<p class="lede">Si la bonne réponse tombe presque toujours sur la même lettre, vous apprenez la lettre, pas la réponse. Le jour de l'examen, les propositions sont celles du ministère&nbsp;: ce réflexe ne vous aidera pas.</p>
+
+<h2>Ce que nous avons mesuré</h2>
+<p>Le 11 octobre 2026, nous avons mesuré les questions publiques de 10 sites d'entraînement, avec une méthode fixée par écrit avant la mesure.</p>
+<ul>
+<li><strong>La position des bonnes réponses.</strong> Sur 7 sites où l'ordre des propositions ne change pas, 5 placent la bonne réponse sur B bien plus souvent que le hasard. Sur 4 d'entre eux, répondre B à chaque fois donne entre 61&nbsp;% et 76&nbsp;% de bonnes réponses, sans lire les questions.</li>
+<li><strong>Les erreurs.</strong> Sur 300 questions vérifiées avec une source, par deux vérificateurs indépendants, 10 avaient un défaut confirmé par les deux&nbsp;: 3,3&nbsp;%, entre 1,8&nbsp;% et 6&nbsp;% (intervalle de confiance à 95&nbsp;%). Par exemple, une Constitution qui aurait encore 92 articles, ou une allocation supprimée en 2004 présentée comme actuelle.</li>
+</ul>
+<p class="small soft">Les vérifications ont été faites par des assistants d'IA avec sources. Les sites ne sont pas nommés ici&nbsp;: chacun a reçu ses résultats et peut y répondre. Item Audit vend des relectures de QCM&nbsp;; nous le disons par transparence.</p>
+
+<h2>Le test du B, en une minute</h2>
+<p>Faites une série d'entraînement, puis comptez sur quelle lettre tombaient les bonnes réponses. Entrez les nombres ci-dessous.</p>
+<div class="panel">
+<div class="calc">
+<label>A<input id="a" type="number" min="0" inputmode="numeric" value="0"></label>
+<label>B<input id="b" type="number" min="0" inputmode="numeric" value="0"></label>
+<label>C<input id="c" type="number" min="0" inputmode="numeric" value="0"></label>
+<label>D<input id="d" type="number" min="0" inputmode="numeric" value="0"></label>
+</div>
+<p id="verdict" aria-live="polite">Entrez au moins 20 bonnes réponses.</p>
+</div>
+<p class="small soft">Le calcul compare la lettre la plus fréquente au hasard (une chance sur quatre), avec une marge de sécurité. Il signale un déséquilibre&nbsp;; il ne dit pas que les réponses sont fausses.</p>
+
+<h2>Comment bien s'entraîner</h2>
+<ul>
+<li>Préférez un entraînement qui <strong>mélange l'ordre des propositions</strong> à chaque passage.</li>
+<li>Vérifiez que chaque réponse est <strong>expliquée, avec sa source</strong>&nbsp;: les fiches officielles de <a href="https://formation-civique.interieur.gouv.fr/">formation-civique.interieur.gouv.fr</a> sont la référence.</li>
+<li>Pour les questions officielles, voyez notre <a href="corrige-examen-civique-officiel.html">corrigé vérifié, avec 20 questions en accès libre</a>.</li>
+</ul>
+
+<div class="panel"><p><strong>Vous publiez un QCM&nbsp;?</strong> <a href="qcm.html">Comptez gratuitement la position de vos bonnes réponses dans votre navigateur →</a></p></div>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p><a href="mentions-legales.html">Mentions légales</a> · <a href="cgv.html">Conditions générales de vente</a></p>
+    <p>Aucun traceur, aucun cookie sur ce site.</p>
+  </div>
+</footer>
+
+<script>
+function tail(k,n,p){let s=0;for(let i=k;i<=n;i++){let c=1;for(let j=0;j<i;j++)c=c*(n-j)/(j+1);s+=c*Math.pow(p,i)*Math.pow(1-p,n-i)}return s}
+function run(){const v=["a","b","c","d"].map(id=>Math.max(0,parseInt(document.getElementById(id).value,10)||0));
+  const n=v.reduce((x,y)=>x+y,0),out=document.getElementById("verdict");
+  if(n<20){out.textContent="Entrez au moins 20 bonnes réponses.";return}
+  const top=Math.max(...v),l="ABCD"[v.indexOf(top)],pct=Math.round(100*top/n),p=Math.min(1,4*tail(top,n,0.25));
+  out.textContent=p<0.01?("Déséquilibre net : "+pct+" % des bonnes réponses sont en "+l+". Méfiez-vous de ce réflexe."):
+    ("Pas de déséquilibre net ("+pct+" % en "+l+", la lettre la plus fréquente).")}
+["a","b","c","d"].forEach(id=>document.getElementById(id).addEventListener("input",run));
+</script>
+
+</body>
+</html>
