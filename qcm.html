@@ -95,7 +95,7 @@ a { color: var(--blue); }
     <h2 id="in-title">Vos réponses</h2>
     <span class="example" id="example-note">Exemple chargé : une classe fictive de 28 élèves, 12 questions</span>
     <textarea id="data" spellcheck="false" aria-describedby="format-hint"></textarea>
-    <p class="hint" id="format-hint">Format : une ligne d'en-tête (Nom, Q1, Q2…), une ligne <strong>CORRIGÉ</strong> avec les bonnes lettres, puis une ligne par élève avec ses lettres. Une réponse vide compte comme fausse. Vous pouvez aussi coller des 0 et des 1 sans ligne CORRIGÉ (sans case vide ni note partielle). Séparateurs acceptés : point-virgule, virgule ou tabulation (copier-coller depuis Excel).</p>
+    <p class="hint" id="format-hint">Format : une ligne d'en-tête (Nom, Q1, Q2…), une ligne <strong>CORRIGÉ</strong> avec les bonnes lettres, puis une ligne par élève avec ses lettres. Une réponse vide compte comme fausse. Vous pouvez aussi coller des 0 et des 1 sans ligne CORRIGÉ (sans case vide ni note partielle). Séparateurs acceptés : point-virgule, virgule ou tabulation (copier-coller depuis Excel). <strong>Pas encore de réponses d'élèves&nbsp;?</strong> Collez seulement l'en-tête et la ligne CORRIGÉ&nbsp;: l'outil vérifie la position des bonnes réponses.</p>
     <div class="row">
       <button id="analyse" type="button">Analyser</button>
       <label class="file" for="file">Ouvrir un fichier CSV<input id="file" type="file" accept=".csv,.txt,.tsv"></label>
@@ -170,7 +170,13 @@ a { color: var(--blue); }
 
   function parse(text) {
     var lines = text.replace(/\r/g, "").split("\n").filter(function (l) { return l.trim(); });
-    if (lines.length < 3) throw new Error("Il faut au moins une ligne d'en-tête et deux lignes de réponses.");
+    if (lines.length === 2) {  // header + answer key only: the letter-position check, without statistics on answers
+      var sep2 = [";", "\t", ","].sort(function (a, b) { return lines[0].split(b).length - lines[0].split(a).length; })[0];
+      var r2 = lines[1].split(sep2).map(function (c) { return c.trim(); });
+      var n2 = (r2[0] || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toUpperCase();
+      if (n2 === "CORRIGE" || n2 === "CLE" || n2 === "KEY" || n2 === "REPONSES") return { keyOnly: true, key: r2.slice(1) };
+    }
+    if (lines.length < 3) throw new Error("Il faut au moins une ligne d'en-tête et deux lignes de réponses, ou seulement l'en-tête et la ligne CORRIGÉ pour vérifier la position des bonnes réponses.");
     var sep = [";", "\t", ","].sort(function (a, b) { return lines[0].split(b).length - lines[0].split(a).length; })[0];
     var rows = lines.map(function (l) { return l.split(sep).map(function (c) { return c.trim(); }); });
     var head = rows[0].slice(1);
@@ -247,11 +253,11 @@ a { color: var(--blue); }
 
   // One letter holding the answer more often than chance allows: exact binomial tail, Bonferroni over the letters, p < 0.01.
   // The number of options is taken as the highest letter seen in the key or the answers (at least 4).
-  function balance(d) {
-    if (!d.answers) return null;
+  function balance(d, all) {
+    if (!d.key) return null;
     var keys = d.key.map(function (c) { return (c || "").toUpperCase(); }).filter(function (c) { return /^[A-Z]$/.test(c); });
     if (keys.length < 10) return null;
-    var seen = keys.concat([].concat.apply([], d.answers)).filter(function (c) { return /^[A-Z]$/.test(c); });
+    var seen = keys.concat(d.answers ? [].concat.apply([], d.answers) : []).filter(function (c) { return /^[A-Z]$/.test(c); });
     var m = Math.max(4, Math.max.apply(null, seen.map(function (c) { return c.charCodeAt(0) - 64; })));
     var counts = {};
     keys.forEach(function (c) { counts[c] = (counts[c] || 0) + 1; });
@@ -261,7 +267,20 @@ a { color: var(--blue); }
       if (j >= x) tail += pmf;
       pmf = pmf * (n - j) / (j + 1) * q / (1 - q);
     }
+    if (all) return { letter: top, x: x, n: n, m: m, biased: tail * m < 0.01 };
     return tail * m < 0.01 ? { letter: top, x: x, n: n, m: m } : null;
+  }
+
+  function renderKeyOnly(d) {
+    var b = balance(d, true);
+    $("tiles").innerHTML = tile(d.key.length, "questions") + tile("—", "réponses d'élèves");
+    $("banner").hidden = true;
+    $("table").innerHTML = "";
+    var box = $("balance");
+    box.hidden = false;
+    box.textContent = !b ? "Il faut au moins 10 questions avec une lettre pour vérifier la position des bonnes réponses." :
+      b.biased ? "La bonne réponse est " + b.letter + " dans " + b.x + " questions sur " + b.n + ", bien plus que le hasard. Un candidat qui répondrait toujours " + b.letter + " obtiendrait " + Math.round(100 * b.x / b.n) + " %, au lieu d'environ " + Math.round(100 / b.m) + " %. Répartissez les bonnes réponses entre les lettres." :
+      "Pas de déséquilibre net : la lettre la plus fréquente, " + b.letter + ", porte " + b.x + " bonnes réponses sur " + b.n + ". Ajoutez les réponses de vos élèves pour repérer aussi les corrigés suspects.";
   }
 
   function render(res) {
@@ -301,7 +320,8 @@ a { color: var(--blue); }
   function run() {
     try {
       $("error").hidden = true;
-      render(analyse(parse($("data").value)));
+      var d = parse($("data").value);
+      if (d.keyOnly) renderKeyOnly(d); else render(analyse(d));
       $("results").hidden = false;
     } catch (e) {
       $("error").textContent = e.message;
