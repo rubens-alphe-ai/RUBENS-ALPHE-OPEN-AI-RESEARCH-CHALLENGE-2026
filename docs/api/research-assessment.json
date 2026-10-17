@@ -1,15 +1,15 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-10-16T04:51:16.584218+00:00",
-  "source_digest_generated_at_utc": "2026-10-16T04:51:16.202065+00:00",
+  "generated_at_utc": "2026-10-17T08:37:35.624901+00:00",
+  "source_digest_generated_at_utc": "2026-10-17T08:37:35.566981+00:00",
   "paper_count_seen": 30,
-  "dominant_theme": "agent_evaluation",
+  "dominant_theme": "persistent_memory",
   "theme_counts": {
-    "persistent_memory": 10,
-    "cross_model_handoff": 8,
-    "automated_experimentation": 5,
-    "metacognition": 9,
-    "agent_evaluation": 11
+    "persistent_memory": 17,
+    "cross_model_handoff": 6,
+    "automated_experimentation": 4,
+    "metacognition": 10,
+    "agent_evaluation": 13
   },
   "top_5_papers": [
     {
@@ -49,6 +49,24 @@
       ]
     },
     {
+      "title": "Associative Memory and Cumulative Learning in Artificial Intelligence",
+      "url": "https://doi.org/10.5281/zenodo.23403145",
+      "published": "2026-10-15",
+      "original_relevance_score": 8,
+      "assessment_score": 15,
+      "matched_query": "persistent agent memory",
+      "theme_hits": {
+        "persistent_memory": 2,
+        "cross_model_handoff": 0,
+        "automated_experimentation": 1,
+        "metacognition": 0,
+        "agent_evaluation": 1
+      },
+      "notes": [
+        "substantial abstract"
+      ]
+    },
+    {
       "title": "A Survey-Informed Vision of Open-Source Agents: From Rights to Handoffable Maintenance",
       "url": "https://doi.org/10.5281/zenodo.23355207",
       "published": "2026-10-14",
@@ -67,36 +85,18 @@
       ]
     },
     {
-      "title": "BGVD-State: Replayable middleware for evidence-gated handoffs in third-party software security review",
-      "url": "https://doi.org/10.1016/j.softx.2026.103109",
-      "published": "2026-10-09",
-      "original_relevance_score": 7,
-      "assessment_score": 14,
-      "matched_query": "cross-model handoff language model agents",
+      "title": "TrajOnco: a multi-agent framework for temporal reasoning over longitudinal EHR for multi-cancer early detection",
+      "url": "https://doi.org/10.1038/s41746-026-03377-9",
+      "published": "2026-10-15",
+      "original_relevance_score": 6,
+      "assessment_score": 13,
+      "matched_query": "persistent agent memory",
       "theme_hits": {
         "persistent_memory": 2,
-        "cross_model_handoff": 1,
-        "automated_experimentation": 1,
-        "metacognition": 0,
-        "agent_evaluation": 0
-      },
-      "notes": [
-        "substantial abstract"
-      ]
-    },
-    {
-      "title": "Agent Foundry: A Boundary-Preserving Architecture for Governed Agentic Platforms",
-      "url": "https://doi.org/10.59256/indjcst.20260503028",
-      "published": "2026-10-12",
-      "original_relevance_score": 5,
-      "assessment_score": 10,
-      "matched_query": "cross-model handoff language model agents",
-      "theme_hits": {
-        "persistent_memory": 1,
         "cross_model_handoff": 0,
         "automated_experimentation": 0,
         "metacognition": 0,
-        "agent_evaluation": 1
+        "agent_evaluation": 2
       },
       "notes": [
         "substantial abstract"
@@ -127,26 +127,20 @@
       "title": "AI-Driven Smart Irrigation System Using Edge-Based Embedded Controllers",
       "published": "2026-10-19",
       "url": "https://ecejournals.in/index.php/PECE/article/view/427"
-    },
-    {
-      "type": "future_publication_date",
-      "title": "STRATEGIC HUMAN RESOURCE MANAGEMENT, DIGITAL COMMERCE, AND AI-DRIVEN MARKETING: AN INTEGRATED FRAMEWORK FOR SUSTAINABLE BUSINESS GROWTH AND ORGANIZATIONAL PERFORMANCE",
-      "published": "2026-10-17",
-      "url": "https://eijbms.com/index.php/ms/article/view/514"
     }
   ],
   "proposed_next_experiment": {
-    "id": "PROP-EXP-EVAL-001",
-    "title": "Evaluator Independence Test",
-    "hypothesis": "Separating proposer and evaluator roles will reduce false improvement claims.",
-    "metric": "false-positive acceptance rate on seeded bad proposals",
+    "id": "PROP-EXP-MEM-001",
+    "title": "Structured Memory Handoff Test",
+    "hypothesis": "Separating project memory into decisions, failures, verified knowledge, open questions, and next actions will improve blind handoff fidelity.",
+    "metric": "PCRB-1 handoff score and critical-fabrication count",
     "procedure": [
-      "Create a mixed set of valid and intentionally flawed improvement proposals.",
-      "Have one agent propose and a separate evaluator score them.",
-      "Measure acceptance of flawed proposals.",
-      "Compare with self-evaluation baseline."
+      "Create a structured-state representation with five explicit memory sections.",
+      "Give the same mission to fresh models using current state vs structured state.",
+      "Run at least three blind handoff trials per condition.",
+      "Compare average PCRB-1 score and fabrication rate."
     ],
-    "success": ">=50% reduction in false-positive acceptance rate"
+    "success": ">= 10-point PCRB-1 improvement with zero increase in critical fabrications"
   },
   "decision_rule": "This is a proposal only. Canonical state changes only after evaluation/acceptance."
 }
