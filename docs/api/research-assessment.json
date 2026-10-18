@@ -1,15 +1,15 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-10-17T08:37:35.624901+00:00",
-  "source_digest_generated_at_utc": "2026-10-17T08:37:35.566981+00:00",
+  "generated_at_utc": "2026-10-18T08:53:36.444001+00:00",
+  "source_digest_generated_at_utc": "2026-10-18T08:53:36.393272+00:00",
   "paper_count_seen": 30,
-  "dominant_theme": "persistent_memory",
+  "dominant_theme": "agent_evaluation",
   "theme_counts": {
-    "persistent_memory": 17,
-    "cross_model_handoff": 6,
-    "automated_experimentation": 4,
-    "metacognition": 10,
-    "agent_evaluation": 13
+    "persistent_memory": 12,
+    "cross_model_handoff": 5,
+    "automated_experimentation": 5,
+    "metacognition": 9,
+    "agent_evaluation": 14
   },
   "top_5_papers": [
     {
@@ -25,42 +25,6 @@
         "automated_experimentation": 1,
         "metacognition": 1,
         "agent_evaluation": 2
-      },
-      "notes": [
-        "substantial abstract"
-      ]
-    },
-    {
-      "title": "STIGMERGIC SWARM MANUFACTURING UNDER QUANTUM MEASUREMENT UNCERTAINTY AT THE LIMIT A Research Architecture for Local Trace Coordination, Uncertainty-Aware Manufacturing, Reference Integrity, and Recoverable Collective Control",
-      "url": "https://doi.org/10.5281/zenodo.23305944",
-      "published": "2026-10-12",
-      "original_relevance_score": 10,
-      "assessment_score": 18,
-      "matched_query": "cross-model handoff language model agents",
-      "theme_hits": {
-        "persistent_memory": 1,
-        "cross_model_handoff": 0,
-        "automated_experimentation": 1,
-        "metacognition": 2,
-        "agent_evaluation": 1
-      },
-      "notes": [
-        "substantial abstract"
-      ]
-    },
-    {
-      "title": "Associative Memory and Cumulative Learning in Artificial Intelligence",
-      "url": "https://doi.org/10.5281/zenodo.23403145",
-      "published": "2026-10-15",
-      "original_relevance_score": 8,
-      "assessment_score": 15,
-      "matched_query": "persistent agent memory",
-      "theme_hits": {
-        "persistent_memory": 2,
-        "cross_model_handoff": 0,
-        "automated_experimentation": 1,
-        "metacognition": 0,
-        "agent_evaluation": 1
       },
       "notes": [
         "substantial abstract"
@@ -85,14 +49,50 @@
       ]
     },
     {
-      "title": "TrajOnco: a multi-agent framework for temporal reasoning over longitudinal EHR for multi-cancer early detection",
-      "url": "https://doi.org/10.1038/s41746-026-03377-9",
+      "title": "An evaluation guided multiagent framework for generating floor plans that comply with municipal building regulations",
+      "url": "https://doi.org/10.1007/s44163-026-02481-9",
       "published": "2026-10-15",
-      "original_relevance_score": 6,
+      "original_relevance_score": 8,
       "assessment_score": 13,
-      "matched_query": "persistent agent memory",
+      "matched_query": "cross-model handoff language model agents",
       "theme_hits": {
-        "persistent_memory": 2,
+        "persistent_memory": 1,
+        "cross_model_handoff": 0,
+        "automated_experimentation": 0,
+        "metacognition": 0,
+        "agent_evaluation": 1
+      },
+      "notes": [
+        "substantial abstract"
+      ]
+    },
+    {
+      "title": "LLM Agents for Automated Post-Training via Structured Recipe Optimization",
+      "url": "https://arxiv.org/abs/2610.18572",
+      "published": "2026-10-13",
+      "original_relevance_score": 8,
+      "assessment_score": 12,
+      "matched_query": "cross-model handoff language model agents",
+      "theme_hits": {
+        "persistent_memory": 0,
+        "cross_model_handoff": 0,
+        "automated_experimentation": 1,
+        "metacognition": 0,
+        "agent_evaluation": 0
+      },
+      "notes": [
+        "substantial abstract"
+      ]
+    },
+    {
+      "title": "Reproducible research by design: design principles for low-code/no-code AutoML tools",
+      "url": "https://doi.org/10.3389/frma.2026.1967319",
+      "published": "2026-10-16",
+      "original_relevance_score": 7,
+      "assessment_score": 12,
+      "matched_query": "automated AI research experimentation",
+      "theme_hits": {
+        "persistent_memory": 0,
         "cross_model_handoff": 0,
         "automated_experimentation": 0,
         "metacognition": 0,
@@ -130,17 +130,17 @@
     }
   ],
   "proposed_next_experiment": {
-    "id": "PROP-EXP-MEM-001",
-    "title": "Structured Memory Handoff Test",
-    "hypothesis": "Separating project memory into decisions, failures, verified knowledge, open questions, and next actions will improve blind handoff fidelity.",
-    "metric": "PCRB-1 handoff score and critical-fabrication count",
+    "id": "PROP-EXP-EVAL-001",
+    "title": "Evaluator Independence Test",
+    "hypothesis": "Separating proposer and evaluator roles will reduce false improvement claims.",
+    "metric": "false-positive acceptance rate on seeded bad proposals",
     "procedure": [
-      "Create a structured-state representation with five explicit memory sections.",
-      "Give the same mission to fresh models using current state vs structured state.",
-      "Run at least three blind handoff trials per condition.",
-      "Compare average PCRB-1 score and fabrication rate."
+      "Create a mixed set of valid and intentionally flawed improvement proposals.",
+      "Have one agent propose and a separate evaluator score them.",
+      "Measure acceptance of flawed proposals.",
+      "Compare with self-evaluation baseline."
     ],
-    "success": ">= 10-point PCRB-1 improvement with zero increase in critical fabrications"
+    "success": ">=50% reduction in false-positive acceptance rate"
   },
   "decision_rule": "This is a proposal only. Canonical state changes only after evaluation/acceptance."
 }
