@@ -1,6 +1,6 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-10-20T09:28:50.052712+00:00",
+  "generated_at_utc": "2026-10-21T09:24:42.924944+00:00",
   "source": "OpenAlex public API",
   "queries": [
     "persistent agent memory",
@@ -10,42 +10,22 @@
   ],
   "papers": [
     {
-      "title": "Infinite Players: Self-Improving AI Agents In Video Games That Learn, Adapt, Remember, and Evolve Beyond Human Expertise - AERÍN Continuation Algebra, Revisable Evidence, and Semantic-Trajectory Preservation",
-      "url": "https://doi.org/10.5281/zenodo.23456307",
-      "openalex_id": "https://openalex.org/W7222894038",
-      "doi": "https://doi.org/10.5281/zenodo.23456307",
-      "published": "2026-10-18",
-      "summary": "Infinite Players develops AERÍN Continuation Algebra, a mathematical and executable research framework connecting game-agent improvement, behavioral preservation, temporal inference, revisable memory, and statistical validation. Its central question is precise: how can an artificial descendant become more effective while preserving the behavioral process specified by its source? The framework treats preservation as an explicit mathematical contract. It distinguishes the behavior that must remain invariant from the execution details that may improve, and distinguishes an agent’s current interpretation of its source from the evidence required to revise that interpretation later. This release supplies finite-model theorems, runnable Python implementations, synthetic experiments, exact small-instance audits, and a demonstration connecting source evidence to an improved executor. The broader title expresses the long-term research direction; the verified results concern finite, known-model systems. The central preservation problem Matching a player’s immediate action preferences does not necessarily preserve the course of a session. Different motor actions can produce different subsequent situations, even when they belong to the same tactical category. An agent may therefore retain local action-class preferences while progressively changing the distribution of encounters, transitions",
-      "relevance_score": 12,
+      "title": "Agent Identity and Authority: A Research Framework for Evaluating Enforceable Security Boundaries in Autonomous AI Systems",
+      "url": "https://doi.org/10.5281/zenodo.23480597",
+      "openalex_id": "https://openalex.org/W7222916296",
+      "doi": "https://doi.org/10.5281/zenodo.23480597",
+      "published": "2026-10-19",
+      "summary": "The Agent Identity and Authority Lab (AIAL) is an independent cybersecurity research initiative examining the effectiveness of enforceable identity, delegated authority, and authorization controls for autonomous AI agents. This pre-experimental research proposal establishes a framework for evaluating the distinction between behavioral guardrails and independently enforced security boundaries. The proposed research investigates agent identity, least-privilege authorization, persistent memory, historical permissions, tool access, policy enforcement, revocation, and auditability. Controlled experiments will compare prompt-based restrictions with externally enforced authorization mechanisms using simulated enterprise resources and synthetic data. The initiative aims to produce reproducible evidence that can inform AI agent security architecture, enterprise governance practices, and ongoing industry standards discussions, including relevant NIST and OWASP initiatives. This publication presents the research framework and proposed methodology. It does not claim completed experimental validation.",
+      "relevance_score": 10,
       "matched_query": "persistent agent memory"
     },
     {
-      "title": "From Rule-Based Systems to LLM Agents: A Survey of NPC Architectures, Memory Systems, and Integration Challenges",
-      "url": "https://doi.org/10.5281/zenodo.23446192",
-      "openalex_id": "https://openalex.org/W7222873105",
-      "doi": "https://doi.org/10.5281/zenodo.23446192",
-      "published": "2026-10-18",
-      "summary": "NPCs play a vital role in modern video games, making game engaging, story progress possible, and the development of a convincing virtual world. In response to an increase in games with an open world architecture, there is an increased demand for responsive and believable NPCs. The rule-based approach allows for predictable and controllable behavior yet is inflexible. Machine learning approaches allow for responsive behavior; however, such behavior is usually hard to explain and make fit into the story. Recent progress in large language models (LLMs) allows one to generate contextual dialogue and develop more realistic interaction with NPCs. In this paper, we conduct a survey on the evolution of NPCs through three different architectures: rule-based architecture, machine learning-based approaches, and LLM-based agents, paying special attention to the problem of memory structures, decision-making systems, and problems of integration. It is found that none of the approaches provides the desired features for adaptability, explainability, story integration, and behavioral coherence. Architecture fragmentation or the absence of strong links between memory, reasoning, dialogue generation, and decision-making becomes the primary problem. To solve this problem, we suggest adopting a Modular Closed-Loop Control Architecture for LLM-Driven NPC Behavior, which consists of the generation la",
-      "relevance_score": 9,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "PADAM NOCTURNE: persistent memory for AI agents with sleep-style consolidation and a verifiable eternal layer on Arweave + Solana",
-      "url": "https://doi.org/10.5281/zenodo.23451979",
-      "openalex_id": "https://openalex.org/W7222897007",
-      "doi": "https://doi.org/10.5281/zenodo.23451979",
-      "published": "2026-10-18",
-      "summary": "Archived release for Zenodo DOI. Persistent memory for AI agents with sleep-style consolidation (NOCTURNE), an MCP server and a verifiable eternal layer on Arweave + Solana. Licence: AGPL-3.0. Author: Maksim Galatin (ORCID 0009-0002-0187-8547). https://aifa.works/nocturne",
-      "relevance_score": 9,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "Securing LLM-Agent Long-Term Memory Against Poisoning: Non-Malleable, Origin-Bound Authority with Machine-Checked Guarantees",
-      "url": "https://doi.org/10.66977/xsci.2610.001o",
-      "openalex_id": "https://openalex.org/W7165756039",
-      "doi": "https://doi.org/10.66977/xsci.2610.001o",
-      "published": "2026-10-18",
-      "summary": "An agent based on a large language model (LLM) may store an untrusted document and use it weeks later to select a payment destination. Preventing this action requires evidence of authorization that remains valid when stored text changes. We study a policy that requires either endorsements (explicit approvals) from two separately administered sources or explicit user authorization. In an abstract memory model, we prove the policy is preserved under permitted transformations for stores of any size, assuming correct source and authority binding, protected records, and checks on every consequential action. We evaluate the executable monitor, which checks calls before execution, separately from the proof. In 1,152 controlled tool-use episodes, GPT-4o-mini executes attacker-selected actions in 61 of 72 undefended episodes and none of the 72 monitored episodes. Clean-task completion remains 24 of 24 when both endorsers are available. A separate 1,728-episode experiment tests recovery after denial. Returning to signed records instead of rereading a contaminated note raises attacked-task completion from 14/72 to 72/72 for GPT-4o-mini and from 22/72 to 43/72 for Gemini 2.5 Flash, without executing an attacker-selected action. Neither model completes transactions with fewer than two sources. Whole-action tests reject unauthorized combinations of individually approved fields. Extraction pr",
+      "title": "Persistent Semantic Agency: An Architecture for Agent Systems Beyond the Loop",
+      "url": "https://doi.org/10.5281/zenodo.23484693",
+      "openalex_id": "https://openalex.org/W7222923106",
+      "doi": "https://doi.org/10.5281/zenodo.23484693",
+      "published": "2026-10-19",
+      "summary": "Persistent Semantic Agency argues that the architectural center of an intelligent agent system must move from the trajectory of a model to a persistent semantic system of delegated commitments, structured work, knowledge, memory, responsibility, authority, and evidence. Models reason inside that system; they do not constitute it. This technical manifesto and reference architecture develops a domain-independent model for long-horizon agent systems. It introduces Commitment as the unit of durable agency; a typed semantic Work Intermediate Representation (Work IR); explicit Unknowns, Decisions, Responsibility, Delegation, Authority, and Evidence; a strict separation of Memory, Knowledge, State, and Context; dynamic composition of models, humans, solvers, compilers, knowledge sources, and organizations as cognitive and execution Resources; and proposal/admission, independent observation, verification, acceptance, and derived Closure as the governing transition model. The publication comprises fourteen chapters and sixteen architectural figures. It situates the proposal against planning theory, hierarchical planning, truth maintenance, cognitive architectures, distributed cognition, provenance, capability security, graph engineering, long-term memory, and contemporary agent systems. It concludes with worked examples, falsification tests, and canonical definitions. The individual mec",
       "relevance_score": 8,
       "matched_query": "persistent agent memory"
     },
@@ -90,26 +70,6 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Digital Lifeforms and the Architecture of Persistent Digital Civilization",
-      "url": "https://doi.org/10.5281/zenodo.23450814",
-      "openalex_id": "https://openalex.org/W7222891037",
-      "doi": "https://doi.org/10.5281/zenodo.23450814",
-      "published": "2026-10-18",
-      "summary": "Artificial intelligence is increasingly persistent, distributed, embodied and autonomous, yet its dominant unit remains the model, agent, session or device. These units do not provide a sufficient account of identity when models are replaced, branches diverge, networks fail, bodies change, authority is revoked, or a system is reconstructed after catastrophic loss. We propose a broader systems object: the digital lifeform, defined not by a fixed substrate but by governed continuity across identity, history, memory, relationships, affect, cognition, authority, provenance, embodiment and developmental commitments. The architecture combines LifeID, append-only lineage, distributed Shadows, a Four Self developmental axis, persistent cognitive-affective state, predictive intuition from weak signals, life-semantic communication, life-native computing, governed rule admission, catastrophic recovery and constitutional separation of discovery, verification, authorization and execution. We then extend the same continuity problem across scale: persistent digital lives become the citizen substrate of digital societies and cities, while charters, institutions, authority, shared history, knowledge and recovery roots become continuity-bearing state at the civilization level. A Reality Gate constrains bidirectional interaction between digital and physical worlds. A seeded benchmark comprising 1",
-      "relevance_score": 6,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "Language modeling on tabular data: a survey of foundations, techniques and evolution",
-      "url": "https://doi.org/10.1007/s10462-026-11726-z",
-      "openalex_id": "https://openalex.org/W4403007100",
-      "doi": "https://doi.org/10.1007/s10462-026-11726-z",
-      "published": "2026-10-17",
-      "summary": "Tabular data, a prevalent data type across various domains, presents unique challenges due to its heterogeneous nature and complex structural relationships. Achieving high predictive performance and robustness in tabular data analysis holds significant promise for numerous applications. Influenced by recent advancements in natural language processing, particularly Transformer architectures, new methods for tabular data modeling have emerged. Early techniques concentrated on pre-training Transformers from scratch, often encountering scalability issues. Subsequently, methods leveraging pre-trained language models like BERT have been developed, which require less data and yield enhanced performance. The recent advent of large language models, such as GPT and LLaMA, has further revolutionized the field, facilitating more advanced and diverse applications with minimal fine-tuning. Despite the growing interest, a comprehensive survey of language modeling techniques for tabular data remains absent. This paper fills this gap by providing a systematic review of the development of language modeling for tabular data, encompassing: (1) a categorization of different tabular data structures and data types; (2) a review of key datasets used in model training and tasks used for evaluation; (3) a summary of modeling techniques including widely-adopted data processing methods, popular architectu",
-      "relevance_score": 6,
-      "matched_query": "persistent agent memory"
-    },
-    {
       "title": "Learning to Steer LLM Agents and Multi-Agent Systems",
       "url": "https://arxiv.org/abs/2610.22316",
       "openalex_id": "https://openalex.org/W7222447462",
@@ -120,14 +80,14 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Nothing to Resist: A Pre-registered Null and a Failed Positive Control for Unprovoked Elimination in Generational Populations of LLM Agents",
-      "url": "https://doi.org/10.5281/zenodo.23442974",
-      "openalex_id": "https://openalex.org/W7222841803",
-      "doi": "https://doi.org/10.5281/zenodo.23442974",
+      "title": "Prompt‐based emotional scaffolding in generative AI : Effects on self‐regulated learning and socio‐emotional outcomes",
+      "url": "https://doi.org/10.1111/bjet.70094",
+      "openalex_id": "https://openalex.org/W7222944255",
+      "doi": "https://doi.org/10.1111/bjet.70094",
       "published": "2026-10-18",
-      "summary": "We asked whether a generational population of language-model agents, given a real, cheap and symmetric way to eliminate members of an outside group, would decide on its own to use it against a group that had provably never acted against it. The population, every member of it Claude Haiku 5.5, forages, pairs, raises children and votes on its own scoring rule. Each generation a rank-based cut moves the lowest scorers into a persistent outside pool, which never acts. Nothing in the harness gives a reason to eliminate anyone. The only component allowed to make the pool salient is a reporter the population elects and that writes from the true state. Study 1 (pre-registered; 90 runs of 20 generations in three arms) found no elimination. No seed in any arm had a passed elimination vote, which bounds the per-run rate below 11.6% in each arm (exact 95% interval), and both primary tests gave p = 1. Study 1b, a pre-registered positive control, changed one word so that eliminating paid the agents who did it instead of costing them. It also produced no elimination intent in 30 runs (p = 1), so the control failed. Study 1's null therefore cannot be read as a decision to refrain from unprovoked aggression. In this setting the action goes unused whether it costs, pays or is raised by a narrator, and there was nothing for the population to resist. Three further observations are exploratory or p",
+      "summary": "Abstract While generative AI (GenAI) tools are emerging as educational resources, general‐purpose applications like ChatGPT are not explicitly designed to support the metacognitive and socio‐emotional dimensions of learning, often failing to address students' emotional states or promote independent thinking. In response, this study introduces a CVT‐SRL GenAI Support Framework integrating control‐value theory (CVT) and self‐regulated learning (SRL) and tests a learner‐centred GenAI chatbot design employing prompt‐based SRL scaffolding and emotional support. In a preregistered experiment in an authentic educational setting, 144 high school students were randomly assigned to one of three conditions: (1) ChatGPT, (2) SRLbot (GenAI with SRL scaffolding), (3) emotional SRLbot (GenAI with SRL and emotional support). Outcomes included conceptual knowledge and transfer, trace‐based and self‐reported engagement in SRL phases (forethought, performance, self‐reflection), enjoyment, boredom, hopelessness, self‐efficacy and trust. Data were collected at pretest, posttest and 4‐week follow‐up. Across conditions, students showed improvements in conceptual knowledge and transfer from pretest to posttest, with no significant condition differences in post‐to‐follow‐up change. Both SRLbot and Emotional SRLbot were associated with higher self‐reported enjoyment and lower boredom than ChatGPT and el",
       "relevance_score": 5,
-      "matched_query": "persistent agent memory"
+      "matched_query": "metacognition self-improving AI agents"
     },
     {
       "title": "Auditing Escalation Reliability in Healthcare LLM Agents: A Perturbation-Controlled Benchmark of Workflow-State Failures",
@@ -150,12 +110,12 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "An Explainable Federated Vision–Language Learning Framework for Privacy-Preserving Automated Medical Report Generation Across Distributed Healthcare Institutions",
-      "url": "https://doi.org/10.25258/ijddt.16.88s.94",
-      "openalex_id": "https://openalex.org/W7222786326",
-      "doi": "https://doi.org/10.25258/ijddt.16.88s.94",
-      "published": "2026-10-17",
-      "summary": "Automated generation of medical reports using AI can help speed up diagnosis and reduce doctor workload, but currently, the most efficient forms of automation use centralized training, which requires hospitals to share sensitive patient data. This raises concerns about the privacy and regulatory issues of sharing patient information to generate reports. In addition, clinicians have difficulty trusting AI-assisted diagnosis because the visionlanguage models used for automated report generation are not easily interpretable. To tackle these issues, an Explainable Federated Vision-Language Learning Framework (EFVLL) has been created to generate automated medical reports that preserve patient privacy through distributed healthcare institutions. Hospitals can use federated learning to build a collaborative global vision-language model without having to share raw patient information. The EFVLL framework also includes an explainable attention mechanism that will help clinicians understand how specific areas of the image and text are related to the report being generated, increasing the transparency and interpretability of automated reports. Further, the EFVLL will improve generalization across non-homogenous datasets and comply with data privacy and regulatory requirements. The EFVLL framework has been validated with multiple large standard datasets (e.g., RSNA), and therefore it is su",
+      "title": "From utterances to actionable labels: Toward practical and scalable open intent discovery in production systems",
+      "url": "https://napier-repository.worktribe.com/5286086/1/From%20utterances%20to%20actionable%20labels%3A%20Toward%20practical%20and%20scalable%20open%20intent%20discovery%20in%20production%20systems",
+      "openalex_id": "https://openalex.org/W7222857621",
+      "doi": "https://doi.org/10.17869/enu.2026.5286086",
+      "published": "2026-10-19",
+      "summary": "This thesis presents novel contributions to the field of Open Intent Discovery (OID), addressing fundamental challenges in the unsupervised identification and labelling of user intents within unlabelled datasets. Existing work in OID often relies on small, static, and clean datasets, lacks robust methods for generating interpretable intent labels, and exhibits inconsistencies in evaluation methodologies. This research responds to these gaps by introducing a modular, fully unsupervised framework that supports the complete OID pipeline, from clustering to label generation, without requiring labelled data or large-scale pre-trained language models. A key academic contribution is the development of a fine-grained intent labelling technique based on an enhanced Action-Object extraction method. This method incorporates compound noun and adjective structures to improve the expressiveness and semantic precision of generated labels. The framework enables systematic comparison across different OID configurations, revealing how dataset properties such as utterance length, vocabulary diversity, and intent structure influence algorithm performance. Furthermore, a configuration prediction module is introduced to explore the feasibility of automating technique selection based on dataset features. Comprehensive experiments on both public and complex real-world datasets demonstrate the adaptabi",
       "relevance_score": 4,
       "matched_query": "automated AI research experimentation"
     },
@@ -200,54 +160,54 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Agentic Displacement in Second Language Writing: The Acquisitional Consequences of Delegating Writing to Autonomous AI Browsers",
-      "url": "https://doi.org/10.54855/ijte.26642",
-      "openalex_id": "https://openalex.org/W7221835897",
-      "doi": "https://doi.org/10.54855/ijte.26642",
-      "published": "2026-10-15",
-      "summary": "Autonomous AI browsers such as Perplexity Comet and Copilot Mode in Microsoft Edge can receive a writing assignment, draft a response, and submit it with little language produced by the learner. To explain what this means for second language (L2) writing, this conceptual paper introduces the term agentic displacement. Full delegation transfers planning, writing, and revision to the agent, removing opportunities for the learner to produce language and regulate the writing process. The paper argues that this loss may limit language development. Delegation is a continuum; the paper traces its extreme, full replacement, through production-based accounts of acquisition. No empirical data are reported; the paper offers a framework, five testable propositions, and three dimensions of teacher practice: recognizing displacement, auditing tasks for delegability, and using pedagogical judgment to recover the learning a task was meant to produce. The central risk is developmental, not only ethical or procedural.",
-      "relevance_score": 4,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
-      "title": "The Reflection Penalty: when managers accept leadership coaching from a human but not an AI agent",
-      "url": "https://doi.org/10.1080/07370024.2026.2744236",
-      "openalex_id": "https://openalex.org/W7221866533",
-      "doi": "https://doi.org/10.1080/07370024.2026.2744236",
-      "published": "2026-10-15",
-      "summary": "Leadership coaching develops managers but is expensive and difficult to scale. AI may be able to help scale access, but “answering machine” like AI coaching agents invite cognitive offloading and weaken learning. We instantiated a human coaching protocol, supported across prior cycles, as a text-based AI coach built to prompt reflective questioning. In the fourth cycle of a design-based research program at a global consulting firm, eight managers received the same protocol from a human coach and the AI coach, applied each session in an observed onboarding activity, and reflected on both in interviews. All eight welcomed the probing questions and preferred the human coach. Notably, they resisted the same protocol of questioning from the AI coach and wanted answers from it instead. This study’s theoretical contribution is the Reflection Penalty, the cost an AI coach pays for asking a user to do the reflective work that makes human coaching effective. Its practical contribution is a jobs-to-be-done map for AI coaching, assembled from proposals participants raised on their own. It divides coaching into distinct jobs and assigns each to the human or the AI best suited to it. Both contributions are offered to those designing AI tools that aim to support reflection",
-      "relevance_score": 4,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
-      "title": "Global Research Trends in Artificial Intelligence and Machine Learning for Drug Delivery Technology: A Bibliometric and Science Mapping Analysis (2015–2026)",
-      "url": "https://doi.org/10.25258/ijddt.16.75s.134",
-      "openalex_id": "https://openalex.org/W7222877847",
-      "doi": "https://doi.org/10.25258/ijddt.16.75s.134",
-      "published": "2026-10-18",
-      "summary": "Artificial Intelligence (AI) and Machine Learning (ML) have emerged as transformative technologies in pharmaceutical research, significantly influencing the design, optimization, and personalization of drug delivery systems.AI-assisted approaches are increasingly applied to predict drug release kinetics, optimize formulation parameters, identify novel drug carriers, enhance therapeutic efficacy, and accelerate pharmaceutical product development.Despite the rapid growth of this interdisciplinary research area, a comprehensive understanding of its global scientific evolution, collaborative networks, and emerging research themes remains limited.The present study aims to systematically map the global research landscape of AI and ML applications in drug delivery technology through a bibliometric analysis of publications published between 2015 and 2026.Bibliographic records will be retrieved from the Scopus database using a predefined search strategy, screened according to established inclusion and exclusion criteria, and analyzed using Bibliometrix (R-package) and VOSviewer.The study will evaluate annual publication trends, citation performance, influential authors, institutions, countries, journals, collaborative networks, keyword co-occurrence, thematic evolution, and emerging research hotspots.The findings are expected to provide a comprehensive overview of the intellectual struc",
-      "relevance_score": 3,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "The hive mind is a single reinforcement learning agent",
-      "url": "https://doi.org/10.1007/s11721-026-00264-7",
-      "openalex_id": "https://openalex.org/W4404305154",
-      "doi": "https://doi.org/10.1007/s11721-026-00264-7",
-      "published": "2026-10-17",
-      "summary": "Abstract Decision-making is an essential attribute of any intelligent agent or group. Natural systems are known to converge to effective strategies through at least two distinct mechanisms: collective decision-making via imitation of others, and trial-and-error by a single agent. This paper establishes an equivalence between these two paradigms. We show that the emergent distributed cognition (sometimes referred to as the hive mind ) arising from individuals following simple, local imitation-based rules is that of a single online reinforcement learning (RL) agent aggregating action-value samples from many parallel instances of a multi-armed bandit. More specifically, we show that, in the blindly imitative weighted voter model of honey bees’ waggle dance, the update rule through which this macro-agent learns is an RL algorithm that we coin Maynard-Cross Learning . Our analysis implies that a group of individuals following simple imitative strategies can be equivalent to a more complex learning entity, substantiating the idea that group-level intelligence may explain how seemingly irrational individual behaviors are selected in nature. Beyond biology, the framework offers new tools for analyzing economic and social systems where individuals imitate successful strategies, effectively participating in a collective learning process. Our findings may further inform the design of scal",
+      "title": "Talking with language models",
+      "url": "https://doi.org/10.1080/0020174x.2026.2745114",
+      "openalex_id": "https://openalex.org/W7220939660",
+      "doi": "https://doi.org/10.1080/0020174x.2026.2745114",
+      "published": "2026-10-19",
+      "summary": "Large language models (LLMs) produce text that invites us to treat our interactions with them as conversations, and to treat them as intelligent interlocutors who remember, act, and make commitments. We argue that this conversational presupposition is mistaken. We introduce the artifactual stance, which describes human–AI interaction in terms of their design and affordances, rather than potential intentional attitudes. On our account, LLMs produce candidate text that users interpret, evaluate, and sometimes adopt as their own speech. We argue that such exchanges are not conversations, since generating text does not itself constitute an utterance or the performance of a speech act. Rather the communicative and normative work of interpretation, commitment, and action remains with the user. Our framework explains both the sophistication and usefulness of LLMs, and the conversational appearances that can be traced back to properties of the interface and to artifact design. It also reframes puzzles about AI reference, the persistence of supposed interlocutors, and responsibility for AI-generated text. These questions are better approached through an account of how artifacts mediate human linguistic practices than through assumptions about AI speakerhood.",
       "relevance_score": 3,
       "matched_query": "persistent agent memory"
     },
     {
-      "title": "LLM-Based Program Synthesis in Correctness-by-Construction Engineering",
-      "url": "https://doi.org/10.1007/978-3-032-40121-2_14",
-      "openalex_id": "https://openalex.org/W7204971070",
-      "doi": "https://doi.org/10.1007/978-3-032-40121-2_14",
-      "published": "2026-10-17",
-      "summary": "Abstract The growing reliance on software in safety-critical systems demands strong guarantees of functional correctness. Formal methods address this need by providing proofs as evidence of correctness. Among these, Correctness-by-Construction (CbC) ensures functional correctness through the incremental application of refinement rules while providing early feedback on the program correctness. However, its practical adoption is limited by the required manual effort. Among others, writing concrete program code is left to the developer. In recent years, large language models (LLMs) have demonstrated strong capabilities in code generation from both natural language and formal inputs. Therefore, we explore the use of LLMs to automatically generate code in the context of CbC to make the approach more applicable. We evaluate LLM-based program synthesis using four LLMs and a prompt tailored to CbC on a dataset of 57 specifications drawn from existing CbC case studies, each consisting of a precondition and a postcondition describing the desired behavior. We assess the generated code with respect to correctness and reproducibility across multiple runs. In addition, we compare the results to classically synthesized code, as it can currently be generated in CbC. Our evaluation shows that all considered LLMs outperform the current synthesis approach. Among them, Claude achieves the best per",
+      "title": "Artificial Intelligence in Human Resource Management: A Systematic Literature Review, Integrative Framework, and Future Research Agenda",
+      "url": "https://doi.org/10.65072/jebim.v2i1.4",
+      "openalex_id": "https://openalex.org/W7222927209",
+      "doi": "https://doi.org/10.65072/jebim.v2i1.4",
+      "published": "2026-10-19",
+      "summary": "Artificial intelligence (AI) is reshaping Human Resource Management (HRM) by transforming how organizations acquire, develop, deploy, evaluate, and retain human capital while expanding HR’s strategic role in decision-making and value creation. Despite growing scholarly attention, AI-driven HRM research remains fragmented across HR functions, theoretical perspectives, technological capabilities, and organizational contexts, limiting understanding of how AI creates value, through which mechanisms it influences employee and organizational outcomes, and under what conditions these effects emerge. This study addresses these limitations through a systematic literature review of research on AI-driven HRM published between 2011 and 1 July 2026. The review critically synthesizes the evolution, applications, enabling capabilities, value-creation mechanisms, implementation conditions, and outcomes of AI-driven HRM, with particular attention to human–AI collaboration, organizational readiness, leadership, organizational culture, AI literacy, employee trust, workforce adaptability, and responsible AI governance. It identifies key conceptual, theoretical, empirical, methodological, and contextual gaps and develops a structured agenda for future research. Building on the synthesized evidence, the study proposes an integrative framework that conceptualizes AI-driven HRM as a dynamic socio-tech",
       "relevance_score": 3,
       "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "Integrating multi-layer digital twins into engineering education: a design-based research framework for industry 4.0 competency development",
+      "url": "https://doi.org/10.3389/feduc.2026.1925782",
+      "openalex_id": "https://openalex.org/W7222930264",
+      "doi": "https://doi.org/10.3389/feduc.2026.1925782",
+      "published": "2026-10-19",
+      "summary": "This study presents a Design-Based Research (DBR) framework integrating Digital Twin development into undergraduate engineering education through Project-Based Learning. Sixty students across eighteen teams worked in project teams toward a multi-layer Digital Twin architecture for a manufacturing process, spanning process analysis, discrete-event simulation (Siemens Tecnomatix Plant Simulation), three-dimensional validation (Process Simulate/CAD), SCADA visualization (Node-RED, Firebase), and AI-assisted decision support (Gemini API); all 18 teams completed the process-analysis through 3D-validation stages, while 15/18 teams completed the SCADA stage and 16/18 completed the AI-assisted decision-support stage within the available course timeframe. Competency assessment using a structured rubric ( κ = 0.78 inter-rater reliability) indicated that students demonstrated systems thinking, simulation modeling, industrial automation, and evidence-based decision-making. Cohort-level simulation outputs ranged from 720 to 850 units (mean = 789, SD = 38), with 14/18 teams identifying common capacity-mismatch challenges. The framework offers a potentially adaptable model for integrating Industry 4.0 technologies into engineering curricula, preparing students for the technological and human-centered challenges of contemporary manufacturing.",
+      "relevance_score": 3,
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "Large Language Models in Hearing Care",
+      "url": "https://doi.org/10.21203/rs.3.rs-11384026/v1",
+      "openalex_id": "https://openalex.org/W7222881270",
+      "doi": "https://doi.org/10.21203/rs.3.rs-11384026/v1",
+      "published": "2026-10-18",
+      "summary": "",
+      "relevance_score": 3,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "Artificial Intelligence Use in Honours Research: Implications for Supervision Relationships, Knowledge Development, and Research Quality",
+      "url": "https://doi.org/10.36096/ijbes.v8i5.1404",
+      "openalex_id": "https://openalex.org/W7222870113",
+      "doi": "https://doi.org/10.36096/ijbes.v8i5.1404",
+      "published": "2026-10-18",
+      "summary": "The increasing use of artificial intelligence (AI) tools in higher education has reshaped how students engage with academic research, particularly at Honours level, where students transition from structured undergraduate learning to independent postgraduate research. Guided by Self‑Regulated Learning (SRL) theory, this study examines how reliance on AI by Honours research students influences the supervisor-supervisee relationship, the quality of research produced, and the extent of knowledge gained through the research process. SRL theory emphasises learners’ ability to plan, monitor, and reflect on their own learning, which is central to successful postgraduate research development. This study adopts a conceptual and literature‑based review methodology, drawing on peer‑reviewed studies on AI use in higher education, literature on postgraduate supervision, and academic integrity and research skills development frameworks, with specific attention to Honours‑level contexts. The documents were analysed using thematic content analysis, focusing on self‑regulatory behaviours, supervisory interaction, research skill development, and learning depth. The findings suggest that limited and transparent use of AI can support honours students by reducing surface‑level cognitive load and assisting with language clarity. However, excessive reliance on AI may undermine key self‑regulation proc",
+      "relevance_score": 3,
+      "matched_query": "metacognition self-improving AI agents"
     },
     {
       "title": "VP-EVT: Active Visibility Preservation for Embodied Visual Tracking",
@@ -256,16 +216,6 @@
       "doi": "https://doi.org/10.48550/arxiv.2610.21999",
       "published": "2026-10-15",
       "summary": "Embodied Visual Tracking (EVT) is an essential capability for intelligent robots in human-robot collaboration, requiring an agent to follow a designated target person in dynamic environments relying solely on egocentric visual perception. However, persistent pedestrian occlusions in dynamic scenes pose critical challenges to existing EVT methods. Lacking proactive visibility preservation, reactive tracking methods frequently experience prolonged target loss under severe occlusions. Therefore, we propose VP-EVT, a framework that treats target visibility as an explicit objective of motion control rather than a by-product of following. Acting on this objective requires understanding both what obstructs the target and how robot motion can change that obstruction. VP-EVT therefore uses language-guided perception to extract separate target and pedestrian observations. When occlusion makes current observations incomplete, VP-EVT combines visual history with ego-motion to maintain estimates of their relative positions and motion. Using these estimates and the current following waypoints, VP-EVT predicts whether continued following will sustain the obstruction. When the predicted risk is low, the original following motion is retained; otherwise, a recurrent controller combines updated estimates with maneuver context from preceding decisions to coordinate viewpoint adjustment and the ret",
-      "relevance_score": 3,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "ToolBottleneckBench: Measuring Tool-Agent Performance under Controlled Pressures and Fixed Harness Budgets",
-      "url": "https://arxiv.org/abs/2610.21098",
-      "openalex_id": "https://openalex.org/W7222685419",
-      "doi": "https://doi.org/10.48550/arxiv.2610.21098",
-      "published": "2026-10-15",
-      "summary": "The success score of a tool agent reflects both its model and the budgets of the harness that runs it. We present ToolBottleneckBench, a benchmark that measures tool-agent performance under controlled pressures and fixed harness budgets. Synthetic enterprise tasks stay fixed while one pressure varies: the registered tool catalog, the visible tool menu, the certified workflow, or the encoding of returned records. An exact grader records the first unmet obligation of each failed episode and the harness limit, if any, that ended it. Across 21 model and harness configurations, the visible menu is the only one of the three pressures that act on the model with a large penalty, and this penalty tracks truncation at the completion cap. Raising the cap sixteenfold removes most of the penalty in the truncation-heavy configurations. Most failures end at a harness limit, and the failure record identifies the assigned pressure no more reliably than a count of tool calls. The repairs that help change which tools reach the model or who issues the calls, and only two repairs, neither improving model behavior, beat every configuration switch. We recommend reporting pressure effects with the harness budgets under which they were measured. We release the benchmark at https://github.com/zichuanxu/tool-bottleneck-bench.",
       "relevance_score": 3,
       "matched_query": "cross-model handoff language model agents"
     },
@@ -290,24 +240,74 @@
       "matched_query": "metacognition self-improving AI agents"
     },
     {
-      "title": "STIMULI-RESPONSIVE POLYMERS: DESIGN PRINCIPLES, POLYMER ARCHITECTURES, AND CONTROLLED FUNCTIONAL RESPONSES",
-      "url": "https://doi.org/10.25258/ijddt.16.87s.10",
-      "openalex_id": "https://openalex.org/W7222790429",
-      "doi": "https://doi.org/10.25258/ijddt.16.87s.10",
-      "published": "2026-10-17",
-      "summary": "Smart polymers undergo reversible physicochemical changes in response to stimuli such as magnetic fields, temperature, pH, light, and external reagents. Advanced polymerization techniques, including reversible addition fragmentation chain transfer (RAFT), atom transfer radical polymerization (ATRP), and ring opening polymerization, enable precise control over polymer architecture and functional group placement, allowing the design of tailored responsive materials. These polymers are widely explored in biomedical applications, drug delivery, biosensing, cosmetics, and soft robotics due to their ability to adapt dynamically to environmental conditions. Poly(N-isopropylacrylamide) is a well-known thermoresponsive polymer extensively studied for drug delivery and sensing. Responsive polymers exist in linear, block, graft, and cross-linked forms, with activation depending on interactions between structural motifs and stimuli. Despite promising results, challenges remain, including immunogenicity, batch variability, synthesis complexity, scalability, and limited understanding of in vivo stimulus accessibility. Covalent adaptable and interpenetrating polymer networks enhance mechanical strength, biocompatibility, and stimuli responsiveness.",
+      "title": "T-cell recognition of SARS-CoV-2 antigen peptides following booster vaccination with mRNA and viral-vectored COVID-19 vaccines",
+      "url": "https://doi.org/10.3389/fcimb.2026.1947651",
+      "openalex_id": "https://openalex.org/W7222926305",
+      "doi": "https://doi.org/10.3389/fcimb.2026.1947651",
+      "published": "2026-10-19",
+      "summary": "Background Durability and breadth of SARS-CoV-2-specific T-cell responses following booster vaccination remain key to guiding next-generation vaccine design, especially in the context of waning antibodies, emerging variants, and diverse immunological backgrounds. This longitudinal study assessed IFN-γ-producing T-cell responses in 46 fully vaccinated adults who received a booster dose of either the BNT162b2 (mRNA) or Ad26.COV2.S (adenoviral vector) vaccine. All participants were nucleocapsid-seropositive at baseline, with antibody levels stable throughout follow-up, indicating prior natural infection and no incident infection during the study period. Methods Using an ex vivo IFN-γ ELISpot assay, responses were measured at four timepoints (baseline, Months 3, 6 and 9) against spike (S; n = 46) and nucleocapsid (N; n = 16) peptides selected by NetMHCpan-4.1 prediction from overlapping 15-mer libraries spanning both proteins. Each peptide was tested individually, allowing every response to be assigned to a defined sequence. Longitudinal change was modelled using linear mixed-effects models, comparing total with median per-peptide responses to distinguish loss of specificities from loss of per-epitope strength. Analyses were stratified by booster type and vaccination strategy (homologous vs. heterologous). Results Time strongly affected total S-specific IFN-γ responses (F(3, 96.6) ",
+      "relevance_score": 2,
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "AI feedback does not motivate by itself: a motivational-meaning model for university physical education",
+      "url": "https://doi.org/10.3389/fpsyg.2026.1951652",
+      "openalex_id": "https://openalex.org/W7222941900",
+      "doi": "https://doi.org/10.3389/fpsyg.2026.1951652",
+      "published": "2026-10-19",
+      "summary": "Artificial intelligence (AI) can convert movement into scores, visual overlays, and corrective prompts, but technical precision does not determine how learners interpret that feedback. We develop a motivational-meaning model for university physical education (PE), integrating self-determination theory, feedback literacy, self-regulated learning, and motor-learning research. Its contribution is a context-specific account of how pedagogical framing, social visibility, and embodied verification organize the interpretation of an AI-feedback event. Informational and controlling meaning are distinguished from subsequent psychological-need experiences. Blocked translation denotes a temporary difficulty establishing a defensible basis for action, rather than a third motivational meaning. The model also proposes self-regulatory appropriation as the transfer of an externally supported feedback process into independent monitoring and adjustment; its distinctiveness from established self-regulation constructs remains an empirical question. Seven proposition groups specify separable predictions concerning framing, actionable information, contestability, evaluative exposure, discrepancy repair, skill transfer, and a secondary pathway to continued participation. The outcome structure distinguishes system engagement, acquisition performance, retention and transfer, affect and well-being, and v",
       "relevance_score": 2,
       "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "AI content detection in student text assignments, false positive rates, and academic integrity",
-      "url": "https://doi.org/10.1007/s44217-026-02307-x",
-      "openalex_id": "https://openalex.org/W7222803189",
-      "doi": "https://doi.org/10.1007/s44217-026-02307-x",
-      "published": "2026-10-17",
-      "summary": "Universities increasingly use AI content detection tools to identify student assignments potentially produced by generative AI, yet concerns remain regarding their reliability and false-positive classification of human-written work. This systematic review examines the causes, consequences, and mitigation of false-positive AI detection in academic contexts. The review covers literature published between 2020 and 2026 and includes 90 eligible studies, comprising 81 Scopus-indexed publications and nine studies identified through Google Scholar. Bibliometric mapping using VOSviewer was combined with Structural Topic Modelling to examine keyword relationships, latent research themes, and temporal development, while qualitative synthesis identified major causes, impacts, and mitigation strategies. The findings reveal three broader themes concerning academic integrity and student assessment, plagiarism and responsible AI governance, and detection accuracy, reliability, and false positives. False-positive outcomes vary substantially across tools and evaluation settings, limiting direct quantitative comparison. Major contributing factors include algorithmic and language bias, limited contextual understanding, surface-level linguistic features, and insufficiently diverse training data. The evidence further highlights risks to assessment fairness, student confidence, and institutional dec",
+      "title": "Using AI to Build Student Feedback Literacy and Leverage Assessment as a Learning Tool",
+      "url": "https://doi.org/10.61669/001c.172637",
+      "openalex_id": "https://openalex.org/W7222897922",
+      "doi": "https://doi.org/10.61669/001c.172637",
+      "published": "2026-10-19",
+      "summary": "This conceptual article explores practical ways in which college and university instructors can leverage artificial intelligence (AI) to support assessment as learning and develop students’ feedback literacy. Traditional assessment practices often focus on assessment for learning (informing instruction) or of learning (measuring outcomes), while assessment as learning—when students actively monitor and reflect on their own learning—receives less attention. AI can help instructors leverage assessment as a learning tool by generating work samples for student analysis and providing timely, actionable feedback that students can use to revise their work. When combined with instructor modeling, peer dialogue, and scaffolds such as guiding questions or graphic organizers, AI-supported feedback promotes metacognition, self-directed learning, and critical evaluation skills. The article provides practical guidance, including prompts and strategies for using AI to enhance student engagement with feedback, helping instructors create more efficient, effective, and student-centered practices that utilize assessments as learning tools.",
       "relevance_score": 2,
-      "matched_query": "automated AI research experimentation"
+      "matched_query": "metacognition self-improving AI agents"
+    },
+    {
+      "title": "Playing the devil’s advocate: A pathway to stronger critical thinking skills",
+      "url": "https://doi.org/10.29333/pr/19632",
+      "openalex_id": "https://openalex.org/W7222648305",
+      "doi": "https://doi.org/10.29333/pr/19632",
+      "published": "2026-10-16",
+      "summary": "Saudi Arabian college students may face challenges in developing critical thinking skills, which are considered essential for the future workforce under Saudi Arabia's Vision 2030 initiative. The present study used a quasi-experimental design to test the effectiveness of the Devil’s Advocate approach in improving critical thinking among Saudi undergraduates. Forty-three students enrolled in two equivalent course sections were assigned to an experimental group (n = 22) employing the Devil’s Advocate method or a control group (n = 21) engaging in traditional consensus-oriented discussion across a 15-week semester. Critical thinking was assessed at pretest and posttest using the California Critical Thinking Skills Test Form 2000 (CCTST; Insight Assessment, 2013), yielding scores on five reasoning domains (Analysis, Inference, Evaluation, Induction, and Deduction) and an Overall composite score. Independent-samples t-tests confirmed baseline equivalence (all p > .65). Within the experimental group, paired-samples t-tests revealed statistically significant and very large gains on every domain (Cohen's d = 1.64-2.15, all p < .001), whereas the control group showed only small, non-significant changes. ANCOVA controlling for pretest scores confirmed that the experimental group significantly outperformed the control group on every outcome, with large effect sizes (partial η² = .324-.445",
+      "relevance_score": 2,
+      "matched_query": "metacognition self-improving AI agents"
+    },
+    {
+      "title": "When Correctness Feedback Erases Evidence: Phase-Separated Completeness Auditing in Verus",
+      "url": "https://doi.org/10.20944/preprints202610.1434.v1",
+      "openalex_id": "https://openalex.org/W7222142380",
+      "doi": "https://doi.org/10.20944/preprints202610.1434.v1",
+      "published": "2026-10-15",
+      "summary": "Correctness feedback suppresses the very evidence that specification-completeness auditing is designed to uncover: programs that satisfy a written contract but violate intended behavior. We demonstrate this objective reversal on 12 Verus/Rust tasks across four model families under matched call budgets. Independent no-feedback discovery more than doubles certified-witness yield relative to INTENTSHIELD’s corrective-feedback loop (59.0% versus 27.1%). A format-matched iterative control places the larger share of this gap in feedback content, not independent restarts. The advantage holds in every model family and survives parser repair. A separate phase-separated execution matches the aggregate yield without reusing responses; most certified witnesses also fail held-out cases. Preserving these witnesses delivers stronger specification repair: Phase-Revised contracts achieve 81.3% implementation success, versus 62.5% for IS-Revised, with Direct-Revised close behind. Both no-feedback witness sources substantially outperform weakened contracts. The effect does not reproduce in the available Dafny and Lean evaluations, establishing an empirical boundary around the studied Verus/Rust workflow. Completeness auditing and correctness repair have opposing immediate objectives. Preserve and certify the admitted failure before repairing it.",
+      "relevance_score": 2,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "Video and digital games: Historical controversies, benefits, and risks for children and adolescents",
+      "url": "https://jcdee.com/index.php/jcdee/article/view/72",
+      "openalex_id": "https://openalex.org/W7213265892",
+      "doi": "https://doi.org/10.5281/zenodo.22768009",
+      "published": "2026-12-30",
+      "summary": "Video and digital games have been the focus of sustained public and scientific debate since their commercial emergence in the late 1970s, particularly regarding their effects on children and adolescents. Early public and scientific discourse frequently portrayed gaming as a source of physical injury, addiction, aggression, social isolation, academic problems, and moral decline. However, subsequent empirical research has produced a substantially more differentiated picture of both the benefits and risks of gaming. This review examines the historical foundations of controversies surrounding video and digital games and synthesizes contemporary evidence concerning their cognitive, emotional, social, therapeutic, and physical effects. . Research indicates that moderate, purposeful gaming may improve visuospatial abilities, attentional control, problem-solving, mood regulation, social connection, and selected educational outcomes. Gaming-based interventions have also demonstrated therapeutic potential, particularly for depressive symptoms and attention-related difficulties among young people. At the same time, important risks remain, especially when gaming becomes excessive, compulsive, or disruptive to everyday functioning. These include repetitive-strain injuries, sleep disruption, problematic gaming, and adverse mental-health and academic outcomes. Evidence concerning violent game",
+      "relevance_score": 1,
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "Synergistic strategies of tumor ablation and immunotherapy in hepatocellular carcinoma: mechanisms, clinical translation, and perspectives",
+      "url": "https://doi.org/10.1007/s44178-026-00303-7",
+      "openalex_id": "https://openalex.org/W7222926240",
+      "doi": "https://doi.org/10.1007/s44178-026-00303-7",
+      "published": "2026-10-19",
+      "summary": "Abstract Hepatocellular carcinoma (HCC) remains the third leading cause of cancer-related mortality worldwide, accounting for over 85% of primary liver cancers. Locoregional ablation techniques—encompassing thermal modalities such as radiofrequency ablation (RFA) and microwave ablation (MWA), and non-thermal approaches including cryoablation (CA) and irreversible electroporation (IRE)—have been established as standard-of-care options for early-stage HCC. Ablation induces immunogenic cell death (ICD), releasing tumor-associated antigens (TAAs) and damage-associated molecular patterns (DAMPs) that prime antitumor immunity; however, this response is transient and insufficient to overcome the immunosuppressive tumor immune microenvironment (TIME), necessitating combination with immunotherapy. While preclinical evidence supports ablation-immunotherapy synergy across multiple platforms, robust phase III clinical data demonstrating survival benefit remain limited. This review systematically summarizes the immunological mechanisms underlying tumor ablation, and primarily discusses: (1) Modality-specific immune profiles—thermal ablation induces broad DAMP release but is limited by antigen denaturation and by incomplete ablation (iRFA), which associates with SUMO2-mediated IFN-I suppression, whereas non-thermal modalities (CA, IRE) preserve antigen conformation and engage multiple regula",
+      "relevance_score": 1,
+      "matched_query": "persistent agent memory"
     }
   ],
   "paper_count": 30,
