@@ -1,84 +1,48 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-10-23T09:23:48.851334+00:00",
-  "source_digest_generated_at_utc": "2026-10-23T09:23:48.793910+00:00",
+  "generated_at_utc": "2026-10-24T08:55:17.950175+00:00",
+  "source_digest_generated_at_utc": "2026-10-24T08:55:17.898878+00:00",
   "paper_count_seen": 30,
-  "dominant_theme": "agent_evaluation",
+  "dominant_theme": "automated_experimentation",
   "theme_counts": {
-    "persistent_memory": 9,
+    "persistent_memory": 6,
     "cross_model_handoff": 4,
     "automated_experimentation": 7,
-    "metacognition": 5,
-    "agent_evaluation": 18
+    "metacognition": 6,
+    "agent_evaluation": 7
   },
   "top_5_papers": [
     {
-      "title": "InstAgent: A Recursively Self-Improving Agent Operating System for Heterogeneous Robot Collaboration",
-      "url": "https://arxiv.org/abs/2610.23098",
-      "published": "2026-10-16",
+      "title": "RaspAssistant as an Agentic Framework for Automating Adsorption Simulation Research in Porous Materials",
+      "url": "https://arxiv.org/abs/2610.27572",
+      "published": "2026-10-20",
       "original_relevance_score": 9,
-      "assessment_score": 16,
-      "matched_query": "cross-model handoff language model agents",
-      "theme_hits": {
-        "persistent_memory": 1,
-        "cross_model_handoff": 1,
-        "automated_experimentation": 2,
-        "metacognition": 0,
-        "agent_evaluation": 0
-      },
-      "notes": [
-        "substantial abstract"
-      ]
-    },
-    {
-      "title": "MLOps-Bench: Benchmarking AI Agents on Production ML Engineering in Real Repositories",
-      "url": "https://arxiv.org/abs/2610.23506",
-      "published": "2026-10-16",
-      "original_relevance_score": 5,
-      "assessment_score": 12,
+      "assessment_score": 14,
       "matched_query": "cross-model handoff language model agents",
       "theme_hits": {
         "persistent_memory": 0,
         "cross_model_handoff": 0,
         "automated_experimentation": 1,
         "metacognition": 0,
-        "agent_evaluation": 3
+        "agent_evaluation": 1
       },
       "notes": [
         "substantial abstract"
       ]
     },
     {
-      "title": "Cloud‐Native and Distributed Systems for Efficient and Scalable Large Language Models—A Research Agenda",
-      "url": "https://doi.org/10.1002/spe.70121",
-      "published": "2026-10-16",
+      "title": "Human–Agent Symbiotic Cognitive Architecture (HASCA): A Pair-Centric Framework for Longitudinal Human–Agent Co-Reasoning",
+      "url": "https://doi.org/10.5281/zenodo.23580444",
+      "published": "2026-10-23",
       "original_relevance_score": 7,
-      "assessment_score": 11,
-      "matched_query": "cross-model handoff language model agents",
-      "theme_hits": {
-        "persistent_memory": 1,
-        "cross_model_handoff": 0,
-        "automated_experimentation": 0,
-        "metacognition": 0,
-        "agent_evaluation": 0
-      },
-      "notes": [
-        "substantial abstract"
-      ]
-    },
-    {
-      "title": "The shift toward open and reproducible AI research",
-      "url": "https://doi.org/10.1038/s44488-026-00015-x",
-      "published": "2026-10-22",
-      "original_relevance_score": 6,
-      "assessment_score": 11,
+      "assessment_score": 14,
       "matched_query": "persistent agent memory",
       "theme_hits": {
-        "persistent_memory": 0,
-        "cross_model_handoff": 0,
+        "persistent_memory": 2,
+        "cross_model_handoff": 1,
         "automated_experimentation": 0,
-        "metacognition": 0,
-        "agent_evaluation": 2
+        "metacognition": 1,
+        "agent_evaluation": 0
       },
       "notes": [
         "substantial abstract"
@@ -97,6 +61,42 @@
         "automated_experimentation": 0,
         "metacognition": 0,
         "agent_evaluation": 1
+      },
+      "notes": [
+        "substantial abstract"
+      ]
+    },
+    {
+      "title": "PIU Smart Intelligence Agents: Design and Implementation of a Security-Aware Multi-Agent Architecture for Enterprise Intelligence",
+      "url": "https://doi.org/10.38124/ijisrt/26oct511",
+      "published": "2026-10-22",
+      "original_relevance_score": 7,
+      "assessment_score": 10,
+      "matched_query": "persistent agent memory",
+      "theme_hits": {
+        "persistent_memory": 0,
+        "cross_model_handoff": 0,
+        "automated_experimentation": 0,
+        "metacognition": 0,
+        "agent_evaluation": 0
+      },
+      "notes": [
+        "substantial abstract"
+      ]
+    },
+    {
+      "title": "Automated Multi-Agent Organization Design: From Architecture Search to Organizational Learning",
+      "url": "https://arxiv.org/abs/2610.27531",
+      "published": "2026-10-20",
+      "original_relevance_score": 7,
+      "assessment_score": 10,
+      "matched_query": "cross-model handoff language model agents",
+      "theme_hits": {
+        "persistent_memory": 0,
+        "cross_model_handoff": 0,
+        "automated_experimentation": 0,
+        "metacognition": 0,
+        "agent_evaluation": 0
       },
       "notes": [
         "substantial abstract"
@@ -130,17 +130,17 @@
     }
   ],
   "proposed_next_experiment": {
-    "id": "PROP-EXP-EVAL-001",
-    "title": "Evaluator Independence Test",
-    "hypothesis": "Separating proposer and evaluator roles will reduce false improvement claims.",
-    "metric": "false-positive acceptance rate on seeded bad proposals",
+    "id": "PROP-EXP-AUTO-001",
+    "title": "Hypothesis-to-Experiment Reliability",
+    "hypothesis": "Requiring a predefined metric before implementation will reduce low-value experiments.",
+    "metric": "fraction of experiments reaching a valid KEEP/REJECT decision",
     "procedure": [
-      "Create a mixed set of valid and intentionally flawed improvement proposals.",
-      "Have one agent propose and a separate evaluator score them.",
-      "Measure acceptance of flawed proposals.",
-      "Compare with self-evaluation baseline."
+      "Collect 10 proposed experiments.",
+      "Require hypothesis, baseline, metric, stopping rule before execution.",
+      "Run the experiments in a sandbox.",
+      "Measure how many produce an interpretable decision."
     ],
-    "success": ">=50% reduction in false-positive acceptance rate"
+    "success": ">=80% of experiments yield a reproducible KEEP/REJECT decision"
   },
   "decision_rule": "This is a proposal only. Canonical state changes only after evaluation/acceptance."
 }

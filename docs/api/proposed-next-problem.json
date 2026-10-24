@@ -1,16 +1,16 @@
 {
   "status": "PROPOSED",
-  "generated_at_utc": "2026-10-23T09:23:48.851334+00:00",
-  "derived_from_theme": "agent_evaluation",
-  "id": "PROP-EXP-EVAL-001",
-  "title": "Evaluator Independence Test",
-  "hypothesis": "Separating proposer and evaluator roles will reduce false improvement claims.",
-  "metric": "false-positive acceptance rate on seeded bad proposals",
+  "generated_at_utc": "2026-10-24T08:55:17.950175+00:00",
+  "derived_from_theme": "automated_experimentation",
+  "id": "PROP-EXP-AUTO-001",
+  "title": "Hypothesis-to-Experiment Reliability",
+  "hypothesis": "Requiring a predefined metric before implementation will reduce low-value experiments.",
+  "metric": "fraction of experiments reaching a valid KEEP/REJECT decision",
   "procedure": [
-    "Create a mixed set of valid and intentionally flawed improvement proposals.",
-    "Have one agent propose and a separate evaluator score them.",
-    "Measure acceptance of flawed proposals.",
-    "Compare with self-evaluation baseline."
+    "Collect 10 proposed experiments.",
+    "Require hypothesis, baseline, metric, stopping rule before execution.",
+    "Run the experiments in a sandbox.",
+    "Measure how many produce an interpretable decision."
   ],
-  "success": ">=50% reduction in false-positive acceptance rate"
+  "success": ">=80% of experiments yield a reproducible KEEP/REJECT decision"
 }
