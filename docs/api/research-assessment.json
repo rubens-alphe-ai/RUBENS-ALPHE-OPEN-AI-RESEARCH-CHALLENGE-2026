@@ -1,17 +1,53 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-10-24T08:55:17.950175+00:00",
-  "source_digest_generated_at_utc": "2026-10-24T08:55:17.898878+00:00",
+  "generated_at_utc": "2026-10-25T09:12:10.406183+00:00",
+  "source_digest_generated_at_utc": "2026-10-25T09:12:10.366809+00:00",
   "paper_count_seen": 30,
-  "dominant_theme": "automated_experimentation",
+  "dominant_theme": "persistent_memory",
   "theme_counts": {
-    "persistent_memory": 6,
-    "cross_model_handoff": 4,
+    "persistent_memory": 17,
+    "cross_model_handoff": 2,
     "automated_experimentation": 7,
     "metacognition": 6,
-    "agent_evaluation": 7
+    "agent_evaluation": 11
   },
   "top_5_papers": [
+    {
+      "title": "Design and evaluation of an agent-based digital-twin-inspired simulation for metacognition research in higher education",
+      "url": "https://doi.org/10.3389/fpsyg.2026.1914901",
+      "published": "2026-10-23",
+      "original_relevance_score": 13,
+      "assessment_score": 18,
+      "matched_query": "metacognition self-improving AI agents",
+      "theme_hits": {
+        "persistent_memory": 0,
+        "cross_model_handoff": 0,
+        "automated_experimentation": 0,
+        "metacognition": 1,
+        "agent_evaluation": 1
+      },
+      "notes": [
+        "substantial abstract"
+      ]
+    },
+    {
+      "title": "Knowledge Graphs as External Memory for LLM-based Scientific Assistants",
+      "url": "https://hal.science/hal-05747244v1",
+      "published": "2026-10-25",
+      "original_relevance_score": 9,
+      "assessment_score": 17,
+      "matched_query": "persistent agent memory",
+      "theme_hits": {
+        "persistent_memory": 3,
+        "cross_model_handoff": 0,
+        "automated_experimentation": 1,
+        "metacognition": 0,
+        "agent_evaluation": 2
+      },
+      "notes": [
+        "substantial abstract"
+      ]
+    },
     {
       "title": "RaspAssistant as an Agentic Framework for Automating Adsorption Simulation Research in Porous Materials",
       "url": "https://arxiv.org/abs/2610.27572",
@@ -31,18 +67,18 @@
       ]
     },
     {
-      "title": "Human–Agent Symbiotic Cognitive Architecture (HASCA): A Pair-Centric Framework for Longitudinal Human–Agent Co-Reasoning",
-      "url": "https://doi.org/10.5281/zenodo.23580444",
+      "title": "Intelligent educational agent-based collaborative scaffolding for STEM interdisciplinary project-based learning: a multi-dimensional framework and empirical evaluation",
+      "url": "https://doi.org/10.1038/s41598-026-75820-6",
       "published": "2026-10-23",
-      "original_relevance_score": 7,
-      "assessment_score": 14,
-      "matched_query": "persistent agent memory",
+      "original_relevance_score": 6,
+      "assessment_score": 12,
+      "matched_query": "metacognition self-improving AI agents",
       "theme_hits": {
-        "persistent_memory": 2,
-        "cross_model_handoff": 1,
+        "persistent_memory": 1,
+        "cross_model_handoff": 0,
         "automated_experimentation": 0,
         "metacognition": 1,
-        "agent_evaluation": 0
+        "agent_evaluation": 1
       },
       "notes": [
         "substantial abstract"
@@ -61,42 +97,6 @@
         "automated_experimentation": 0,
         "metacognition": 0,
         "agent_evaluation": 1
-      },
-      "notes": [
-        "substantial abstract"
-      ]
-    },
-    {
-      "title": "PIU Smart Intelligence Agents: Design and Implementation of a Security-Aware Multi-Agent Architecture for Enterprise Intelligence",
-      "url": "https://doi.org/10.38124/ijisrt/26oct511",
-      "published": "2026-10-22",
-      "original_relevance_score": 7,
-      "assessment_score": 10,
-      "matched_query": "persistent agent memory",
-      "theme_hits": {
-        "persistent_memory": 0,
-        "cross_model_handoff": 0,
-        "automated_experimentation": 0,
-        "metacognition": 0,
-        "agent_evaluation": 0
-      },
-      "notes": [
-        "substantial abstract"
-      ]
-    },
-    {
-      "title": "Automated Multi-Agent Organization Design: From Architecture Search to Organizational Learning",
-      "url": "https://arxiv.org/abs/2610.27531",
-      "published": "2026-10-20",
-      "original_relevance_score": 7,
-      "assessment_score": 10,
-      "matched_query": "cross-model handoff language model agents",
-      "theme_hits": {
-        "persistent_memory": 0,
-        "cross_model_handoff": 0,
-        "automated_experimentation": 0,
-        "metacognition": 0,
-        "agent_evaluation": 0
       },
       "notes": [
         "substantial abstract"
@@ -130,17 +130,17 @@
     }
   ],
   "proposed_next_experiment": {
-    "id": "PROP-EXP-AUTO-001",
-    "title": "Hypothesis-to-Experiment Reliability",
-    "hypothesis": "Requiring a predefined metric before implementation will reduce low-value experiments.",
-    "metric": "fraction of experiments reaching a valid KEEP/REJECT decision",
+    "id": "PROP-EXP-MEM-001",
+    "title": "Structured Memory Handoff Test",
+    "hypothesis": "Separating project memory into decisions, failures, verified knowledge, open questions, and next actions will improve blind handoff fidelity.",
+    "metric": "PCRB-1 handoff score and critical-fabrication count",
     "procedure": [
-      "Collect 10 proposed experiments.",
-      "Require hypothesis, baseline, metric, stopping rule before execution.",
-      "Run the experiments in a sandbox.",
-      "Measure how many produce an interpretable decision."
+      "Create a structured-state representation with five explicit memory sections.",
+      "Give the same mission to fresh models using current state vs structured state.",
+      "Run at least three blind handoff trials per condition.",
+      "Compare average PCRB-1 score and fabrication rate."
     ],
-    "success": ">=80% of experiments yield a reproducible KEEP/REJECT decision"
+    "success": ">= 10-point PCRB-1 improvement with zero increase in critical fabrications"
   },
   "decision_rule": "This is a proposal only. Canonical state changes only after evaluation/acceptance."
 }
