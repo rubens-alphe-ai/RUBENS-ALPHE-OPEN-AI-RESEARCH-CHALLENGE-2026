@@ -1,6 +1,6 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-10-25T09:12:10.366809+00:00",
+  "generated_at_utc": "2026-10-26T10:13:27.943403+00:00",
   "source": "OpenAlex public API",
   "queries": [
     "persistent agent memory",
@@ -9,6 +9,16 @@
     "metacognition self-improving AI agents"
   ],
   "papers": [
+    {
+      "title": "Recovery Budgets for Persistent AI-Agent Memory: Reproducibility Artifact",
+      "url": "https://doi.org/10.5281/zenodo.23623901",
+      "openalex_id": "https://openalex.org/W7223447759",
+      "doi": "https://doi.org/10.5281/zenodo.23623901",
+      "published": "2026-10-24",
+      "summary": "Complete computational-reproduction artifact associated with Recovery Budgets for Persistent AI-Agent Memory: Bounding Revocation Liability. Includes original structural and recorded Codex/Claude workflows, a separately frozen extension over 120 held-out full-history LongMemEval-derived questions, two Claude API models, two repetitions and seven policies (3360 paired policy executions), complete public benchmark input, exact requests/responses and usage, durable SQLite stores, seven preserved infrastructure refusals, exploratory controls, runtime tests, statistical analysis and figure/table generators. Offline reproduction uses recorded responses and requires no API key or model charge. It does not constitute independent new model sampling. Weighted-pending quotas and reservations intentionally agree; episodic memory remains competitive. Scores are strict short-reference EM/F1 rather than official LongMemEval scores. Direct study-author identifiers are withheld in this review artifact; third-party data attribution is retained. See README.txt, DATA-DICTIONARY.txt, ANONYMIZATION.txt, and verification reports for scope and limitations. Licenses: MIT applies to original software; CC BY 4.0 applies to original experimental outputs and documentation. LongMemEval material retains its original MIT notice and attribution. Model weights and provider services are not relicensed. Validatio",
+      "relevance_score": 13,
+      "matched_query": "persistent agent memory"
+    },
     {
       "title": "Design and evaluation of an agent-based digital-twin-inspired simulation for metacognition research in higher education",
       "url": "https://doi.org/10.3389/fpsyg.2026.1914901",
@@ -30,24 +40,14 @@
       "matched_query": "persistent agent memory"
     },
     {
-      "title": "RaspAssistant as an Agentic Framework for Automating Adsorption Simulation Research in Porous Materials",
-      "url": "https://arxiv.org/abs/2610.27572",
-      "openalex_id": "https://openalex.org/W7223127528",
-      "doi": "https://doi.org/10.48550/arxiv.2610.27572",
-      "published": "2026-10-20",
-      "summary": "Porous-material adsorption studies require coordinated structure preparation, force-field selection, simulation, validation, and interpretation, making end-to-end automation difficult. We test whether RaspAssistant, a hierarchical multi-agent framework, can carry an adsorption study from force-field preparation through validation and downstream separation analysis. Across twelve multi-agent workflow-reproduction runs spanning four adsorption and separation benchmarks, overall scores ranged from 8.50 to 10.00 on a rubric evaluating workflow correctness, simulation validity, and analysis consistency. In a separate eight-case force-field extraction benchmark, the mean weighted score was 0.967, combining parameter agreement and RASPA readiness. In open-ended studies, the system diagnosed and refined an acetylene force field and, after validating a CO$_2$ force field against MFI experiments, screened 197 pure-silica zeolites that passed automated input checks. These results demonstrate autonomous workflow execution after task specification and input provision: RaspAssistant coordinates, validates, adapts, and documents extended adsorption-simulation workflows while exposing model sensitivity and methodological limitations for expert review.",
-      "relevance_score": 9,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Automated Multi-Agent Organization Design: From Architecture Search to Organizational Learning",
-      "url": "https://arxiv.org/abs/2610.27531",
-      "openalex_id": "https://openalex.org/W7223121227",
-      "doi": "https://doi.org/10.48550/arxiv.2610.27531",
-      "published": "2026-10-20",
-      "summary": "Agentic system design is increasingly shifting from hand-crafted prompts and workflows toward automated search over agentic programs and interaction structures, with multi-agent systems receiving growing attention. Yet a central question remains unresolved: when does an automatically generated multi-agent structure exhibit a functionally meaningful division of responsibility? We argue that automated multi-agent design should move beyond searching for effective architectures toward identifying which responsibilities are functionally necessary, how they should be allocated, and when they should change. To explore this, we propose Automated Multi-Agent Organization Design (AMOD), which treats organization itself as a first-class design object, explicitly modeling how agent teams are composed, what functional responsibilities the agents assume, how they coordinate, and how collective decisions are made. We formulate AMOD as an execution-driven design loop. For each task, an automated designer instantiates an organization by assigning functional responsibilities and coordination rules to a set of agents. After execution, task outcomes, intermediate artifacts, and interaction traces are examined to identify which responsibilities may be missing, duplicated, or ineffective, and the organization is revised accordingly. We also propose testing discovered responsibilities by removing the",
-      "relevance_score": 7,
-      "matched_query": "cross-model handoff language model agents"
+      "title": "STRATUM: Repository Memory for Coding Agents — Replication Package",
+      "url": "https://doi.org/10.5281/zenodo.23615179",
+      "openalex_id": "https://openalex.org/W7223446836",
+      "doi": "https://doi.org/10.5281/zenodo.23615179",
+      "published": "2026-10-24",
+      "summary": "Anonymous replication package for a double-blind submission arguing that coding agents need persistent, experience-aware repository memory rather than a larger context window. Contains every script and raw measurement behind the paper's motivating study and preliminary experiments: F1 — token census of six open-source repositories and the representation-cost gap between storing knowledge as indexed text vs. as model key-value (KV) cache state (e.g. ~4 GB as text vs. ~298 TB as fp16 KV state per billion tokens, 70B model). F2 — the working-set size of 752 real bug-fix commits: the median fix touches two files, and the one-hop import closure is 2.7-9.9% of the repository. F3 — how much of real file co-change is visible to static analysis (852 commits, 4 repositories): 47.3% of co-edited file pairs remain disconnected even under transitive import reachability and test-name links. E4 — retrieval latency over a synthetic 10^6-node SQLite+HNSW store: 1.70 ms median / 2.76 ms p99 end-to-end. E5 — a real multi-session agent experiment on 8 real bugs using the Claude API: a reader model that inherits a different (writer) model's memory diagnoses the bug correctly in 21/24 trials vs. 6/24 for a retrieval-only baseline (one-sided Fisher exact p = 1.27e-05), at 4.5x lower median token cost; accumulated memory (26 pooled notes) stays at 8/8; a whole-repository-in-context baseline matches me",
+      "relevance_score": 8,
+      "matched_query": "persistent agent memory"
     },
     {
       "title": "Intelligent educational agent-based collaborative scaffolding for STEM interdisciplinary project-based learning: a multi-dimensional framework and empirical evaluation",
@@ -60,34 +60,24 @@
       "matched_query": "metacognition self-improving AI agents"
     },
     {
-      "title": "A PRIVACY PRESERVING PERSONAL AI ASSISTANT AND THE COST OF CLOUD MODEL INFERENCE: ARCHITECTURE, CAPABILITY TRADEOFFS, AND EVALUATION PROTOCOL",
-      "url": "https://doi.org/10.30574/wjarr.2026.32.1.2606",
-      "openalex_id": "https://openalex.org/W7223046419",
-      "doi": "https://doi.org/10.30574/wjarr.2026.32.1.2606",
-      "published": "2026-10-20",
-      "summary": "Personal AI assistants need reliable research and controlled access to private data. This report specifies a local-first Windows architecture and examines the capability, privacy, and operating-cost tradeoff between local Llama 3.2 3B through Ollama and self-hosted Kimi K2.5 on rented NVIDIA GPUs. We analyzed a supplied project design summary, mapped trust boundaries and failure modes, and calculated illustrative costs from a documented eight-H200 deployment and published rental rates. The design separates public research from authenticated browser sessions, enforces permissions outside the model, and requires evidence-supported answers. At an illustrative $4.59 per GPU-hour, eight H200s cost $36.72 per running hour, $4,406.40 for four hours daily over 30 days, or $26,438.40 for continuous 30-day operation, before storage and operations. An assumed 100 W incremental local draw for four hours daily at $0.15/kWh costs $1.80 monthly on an existing PC. These are scenarios, not measured deployments. Kimi K2.5 offers multimodal and agentic capabilities that a text-only 3B baseline should not be assumed to match; no matched end-to-end test was performed. Stronger cloud inference can impose substantial dedicated GPU rental cost and transfers prompts to a cloud operator. Local inference preserves a narrower data boundary at far lower incremental cash cost but requires direct task-qualit",
-      "relevance_score": 6,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "SAGE-HAP: Sustainability-Certified Agentic Communication and Computing at a Solar-Powered High-Altitude Platform",
-      "url": "https://arxiv.org/abs/2610.27513",
-      "openalex_id": "https://openalex.org/W7223102909",
-      "doi": "https://doi.org/10.48550/arxiv.2610.27513",
-      "published": "2026-10-20",
-      "summary": "The solar-powered High-Altitude Platforms (HAP) can provide persistent communication and computing services beyond terrestrial coverage. However, changing mission priorities, coupled resource demands, and uncertain solar supply complicate sustainable scheduling, while large language model proposals require independent feasibility checks. This paper proposes SAGE, a Sustainability-certified Agentic Ground-service Engine for a HAP. We formulate an energy-causal stochastic optimization problem incorporating semantic modes, multi-user interference, channel aging, essential platform loads, and battery stress. An agent translates operator intent into typed admission, mode, and grouping candidates, while deterministic convex refinement and an action shield verify resource and reserve feasibility using calibrated solar lower bounds before execution. Agent proposals and deterministic fallbacks share the same certification path. Residual-based forecasting and memory-assisted replanning close the control loop. We establish fixed-candidate convexity, reserve safety under calibrated solar coverage and bounded actuation error, and an online utility bound accounting for candidate-generation error. At nominal load, simulations show 2.38 percentage points higher completion and 5.27% greater useful-workload energy efficiency than energy-harvesting Lyapunov control. Under stressed load and solar ",
-      "relevance_score": 6,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Graduated Autonomy for Artificial Intelligence Agents in Human Capital Management: A Systematic Review and a Consequence-Calibrated Governance Framework",
-      "url": "https://doi.org/10.64823/ijstm.2601005",
-      "openalex_id": "https://openalex.org/W7223211518",
-      "doi": "https://doi.org/10.64823/ijstm.2601005",
+      "title": "Agentic AI for Complex Decision-Making: A Systematic Critical Review of Planning, Memory, Tools, Safety and Assurance in Autonomous Systems",
+      "url": "https://doi.org/10.21203/rs.3.rs-11226881/v1",
+      "openalex_id": "https://openalex.org/W7223349864",
+      "doi": "https://doi.org/10.21203/rs.3.rs-11226881/v1",
       "published": "2026-10-23",
-      "summary": "Human capital management platforms are starting to embed software agents built on large language models. Unlike earlier analytics tools, these agents can plan a sequence of steps, call system functions and change employee records. Artificial intelligence is therefore moving from advising managers to acting for them. Most governance guidance, however, was written for systems that recommend rather than act. This study asks how organisations should match the autonomy of such agents to the consequences of the people decisions they touch. A systematic review was conducted and reported using the PRISMA 2020 guideline. Eighteen structured searches of a multi-source scholarly index returned 180 records. After duplicate removal and eligibility screening, 55 peer-reviewed sources were retained, and four foundational and regulatory sources were added. Thematic synthesis produced seven findings. Algorithmic control of work is already extensive. Bias in hiring tools is persistent and partly organisational. Human review is weaker than assumed, because reviewers often defer to machine advice. Responsibility tends to diffuse as systems gain autonomy. Employee trust depends on fair process and visible human involvement. Language-model agents add new failure modes, such as fabricated content and hidden instructions planted in documents. Finally, current governance frameworks rarely specify contr",
-      "relevance_score": 5,
-      "matched_query": "persistent agent memory"
+      "summary": "",
+      "relevance_score": 6,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "The End of Consensus Research?",
+      "url": "https://arxiv.org/abs/2610.30114",
+      "openalex_id": "https://openalex.org/W7223245778",
+      "doi": "https://doi.org/10.48550/arxiv.2610.30114",
+      "published": "2026-10-21",
+      "summary": "Consensus is a fundamental problem in distributed computing and at the core of state machine replication (SMR). Despite decades of active human research, discovering practical low-latency solutions to the problem is still open, as it requires combining protocol knowledge, correctness reasoning, implementation, and experimental evaluation. We report on how AI helped us discover A-greement, a new consensus protocol for geo-replicated state machines that significantly outperforms state-of-the-art solutions. Averaged across six deployments with 5 or 9 replicas, A-greement reduces the mean latency of a geo-distributed key-value store over the fastest baseline by 12.2% and 33.3% on write-heavy and read-heavy workloads, respectively, and matches the fastest baseline on read-only workloads. A-greement combines lease-authorized local reads, direct client learning for leader-ordered writes, and a fast fixed-quorum per-key write path, selected according to network topology and workload. At the heart of our discovery lies AI-greement, an agent harness for the \"autonomous\" discovery, implementation, experimentation, and verification of candidate protocols. AI-greement integrates (1) a concept-oriented protocol knowledge base, (2) a modular implementation skeleton, and (3) a Lean-based verification framework with reusable safety definitions, reference specifications, and proofs. AI-greement ",
+      "relevance_score": 6,
+      "matched_query": "cross-model handoff language model agents"
     },
     {
       "title": "Design and Evaluation of an Artificial Intelligence–Based Model for Predicting Twelfth-Grade Students’ Mathematics Performance Based on Individual, Educational, and Learning Technology Factors",
@@ -100,14 +90,34 @@
       "matched_query": "metacognition self-improving AI agents"
     },
     {
-      "title": "Neuro-Symbolic Meta-policies for Temporal Knowledge-Graph Memory Under Partial Observability",
-      "url": "https://doi.org/10.1007/978-3-032-42015-2_10",
-      "openalex_id": "https://openalex.org/W7170074144",
-      "doi": "https://doi.org/10.1007/978-3-032-42015-2_10",
-      "published": "2026-10-23",
-      "summary": "",
+      "title": "Governing Agentic AI in Africa: A Systematic Literature Review of Ethical Challenges, Framework Gaps, and Ubuntu-Informed Governance Solutions",
+      "url": "https://doi.org/10.63158/journalisi.v8i5.1738",
+      "openalex_id": "https://openalex.org/W7223316300",
+      "doi": "https://doi.org/10.63158/journalisi.v8i5.1738",
+      "published": "2026-10-24",
+      "summary": "Agentic AI systems pursue goals through multi-step planning, tool use, memory, and adaptive action, creating governance challenges that differ from those associated with conventional predictive or generative AI. This study systematically reviews governance evidence relevant to agentic AI in Africa and develops an Ubuntu-informed conceptual framework. Following PRISMA 2020, 91 records published from 2019 to April 2026 were analysed through quantitative content analysis and abductive thematic synthesis. The corpus comprises 12 agentic-AI-specific records, 3 agentic-adjacent records, and 76 broader AI-governance records used as contextual evidence. Five literature-derived gaps were identified: accountability across autonomous action chains, infrastructure-aware oversight, bias and representational harm, policy fragmentation, and community exclusion. These findings inform five proposed governance elements: communal impact assessment, collective consent and participation, infrastructure-contingent oversight, African dataset and bias auditing, and communal accountability. The framework is a literature-derived conceptual proposition, not an empirically validated governance instrument, and requires future case-study, expert-panel, and comparative policy testing.",
+      "relevance_score": 4,
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "Agent-based simulation of equity-oriented water reallocation under drought: A case study of the Geum River Basin",
+      "url": "https://doi.org/10.1016/j.ejrh.2026.104035",
+      "openalex_id": "https://openalex.org/W7223393950",
+      "doi": "https://doi.org/10.1016/j.ejrh.2026.104035",
+      "published": "2026-10-24",
+      "summary": "Study region : Geum River Basin, South Korea, a structurally heterogeneous watershed with 14 agricultural, 12 domestic/industrial intake, and 3 hydropower stakeholders. The basin has the highest agricultural water demand among South Korea’s six major river basins, with precipitation concentrated in the summer monsoon season, making dam operations critical for balancing competing water demands during irrigation. Study focus : This study develops an integrated framework to improve equitable water allocation during droughts by coupling a basin-scale allocation model with an Agent-Based Model (ABM). While centralized optimization overlooks decentralized social dynamics, autonomous stakeholder agents make voluntary diversion decisions based on locally perceived reliability deficits, redistributing water to the most vulnerable peers via hypothetical conveyance infrastructure. Streamflow is represented by SWAT-derived daily inflows spanning 39 water years (October 1981–September 2020). New hydrological insights and conclusions : First, agricultural water supply vulnerability in the Geum River Basin is governed less by absolute demand magnitude and more by basin topology and infrastructure configuration. Tributary-dominated subbasins (Agr 7, Agr 11, and Agr 13), which are structurally isolated from the regulated mainstem, exhibited the lowest supply reliability during the severe histor",
       "relevance_score": 3,
       "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "Large Language Model Adoption and Firm Innovation: More Patents within Existing Knowledge Boundaries",
+      "url": "https://doi.org/10.66977/xsci.2610.002l",
+      "openalex_id": "https://openalex.org/W7223450614",
+      "doi": "https://doi.org/10.66977/xsci.2610.002l",
+      "published": "2026-10-24",
+      "summary": "Large language models (LLMs) let employees search, explain, and recombine technical knowledge at low cost. We ask whether firms that adopt them innovate more and whether they innovate beyond the technologies they already know. Using a classifier validated against human coders, we date when Chinese listed firms first confirm, in replies to investor questions, that they have put LLMs or other AI applications into use, and we link these events to the patent applications of 1,836 firms over 2019--2024. Patent applications rise by 12.5% after adoption. In a second design based on the arrival of LLMs after ChatGPT's release, firms that had hired more heavily into AI-exposed occupations increased their patenting relative to other firms in 2024. The additional patents stay within firms' existing knowledge boundaries: utility-model and exploitative applications rise, new patents move closer to the firm's prior technology portfolio, and neither invention nor exploratory applications increase significantly. Adopters also raise R&D intensity, software-and-data investment, and the share of graduate employees. The patent response is concentrated in labor-intensive industries and in highly AI-exposed firms, it tilts further toward exploitation under myopic managers, and among business functions only market-facing uses are followed by significantly more patents. In the adoption year and the ye",
+      "relevance_score": 3,
+      "matched_query": "automated AI research experimentation"
     },
     {
       "title": "Perceptions and recommendations: exploring the ethics of using satellite data to understand, monitor, and publish research on international geohazards",
@@ -116,16 +126,6 @@
       "doi": "https://doi.org/10.5194/gc-9-489-2026",
       "published": "2026-10-23",
       "summary": "Abstract. Over the last ten years, open-access earth observation satellite data volumes have grown exponentially. Through use of this data, geohazard remote sensing scientists' abilities to impact policy and reduce societal vulnerability to geohazards has become increasingly tangible. However, much of this open-access data is acquired, stored, and disseminated by the Global North, whilst most disasters take place in the Global South. Furthermore, many societies are imaged by these earth observation satellites perhaps without knowing these satellites exist. There exists little ethical guidance for remote sensing researchers in navigating ethical risks that may arise during geohazard research which uses satellite data. We explore these ethical considerations with UK based geohazard remote sensing scientists through thirteen interviews and three focus group discussions. We discuss with scientists their thoughts on ethical review systems for geohazard remote sensing; the importance of visiting study regions; how data should be handled which images people and societies; the desired impact these scientists want to achieve; and the ethical risks of open data. We find among remote sensing researchers in industry, government organisations, and academia a deep desire to contribute to the reduction of societal vulnerabilities to geohazards. In accordance with geoethical practice, all part",
-      "relevance_score": 3,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "BEYOND TECHNOSTRESS AI Fatigue as a Cumulative Adaptation Burden in Education and Work",
-      "url": "https://doi.org/10.54878/bxxewh81",
-      "openalex_id": "https://openalex.org/W7223198136",
-      "doi": "https://doi.org/10.54878/bxxewh81",
-      "published": "2026-10-23",
-      "summary": "Artificial intelligence has become a persistent layer of work and learning rather than an occasional tool. Users must repeatedly decide when to delegate, how to prompt, whether to trust, how to verify, and how responsibility should be distributed. This integrative review defines AI fatigue as a cumulative reduction in the cognitive, affective, or motivational capacity for adaptive AI engagement when interaction, evaluation, correction, learning, and role-adjustment demands accumulate faster than recovery and support. The review connects technostress, automation vigilance, cognitive load and offloading, trust calibration, digital fatigue, and the Job Demands–Resources perspective. It introduces an Exposure–Adaptation–Depletion–Response framework, a five-domain taxonomy, and an AI Fatigue Load model that separates use volume from uncertainty, task stakes, correction burden, interruption, role disruption, and imposed adoption velocity. The analysis is updated to incorporate a 2026 validated 15-item AI Fatigue Scale; the proposed load model complements that psychophysiological outcome measure by specifying socio-technical antecedents and exposure conditions. Educational and organizational applications show why AI may simultaneously improve output and worsen human sustainability. The article identifies recurring inferential errors, presents a measurement and longitudinal research ag",
       "relevance_score": 3,
       "matched_query": "automated AI research experimentation"
     },
@@ -150,22 +150,22 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Evolving Agent Interfaces",
-      "url": "https://arxiv.org/abs/2610.28601",
-      "openalex_id": "https://openalex.org/W7223103111",
-      "doi": "https://doi.org/10.48550/arxiv.2610.28601",
-      "published": "2026-10-20",
-      "summary": "Computer-use agents are limited by the interfaces humans give them. An agent may type a spreadsheet cell by cell when a single line of code would do, or print all two thousand lines of a file through a shell to find one function. Both the interfaces and the knowledge of when to use each are built by hand, which cannot keep pace with new applications, workflows, and models. We argue that interface design should itself be an agent capability. We introduce Agent S4, an autonomous computer-use scientist that builds Evolving Agent Interfaces from task experience. A meta-agent examines task agents' trajectories on synthetic training tasks, without success labels, and constructs and revises interfaces and usage knowledge in a repository. Population-based evolution then selects which repositories to develop further by their performance on validation tasks the meta-agent never sees, favoring changes that generalize beyond the seen tasks. On OSWorld V2, Agent S4, with Qwen3.8-27B and the evolved repository of interfaces, sets a new state of the art in open-source computer-use agents, reaching 21.3% binary score, 3.8 times the same model with fixed interfaces. This is above both GPT-5.5 (13.0%) and Claude Opus 4.8 (20.6%), at about 4.3% and 1.5% of their respective costs. On ScienceBoard, the evolved interfaces improve the success rate from 41.4% to 58.6% with the same model. These result",
+      "title": "Research trends in supply chain management in the construction industry: a systematic literature review and bibliometric analysis",
+      "url": "https://doi.org/10.1080/23311975.2026.2749934",
+      "openalex_id": "https://openalex.org/W7223148917",
+      "doi": "https://doi.org/10.1080/23311975.2026.2749934",
+      "published": "2026-10-21",
+      "summary": "Supply chain management (SCM) has become a strategic priority in construction, where project delivery depends on coordinating fragmented actors, material flows, and information under uncertainty. Despite growing scholarly attention, research remains dispersed across sustainability, digitalisation, risk governance, and stakeholder coordination, thereby limiting the development of cumulative knowledge. To address this fragmentation, this study integrates a PRISMA 2020-guided systematic literature review with bibliometric analysis to examine the intellectual structure, thematic evolution, and future directions of construction SCM. A total of 143 studies (2001–2024) were identified from Web of Science, Scopus, ScienceDirect, and Google Scholar, and analysed using descriptive techniques, thematic synthesis, and bibliographic coupling in VOSviewer. The findings reveal four interrelated domains: sustainable construction SCM, strategic management and risk mitigation, digital transformation, and supplier and stakeholder management. This review provides an integrated evidence base that clarifies field fragmentation and identifies priorities for future research and practice.",
       "relevance_score": 3,
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "InterWebCoder: Learning Interactive Webpage Generation from Executable Tests via Reinforcement Learning",
-      "url": "https://arxiv.org/abs/2610.28610",
-      "openalex_id": "https://openalex.org/W7223123485",
-      "doi": "https://doi.org/10.48550/arxiv.2610.28610",
-      "published": "2026-10-20",
-      "summary": "Interactive webpages underpin modern applications, but reproducing both their visual appearance and multi-step behavior remains challenging for multimodal large language models (MLLMs). Scalable training data must capture user actions, state transitions, and expected outcomes, while real-world webpage code is often entangled with irrelevant scripts and external dependencies. Moreover, existing GUI-agent-based verification provides slow and potentially unstable functional feedback. To address these challenges, we propose InterWebCoder, an efficient framework for interactive webpage code generation. InterWebCoder introduces a Test-Specification-Guided and Execution-Verified Data Synthesis pipeline that records real-world interaction trajectories and synthesizes self-contained webpage code with executable test scripts. A failureattributed repair mechanism uses runtime evidence to locate and iteratively fix errors in either the webpage code or test script. We then combine test-ID-weighted supervised fine-tuning with group-relative policy optimization, directly optimizing functional correctness and visual fidelity using test pass rates and state-level visual similarity. This replaces costly GUI-agent verification with fast, reproducible executable feedback. Our pipeline produces 1,736 verified samples from 2,058 tasks, achieving an 84.35% synthesis success rate. On IWR-Bench and Vis",
+      "title": "OSynth: A Longitudinal, Context-Sensitive Evaluation of Meeting Understanding",
+      "url": "https://arxiv.org/abs/2610.29319",
+      "openalex_id": "https://openalex.org/W7223209753",
+      "doi": "https://doi.org/10.48550/arxiv.2610.29319",
+      "published": "2026-10-21",
+      "summary": "Meeting notetakers are increasingly deployed in settings where longitudinal context is available including calendar metadata, prior meetings, emails, slides, and speaker enrollments; however, meeting corpora remain limited in terms of size, domain coverage, and available context. We present OSynth, a large-scale synthetic dataset of simulated organizations comprising 570 hours of meeting audio together with associated artifacts and a latent ground-truth state. In a pairwise comparison, human raters distinguish OSynth meetings from real meeting transcripts with only 56% accuracy based on excerpts of 150-300 words. Across state-of-the-art LLMs, additional context yields significant gains on several entity-sensitive dimensions, demonstrating limitations of contemporary approaches and the potential usefulness of OSynth in developing better-contextualized meeting-understanding systems.",
       "relevance_score": 3,
       "matched_query": "cross-model handoff language model agents"
     },
@@ -190,6 +190,26 @@
       "matched_query": "metacognition self-improving AI agents"
     },
     {
+      "title": "Design and Construction of a Low-Cost, Open-Source Syringe-Based Pipetting Robot Using 3D Printing and Common Hardware Parts",
+      "url": "https://doi.org/10.1021/acsomega.6c05778",
+      "openalex_id": "https://openalex.org/W7223336257",
+      "doi": "https://doi.org/10.1021/acsomega.6c05778",
+      "published": "2026-10-24",
+      "summary": "Abstract Automation in chemical laboratories improves the reproducibility, precision, and efficiency in liquid handling. A three-dimensional (3D)-printed, stepper-actuated pipetting robot was developed and tested via silver nitrate (AgNO3) experiments. The system employs a rigid 3D-printed frame to secure syringes and tubing, stepper motors for plunger actuation, and microcontroller-based software to automate the pipetting sequences. The robot was evaluated for volume accuracy, reproducibility, and mechanical reliability using 5 mL syringes. The results indicate consistent volume delivery and stable mechanical performance over multiple cycles. Detailed mechanical, electrical, and software specifications are provided to enable replication and customization in other laboratories.",
+      "relevance_score": 2,
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "Exploring the potential of hybridized metaheuristic algorithms for photovoltaic model parameter estimation",
+      "url": "https://doi.org/10.1038/s41598-026-73134-1",
+      "openalex_id": "https://openalex.org/W7223375515",
+      "doi": "https://doi.org/10.1038/s41598-026-73134-1",
+      "published": "2026-10-23",
+      "summary": "Abstract Proper modeling of photovoltaic (PV) cells is a highly non-linear and multidimensional problem whose optimization using standalone meta-heuristic techniques faces premature convergence due to the large number of parameters. This paper seeks to fill in a major gap in the literature through a permutation study of Particle Swarm Optimization (PSO), Differential Evolution (DE), Simulated Annealing (SA) and Nelder-Mead (NM) simplex method to determine the optimal \"hand-off\" scheme for balancing exploration and exploitation. The proposed approach has been evaluated using SDM, DDM, and TDM using R.T.C. France silicon cell, Photowatt-PWP 201 module and an independent set of data on flexible dual junction amorphous silicon cell. To ensure state-of-the-art robustness of the hybrid approach, it was also benchmarked against CEC 2017 test suite. Statistical analysis from 30 runs has been performed using Wilcoxon signed-rank test ( $$p<1.86\\times {10}^{-9}$$ ), demonstrate that a sequential \"Global-to-Local\" transition (PSO–NM) achieves superior precision and stability, yielding a mean RMSE of $$9.32 \\times 10^{ - 4}$$ for the SDM and $$1.16 \\times 10^{ - 3}$$ A for the 9-parameter TDM, with coefficients of determination ( $${R}^{2}$$ ) exceeding 0.9999. Complexity analysis via the Number of Function Evaluations (NFE) shows that this hybrid method is computationally worth the effort",
+      "relevance_score": 2,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
       "title": "Helping the Helper: LLM-Assisted Problem Articulation for Older Adults Seeking Technology Support",
       "url": "https://doi.org/10.1145/3797867.3829031",
       "openalex_id": "https://openalex.org/W7124463773",
@@ -200,42 +220,12 @@
       "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "Important roles of AKAP150-anchored PKA and CaN in mediating crosstalk between LTP and LTD and consequently LTP/LTD balance",
-      "url": "http://hdl.handle.net/2429/95735",
-      "openalex_id": "https://openalex.org/W7222988637",
-      "doi": "https://doi.org/10.14288/1.0456947",
+      "title": "Chemistry-infused bandit framework for interpretable autonomous campaign of electrocatalysis",
+      "url": "https://doi.org/10.1038/s41467-026-78335-w",
+      "openalex_id": "https://openalex.org/W7166667221",
+      "doi": "https://doi.org/10.1038/s41467-026-78335-w",
       "published": "2026-10-23",
-      "summary": "Long-term potentiation (LTP) and long-term depression (LTD) at hippocampal CA1 glutamatergic synapses are opposing forms of synaptic plasticity that support learning and memory. Their expression depends on coordinated kinase and phosphatase signaling that regulates AMPA receptor (AMPAR) trafficking, yet mechanisms that couple LTP and LTD and maintain their balance remain incompletely understood. AKAP150 is a postsynaptic scaffold that anchors protein kinase A (PKA), which promotes AMPAR phosphorylation and potentiation, and calcineurin (CaN), which promotes AMPAR dephosphorylation and depression. We hypothesized that AKAP150 coordinates crosstalk between these pathways. We developed interference peptides targeting the PKA- and CaN-binding regions of AKAP150 and validated their ability to disrupt the respective interactions and associated enzymatic activities. Using hippocampal slice and in vivo electrophysiology, we examined decaying LTP induced by a weak high-frequency stimulation protocol, non-decaying LTP induced by stronger stimulation, and LTD induced by prolonged low frequency stimulation. Disrupting AKAP150-CaN converted decaying LTP into sustained LTP and prevented LTD without affecting non-decaying LTP. Disrupting AKAP150-PKA prevented both decaying and non-decaying LTP and partially reduced LTD. Behavioral experiments further showed that altering these interactions mo",
-      "relevance_score": 2,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "Career transition as an assemblage of learning : a multiple case study of Korean millennials who left socially desirable workplaces",
-      "url": "http://hdl.handle.net/2429/95740",
-      "openalex_id": "https://openalex.org/W7223194672",
-      "doi": "https://doi.org/10.14288/1.0457010",
-      "published": "2026-10-23",
-      "summary": "In this dissertation, I examine the career transitions of Korean millennials who left socially desirable workplaces. I problematize understandings of career transition as merely an individual choice, a matter of personal motivation, or a response to structural change. I also use the term millennials critically, not as a fixed or homogeneous generational category, but as a situated and contested designation that helps locate participants’ biographies and experiences within particular social, historical, educational, and labour-market conditions. I developed the conceptual framework of career transition as an assemblage of learning, drawing on Billett’s concept of the personal curriculum, Kang et al.’s learning management apparatus, and Deleuze and Guattari’s assemblage thinking. I designed the research as a qualitative multiple case study to examine each participant’s career transition holistically. Data were generated through biographical interviews incorporating image-elicitation and life-mapping activities, walking interviews, and digital ethnographic engagement. The findings show that leaving socially desirable positions was not an isolated individual decision, but emerged within and through existing social and material relations. Participants questioned and revisited established pathways, experimented with side-work opportunities through social ties, engaged with platform-m",
-      "relevance_score": 2,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "FARABI: fuzzy-assisted routing for adaptive blockage-resilient 6G IoV",
-      "url": "https://doi.org/10.1038/s41598-026-77473-x",
-      "openalex_id": "https://openalex.org/W7223237022",
-      "doi": "https://doi.org/10.1038/s41598-026-77473-x",
-      "published": "2026-10-23",
-      "summary": "High-frequency millimeter-wave (mmWave) and Terahertz (THz) communications are promising for 6G Internet of Vehicles (IoV) services but remain vulnerable to dynamic vehicular mobility, bursty heterogeneous traffic, and heavy-tailed physical blockage. Conventional routing approaches often rely on memoryless channel models, non-differentiable soft-computing heuristics, or centralized optimization that may not adequately capture blockage persistence and tail-latency risks. This paper presents FARABI (Fuzzy-Assisted Routing for Adaptive Blockage-Resilient 6G IoV), a cross-layer Software-Defined Networking (SDN) routing framework that integrates a three-state semi-Markov blockage model, multi-class Markov-Modulated Poisson Process (MMPP) traffic, a seven-dimensional differentiable fuzzy inference system, and Conditional Value-at-Risk (CVaR)-based risk-aware routing optimization. The framework tracks blockage age to estimate residual interruption duration and incorporates queueing, link reliability, route sustainability, and traffic-class requirements into an online hierarchical primal-dual optimization process. Extensive simulation-based evaluation under dynamic blockage, mobility, and bursty traffic conditions shows that the FARABI control-plane execution time increases from 0.5 ms to 1.85 ms as the decision space grows from 450 to 18,000 variables, corresponding to up to 42.08× lo",
-      "relevance_score": 2,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "Artificial Intelligence as a Catalyst for Sustainable Development and Business Transformation: A Conceptual Study",
-      "url": "https://doi.org/10.65521/ijrdmr.v15i2.4737",
-      "openalex_id": "https://openalex.org/W7223290180",
-      "doi": "https://doi.org/10.65521/ijrdmr.v15i2.4737",
-      "published": "2026-10-23",
-      "summary": "Artificial intelligence (AI) is increasingly positioned at the intersection of business transformation and sustainable development. Its capacity to identify patterns in large datasets, forecast demand and risk, automate routine processes, support product innovation, and improve resource allocation creates opportunities to enhance organizational performance while addressing environmental and social priorities. Yet these outcomes are not automatic: AI can reproduce bias, intensify surveillance, displace or transform work, widen digital inequalities, and consume substantial energy and material resources. This conceptual study synthesizes the supplied literature review on AI-enabled sustainability, digital transformation, innovation, governance, and the Sustainable Development Goals (SDGs). It develops an integrated framework in which AI capabilities influence sustainable business transformation through three complementary mechanisms: operational and resource optimization, innovation capability, and data-driven decision-making. The proposed framework links AI adoption with economic, environmental, and social sustainability through digital infrastructure, workforce skills, organizational readiness, and collaboration. Responsible governance, fairness, accountability, and data protection ensure ethical implementation. AI-driven sustainability requires strategic alignment, organization",
+      "summary": "Abstract Autonomous experimentation offers a time-efficient route towards accelerated catalyst discovery, but current practices often rely on black-box models that are difficult to interpret. Here we demonstrate the paradigm of interpretable autonomous exploration of a 12-dimensional space in the electrocatalytic hydrogen evolution reaction by integrating an interpretable decision-making artificial intelligence with a fully automated electrochemical platform. Guided by a human’s chemistry-informed hypothesis, a chemistry-infused bandit is established to reflect the locally quadratic approximation between synthetic conditions and electrocatalytic activities near the explored optimum region. Not only does such a decision-making bandit lead to the discovery of previously unreported, earth-abundant electrocatalysts at least comparable to Pt-based ones, the bandit also reveals model-derived hypothesis for how synthetic conditions affect the electrocatalysts’ performance near the identified local optima as autonomous inquiry proceeds, which is otherwise untenable from black-box ones. Incorporating chemistry-informed hypothesis into the decision-making bandit is generally applicable to any chemistry problem and offers a framework for autonomous investigation, advancing hypothesis generation for catalyst’s design principles beyond simple optimization.",
       "relevance_score": 2,
       "matched_query": "automated AI research experimentation"
     },
@@ -250,14 +240,14 @@
       "matched_query": "metacognition self-improving AI agents"
     },
     {
-      "title": "The new constructionism. Papert after Peirce: indexicality, navigational thinking, and learning in the age of generative AI",
-      "url": "https://doi.org/10.3389/feduc.2026.1902338",
-      "openalex_id": "https://openalex.org/W7223082069",
-      "doi": "https://doi.org/10.3389/feduc.2026.1902338",
+      "title": "Beyond Policy Engines: Binding-Complete Execution Admission",
+      "url": "https://arxiv.org/abs/2610.29701",
+      "openalex_id": "https://openalex.org/W7223251651",
+      "doi": "https://doi.org/10.48550/arxiv.2610.29701",
       "published": "2026-10-21",
-      "summary": "The arrival of generative AI in every classroom has produced a crisis that is at once technological, epistemological, and pedagogical. We argue that the appropriate response is neither prohibition nor naive adoption, but a principled reconstruction of constructionism for a computational environment that is generative, context-sensitive, and dialogically accessible. Drawing on Peircean semiotics, Papertian constructionism, Polanyi's epistemology, and contemporary neural-network research, we develop a programmatic framework we call the New Constructionism. We make four connected contributions. First, we argue that generative AI introduces an indexical mode of computation: its relation to the empirical world may be direct, mediated, or incomplete, but in a situated human–AI configuration meaning is operationally conditioned by conversational history, artifacts, tools, observations, and action. Second, we introduce a three-dimensional analytical space — semiotic, psycho-epistemological, and pedagogical — in which learning paradigms can be located and compared. Third, we reinterpret the history of programming education as a movement from a predominantly symbolic environment toward a hybrid ecology in which symbolic execution, distributional generation, and situated reference coexist. This hybridity qualifies but does not cancel the indexical turn at the level of interaction and educ",
+      "summary": "Policy engines determine whether evaluated policies permit a request, but a correct ALLOW decision does not establish complete governance-source participation, exact context binding, or sufficient grounds for execution admission. This paper examines the gap between policy evaluation and execution admission. We introduce the Binding-Complete Execution Admission Contract (BCEAC), a governance-relative contract for independently determined source obligations, exact policy and contextual binding, and typed admission outcomes under explicit trust assumptions. We propose a conditionally engine-agnostic architecture in which participating backends must satisfy declared semantic profiles, adapter contracts, and contextual correspondence obligations; an Execution Boundary Language (EBL) authoring syntax remains optional. The architecture separates governance resolution, policy evaluation, independent admission verification, and downstream execution mediation. We investigate two distinct experimental tracks: a finite Governance Source Completeness study and an OPA/Cedar experiment with archived native-engine records examined by offline review. The OPA/Cedar archive comprises 72 scenarios and 144 strict case-engine records (120 native-invoked and 24 pre-native), with eight additional permissive controls outside the strict denominator. The offline review did not rerun the original native O",
       "relevance_score": 2,
-      "matched_query": "metacognition self-improving AI agents"
+      "matched_query": "cross-model handoff language model agents"
     },
     {
       "title": "Video and digital games: Historical controversies, benefits, and risks for children and adolescents",
@@ -270,32 +260,42 @@
       "matched_query": "persistent agent memory"
     },
     {
-      "title": "Mapping The Use of Generative Artificial Intelligence in Group Creative Processes: A Scoping Review",
-      "url": "https://doi.org/10.21203/rs.3.rs-10535531/v1",
-      "openalex_id": "https://openalex.org/W7171866915",
-      "doi": "https://doi.org/10.21203/rs.3.rs-10535531/v1",
-      "published": "2026-10-23",
-      "summary": "Abstract Generative artificial intelligence (GenAI) is finding its way into creative work at a growing pace, yet its specific role within collaborative creative processes, those involving multiple people working together, remains poorly understood and fragmented across the literature. This scoping review maps the empirical research on integrating GenAI into group creative processes, outlining creative domains, tasks, AI tools, AI roles, stages of integration, and reported outcomes. Following PRISMA-ScR and JBI guidance, a systematic search was conducted across Scopus, Web of Science, and PsycINFO. Empirical peer-reviewed studies were included when they involved at least two human participants engaged in a collaborative creative process supported by GenAI. Thirty-eight studies met the inclusion criteria. The majority were conducted in educational and design contexts, with brainstorming, content creation, and design development emerging as the most frequent task types. GenAI was most often integrated as a co-creative partner, typically during the ideation stage or across multiple phases of the creative process. Reported benefits included enhanced ideation, greater efficiency, improved engagement, and stronger collaboration quality, while the main tensions revolved around over-reliance on AI, cognitive offloading, homogenization of ideas, and unresolved questions of authorship and",
+      "title": "Drivers of supply chain resilience in the new energy vehicle industry: An explainable machine learning approach",
+      "url": "https://doi.org/10.1016/j.egyr.2026.109834",
+      "openalex_id": "https://openalex.org/W7223304825",
+      "doi": "https://doi.org/10.1016/j.egyr.2026.109834",
+      "published": "2026-10-24",
+      "summary": "Under the global dual-carbon goals, supply chain resilience has become a strategic priority for the new energy vehicle (NEV) industry. Using a 2016–2023 panel of 403 Chinese listed NEV firms, we construct an entropy-weighted supply chain resilience index and predict it with Random Forest (RF) and XGBoost, interpreted via SHAP, against a linear regression benchmark. The tree-based ensembles explain 66%–68% of out-of-sample resilience variation, far above the linear benchmark (56%), while models using only supply chain characteristics fail to beat the sample mean. The two ensembles attribute resilience differently: transaction costs rank as the strongest supply chain predictor in RF, whereas chip import dependence dominates in XGBoost, though both agree that supply chain characteristics are stably among the top predictor groups. All five core factors exhibit nonlinear threshold patterns (on the normalized [0, 1] scale): automation first suppresses and then promotes resilience beyond a robot-penetration threshold of 0.19; government subsidies are effective mainly within an intensity window of 0.2–0.5; chip import dependence turns sharply detrimental beyond 0.77; innovation efficiency supports resilience only within an optimal moderate range, its contribution turning negative beyond 0.33; and transaction costs become resilience-enhancing only beyond thresholds of 0.15 (RF) to 0.21 ",
+      "relevance_score": 1,
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "AI-assisted discrete-event simulation of public transport systems: a framework for rapid model development",
+      "url": "https://doi.org/10.5109/7449785",
+      "openalex_id": "https://openalex.org/W7223255942",
+      "doi": "https://doi.org/10.5109/7449785",
+      "published": "2026-10-24",
+      "summary": "This study presents a systematic, modular prompt-construction framework for using Artificial Intelligence (AI) to assist simulation modelers in public transportation systems, leveraging large language models (LLMs). By using GPT-4o and Codex, we demonstrate how discrete-event simulation (DES) executable models can be rapidly generated with our five-part prompt construction framework, requiring minimal manual coding effort. The proposed framework was tested using a real-world case study of the in-campus shuttle bus transportation system at Universitas Indonesia. The empirical data from the case study served as the foundation for constructing a simulation model that can replicate a real-world situation. This data was provided to the AI via our modular prompt-construction framework, which was then used to generate the Python code for the simulation model. The generated model results were validated based on field observation data. The generated model yielded a Mean Absolute Percentage Error (MAPE) of 5.18%. These results indicate that LLM-assisted development of simulation models using our proposed framework can produce reliable simulation code that aligns with real-world public transportation behavior. The framework's applicability could provide a replicable, scalable method for rapid simulation development in public transportation planning and smart mobility contexts.",
       "relevance_score": 1,
       "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "CARRS: A Constraint-Aware, Real-Time Routing System for Emergency Vehicles in Urban Environments",
-      "url": "https://doi.org/10.66977/xsci.2610.002e",
-      "openalex_id": "https://openalex.org/W7223033438",
-      "doi": "https://doi.org/10.66977/xsci.2610.002e",
-      "published": "2026-10-23",
-      "summary": "Emergency vehicles such as police vehicles, fire engines, and ambulances require a stable and efficient route optimization to reach life-critical events in the shortest times possible. However, the dynamic nature of urban traffic makes this ideal scenario much more challenging, causing critical life-threatening delays. Traditional civilian navigation systems cannot account for real-time traffic changes alongside vehicle-specific constraints, creating inadequate routing scenarios. This research presents the Constraint-Aware Real-Time Routing System (CARRS), a unified software architecture tailored for emergency coordination. The CARRS architecture is engineered to fuse together classical pathfinding algorithms such as A*, Dijkstra, and Bidirectional A*, with Constraint Satisfaction Problem methodologies. The Design Science Research Methodology is the research framework, and prototyping is the iterative process. The artifact was empirically evaluated using OpenStreetMap data for major metropolitan road networks, combined with simulated dynamic traffic scenarios. Performance metrics focused on route optimality, constraint adherence, rerouting responsiveness, and the potential for future system scalability. Findings revealed the system's capability to generate optimal routes for operationally relevant subgraphs in under 35 seconds, with incremental rerouting responsiveness below 20",
+      "title": "Event- vs. time-driven: comparing applicability of sequential data types for machine learning-based reactive fault detection in manufacturing",
+      "url": "https://doi.org/10.1007/s10845-026-02983-4",
+      "openalex_id": "https://openalex.org/W7223439651",
+      "doi": "https://doi.org/10.1007/s10845-026-02983-4",
+      "published": "2026-10-24",
+      "summary": "Abstract The implementation of reliable machine learning for reactive fault detection in manufacturing requires large volumes of high-quality data. Time-series, one of the main data types in modern manufacturing, is available in high quantities, but also leads to high computational effort in model training and large number of duplicates in the data. Event-driven sequential data is another data type, used in manufacturing, reducing duplicates in data. A comparison of both sequential data types in this context is not fully explored in the literature. This paper explores a set of experiments to evaluate both sequential data types using various ML methods and windowing mechanisms on a real-world manufacturing system. Based on the results, recommendations for practitioners are derived and an outlook to possible future investigation is given.",
       "relevance_score": 1,
       "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "Adoption of Automation and Smart Technologies in Modern Textile Production Systems",
-      "url": "https://doi.org/10.53294/ijfetr.2026.11.2.0021",
-      "openalex_id": "https://openalex.org/W7223204357",
-      "doi": "https://doi.org/10.53294/ijfetr.2026.11.2.0021",
+      "title": "A Framework for Women’s Health Engineering Education: Pedagogical Foundations and Practical Implementation",
+      "url": "https://doi.org/10.1007/s10439-026-04426-w",
+      "openalex_id": "https://openalex.org/W7164530417",
+      "doi": "https://doi.org/10.1007/s10439-026-04426-w",
       "published": "2026-10-23",
-      "summary": "Automation, artificial intelligence, connected sensing technologies, digital twins, robotics, and data-driven control systems are increasingly transforming textile and apparel production systems. However, in existing studies, these technologies have often been analyzed separately or limited to specific factories, countries, or specific stages of the production process. The study created an integrated analytical framework for analyzing the maturity of technology adoption in modern textile production systems, with a new dataset based on data collected from various sources related to technology adoption and digital readiness open to the public. The complete dataset contains a total of 8,198 analytical observations and 26 variables. The dataset covers nine manufacturing and business activities for the period 2019-2023 in five countries - Bangladesh, Chile, Ethiopia, India and Senegal. As part of this study, a subset of 5,472 production-based observations were used for predictive modeling. This subset is divided into 3,830 trainings, 821 validations, and 821 test observations, respectively, in a group-conscious manner. The study compared the performance of four models: Random Forest, XGBoost, Support Vector Machine and One-Dimensional Convolutional Neural Network (1D CNN). The final results showed 92.00%, 93.00%, 93.56% and 96.10% accuracy respectively, making 1D CNN the highest per",
+      "summary": "Women represent more than half the U.S. workforce, yet women's health research and education remain systematically underprioritized, hindering technological innovation in this domain. Recent policy initiatives have elevated the profile of women's health and created urgency for engineering education to align with this shift. Despite growing recognition that advanced engineering approaches are essential to address sex-specific diseases and physiological differences, most biomedical engineering students graduate without exposure to women's health as a thematic focus or to the clinical problems and existing solutions in this space. To address this gap, we present a best practices guide based on six independently designed women's health engineering courses. Drawing on pedagogical literature and collective teaching experience, we document core elements and provide practical frameworks for both standalone women's health courses and integration into existing biomedical engineering curricula. This work is designed to lower the barrier for action, such that institutions can implement women's health engineering education scaled to their capacity and constraints. By training engineers to recognize and address systematic gaps in women's health engineering, we prepare them to build the life-changing technologies that women have long been waiting for.",
       "relevance_score": 1,
       "matched_query": "automated AI research experimentation"
     },
@@ -305,7 +305,7 @@
       "openalex_id": "https://openalex.org/W7204548731",
       "doi": "https://doi.org/10.1145/3797867.3829036",
       "published": "2026-10-23",
-      "summary": "Blind and low-vision (BLV) users are increasingly engaging with large language model (LLM) interfaces to access documents, but it is unclear how such systems support or hinder their ability to build interconnected knowledge. To examine this gap, we compared a Question-Answer Interface (QAI) that supports open-ended conversational inquiry, with a Document Interface (DI) based mostly on traditional structured text document navigation. We recruited 16 BLV screen reader users where they used both interfaces to explore two fictional worlds. Data from interaction logs, concept maps, decision-based tasks, and semi-structured interviews provide comparative insights into how interface design supports knowledge construction. Findings show that participants visited more distinct documents with the DI and formed larger and more correct mental models with the DI than with the QAI. They were also more able to apply knowledge they had gained. Simultaneously, many still preferred the QAI and often estimated that they had explored more, formed better mental models and applied their models better when acquiring the information with the QAI, despite this not being the case. Our analysis suggests possible interface design reasons for these differences and highlights some of the risks introduced by using question-answer interfaces to access information spaces.",
+      "summary": "Blind and low-vision (BLV) users are increasingly engaging with large language model (LLM) interfaces to access documents, but it is unclear how such systems support or hinder their ability to build interconnected knowledge. To examine this gap, we compared a Question–Answer Interface (QAI) that supports open-ended conversational inquiry, with a Document Interface (DI) based mostly on traditional structured text document navigation. We recruited 16 BLV screen reader users where they used both interfaces to explore two fictional worlds. Data from interaction logs, concept maps, decision-based tasks, and semi-structured interviews provide comparative insights into how interface design supports knowledge construction. Findings show that participants visited more distinct documents with the DI and formed larger and more correct mental models with the DI than with the QAI. They were also more able to apply the knowledge they had gained. Simultaneously, many still preferred the QAI and often estimated that they had explored more, formed better mental models and applied their models better when acquiring the information with the QAI, despite this not being the case. Our analysis suggests possible interface design reasons for these differences and highlights some of the risks introduced by using question-answer interfaces to access information spaces.",
       "relevance_score": 1,
       "matched_query": "metacognition self-improving AI agents"
     }
