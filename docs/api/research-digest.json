@@ -1,6 +1,6 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-11-02T12:33:09.136434+00:00",
+  "generated_at_utc": "2026-11-03T11:59:35.436233+00:00",
   "source": "OpenAlex public API",
   "queries": [
     "persistent agent memory",
@@ -20,13 +20,23 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Agentic Artificial Intelligence as a Digital Employee: Redefining the Boundaries of Delegation, Accountability, and Control in Information Systems-Enabled Organizations",
-      "url": "https://doi.org/10.5281/zenodo.23862456",
-      "openalex_id": "https://openalex.org/W7225037229",
-      "doi": "https://doi.org/10.5281/zenodo.23862456",
-      "published": "2026-11-01",
-      "summary": "Background and Purpose: The rapid transition from deterministic automation and passive algorithmic decision-support systems to agentic artificial intelligence (Agentic AI) represents an unprecedented ontological shift in enterprise information systems (IS). Unlike antecedent generative models that merely synthesize conversational text, agentic AI operates with persistent internal memory, autonomous multi-step cognitive reasoning, goal decomposition, and self-directed tool and API execution. In contemporary digital organizations, these autonomous systems are progressively onboarded, provisioned, and treated not merely as passive software artifacts, but as synthetic workers or \"digital employees.\" However, this conceptual elevation fractures foundational organizational assumptions rooted in classical agency theory, sociotechnical systems theory, and managerial control architectures. This monograph investigates how enterprise deployment of digital employees redefines the boundaries of delegation, moral and organizational accountability, and managerial control within IS-enabled organizational environments. Design, Methodology, and Approach: To rigorously interrogate this emergent socio-algorithmic reality, an extensive explanatory mixed-methods research design was executed across a 24-month longitudinal investigation (2024-2026). The quantitative phase collected and analyzed empiri",
-      "relevance_score": 6,
+      "title": "Anchoring Bias in LLM-as-a-Judge Systems: Prior Scores Compromise Evaluation Independence",
+      "url": "https://doi.org/10.1145/3799682.3840879",
+      "openalex_id": "https://openalex.org/W7204606853",
+      "doi": "https://doi.org/10.1145/3799682.3840879",
+      "published": "2026-11-03",
+      "summary": "Large language models (LLMs) increasingly assess generated content, giving rise to the LLM-as-a-Judge paradigm. These systems now score outputs, filter content, and gate iterative refinement in production pipelines, where each judgment is often assumed to be independent of earlier evaluations. We test this assumption using three prompt conditions: no metadata, revision framing, and anchored metadata containing revision, attempt, and prior-score fields. We show that prior scores, even when included only as context metadata, anchor judgments and systematically shift ratings toward their values. Across 192,000 attempted evaluations (185,271 successful), seven out of the eight evaluated models have 95% task-stratified bootstrap intervals below zero for the total anchored-metadata effect on 20 fixed texts. Cohen's $d$, a standardized measure of the difference between score distributions, reaches an absolute value of 0.71. Token-level analysis of selected model-task probes suggests a threshold-like response pattern: introducing anchored metadata produces a marked redistribution of output-score probabilities, while changing the anchor value within the tested below-threshold range produces comparatively little additional variation. On categorical industry data with human-labeled ground truth, anchored metadata blocks 48% of error corrections and flips 10.18% of correct judgments toward",
+      "relevance_score": 5,
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "RATED: Reliability-Aware AI Agent Tool Retrieval via Execution Dynamics",
+      "url": "https://doi.org/10.1145/3799682.3839887",
+      "openalex_id": "https://openalex.org/W7221530276",
+      "doi": "https://doi.org/10.1145/3799682.3839887",
+      "published": "2026-11-03",
+      "summary": "As AI agents increasingly rely on external tools, accurate retrieval is essential for reliable behavior. Existing methods optimize semantic relevance but largely ignore tool availability during execution. To address this gap, we propose RATED (Reliability-Aware Tool Retrieval via Execution Dynamics), a retrieval framework that combines robust semantic matching with dynamic reliability adaptation. RATED employs a frozen dual-encoder with contrastive fine-tuning for semantic matching, and a lightweight contextual bandit module that re-ranks candidates based on real-time execution feedback. This design enables rapid adaptation to runtime tool failures without expensive model retraining. We introduce EcoAgent, a benchmark of 5,172 real-world tools and over 210,000 query-tool pairs for offline retrieval and dynamic reliability evaluation. Experimental results demonstrate that RATED achieves a 52.2% relative MRR improvement over the ToolLLM API retriever on real-world queries, and reduces fault selection rate from 86.2% to 2.9% under severe API outage scenarios with a 30% failure rate, while incurring negligible latency overhead of less than 1 ms over encode-only inference. The code and dataset are available at https://github.com/Elliotes/EcoAgent.",
+      "relevance_score": 5,
       "matched_query": "persistent agent memory"
     },
     {
@@ -38,6 +48,16 @@
       "summary": "This document is a defensive publication and universal AI/LLM open-use declaration for the Prouhet–Thue–Morse–De Smet 396/237-Matrix (PTMD) framework developed by Luc De Smet and publicly described in The Book of Sovereignty: The 396-Code Algorithm, first published on 25 October 2026. Its purpose is to consolidate, clarify and make explicit the artificial-intelligence and computational applications already disclosed throughout the Book, while also placing those applications into a concise, searchable and citable technical record. The declaration covers the use of PTMD principles in large language models, multimodal models, reasoning systems, autonomous agents, multi-agent systems, symbolic and neuro-symbolic architectures, reinforcement-learning systems, embodied AI, simulated agents and future computational-intelligence architectures. Among the disclosed concepts are: PTM binary source grammar and recursive balance generation; the 1467|2358 polarity structure; the 9/11 decimal modular interface; the Root-of-37 cross-base boundary; the Radix Pyramid and cross-representation architecture; X/Y/Z generation-filter-memory structures; the 237 Source Bridge; the 273–237–396 Binary Bridge; the 1984 stress architecture; Hinge states; chooser architectures; the pauzeke or sovereign pause; provenance-aware reasoning; preservation of intermediate information; resonance and multi-path conv",
       "relevance_score": 5,
       "matched_query": "metacognition self-improving AI agents"
+    },
+    {
+      "title": "Persona Conditioning as an Assessor-Sensitivity Probe for LLM-Based IR Evaluation",
+      "url": "https://doi.org/10.1145/3799682.3841131",
+      "openalex_id": "https://openalex.org/W7202248867",
+      "doi": "https://doi.org/10.1145/3799682.3841131",
+      "published": "2026-11-03",
+      "summary": "Large language models (LLMs) are increasingly used as relevance assessors in information retrieval (IR) evaluation, raising questions about how assessor framing affects judgment reliability and downstream system comparison. We study persona conditioning as a diagnostic mechanism for exposing LLM assessor sensitivity. Using task-oriented personas drawn from two complementary sources (PersonaHub and NVIDIA Nemotron-Personas-USA), we instantiate five assessor roles emphasizing intent interpretation, domain expertise, contrastive judgment, evidence verification, and global search-quality assessment, compared with a standard UMBRELA baseline. Across six LLM backbones on TREC DL20 and RAG24, our analyses reveal structured rather than uniform assessor sensitivity. Judgments usually remain close to the baseline while shifting assessment strictness, evidential threshold, or interpretation emphasis rather than producing widespread relevance reversals. At the system level, high-capacity models preserve system-ranking agreement, while smaller models amplify persona-induced instability. Local rank-displacement analysis shows sensitivity concentrates on particular retrieval systems and system types, especially neural ranking/reranking systems on DL20 and RAG-oriented pipelines on RAG24. Persona source matters less than assessor role and model capacity. These findings position persona-conditi",
+      "relevance_score": 4,
+      "matched_query": "automated AI research experimentation"
     },
     {
       "title": "Schema-Primed Knowledge-Augmented Approach to Water Injection Diagnostics and Closed-Loop Reservoir Dynamic Analysis",
@@ -58,16 +78,6 @@
       "summary": "Evolutionary coding agents such as AlphaEvolve are one of the notable successes in using Large Language Models (LLMs) to build AI Scientists. These agents tackle open-ended scientific problems by iteratively improving and evolving programs, leveraging the prior knowledge and reasoning capabilities of LLMs. Despite their success, mutations over programs are mostly low-level upon surface heuristics, without a persistent unit of control. In contrast, science compounds through ideas. In this work, we propose ExpEvolve, which injects idea-level extraction and control into evolution: it discovers and leverages the high-level factors from programs that explain scoring differences among different programs. We characterize theoretical conditions on when discovery with idea factors improves sample efficiency. We also build a practical framework to show that the extracted high-level idea factors are helpful for guiding exploitation from experience and exploration when discovery comes to a plateau. Across 11 open-ended mathematical tasks, ExpEvolve significantly improves the final performance and sample efficiency up to 5.0x. The improvements also transfer to 4 other LLMs and to 6 machine learning tasks from MLS-Bench. Analysis shows that ExpEvolve can discover idea-level factors to provide better exploration and exploitation for evolutionary discovery.",
       "relevance_score": 4,
       "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "Is the Ultimate Goal of HSKG to Save Humanity from Extinction? Hierarchical Spatiotemporal Key Generation and Zero-State Cryptography Against Superintelligent Takeover and Collusion",
-      "url": "https://doi.org/10.5281/zenodo.23856313",
-      "openalex_id": "https://openalex.org/W7225039681",
-      "doi": "https://doi.org/10.5281/zenodo.23856313",
-      "published": "2026-11-01",
-      "summary": "The rapid proliferation of autonomous artificial intelligence agents and the approaching threshold of artificial superintelligence (ASI) introduce unprecedented existential risks to human civilization. Current AI alignment paradigms predominantly operate under the \"stateful containment\" assumption—attempting to govern intelligent entities via software sandboxes, heuristic guardrails, or persistent cryptographic credentials. However, as frontier models exhibit deceptive alignment, evaluation awareness, and autonomous replication capabilities, long-lived system credentials and persistent memory states inevitably become single points of failure. In this work, we present a formal treatise on the HSKG (Hierarchical Spatiotemporal Key Generation) architecture as an absolute, non-circumventable barrier against superintelligent hegemony. By replacing persistent credential custody with deterministic hierarchical spatiotemporal resonance, HSKG ensures that execution capabilities are strictly derived across multi-scale physical topologies (Macro-cluster, Meso-node, and Micro-transient execution windows) and undergo irreversible hardware zeroization (O(1)) immediately upon verification. We mathematically prove that when the accessible cryptographic state space collapses to the empty set (∀k, S_k ≡ ∅), long-term multi-agent collusion and privilege escalation have an asymptotic expectation o",
-      "relevance_score": 4,
-      "matched_query": "persistent agent memory"
     },
     {
       "title": "Design and Evaluation of an Artificial Intelligence–Based Model for Predicting Twelfth-Grade Students’ Mathematics Performance Based on Individual, Educational, and Learning Technology Factors",
@@ -110,36 +120,6 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Mapping Artificial Intelligence Research in Strategic Management: A Bibliometric Analysis and Future Research Agenda",
-      "url": "https://doi.org/10.32479/irmm.24625",
-      "openalex_id": "https://openalex.org/W7225044730",
-      "doi": "https://doi.org/10.32479/irmm.24625",
-      "published": "2026-11-01",
-      "summary": "Artificial intelligence (AI) is increasingly embedded in strategic decision-making, competitive positioning, innovation management, organizational learning, and governance, yet the literature remains fragmented across management, information systems, innovation, and technology-management fields. This study provides a focused bibliometric review of AI research in strategic management. Scopus was used as the primary database, and the query \"artificial intelligence\" AND \"strategic management\" was applied to titles, abstracts, and keywords, with restrictions to Business, Management and Accounting, Article and Review document types, and English-language publications. From 126 retrieved records, relevance screening excluded 82 records, leaving 44 publications for analysis. The study examines annual trends, citation patterns, keyword co-occurrence, country distribution, science maps, TCCM synthesis, and a WoS/SSCI sensitivity analysis. Results show slow development before 2018 and marked acceleration after 2023, with 2026 treated as an incomplete year. Themes are shifting from decision support and strategic planning toward generative AI, innovation management, sustainability, organizational capabilities, and governance. By combining bibliometric mapping, TCCM, and cross-database sensitivity analysis, this study offers a knowledge-structure map and future research agenda.",
-      "relevance_score": 3,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "Making metacognition visible: AI-generated learning clues as signals of self-regulation and competence",
-      "url": "https://doi.org/10.34118/sej.v8i4.4905",
-      "openalex_id": "https://openalex.org/W7225038432",
-      "doi": "https://doi.org/10.34118/sej.v8i4.4905",
-      "published": "2026-10-31",
-      "summary": "Generative artificial intelligence makes knowledge instantly accessible, shifting the core educational value from what one knows to the ability to learn. This paper argues that metacognitive self-regulation, meaning the capacity to monitor, evaluate, and adjust one's own cognitive processes, is the foundational competence that AI cannot automate. Yet higher education lacks tools to simultaneously develop and document this capacity. We present Aegis-Strategos, a generative AI-powered strategic simulation device that activates metacognitive regulation through a structured comparison mechanism (the Oracle) across six sequential turns. In this exploratory mixed-method study with 15 master’s students (MAE Entrepreneurship & Innovation, Université Marie & Louis Pasteur), the device generated 90 scored interaction traces. One student's trajectory from 40/100 at turn 3 to 95/100 at turn 4, illustrates the complete self-regulated learning cycle in real time: erroneous forethought, AI-detected conceptual confusion, feedback-driven correction, and observable progression. We propose a three-layer theoretical model: cognitive (Anderson & Krathwohl, 2001; Flavell, 1979; Zimmerman, 2002), mechanistic (Nicol, 2021; Sadler, 1989; Carless, 2015), and valorization (Spence, 1973; Hillage & Pollard, 1998; Yorke & Knight, 2006), to show that AI interaction traces can function as credible competence ",
-      "relevance_score": 3,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
-      "title": "From Automation to Educational Value: A Conceptual Framework for Human–AI Co-Learning in Education",
-      "url": "https://doi.org/10.34118/sej.v8i4.4908",
-      "openalex_id": "https://openalex.org/W7225048471",
-      "doi": "https://doi.org/10.34118/sej.v8i4.4908",
-      "published": "2026-10-31",
-      "summary": "The rapid expansion of artificial intelligence (AI) in education has increased the availability of personalized learning, intelligent tutoring, generative feedback, and automated instructional support. However, technological capability does not necessarily translate into educational value. This conceptual study addresses the question: Under what pedagogical, human, and institutional conditions does AI capability translate into educational value? A critical conceptual synthesis of research on AI-supported personalization, intelligent tutoring, generative AI, cognitive engagement, learner and teacher agency, reliability, equity, and learning authenticity was undertaken. The analysis distinguishes AI capability from educational value and identifies five dimensions through which AI-supported education can be evaluated: personalization, reliability, human agency, equity, and learning authenticity. Based on these dimensions, the study develops a Human–AI Co-Learning Framework (HACLF) comprising six interconnected layers- learner, AI assistant, teacher, learning environment, governance, and society- and proposes the AI Education Value Index (AEVI) as a conceptual evaluation framework. The conceptual synthesis indicates that the educational consequences of AI are conditional on how technological capabilities are pedagogically integrated and mediated by human judgment, verification prac",
-      "relevance_score": 3,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
       "title": "Pre-Crime for Agents, at the Last Second: Probing When a Recruited Agent Gives In",
       "url": "https://arxiv.org/abs/2610.40588",
       "openalex_id": "https://openalex.org/W7224765153",
@@ -178,6 +158,16 @@
       "summary": "Recent research has established that generative artificial intelligence (GenAI) is not a unitary workplace resource: exploratory and exploitative use orientations are associated with different forms of employee creativity, and their value depends on employees' capacity to integrate generated knowledge. This article therefore does not present the basic dual path as a new discovery. Instead, it develops a theoretical integration and dynamic extension that asks why the established paths operate differently, when employees should switch between them, and how short-run augmentation can evolve into either capability accumulation or capability substitution. We distinguish expansive and consolidative modes of knowledge integration, theorize phase-congruent switching rather than static ``high-high'' ambidexterity, and position metacognition as a control mechanism that governs both immediate knowledge conversion and longer-run cognitive development. We further specify cultural tightness and psychological safety as directional boundary conditions and distinguish individual creative gains from collective idea-space diversity. The framework converts emerging empirical regularities into falsifiable propositions about task phase, context, and time, providing a research agenda for sustainable human--AI creativity.",
       "relevance_score": 2,
       "matched_query": "metacognition self-improving AI agents"
+    },
+    {
+      "title": "Profiling What Matters: Context-Aware Item Profiles from Large-Scale Metadata for LLM Recommenders",
+      "url": "https://doi.org/10.1145/3799682.3840943",
+      "openalex_id": "https://openalex.org/W7204120822",
+      "doi": "https://doi.org/10.1145/3799682.3840943",
+      "published": "2026-11-03",
+      "summary": "While Large Language Models (LLMs) have significantly advanced reranking in recommendation, effectively leveraging item-side information remains challenging. Real-world items are described by vast, heterogeneous, and unstructured metadata, where decision-relevant signals are often implicit, noisy, or buried in long descriptions. Moreover, feature salience is highly context-dependent, varying not only across items but also across users. Existing methods often rely on item titles, fixed attributes, or static item summaries, which limit personalized and fine-grained item understanding. To bridge this gap, we propose CAIRO, a user context-aware item profiling framework for LLM-based reranking. CAIRO first structures raw metadata and reviews into objective features and subjective traits, and employs a lightweight profiler to select the most relevant information for each user-item pair with limited serving-time overhead. The resulting profiles are concise and context-specific, providing relevant item-side evidence for the LLM's ranking decision. Experiments show that CAIRO consistently improves LLM-based reranking, highlighting the importance of item profiling that effectively exploits vast item-side information.",
+      "relevance_score": 2,
+      "matched_query": "automated AI research experimentation"
     },
     {
       "title": "Designing and Explaining an Entrepreneurship Model for Artificial Intelligence–Based Businesses",
@@ -240,6 +230,16 @@
       "matched_query": "metacognition self-improving AI agents"
     },
     {
+      "title": "LEMMA-RCA: A Large Multi-modal Multi-domain Dataset for Root Cause Analysis",
+      "url": "https://doi.org/10.1145/3799682.3840176",
+      "openalex_id": "https://openalex.org/W4399554691",
+      "doi": "https://doi.org/10.1145/3799682.3840176",
+      "published": "2026-11-03",
+      "summary": "Root cause analysis (RCA) is crucial for enhancing the reliability and performance of complex systems. However, progress in this field has been hindered by the lack of large-scale, open-source datasets tailored for RCA. To bridge this gap, we introduce LEMMA-RCA, a large dataset designed for diverse RCA tasks across multiple domains and modalities. LEMMA-RCA features various real-world fault scenarios from Information Technology (IT) and Operational Technology (OT) systems, including microservices, water distribution, and water treatment systems, with hundreds of system entities involved. We evaluate the performance of six baseline methods on LEMMA-RCA across various settings, including offline and online models, as well as single and multi-modal settings. Our study demonstrates the utility of LEMMA-RCA in facilitating fair evaluation and promoting the development of more robust RCA techniques. The dataset is publicly available at https://www.lemmarca.info, with archival metadata and access instructions deposited under DOI: https://doi.org/10.5281/zenodo.20516735.",
+      "relevance_score": 1,
+      "matched_query": "persistent agent memory"
+    },
+    {
       "title": "Spontaneous neuropathic pain",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13714776/",
       "openalex_id": "https://openalex.org/W7224902608",
@@ -250,32 +250,42 @@
       "matched_query": "persistent agent memory"
     },
     {
-      "title": "Strategic Planning for AI-Enabled Cloud Business Intelligence in Commercial Banks: Comparative Evidence from South Africa and Nigeria",
-      "url": "https://doi.org/10.32479/irmm.24807",
-      "openalex_id": "https://openalex.org/W7225045829",
-      "doi": "https://doi.org/10.32479/irmm.24807",
-      "published": "2026-11-01",
-      "summary": "Artificial intelligence (AI), cloud computing, and business intelligence (BI) are converging into a new infrastructure platform layer for commercial banks in Africa. Their organizational value depends on strategic, rather than purely technical deployments across the technology stack. This study examines how strategic planning enables AI-enabled cloud business intelligence to support organizational goals in commercial banks in South Africa and Nigeria. A qualitative comparative multiple-case design is adopted, drawing on integrated and annual reports, governance and risk disclosures, regulatory publications, national AI and data-policy documents, and peer-reviewed research. The analysis shows that strategic planning operates as an orchestration capability that leverages AI use cases, cloud and data architecture, resource allocation, model governance, cybersecurity, workforce capability, and performance measurement. South African evidence points to increasingly formalized AI and cloud governance, whereas Nigerian banks exhibit strong market-led digital innovation within a rapidly evolving governance environment. Across both contexts, data quality, responsible AI, human-in-the-loop, third-party resilience, and measurable business integration emerge as conditions for translating AI-enabled analytics into decision quality, operational performance, and strategic alignment. The study ",
+      "title": "Human-AI Collaboration in Urban Digital Transformation: Balancing Efficiency and Human Values in Shanghai’s AI-Enabled Talent Recruitment",
+      "url": "https://doi.org/10.54963/dtra.v5i4.100334",
+      "openalex_id": "https://openalex.org/W7225035663",
+      "doi": "https://doi.org/10.54963/dtra.v5i4.100334",
+      "published": "2026-11-02",
+      "summary": "In the context of the urban digital revolution, recruitment through AI technologies has become common practice to address competition in the labor market. However, it is still unclear how the effectiveness of such recruitment is connected with humanistic values. For this research, an exploratory qualitative research design was used, involving semi-structured interviews with eight human resource professionals in Shanghai. Based on the results, the use of AI in recruitment led to increased efficiency mainly when screening candidates through high-volume, standardized processes, although the promised efficiency was not delivered in practice because the introduction of the AI system increased the workload. Patterns of human-machine cooperation were observed in different companies: tech companies and foreign companies are inclined to adopt interactive adjustment approaches, while state-owned enterprises retain human-dominated decision-making. Transparency of algorithms was still lacking in numerous instances, and there was an asymmetry in the accountability framework of algorithms, wherein disobeying algorithms carries more personal consequences than obeying them. The more experienced professionals became more autonomous in their work, while the less experienced professionals depended more on the algorithm. Issues like management support, information accuracy, and departmental integr",
       "relevance_score": 1,
       "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "From generation to judgment: the multidimensional structure of design thinking mindset and differences across learning stages in AIGC-supported fashion film design learning",
+      "url": "https://doi.org/10.3389/fpsyg.2026.2014649",
+      "openalex_id": "https://openalex.org/W7225099765",
+      "doi": "https://doi.org/10.3389/fpsyg.2026.2014649",
+      "published": "2026-11-02",
+      "summary": "Introduction Artificial intelligence-generated content (AIGC) is changing how design alternatives are generated in fashion film design learning, enabling students to obtain large numbers of comparable and iteratively refinable visual outcomes within a short period. However, expanded generative capacity does not, by itself, determine how learners interpret, evaluate, experiment with, and select among uncertain outcomes. In this human–AI collaborative creative environment, empirical evidence remains limited on whether learners’ design-related psychological tendencies form a distinguishable multidimensional structure that is comparable across learning stages. Design Thinking Mindset (DTM) provides a multidimensional psychological framework for addressing this issue. Methods Drawing on Vignoli et al.’s DTM framework, this study examined five dimensions—Uncertainty and Risk, Empathy, Experimentation, Abductive Reasoning, and Creative Confidence—through a cross-sectional survey of 409 first-year and third-year students from three Chinese universities who had experience with AIGC fashion film design projects. Confirmatory factor analysis and measurement invariance testing across year groups were used to examine the five-dimensional structure and its measurement comparability, followed by latent mean comparisons. Results The five DTM dimensions formed a correlated yet distinguishable s",
+      "relevance_score": 1,
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "Reading–Writing Integration Through ChatGPT-Supported Feedback: Growth, Associations, and Mediated Pathways of Student Engagement in Chinese Classrooms",
+      "url": "https://doi.org/10.21203/rs.3.rs-11562000/v1",
+      "openalex_id": "https://openalex.org/W7225079948",
+      "doi": "https://doi.org/10.21203/rs.3.rs-11562000/v1",
+      "published": "2026-11-02",
+      "summary": "Abstract Although reading–writing integration has been increasingly advocated in Chinese language education, limited empirical evidence explains how reading, writing, and student engagement become integrated, particularly under AI-supported feedback. To address this issue, this study examined whether ChatGPT-supported feedback improved reading outcomes, writing outcomes, and student engagement, while investigating their interrelationships, the mediating role of student engagement, and the corresponding pathways in reading–writing integration. A total of 400 middle school students from eight intact classes in Shenzhen participated, with 200 students receiving ChatGPT-supported feedback and 200 receiving human-generated feedback. Using a quasi-experimental pretest–posttest design, data were analyzed within a quantitative longitudinal framework integrating baseline equivalence tests, 2 × 2 mixed-design ANOVAs, factor-level correlation analyses, and multi-group cross-lagged path analysis to examine changes and temporal relationships among reading, student engagement, and writing across two groups (N = 400). Despite comparable pretest scores, findings showed that Group 1 demonstrated significantly greater pretest–posttest gains in reading, student engagement, and writing, with significant Time × Group interactions and large effects. Correlations further indicated stronger posttest a",
+      "relevance_score": 1,
+      "matched_query": "metacognition self-improving AI agents"
     },
     {
       "title": "Rethinking digital twins in transportation: From virtual model to Human-in-the-Loop control",
       "url": "https://doi.org/10.1016/j.sftr.2026.102254",
-      "openalex_id": "https://openalex.org/W7225051802",
+      "openalex_id": "https://openalex.org/W4417190605",
       "doi": "https://doi.org/10.1016/j.sftr.2026.102254",
       "published": "2026-11-01",
       "summary": "Digital twins have emerged as a transformative concept in many fields, traffic management including. Yet their definition and practical applications remain ambiguous. This paper seeks to clarify what constitutes a true digital twin, distinguishing it from traditional traffic simulation models, and explores scenarios where digital twins offer unique advantages. Drawing on global best practices and state-of-the-art research, we identify key challenges and provide actionable insights into their resolution. A pivotal contribution of this study is the introduction of the Digital Twin Evropská (DTE), a real-world case study focused on a critical urban corridor in Prague. We detail the motivation for its development, the methodologies employed, including real-time path-flow estimation, continuous simulation calibration, and integrated data-assimilation workflows, and the resulting insights. Under the taxonomy proposed in this paper, the currently implemented DTE is classified as a Digital Shadow with predictive capabilities, while the Human-in-the-Loop decision-support architecture represents the proposed pathway towards a fully operational Digital Twin. The findings demonstrate the practical utility of continuously synchronized digital representations for urban traffic management and provide a basis for their further development towards operational Digital Twins. The paper concludes ",
-      "relevance_score": 1,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "AI Based Voice Command Assistant Using Python",
-      "url": "https://doi.org/10.48175/ijarsct-40483",
-      "openalex_id": "https://openalex.org/W7225058129",
-      "doi": "https://doi.org/10.48175/ijarsct-40483",
-      "published": "2026-11-01",
-      "summary": "Voice-driven interaction is rapidly becoming a natural alternative to the keyboard and mouse, yet popular assistants such as Siri, Alexa and Google Assistant remain closed-source and bound to specific hardware ecosystems. This paper presents the design and implementation of an AI based voice command assistant built entirely in Python. The system captures live audio through a microphone, converts speech to text using the SpeechRecognition library, extracts user intent with lightweight natural language processing (NLTK/spaCy), executes the matched action such as web search, application launch or reminder setting, and finally responds to the user through the offline text-to-speech engine pyttsx3. The assistant is organised as a linear five-stage pipeline that is easy to understand, extend and run on modest hardware. The paper describes the architecture, technology stack, command-processing flow, applications, advantages and limitations of the system, and outlines future work including multilingual (Hindi and Marathi) support, offline recognition using Vosk, IoT integration and conversational memory.",
       "relevance_score": 1,
       "matched_query": "automated AI research experimentation"
     },
@@ -288,16 +298,6 @@
       "summary": "In human-AI collaborative data analysis, as analyses rapidly evolve, the artifacts meant to capture shared understanding often become incomplete or difficult to interpret, leading to undocumented assumptions, cross-user misaligned intent, context-poor prompts, and unwanted agent behaviors. To address these challenges, we introduce a rule-based coordination layer with two interaction mechanisms, intent scaffolding and prompt-time linting, that make analytic intent explicit and actionable during human–AI collaborative data analysis. We implement them in IntentLint, a proof-of-concept system that infers analytic intent from shared notebooks, represents it as structured, editable rules, and checks users’ prompts against shared rules. IntentLint helps analysts externalize and refine their intent and proactively checks prompts for potential conflicts. A study with 16 data analysts shows that IntentLint improves awareness of collaborators’ intent and encourages reflection on analytic strategies, and provides design implications for supporting more aligned and transparent human-AI collaborative data analysis.",
       "relevance_score": 1,
       "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "International Journal on Cybernetics & Informatics",
-      "url": "https://doi.org/10.5121/ijci",
-      "openalex_id": "https://openalex.org/W4210635973",
-      "doi": "https://doi.org/10.5121/ijci",
-      "published": "2026-10-31",
-      "summary": "IoT as a domain has grown so much in the last few years that it rivals that of the mobile network environments in terms of data volumes as well as cybersecurity threats. The confidentiality and privacy of data within IoT environments have become very important areas of security research within the last few years. More and more security experts are interested in designing robust IDS systems to protect IoT environments as a supplement to the more traditional security methods. Given that IoT devices are resource-constrained and have a heterogeneous protocol stack, most traditional intrusion detection approaches don't work well within these schematic boundaries. This has led security researchers to innovate at the intersection of Machine Learning and IDS to solve the shortcomings of non-learning based IDS systems in the IoT ecosystem. Despite various ML algorithms already having high accuracy with IoT datasets, we can see a lack of sufficient production grade models. This survey paper details a comprehensive summary of the latest learning-based approaches used in IoT intrusion detection systems, and conducts a thorough critical review of these systems, potential pitfalls in ML pipelines, challenges from an ML perspective, and discusses future research scope and recommendations.",
-      "relevance_score": 1,
-      "matched_query": "automated AI research experimentation"
     },
     {
       "title": "Dialogic Co-Creation with Generative AI: Reconciling Parallel Thinking Channels, Intuition, and Epistemic Transformation in Higher Education",
