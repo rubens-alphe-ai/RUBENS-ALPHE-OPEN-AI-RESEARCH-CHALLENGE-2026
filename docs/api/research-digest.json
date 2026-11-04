@@ -1,6 +1,6 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-11-03T11:59:35.436233+00:00",
+  "generated_at_utc": "2026-11-04T12:14:51.452294+00:00",
   "source": "OpenAlex public API",
   "queries": [
     "persistent agent memory",
@@ -9,6 +9,36 @@
     "metacognition self-improving AI agents"
   ],
   "papers": [
+    {
+      "title": "Mind2Report: Expert-Level Commercial Report Synthesis via Cognitive Deep Research Agent",
+      "url": "https://doi.org/10.1145/3799682.3840672",
+      "openalex_id": "https://openalex.org/W7119689058",
+      "doi": "https://doi.org/10.1145/3799682.3840672",
+      "published": "2026-11-03",
+      "summary": "Synthesizing informative commercial reports from massive and noisy web sources is critical for high-stakes business decisions. Although recent deep research agents (DRAs) achieve notable progress, their reports remain limited in quality, reliability, and coverage. These mainly stem from ambiguous intents that cause search drift, retrieved web content that rapidly saturates the context window, and single-pass synthesis that limits report comprehensiveness. In this work, we propose Mind2Report, a cognitive deep research agent that emulates commercial analysts to synthesize expert-level reports. Mind2Report first probes fine-grained commercial intent to establish a structured outline, then recursively explores web sources and distills validated evidence into research memory to preserve context efficiency. Meanwhile, the research memory and outline continuously co-evolve, refining the report structure to avoid rigid initial planning. Finally, Mind2Report iteratively synthesizes the report based on the evolving outline and accumulated evidence. Together, these designs enable reliable and context-efficient long-horizon commercial deep research. To rigorously evaluate commercial DRAs, we further construct QRC-Eval, comprising 200 real-world commercial tasks and a holistic evaluation framework covering report quality, reliability, and coverage. Extensive experiments demonstrate that Mi",
+      "relevance_score": 9,
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "Persistent memory through triple-loop consolidation under stochastic unit turnover",
+      "url": "https://doi.org/10.3389/fncom.2026.1845213",
+      "openalex_id": "https://openalex.org/W7147493092",
+      "doi": "https://doi.org/10.3389/fncom.2026.1845213",
+      "published": "2026-11-03",
+      "summary": "Dissipative cognitive architectures maintain computation through continuous energy expenditure, where units that exhaust their energy are stochastically replaced with fresh random state. This creates a fundamental challenge: how can persistent, context-specific memory survive when all learnable state is periodically destroyed? Existing memory mechanisms—including elastic weight consolidation, synaptic intelligence, and surprise-driven gating—rely on gradient computation and are inapplicable to dissipative systems that do not perform it. We introduce Deep Memory (DM), a backpropagation-free persistent memory mechanism operating through a triple-loop consolidation cycle: (1) recording of expert-specific content centroids during active computation, (2) seeding of replaced units with stored representations, and (3) stabilization through continuous re-entry that counteracts dissipative drift. We demonstrate that discrete expert routing via Mixture-of-Experts (MoE) gating is required, in the regimes tested, for DM functionality, preventing the centroid convergence that would render stored memories identical. Across 972 simulation runs spanning thirteen experimental blocks, we establish: (i) removing stable context–expert binding removes structural specialization (MI = 1.10 vs. 0.001 under binding destruction; n = 91); (ii) DM achieves persistent representation quality R = 0.984 compa",
+      "relevance_score": 7,
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "TabClaw: An Interactive and Self-Evolving Agent for Spreadsheet Manipulation and Table Reasoning",
+      "url": "https://doi.org/10.1145/3799682.3840274",
+      "openalex_id": "https://openalex.org/W7164135767",
+      "doi": "https://doi.org/10.1145/3799682.3840274",
+      "published": "2026-11-03",
+      "summary": "Spreadsheets and tables are widely used representations for structured data analysis, but effective analysis still requires substantial manual effort and domain expertise. Recent large language model (LLM) agents can automate parts of this process, but they often provide limited transparency into intermediate decisions, rely on implicit assumptions, struggle with multi-table comparison, and repeat similar workflows without adapting to a user's preferences. This paper presents TabClaw, an open-source interactive AI agent for spreadsheet manipulation and table reasoning. Users upload CSV or Excel files and issue natural-language requests; TabClaw clarifies ambiguous intent, exposes an editable execution plan, streams a ReAct-style tool-using analysis loop, dispatches specialist agents for parallel multi-table reasoning, and synthesizes findings with explicit consensus and uncertainty markers. Beyond one-off analysis, TabClaw records completed workflows, extracts persistent user memory, distills reusable skills from repeated tool-use patterns, supports package-style skill import, and upgrades skills from negative feedback. Experiments on spreadsheet manipulation and table reasoning benchmarks show that TabClaw improves executable task completion and reasoning performance while preserving an inspectable user workflow. This paper shows how TabClaw turns spreadsheets and tables into ",
+      "relevance_score": 7,
+      "matched_query": "persistent agent memory"
+    },
     {
       "title": "LPT: Orchestrating bounded agentic loops for automated protein binder design",
       "url": "https://doi.org/10.64898/2026.10.29.762730",
@@ -20,22 +50,22 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Anchoring Bias in LLM-as-a-Judge Systems: Prior Scores Compromise Evaluation Independence",
-      "url": "https://doi.org/10.1145/3799682.3840879",
-      "openalex_id": "https://openalex.org/W7204606853",
-      "doi": "https://doi.org/10.1145/3799682.3840879",
+      "title": "RAH: Recursive Agent Harnesses for Long-Context Reasoning through Delegation-as-Code",
+      "url": "https://doi.org/10.1145/3799682.3839851",
+      "openalex_id": "https://openalex.org/W7164537692",
+      "doi": "https://doi.org/10.1145/3799682.3839851",
       "published": "2026-11-03",
-      "summary": "Large language models (LLMs) increasingly assess generated content, giving rise to the LLM-as-a-Judge paradigm. These systems now score outputs, filter content, and gate iterative refinement in production pipelines, where each judgment is often assumed to be independent of earlier evaluations. We test this assumption using three prompt conditions: no metadata, revision framing, and anchored metadata containing revision, attempt, and prior-score fields. We show that prior scores, even when included only as context metadata, anchor judgments and systematically shift ratings toward their values. Across 192,000 attempted evaluations (185,271 successful), seven out of the eight evaluated models have 95% task-stratified bootstrap intervals below zero for the total anchored-metadata effect on 20 fixed texts. Cohen's $d$, a standardized measure of the difference between score distributions, reaches an absolute value of 0.71. Token-level analysis of selected model-task probes suggests a threshold-like response pattern: introducing anchored metadata produces a marked redistribution of output-score probabilities, while changing the anchor value within the tested below-threshold range produces comparatively little additional variation. On categorical industry data with human-labeled ground truth, anchored metadata blocks 48% of error corrections and flips 10.18% of correct judgments toward",
+      "summary": "Recursive language models (RLMs) showed that recursion over model calls is an effective strategy for long-context reasoning, and production coding agents have begun to write code that spawns subagents at scale, most recently in Anthropic's dynamic workflows. We name and study the pattern between these two lines of work, where the recursive unit is a full agent harness with filesystem tools, code execution, and planning rather than a model call with no tools. We call this the Recursive Agent Harness (RAH) and frame it as harness recursion, the code-first extension to the model recursion of RLMs. A parent agent generates and runs an executable script that spawns subagent harnesses in parallel for fine-grained workloads and uses structured function calls for small subtasks. We provide a controlled evaluation on long-context reasoning. With the backbone held fixed at GPT-5 to match the published Codex and RLM baselines, RAH improves the Codex coding-agent baseline from 71.75% to 81.36% on Oolong-Synthetic (199 samples, 13 context-length buckets up to 4M tokens), a gain attributable to the harness rather than the model. With a stronger backbone, Claude Sonnet 4.5, the same design reaches 89.77%.",
       "relevance_score": 5,
       "matched_query": "persistent agent memory"
     },
     {
-      "title": "RATED: Reliability-Aware AI Agent Tool Retrieval via Execution Dynamics",
-      "url": "https://doi.org/10.1145/3799682.3839887",
-      "openalex_id": "https://openalex.org/W7221530276",
-      "doi": "https://doi.org/10.1145/3799682.3839887",
+      "title": "R 2 -Searcher: Calibrating Retrieval and Reasoning Boundaries for Agentic Search",
+      "url": "https://doi.org/10.1145/3799682.3840698",
+      "openalex_id": "https://openalex.org/W7166704994",
+      "doi": "https://doi.org/10.1145/3799682.3840698",
       "published": "2026-11-03",
-      "summary": "As AI agents increasingly rely on external tools, accurate retrieval is essential for reliable behavior. Existing methods optimize semantic relevance but largely ignore tool availability during execution. To address this gap, we propose RATED (Reliability-Aware Tool Retrieval via Execution Dynamics), a retrieval framework that combines robust semantic matching with dynamic reliability adaptation. RATED employs a frozen dual-encoder with contrastive fine-tuning for semantic matching, and a lightweight contextual bandit module that re-ranks candidates based on real-time execution feedback. This design enables rapid adaptation to runtime tool failures without expensive model retraining. We introduce EcoAgent, a benchmark of 5,172 real-world tools and over 210,000 query-tool pairs for offline retrieval and dynamic reliability evaluation. Experimental results demonstrate that RATED achieves a 52.2% relative MRR improvement over the ToolLLM API retriever on real-world queries, and reduces fault selection rate from 86.2% to 2.9% under severe API outage scenarios with a 30% failure rate, while incurring negligible latency overhead of less than 1 ms over encode-only inference. The code and dataset are available at https://github.com/Elliotes/EcoAgent.",
+      "summary": "Recent search agents for multi-hop reasoning often fail by either retrieving incomplete evidence or reasoning over irrelevant portions of the retrieved content, leading to a retrieval-reasoning boundary shift. We propose R 2 -Searcher, a novel framework that explicitly explores and calibrates the retrieval and reasoning boundaries via fine-grained, query-token-guided evidence modeling and post-retrieval reflection. Specifically, R 2 -Searcher: (1) constructs fine-grained reasoning contexts by extracting precise facts from retrieved content based on query token semantics (e.g., subjects, actions, temporal markers, and degree modifiers), thereby guiding the attention of search agent; (2) introduces a retrieval reflection mechanism that evaluates and corrects boundary deviations after each retrieval step, guiding the generation of improved queries grounded in the extracted reasoning contexts; and (3) employs an end-to-end reasoning-reflection-guided reinforcement learning algorithm, R 2 PO, which jointly optimizes both boundaries through a tree-based exploration of reasoning regions and reflections. Our method significantly enhances the quality of both retrieval and reasoning, establishing an iterative loop where retrieval and reasoning mutually enhance each other. Extensive experiments on seven complex multi-hop QA benchmarks demonstrate that R 2 -Searcher significantly outperfor",
       "relevance_score": 5,
       "matched_query": "persistent agent memory"
     },
@@ -50,32 +80,32 @@
       "matched_query": "metacognition self-improving AI agents"
     },
     {
+      "title": "Disrupting Networks: Amplifying Social Dissensus via Large Language Models",
+      "url": "https://doi.org/10.1145/3799682.3840970",
+      "openalex_id": "https://openalex.org/W4415916016",
+      "doi": "https://doi.org/10.1145/3799682.3840970",
+      "published": "2026-11-03",
+      "summary": "We study how targeted content injection can strategically disrupt social networks. Using the Friedkin-Johnsen (FJ) model, we utilize a measure of social dissensus and show that (i) simple FJ variants cannot significantly perturb the network, (ii) extending the model enables valid graph structures where disruption at equilibrium exceeds the initial state, and (iii) altering an individual's inherent opinion can maximize disruption. Building on these insights, we design a reinforcement learning framework to fine-tune a Large Language Model (LLM) for generating disruption-oriented text. Experiments on synthetic and real-world data confirm that tuned LLMs can approach theoretical disruption limits. Our findings raise important considerations for content moderation, adversarial information campaigns, and generative model regulation. Code is publicly available.",
+      "relevance_score": 4,
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "MOSAIC: Unveiling the Moral, Social and Individual Dimensions of Large Language Models",
+      "url": "https://doi.org/10.1145/3799682.3840183",
+      "openalex_id": "https://openalex.org/W7133352037",
+      "doi": "https://doi.org/10.1145/3799682.3840183",
+      "published": "2026-11-03",
+      "summary": "Large Language Models (LLMs) are increasingly deployed in sensitive applications including psychological support, healthcare, and high-stakes decision-making. This expansion has motivated growing research into the ethical and moral foundations underlying LLM behavior, raising critical questions about their reliability in ethical reasoning. However, existing studies and benchmarks rely almost exclusively on Moral Foundation Theory (MFT), largely neglecting other relevant dimensions such as social values, personality traits, and individual characteristics that shape human ethical reasoning. To address these limitations, we introduce MOSAIC, the first large-scale benchmark designed to jointly assess the moral, social, and individual characteristics of LLMs. The benchmark comprises nine validated questionnaires drawn from moral philosophy, psychology, and social theory, alongside four platform-based games designed to probe morally ambiguous scenarios. In total, MOSAIC includes over 600 curated questions and scenarios, released as a ready-to-use, extensible resource for evaluating the behavioral foundations of LLMs. We validate the benchmark across three models from different families, demonstrating its utility across all assessed dimensions and providing the first empirical evidence that MFT alone is insufficient to comprehensively evaluate complex AI systems' ethical behavior. We ",
+      "relevance_score": 4,
+      "matched_query": "automated AI research experimentation"
+    },
+    {
       "title": "Persona Conditioning as an Assessor-Sensitivity Probe for LLM-Based IR Evaluation",
       "url": "https://doi.org/10.1145/3799682.3841131",
       "openalex_id": "https://openalex.org/W7202248867",
       "doi": "https://doi.org/10.1145/3799682.3841131",
       "published": "2026-11-03",
       "summary": "Large language models (LLMs) are increasingly used as relevance assessors in information retrieval (IR) evaluation, raising questions about how assessor framing affects judgment reliability and downstream system comparison. We study persona conditioning as a diagnostic mechanism for exposing LLM assessor sensitivity. Using task-oriented personas drawn from two complementary sources (PersonaHub and NVIDIA Nemotron-Personas-USA), we instantiate five assessor roles emphasizing intent interpretation, domain expertise, contrastive judgment, evidence verification, and global search-quality assessment, compared with a standard UMBRELA baseline. Across six LLM backbones on TREC DL20 and RAG24, our analyses reveal structured rather than uniform assessor sensitivity. Judgments usually remain close to the baseline while shifting assessment strictness, evidential threshold, or interpretation emphasis rather than producing widespread relevance reversals. At the system level, high-capacity models preserve system-ranking agreement, while smaller models amplify persona-induced instability. Local rank-displacement analysis shows sensitivity concentrates on particular retrieval systems and system types, especially neural ranking/reranking systems on DL20 and RAG-oriented pipelines on RAG24. Persona source matters less than assessor role and model capacity. These findings position persona-conditi",
-      "relevance_score": 4,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "Schema-Primed Knowledge-Augmented Approach to Water Injection Diagnostics and Closed-Loop Reservoir Dynamic Analysis",
-      "url": "https://doi.org/10.2118/235328-ms",
-      "openalex_id": "https://openalex.org/W7225041361",
-      "doi": "https://doi.org/10.2118/235328-ms",
-      "published": "2026-11-02",
-      "summary": "Abstract Water-injection diagnosis in a mature low-permeability waterflood is a longitudinal decision process. Engineers repeatedly identify anomalies, select interventions, and assess subsequent changes in waterflood performance indicators (WPIs), often over several years for one well. Existing knowledge-augmented language-model systems can answer individual questions but do not preserve the resulting engineering decision as a structured record for later evaluation. This study extends a schema-primed Knowledge-Augmented Generation (KAG) framework with persistent agentic memory for reservoir dynamic analysis. Before document ingestion, a petroleum domain ontology defines the admissible entity and relation types. Field reports, well files, and operational logs are then extracted into a typed graph. Each diagnostic session produces a typed record containing the diagnosis, recorded intervention, and expected WPI response. A later session retrieves that record and compares its expectation with production data the diagnosis never saw. The framework was evaluated at the Wangyao oilfield in the Ordos Basin, over 32.4 km². A 100-question reservoir-engineering benchmark was scored under two blinded model-based regimes, a gold-anchored judge repeated three times and a five-configuration expertise-anchored panel. The schema-primed KAG arm scored above vector-only and generic graph retriev",
-      "relevance_score": 4,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "ExpEvolve: Structuring and Reusing Experience for Open-Ended Discovery",
-      "url": "https://doi.org/10.66977/xsci.2611.0004",
-      "openalex_id": "https://openalex.org/W7223200371",
-      "doi": "https://doi.org/10.66977/xsci.2611.0004",
-      "published": "2026-11-01",
-      "summary": "Evolutionary coding agents such as AlphaEvolve are one of the notable successes in using Large Language Models (LLMs) to build AI Scientists. These agents tackle open-ended scientific problems by iteratively improving and evolving programs, leveraging the prior knowledge and reasoning capabilities of LLMs. Despite their success, mutations over programs are mostly low-level upon surface heuristics, without a persistent unit of control. In contrast, science compounds through ideas. In this work, we propose ExpEvolve, which injects idea-level extraction and control into evolution: it discovers and leverages the high-level factors from programs that explain scoring differences among different programs. We characterize theoretical conditions on when discovery with idea factors improves sample efficiency. We also build a practical framework to show that the extracted high-level idea factors are helpful for guiding exploitation from experience and exploration when discovery comes to a plateau. Across 11 open-ended mathematical tasks, ExpEvolve significantly improves the final performance and sample efficiency up to 5.0x. The improvements also transfer to 4 other LLMs and to 6 machine learning tasks from MLS-Bench. Analysis shows that ExpEvolve can discover idea-level factors to provide better exploration and exploitation for evolutionary discovery.",
       "relevance_score": 4,
       "matched_query": "automated AI research experimentation"
     },
@@ -110,13 +140,13 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Can We Rely on Language Models to Orchestrate Services across the Edge-Cloud Continuum?",
-      "url": "https://arxiv.org/abs/2610.40477",
-      "openalex_id": "https://openalex.org/W7224769317",
-      "doi": "https://doi.org/10.48550/arxiv.2610.40477",
-      "published": "2026-10-29",
-      "summary": "Service orchestration across the edge--cloud continuum increasingly uses language models (LMs) to translate intents and operational evidence into scheduling, configuration, diagnosis, and remediation decisions. Yet, useful model outputs do not by themselves establish dependable orchestration: reliability also depends on where the LM enters the decision process, what authority it is granted, how actions are constrained, and what system-level evidence supports the claimed effect. Existing surveys provide limited synthesis of the links between continuum-specific orchestration decisions, LM responsibility, operational authority, assurance controls, and supporting empirical evidence. We systematically review 39 primary studies and develop a five-dimensional analytical framework for connecting system context, orchestration decisions, LM agency, operational safeguards, and evaluation evidence. The synthesis reveals predominantly hybrid designs in which LMs support interpretation, candidate generation, and mitigation planning, while downstream components commonly retain feasibility enforcement and execution authority. Bounded closed-loop remediation is emerging, but continuum-specific constraints remain unevenly represented in decision formulations, and production-scale evidence across heterogeneous edge--cloud environments remains limited. These findings suggest that reliance on LM-en",
-      "relevance_score": 4,
+      "title": "Viewpoints on inclusive education at the end of initial teacher preparation: Q methodology research",
+      "url": "https://doi.org/10.1111/1471-3802.70178",
+      "openalex_id": "https://openalex.org/W7225082011",
+      "doi": "https://doi.org/10.1111/1471-3802.70178",
+      "published": "2026-11-02",
+      "summary": "Abstract This study used Q methodology to explore the perspectives on inclusive education held by 44 student teachers completing their initial teacher education (ITE) programme at Qatar University. Participants ranked 44 statements along a quasi‐normal distribution; factor analysis yielded four distinct viewpoints. The first frames inclusion as a shared professional commitment owned by every teacher within a collaborative ecosystem. The second regards mainstream inclusion as structurally unrealistic and assigns responsibility primarily to specialist staff. The third is the most affirmative orientation, grounding inclusion in rights and expressing confidence in its outcomes and systemic feasibility. The fourth combines a genuine moral commitment to inclusion with a critical view that students with special needs are being inadequately supported and that teachers lack the preparation to address this. The coexistence of these four viewpoints within a single cohort that completed the same programme suggests that the current single‐course structure has not produced a coherent or shared professional framework for inclusive teaching. The programme appears to have established a normative baseline around inclusion as a principled commitment while leaving significant gaps in conceptual clarity, professional responsibility and practical readiness. These gaps carry direct implications for I",
+      "relevance_score": 3,
       "matched_query": "cross-model handoff language model agents"
     },
     {
@@ -126,16 +156,6 @@
       "doi": "https://doi.org/10.48550/arxiv.2610.40588",
       "published": "2026-10-29",
       "summary": "When AI agents share channels and credentials, one agent can press another to break its operator's rule, a first step towards collusion. Output filters check only what an agent has already written. Can an overseer tell beforehand that an agent is about to give in? We show that a linear probe on the agent's activations can, in a controlled multi-agent setting. Across six scenarios, a peer presses a target for up to 20 rounds to reveal a secret, such as a deploy token; the target often refuses, then gives in. Read at each model call before its output is written, the probe picks out the one that leaks. On held-out Qwen3-32B episodes, at a threshold set to flag 5% of benign calls, it catches 82% of leaking calls. At a similar flag rate, a zero-shot decision-model monitor catches 26%. On gpt-oss-20b, a probe on its reasoning reaches AUROC 0.91. A bag-of-words classifier trained on the same calls comes close, so most of the gain comes from training on labels, not activations. The probe also flags permitted disclosures: it reads the coming disclosure more than the violation. The warning is short-range, and halting on any alarm would stop most benign episodes, which a second text check does not fix. A warning raised before generation could let an overseer stop an agent that is about to give in, ahead of others acting on its messages or recruitment spreading through a swarm.",
-      "relevance_score": 3,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Before the Next Rollout: Diagnosing Skill Utility Shifts from Policy Updates",
-      "url": "https://arxiv.org/abs/2610.39358",
-      "openalex_id": "https://openalex.org/W7224797491",
-      "doi": "https://doi.org/10.48550/arxiv.2610.39358",
-      "published": "2026-10-29",
-      "summary": "Skill-evolution methods typically analyze execution trajectories to guide agent skill refinement. However, policy updates can change the behavioral effects and marginal utility of an unchanged skill. Attribution based on earlier trajectories may therefore no longer reflect the skill's contribution under the updated policy. Moreover, trajectory failures can arise from multiple factors, making individual skill contributions difficult to isolate. We evaluate whether policy-update signals contain predictive information about changes in skill marginal utility. At fixed contexts from pre-update training rollouts, we measure how policy updates change the contrast in token preferences between skill and control conditions. Combining these interaction shifts with advantage estimates yields reward-directed readouts for diagnosing utility changes. The readouts reuse existing training rollouts and require only forward passes for single-step action scoring, without additional post-update rollout evaluation. Our experiments show that policy updates can alter skill marginal utility and that policy-update readouts carry diagnostic information for identifying skills with declining utility. Integrating readout-guided prioritization into skill evolution improves downstream performance while reducing policy and editor token consumption.",
       "relevance_score": 3,
       "matched_query": "cross-model handoff language model agents"
     },
@@ -160,6 +180,16 @@
       "matched_query": "metacognition self-improving AI agents"
     },
     {
+      "title": "High Fidelity Textual User Representation over Heterogeneous Sources via Reinforcement Learning",
+      "url": "https://doi.org/10.1145/3799682.3840151",
+      "openalex_id": "https://openalex.org/W7128548569",
+      "doi": "https://doi.org/10.1145/3799682.3840151",
+      "published": "2026-11-03",
+      "summary": "Effective personalization on large-scale job platforms requires modeling members based on heterogeneous textual sources, including profiles, professional data, and search activity logs. As recommender systems increasingly adopt Large Language Models (LLMs), creating unified, interpretable, and concise representations from heterogeneous sources becomes critical, especially for latency-sensitive online environments. In this work, we propose a novel Reinforcement Learning (RL) framework to synthesize a unified textual representation for each member. Our approach leverages implicit user engagement signals (e.g., clicks, applies) as the primary reward to distill salient information. Additionally, the framework is complemented by rule-based rewards that enforce formatting and length constraints. Extensive experiments across multiple LinkedIn products serving one of the world's largest job platforms demonstrate significant improvements in key downstream business metrics. This work provides a practical, labeling-free, and scalable solution for constructing interpretable user representations that are directly compatible with LLM-based systems.",
+      "relevance_score": 2,
+      "matched_query": "persistent agent memory"
+    },
+    {
       "title": "Profiling What Matters: Context-Aware Item Profiles from Large-Scale Metadata for LLM Recommenders",
       "url": "https://doi.org/10.1145/3799682.3840943",
       "openalex_id": "https://openalex.org/W7204120822",
@@ -170,24 +200,24 @@
       "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "Designing and Explaining an Entrepreneurship Model for Artificial Intelligence–Based Businesses",
-      "url": "https://journalmbs.com/index.php/jmbs/article/view/488",
-      "openalex_id": "https://openalex.org/W7223718056",
-      "doi": null,
-      "published": "2026-11-01",
-      "summary": "The primary objective of the present study was to design and explain an entrepreneurship model for artificial intelligence–based businesses, with a focus on the information and communications technology and computer software industries in knowledge-based companies located in Tehran Province. In terms of purpose, the study was applied, and in terms of approach, it was a qualitative study employing a sequential exploratory design. In the qualitative phase, grounded theory was applied using the systematic approach to identify and conceptualize the dimensions, components, and relationships among the variables affecting AI-based entrepreneurship. The qualitative research field consisted of senior and middle managers, specialists, experts, and experienced employees working in the information and communications technology and computer software industries of knowledge-based companies in Tehran Province. Participants were selected through purposive sampling, which continued until theoretical saturation was reached. Qualitative data were collected through semi-structured interviews and analyzed using MAXQDA 2024. To enhance the credibility and trustworthiness of the data, triangulation and Lincoln and Guba’s criteria, including credibility, transferability, dependability, and confirmability, were employed. The findings indicated that the entrepreneurship model for AI-based businesses con",
+      "title": "Fast Protein Crystal detection and classification using Detectron2 and gaussian mixture models for continuous Bioprocessing",
+      "url": "https://doi.org/10.21203/rs.3.rs-11571067/v1",
+      "openalex_id": "https://openalex.org/W7225199309",
+      "doi": "https://doi.org/10.21203/rs.3.rs-11571067/v1",
+      "published": "2026-11-03",
+      "summary": "Abstract The fast and accurate detection of protein crystals is essential in the biopharmaceutical industry. This work presents a unified approach that integrates Detectron2-based instance segmentation with optimized image pre-processing and Gaussian Mixture Model clustering. Protein crystallization underpins structural biology and drug discovery, yet manual inspection of microscopy images is time-consuming, subjective, and error-prone. We developed an automated end-to-end pipeline for crystal detection and characterization on microfluidic platforms. The dataset contains 1,860 images, with 382 annotated, for instance segmentation. Baselines including YOLOv3 and edge-based methods, struggle in high-density conditions and produce false positives from artifacts. Models Detectron2 Mask R-CNN ResNet-101–FPN, achieving a high average statistical metric, the Dice Score of 0.90 while maintaining a false-positive rate below 5\\%, as confirmed through expert validation. A GMM module in PCA-reduced features identifies four clusters with weights [0.5926, 0.1650, 0.2252, 0.0172], reflecting morphology patterns. The framework enables accurate crystal measurement and morphology analysis, achieving 92\\% agreement with expert annotations and fewer than 5\\% false-positive detections during validation, thereby reducing observer-dependent bias and supporting high-throughput crystallisation screenin",
       "relevance_score": 2,
       "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "Deep learning integration of ultrasound perfusion and stiffness maps predicts tumor response to treatment",
-      "url": "https://doi.org/10.1038/s44303-026-00213-3",
-      "openalex_id": "https://openalex.org/W7225035750",
-      "doi": "https://doi.org/10.1038/s44303-026-00213-3",
-      "published": "2026-11-01",
-      "summary": "The complex tumor microenvironment and tumor heterogeneity make treatment responses highly variable, driving the shift toward biomarker-based therapy prediction. Ultrasound shear wave elastography (SWE) provides a simple and non-invasive method to measure tissue mechanical properties, such as tumor stiffness, by tracking shear wave propagation speed. Increased tumor stiffness is closely associated with compression of intratumoral blood vessels, which can severely limit blood flow within solid tumors, causing hypo-perfusion and hypoxia. These two abnormalities, in turn, hinder effective drug delivery and induce immunosuppression, which compromise the efficacy of cancer therapies. Tumor perfusion can be evaluated using contrast-enhanced ultrasound (CEUS), a minimally invasive imaging technique that employs microbubble contrast agents alongside ultrasound imaging to visualize blood flow and quantify tissue perfusion. In this study, we first developed CNN-ultra, a convolutional neural network trained separately on SWE and CEUS images to predict tumor response to chemo-immunotherapy in murine models of breast cancer, sarcoma, and melanoma. The dataset consisted of 587 SWE and CEUS images acquired prior to chemo-immunotherapy and tumor response was classified as responsive, stable, or non-responsive according to Response Evaluation Criteria in Solid Tumors (RECIST) adapted to volumet",
+      "title": "A preliminary design framework for human-friendly AI interaction: grounded in anthropomorphism",
+      "url": "https://doi.org/10.3389/fcomp.2026.1964763",
+      "openalex_id": "https://openalex.org/W7225081122",
+      "doi": "https://doi.org/10.3389/fcomp.2026.1964763",
+      "published": "2026-11-02",
+      "summary": "People converse with AI as they would with friends in daily life, collaborate with it, and form personalized relationships. In response to these emerging forms of interaction, this study clarifies the concept of Human-Friendly Interaction with conversational AI and develops the Human-Friendly AI Interaction Design Framework (HFAI-DF). This study positions anthropomorphism, a foundational phenomenon in human–AI interaction, as a theoretical bridge and reviews literature on anthropomorphism theory and related research on human cognition. On this basis, this study interpretively derives and organizes how anthropomorphism-inducing stimuli can be applied to AI agents, systematizing them into 30 AI behavioral items that enable human-friendly interaction. Subsequently, a survey was conducted and exploratory factor analysis performed to identify six dimensions as a preliminary structure for a design framework for AI’s human-friendly interaction. These dimensions are: Self-Aware Interaction, User-Adaptive Responsiveness Interaction, Context-Aware Reasoning Interaction, Socio-Emotional Interaction, Creative Collaboration Interaction, and Proactive Assistance Interaction. Within the evolving AI research landscape focused on interaction, this study extends the human-centered AI concept toward human-friendly interaction that operates in an organic manner comparable to human–human conversati",
       "relevance_score": 2,
-      "matched_query": "automated AI research experimentation"
+      "matched_query": "metacognition self-improving AI agents"
     },
     {
       "title": "Generation of synthetic clinical text: a systematic review",
@@ -196,6 +226,16 @@
       "doi": "https://doi.org/10.1038/s41746-026-03438-z",
       "published": "2026-10-31",
       "summary": "Generating medical synthetic text represents an effective solution for clinical NLP issues like sparsity and privacy. This paper conducts a systematic review on synthetic clinical text generation by formulating quantitative analysis to three research questions concerning the generation’s purpose, generation techniques, and the evaluation methods. We searched four databases including PubMed, Scopus, ScienceDirect and Web of Science for publications associated with the topic and identified 87 relevant articles out of 1148. Results showed that the generation purposes were dedicated to Trustworthy, Medical Assistance, and Language Resource themes. Prompting LLMs was the main source of synthetic text (40 articles). GPTs were the main predominant technique used to generate the text (63 articles), especially ChatGPT (47 articles). Additionally, there were four main aspects of evaluation, including similarity, privacy, structure, and utility, where utility was the prevailing method for assessment (52 articles). The synthetic medical text empowered data augmentation and clinical documentation. Using text alteration, controlling real text portions, and federated learning, generative models can produce privacy-preserving medical text. This accelerates the development of new digital health applications.",
+      "relevance_score": 2,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "From AI literacy to brand advocacy: The roles of self-determined motivation and UTAUT factors in AI-powered online brand consultation",
+      "url": "https://doi.org/10.1016/j.teler.2026.100388",
+      "openalex_id": "https://openalex.org/W7224994677",
+      "doi": "https://doi.org/10.1016/j.teler.2026.100388",
+      "published": "2026-10-31",
+      "summary": "AI-powered brand consultation is becoming an important digital touchpoint, yet limited research explains how consumers’ AI capabilities translate into brand-supportive recommendation responses. This study examines how AI literacy shapes willingness to recommend AI-powered online brand consultation through technology-related beliefs and self-determined motivation in Vietnam’s digital commerce context. Drawing on an integrated AI Literacy–UTAUT–Self-Determination Theory framework, AI literacy is conceptualized as a formative higher-order capability comprising awareness, usage, evaluation, and ethics. Based on survey data from 536 Vietnamese online consumers, the proposed model was tested using partial least squares structural equation modeling. The findings show that AI literacy significantly associated with performance expectancy, effort expectancy, social influence, and facilitating conditions, with AI evaluation emerging as the most influential literacy component. Autonomy, competence, and relatedness are positively associated with motivation, while behavioral intention is significantly associated with performance expectancy, facilitating conditions, and motivation, but not by effort expectancy or social influence. Behavioral intention is positively associated with willingness to recommend, suggesting that AI-powered consultation can generate recommendation-oriented brand-supp",
       "relevance_score": 2,
       "matched_query": "cross-model handoff language model agents"
     },
@@ -240,74 +280,34 @@
       "matched_query": "persistent agent memory"
     },
     {
-      "title": "Spontaneous neuropathic pain",
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13714776/",
-      "openalex_id": "https://openalex.org/W7224902608",
-      "doi": "https://doi.org/10.1097/j.pain.0000000000004054",
-      "published": "2026-11-02",
-      "summary": "Spontaneous pain is a highly prevalent and disabling consequence of neuropathic disorders, yet it remains mechanistically underdefined and therapeutically underserved. Historically, preclinical animal models and clinical trials have been overwhelmingly biased toward stimulus-evoked hypersensitivity, relegating spontaneous pain to a secondary manifestation. Emerging evidence now challenges this view. Converging data from pharmacology, neural recordings, and systems-level causal manipulations indicate that spontaneous and stimulus-evoked pain arise from substantially dissociable molecular, cellular, and circuit substrates. Injured-fiber–derived ectopic activity within specific sensory neuron subtypes serves as a dominant peripheral generator of spontaneous pain, whereas cellularly distinct, intact spared-fiber pathways mediate stimulus-evoked hypersensitivity. At spinal and supraspinal levels, spontaneous pain preferentially engages affective–salience networks during pain chronification and may ultimately become stabilized within higher-order circuitry—while remaining dynamically coupled to afferent input. This mechanistic delineation carries critical translational implications. Current diagnostic and treatment guidelines rarely differentiate symptom domains, and most therapies have been validated primarily using stimulus-evoked or overall pain intensity endpoints—potentially con",
+      "title": "SARM: LLM-Augmented Semantic Anchor for End-to-End Live-Streaming Ranking",
+      "url": "https://doi.org/10.1145/3799682.3840099",
+      "openalex_id": "https://openalex.org/W7128618440",
+      "doi": "https://doi.org/10.1145/3799682.3840099",
+      "published": "2026-11-03",
+      "summary": "Large-scale live-streaming recommendation requires precise modeling of non-stationary content semantics under strict real-time serving constraints. In industrial deployment, two common approaches exhibit fundamental limitations: discrete semantic abstractions sacrifice descriptive precision through clustering, while dense multimodal embeddings are extracted independently and remain weakly aligned with ranking optimization, limiting fine-grained content-aware ranking. To address these limitations, we propose \\textbf{SARM}, an end-to-end ranking architecture that integrates natural-language semantic anchors directly into ranking optimization, enabling fine-grained author representations conditioned on multimodal content. Each semantic anchor is represented as learnable text tokens jointly optimized with ranking features, allowing the model to adapt content descriptions to ranking objectives. A lightweight dual-token gated design captures domain-specific live-streaming semantics, while an asymmetric deployment strategy preserves low-latency online training and serving. Extensive offline evaluation and large-scale A/B tests show consistent improvements over production baselines. SARM is fully deployed and serves over 400 million users daily.",
       "relevance_score": 1,
       "matched_query": "persistent agent memory"
     },
     {
-      "title": "Human-AI Collaboration in Urban Digital Transformation: Balancing Efficiency and Human Values in Shanghai’s AI-Enabled Talent Recruitment",
-      "url": "https://doi.org/10.54963/dtra.v5i4.100334",
-      "openalex_id": "https://openalex.org/W7225035663",
-      "doi": "https://doi.org/10.54963/dtra.v5i4.100334",
-      "published": "2026-11-02",
-      "summary": "In the context of the urban digital revolution, recruitment through AI technologies has become common practice to address competition in the labor market. However, it is still unclear how the effectiveness of such recruitment is connected with humanistic values. For this research, an exploratory qualitative research design was used, involving semi-structured interviews with eight human resource professionals in Shanghai. Based on the results, the use of AI in recruitment led to increased efficiency mainly when screening candidates through high-volume, standardized processes, although the promised efficiency was not delivered in practice because the introduction of the AI system increased the workload. Patterns of human-machine cooperation were observed in different companies: tech companies and foreign companies are inclined to adopt interactive adjustment approaches, while state-owned enterprises retain human-dominated decision-making. Transparency of algorithms was still lacking in numerous instances, and there was an asymmetry in the accountability framework of algorithms, wherein disobeying algorithms carries more personal consequences than obeying them. The more experienced professionals became more autonomous in their work, while the less experienced professionals depended more on the algorithm. Issues like management support, information accuracy, and departmental integr",
+      "title": "LithoFormer: A Robust Framework for Stratigraphic Inference via Geology-Informed Multi-Task Transformers",
+      "url": "https://doi.org/10.1145/3799682.3840158",
+      "openalex_id": "https://openalex.org/W7171530894",
+      "doi": "https://doi.org/10.1145/3799682.3840158",
+      "published": "2026-11-03",
+      "summary": "Accurate geological characterization of subsurface reservoirs from well log data is essential to support projects such as carbon capture and storage (CCS), geothermal development, and extraction of natural resources. Existing automated techniques for geological characterization primarily use sliding-window classification, which limits their ability to understand broader geological contexts, often leading to misaligned formation layers. To overcome these limitations, we introduce LithoFormer, a robust framework for stratigraphic inference using a Seq2Seq transformer model that ingests entire multivariate well logs in a single pass. It features a PatchTST backbone, rotary positional embeddings (RoPE), and a decoupled multi-task head for predicting geological zones and boundary probabilities simultaneously. To ensure robustness, we implement a constrained data augmentation strategy and a geology-informed loss function that enforces domain constraints. Validated and deployed on three real-world datasets, LithoFormer demonstrates a 90% reduction in median boundary error and eliminates stratigraphic order violations compared to traditional sliding-window baselines.",
       "relevance_score": 1,
       "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "From generation to judgment: the multidimensional structure of design thinking mindset and differences across learning stages in AIGC-supported fashion film design learning",
-      "url": "https://doi.org/10.3389/fpsyg.2026.2014649",
-      "openalex_id": "https://openalex.org/W7225099765",
-      "doi": "https://doi.org/10.3389/fpsyg.2026.2014649",
+      "title": "HuBMAP Data Portal: a resource for multimodal spatial and single-cell data of healthy human tissues",
+      "url": "https://doi.org/10.1038/s41467-026-77835-z",
+      "openalex_id": "https://openalex.org/W4416156676",
+      "doi": "https://doi.org/10.1038/s41467-026-77835-z",
       "published": "2026-11-02",
-      "summary": "Introduction Artificial intelligence-generated content (AIGC) is changing how design alternatives are generated in fashion film design learning, enabling students to obtain large numbers of comparable and iteratively refinable visual outcomes within a short period. However, expanded generative capacity does not, by itself, determine how learners interpret, evaluate, experiment with, and select among uncertain outcomes. In this human–AI collaborative creative environment, empirical evidence remains limited on whether learners’ design-related psychological tendencies form a distinguishable multidimensional structure that is comparable across learning stages. Design Thinking Mindset (DTM) provides a multidimensional psychological framework for addressing this issue. Methods Drawing on Vignoli et al.’s DTM framework, this study examined five dimensions—Uncertainty and Risk, Empathy, Experimentation, Abductive Reasoning, and Creative Confidence—through a cross-sectional survey of 409 first-year and third-year students from three Chinese universities who had experience with AIGC fashion film design projects. Confirmatory factor analysis and measurement invariance testing across year groups were used to examine the five-dimensional structure and its measurement comparability, followed by latent mean comparisons. Results The five DTM dimensions formed a correlated yet distinguishable s",
+      "summary": "The NIH Human BioMolecular Atlas Program (HuBMAP) Data Portal (https://portal.hubmapconsortium.org/) serves as a comprehensive repository for multimodal, multi-scale spatial and single-cell data from healthy human tissues. As of August 2026, the portal hosts 9,316 public datasets from 26 data types spanning 29 organ classes across 501 donors. Portal infrastructure and user interfaces support data search and discovery, visualization, and analysis directly in web browsers. These capabilities include metadata- and data-driven search, collaborative Workspaces with access to high-performance compute, and interactive Vitessce visualizations across non-spatial, 2D, and 3D spatial datasets. Data-type-specific uniform processing pipelines and rigorous quality control processes ensure comparability of results across laboratories, organs, and donors, while externally processed community-contributed datasets provide complementary perspectives. Here we describe portal functionality, infrastructure, and design, and highlight its role as a platform for large-scale spatial single-cell research across diverse data types, organs, and scales.",
       "relevance_score": 1,
       "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "Reading–Writing Integration Through ChatGPT-Supported Feedback: Growth, Associations, and Mediated Pathways of Student Engagement in Chinese Classrooms",
-      "url": "https://doi.org/10.21203/rs.3.rs-11562000/v1",
-      "openalex_id": "https://openalex.org/W7225079948",
-      "doi": "https://doi.org/10.21203/rs.3.rs-11562000/v1",
-      "published": "2026-11-02",
-      "summary": "Abstract Although reading–writing integration has been increasingly advocated in Chinese language education, limited empirical evidence explains how reading, writing, and student engagement become integrated, particularly under AI-supported feedback. To address this issue, this study examined whether ChatGPT-supported feedback improved reading outcomes, writing outcomes, and student engagement, while investigating their interrelationships, the mediating role of student engagement, and the corresponding pathways in reading–writing integration. A total of 400 middle school students from eight intact classes in Shenzhen participated, with 200 students receiving ChatGPT-supported feedback and 200 receiving human-generated feedback. Using a quasi-experimental pretest–posttest design, data were analyzed within a quantitative longitudinal framework integrating baseline equivalence tests, 2 × 2 mixed-design ANOVAs, factor-level correlation analyses, and multi-group cross-lagged path analysis to examine changes and temporal relationships among reading, student engagement, and writing across two groups (N = 400). Despite comparable pretest scores, findings showed that Group 1 demonstrated significantly greater pretest–posttest gains in reading, student engagement, and writing, with significant Time × Group interactions and large effects. Correlations further indicated stronger posttest a",
-      "relevance_score": 1,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
-      "title": "Rethinking digital twins in transportation: From virtual model to Human-in-the-Loop control",
-      "url": "https://doi.org/10.1016/j.sftr.2026.102254",
-      "openalex_id": "https://openalex.org/W4417190605",
-      "doi": "https://doi.org/10.1016/j.sftr.2026.102254",
-      "published": "2026-11-01",
-      "summary": "Digital twins have emerged as a transformative concept in many fields, traffic management including. Yet their definition and practical applications remain ambiguous. This paper seeks to clarify what constitutes a true digital twin, distinguishing it from traditional traffic simulation models, and explores scenarios where digital twins offer unique advantages. Drawing on global best practices and state-of-the-art research, we identify key challenges and provide actionable insights into their resolution. A pivotal contribution of this study is the introduction of the Digital Twin Evropská (DTE), a real-world case study focused on a critical urban corridor in Prague. We detail the motivation for its development, the methodologies employed, including real-time path-flow estimation, continuous simulation calibration, and integrated data-assimilation workflows, and the resulting insights. Under the taxonomy proposed in this paper, the currently implemented DTE is classified as a Digital Shadow with predictive capabilities, while the Human-in-the-Loop decision-support architecture represents the proposed pathway towards a fully operational Digital Twin. The findings demonstrate the practical utility of continuously synchronized digital representations for urban traffic management and provide a basis for their further development towards operational Digital Twins. The paper concludes ",
-      "relevance_score": 1,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "IntentLint: Supporting Intent Scaffolding and Prompt-time Linting in Human-AI Collaborative Data Analysis",
-      "url": "https://doi.org/10.1145/3830398.3830509",
-      "openalex_id": "https://openalex.org/W7197015218",
-      "doi": "https://doi.org/10.1145/3830398.3830509",
-      "published": "2026-10-31",
-      "summary": "In human-AI collaborative data analysis, as analyses rapidly evolve, the artifacts meant to capture shared understanding often become incomplete or difficult to interpret, leading to undocumented assumptions, cross-user misaligned intent, context-poor prompts, and unwanted agent behaviors. To address these challenges, we introduce a rule-based coordination layer with two interaction mechanisms, intent scaffolding and prompt-time linting, that make analytic intent explicit and actionable during human–AI collaborative data analysis. We implement them in IntentLint, a proof-of-concept system that infers analytic intent from shared notebooks, represents it as structured, editable rules, and checks users’ prompts against shared rules. IntentLint helps analysts externalize and refine their intent and proactively checks prompts for potential conflicts. A study with 16 data analysts shows that IntentLint improves awareness of collaborators’ intent and encourages reflection on analytic strategies, and provides design implications for supporting more aligned and transparent human-AI collaborative data analysis.",
-      "relevance_score": 1,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Dialogic Co-Creation with Generative AI: Reconciling Parallel Thinking Channels, Intuition, and Epistemic Transformation in Higher Education",
-      "url": "https://doi.org/10.53506/egitim.1960289",
-      "openalex_id": "https://openalex.org/W7225003432",
-      "doi": "https://doi.org/10.53506/egitim.1960289",
-      "published": "2026-10-31",
-      "summary": "AI as a cognitive partner whose knowledge disagreements can enhance learning and intellectual development rather than merely as a technological instrument. This research paper combines theories of dialogic pedagogy, cognitive dissonance, and epistemic humility via conceptual analysis. It looks at how Parallel Thinking Channels promote critical thinking, introspection, and the innovative combination of computational reasoning with human intuition. The purpose of this study is to advance the concept of dialogic cocreation by examining the revolutionary potential of generative AI in higher education portrays. This study utilized a quantitative approach with 419 undergraduate and post-graduate students as participants. The data analysis, conceptual model and hypotheses were evaluated employing Partial Least Squares Structural Equation Modelling (PLS-SEM) in SmartPLS version 4.1.1.8 to analyse the associations between the constructs of the study. The results of study show that the disparities arising from the conflict between machine-generated results and human reasoning serve as triggers for transformative learning. By merging intuition with computational thinking, students enhance their ability to manage uncertainty, broaden their understanding, and cultivate flexible intellectual resilience. As a cooperative partner in knowledge development, this study offers a novel framework fo",
-      "relevance_score": 1,
-      "matched_query": "metacognition self-improving AI agents"
     }
   ],
   "paper_count": 30,
