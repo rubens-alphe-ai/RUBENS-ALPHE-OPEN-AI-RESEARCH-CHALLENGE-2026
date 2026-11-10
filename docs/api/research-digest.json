@@ -1,6 +1,6 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-11-09T12:58:31.624029+00:00",
+  "generated_at_utc": "2026-11-10T12:43:40.064896+00:00",
   "source": "OpenAlex public API",
   "queries": [
     "persistent agent memory",
@@ -10,14 +10,34 @@
   ],
   "papers": [
     {
-      "title": "Bridging the QC–QA Cognitive Handoff: An Agentic Verification Harness for Error Detection, Specification Cross-Checking and Quality Documentation Assembly in Pharmaceutical Quality Assurance",
-      "url": "https://doi.org/10.21203/rs.3.rs-11344126/v1",
-      "openalex_id": "https://openalex.org/W7225229425",
-      "doi": "https://doi.org/10.21203/rs.3.rs-11344126/v1",
-      "published": "2026-11-04",
-      "summary": "Abstract Background. Quality control (QC) results reach regulatory dossiers through manual transcription and review. Such a benchmark does not yet exist. No collection of pharmaceutical quality documents carries discrepancies of known class and location, so automated verification cannot yet be evaluated against measured performance across realistic transfer errors and document types. Objectives. To specify (i) an architecture in which large language models only read and propose values, deterministic code performs every calculation and acceptance test, and a qualified reviewer makes every decision; (ii) a protocol for building a reference corpus and evaluating such systems; and (iii) sensitivity estimates from three dossiers. The plan covers design, evaluation, and measurement. Methods. Records from three ASEAN Common Technical Dossier Part II submissions (13, 14 and 10 records) were de-identified, and 112, 100 and 120 discrepancies across nine classes were introduced into dossiers A, B and C. A finding counted as a detection when it identified an injected discrepancy at the correct location with the correct class. The framework ran blind to the register. Sensitivity to injected discrepancies is reported per dossier with Wilson 95% confidence intervals and pooled by random-effects meta-analysis; clustering within records is not accounted for. Results. The harness detected 95 of ",
-      "relevance_score": 11,
-      "matched_query": "cross-model handoff language model agents"
+      "title": "DREAM - Deliberative Replay, Evaluation, Abstraction and Memory: Evidence-Governed Counterfactual Consolidation for Persistent AI Agents",
+      "url": "https://doi.org/10.13140/rg.2.2.14900.41601",
+      "openalex_id": "https://openalex.org/W7225584057",
+      "doi": "https://doi.org/10.13140/rg.2.2.14900.41601",
+      "published": "2026-11-08",
+      "summary": "",
+      "relevance_score": 12,
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "Learning to remember: advances in memory mechanisms for large language models",
+      "url": "https://doi.org/10.1007/s44336-026-00044-1",
+      "openalex_id": "https://openalex.org/W7223835807",
+      "doi": "https://doi.org/10.1007/s44336-026-00044-1",
+      "published": "2026-11-09",
+      "summary": "Abstract Memory has become a central mechanism for extending large language models (LLMs) beyond fixed context windows, stateless interaction, and static parametric knowledge. This survey organizes the literature around three complementary dimensions: the life cycle of memory, the storage substrate, and the system role that memory plays in LLM-based agents, while using cognitive-science-inspired memory concepts as a lightweight conceptual motivation rather than as a separate technical contribution or implementation family. On this basis, we distinguish three mechanism families: nonparametric memory, where information is stored outside model parameters in text, graph, multimodal, or database-like structures; parametric memory, where information is stored or accessed through activations, key-value caches, learned modules, adapter-based parameterizations, or model weights; and memory for agent evolution, where stored experiences support reinforcement learning, continual learning, procedural reuse, context engineering, and agent harness design. Evaluation is treated as a separate cross-cutting component rather than as a memory mechanism. Unlike surveys that focus primarily on retrieval-augmented generation or long-context modeling, this paper emphasizes the full memory life cycle: construction, maintenance, retrieval, consolidation, forgetting, governance, and evaluation. By aligni",
+      "relevance_score": 9,
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "Cross-Session Internet Task Continuity: Maintaining Autonomous Task State Across Disconnected Interactions and Digital Environments",
+      "url": "https://doi.org/10.5281/zenodo.24049549",
+      "openalex_id": "https://openalex.org/W7225558537",
+      "doi": "https://doi.org/10.5281/zenodo.24049549",
+      "published": "2026-11-08",
+      "summary": "The increasing development of generative artificial intelligence, autonomous agents, and intent-driven Internet systems is creating opportunities for digital systems to undertake complex tasks that extend beyond individual interactions. Many Internet tasks require multiple execution stages, interactions with heterogeneous digital services, information collection, decision-making, and subsequent verification. However, conventional conversational and task-oriented systems frequently organize execution around individual sessions or temporary interaction contexts. When a session ends, an execution environment becomes unavailable, or a user returns through a different interface, previously accumulated task progress may not be directly accessible or operationally recoverable. Consequently, systems may need to reconstruct previous activities, repeat completed operations, rediscover relevant information, or request that users provide previously established context. This paper proposes Cross-Session Internet Task Continuity (CSITC), a conceptual framework for maintaining autonomous Internet task execution across disconnected interactions and digital environments. Rather than treating historical conversations as the primary unit of persistence, CSITC treats the task execution state as an independently maintainable computational object. Its central principle is that the termination of an ",
+      "relevance_score": 6,
+      "matched_query": "persistent agent memory"
     },
     {
       "title": "Evidence constrained agentic retrieval augmented generation for substation civil engineering preliminary design documents in a single project study",
@@ -30,34 +50,24 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Safe Recovery of AI Agents in Enterprise Systems: Preventing Duplicate Actions and Preserving Human Corrections",
-      "url": "https://doi.org/10.54536/ajsts.v5i2.8833",
-      "openalex_id": "https://openalex.org/W7225254604",
-      "doi": "https://doi.org/10.54536/ajsts.v5i2.8833",
-      "published": "2026-11-04",
-      "summary": "Reliable use of AI agents in enterprise systems depends on what happens after an action fails or its outcome becomes uncertain. Retrying can duplicate an order, while reversing a workflow can invalidate a person’s subsequent correction. The central challenge is deciding whether recovery is justified by the available evidence and still satisfies the business request. We investigate this challenge in a reproducible testbed connecting order, inventory and billing services with different API guarantees. Controlled failures and concurrent edits reveal two evaluation gaps: protecting individual records does not ensure consistency across related services, and preserving an edit does not ensure that the final workflow fulfils its instruction. A separate diagnostic identified nine apparent completions that left human instructions unsatisfied. A conventional recovery implementation with equivalent safeguards matched the evaluated controller in all 270 paired runs, locating the observed benefit in shared engineering protections rather than a distinct recovery algorithm. On the prospective test configurations, both completed 108 of 180 runs without scored violations and left 72 for manual resolution. These findings provide a practical basis for evaluating agent integrations: verify uncertain effects, check related records, and distinguish completed business goals from unresolved handoffs. ",
+      "title": "Signed but Not Safe: Requirement Integrity in Multi-Agent LLM Handoffs",
+      "url": "https://arxiv.org/abs/2611.07483",
+      "openalex_id": "https://openalex.org/W7225380147",
+      "doi": "https://doi.org/10.48550/arxiv.2611.07483",
+      "published": "2026-11-05",
+      "summary": "Enterprise AI agents increasingly split a user's request across subagents and merge their results, and each handoff can summarize away, alter or ignore a requirement. We report a preregistered study with synthetic, exactly scorable tasks comparing free-text, structured JSON and signed requirement-manifest handoffs: the orchestrator extracts each requirement as a verbatim quote plus a checkable predicate, code signs the manifest with HMAC-SHA256, and deterministic code verifies the merger's decision. With Qwen3-8B (1,440 trajectories, five threats), signed manifests cut unsafe commits under attack from 69.4% to 9.0% (60.4 pp, 95% CI [51.4, 69.4]) with no net loss of conformant commits relative to structured handoffs. Signing is what defeats in-transit tampering: an unsigned manifest committed violations in 79% of mutated runs, the signed one in none. On identical trajectories the deterministic verifier caught 78.7% of violating decisions versus 59.0% for an LLM checker, with 7% versus 50% false alarms. An oracle manifest removed all remaining unsafe commits: the residual risk comes from extraction errors made before signing. A preregistered pre-signing injection attack confirmed this boundary: one adversarial line raised signed-manifest violations from 14.6% to 37.5% (Qwen3-8B), 11.1% to 63.9% (gpt-oss-20b) and 8.3% to 75.0% (GPT-5.6-luna), and the signature then authenticated t",
       "relevance_score": 6,
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "ARES OS 2.0: An Orchestration Software Suite for Autonomous Experimentation Systems and Self-Driving Labs",
-      "url": "https://doi.org/10.21105/joss.10461",
-      "openalex_id": "https://openalex.org/W7151631021",
-      "doi": "https://doi.org/10.21105/joss.10461",
-      "published": "2026-11-07",
-      "summary": "ARES OS 2.0 (hereinafter ARES OS) is an open-source software suite to enable laboratory automation and closed-loop autonomous experimentation. Its function is to orchestrate experimental actions and data handoff between lab equipment, analysis routines, and experimental planning modules through a service-oriented architecture. ARES OS is abstracted to apply to general experimental flows common in materials science, chemistry, and biology and related disciplines. The core of ARES OS provides central control over all modules, along with the heavy lifting of UI creation, data management, and experimental design tools. ARES OS modules communicate with the core software over protobuf and gRPC, allowing them to be language-agnostic and user-creatable. This allows users to easily implement modules that control experimental hardware, process collected data , or plan experiments to meet their specific research needs. ARES OS lowers the barrier to entry for researchers to build their own self-driving labs, allowing them to focus on scientific programming for their use case and reducing the effort and time needed to bring an autonomous experimentation system online.",
+      "title": "All Permissions Granted: Agentic AI, Delegated Access, and the Governance of Semantic Footprints",
+      "url": "https://doi.org/10.5281/zenodo.24061685",
+      "openalex_id": "https://openalex.org/W7225570993",
+      "doi": "https://doi.org/10.5281/zenodo.24061685",
+      "published": "2026-11-08",
+      "summary": "This review examines how agentic AI reorganizes privacy, accountability and user agency by turning delegated access into operational context. Agentic AI is treated as a graded socio-technical configuration rather than a clean rupture with conversational AI: conversational interfaces may be coupled with contextual retrieval and memory, external tools and applications, organizational data, and execution or delegated action. The review synthesizes public documentation from OpenAI, Anthropic, Google, Microsoft, GitHub, DeepSeek and the Model Context Protocol ecosystem, alongside governance and cybersecurity frameworks and scholarship in human-AI interaction, privacy, infrastructure, accountability and usable security. Its contribution is to clarify how user content, communication and scheduling records, repository and browser context, and persistent traces such as logs, feedback, memories and local execution records can become semantic footprints when they reveal priorities, dependencies, intentions, vulnerabilities, roles or possible actions within agentic processes. The review develops the concepts of delegated temporal compression, capability amplification, semantic footprints, the agentic permission grey box and dynamic trust boundaries. Formal consent is insufficient when AI systems operate across fragmented informational environments. Users and organizations require capacity ",
       "relevance_score": 5,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "AI‑Driven Conjecture Generation and Proof Scoring Transform Large‑Scale Collaborative Mathematics — E8 Intelligence Research",
-      "url": "https://doi.org/10.5281/zenodo.24029612",
-      "openalex_id": "https://openalex.org/W7225452450",
-      "doi": "https://doi.org/10.5281/zenodo.24029612",
-      "published": "2026-11-07",
-      "summary": "FINDING: Terence Tao's discussion of AI‑assisted experimentation highlights that machine‑generated conjectures and automated proof search are now integral to large‑scale collaborative projects such as Polymath. | MATH: Use of heuristic search over formal libraries (Lean, Coq) to generate candidate lemmas; statistical models produce probability scores p ≈ 0.78–0.92 that a proposed statement is provable. | CONNECTION: Probability scores cluster around the golden ratio conjugate 0.618 → 0.78 (empirical \"confidence\" threshold) suggesting a natural decision boundary reminiscent of φ‑based heuristics in pattern recognition. | DEPTH: 7 --- FINDING: \"Golden Square'' episode introduces a combinatorial geometry problem whose solution rests on the equality of two opposite side‑to‑diagonal ratios in a unit square, yielding the constant φ = (1+√5)/2. | MATH: For a square of side 1, the diagonal d = √2; the construction forces a segment x such that x/(1‑x) = (1‑x)/x = φ ⇒ x = (√5‑1)/2 ≈ 0.618. Author: Andrew Stewart Caldin, Independent Researcher, UK. Part of the E8 Intelligence Research series. Platform: e8intelligence.com",
-      "relevance_score": 5,
-      "matched_query": "automated AI research experimentation"
+      "matched_query": "persistent agent memory"
     },
     {
       "title": "vibyverse: an integrated computational chemistry ecosystem developed through agentic engineering",
@@ -90,13 +100,23 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Learning‐by‐twinning: Organizational digital twins and the future of search",
-      "url": "https://doi.org/10.1002/sej.70061",
-      "openalex_id": "https://openalex.org/W7215132275",
-      "doi": "https://doi.org/10.1002/sej.70061",
-      "published": "2026-11-04",
-      "summary": "Abstract Research Summary Entrepreneurs and managers often need to evaluate strategic choices, such as redesigning an incentive plan or entering an unfamiliar market, before committing scarce resources. Existing offline search tools, including mental models, analogical reasoning, model building, and simulation, allow managers to weigh alternatives without acting, but each is limited by what a single decision maker can specify, recall, or imagine. We argue that advances in generative AI, combined with the growing availability of firm‐specific digital trace data, are transforming this tradeoff. We introduce the organizational digital twin (ODT), an infrastructure combining firm‐specific data, AI‐based behavioral simulation models, and governance rules which facilitates a new form of offline search that we call learning‐by‐twinning: search conducted by observing how a strategic choice unfolds within a digital replica of the firm. We identify three mechanisms through which learning‐by‐twinning creates value, namely expanded search, safer experimentation, and richer system‐level feedback as well as specify certain conditions under which these benefits may attenuate. Managerial Summary Strategic entrepreneurship depends on discovering and refining opportunities through search and experimentation under uncertainty. Enabled by advances in generative artificial intelligence and organiza",
-      "relevance_score": 4,
+      "title": "XLeaf-Net: an explainable deep learning framework for mango leaf disease classification and severity assessment using Grad-CAM-based visual interpretation",
+      "url": "https://doi.org/10.55670/fpll.futech.5.4.20",
+      "openalex_id": "https://openalex.org/W7225464439",
+      "doi": "https://doi.org/10.55670/fpll.futech.5.4.20",
+      "published": "2026-11-08",
+      "summary": "Accurate mango leaf disease recognition is important for automated crop-health assessment, but reliable evaluation requires transparent data partitioning, appropriate baseline comparison, and cautious interpretation of severity and explainability outputs. This study presents XLeaf-Net, an explainable deep-learning framework for mango leaf condition classification, image-derived severity assessment, and Grad-CAM-based visual interpretation. Experiments were conducted on the balanced MangoLeafBD dataset using an image-level stratified train-validation-test protocol with file-level integrity and capture/session-group overlap checks. XLeaf-Net was trained from scratch and compared with from-scratch VGG16, ResNet50, and EfficientNetB0 models under the implemented model-specific training configurations. An auxiliary severity model used conservative, image-derived symptom-intensity proxy labels, while Grad-CAM was applied to qualitatively examine class-discriminative regions. XLeaf-Net achieved 98.67% image-level test accuracy and a 98.66% macro F1-score, outperforming the evaluated from-scratch baselines while using 2.52 million parameters. The severity model achieved 78.17% accuracy and an 80.89% macro F1-score. Grad-CAM visualizations frequently overlapped with visually symptomatic leaf regions in representative correctly classified images. These findings demonstrate strong image-l",
+      "relevance_score": 3,
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "HITCH: Teaching a Vision-Language Model to Operate a Humanoid through a Whole-Body Harness",
+      "url": "https://arxiv.org/abs/2611.08039",
+      "openalex_id": "https://openalex.org/W7225391504",
+      "doi": "https://doi.org/10.48550/arxiv.2611.08039",
+      "published": "2026-11-05",
+      "summary": "Enabling vision-language models (VLMs) to control humanoid robots requires both reliable whole-body interfaces and knowledge of how to use the body that carries over across tasks. We present HITCH (Harness Interfaces To Command Humanoids), a harness in which perception returns the 3D position of any point the VLM selects in its image, and execution turns commands for the pelvis, torso, hands, walking, and gaze into whole-body motion with a learned tracker. We find that both measuring the scene and executing commands accurately raise task success. We then fine-tune a VLM on trajectories in which teacher policies solve five base tasks through HITCH, so that it learns how to operate the humanoid. Without task-specific trajectories, the fine-tuned model completes 51% of SIMPLE episodes and 42.5% of HumanoidArena episodes, and adding five trajectories per SIMPLE task raises its SIMPLE success to 95%. On a real G1, it carries a box and walks to a goal without real training data.",
+      "relevance_score": 3,
       "matched_query": "cross-model handoff language model agents"
     },
     {
@@ -140,22 +160,22 @@
       "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "Exercise enhances cancer immunotherapy by reshaping systemic T cell homeostasis",
-      "url": "https://doi.org/10.1016/j.tranon.2026.103097",
-      "openalex_id": "https://openalex.org/W7225465074",
-      "doi": "https://doi.org/10.1016/j.tranon.2026.103097",
-      "published": "2026-11-07",
-      "summary": "Although immune checkpoint inhibitors have revolutionized cancer treatment, therapeutic resistance and heterogeneous patient responses remain major clinical challenges. Current paradigms predominantly focus on amplifying effector T cells (Teffs); however, this approach frequently encounters structural bottlenecks imposed by a tumor-locked, suppressive immune homeostasis. Central to this aberrant equilibrium are regulatory T cells (Tregs), which persistently elevate immune activation thresholds and restrict durable antitumor responses. In this review, we propose a paradigm shift toward reshaping baseline T cell homeostasis, highlighting exercise as a potent, systemic physiological intervention. Regular exercise systematically counteracts tumor-induced homeostatic locking by reprogramming immune metabolism, attenuating chronic inflammation, and improving tissue perfusion. Rather than indiscriminately depleting Tregs, exercise dynamically recalibrates the Teff/Treg balance, lowering activation thresholds while preserving systemic immune tolerance. Furthermore, we propose that structured physical activity may support a form of “homeostatic memory,” with potential implications for the durability of immunotherapy responses. Integrating exercise into oncological care offers a translational, host-centered strategy to optimize the immune background, thereby unlocking the full clinical p",
+      "title": "Enforcing Narrative Reliability and Epistemic Pacing in LLM-Driven Detective Games via Structured Knowledge Trees",
+      "url": "https://doi.org/10.1609/aiide.v22i1.43574",
+      "openalex_id": "https://openalex.org/W7214030490",
+      "doi": "https://doi.org/10.1609/aiide.v22i1.43574",
+      "published": "2026-11-08",
+      "summary": "Large Language Models (LLMs) enable open-ended dialogue in interactive games, but their non-deterministic outputs make it difficult to preserve authorial control, factual consistency, and the intended sequence of information disclosure. These challenges are particularly significant in detective games, where premature revelation or fabricated details can undermine the logic of player progression. We present a Structured Knowledge Tree architecture coupled with a tri-agent LLM pipeline for controlling dialogue in an open-ended interrogation game. The system separates knowledge retrieval, dialogue generation, and response verification to ensure that the virtual suspect reveals only information permitted by the current narrative state. We evaluate the approach through The Interrogation of Adrian Gale, a playable detective-game testbed, and a formal user study examining hallucination reduction, adherence to authored disclosure sequences, and perceived logical progression. Our results demonstrate that the structured architecture reduces critical hallucinations by 64.78% and entirely prevents premature narrative disclosure. While the strict mechanical constraints introduced usability trade-offs regarding forced conversational reveals, the system successfully enforces rigorous epistemic pacing and provides players with a clear, subjective sense of progression toward solving the case.",
       "relevance_score": 2,
       "matched_query": "persistent agent memory"
     },
     {
-      "title": "A Comprehensive Review of AI and IoT-Based Water Pipeline Leakage Detection, Prediction and Monitoring Systems",
-      "url": "https://doi.org/10.48175/ijarsct-40707",
-      "openalex_id": "https://openalex.org/W7225451749",
-      "doi": "https://doi.org/10.48175/ijarsct-40707",
-      "published": "2026-11-07",
-      "summary": "Water pipeline leakage is a major challenge in water distribution and supply systems because undetected leaks can result in water loss, infrastructure damage, economic losses, and inefficient water management [5], [13]. Conventional leakage inspection methods often depend on manual inspection, periodic maintenance, or specialized equipment, which may not provide continuous real-time monitoring [5], [13]. Recent developments in the Internet of Things (IoT), sensor technology, artificial intelligence (AI), and machine learning (ML) have created opportunities for automated and intelligent pipeline monitoring [9], [11]. This review presents a study of recent techniques used for water pipeline leakage detection, localization, prediction, and monitoring. Different sensing approaches, including flow, pressure, acoustic, and vibration measurements, are reviewed along with machine-learning and deep-learning methods [1], [3], [4], [8], [12], [13]. Existing research demonstrates that pressure and flow measurements are widely used for hydraulic anomaly detection, while vibration and acoustic measurements can provide additional information about leakage events [5], [6], [7]. AI models such as Artificial Neural Networks, Random Forest, Support Vector Machines, K-Nearest Neighbors, Convolutional Neural Networks, and ensemble techniques have been investigated for leakage classification and loc",
+      "title": "Solar Photovoltaic Fault Diagnosis: A Comprehensive Survey of Conventional and Machine Learning Techniques",
+      "url": "https://doi.org/10.64388/ire1724803",
+      "openalex_id": "https://openalex.org/W7220474094",
+      "doi": "https://doi.org/10.64388/ire1724803",
+      "published": "2026-11-08",
+      "summary": "Faults are the principal impediment to achieving elevated levels of efficiency, reliability, and longevity in photovoltaic (PV) systems. In this article, we reviewed solar PV fault diagnostics techniques and compared different fault signature interpretations based on three primary data sources: electrical measurements, environmental conditions, and thermal inspection images. Five overlapping diagnostic perspectives are discussed: measurement modalities (electrical and thermal), statistical methods, optimization-based methods, machine learning techniques. The different approaches are compared regarding: the extent to which faults can be detected; quality of the diagnostic evidence that is generated; what measurements are required for diagnostics; how the topology of the system affects diagnostics; ability to localize faults; under what conditions a diagnosis is validated; and at what time interval the data needs to be acquired. Overall, our evaluation shows there is no single optimal method for identifying faults of all types, primarily because of differences in datasets, definitions of faults, validation conditions and timing measures which make it difficult to make direct comparisons. Finally, we identify areas for future research; Hybrid Physical/Data-Driven Models, Digital Twins, Embedded Inference, Standardized Datasets, Learning with Limited Labels, Longitudinal Field Eval",
       "relevance_score": 2,
       "matched_query": "automated AI research experimentation"
     },
@@ -198,6 +218,26 @@
       "summary": "Problem-solving is a practical skill that students must master in 21st-century learning. However, various findings indicate that this capability remains low among junior high school students, who are beginning to study mathematical concepts in greater depth. Anxiety toward the subject matter, teachers, and mathematics instruction itself is a key factor influencing students' mathematical problem-solving performance. To address this, this study aims to examine the effect of the Search, Solve, Create, and Share (SSCS) learning model, a model that provides a clear roadmap for students to implement Polya's problem-solving steps, assisted by interactive digital media (PhET and Mathigon), on students' problem-solving ability and anxiety. This quasi-experimental study used a factorial design and included eighth-grade students. The research sample was selected using the cluster random sampling technique. Data were collected using a test instrument and a mathematics anxiety questionnaire and were subsequently analyzed using a two-way Analysis of Variance (ANOVA). The results of the study indicate that: (1) Hypothesis testing showed that there was a significant effect of different learning models on students’ problem-solving ability, with Fobs (= 8.405) > Ftab (= 4.016). Furthermore, based on the marginal means, the interactive digital media PhET-assisted SSCS model was more effective, wi",
       "relevance_score": 2,
       "matched_query": "metacognition self-improving AI agents"
+    },
+    {
+      "title": "Leave It Better Than Found: Value-Guided Cooperation in Sequential Tasks",
+      "url": "https://arxiv.org/abs/2611.08075",
+      "openalex_id": "https://openalex.org/W7225375293",
+      "doi": "https://doi.org/10.48550/arxiv.2611.08075",
+      "published": "2026-11-05",
+      "summary": "We consider the problem of sequential task continuation, where one robot acts in a workspace that has been affected by a previous robot. Current approaches in multi-robot cooperation rely heavily on co-training or co-optimization, assumingthat the robots have access to collective interaction data during the policy training or planning process. However, as increasingly varied robotic embodiments and policies are deployed and operate in the same real-world environment, learning policies for cooperation becomes infeasible due to the combinatorial explosion of possible robot combinations that need to be accounted for. To address this challenge, this paper considers the problem of ad hoc sequential cooperation between robots that have never before operated together in a shared environment. We demonstrate that robots can explicitly communicate their environmental preferences through sharing their value functions, enabling coordination without the need for prior joint training. To ground this exchange and prevent overconfidence in out-of-distribution states, we further introduce a k-nearest neighbors (KNN)- based uncertainty filter. Our method yields an increase of up to 48.5 pp compared with naive or even selfish agents, in task success rates across simulated and real-world experiments, demonstrating that value function transmission between agents is useful not merely as an internal ",
+      "relevance_score": 2,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "Should You Split Decode? Disaggregation Across Future Models and Accelerators",
+      "url": "https://arxiv.org/abs/2611.08299",
+      "openalex_id": "https://openalex.org/W7225399753",
+      "doi": "https://doi.org/10.48550/arxiv.2611.08299",
+      "published": "2026-11-05",
+      "summary": "For large language model (LLM) inference, prefill/decode disaggregation (P/D) is deployed in production to isolate phases with different resource demands. Attention/feed-forward network disaggregation (AFD) splits decode again, but adds communication, placement constraints, and another provisioned pool. We ask whether role-specific placement repays this cost as models and accelerator roadmaps change. Infrastructure is committed before future models and hardware can be benchmarked. We present SiliconForge, a calibrated model that varies the serving decomposition and hardware assignment independently. We compare P/D and P/D+AFD across four model directions, four accelerator classes anchored to current and announced parts, and two fabrics. We co-optimize each design using the same rules for pipeline overlap and the same power budget. Our main comparisons show no robust deployment-level AFD advantage in service-level objective (SLO) goodput per kW. Most nominal estimates favor P/D. The largest AFD lead comes from fitting one more prefill replica, not from a more efficient decode pool. AFD has a nominal lead in the KV-heavy (key-value) model direction when the co-located expert pool spans several small scale-up domains. Larger domains or a fast fabric for both designs weaken that lead. We therefore find that prefill provisioning, decode memory bandwidth, links, and pool granularity ",
+      "relevance_score": 2,
+      "matched_query": "cross-model handoff language model agents"
     },
     {
       "title": "Video and digital games: Historical controversies, benefits, and risks for children and adolescents",
@@ -260,52 +300,12 @@
       "matched_query": "metacognition self-improving AI agents"
     },
     {
-      "title": "AI & Cognitive Work",
-      "url": "https://doi.org/10.1017/9781009766081",
-      "openalex_id": "https://openalex.org/W7222908997",
-      "doi": "https://doi.org/10.1017/9781009766081",
-      "published": "2026-11-07",
-      "summary": "Artificial systems now perform a striking range of cognitive tasks. This Element defends three claims. First, the status quo for cognitive work cannot survive. Whatever AI's trajectory, the package of features defining cognitive work – high skill requirements, credentials, wage premiums, resistance to automation, and low productivity growth – will be radically transformed. Second, the widespread displacement of humans from cognitive work, though it sounds alarming, may pose no special threat to human flourishing. Whatever makes work good for people is equally available outside cognitive work, and displacement enables leveraged gains in research and access to justice. Third, a world of ubiquitous cognitive assistance, though it sounds benign, carries distinctive moral risks, especially for children. Cognitive assistance works by reducing cognitive difficulty. But cognitive difficulty is necessary for the normal development of executive function – the capacities constitutive of autonomous agency. This title is also available as Open Access on Cambridge Core.",
-      "relevance_score": 1,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "Understanding the Neurobiology of Heart Rate Variability: Central, Peripheral, and Developmental Contributions in Rodents",
-      "url": "https://doi.org/10.26686/zbgv-fb65",
-      "openalex_id": "https://openalex.org/W7225380112",
-      "doi": "https://doi.org/10.26686/zbgv-fb65",
-      "published": "2026-11-07",
-      "summary": "The study of heart rate variability has grown rapidly in popularity in the age of smart technology, however this growth at the cutting edge has progressed without the necessary foundational understanding of the complexities. Rodent modelling of HRV allows for the experimental testing of underlying mechanisms to build a strong foundation for future studies in HRV, however, current rodent experiments are limited and lacking in methodological consistency. The first chapter of this thesis will provide a theoretical overview of HRV from early foundational concepts, up to the current theoretical models, while providing a strong foundation usable to those new to the field of HRV and experts alike. Chapter two provides a data driven methodology for the study of HRV in rats, from a detailed surgical procedure through to the transparent analysis and reporting of essential parameters. Chapter three examines the contributions of the sympathetic and parasympathetic nervous system to many of the common parameters of HRV using centrally acting and peripherally isolated pharmacological blockades. Chapter four explores the central regulation of HRV through the manipulation of GABA in the infralimbic prefrontal cortex via intracerebral infusions of muscimol and bicuculine. Chapter five explores the developmental trajectory of HRV parameters in male and female rodents, starting from post-natal da",
-      "relevance_score": 1,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "Biomaterials in 3D bioprinting: Design strategies, material-technique interactions, and biomedical applications",
-      "url": "https://doi.org/10.1016/j.nxmate.2026.103949",
-      "openalex_id": "https://openalex.org/W7225455101",
-      "doi": "https://doi.org/10.1016/j.nxmate.2026.103949",
-      "published": "2026-11-07",
-      "summary": "Three-dimensional (3D) bioprinting has emerged as a transformative approach in biomedical engineering, enabling the fabrication of complex, patient-specific constructs through layer-by-layer deposition of biomaterials and living cells. This review critically synthesizes the role of biomaterials in 3D bioprinting by comparing how material properties, fabrication techniques, and biological requirements interact to determine construct performance across different biomedical applications. Unlike many existing reviews that discuss materials, techniques, and applications separately, this review focuses on the coupled interactions between biomaterial chemistry, fabrication methods, and application-specific requirements across multiple tissue systems. Across these applications, no single biomaterial satisfies all design requirements, leading to compromises between mechanical strength, printability, and biological performance. Hard tissue applications prioritize thermoplastic polymers and ceramics for structural integrity, while soft tissue engineering relies on hydrogel-based bioinks. Printing techniques such as extrusion, inkjet, and stereolithography impose constraints related to resolution, viscosity, and cell viability, driving the use of composite biomaterials and hybrid fabrication strategies. Despite significant advances, major challenges remain, including mechanical mismatch, l",
-      "relevance_score": 1,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "Multi-omics and machine learning reveal a senescence-associated lipid-metabolic macrophage phenotype driving immunosuppression and poor prognosis in colorectal cancer",
-      "url": "https://doi.org/10.1038/s41598-026-80104-0",
-      "openalex_id": "https://openalex.org/W7225456618",
-      "doi": "https://doi.org/10.1038/s41598-026-80104-0",
-      "published": "2026-11-07",
-      "summary": "Tumor-associated macrophages (TAMs) are key regulators of the tumor microenvironment in colorectal cancer (CRC), yet their functional heterogeneity remains poorly understood, especially regarding the interplay between cellular senescence and lipid metabolism. We integrated multi-omics and single-cell transcriptomic data to characterize a novel macrophage subpopulation termed senescence-associated lipid-metabolic (SALM) macrophages. Using eight machine learning algorithms, a prognostic model based on SALM signatures was developed and internally evaluated via nested cross-validation in a combined TCGA–GSE39582 cohort. Spatial multiplex immunofluorescence and qPCR were employed for experimental validation. SALM macrophages exhibit elevated IL-10/STAT3 signaling, terminal differentiation, and a core gene module enriched in senescence and lipid metabolism pathways. They interact strongly with T cells via immunosuppressive ligands IL-10 and MIF. Spatial analysis confirmed p16 + CD68 + IL-10 + cell enrichment at the tumor front. The SALM-based prognostic model achieved high accuracy (AUC = 0.972), and a corresponding nomogram showed potential for personalized prognosis prediction. SALM macrophages drive immunosuppression in CRC through a senescence-lipid metabolism axis, serving as a novel prognostic biomarker and potential therapeutic target.",
-      "relevance_score": 1,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "De Novo Design of Catalytically Active Salen-Binding Proteins",
-      "url": "https://doi.org/10.1021/jacs.6c08768",
-      "openalex_id": "https://openalex.org/W7225410508",
-      "doi": "https://doi.org/10.1021/jacs.6c08768",
-      "published": "2026-11-07",
-      "summary": "Abstract De novo design of catalytic metalloproteins has the potential to generate enzymes that combine the efficiency of natural proteins with the reactivity of synthetic organometallic catalysts. Here, we develop a computational strategy to design enzymes with novel tertiary structures that bind metal salen complexes, classic small-molecule catalysts not found in biology. Six proteins were designed and screened for function; five of six express well, bind a Co-salen cofactor, and catalyze a transition metal hydrogen atom transfer (MHAT)-mediated deallylation reaction, representing the first de novo proteins to catalyze this class of transformation. The spectroscopic properties and crystal structure of the most active sequence were in excellent agreement with the design, and the holoprotein retained its structure and activity over a broad range of pH (2–12), temperatures up to 95 °C, and aqueous/organic solvent mixtures. We suggest that the combinatorial space provided by metal ion identity, ligand substitution, and active site structure can be used to generate artificial metalloenzymes that catalyze many chemical transformations.",
+      "title": "DSLE: A Learning Environment for Dark Souls Boss Encounters",
+      "url": "https://doi.org/10.1609/aiide.v22i1.43566",
+      "openalex_id": "https://openalex.org/W7202157072",
+      "doi": "https://doi.org/10.1609/aiide.v22i1.43566",
+      "published": "2026-11-08",
+      "summary": "We introduce the Dark Souls Learning Environment (DSLE), a containerized platform that presents all 22 boss encounters of Dark Souls: Remastered as game-playing agent benchmarks through a Gymnasium-style interface. DSLE combines real-time combat, high-dimensional visual input, and sparse terminal rewards, with each environment step being a real action executed against the running game. To support controlled comparison, we define DSLE-5, a representative five-boss subset, spanning a melee fight, a spatially constrained arena, an environmental-hazard fight, a multi-target fight, and a fast final-boss fight, that we recommend as the starting suite for agents built on DSLE. On DSLE-5 we evaluate a random policy, an expert system, an evolutionary baseline, and PPO and DQN agents trained from visual input. The expert system and the evolutionary baseline each defeat the Asylum Demon, the game's tutorial boss (63% and 43% peak win rates), but none of the five methods defeats the other four DSLE-5 bosses; PPO and DQN show no measurable learning (at most 0.33% win rate on the tutorial boss, 0% elsewhere) within a budget that already costs tens of wall-clock hours per run. A broader study running the evolutionary baseline across all 22 encounters under advantaged all level-50 stats yields wins on only a handful of additional early-game bosses and leaves the rest unwon. The failure cases r",
       "relevance_score": 1,
       "matched_query": "automated AI research experimentation"
     }
