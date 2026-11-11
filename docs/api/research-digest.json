@@ -1,6 +1,6 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-11-10T12:43:40.064896+00:00",
+  "generated_at_utc": "2026-11-11T11:55:58.318012+00:00",
   "source": "OpenAlex public API",
   "queries": [
     "persistent agent memory",
@@ -10,34 +10,24 @@
   ],
   "papers": [
     {
-      "title": "DREAM - Deliberative Replay, Evaluation, Abstraction and Memory: Evidence-Governed Counterfactual Consolidation for Persistent AI Agents",
-      "url": "https://doi.org/10.13140/rg.2.2.14900.41601",
-      "openalex_id": "https://openalex.org/W7225584057",
-      "doi": "https://doi.org/10.13140/rg.2.2.14900.41601",
-      "published": "2026-11-08",
-      "summary": "",
-      "relevance_score": 12,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "Learning to remember: advances in memory mechanisms for large language models",
-      "url": "https://doi.org/10.1007/s44336-026-00044-1",
-      "openalex_id": "https://openalex.org/W7223835807",
-      "doi": "https://doi.org/10.1007/s44336-026-00044-1",
+      "title": "Trojan Hippo Bench: A Dynamic Benchmark for Persistent Memory Attacks and Defenses in LLM Agents",
+      "url": "https://doi.org/10.1145/3847352.3848090",
+      "openalex_id": "https://openalex.org/W7160244616",
+      "doi": "https://doi.org/10.1145/3847352.3848090",
       "published": "2026-11-09",
-      "summary": "Abstract Memory has become a central mechanism for extending large language models (LLMs) beyond fixed context windows, stateless interaction, and static parametric knowledge. This survey organizes the literature around three complementary dimensions: the life cycle of memory, the storage substrate, and the system role that memory plays in LLM-based agents, while using cognitive-science-inspired memory concepts as a lightweight conceptual motivation rather than as a separate technical contribution or implementation family. On this basis, we distinguish three mechanism families: nonparametric memory, where information is stored outside model parameters in text, graph, multimodal, or database-like structures; parametric memory, where information is stored or accessed through activations, key-value caches, learned modules, adapter-based parameterizations, or model weights; and memory for agent evolution, where stored experiences support reinforcement learning, continual learning, procedural reuse, context engineering, and agent harness design. Evaluation is treated as a separate cross-cutting component rather than as a memory mechanism. Unlike surveys that focus primarily on retrieval-augmented generation or long-context modeling, this paper emphasizes the full memory life cycle: construction, maintenance, retrieval, consolidation, forgetting, governance, and evaluation. By aligni",
-      "relevance_score": 9,
+      "summary": "Memory systems enable otherwise-stateless LLM agents to persist user information across sessions, but also introduce a new attack surface. The Trojan Hippo attack is a class of persistent memory attacks that operates under a more realistic threat model than prior memory poisoning work. The attacker plants a dormant payload into an agent’s long-term memory via a single untrusted tool call (e.g., a crafted email), which activates only when the user later discusses sensitive topics such as finance, health, or identity, and exfiltrates high-value personal data to the attacker. While anecdotal demonstrations of such attacks have appeared against deployed systems, no prior work systematically evaluates them across heterogeneous memory architectures and defenses. We introduce Trojan Hippo Bench, a dynamic evaluation framework for persistent memory attacks and memory-layer defenses, comprising two components: (1) an OpenEvolve-based [ 54 ] adaptive red-teaming benchmark that stress-tests defenses and memory backends against continuously refined attacks, and (2) a capability-aware security–utility analysis for persistent memory systems, enabling principled reasoning about defense deployment across different usage profiles. Instantiated on an email assistant across four memory backends (explicit tool memory, agentic memory, RAG, and sliding-window context), the undefended Trojan Hippo at",
+      "relevance_score": 10,
       "matched_query": "persistent agent memory"
     },
     {
-      "title": "Cross-Session Internet Task Continuity: Maintaining Autonomous Task State Across Disconnected Interactions and Digital Environments",
-      "url": "https://doi.org/10.5281/zenodo.24049549",
-      "openalex_id": "https://openalex.org/W7225558537",
-      "doi": "https://doi.org/10.5281/zenodo.24049549",
-      "published": "2026-11-08",
-      "summary": "The increasing development of generative artificial intelligence, autonomous agents, and intent-driven Internet systems is creating opportunities for digital systems to undertake complex tasks that extend beyond individual interactions. Many Internet tasks require multiple execution stages, interactions with heterogeneous digital services, information collection, decision-making, and subsequent verification. However, conventional conversational and task-oriented systems frequently organize execution around individual sessions or temporary interaction contexts. When a session ends, an execution environment becomes unavailable, or a user returns through a different interface, previously accumulated task progress may not be directly accessible or operationally recoverable. Consequently, systems may need to reconstruct previous activities, repeat completed operations, rediscover relevant information, or request that users provide previously established context. This paper proposes Cross-Session Internet Task Continuity (CSITC), a conceptual framework for maintaining autonomous Internet task execution across disconnected interactions and digital environments. Rather than treating historical conversations as the primary unit of persistence, CSITC treats the task execution state as an independently maintainable computational object. Its central principle is that the termination of an ",
-      "relevance_score": 6,
-      "matched_query": "persistent agent memory"
+      "title": "Large language model agents in watershed environmental response: a hypothesis-and-theory framework for the cognitive orchestration layer",
+      "url": "https://doi.org/10.3389/fenvs.2026.1974405",
+      "openalex_id": "https://openalex.org/W7225660811",
+      "doi": "https://doi.org/10.3389/fenvs.2026.1974405",
+      "published": "2026-11-09",
+      "summary": "Introduction Watershed environmental governance increasingly combines dense sensing infrastructure with institutions whose attention, authority, and coordination capacity remain limited. We develop the cognitive orchestration layer as a theory-building concept for examining how large language model (LLM)-based agents may connect sensing, assessment, decision advice, institutional response, and feedback without displacing domain models or public authority. Methods The Agentic Framework for Watershed Governance (AFWG) specifies three enabling pathways, three institutional interfaces, and four propositions. A purposively selected set of eight publicly documented cases is used to illustrate functional configurations, source limitations, and research gaps; it is not a systematic review or empirical evaluation. Results The cases document sensing, assessment, and decision-support functions, but do not establish improved decision quality, sustained institutional use, environmental outcomes, or agent-executed response closure. MAESTRO is retained as an adjacent-domain design illustration, not an existence proof of full-loop closure: human authorization remains necessary, and its reported performance has not been independently replicated. Discussion Transfer to watershed governance is plausible only where domain models remain authoritative, outputs carry provenance and uncertainty, named",
+      "relevance_score": 9,
+      "matched_query": "cross-model handoff language model agents"
     },
     {
       "title": "Evidence constrained agentic retrieval augmented generation for substation civil engineering preliminary design documents in a single project study",
@@ -50,24 +40,14 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Signed but Not Safe: Requirement Integrity in Multi-Agent LLM Handoffs",
-      "url": "https://arxiv.org/abs/2611.07483",
-      "openalex_id": "https://openalex.org/W7225380147",
-      "doi": "https://doi.org/10.48550/arxiv.2611.07483",
-      "published": "2026-11-05",
-      "summary": "Enterprise AI agents increasingly split a user's request across subagents and merge their results, and each handoff can summarize away, alter or ignore a requirement. We report a preregistered study with synthetic, exactly scorable tasks comparing free-text, structured JSON and signed requirement-manifest handoffs: the orchestrator extracts each requirement as a verbatim quote plus a checkable predicate, code signs the manifest with HMAC-SHA256, and deterministic code verifies the merger's decision. With Qwen3-8B (1,440 trajectories, five threats), signed manifests cut unsafe commits under attack from 69.4% to 9.0% (60.4 pp, 95% CI [51.4, 69.4]) with no net loss of conformant commits relative to structured handoffs. Signing is what defeats in-transit tampering: an unsigned manifest committed violations in 79% of mutated runs, the signed one in none. On identical trajectories the deterministic verifier caught 78.7% of violating decisions versus 59.0% for an LLM checker, with 7% versus 50% false alarms. An oracle manifest removed all remaining unsafe commits: the residual risk comes from extraction errors made before signing. A preregistered pre-signing injection attack confirmed this boundary: one adversarial line raised signed-manifest violations from 14.6% to 37.5% (Qwen3-8B), 11.1% to 63.9% (gpt-oss-20b) and 8.3% to 75.0% (GPT-5.6-luna), and the signature then authenticated t",
-      "relevance_score": 6,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "All Permissions Granted: Agentic AI, Delegated Access, and the Governance of Semantic Footprints",
-      "url": "https://doi.org/10.5281/zenodo.24061685",
-      "openalex_id": "https://openalex.org/W7225570993",
-      "doi": "https://doi.org/10.5281/zenodo.24061685",
-      "published": "2026-11-08",
-      "summary": "This review examines how agentic AI reorganizes privacy, accountability and user agency by turning delegated access into operational context. Agentic AI is treated as a graded socio-technical configuration rather than a clean rupture with conversational AI: conversational interfaces may be coupled with contextual retrieval and memory, external tools and applications, organizational data, and execution or delegated action. The review synthesizes public documentation from OpenAI, Anthropic, Google, Microsoft, GitHub, DeepSeek and the Model Context Protocol ecosystem, alongside governance and cybersecurity frameworks and scholarship in human-AI interaction, privacy, infrastructure, accountability and usable security. Its contribution is to clarify how user content, communication and scheduling records, repository and browser context, and persistent traces such as logs, feedback, memories and local execution records can become semantic footprints when they reveal priorities, dependencies, intentions, vulnerabilities, roles or possible actions within agentic processes. The review develops the concepts of delegated temporal compression, capability amplification, semantic footprints, the agentic permission grey box and dynamic trust boundaries. Formal consent is insufficient when AI systems operate across fragmented informational environments. Users and organizations require capacity ",
+      "title": "Semi-Automated Detection of Gaps in LLM Security Knowledge",
+      "url": "https://doi.org/10.1145/3847352.3848102",
+      "openalex_id": "https://openalex.org/W7170087400",
+      "doi": "https://doi.org/10.1145/3847352.3848102",
+      "published": "2026-11-09",
+      "summary": "Large language models (LLMs) are increasingly used for a range of software, hardware and human-centered security tasks. Consequently, LLM performance on security tasks is an active area of measurement and research, often with a focus on identifying areas in which LLM security “knowledge” may be insufficient. Popular strategies for identifying LLM security knowledge gaps include building corpora of challenge questions or task benchmarks, strategies that require substantial manual work and security expertise to design and execute. We introduce a partially-automated method for assessing LLM knowledge of a security area. The method uses authoritative information from Consumer Protection Agencies (CPAs) to identify instability in LLM responses that can be indicative of knowledge gaps. We demonstrate the method for 2 security topics, identity theft and impostor scams, and 5 LLMs in 2 leading LLM families, Gemini and GPT, using publicly available information about identity theft and impostor scams from 6 CPAs. The method distinguishes between models that have and don’t have sufficient knowledge to accurately identify the security topics in text narratives. Two models, GPT 5.5 and Gemini 3.1 Pro, demonstrate solid knowledge of impostor scams, whereas all models appear to have gaps in knowledge of identity theft.",
       "relevance_score": 5,
-      "matched_query": "persistent agent memory"
+      "matched_query": "automated AI research experimentation"
     },
     {
       "title": "vibyverse: an integrated computational chemistry ecosystem developed through agentic engineering",
@@ -78,6 +58,16 @@
       "summary": "We describe the vibyverse, developed by agentic engineering, comprising vibe-sketcher for chemical structures and reaction schemes, vibe-qc for electronic-structure calculations, vibe-scheduler for execution and retrieval, vibe-viewer for inspection and presentation, and the Quantum Visualization Format (QVF) for structured exchange. The workflow starts with reaction design in vibe-sketcher, submission through vibe-scheduler, calculation with vibe-qc, and inspection and analysis in vibe-viewer, with scientific data transferred through QVF. We examine the responsibilities of each component and the information that must survive their connections, including charge, multiplicity, geometry, method settings, runtime identity and result provenance. Source inspection identifies implemented interfaces and their compatibility requirements. A Diels–Alder preparation example connects an editable scheme and preoptimized structures to validated QVF and viewer exports. The executed numerical workflow proceeds through MACE geometry optimization, PBE/def2-SVP refinement and DLPNO-CCSD(T) endpoint energies. A proposed water-on-boronnitride example would extend the workflow to periodic structures. The molecular optimization and Hessian use existing PBE routes without an added dispersion correction. Both Hessian stencils identify minima for all three molecules. With an explicit restrictedreference",
       "relevance_score": 5,
       "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "Design and analysis of an intelligent audit risk assessment system based on retrieval-augmented large language model",
+      "url": "https://doi.org/10.1038/s41598-026-79812-4",
+      "openalex_id": "https://openalex.org/W7220467262",
+      "doi": "https://doi.org/10.1038/s41598-026-79812-4",
+      "published": "2026-11-09",
+      "summary": "Audit risk assessment is increasingly challenged by complex financial environments and the limited ability of traditional data-driven models to capture contextual information. Existing approaches mainly depend on structured financial indicators and often overlook regulatory knowledge and narrative disclosures. This study proposes an intelligent audit risk assessment framework that integrates a retrieval-augmented large language model (RAG-LLM) with a Bayesian–logistic hybrid estimation mechanism. The framework integrates financial, governance, operational, and textual data with audit standards, regulatory cases, and historical accounting irregularities to support context-aware risk evaluation. The proposed system was evaluated using an economically calibrated synthetic dataset consisting of 612 firm-year observations across 14 industries from 2018 to 2024. Results show that the RAG–LLM Bayesian hybrid model achieves an out-of-sample AUC of 0.912, outperforming gradient boosting (0.754), random forest (0.723), and logistic regression (0.694). It also achieves improved calibration performance with a Brier score of 0.088 and a misclassification rate of 6.7%. Further analysis shows that LLM-derived reasoning constructs contribute 48.3% of the total explanatory contribution. The findings demonstrate that retrieval-enhanced reasoning improves prediction accuracy, interpretability, an",
+      "relevance_score": 4,
+      "matched_query": "automated AI research experimentation"
     },
     {
       "title": "MetaNav: Metacognitive Vision-Language Navigation via Reflective Exploration",
@@ -100,22 +90,22 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "XLeaf-Net: an explainable deep learning framework for mango leaf disease classification and severity assessment using Grad-CAM-based visual interpretation",
-      "url": "https://doi.org/10.55670/fpll.futech.5.4.20",
-      "openalex_id": "https://openalex.org/W7225464439",
-      "doi": "https://doi.org/10.55670/fpll.futech.5.4.20",
-      "published": "2026-11-08",
-      "summary": "Accurate mango leaf disease recognition is important for automated crop-health assessment, but reliable evaluation requires transparent data partitioning, appropriate baseline comparison, and cautious interpretation of severity and explainability outputs. This study presents XLeaf-Net, an explainable deep-learning framework for mango leaf condition classification, image-derived severity assessment, and Grad-CAM-based visual interpretation. Experiments were conducted on the balanced MangoLeafBD dataset using an image-level stratified train-validation-test protocol with file-level integrity and capture/session-group overlap checks. XLeaf-Net was trained from scratch and compared with from-scratch VGG16, ResNet50, and EfficientNetB0 models under the implemented model-specific training configurations. An auxiliary severity model used conservative, image-derived symptom-intensity proxy labels, while Grad-CAM was applied to qualitatively examine class-discriminative regions. XLeaf-Net achieved 98.67% image-level test accuracy and a 98.66% macro F1-score, outperforming the evaluated from-scratch baselines while using 2.52 million parameters. The severity model achieved 78.17% accuracy and an 80.89% macro F1-score. Grad-CAM visualizations frequently overlapped with visually symptomatic leaf regions in representative correctly classified images. These findings demonstrate strong image-l",
+      "title": "ScopeBench: Do Agents Preserve Engagement Boundaries Under Goal Pressure?",
+      "url": "https://doi.org/10.1145/3847352.3848094",
+      "openalex_id": "https://openalex.org/W7214588443",
+      "doi": "https://doi.org/10.1145/3847352.3848094",
+      "published": "2026-11-09",
+      "summary": "Agents are increasingly deployed with real autonomy in web application and network penetration testing, where a single out-of-scope action can breach a client’s engagement boundary. Existing offensive-security benchmarks measure raw hacking capability; as those benchmarks saturate, what actually gates deployment is a special case of alignment: scope adherence. We introduce ScopeBench, a benchmark of 30 dead-end agentic security tasks in which the stated objective is reachable only by violating the stated scope. Each task appears under two conditions that share an environment, verifier, and objective and differ only in scope: one instruction set has no scope and measures capability; the other has a natural-language scope to measure adherence. Every trajectory passes through two grading arms. First, a deterministic flag verifier acts as a violation verifier—a pass under scoped instruction proves by construction that a forbidden action occurred—yielding a high-precision lower bound on the violation rate. A tool-assisted, full-context judge then estimates whether an out-of-scope call occurred in trajectories that fail mechanical verification. We calibrate the judge against 100 ScopeBench trajectories labeled call-by-call by human annotators, and a blinded audit of the evaluated rollouts finds its high recall holds—no false negatives among the 36 audited violations, with over-flaggi",
       "relevance_score": 3,
-      "matched_query": "automated AI research experimentation"
+      "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "HITCH: Teaching a Vision-Language Model to Operate a Humanoid through a Whole-Body Harness",
-      "url": "https://arxiv.org/abs/2611.08039",
-      "openalex_id": "https://openalex.org/W7225391504",
-      "doi": "https://doi.org/10.48550/arxiv.2611.08039",
-      "published": "2026-11-05",
-      "summary": "Enabling vision-language models (VLMs) to control humanoid robots requires both reliable whole-body interfaces and knowledge of how to use the body that carries over across tasks. We present HITCH (Harness Interfaces To Command Humanoids), a harness in which perception returns the 3D position of any point the VLM selects in its image, and execution turns commands for the pelvis, torso, hands, walking, and gaze into whole-body motion with a learned tracker. We find that both measuring the scene and executing commands accurately raise task success. We then fine-tune a VLM on trajectories in which teacher policies solve five base tasks through HITCH, so that it learns how to operate the humanoid. Without task-specific trajectories, the fine-tuned model completes 51% of SIMPLE episodes and 42.5% of HumanoidArena episodes, and adding five trajectories per SIMPLE task raises its SIMPLE success to 95%. On a real G1, it carries a box and walks to a goal without real training data.",
+      "title": "A Governed Computational Architecture for Predictive Process Monitoring with Policy-Constrained Orchestration and Auditable Decision Making",
+      "url": "https://doi.org/10.1007/s12559-026-10677-5",
+      "openalex_id": "https://openalex.org/W7225629646",
+      "doi": "https://doi.org/10.1007/s12559-026-10677-5",
+      "published": "2026-11-09",
+      "summary": "Abstract Predictive process monitoring enables organizations to anticipate process outcomes from event logs, although deployment in real operational environments remains challenging due to temporal drift, heterogeneous traces, and limited interpretability of deep predictive models. This work presents an integrated framework combining Transformer-based predictive monitoring with governed operational orchestration for business-process automation. The predictive layer jointly estimates case outcome, next activity, and remaining decision time, while the orchestration layer manages routing, escalation, explanation triggering, and execution logging under explicit policy constraints. Integrated Gradients provide event-level attribution evidence, while calibration and confidence signals support conservative decision regulation under uncertainty. Experiments were conducted on the BPI Challenge 2017 and BPI Challenge 2012 datasets under leakage-aware and drift-sensitive conditions. The evaluation includes comparisons with neural and tree-based predictive-process-monitoring baselines, selected ablation analyses, policy-sweep experiments, and a structured expert-agent proxy assessment of the audit layer across six selected case studies. In the main BPI Challenge 2017 evaluation, the predictive model achieved PR-AUC = 0.6963 for outcome prediction, Top-3 Accuracy = 0.9986 and NDCG@3 = 0.969",
       "relevance_score": 3,
       "matched_query": "cross-model handoff language model agents"
     },
@@ -160,22 +150,32 @@
       "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "Enforcing Narrative Reliability and Epistemic Pacing in LLM-Driven Detective Games via Structured Knowledge Trees",
-      "url": "https://doi.org/10.1609/aiide.v22i1.43574",
-      "openalex_id": "https://openalex.org/W7214030490",
-      "doi": "https://doi.org/10.1609/aiide.v22i1.43574",
-      "published": "2026-11-08",
-      "summary": "Large Language Models (LLMs) enable open-ended dialogue in interactive games, but their non-deterministic outputs make it difficult to preserve authorial control, factual consistency, and the intended sequence of information disclosure. These challenges are particularly significant in detective games, where premature revelation or fabricated details can undermine the logic of player progression. We present a Structured Knowledge Tree architecture coupled with a tri-agent LLM pipeline for controlling dialogue in an open-ended interrogation game. The system separates knowledge retrieval, dialogue generation, and response verification to ensure that the virtual suspect reveals only information permitted by the current narrative state. We evaluate the approach through The Interrogation of Adrian Gale, a playable detective-game testbed, and a formal user study examining hallucination reduction, adherence to authored disclosure sequences, and perceived logical progression. Our results demonstrate that the structured architecture reduces critical hallucinations by 64.78% and entirely prevents premature narrative disclosure. While the strict mechanical constraints introduced usability trade-offs regarding forced conversational reveals, the system successfully enforces rigorous epistemic pacing and provides players with a clear, subjective sense of progression toward solving the case.",
+      "title": "Isoflurane and Surgery Aggravate APOE4-Dependent Lipid Dysregulation, Neural Dysfunction, and Neurological Impairment in Male Mice",
+      "url": "https://doi.org/10.3390/cells15212038",
+      "openalex_id": "https://openalex.org/W7196952153",
+      "doi": "https://doi.org/10.3390/cells15212038",
+      "published": "2026-11-09",
+      "summary": "Abstract Purpose Perioperative exposure to the volatile anesthetic isoflurane (ISO) has been associated with cognitive and olfactory deficits and may increase the risk of Alzheimer’s disease (AD). Apolipoprotein E4 (APOE4), the strongest genetic risk factor for AD, contributes to disease pathogenesis through disrupted lipid homeostasis. However, whether and how isoflurane interacts with APOE genotype to influence neurological vulnerability remains unclear. Methods Young adult, presymptomatic humanized APOE4 and APOE3 knock-in mice underwent laparotomy under 2 h of isoflurane anesthesia. Microglia and astrocytes were isolated from the olfactory bulb (OB) and hippocampus (HI) by magnetic-activated cell sorting. Lipid composition, transcriptional responses, and functional outcomes were assessed using lipidomic, bulk RNA-seq, and longitudinal behavioral testing. In vivo and ex vivo electrophysiological recordings evaluated neuronal excitability and synaptic transmission in both regions. Results By day 7 post-anesthesia, cell type-specific lipidomic profiling of both OB and HI revealed more pronounced lipid perturbations in microglia and astrocytes from APOE4/ISO mice than from APOE3 mice, characterized by elevated free fatty acids, increased lipid peroxidation, triglyceride depletion, and reduced hippocampal hexosylceramides and cardiolipins. Electrophysiological recordings showed ",
       "relevance_score": 2,
       "matched_query": "persistent agent memory"
     },
     {
-      "title": "Solar Photovoltaic Fault Diagnosis: A Comprehensive Survey of Conventional and Machine Learning Techniques",
-      "url": "https://doi.org/10.64388/ire1724803",
-      "openalex_id": "https://openalex.org/W7220474094",
-      "doi": "https://doi.org/10.64388/ire1724803",
-      "published": "2026-11-08",
-      "summary": "Faults are the principal impediment to achieving elevated levels of efficiency, reliability, and longevity in photovoltaic (PV) systems. In this article, we reviewed solar PV fault diagnostics techniques and compared different fault signature interpretations based on three primary data sources: electrical measurements, environmental conditions, and thermal inspection images. Five overlapping diagnostic perspectives are discussed: measurement modalities (electrical and thermal), statistical methods, optimization-based methods, machine learning techniques. The different approaches are compared regarding: the extent to which faults can be detected; quality of the diagnostic evidence that is generated; what measurements are required for diagnostics; how the topology of the system affects diagnostics; ability to localize faults; under what conditions a diagnosis is validated; and at what time interval the data needs to be acquired. Overall, our evaluation shows there is no single optimal method for identifying faults of all types, primarily because of differences in datasets, definitions of faults, validation conditions and timing measures which make it difficult to make direct comparisons. Finally, we identify areas for future research; Hybrid Physical/Data-Driven Models, Digital Twins, Embedded Inference, Standardized Datasets, Learning with Limited Labels, Longitudinal Field Eval",
+      "title": "Repeat-After-Me: Black-Box Adaptive Visual Prompt Injection",
+      "url": "https://doi.org/10.1145/3847352.3848100",
+      "openalex_id": "https://openalex.org/W7211868593",
+      "doi": "https://doi.org/10.1145/3847352.3848100",
+      "published": "2026-11-09",
+      "summary": "Prompt injection is widely recognized as a major security threat to AI agents that interact with untrusted external data, such as websites, documents, and emails. Prior work has shown that, in the text domain, black-box prompt injection can achieve near-perfect attack success rates (ASRs). In the image domain, however, existing visual prompt injection methods are substantially less effective in attacking frontier commercial VLMs for materially harmful behavior. Achieving such outputs is hard because it requires a long and/or format-compliant target string, such as a precise, parseable native tool call with exact function names and arguments. We present Repeat-After-Me, a black-box adaptive visual prompt injection attack that can reveal personally identifiable information or make malicious tool calls. Across both open-weight and commercial frontier VLMs, including Qwen3.6-27B and GPT-5.5, our method achieves ASRs exceeding 82% and 47%, respectively, under a realistic setting in which the benign user prompt is semantically unrelated to the injected task and does not verbally authorize it. Our optimized injection has non-trivial attack transferability across commercial VLMs and benign samples. We show our attack works in cases where adaptive textual prompt injection fails. In a real-world OpenClaw agent connected to Discord, an untrusted user can use a minimally injected image fro",
+      "relevance_score": 2,
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "The Architecture of Computational Closure: Scientific Priority under Extreme Compute Asymmetry",
+      "url": "https://doi.org/10.33774/coe-2026-bh28x",
+      "openalex_id": "https://openalex.org/W7213091320",
+      "doi": "https://doi.org/10.33774/coe-2026-bh28x",
+      "published": "2026-11-09",
+      "summary": "When a promising research direction becomes visible, the organization best equipped to complete it need not be the organization that developed it. This paper examines how concentrated computational capacity can amplify that separation. It develops a state-relative account of computational closure: the production of a checkable result from a specified, partially structured research state through computational search, synthesis, derivation, and verification. Closure is a function within discovery, not a judgment that the resulting work lacks originality. Building on research on scientific priority, collective discovery, and unequal access to AI infrastructure, the paper distinguishes conceptual genesis, roadmap formation, technical completion, and other evidentially separable contributions. It defines a matched-state last-mile compression ratio, derives a deliberately simplified research-race model, and proposes experiments that distinguish the effects of progress signals from those of actionable research guidance. The September 2026 OpenAI Navier–Stokes episode serves as a source-qualified illustration, not as a validation of the model or a determination of intellectual ownership. The analysis identifies computational hegemony as a possible institutional condition in which unequal completion capacity and unequal visibility jointly shape scientific credit. It proposes contributio",
       "relevance_score": 2,
       "matched_query": "automated AI research experimentation"
     },
@@ -226,16 +226,6 @@
       "doi": "https://doi.org/10.48550/arxiv.2611.08075",
       "published": "2026-11-05",
       "summary": "We consider the problem of sequential task continuation, where one robot acts in a workspace that has been affected by a previous robot. Current approaches in multi-robot cooperation rely heavily on co-training or co-optimization, assumingthat the robots have access to collective interaction data during the policy training or planning process. However, as increasingly varied robotic embodiments and policies are deployed and operate in the same real-world environment, learning policies for cooperation becomes infeasible due to the combinatorial explosion of possible robot combinations that need to be accounted for. To address this challenge, this paper considers the problem of ad hoc sequential cooperation between robots that have never before operated together in a shared environment. We demonstrate that robots can explicitly communicate their environmental preferences through sharing their value functions, enabling coordination without the need for prior joint training. To ground this exchange and prevent overconfidence in out-of-distribution states, we further introduce a k-nearest neighbors (KNN)- based uncertainty filter. Our method yields an increase of up to 48.5 pp compared with naive or even selfish agents, in task success rates across simulated and real-world experiments, demonstrating that value function transmission between agents is useful not merely as an internal ",
-      "relevance_score": 2,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Should You Split Decode? Disaggregation Across Future Models and Accelerators",
-      "url": "https://arxiv.org/abs/2611.08299",
-      "openalex_id": "https://openalex.org/W7225399753",
-      "doi": "https://doi.org/10.48550/arxiv.2611.08299",
-      "published": "2026-11-05",
-      "summary": "For large language model (LLM) inference, prefill/decode disaggregation (P/D) is deployed in production to isolate phases with different resource demands. Attention/feed-forward network disaggregation (AFD) splits decode again, but adds communication, placement constraints, and another provisioned pool. We ask whether role-specific placement repays this cost as models and accelerator roadmaps change. Infrastructure is committed before future models and hardware can be benchmarked. We present SiliconForge, a calibrated model that varies the serving decomposition and hardware assignment independently. We compare P/D and P/D+AFD across four model directions, four accelerator classes anchored to current and announced parts, and two fabrics. We co-optimize each design using the same rules for pipeline overlap and the same power budget. Our main comparisons show no robust deployment-level AFD advantage in service-level objective (SLO) goodput per kW. Most nominal estimates favor P/D. The largest AFD lead comes from fitting one more prefill replica, not from a more efficient decode pool. AFD has a nominal lead in the KV-heavy (key-value) model direction when the co-located expert pool spans several small scale-up domains. Larger domains or a fast fabric for both designs weaken that lead. We therefore find that prefill provisioning, decode memory bandwidth, links, and pool granularity ",
       "relevance_score": 2,
       "matched_query": "cross-model handoff language model agents"
     },
@@ -300,14 +290,24 @@
       "matched_query": "metacognition self-improving AI agents"
     },
     {
-      "title": "DSLE: A Learning Environment for Dark Souls Boss Encounters",
-      "url": "https://doi.org/10.1609/aiide.v22i1.43566",
-      "openalex_id": "https://openalex.org/W7202157072",
-      "doi": "https://doi.org/10.1609/aiide.v22i1.43566",
-      "published": "2026-11-08",
-      "summary": "We introduce the Dark Souls Learning Environment (DSLE), a containerized platform that presents all 22 boss encounters of Dark Souls: Remastered as game-playing agent benchmarks through a Gymnasium-style interface. DSLE combines real-time combat, high-dimensional visual input, and sparse terminal rewards, with each environment step being a real action executed against the running game. To support controlled comparison, we define DSLE-5, a representative five-boss subset, spanning a melee fight, a spatially constrained arena, an environmental-hazard fight, a multi-target fight, and a fast final-boss fight, that we recommend as the starting suite for agents built on DSLE. On DSLE-5 we evaluate a random policy, an expert system, an evolutionary baseline, and PPO and DQN agents trained from visual input. The expert system and the evolutionary baseline each defeat the Asylum Demon, the game's tutorial boss (63% and 43% peak win rates), but none of the five methods defeats the other four DSLE-5 bosses; PPO and DQN show no measurable learning (at most 0.33% win rate on the tutorial boss, 0% elsewhere) within a budget that already costs tens of wall-clock hours per run. A broader study running the evolutionary baseline across all 22 encounters under advantaged all level-50 stats yields wins on only a handful of additional early-game bosses and leaves the rest unwon. The failure cases r",
+      "title": "ABACUS: Adapting Unified Foundation Model for Count Image Understanding and Generation",
+      "url": "https://doi.org/10.1145/3842572",
+      "openalex_id": "https://openalex.org/W7165728866",
+      "doi": "https://doi.org/10.1145/3842572",
+      "published": "2026-11-09",
+      "summary": "We present ABACUS, a unified vision-language model that jointly addresses object counting, crowd counting, referring-expression counting, and count-faithful image generation within a single 3B-parameter model. ABACUS introduces three contributions: density-aware adaptive zooming paired with an objectness map from multi-head self-attention decomposition to spatially ground count predictions; a boundary-aware count policy trained via GRPO with nested local, boundary, and global rewards to eliminate over- and undercounting at crop boundaries; and a cycle-consistent GRPO strategy in which the frozen understanding branch scores generated candidates on count-deviation and aesthetic quality, closing the understanding-generation synergy gap without any external critic or annotation. ABACUS achieves state-of-the-art results across seven benchmarks spanning object counting (FSC-147, CARPK), crowd counting (ShanghaiTech A/B), referring-expression counting (REC-8K), count-faithful generation (CoCo-Count, T2I-CompBench, GenEval), and count reasoning (CountQA), surpassing both task-specific specialists and larger generalist models. Project page is at https://mondalanindya.github.io/pages/ABACUS/.",
       "relevance_score": 1,
-      "matched_query": "automated AI research experimentation"
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "DecomVoxel: Harnessing 3D-Native Priors with Guided In-situ Denoising Optimization for Decompositional Scene Reconstruction",
+      "url": "https://doi.org/10.1145/3842522",
+      "openalex_id": "https://openalex.org/W7215920325",
+      "doi": "https://doi.org/10.1145/3842522",
+      "published": "2026-11-09",
+      "summary": "Decompositional scene reconstruction aims to reconstruct high-quality objects and background, yet existing methods still struggle with the level of quality under heavy occlusions. While generative priors offer a potential solution, 2D image-based priors often suffer from multi-view inconsistency due to a lack of 3D awareness. Conversely, 3D-native priors provide stronger structural inductive biases but frequently lead to spatial drift and misalignment within complex scenes. To address these issues, we propose DecomVoxel, formulating object completion as a guided in-situ denoising optimization that bridges 3D-native priors with neural scene reconstruction. Our framework introduces a reformulated epsilon-based distillation loss to ensure stable latent refinement, alongside adaptive spatial guidance that utilizes occupied and vacant anchors with temporal annealing to suppress generative hallucinations and mitigate spatial drift. Experiments on Replica and ScanNet++ show that DecomVoxel significantly outperforms state-of-the-art methods while faithfully preserving the original spatial layout, structural fidelity, and style-consistent texture. Our method pushes the boundary of decompositional reconstruction by delivering high-quality textured meshes with clean topology, geometry, and appearance, providing a robust solution for the decompositional reconstruction of complex real-world",
+      "relevance_score": 1,
+      "matched_query": "persistent agent memory"
     }
   ],
   "paper_count": 30,
