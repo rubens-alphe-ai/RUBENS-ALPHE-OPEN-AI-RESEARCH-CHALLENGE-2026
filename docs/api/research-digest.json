@@ -1,6 +1,6 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-11-11T11:55:58.318012+00:00",
+  "generated_at_utc": "2026-11-12T12:50:34.118030+00:00",
   "source": "OpenAlex public API",
   "queries": [
     "persistent agent memory",
@@ -9,16 +9,6 @@
     "metacognition self-improving AI agents"
   ],
   "papers": [
-    {
-      "title": "Trojan Hippo Bench: A Dynamic Benchmark for Persistent Memory Attacks and Defenses in LLM Agents",
-      "url": "https://doi.org/10.1145/3847352.3848090",
-      "openalex_id": "https://openalex.org/W7160244616",
-      "doi": "https://doi.org/10.1145/3847352.3848090",
-      "published": "2026-11-09",
-      "summary": "Memory systems enable otherwise-stateless LLM agents to persist user information across sessions, but also introduce a new attack surface. The Trojan Hippo attack is a class of persistent memory attacks that operates under a more realistic threat model than prior memory poisoning work. The attacker plants a dormant payload into an agent’s long-term memory via a single untrusted tool call (e.g., a crafted email), which activates only when the user later discusses sensitive topics such as finance, health, or identity, and exfiltrates high-value personal data to the attacker. While anecdotal demonstrations of such attacks have appeared against deployed systems, no prior work systematically evaluates them across heterogeneous memory architectures and defenses. We introduce Trojan Hippo Bench, a dynamic evaluation framework for persistent memory attacks and memory-layer defenses, comprising two components: (1) an OpenEvolve-based [ 54 ] adaptive red-teaming benchmark that stress-tests defenses and memory backends against continuously refined attacks, and (2) a capability-aware security–utility analysis for persistent memory systems, enabling principled reasoning about defense deployment across different usage profiles. Instantiated on an email assistant across four memory backends (explicit tool memory, agentic memory, RAG, and sliding-window context), the undefended Trojan Hippo at",
-      "relevance_score": 10,
-      "matched_query": "persistent agent memory"
-    },
     {
       "title": "Large language model agents in watershed environmental response: a hypothesis-and-theory framework for the cognitive orchestration layer",
       "url": "https://doi.org/10.3389/fenvs.2026.1974405",
@@ -35,39 +25,29 @@
       "openalex_id": "https://openalex.org/W7204262160",
       "doi": "https://doi.org/10.1007/s44163-026-02612-2",
       "published": "2026-11-06",
-      "summary": "Abstract Substation civil engineering preliminary design documents must integrate project-specific conditions, current regulatory requirements, typical design practices, and historical engineering experience while maintaining consistency across architectural, structural, general-layout, foundation, road, drainage, and technical-indicator sections. Conventional Retrieval-Augmented Generation (RAG) systems remain vulnerable to condition-insensitive retrieval, unequal source authority, incompatible evidence, unsupported engineering claims, and parameter drift during long-document drafting. This study proposes an Evidence-Constrained Agentic Retrieval-Augmented Generation framework, termed EC-ARAG. The framework combines regulation-aware evidence representation, validity-gated hybrid retrieval, source-role-aware conflict resolution, dual planning--retrieval and generation--verification--repair loops, and global project-state memory. The experimental corpus comprised 36 national and industry standards, 12 enterprise standards, 18 typical-design documents, 64 historical preliminary design documents, and nine project-input documents. The held-out evaluation included 120 retrieval queries, 80 applicability cases, 48 evidence-conflict cases, 318 atomic design propositions, and five independent generation runs. EC-ARAG achieved a Recall@5 of 94.1\\%, an applicability Macro-F1 of 90.6\\%, a",
+      "summary": "Substation civil engineering preliminary design documents must integrate project-specific conditions, current regulatory requirements, typical design practices, and historical engineering experience while maintaining consistency across architectural, structural, general-layout, foundation, road, drainage, and technical-indicator sections. Conventional Retrieval-Augmented Generation (RAG) systems remain vulnerable to condition-insensitive retrieval, unequal source authority, incompatible evidence, unsupported engineering claims, and parameter drift during long-document drafting. This study proposes an Evidence-Constrained Agentic Retrieval-Augmented Generation framework, termed EC-ARAG. The framework combines regulation-aware evidence representation, validity-gated hybrid retrieval, source-role-aware conflict resolution, dual planning–retrieval and generation–verification–repair loops, and global project-state memory. The experimental corpus comprised 36 national and industry standards, 12 enterprise standards, 18 typical-design documents, 64 historical preliminary design documents, and nine project-input documents. The held-out evaluation included 120 retrieval queries, 80 applicability cases, 48 evidence-conflict cases, 318 atomic design propositions, and five independent generation runs. The expanded robustness evaluation further included 120 state-write gating cases and 24 e",
       "relevance_score": 6,
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Semi-Automated Detection of Gaps in LLM Security Knowledge",
-      "url": "https://doi.org/10.1145/3847352.3848102",
-      "openalex_id": "https://openalex.org/W7170087400",
-      "doi": "https://doi.org/10.1145/3847352.3848102",
-      "published": "2026-11-09",
-      "summary": "Large language models (LLMs) are increasingly used for a range of software, hardware and human-centered security tasks. Consequently, LLM performance on security tasks is an active area of measurement and research, often with a focus on identifying areas in which LLM security “knowledge” may be insufficient. Popular strategies for identifying LLM security knowledge gaps include building corpora of challenge questions or task benchmarks, strategies that require substantial manual work and security expertise to design and execute. We introduce a partially-automated method for assessing LLM knowledge of a security area. The method uses authoritative information from Consumer Protection Agencies (CPAs) to identify instability in LLM responses that can be indicative of knowledge gaps. We demonstrate the method for 2 security topics, identity theft and impostor scams, and 5 LLMs in 2 leading LLM families, Gemini and GPT, using publicly available information about identity theft and impostor scams from 6 CPAs. The method distinguishes between models that have and don’t have sufficient knowledge to accurately identify the security topics in text narratives. Two models, GPT 5.5 and Gemini 3.1 Pro, demonstrate solid knowledge of impostor scams, whereas all models appear to have gaps in knowledge of identity theft.",
-      "relevance_score": 5,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "vibyverse: an integrated computational chemistry ecosystem developed through agentic engineering",
-      "url": "https://doi.org/10.26434/chemrxiv.15011786/v1",
-      "openalex_id": "https://openalex.org/W7225412807",
-      "doi": "https://doi.org/10.26434/chemrxiv.15011786/v1",
-      "published": "2026-11-06",
-      "summary": "We describe the vibyverse, developed by agentic engineering, comprising vibe-sketcher for chemical structures and reaction schemes, vibe-qc for electronic-structure calculations, vibe-scheduler for execution and retrieval, vibe-viewer for inspection and presentation, and the Quantum Visualization Format (QVF) for structured exchange. The workflow starts with reaction design in vibe-sketcher, submission through vibe-scheduler, calculation with vibe-qc, and inspection and analysis in vibe-viewer, with scientific data transferred through QVF. We examine the responsibilities of each component and the information that must survive their connections, including charge, multiplicity, geometry, method settings, runtime identity and result provenance. Source inspection identifies implemented interfaces and their compatibility requirements. A Diels–Alder preparation example connects an editable scheme and preoptimized structures to validated QVF and viewer exports. The executed numerical workflow proceeds through MACE geometry optimization, PBE/def2-SVP refinement and DLPNO-CCSD(T) endpoint energies. A proposed water-on-boronnitride example would extend the workflow to periodic structures. The molecular optimization and Hessian use existing PBE routes without an added dispersion correction. Both Hessian stencils identify minima for all three molecules. With an explicit restrictedreference",
-      "relevance_score": 5,
+      "title": "Authorization assurance for tool-using LLM agents: a structured review of enforcement semantics and effect-level security evidence",
+      "url": "https://doi.org/10.1007/s10207-026-01343-w",
+      "openalex_id": "https://openalex.org/W7212428651",
+      "doi": "https://doi.org/10.1007/s10207-026-01343-w",
+      "published": "2026-11-10",
+      "summary": "Abstract Tool-using large language model (LLM) agents exercise authority over protected resources through APIs, tools, credentials, and external services. This structured review asks whether authorization claims are supported at the enforcement and observation boundaries relevant to the claimed effect. A 75-source evidence library was screened into a 30-source analytical corpus (15 strict agent sources, 6 sensitivity sources, and 9 authorization/assurance comparators), yielding 92 Source-Claim Records. Within this closed corpus, five strict sources made mediation or non-bypassability claims with heterogeneous evidence endpoints; all three evaluable least-privilege sources narrowed available authority without measuring trajectory-wide effective privilege; no evaluable revocation claim appeared among 21 agent-focused sources; and no delegation-containment claim appeared in the 30-source corpus. Final-state correctness was also distinct from authorization correctness. We integrate these findings through an Authorization Assurance Claim Model linking claim scope, obligations, enforcement, evidence, protected effect, and residual assumptions. The resulting MAAP is presented as a preliminary, review-derived minimum reporting framework, not a validated scoring or certification instrument. The supplementary workbook provides the screening decisions, complete coding dataset, source-prop",
+      "relevance_score": 4,
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Design and analysis of an intelligent audit risk assessment system based on retrieval-augmented large language model",
-      "url": "https://doi.org/10.1038/s41598-026-79812-4",
-      "openalex_id": "https://openalex.org/W7220467262",
-      "doi": "https://doi.org/10.1038/s41598-026-79812-4",
+      "title": "Phygital research fit: toward a theory-building framework for transformative and sustainable service research",
+      "url": "https://doi.org/10.1080/02642069.2026.2749471",
+      "openalex_id": "https://openalex.org/W7225664483",
+      "doi": "https://doi.org/10.1080/02642069.2026.2749471",
       "published": "2026-11-09",
-      "summary": "Audit risk assessment is increasingly challenged by complex financial environments and the limited ability of traditional data-driven models to capture contextual information. Existing approaches mainly depend on structured financial indicators and often overlook regulatory knowledge and narrative disclosures. This study proposes an intelligent audit risk assessment framework that integrates a retrieval-augmented large language model (RAG-LLM) with a Bayesian–logistic hybrid estimation mechanism. The framework integrates financial, governance, operational, and textual data with audit standards, regulatory cases, and historical accounting irregularities to support context-aware risk evaluation. The proposed system was evaluated using an economically calibrated synthetic dataset consisting of 612 firm-year observations across 14 industries from 2018 to 2024. Results show that the RAG–LLM Bayesian hybrid model achieves an out-of-sample AUC of 0.912, outperforming gradient boosting (0.754), random forest (0.723), and logistic regression (0.694). It also achieves improved calibration performance with a Brier score of 0.088 and a misclassification rate of 6.7%. Further analysis shows that LLM-derived reasoning constructs contribute 48.3% of the total explanatory contribution. The findings demonstrate that retrieval-enhanced reasoning improves prediction accuracy, interpretability, an",
+      "summary": "Phygital service research requires evidence of how physical and digital elements jointly produce service outcomes. We develop phygital research fit as alignment among the phenomenon, theory, evidence, research design, and validity and ethical criteria. Extending methodological fit with a phenomenon-specific diagnostic framework, we identify six theory-building problems and classify service arrangements along embodied co-presence and digital agency into linked handoff, embedded augmentation, remote orchestration, and hybrid immersion. A theory selector and research toolbox connect these types to candidate explanations, evidence requirements, and claim-specific checks. Transformative and sustainable service research provide cross-cutting evaluative lenses for examining access, agency, employee work, resource flows, governance, and continuity under disruption. These lenses require appropriate outcome evidence whenever transformation or sustainability is claimed, whereas ethical responsibilities apply throughout. The framework supports theory building by making explicit which physical-digital relations a design must capture and which claims its evidence can support.",
       "relevance_score": 4,
-      "matched_query": "automated AI research experimentation"
+      "matched_query": "cross-model handoff language model agents"
     },
     {
       "title": "MetaNav: Metacognitive Vision-Language Navigation via Reflective Exploration",
@@ -80,14 +60,14 @@
       "matched_query": "metacognition self-improving AI agents"
     },
     {
-      "title": "Supporting engagement, behavior change, and equitable self-management in menstrual and menopausal health: A multi-agent digital-health framework",
-      "url": "https://doi.org/10.1371/journal.pdig.0001821",
-      "openalex_id": "https://openalex.org/W7225308384",
-      "doi": "https://doi.org/10.1371/journal.pdig.0001821",
-      "published": "2026-11-05",
-      "summary": "Menstrual-cycle-related conditions and, later, menopausal symptoms are highly prevalent across the female life course and impose a large, under-recognized burden on quality of life and work, yet digital tools to support self-management are fragmented, hard to sustain, and unevenly reached. We propose HERA (Health Engagement and Reflective Agent architecture), a conceptual, hypothesis-generating framework for supporting engagement, behavior change, and equitable self-management in menstrual and menopausal health across the life course. Under human governance, HERA combines two adaptive agents (interpretation and orchestration) with three rule-based modules (self-monitoring and data integration, guidance and content governance, and equity and engagement monitoring) that integrate self-monitoring, deliver personalized feedback, surface governed guidance, monitor equity, and coordinate hand-offs to clinicians and occupational-health services. Distinct from clinician-facing diagnostic agents, HERA is patient-facing and treats equity and engagement as first-class. We distinguish technically feasible from aspirational elements and set out a staged, threshold-gated evaluation plan. HERA is a design reference, not a validated system.",
-      "relevance_score": 4,
-      "matched_query": "cross-model handoff language model agents"
+      "title": "Q-Planner: A Harness System for Quantum Chemistry Agents",
+      "url": "https://doi.org/10.1021/acsomega.6c05744",
+      "openalex_id": "https://openalex.org/W7155856030",
+      "doi": "https://doi.org/10.1021/acsomega.6c05744",
+      "published": "2026-11-10",
+      "summary": "Abstract LLM-based agents for computational chemistry commonly place the model inside an accumulating execution loop, causing context growth proportional to workflow length, unpredictable token costs, and degraded plan reliability at scale. We present a chemistry computation harness that confines LLM invocations to three semantically bounded stages─compound identification, planning, and reporting─while delegating all tool dispatch, parallel scheduling, arithmetic derivation, and artifact routing to a deterministic LangGraph executor that consumes zero LLM tokens during execution; a library of domain skill modules injects specialist quantum chemistry protocols into the planner context at planning time without enlarging the execution context. Across five representative quantum chemistry workflows, the planning, calculator, and reporting calls averaged 9700–25,300 tokens per run, with zero execution-stage tokens in every case─more than 93% fewer tokens (before caching) than loop-based multiagent systems─and, on a high-throughput single-point-energy scaling benchmark, a full-scheme plan representation sustained 100% plan-structural correctness across all 30 runs from N = 10 to 100 compounds of one workflow type, generating a 200-node graph of 100 independent single-point jobs from a single planning call. On the workloads tested, harness design made quantum chemistry automation more",
+      "relevance_score": 3,
+      "matched_query": "persistent agent memory"
     },
     {
       "title": "ScopeBench: Do Agents Preserve Engagement Boundaries Under Goal Pressure?",
@@ -150,44 +130,34 @@
       "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "Isoflurane and Surgery Aggravate APOE4-Dependent Lipid Dysregulation, Neural Dysfunction, and Neurological Impairment in Male Mice",
-      "url": "https://doi.org/10.3390/cells15212038",
-      "openalex_id": "https://openalex.org/W7196952153",
-      "doi": "https://doi.org/10.3390/cells15212038",
-      "published": "2026-11-09",
-      "summary": "Abstract Purpose Perioperative exposure to the volatile anesthetic isoflurane (ISO) has been associated with cognitive and olfactory deficits and may increase the risk of Alzheimer’s disease (AD). Apolipoprotein E4 (APOE4), the strongest genetic risk factor for AD, contributes to disease pathogenesis through disrupted lipid homeostasis. However, whether and how isoflurane interacts with APOE genotype to influence neurological vulnerability remains unclear. Methods Young adult, presymptomatic humanized APOE4 and APOE3 knock-in mice underwent laparotomy under 2 h of isoflurane anesthesia. Microglia and astrocytes were isolated from the olfactory bulb (OB) and hippocampus (HI) by magnetic-activated cell sorting. Lipid composition, transcriptional responses, and functional outcomes were assessed using lipidomic, bulk RNA-seq, and longitudinal behavioral testing. In vivo and ex vivo electrophysiological recordings evaluated neuronal excitability and synaptic transmission in both regions. Results By day 7 post-anesthesia, cell type-specific lipidomic profiling of both OB and HI revealed more pronounced lipid perturbations in microglia and astrocytes from APOE4/ISO mice than from APOE3 mice, characterized by elevated free fatty acids, increased lipid peroxidation, triglyceride depletion, and reduced hippocampal hexosylceramides and cardiolipins. Electrophysiological recordings showed ",
+      "title": "LLM Analysis of 150+ Years of German Parliamentary Debates on Migration Reveals a Shift from Post-War Solidarity to Anti-Solidarity in the Last Decade",
+      "url": "https://doi.org/10.1162/coli.a.666",
+      "openalex_id": "https://openalex.org/W4416065665",
+      "doi": "https://doi.org/10.1162/coli.a.666",
+      "published": "2026-11-10",
+      "summary": "Abstract Migration has been a core topic in German political debate, from postwar expellee displacement to labor migration and recent refugee movements. Large-scale analysis of such political discourse has traditionally required extensive manual annotation, limiting coverage. Large language models (LLMs) offer a scalable alternative. Using a theory-driven annotation scheme, we examine how well LLMs annotate subtypes of solidarity and anti-solidarity in German parliamentary debates and whether the resulting labels support valid downstream inference. We first evaluate multiple LLMs across model size, prompting strategies, fine-tuning, historical versus contemporary data, and systematic errors. The strongest models, especially GPT-5 and gpt-oss-120B, achieve macro-F1 scores comparable to human agreement, although their systematic errors can bias downstream results. We therefore combine soft-label model outputs with Design-based Supervised Learning (DSL) to reduce bias in long-term trend estimates. Beyond the methodological evaluation, we interpret the resulting annotations from a social-scientific perspective across the Reichstag (1867–1933), West German Bundestag (1949–1990) and Re-Unified German Bundestag (1990–2025) corpus to trace trends in solidarity and anti-solidarity toward migrants, with detailed analysis of postwar Germany (1949–1957) and contemporary Germany (2009–2025)",
       "relevance_score": 2,
       "matched_query": "persistent agent memory"
     },
     {
-      "title": "Repeat-After-Me: Black-Box Adaptive Visual Prompt Injection",
-      "url": "https://doi.org/10.1145/3847352.3848100",
-      "openalex_id": "https://openalex.org/W7211868593",
-      "doi": "https://doi.org/10.1145/3847352.3848100",
+      "title": "Coordinating actions and sharing control with a disembodied artificial intelligence: Task-dependent differences from human partners.",
+      "url": "https://doi.org/10.1037/tmb0000218",
+      "openalex_id": "https://openalex.org/W7225627563",
+      "doi": "https://doi.org/10.1037/tmb0000218",
       "published": "2026-11-09",
-      "summary": "Prompt injection is widely recognized as a major security threat to AI agents that interact with untrusted external data, such as websites, documents, and emails. Prior work has shown that, in the text domain, black-box prompt injection can achieve near-perfect attack success rates (ASRs). In the image domain, however, existing visual prompt injection methods are substantially less effective in attacking frontier commercial VLMs for materially harmful behavior. Achieving such outputs is hard because it requires a long and/or format-compliant target string, such as a precise, parseable native tool call with exact function names and arguments. We present Repeat-After-Me, a black-box adaptive visual prompt injection attack that can reveal personally identifiable information or make malicious tool calls. Across both open-weight and commercial frontier VLMs, including Qwen3.6-27B and GPT-5.5, our method achieves ASRs exceeding 82% and 47%, respectively, under a realistic setting in which the benign user prompt is semantically unrelated to the injected task and does not verbally authorize it. Our optimized injection has non-trivial attack transferability across commercial VLMs and benign samples. We show our attack works in cases where adaptive textual prompt injection fails. In a real-world OpenClaw agent connected to Discord, an untrusted user can use a minimally injected image fro",
+      "summary": "As humans increasingly collaborate with artificial intelligence (AI) systems, understanding how people coordinate their actions with disembodied AI partners is critical for effective human-AI interaction.While corepresentation, the extent to which a partner's actions influence one's own responses has been well studied in human dyads, its role in human-AI interaction remains unclear.Evidence on vicarious agency, the sense of control over a coagent's actions, is similarly mixed for disembodied AI.In a mixed-design laboratory experiment (N = 115), we manipulated coagent entity (human vs. AI) and goal structure (cooperative vs. competitive).The main dependent variables were corepresentation, measured with the reaction time-based Joint Simon task, and vicarious agency, assessed via temporal delay judgments (intentional binding).Results showed that when the task required only coordinating responses, corepresentation was comparable for human and AI coagents.However, when the task additionally required judging action outcomes (in intentional binding blocks), differences emerged: Human coagents elicited stronger corepresentation and greater vicarious agency than AI coagents.Participants experienced the weakest sense of agency when collaborating with AI, revealing a dissociation between coordination and agency in human-AI interaction.Goal structure did not reliably modulate either measur",
       "relevance_score": 2,
-      "matched_query": "persistent agent memory"
+      "matched_query": "metacognition self-improving AI agents"
     },
     {
-      "title": "The Architecture of Computational Closure: Scientific Priority under Extreme Compute Asymmetry",
-      "url": "https://doi.org/10.33774/coe-2026-bh28x",
-      "openalex_id": "https://openalex.org/W7213091320",
-      "doi": "https://doi.org/10.33774/coe-2026-bh28x",
+      "title": "Beyond the Degree: International PhD Graduates’ Employment Journeys Through Self-Regulated Learning and Agency",
+      "url": "https://doi.org/10.1080/07377363.2026.2753901",
+      "openalex_id": "https://openalex.org/W7225750705",
+      "doi": "https://doi.org/10.1080/07377363.2026.2753901",
       "published": "2026-11-09",
-      "summary": "When a promising research direction becomes visible, the organization best equipped to complete it need not be the organization that developed it. This paper examines how concentrated computational capacity can amplify that separation. It develops a state-relative account of computational closure: the production of a checkable result from a specified, partially structured research state through computational search, synthesis, derivation, and verification. Closure is a function within discovery, not a judgment that the resulting work lacks originality. Building on research on scientific priority, collective discovery, and unequal access to AI infrastructure, the paper distinguishes conceptual genesis, roadmap formation, technical completion, and other evidentially separable contributions. It defines a matched-state last-mile compression ratio, derives a deliberately simplified research-race model, and proposes experiments that distinguish the effects of progress signals from those of actionable research guidance. The September 2026 OpenAI Navier–Stokes episode serves as a source-qualified illustration, not as a validation of the model or a determination of intellectual ownership. The analysis identifies computational hegemony as a possible institutional condition in which unequal completion capacity and unequal visibility jointly shape scientific credit. It proposes contributio",
+      "summary": "Recent research has highlighted how international graduates enact different forms of agency to negotiate their employability. This study extends that line of inquiry by examining how self-regulated learning (SRL) strategies mediate the development of these forms of agency. It utilised a qualitative design, drawing on in-depth interviews with 35 international PhD graduates in Australia. The findings showed that the participants selectively deployed SRL strategies to enact distinct forms of agency. For example, seeking information, social assistance, environmental structuring, and organising and transforming supported their essential needs-response agency. The study also identified novel SRL strategies, including life-mentorship and self-satisfaction. This study contributes by integrating SRL and agency frameworks to offer a process-oriented understanding of employability as the dynamic development and mobilisation of capitals. Practically, it suggests embedding SRL-informed career support and guidance for international graduates. Limitations include the Australia-specific sample, which may limit transferability to other settings.",
       "relevance_score": 2,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "Climate ODER: Information, Coordination, and the Time to Act",
-      "url": "https://doi.org/10.22541/essoar.174559116.62095014/v2",
-      "openalex_id": "https://openalex.org/W7225419761",
-      "doi": "https://doi.org/10.22541/essoar.174559116.62095014/v2",
-      "published": "2026-11-06",
-      "summary": "An accurate forecast can leave a response team without a usable basis for timely protection. Climate ODER, developed through Observer-Dependent Entropy Retrieval, asks what information must survive, who must retain it, and when it must be secured. In a finite model, available information supports a task when every group of indistinguishable records admits a common acceptable action. As protective options expire, a distinction can become necessary after its last timely recovery opportunity has closed. We establish this separation between preservation and action deadlines. An exact access-locator frontier shows that two initial categories can support timely recovery where immediate action requires arbitrarily many target categories. The recovered answer still carries the target information. A temporal preservation criterion constructs the distinctions that make intermediate recovery operations and final protective choices executable under a specified causal memory mechanism. Extensions give exact criteria for unequal consultation times and a declared class of monotone response rules. For distributed response, we characterize failures of shared-plan selection even when each participant’s information is individually sufficient, construct minimum-cost feature repairs, and derive their budget–deadline frontier under specified acquisition conditions. Under unreliable communication or ",
-      "relevance_score": 2,
-      "matched_query": "cross-model handoff language model agents"
+      "matched_query": "metacognition self-improving AI agents"
     },
     {
       "title": "Metacognitive Reasoning in Energy Based Models Using Instance Based Learning Theory",
@@ -210,26 +180,6 @@
       "matched_query": "metacognition self-improving AI agents"
     },
     {
-      "title": "Interactive Digital Media-Assisted SSCS Learning: A Solution to Enhance Problem-Solving Ability and Alleviate Mathematics Anxiety",
-      "url": "https://doi.org/10.23960/jpmipa.v27i4.pp1951-1967",
-      "openalex_id": "https://openalex.org/W7225293413",
-      "doi": "https://doi.org/10.23960/jpmipa.v27i4.pp1951-1967",
-      "published": "2026-11-06",
-      "summary": "Problem-solving is a practical skill that students must master in 21st-century learning. However, various findings indicate that this capability remains low among junior high school students, who are beginning to study mathematical concepts in greater depth. Anxiety toward the subject matter, teachers, and mathematics instruction itself is a key factor influencing students' mathematical problem-solving performance. To address this, this study aims to examine the effect of the Search, Solve, Create, and Share (SSCS) learning model, a model that provides a clear roadmap for students to implement Polya's problem-solving steps, assisted by interactive digital media (PhET and Mathigon), on students' problem-solving ability and anxiety. This quasi-experimental study used a factorial design and included eighth-grade students. The research sample was selected using the cluster random sampling technique. Data were collected using a test instrument and a mathematics anxiety questionnaire and were subsequently analyzed using a two-way Analysis of Variance (ANOVA). The results of the study indicate that: (1) Hypothesis testing showed that there was a significant effect of different learning models on students’ problem-solving ability, with Fobs (= 8.405) > Ftab (= 4.016). Furthermore, based on the marginal means, the interactive digital media PhET-assisted SSCS model was more effective, wi",
-      "relevance_score": 2,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
-      "title": "Leave It Better Than Found: Value-Guided Cooperation in Sequential Tasks",
-      "url": "https://arxiv.org/abs/2611.08075",
-      "openalex_id": "https://openalex.org/W7225375293",
-      "doi": "https://doi.org/10.48550/arxiv.2611.08075",
-      "published": "2026-11-05",
-      "summary": "We consider the problem of sequential task continuation, where one robot acts in a workspace that has been affected by a previous robot. Current approaches in multi-robot cooperation rely heavily on co-training or co-optimization, assumingthat the robots have access to collective interaction data during the policy training or planning process. However, as increasingly varied robotic embodiments and policies are deployed and operate in the same real-world environment, learning policies for cooperation becomes infeasible due to the combinatorial explosion of possible robot combinations that need to be accounted for. To address this challenge, this paper considers the problem of ad hoc sequential cooperation between robots that have never before operated together in a shared environment. We demonstrate that robots can explicitly communicate their environmental preferences through sharing their value functions, enabling coordination without the need for prior joint training. To ground this exchange and prevent overconfidence in out-of-distribution states, we further introduce a k-nearest neighbors (KNN)- based uncertainty filter. Our method yields an increase of up to 48.5 pp compared with naive or even selfish agents, in task success rates across simulated and real-world experiments, demonstrating that value function transmission between agents is useful not merely as an internal ",
-      "relevance_score": 2,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
       "title": "Video and digital games: Historical controversies, benefits, and risks for children and adolescents",
       "url": "https://jcdee.com/index.php/jcdee/article/view/72",
       "openalex_id": "https://openalex.org/W7213265892",
@@ -238,16 +188,6 @@
       "summary": "Video and digital games have been the focus of sustained public and scientific debate since their commercial emergence in the late 1970s, particularly regarding their effects on children and adolescents. Early public and scientific discourse frequently portrayed gaming as a source of physical injury, addiction, aggression, social isolation, academic problems, and moral decline. However, subsequent empirical research has produced a substantially more differentiated picture of both the benefits and risks of gaming. This review examines the historical foundations of controversies surrounding video and digital games and synthesizes contemporary evidence concerning their cognitive, emotional, social, therapeutic, and physical effects. . Research indicates that moderate, purposeful gaming may improve visuospatial abilities, attentional control, problem-solving, mood regulation, social connection, and selected educational outcomes. Gaming-based interventions have also demonstrated therapeutic potential, particularly for depressive symptoms and attention-related difficulties among young people. At the same time, important risks remain, especially when gaming becomes excessive, compulsive, or disruptive to everyday functioning. These include repetitive-strain injuries, sleep disruption, problematic gaming, and adverse mental-health and academic outcomes. Evidence concerning violent game",
       "relevance_score": 1,
       "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "Simple is better? HPC-enabled neural architecture search for energy demand forecasting",
-      "url": "https://d.cobiss.net/repository/si/files/287185923/181529/ASHPC26_BOOKLET.pdf/terms",
-      "openalex_id": "https://openalex.org/W7224733541",
-      "doi": null,
-      "published": "2026-12-04",
-      "summary": "Welcome to ASHPC26Austrian-Slovenian HPC meetings (ASHPC) are key events for the Austrian and Slovenian High-Performance Computing (HPC) communities, bringing together researchers, practitioners, and infrastructure providers from both countries to discuss the latest developments in HPC, AI, Quantum Computing, and data-intensive computing.It plays an increasingly important role for the wider Central European HPC ecosystem as well, by fostering cross-border collaboration, enabling knowledge exchange, and encouraging the sharing and joint development of advanced computing infrastructures, services, and scientific projects.In this way, the conference also strengthens the network of national HPC competence centres and national HPC communities, and helps align scientific use cases, training activities, and technology roadmaps across the region.The ASHPC26 program features 5 keynote talks that provide strategic and scientific perspectives on HPC, AI, simulation, and quantum computing, complemented by 10 technical-track contributions focusing on architecture, operations, and software stacks for modern supercomputing systems.Across the main sessions, more than 40 contributed talks highlight a broad spectrum of applications and methods, from large-scale simulations and numerical methods to machine learning workflows and novel HPC-enabled services.The conference also includes 18 posters, ",
-      "relevance_score": 1,
-      "matched_query": "automated AI research experimentation"
     },
     {
       "title": "An Assessment of Accessibility and Affordability of Inpatient Psychiatric Care in Tennessee",
@@ -280,6 +220,66 @@
       "matched_query": "automated AI research experimentation"
     },
     {
+      "title": "Making sense of sensation: a framework of interoceptive attribution and appraisal with clinical applications",
+      "url": "https://doi.org/10.1098/rstb.2025.0161",
+      "openalex_id": "https://openalex.org/W4412189855",
+      "doi": "https://doi.org/10.1098/rstb.2025.0161",
+      "published": "2026-11-10",
+      "summary": "Abstract Interoception provides a link between bodily states and cognitive and affective processes across both unconscious and conscious domains and is fundamental for a coherent sense of self. While previous research linking interoception to mental health has predominantly focused on interoceptive accuracy, attention, self-beliefs and insight, we argue that the higher-order interpretation of consciously perceived bodily signals plays a fundamental and underexplored role in this relationship. We propose a framework delineating two higher-order processes—interoceptive attribution and appraisal—which constitute the interpretation of interoceptive sensations that reach conscious awareness. We outline key factors that modulate attention, attribution and appraisal, and evidence the relevance of this framework to mental health conditions. Given that these processes are accessible to cognition, they represent an important target for existing psychotherapeutic interventions. We integrate such interventions within our framework, highlighting their potential to enhance interoception-based therapeutic approaches. This article is part of the discussion meeting issue ‘From being to identity: analysis and synthesis of the self’.",
+      "relevance_score": 1,
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "Flexibility Controls Transport of Weakly Active Filaments in Crowded Landscapes",
+      "url": "https://doi.org/10.1103/fk5d-5bgy",
+      "openalex_id": "https://openalex.org/W7165737044",
+      "doi": "https://doi.org/10.1103/fk5d-5bgy",
+      "published": "2026-11-10",
+      "summary": "Active filaments, ranging from motor-driven biopolymers to elongated bacteria and worms, are paradigmatic examples of deformable active matter. How filament flexibility interacts with environmental heterogeneity to control their transport in crowded environments, however, remains poorly understood. Here, we perform large-scale Brownian dynamics simulations of tangentially driven active polymers moving through ordered and disordered obstacle arrays to map the long-time diffusion as a function of obstacle density and filament flexibility. We find that flexibility can either enhance or hinder transport depending on the structure of the medium. In disordered environments, transport is optimized at intermediate filament flexibility, whereas both highly flexible and semiflexible filaments diffuse more slowly. In contrast, dense ordered arrays enhance the mobility of semiflexible filaments by promoting directed motion along periodic channels. We identify three distinct transport regimes: (i) tortuosity-controlled diffusion of highly flexible filaments, characterized by trapping-and-hopping dynamics; (ii) confinement-assisted transport of moderately flexible filaments, which enhances diffusion in dense media; and (iii) persistence-controlled transport of semiflexible filaments, which facilitates diffusion in dense ordered media, but suppresses it in disordered media. Combining theory a",
+      "relevance_score": 1,
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "Beyond AI Productivity: Enterprise AI Systems, Human–AI Responsibility, and the Future of Work",
+      "url": "https://doi.org/10.21203/rs.3.rs-11670337/v1",
+      "openalex_id": "https://openalex.org/W7225759837",
+      "doi": "https://doi.org/10.21203/rs.3.rs-11670337/v1",
+      "published": "2026-11-10",
+      "summary": "Abstract A prior U.S. review, Enterprise AI at the Decision Point, established that enterprise artificial intelligence (AI) as-sistants have task-dependent productivity effects and that public evidence does not identify an independent financial return or a complete chain from AI cost to verified workforce replacement. The human side of that productivity record, and any organiza-tional consequences of workforce change, were left open. This study examines responsibilities, training, job insecurity and well-being, human oversight, and performance after U.S. enterprise AI adoption from November 2022 through September 2026. The design is a critical integrative review. Firms that report a task effect most often report exclusive augmentation. Frequent AI use is associated with greater fear of job loss. In one worker panel, displacement concern, rather than use frequency itself, is associated with lower engagement and higher burnout. The contribution is a responsibility-transfer framework with five constructs and four testable propositions. A proposed computa-tional specification of that framework, Human–AI Responsibility-Aware Workflow Optimization (HARWO), places verification and accountability on the workflow graph. Gross task-time savings are separated from net employee time. HARWO is not solved or estimated in this paper. The evidence gap reflects a measurement disconnect: existin",
+      "relevance_score": 1,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "ConvNeXt ‐ FD : Fractal Dimension‐Regularized ConvNeXt for Robust Biomedical Image Segmentation",
+      "url": "https://doi.org/10.1111/exsy.70481",
+      "openalex_id": "https://openalex.org/W7162141591",
+      "doi": "https://doi.org/10.1111/exsy.70481",
+      "published": "2026-11-10",
+      "summary": "ABSTRACT Biomedical image segmentation is a critical task in medical diagnosis and treatment planning, enabling precise delineation of anatomical structures and pathological regions. Despite significant advancements, challenges persist due to the inherent variability, noise and complex morphology present in diverse medical imaging modalities. This paper introduces ConvNeXt‐FD, a novel deep learning architecture for robust biomedical image segmentation, built upon a U‐Net‐like encoder‐decoder framework leveraging the powerful ConvNeXt backbone. Our approach integrates a hybrid loss function combining the Dice coefficient with a boundary‐aware regularization term inspired by a differentiable formulation of fractal dimension, designed to enhance the model's sensitivity to object boundaries and shape fidelity. We rigorously evaluate ConvNeXt‐FD across six distinct biomedical datasets: BUSI (breast ultrasound images), DDTI (thyroid ultrasound images), FluoCells (fluorescent cell images), IDRiD (diabetic retinopathy images for optic disc segmentation), ISIC2018 (skin lesion images) and MoNuSeg (nuclei segmentation). Experimental results demonstrate that ConvNeXt‐FD, particularly when initialized with ImageNet pre‐trained weights, achieves competitive and often superior performance compared to existing state‐of‐the‐art methods across various metrics, including Dice, Jaccard, Accuracy,",
+      "relevance_score": 1,
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "Intelligent orchestration of programmable network resources and services in the edge-to-cloud continuum",
+      "url": "https://amsdottorato.unibo.it/view/dottorati/DOT539/>,",
+      "openalex_id": "https://openalex.org/W7225554550",
+      "doi": "https://doi.org/10.48676/unibo/amsdottorato/13294",
+      "published": "2026-11-10",
+      "summary": "Edge computing has become an important way to support next-generation telecommunications networks. By moving computation closer to data sources and end users, it makes it possible to provide low-latency, energy-efficient, and context-aware services. This dissertation examines the orchestration and scheduling of heterogeneous services across various edge computing architectures, tackling the inherent complexity arising from the diversity of network infrastructures, computing nodes, and service requirements. The first part of the thesis is about how to design and analyze an edge-oriented service orchestration platform. This platform is designed to handle different types of services over different types of networks, taking into account the unique features of edge environments, like limited resources, architectural diversity, and changing operating conditions. The research's main focus is on service scheduling strategies, with a focus on optimizing key performance indicators that are important for future telecommunications networks, such as end-to-end latency and energy use. Various scheduling methodologies are proposed and assessed to concurrently optimize these objectives, emphasizing the trade-offs among performance, resource utilization, and operational efficiency in distributed edge contexts. The thesis further investigates the implementation of these mechanisms in scenarios w",
+      "relevance_score": 1,
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "Harnessing single-cell omics for farmed animal improvement and human health",
+      "url": "https://doi.org/10.1186/s40104-026-01516-6",
+      "openalex_id": "https://openalex.org/W7225614827",
+      "doi": "https://doi.org/10.1186/s40104-026-01516-6",
+      "published": "2026-11-10",
+      "summary": "Cellular heterogeneity underlies the regulation of complex traits and diseases, making cell-resolved molecular characterization fundamental for advancing precision agriculture and human biomedicine. Rapid advances in single-cell omics technologies, together with the ever-evolving computational methods, have led to the establishment of large-scale single cell atlases across multiple species, providing unprecedented opportunities to systematically dissect cellular diversity and regulatory mechanisms underlying complex phenotypes. In this review, we summarize recent progresses in single-cell sequencing technologies, reference cell atlas projects, and the integration of single-cell omics with population/quantitative genetics, as well as discuss how artificial intelligence and predictive perturbation modelling are reshaping single-cell research. Finally, we highlight future directions toward population-scale single-cell omics, AI-driven virtual cells/tissues, and genotype-cell/tissue-trait frameworks, which are expected to transform biological discovery, enable better design of veterinary medicines and human therapeutics, as well as accelerate sustainable farmed animal improvement and precision medicine.",
+      "relevance_score": 1,
+      "matched_query": "automated AI research experimentation"
+    },
+    {
       "title": "Designing a Curriculum Model Based on Artificial Intelligence and Purposeful Physical Activity to Enhance Learning Self-Regulation, Mental Health, and Psychological Well-Being among Students",
       "url": "https://journals.kmanpub.com/index.php/jayps/article/view/5737",
       "openalex_id": "https://openalex.org/W7216968837",
@@ -290,24 +290,24 @@
       "matched_query": "metacognition self-improving AI agents"
     },
     {
-      "title": "ABACUS: Adapting Unified Foundation Model for Count Image Understanding and Generation",
-      "url": "https://doi.org/10.1145/3842572",
-      "openalex_id": "https://openalex.org/W7165728866",
-      "doi": "https://doi.org/10.1145/3842572",
+      "title": "The Adaptive Automotive Supplier: Integrating Governance Theories and Contemporary Risk Profiles",
+      "url": "https://doi.org/10.59857/4xh4mp18",
+      "openalex_id": "https://openalex.org/W7171659740",
+      "doi": "https://doi.org/10.59857/4xh4mp18",
       "published": "2026-11-09",
-      "summary": "We present ABACUS, a unified vision-language model that jointly addresses object counting, crowd counting, referring-expression counting, and count-faithful image generation within a single 3B-parameter model. ABACUS introduces three contributions: density-aware adaptive zooming paired with an objectness map from multi-head self-attention decomposition to spatially ground count predictions; a boundary-aware count policy trained via GRPO with nested local, boundary, and global rewards to eliminate over- and undercounting at crop boundaries; and a cycle-consistent GRPO strategy in which the frozen understanding branch scores generated candidates on count-deviation and aesthetic quality, closing the understanding-generation synergy gap without any external critic or annotation. ABACUS achieves state-of-the-art results across seven benchmarks spanning object counting (FSC-147, CARPK), crowd counting (ShanghaiTech A/B), referring-expression counting (REC-8K), count-faithful generation (CoCo-Count, T2I-CompBench, GenEval), and count reasoning (CountQA), surpassing both task-specific specialists and larger generalist models. Project page is at https://mondalanindya.github.io/pages/ABACUS/.",
+      "summary": "Automotive suppliers are facing disruptions from vehicle electrification, software-defined vehicle architectures and geopolitical fragmentation and regionalization. This article integrates five pillars of management thinking (transaction cost economics, agency theory, game theory, global value chain theory and platform ecosystem theory) explaining how these pressures transform OEM's supplier governance for 423 articles published from 2010 to 2026. The findings suggest that supplier management literature mostly focuses on supply chain and strategic risks and that there is a severe shortage of implementation specificity: instead of providing a specific set of organizational capabilities, studies mostly outline risks or potential coping strategies. The study frames supplier adaptation to global transformations as a compound governance problem and outlines a staged agenda, encompassing sensing and diagnosing existing risks, adopting a governance response and developing their capabilities for ensuring strategic significance within the global automotive OEM network considering asymmetric bargaining power in the setting of persistent volatility.",
       "relevance_score": 1,
-      "matched_query": "persistent agent memory"
+      "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "DecomVoxel: Harnessing 3D-Native Priors with Guided In-situ Denoising Optimization for Decompositional Scene Reconstruction",
-      "url": "https://doi.org/10.1145/3842522",
-      "openalex_id": "https://openalex.org/W7215920325",
-      "doi": "https://doi.org/10.1145/3842522",
+      "title": "Generative AI use and scientific literacy among 15-year-olds in Beijing, Shanghai, Jiangsu, and Zhejiang, China: the mediating role of academic help-seeking",
+      "url": "https://doi.org/10.3389/fpsyg.2026.2013021",
+      "openalex_id": "https://openalex.org/W7225640071",
+      "doi": "https://doi.org/10.3389/fpsyg.2026.2013021",
       "published": "2026-11-09",
-      "summary": "Decompositional scene reconstruction aims to reconstruct high-quality objects and background, yet existing methods still struggle with the level of quality under heavy occlusions. While generative priors offer a potential solution, 2D image-based priors often suffer from multi-view inconsistency due to a lack of 3D awareness. Conversely, 3D-native priors provide stronger structural inductive biases but frequently lead to spatial drift and misalignment within complex scenes. To address these issues, we propose DecomVoxel, formulating object completion as a guided in-situ denoising optimization that bridges 3D-native priors with neural scene reconstruction. Our framework introduces a reformulated epsilon-based distillation loss to ensure stable latent refinement, alongside adaptive spatial guidance that utilizes occupied and vacant anchors with temporal annealing to suppress generative hallucinations and mitigate spatial drift. Experiments on Replica and ScanNet++ show that DecomVoxel significantly outperforms state-of-the-art methods while faithfully preserving the original spatial layout, structural fidelity, and style-consistent texture. Our method pushes the boundary of decompositional reconstruction by delivering high-quality textured meshes with clean topology, geometry, and appearance, providing a robust solution for the decompositional reconstruction of complex real-world",
+      "summary": "Introduction Adolescents increasingly use generative artificial intelligence (GenAI) chatbots for schoolwork, yet evidence on whether this use supports or undermines learning is mixed. Drawing on research on cognitive offloading and self-regulated learning, we examined whether GenAI use for schoolwork is related to scientific literacy directly and through two components of self-regulated learning, academic help-seeking and metacognitive strategy use, and whether the purpose of use matters. Methods We analyzed the Program for International Student Assessment 2025 (PISA 2025) data from 12,191 15-year-old students in 374 schools in Beijing, Shanghai, Jiangsu, and Zhejiang, China. Weighted two-level mediation models compared students within the same school, used all ten plausible values, and evaluated indirect effects with Monte Carlo confidence intervals. Results were checked against a design-based model with school fixed effects and balanced repeated replication weights. Results Students who used GenAI more often than their schoolmates reported more help-seeking ( β = 0.17) and more metacognitive strategy use ( β = 0.30). Help-seeking was positively associated with scientific literacy, yielding a positive indirect effect ( β = 0.013, 95% CI [0.009, 0.017]); the indirect effect through metacognitive strategies was smaller ( β = 0.007) and was fully accounted for by science self-ef",
       "relevance_score": 1,
-      "matched_query": "persistent agent memory"
+      "matched_query": "metacognition self-improving AI agents"
     }
   ],
   "paper_count": 30,
