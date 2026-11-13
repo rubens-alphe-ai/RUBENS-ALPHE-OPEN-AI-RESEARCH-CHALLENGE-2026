@@ -1,15 +1,15 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-11-12T12:50:34.174617+00:00",
-  "source_digest_generated_at_utc": "2026-11-12T12:50:34.118030+00:00",
+  "generated_at_utc": "2026-11-13T12:18:19.119540+00:00",
+  "source_digest_generated_at_utc": "2026-11-13T12:18:19.055967+00:00",
   "paper_count_seen": 30,
-  "dominant_theme": "persistent_memory",
+  "dominant_theme": "metacognition",
   "theme_counts": {
-    "persistent_memory": 12,
+    "persistent_memory": 6,
     "cross_model_handoff": 6,
-    "automated_experimentation": 6,
-    "metacognition": 10,
-    "agent_evaluation": 7
+    "automated_experimentation": 4,
+    "metacognition": 12,
+    "agent_evaluation": 8
   },
   "top_5_papers": [
     {
@@ -31,36 +31,18 @@
       ]
     },
     {
-      "title": "Evidence constrained agentic retrieval augmented generation for substation civil engineering preliminary design documents in a single project study",
-      "url": "https://doi.org/10.1007/s44163-026-02612-2",
-      "published": "2026-11-06",
+      "title": "The Role of AI Accuracy in Confidence Calibration for AI-Assisted Decision making",
+      "url": "https://doi.org/10.17605/osf.io/3rftw",
+      "published": "2026-11-11",
       "original_relevance_score": 6,
-      "assessment_score": 13,
-      "matched_query": "cross-model handoff language model agents",
-      "theme_hits": {
-        "persistent_memory": 2,
-        "cross_model_handoff": 0,
-        "automated_experimentation": 1,
-        "metacognition": 0,
-        "agent_evaluation": 1
-      },
-      "notes": [
-        "substantial abstract"
-      ]
-    },
-    {
-      "title": "MetaNav: Metacognitive Vision-Language Navigation via Reflective Exploration",
-      "url": "https://doi.org/10.1145/3767308.3835445",
-      "published": "2026-11-06",
-      "original_relevance_score": 4,
-      "assessment_score": 11,
+      "assessment_score": 12,
       "matched_query": "metacognition self-improving AI agents",
       "theme_hits": {
-        "persistent_memory": 3,
+        "persistent_memory": 0,
         "cross_model_handoff": 0,
-        "automated_experimentation": 1,
-        "metacognition": 0,
-        "agent_evaluation": 0
+        "automated_experimentation": 0,
+        "metacognition": 2,
+        "agent_evaluation": 1
       },
       "notes": [
         "substantial abstract"
@@ -85,16 +67,34 @@
       ]
     },
     {
-      "title": "Authorization assurance for tool-using LLM agents: a structured review of enforcement semantics and effect-level security evidence",
-      "url": "https://doi.org/10.1007/s10207-026-01343-w",
+      "title": "Evaluating AI Alignment in LLMs: Output Analysis of Value Priorities Across 75 Models with Human Benchmarking",
+      "url": "https://doi.org/10.1080/10447318.2026.2755127",
+      "published": "2026-11-09",
+      "original_relevance_score": 3,
+      "assessment_score": 10,
+      "matched_query": "metacognition self-improving AI agents",
+      "theme_hits": {
+        "persistent_memory": 0,
+        "cross_model_handoff": 1,
+        "automated_experimentation": 0,
+        "metacognition": 1,
+        "agent_evaluation": 2
+      },
+      "notes": [
+        "substantial abstract"
+      ]
+    },
+    {
+      "title": "When Does Hallucination Propagate? Reconciling Six Formalizations of Error Spread in Multi-Agent LLM Systems",
+      "url": "https://doi.org/10.21203/rs.3.rs-11536507/v1",
       "published": "2026-11-10",
       "original_relevance_score": 4,
-      "assessment_score": 8,
+      "assessment_score": 9,
       "matched_query": "cross-model handoff language model agents",
       "theme_hits": {
         "persistent_memory": 1,
         "cross_model_handoff": 0,
-        "automated_experimentation": 0,
+        "automated_experimentation": 1,
         "metacognition": 0,
         "agent_evaluation": 0
       },
@@ -148,23 +148,35 @@
     },
     {
       "type": "future_publication_date",
+      "title": "Sex-Dependent Modulation of the Endocannabinoid System in Pain Processing",
+      "published": "2026-12-01",
+      "url": "https://digitalcommons.usu.edu/etd2023/959"
+    },
+    {
+      "type": "future_publication_date",
       "title": "Natural Language Processing and Graph Methods for Knowledge Graph Applications",
       "published": "2026-11-26",
       "url": "https://doktori.bibl.u-szeged.hu/id/eprint/13202/1/kardospeter_disszertacio.pdf"
+    },
+    {
+      "type": "future_publication_date",
+      "title": "Simple is better? HPC-enabled neural architecture search for energy demand forecasting",
+      "published": "2026-12-04",
+      "url": "https://d.cobiss.net/repository/si/files/287185923/181529/ASHPC26_BOOKLET.pdf/terms"
     }
   ],
   "proposed_next_experiment": {
-    "id": "PROP-EXP-MEM-001",
-    "title": "Structured Memory Handoff Test",
-    "hypothesis": "Separating project memory into decisions, failures, verified knowledge, open questions, and next actions will improve blind handoff fidelity.",
-    "metric": "PCRB-1 handoff score and critical-fabrication count",
+    "id": "PROP-EXP-META-001",
+    "title": "Calibration Before Action",
+    "hypothesis": "Recording confidence before each research action will improve error detection and calibration.",
+    "metric": "Brier score + failure-prediction accuracy",
     "procedure": [
-      "Create a structured-state representation with five explicit memory sections.",
-      "Give the same mission to fresh models using current state vs structured state.",
-      "Run at least three blind handoff trials per condition.",
-      "Compare average PCRB-1 score and fabrication rate."
+      "Before each of 20 tasks, record probability of success.",
+      "Execute tasks unchanged.",
+      "Compare predictions with outcomes.",
+      "Use calibration error to adjust future confidence."
     ],
-    "success": ">= 10-point PCRB-1 improvement with zero increase in critical fabrications"
+    "success": "measurable calibration improvement over two consecutive batches"
   },
   "decision_rule": "This is a proposal only. Canonical state changes only after evaluation/acceptance."
 }

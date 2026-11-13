@@ -1,16 +1,16 @@
 {
   "status": "PROPOSED",
-  "generated_at_utc": "2026-11-12T12:50:34.174617+00:00",
-  "derived_from_theme": "persistent_memory",
-  "id": "PROP-EXP-MEM-001",
-  "title": "Structured Memory Handoff Test",
-  "hypothesis": "Separating project memory into decisions, failures, verified knowledge, open questions, and next actions will improve blind handoff fidelity.",
-  "metric": "PCRB-1 handoff score and critical-fabrication count",
+  "generated_at_utc": "2026-11-13T12:18:19.119540+00:00",
+  "derived_from_theme": "metacognition",
+  "id": "PROP-EXP-META-001",
+  "title": "Calibration Before Action",
+  "hypothesis": "Recording confidence before each research action will improve error detection and calibration.",
+  "metric": "Brier score + failure-prediction accuracy",
   "procedure": [
-    "Create a structured-state representation with five explicit memory sections.",
-    "Give the same mission to fresh models using current state vs structured state.",
-    "Run at least three blind handoff trials per condition.",
-    "Compare average PCRB-1 score and fabrication rate."
+    "Before each of 20 tasks, record probability of success.",
+    "Execute tasks unchanged.",
+    "Compare predictions with outcomes.",
+    "Use calibration error to adjust future confidence."
   ],
-  "success": ">= 10-point PCRB-1 improvement with zero increase in critical fabrications"
+  "success": "measurable calibration improvement over two consecutive batches"
 }
