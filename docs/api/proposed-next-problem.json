@@ -1,16 +1,16 @@
 {
   "status": "PROPOSED",
-  "generated_at_utc": "2026-11-15T12:00:12.789806+00:00",
-  "derived_from_theme": "metacognition",
-  "id": "PROP-EXP-META-001",
-  "title": "Calibration Before Action",
-  "hypothesis": "Recording confidence before each research action will improve error detection and calibration.",
-  "metric": "Brier score + failure-prediction accuracy",
+  "generated_at_utc": "2026-11-16T12:51:12.326940+00:00",
+  "derived_from_theme": "agent_evaluation",
+  "id": "PROP-EXP-EVAL-001",
+  "title": "Evaluator Independence Test",
+  "hypothesis": "Separating proposer and evaluator roles will reduce false improvement claims.",
+  "metric": "false-positive acceptance rate on seeded bad proposals",
   "procedure": [
-    "Before each of 20 tasks, record probability of success.",
-    "Execute tasks unchanged.",
-    "Compare predictions with outcomes.",
-    "Use calibration error to adjust future confidence."
+    "Create a mixed set of valid and intentionally flawed improvement proposals.",
+    "Have one agent propose and a separate evaluator score them.",
+    "Measure acceptance of flawed proposals.",
+    "Compare with self-evaluation baseline."
   ],
-  "success": "measurable calibration improvement over two consecutive batches"
+  "success": ">=50% reduction in false-positive acceptance rate"
 }

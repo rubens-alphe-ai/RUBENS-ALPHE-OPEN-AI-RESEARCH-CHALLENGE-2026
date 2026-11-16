@@ -1,22 +1,40 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-11-15T12:00:12.789806+00:00",
-  "source_digest_generated_at_utc": "2026-11-15T12:00:12.714997+00:00",
+  "generated_at_utc": "2026-11-16T12:51:12.326940+00:00",
+  "source_digest_generated_at_utc": "2026-11-16T12:51:12.271936+00:00",
   "paper_count_seen": 30,
-  "dominant_theme": "metacognition",
+  "dominant_theme": "agent_evaluation",
   "theme_counts": {
-    "persistent_memory": 8,
-    "cross_model_handoff": 3,
+    "persistent_memory": 10,
+    "cross_model_handoff": 4,
     "automated_experimentation": 4,
-    "metacognition": 9,
-    "agent_evaluation": 7
+    "metacognition": 8,
+    "agent_evaluation": 12
   },
   "top_5_papers": [
     {
-      "title": "AI Agents and Agentic AI in Medicine: An Autonomy-Centred Scoping Review and Research Agenda",
-      "url": "https://doi.org/10.21203/rs.3.rs-10652827/v1",
-      "published": "2026-11-11",
+      "title": "Governed Hybrid Agency: A Critical Evidence Map of Cognitive Architectures for Foundation-Model Agents",
+      "url": "https://doi.org/10.1613/jair.1.23727",
+      "published": "2026-11-13",
       "original_relevance_score": 8,
+      "assessment_score": 15,
+      "matched_query": "metacognition self-improving AI agents",
+      "theme_hits": {
+        "persistent_memory": 2,
+        "cross_model_handoff": 0,
+        "automated_experimentation": 0,
+        "metacognition": 1,
+        "agent_evaluation": 1
+      },
+      "notes": [
+        "substantial abstract"
+      ]
+    },
+    {
+      "title": "From Code Completion to Agentic Development: A Survey of AI Coding Agents, Ecosystems, and Evolving Software Engineering Practice",
+      "url": "https://doi.org/10.1007/s41019-026-00371-9",
+      "published": "2026-11-13",
+      "original_relevance_score": 6,
       "assessment_score": 12,
       "matched_query": "cross-model handoff language model agents",
       "theme_hits": {
@@ -24,7 +42,25 @@
         "cross_model_handoff": 0,
         "automated_experimentation": 0,
         "metacognition": 0,
-        "agent_evaluation": 1
+        "agent_evaluation": 3
+      },
+      "notes": [
+        "substantial abstract"
+      ]
+    },
+    {
+      "title": "Artificial Intelligence-Assisted HPLC Method Development and Optimization: A Review",
+      "url": "https://doi.org/10.5281/zenodo.24215622",
+      "published": "2026-11-14",
+      "original_relevance_score": 6,
+      "assessment_score": 11,
+      "matched_query": "automated AI research experimentation",
+      "theme_hits": {
+        "persistent_memory": 0,
+        "cross_model_handoff": 1,
+        "automated_experimentation": 1,
+        "metacognition": 0,
+        "agent_evaluation": 0
       },
       "notes": [
         "substantial abstract"
@@ -61,42 +97,6 @@
         "automated_experimentation": 0,
         "metacognition": 0,
         "agent_evaluation": 1
-      },
-      "notes": [
-        "substantial abstract"
-      ]
-    },
-    {
-      "title": "When to Delegate: A Measurement Study of Bounded Agent Teams for Personal Super Agents",
-      "url": "https://doi.org/10.21203/rs.3.rs-11710191/v1",
-      "published": "2026-11-12",
-      "original_relevance_score": 5,
-      "assessment_score": 9,
-      "matched_query": "cross-model handoff language model agents",
-      "theme_hits": {
-        "persistent_memory": 0,
-        "cross_model_handoff": 1,
-        "automated_experimentation": 0,
-        "metacognition": 0,
-        "agent_evaluation": 0
-      },
-      "notes": [
-        "substantial abstract"
-      ]
-    },
-    {
-      "title": "SoK: Sticky Policies Come Unstuck: Where Data-Governance Claims End at Generative Handoffs",
-      "url": "https://doi.org/10.5281/zenodo.24168092",
-      "published": "2026-11-12",
-      "original_relevance_score": 4,
-      "assessment_score": 9,
-      "matched_query": "cross-model handoff language model agents",
-      "theme_hits": {
-        "persistent_memory": 1,
-        "cross_model_handoff": 1,
-        "automated_experimentation": 0,
-        "metacognition": 0,
-        "agent_evaluation": 0
       },
       "notes": [
         "substantial abstract"
@@ -151,26 +151,20 @@
       "title": "Sex-Dependent Modulation of the Endocannabinoid System in Pain Processing",
       "published": "2026-12-01",
       "url": "https://digitalcommons.usu.edu/etd2023/959"
-    },
-    {
-      "type": "future_publication_date",
-      "title": "Natural Language Processing and Graph Methods for Knowledge Graph Applications",
-      "published": "2026-11-26",
-      "url": "https://doktori.bibl.u-szeged.hu/id/eprint/13202/1/kardospeter_disszertacio.pdf"
     }
   ],
   "proposed_next_experiment": {
-    "id": "PROP-EXP-META-001",
-    "title": "Calibration Before Action",
-    "hypothesis": "Recording confidence before each research action will improve error detection and calibration.",
-    "metric": "Brier score + failure-prediction accuracy",
+    "id": "PROP-EXP-EVAL-001",
+    "title": "Evaluator Independence Test",
+    "hypothesis": "Separating proposer and evaluator roles will reduce false improvement claims.",
+    "metric": "false-positive acceptance rate on seeded bad proposals",
     "procedure": [
-      "Before each of 20 tasks, record probability of success.",
-      "Execute tasks unchanged.",
-      "Compare predictions with outcomes.",
-      "Use calibration error to adjust future confidence."
+      "Create a mixed set of valid and intentionally flawed improvement proposals.",
+      "Have one agent propose and a separate evaluator score them.",
+      "Measure acceptance of flawed proposals.",
+      "Compare with self-evaluation baseline."
     ],
-    "success": "measurable calibration improvement over two consecutive batches"
+    "success": ">=50% reduction in false-positive acceptance rate"
   },
   "decision_rule": "This is a proposal only. Canonical state changes only after evaluation/acceptance."
 }
