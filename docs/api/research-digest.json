@@ -1,6 +1,6 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-11-16T12:51:12.271936+00:00",
+  "generated_at_utc": "2026-11-17T13:33:26.690728+00:00",
   "source": "OpenAlex public API",
   "queries": [
     "persistent agent memory",
@@ -9,6 +9,16 @@
     "metacognition self-improving AI agents"
   ],
   "papers": [
+    {
+      "title": "VANTAGE-V-AI: Bounded-Memory KV-Cache Compression and Streaming Inference Runtime for Large Language Models",
+      "url": "https://doi.org/10.5281/zenodo.24243286",
+      "openalex_id": "https://openalex.org/W7233542439",
+      "doi": "https://doi.org/10.5281/zenodo.24243286",
+      "published": "2026-11-15",
+      "summary": "Autoregressive generation in Large Language Models (LLMs) deployed within extended multi-turn dialogs and autonomous agentic workflows suffers from an acute memory wall. Because conventional Key-Value (KV) caching retains representations for all preceding tokens, memory consumption scales linearly O(N) with sequence length and batch size, precipitating catastrophic Out-Of-Memory (OOM) failures or massive resource underutilization. In this work, we present VANTAGE-V-AI (v8.2.0), a high-performance inference runtime designed to bound KV-cache memory consumption to a strictly fixed budget O(W) while maintaining numerical parity and stability. VANTAGE integrates three complementary mechanisms: (1) Streaming Attention Sinks, which persistently retain initial anchor tokens to anchor attention distribution scores alongside a recency sliding window, eliminating softmax entropy collapse; (2) 2-Bit Packed Ternary Quantization ({-1, 0, +1}) packing four ternary values per byte, achieving an 8x reduction in KV-cache storage; and (3) a drop-in runtime architecture that wraps standard Hugging Face Transformer decoders in two lines of code without retraining. We empirically benchmark VANTAGE on dual NVIDIA Tesla T4 GPUs across a 1,024-token prompt using Qwen/Qwen2.5-3B-Instruct. Following MLSys asynchronous execution protocols, we report end-to-end wall-clock timing including host-device PCIe",
+      "relevance_score": 9,
+      "matched_query": "persistent agent memory"
+    },
     {
       "title": "Governed Hybrid Agency: A Critical Evidence Map of Cognitive Architectures for Foundation-Model Agents",
       "url": "https://doi.org/10.1613/jair.1.23727",
@@ -20,16 +30,6 @@
       "matched_query": "metacognition self-improving AI agents"
     },
     {
-      "title": "Artificial Intelligence-Assisted HPLC Method Development and Optimization: A Review",
-      "url": "https://doi.org/10.5281/zenodo.24215622",
-      "openalex_id": "https://openalex.org/W7227758850",
-      "doi": "https://doi.org/10.5281/zenodo.24215622",
-      "published": "2026-11-14",
-      "summary": "High-performance liquid chromatography (HPLC) continues to be the primary tool in pharmaceutical, environmental, food, and bioanalytical laboratories; however, creating a reliable method is still a gradual, repetitive, and skill-dependent process. Traditional approaches reliant on analyst expertise, sequential one-factor screening, retention modelling, and statistical design of experiments (DoE) are efficient but become ineffective as the number of essential technique parameters, analyte categories, or column chemistries increases. Artificial intelligence (AI), encompassing traditional machine learning (ML), deep learning (DL), Bayesian optimisation, and reinforcement learning (RL), is currently utilised at every phase of method development: forecasting retention behaviour based on molecular structure, choosing columns and mobile phases, refining gradients, and progressively directing automated experimentation. This critique encapsulates the principles of HPLC method formulation, delineates the primary AI frameworks and their chromatographic utilisations, juxtaposes retention-time forecasting models and optimisation techniques in a tabular format, explores the synergy with analytical quality by design (AQbD) and the ICH Q14 and Q2(R2) guidelines, and rigorously assesses constraints including data insufficiency, inadequate transferability across systems, absence of interpretabil",
-      "relevance_score": 6,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
       "title": "From Code Completion to Agentic Development: A Survey of AI Coding Agents, Ecosystems, and Evolving Software Engineering Practice",
       "url": "https://doi.org/10.1007/s41019-026-00371-9",
       "openalex_id": "https://openalex.org/W7225996758",
@@ -37,6 +37,26 @@
       "published": "2026-11-13",
       "summary": "Abstract Large language models have extended software-development assistance from token-level completion to systems that can navigate repositories, edit files, execute tools, and iterate on test feedback. This survey studies the design, use, and evaluation of these AI coding agents, together with their commercial and societal context. Reproducible database queries support literature discovery, but the cited corpus is selected and coded for relevance; we therefore describe the work as a structured scoping survey rather than an exhaustive systematic review. We organize the field using five dimensions: interaction paradigm, computational architecture, deployment form, orchestration mode, and human-oversight mode. Treating oversight separately from architecture resolves a conceptual overlap in earlier classifications and gives each representative system one value per dimension. The technical synthesis covers repository context, planning, tool use, multi-agent coordination, SDLC applications, and benchmark limitations. We keep technical capability evidence separate from business and adoption reports. Vendor and news sources are used as dated context, not as proxies for maturity or user preference. The survey covers material available through 28 February 2026.",
       "relevance_score": 6,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "Selective TPM-Based Runtime Firmware Attestation for Smart Energy Meters",
+      "url": "https://doi.org/10.5281/zenodo.24241176",
+      "openalex_id": "https://openalex.org/W7233553557",
+      "doi": "https://doi.org/10.5281/zenodo.24241176",
+      "published": "2026-11-15",
+      "summary": "Code and data for: “Selective TPM-Based Runtime Firmware Attestation for Smart Energy Meters: Randomised Challenge Scheduling, Verifier Appraisal and Prototype Evaluation” (Gaur and Singh). This record contains the complete implementation, raw results and manuscript sources behind the paper. It regenerates every number, table and figure in the paper. What the paper does. Secure boot and authenticated updates protect the firmware a smart energy meter starts with, but not its state hours later. A runtime attack that rewrites a dispatch table, calibration constants or tariff configuration in RAM changes behaviour without changing the stored image. The paper presents a runtime attestation framework built on a TPM 2.0 and aligned with the IETF RATS architecture (RFC 9334) and RFC 9683. It has three parts: a selective monitoring policy that re-measures only small, stable, behaviour-defining RAM regions; a verifier with a fixed appraisal order and handling of authorised configuration updates; and randomised challenge schedules analysed against persistent, transient and schedule-aware adversaries. What is in the package. fw/: Cortex-M3 firmware stand-in for a meter (run on QEMU), with its linker layout. src/: software-TPM backend (swtpm and tpm2-pytss, behind a vendor-neutral interface), measurement agent, verifier and abstract tamper injector. scripts/: trial runner, shard merger, sta",
+      "relevance_score": 5,
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "AgentMesh: Toward Redundancy- and Barrier-Free Dataflow in Multi-Agent Systems",
+      "url": "https://doi.org/10.1145/3828523.3857023",
+      "openalex_id": "https://openalex.org/W7232787172",
+      "doi": "https://doi.org/10.1145/3828523.3857023",
+      "published": "2026-11-14",
+      "summary": "Multi-agent systems (MAS) now power long-running agentic applications like deep research and coding agents, yet their end-to-end latency reaches minutes to hours. The runtime executes each dataflow as an opaque, indivisible block at coarse granularity, wasting end-to-end time on redundancy (acquiring content already held or unnecessary) and barriers (a downstream component idling until its upstream input is entirely ready). We abstract a produce–transfer–consume dataflow as a basic unit in MAS, where the producer is a tool or LLM decoding, and the consumer is an LLM prefill. We present AgentMesh, a MAS runtime that optimizes each dataflow with three mechanisms: Delta Tool Retrieval (DTR) shrinks the produce step by serving a tool result’s cached items and fetching only the semantic delta; Branch-Parallel Prefill (BPP) shrinks the consume step by prefilling independent branches in parallel under dependency-graph-derived attention sparsity; Dynamic-Equilibrium Streaming (DES), a dynamic pipeline, overlaps produce, transfer, and consume by pacing streamed chunks to the runtime rate of producer and consumer. Implemented on AutoGen, OpenCode, and vLLM and evaluated across three GPU generations and six models, AgentMesh reduces end-to-end latency by up to 62% with no statistically significant quality loss, on both deep research and coding agent workloads.",
+      "relevance_score": 5,
       "matched_query": "cross-model handoff language model agents"
     },
     {
@@ -50,33 +70,23 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "What makes an LLM a tutor? A component-centric survey of LLM-based and agentic tutoring systems",
-      "url": "https://doi.org/10.1007/s44336-026-00047-y",
-      "openalex_id": "https://openalex.org/W7225819494",
-      "doi": "https://doi.org/10.1007/s44336-026-00047-y",
-      "published": "2026-11-12",
-      "summary": "Abstract Large language models (LLMs) are reshaping intelligent tutoring systems (ITSs) by reducing authoring costs and enabling flexible interaction. However, effective tutoring requires more than fluent responses. It also depends on pedagogical control, domain grounding, learner modeling, interaction design, orchestration, and reliable evaluation. We examine these requirements through a component-centric framework that organizes LLM-based tutoring systems into four functional layers: pedagogical policy, domain and grounding, learner state, and interaction/interface. A cross-cutting orchestration layer coordinates these components, while agentic tutoring systems are treated as an emerging subset of the broader field. Drawing on representative literature on LLM-based and agentic tutoring systems, published mostly between late 2022 and mid-2026, we analyze how tutoring capabilities are implemented across system architecture, learner modeling, interaction, orchestration, and evaluation. The reviewed literature suggests that evaluation remains concentrated on response-level and model-based proxies, while direct evidence of learning gains remains limited. Learner-state modeling and interaction design also receive less systematic attention. We conclude by identifying challenges in answer leakage, pedagogy–solving trade-offs, learner-state calibration, interaction validity, and proxy",
-      "relevance_score": 5,
+      "title": "The triadic convergence in Industry 5.0: Orchestrating resilient supply chains, agile project management, and algorithmic Islamic banking through smart contracts and green sukuk",
+      "url": "https://doi.org/10.63468/pss.184",
+      "openalex_id": "https://openalex.org/W7233621304",
+      "doi": "https://doi.org/10.63468/pss.184",
+      "published": "2026-11-14",
+      "summary": "Contemporary global value networks and capital-intensive infrastructure projects face an existential crisis driven by geopolitical disruptions, persistent inflation, and the fragile leverage of conventional interest-based debt. Although Supply Chain Management (SCM), Project Management (PM), and Islamic Banking (IB) have evolved rapidly in isolation, a unified framework integrating all three is absent. This article bridges that gap by formulating the Triadic Convergence Framework (TCF), a novel cyber-physical-financial architecture operating within the human-centric and sustainable ethos of Industry 5.0. Grounded in Transaction Cost Economics, Agency Theory, Dynamic Capabilities Theory, and the socio-ethical axioms of Maqasid al-Shariah, this study employs a multi-layered conceptual and mathematical modeling approach. It synthesizes Q1 literature across artificial intelligence, blockchain-enabled Supply Chain Finance, Agile-Hybrid Project Management, and Islamic Sustainable Finance. Furthermore, it formulates a deterministic mathematical model linking Earned Value Management indices with automated, smart-contract-driven Islamic financing disbursements (Parallel Istisna’a and Tokenized Murabaha) verified by IoT Digital Twins. The integration of AI-driven Digital Twins and permissioned blockchain ledgers resolves the historical operational bottleneck of Islamic banking: the high ",
+      "relevance_score": 4,
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "When to Delegate: A Measurement Study of Bounded Agent Teams for Personal Super Agents",
-      "url": "https://doi.org/10.21203/rs.3.rs-11710191/v1",
-      "openalex_id": "https://openalex.org/W7225879188",
-      "doi": "https://doi.org/10.21203/rs.3.rs-11710191/v1",
-      "published": "2026-11-12",
-      "summary": "Abstract Personal super agents coordinate many tools while remaining fast, safe, and accountable to one user. A popular design is a Router delegating to Workers. Recent work shows coordination can cost more than it returns, but transfer to personal agents—single-user context, side-effecting tools, cross-turn references, and refusals—is not established. We present the bounded-delegation runtime protocol, instantiate it in Eva, a 22-tool in-vehicle agent, and introduce Eva-Bench, 80 rule-scored tasks in ten categories. With one real model and tool set, we compare monolithic ReAct, bounded team, and unbounded team, and ablate budgets, reasoning, concurrency, guards, ledger, and injected failures. Delegation is not free: the main team pays 2.75×the latency and 2.59×the tokens. In one full-suite run it leads by one task (92.5% versus 91.2%), but three full-suite repetitions give 92.9% versus 93.3% (difference -0.4pp). Four post hoc temperature- matched runs average 90.6% (range 86.2–93.8%), so temperature alone does not explain the team’s small, unstable lead. We do not claim a general team advantage. The stable finding is the tax; service workflows and cross-turn references favor the team in repeated data, while safety and aggregate success do not. Bounded budgets reduce tail latency, reasoning is a net cost, and guards/ledger are null at oracle success. A selective-delegation poli",
-      "relevance_score": 5,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Fine-Tuned Large Language Models for Theory-Aligned Social Science Content Analysis: Evidence From Collaborative Learning Discourse",
-      "url": "https://doi.org/10.1177/08944393261502769",
-      "openalex_id": "https://openalex.org/W7225893590",
-      "doi": "https://doi.org/10.1177/08944393261502769",
-      "published": "2026-11-12",
-      "summary": "Theory-based content analysis is central to social science research, but coding context-dependent interactional discourse remains difficult to scale. This study examines whether fine-tuned large language models (LLMs) can support theory-aligned, episode-level coding of complex social interaction, using socially shared metacognitive regulation (SSMR) in collaborative learning discourse as a demanding empirical case. Using a human-coded dataset of 2,372 discourse episodes from undergraduate collaborative problem-solving, we adapted the large language model content analysis (LACA) framework through an AI-aligned codebook, prompt design, and supervised fine-tuning. Prompt-only and fine-tuned models were compared across episode-level classification and multilayer SSMR coding. Fine-tuned models substantially improved agreement with human coding and predictive performance relative to prompt-only baselines. Performance was strongest for episode-level classification and several higher-support coding layers, whereas errors remained concentrated in sparse, boundary-prone, and highly interpretive categories requiring social-intent reconstruction and temporally unfolding context. The findings extend recent work on LLM-assisted qualitative and content analysis by showing both the promise and limits of supervised, theory-aligned automation for multilayer social interaction coding. Overall, th",
-      "relevance_score": 5,
+      "title": "The design and impact of a dual-agent artificial intelligence system in personalised mathematics tutoring",
+      "url": "https://doi.org/10.30935/cedtech/19950",
+      "openalex_id": "https://openalex.org/W7231913835",
+      "doi": "https://doi.org/10.30935/cedtech/19950",
+      "published": "2026-11-14",
+      "summary": "Digital tutoring tools are increasingly used in schools to support mathematics learning, but empirical evidence remains limited on how diagnostic and instructional functions can be coordinated to provide personalised support. This study examined a dual-agent intervention in which a diagnostic agent generated provisional learning-profile classifications (diverging, assimilating, converging, and accommodating) and a personalised tutoring agent delivered profile-responsive, stage-specific guidance within Polya’s (1945) problem-solving framework; a general tutoring agent provided non-profile-responsive guidance in the control condition. The quasi-experimental study involved 206 Chinese grade 5 students, including 99 in the experimental group and 107 in the control group. The pre-test and post-test used two parallel mathematics tasks evaluated using the same analytic rubric, and learning gain was calculated from these matched assessment components. The experimental group achieved a significantly larger mean gain than the control group (5.14 vs. 0.94, t(204) = 4.36, p < .001, Hedges’ g = .61). A baseline-adjusted sensitivity analysis confirmed the overall group effect (p < .001). After Holm correction for four profile-specific comparisons, only the assimilating-profile contrast remained significant (adjusted p = .0496). However, the omnibus group-by-profile interaction was not signif",
+      "relevance_score": 4,
       "matched_query": "metacognition self-improving AI agents"
     },
     {
@@ -90,64 +100,14 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "SoK: Sticky Policies Come Unstuck: Where Data-Governance Claims End at Generative Handoffs",
-      "url": "https://doi.org/10.5281/zenodo.24168092",
-      "openalex_id": "https://openalex.org/W7225913465",
-      "doi": "https://doi.org/10.5281/zenodo.24168092",
-      "published": "2026-11-12",
-      "summary": "Modern applications move data through databases, APIs, observability pipelines, and generative systems; each hop can create a new data object: a stored derivative, an agent's tool result, per-step logs. Each component may correctly enforce its controls while the end-to-end path loses the governance basis for new outputs. LLMs both ease and complicate this crossing: they interpret ordinary-language claims without the sender's executable policy grammar, yet create content probabilistically and may release it. We characterize data-governance preservation as an architectural property of generative paths under a declared scope and trust model. At each in-scope use or release, the responsible mechanism must identify the exact output's applicable claims, join them with current request authority, and mediate every declared path. After content-changing derivation, authorized transition semantics must establish the output's governance basis and make it obtainable or resolvable downstream. We formalize this as a decision-factorization condition: correctness is possible exactly when every trusted-state equivalence class retains a common permitted decision; no universal policy language is required. We evaluate sixteen mechanism families across six lifecycle stages and four cross-stage interfaces, and we adjudicate eight product- and protocol-specific boundary paths selected as the strongest",
-      "relevance_score": 4,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Personas shift clinical action thresholds in large language models",
-      "url": "https://doi.org/10.1038/s44401-026-00121-z",
-      "openalex_id": "https://openalex.org/W7118064732",
-      "doi": "https://doi.org/10.1038/s44401-026-00121-z",
-      "published": "2026-11-14",
-      "summary": "Clinical large language model (LLM) deployment is shifting from feasibility to liability, while current guidance largely treats model behavior as a control problem. We tested whether decision-style system prompts shift clinical action thresholds when clinical facts are held constant, and whether these shifts are consistent across settings and models. We defined nine physician personas by crossing three ethical orientations (duty-based, care-based, utilitarian) with three cognitive styles (intuitive, integrative, analytic). Twenty open-weight LLMs were evaluated on 2500 simulated emergency department vignettes and 2500 MIMIC-IV-Note discharge summaries. For each text, models answered five binary decision items (safety, autonomy, treatment, resource use, follow-up). Each condition was repeated ten times, yielding 5,000,000 total decisions. Under baseline prompting, models answered “Yes” to 42.8% of decisions. Persona prompts shifted affirmative rates from 36.9% to 46.4%, a 9.5 percentage-point swing under fixed clinical evidence. Effects were largest in autonomy and treatment and were consistent across corpora (85.7% directional agreement; r = 0.82 for effect sizes). Susceptibility varied by model (4.9–16.1 points), with no consistent protection from medical fine-tuning or model size. Decision-style system prompts reliably change clinical action thresholds in LLMs under fixed evi",
+      "title": "Curriculum-aligned analysis of assessment feedback: a retrieval-augmented large language model approach for revealing fine-grained student error patterns in higher education",
+      "url": "https://doi.org/10.1186/s41239-026-00640-7",
+      "openalex_id": "https://openalex.org/W7165883481",
+      "doi": "https://doi.org/10.1186/s41239-026-00640-7",
+      "published": "2026-11-15",
+      "summary": "Abstract Assessment feedback in higher education provides fine-grained evidence about students’ specific errors but remains underutilized as a data source for teaching improvement. This study proposes a method based on a large language model (LLM) that transforms unstructured feedback into curriculum-aligned error analysis in three steps, deriving an error taxonomy from the feedback, mapping each piece to curriculum content by retrieval-augmented generation, and aggregating the annotations into error patterns with quantified cohort coverage. The method was applied to 6072 pieces of feedback across four cohorts (2022–2025) of an undergraduate engineering course. The feedback resolved into recurring, curriculum-aligned error patterns, dominated by missing content and justification, clustered in identifiable modules and weeks, and more than half recurring across cohorts. The resulting annotations achieved 89.1% agreement with human judgment, substantially higher than the 74.7% obtained when an expert-designed taxonomy was applied to the same data. In a focus group, the teaching team confirmed the patterns against their marking experience, proposed course revisions from them, and set the bound that they serve as a reference and not as a direct measure of teaching quality. The study reports a process account of this team’s use of curriculum-aligned error analytics, built on sensemak",
       "relevance_score": 3,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "FlexMARL: Graph-Driven Rollout-Training Co-Design for LLM-Based Multi-Agent Reinforcement Learning",
-      "url": "https://doi.org/10.1145/3828523.3857118",
-      "openalex_id": "https://openalex.org/W7128624946",
-      "doi": "https://doi.org/10.1145/3828523.3857118",
-      "published": "2026-11-14",
-      "summary": "Despite algorithm-level innovations for multi-agent reinforcement learning (MARL), the underlying infrastructure for large-scale MARL remains underexplored. Existing training frameworks primarily optimize for single-agent scenarios and fail to capture the graph-structured nature of MARL. This fundamental mismatch leads to three MARL-specific challenges: topology-induced rollout skew, critical path synchronization barriers, and dynamic training demand. To bridge this gap, we propose FlexMARL, a graph-driven rollout-training co-designed framework for large-scale LLM-based MARL. FlexMARL introduces the multi-agent execution graph (MEG) and materializes the intermediate representation as the MEG Store, which provides decentralized multi-table storage and serves as the data hub for system components. Built around the MEG Store, the Rollout Engine develops dependency parallel sampling with hierarchical load balancing, which reduces inference latency and balances intra-agent/inter-agent loads. The Joint Orchestrator exploits an agent-level asynchronous pipeline to mitigate the critical path synchronization barriers while maintaining consistency. The Training Engine achieves on-demand resource allocation by collectively managing training processes for individual agents. The training states of different agents are swapped via location-agnostic communication APIs. Empirical results on a ",
-      "relevance_score": 3,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "Sharing is caring: Attestable and Trusted Cloud Pipelines out of Distrustful Components",
-      "url": "https://doi.org/10.1145/3828523.3857024",
-      "openalex_id": "https://openalex.org/W7133782088",
-      "doi": "https://doi.org/10.1145/3828523.3857024",
-      "published": "2026-11-14",
-      "summary": "Trusted Execution Environments (TEEs) protect private memory and attest initial code and configuration, but neither constrain nor attest shared channels between TEEs or with the untrusted host. Confidentiality thus depends on the functional correctness of all in-TEE code accessing these channels: a single misuse can leak data and compromise a pipeline. This assumption is increasingly untenable for agentic applications that generate code at runtime and cloud pipelines of mutually distrustful components. We present MICA, a confidential-computing firmware extension that decouples confidentiality from trust in in-TEE code. MICA lets tenants define, restrict, and attest channel constraints between TEEs and with the untrusted host, including transitive constraints spanning a pipeline. It extends attestation to groups of communicating TEEs, letting external parties verify the confidentiality properties induced by these constraints across a pipeline. We implement MICA on Arm CCA by extending the Realm Management Monitor with a small policy language, requiring no hardware changes and minor QEMU and KVM changes. Our evaluation demonstrates support for confidential agentic applications and pipeline computations without trusting the functional correctness of in-TEE code. MICA increases the TCB by 7% and incurs infrequent setup costs: 2-4% boot-time overhead, approximately 1.5 s for policy ",
-      "relevance_score": 3,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "Scaling LLM Agent Tool Access: The MCP Gateway",
-      "url": "https://doi.org/10.1145/3828523.3857007",
-      "openalex_id": "https://openalex.org/W7169810058",
-      "doi": "https://doi.org/10.1145/3828523.3857007",
-      "published": "2026-11-14",
-      "summary": "LLM agents increasingly rely on tool calling to complete tasks. Model Context Protocol (MCP) standardizes tool calling between LLM agents and tool providers. It reduces integration cost and drives rapid growth in tool scale. In production deployments, tool access becomes difficult to scale. On the tool provider side, legacy services are not directly callable through MCP; the rapid protocol development creates ongoing compatibility cost. On the agent side, the number of mounted tools is limited by the LLM context window and inference overhead; mounting a large tool set increases token usage and inference latency and can reduce task success rate. Moreover, for stateful MCP backends with multiple replicas, preserving session affinity increases client-side complexity. We present a cloud-scale MCP Gateway system. It breaks the direct-connect model on the data plane and offloads legacy service integration, consolidating incompatible MCP variants, access control, tool recommendation, and session-aware routing at the gateway. The conversion module supports 315 OpenAPI services in the cloud and integrates MCP transport variants. Session-aware routing decouples the scalability of the gateway layer and the MCP service layer. The hybrid retrieval engine sustains $\\sim$98\\% Top-15 recall; it scales agent tool access to 3{,}000+ tools with improved tool selection accuracy. We also share the ",
-      "relevance_score": 3,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "From Hindsight to Foresight: Adapting Reusable Reasoning Structures from Recurring Financial Events",
-      "url": "https://doi.org/10.1145/3858063.3858846",
-      "openalex_id": "https://openalex.org/W7213631432",
-      "doi": "https://doi.org/10.1145/3858063.3858846",
-      "published": "2026-11-14",
-      "summary": "Forecasting real-world events requires reasoning under uncertainty from information available at a fixed cutoff. Recent work has improved how large language models (LLMs) retrieve evidence and produce probabilistic forecasts, but each question is treated independently even when similar events recur. Resolved occurrences carry experience for later forecasts, yet past outcomes and case summaries do not preserve the relationships that made an earlier occurrence informative. We develop ReFoRM (Recurrent-event Forecasting with Reasoning Memory), which organizes reasoning from resolved events into predictive paths, retrieves relevant paths for a later occurrence, and reconstructs their relations using evidence at the new forecast cutoff. We evaluate ReFoRM on the Recurring Financial Events Set, which contains 300 questions across 40 recurring financial event families and uses earlier occurrences as hindsight for 100 forecast targets. Across five LLMs and six baselines, ReFoRM improves categorical and probabilistic forecasting performance. Further analyses show that validating historical relations with current evidence and reconstructing them enhances forecasting. Reasoning evaluation also demonstrates stronger evidence grounding, logical validity, and mechanism specificity.",
-      "relevance_score": 3,
-      "matched_query": "persistent agent memory"
+      "matched_query": "automated AI research experimentation"
     },
     {
       "title": "Verifying Reasoning Chains Generated by Large Language Models: A Survey",
@@ -156,26 +116,6 @@
       "doi": "https://doi.org/10.1145/3862627",
       "published": "2026-11-13",
       "summary": "Large Language Models (LLMs) are extensively used for many Natural Language Processing tasks such as question answering, natural language inference, document summarization, etc. Chain-of-Thought (CoT) prompting compels LLMs to generate step-by-step reasoning chains. While some of the reasoning chains may follow a correct thought process, they can also suffer from hallucinations, leading to errors in answer generation. Recently, many articles have targeted the problem of verifying these reasoning chains from various aspects. Despite this recent attention, to the best of our knowledge, no comprehensive survey currently summarizes these studies on reasoning chain verification. This work addresses that gap by presenting a detailed overview of the methods for verifying reasoning chains and categorizing them according to their methodology. This paper introduces a novel taxonomy of existing reasoning chain verification methods and mainly divides them into approaches that assess entire chains versus those that examine individual steps. This paper also reviews benchmarks for evaluating reasoning chains and verification methods and further discusses the challenges and future directions associated with these methods. By compiling and analyzing these approaches, our survey aims to advance the understanding and development of robust reasoning techniques in LLMs.",
-      "relevance_score": 3,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
-      "title": "SkillCODER: Towards Auditing and Attribution of Copyright Infringement in LLM Agent Skills",
-      "url": "https://doi.org/10.1145/3830454.3846644",
-      "openalex_id": "https://openalex.org/W7225732424",
-      "doi": "https://doi.org/10.1145/3830454.3846644",
-      "published": "2026-11-12",
-      "summary": "Agent skills package reusable workflows, constraints, and task-specific procedures into deployable text artifacts for LLM-based agent ecosystems. Unlike conventional system prompts, skills are distinguished by scale, spanning hundreds or thousands of tokens across many sections, and readability, being written in natural language. These properties make skills valuable but also vulnerable to copyright infringement: licensed buyers can redistribute a skill, and shared skills can be repackaged without consent. Existing copyright auditing methods for system prompts are inadequate here: skill length dilutes watermark signals, while their token-level perturbations compromise the readability essential to a skill's utility. We therefore propose SkillCODER, a method for copyright auditing and buyer attribution of agent skills under a practical black-box, content-only setting. SkillCODER operates in two phases. In the embedding phase, it parses the skill into a section-aware intermediate representation, SkillIR, that identifies stable structural anchors; it then embeds ownership evidence by distributing conditional instructions across structural nodes to form an Artifact-Gated Capsule, designed to activate under defender-designed verification queries and remain dormant otherwise; and it encodes a buyer-specific fingerprint via Controlled-Vocabulary Error-Correcting Codes that bind each co",
-      "relevance_score": 3,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Llama-Polya: Instruction Tuning for Large Language Model Based on Polya’s Problem-Solving",
-      "url": "https://doi.org/10.1007/978-3-032-31657-8_32",
-      "openalex_id": "https://openalex.org/W7128710169",
-      "doi": "https://doi.org/10.1007/978-3-032-31657-8_32",
-      "published": "2026-11-12",
-      "summary": "",
       "relevance_score": 3,
       "matched_query": "metacognition self-improving AI agents"
     },
@@ -200,6 +140,16 @@
       "matched_query": "metacognition self-improving AI agents"
     },
     {
+      "title": "Post-traumatic stress disorder: pathogenesis, epidemiological characteristics, animal models, and potential therapeutic strategies",
+      "url": "https://doi.org/10.1016/j.mmr.2026.100005",
+      "openalex_id": "https://openalex.org/W7140309693",
+      "doi": "https://doi.org/10.1016/j.mmr.2026.100005",
+      "published": "2026-12-01",
+      "summary": "Post-traumatic stress disorder (PTSD) is a complex neurobehavioral disorder that disproportionately affects military service members. The clinical presentation of PTSD is heterogeneous and may overlap with other psychiatric conditions. According to the Fifth Edition of the Diagnostic and Statistical Manual of Mental Disorders (DSM-5), common symptoms include memory loss, mood and personality changes, impulsiveness, aggression, anxiety, and depression. The pathophysiological mechanisms underlying PTSD remain incompletely understood, although research implicates pathways involving the hypothalamic-pituitary-adrenal (HPA) axis, dysfunctional neural circuitry, neurochemical imbalances, neuroinflammatory processes, and genetic and epigenetic factors. Approximately 7% of the U.S. adult population has met the diagnostic criteria for PTSD in their lifetime, with a substantially higher prevalence of 12%-30% among military personnel. Multiple animal models, including single-stressor, intermediate complexity, social interaction, predator stress, and blast exposure paradigms, have been employed to investigate PTSD mechanisms. Current treatment strategies typically integrate pharmacotherapy and psychotherapy. Military service members are at increased risk for blast injuries, which frequently result in traumatic brain injury (TBI). Although some symptoms of TBI may resolve, approximately 20%",
+      "relevance_score": 2,
+      "matched_query": "persistent agent memory"
+    },
+    {
       "title": "Can TDD improve the quality of LLM-migrated code? : A pilot study in an industrial context",
       "url": "https://lup.lub.lu.se/record/27eef6f8-a28f-44f4-87ab-0f4206c0f935",
       "openalex_id": "https://openalex.org/W7215001135",
@@ -216,6 +166,16 @@
       "doi": "https://doi.org/10.65678/jetech.v2i3.346",
       "published": "2026-11-25",
       "summary": "This study examines how the integration of Design Thinking into Information Technology (IT) and technology education can bridge technical programming skills and creative, human-centered problem-solving. Specifically, it explores how the five stages of Design Thinking empathizing, defining, ideating, prototyping, and testing shape students’ creative thinking, active engagement, and collaborative learning experiences. A qualitative research approach was employed, involving teachers, students, and school principals as key informants. Data were collected through in-depth interviews, classroom observations, and documentation of learning activities, then analyzed thematically to identify recurring patterns in teaching practices and student experiences. The findings indicate that Design Thinking creates opportunities for students to move beyond coding procedures toward developing digital solutions that respond to real users’ needs. Through collaborative ideation, iterative prototyping, and feedback-based testing, students demonstrate greater involvement in learning, explore alternative solutions, and communicate their ideas more actively. The approach also provides opportunities to develop empathy, creativity, collaboration, and a willingness to experiment with and revise initial designs. Meanwhile, teachers assume a facilitative role by guiding inquiry, supporting experimentation, an",
+      "relevance_score": 2,
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "Deep multimodal K-fold Model for emotion and sentiment analysis in figurative language",
+      "url": "https://doi.org/10.1007/s10772-026-10308-2",
+      "openalex_id": "https://openalex.org/W4391621613",
+      "doi": "https://doi.org/10.1007/s10772-026-10308-2",
+      "published": "2026-11-14",
+      "summary": "Abstract The “Deep multimodal K-fold model” is an approach to machine learning that uses multiple modalities, such as text and audio, to analyze emotion and sentiment in Figurative Language. This model uses a K-fold cross-validation method to test how well it works and ensure it can be used in other situations. Using the CMU-MOSEI (Carnegie Mellon University Multimodal Opinion Sentiment and Emotion Intensity) database, we explore sentiment and emotion, considering various aspects like ironic, sarcastic, and subjective sentences in this study. We have four models in our deep learning analysis approach (audio emotion, text emotion, text sentiment, and audio sentiment). We suggested a single-tasking multimodal framework outperforming others to benefit from the interdependence of two related activities (sentiment and emotion). Our experiment was conducted using CNN and LSTM. Specific experimental findings show that LSTM performs better than CNN for the two emotion models, whereas CNN is slightly better for the two sentiment models. We achieved 99% accuracy in the k-Fold Deep Learning Text Emotion model and 88% in the k-Fold Deep Learning Audio Emotion model with the LSTM technique (85% and 85% with CNN). In text and audio sentiment analysis, we got 94% and 79% with CNN (93% and 78% with LSTM), respectively. All reported figures are accuracies on a single held-out test split rather ",
       "relevance_score": 2,
       "matched_query": "automated AI research experimentation"
     },
@@ -250,6 +210,16 @@
       "matched_query": "metacognition self-improving AI agents"
     },
     {
+      "title": "Development of DCIRV based on AI-NLP for ed-comm in Asia, Europe and Canada",
+      "url": "https://doi.org/10.54899/iij.v20i4.1102",
+      "openalex_id": "https://openalex.org/W7233566109",
+      "doi": "https://doi.org/10.54899/iij.v20i4.1102",
+      "published": "2026-11-13",
+      "summary": "The development and utilisation of Virtual Community Digital Learning Nusantara products have been successful in Indonesia, Japan, and Korea through experts from Bordeaux, France, and Canada. Furthermore, research from 2025 to 2026 will build a Digital Centre Innovation for Robotics VCDLN (DCIRV) based on artificial intelligence with natural language processing to strengthen and expand future innovation. The research focuses on redesigning DCIRV by implementing APIs for notification communication. Thus, the method that has been used with the mixed method for the development of DCIRV through the ADDIE model (Analysis, Design, Development, Implementation, and Evaluation) is then to test the impact using an explanatory survey with Path Diagram Analysis Statistics. The results of the study show that (1) the redesign and development of DCIRV content was carried out by adding features and APIs for notification of content and new members from the database system to all users; (2) the results of experts from Europe, Asia and Canada were very positive about DCIRV with the implementation of APIs for notifications which were also based on AI-NLP in the form of Chatbot content that could be used in various parts of the world; (3) The development of AI-NP-based DCIRV was carried out through five strategic aspects in supporting the location of the ongoing communication of Educational Technol",
+      "relevance_score": 2,
+      "matched_query": "metacognition self-improving AI agents"
+    },
+    {
       "title": "TurboRetry: Mitigating Large-Scale QUIC Handshake Floods with Off-the-Shelf DPU Offloading",
       "url": "https://doi.org/10.1145/3830454.3832585",
       "openalex_id": "https://openalex.org/W7172433243",
@@ -258,16 +228,6 @@
       "summary": "The modern transport protocol QUIC is designed to enhance network performance and security, but it remains vulnerable to handshake flooding attacks. Such attacks exhaust CPU resources by forcing the server to perform expensive cryptographic operations via a large number of handshaking requests. QUIC provides a built-in defense mechanism, the Retry mechanism, to mitigate these attacks. However, our experiments reveal that it can still become a performance bottleneck under large-scale QUIC handshake floods due to substantial computational overhead. In this paper, we design and implement TurboRetry, a split design, that offloads the Retry mechanism onto DPUs to efficiently mitigate QUIC handshake floods. TurboRetry partitions the tasks of the Retry into two categories, and then assigns them to the DPUs and the host, respectively. To preserve QUIC semantics and reduce the coordination overhead, TurboRetry designs an extended Retry token format and an efficient cooperation scheme. In addition, TurboRetry offloads the connection authorization task to the on-path Data Path Accelerator (DPA) to further improve both performance and security. Our evaluation shows that TurboRetry increases the maximum sustainable attack rate by 10--20× over host QUIC stacks.",
       "relevance_score": 2,
       "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Investigating the association between problematic social media use and the feeling of self-alienation.",
-      "url": "https://doi.org/10.1037/tmb0000239",
-      "openalex_id": "https://openalex.org/W7225873038",
-      "doi": "https://doi.org/10.1037/tmb0000239",
-      "published": "2026-11-12",
-      "summary": "Problematic social media use (PSMU) has emerged as a growing concern, with researchers, and the broader public alike, interested in its associations with well-being.However, little research has addressed how PSMU may be linked to disruptions in more fundamental aspects of the self.Across five studies using U.S.-based samples (N = 1,479; 2023-2025), we tested the hypothesis that PSMU is associated with greater self-alienation (i.e., a felt sense of disconnection from the self).Studies 1a and 1b provided weak cross-sectional evidence of a positive trait-level association between PSMU and self-alienation while controlling for general psychological distress and self-esteem.Studies 2 and 3 attempted to experimentally manipulate PSMU at the state level by inducing momentary urges to use social media and test if it would produce subsequent shifts in state-level self-alienation.Neither manipulation produced the intended causal effect; however, trait-level PSMU positively predicted state-level self-alienation above and beyond negative affect, self-esteem, and spontaneous mind wandering, though these effect sizes were weak.Study 4 employed a daily diary design and revealed both within-and between-person associations between PSMU and daily self-alienation, although these positive associations were weak controlling for daily negative affect and spontaneous mind wandering.Taken together, th",
-      "relevance_score": 2,
-      "matched_query": "metacognition self-improving AI agents"
     },
     {
       "title": "Video and digital games: Historical controversies, benefits, and risks for children and adolescents",
@@ -308,6 +268,46 @@
       "summary": "Medical cannabis, also known as medical marijuana, is becoming a more popular treatment for many diseases, including chronic pain. Chronic pain is difficult to treat, and current pain relievers are less effective in women. Medical cannabis may be a useful alternative to the medications that are currently available, but more research is needed to determine how safe and effective it is. Cannabis belongs to a class of drugs known as cannabinoids, which act on the body’s own endocannabinoid system to produce its effects. Cannabinoids affect the sexes differently, but it is not clear what causes these differences. Our research explored how sex hormones like estrogen and testosterone affect the efficacy of cannabinoids. To do this, I first examined whether removing these hormones would affect the brain’s response to THC, the main ingredient in cannabis. I found that THC affected brain regions differently in mice with depleted hormones. Additionally, THC affected brain regions differently in males and females. Next, I tested whether testosterone and estrogen affected how well cannabinoids worked as pain relievers. I found that testosterone reduced the drug’s efficacy in females, while estrogens reduced its efficacy in males. This would suggest that hormones have a different effect on males and females, leading to differences in the cannabinoid’s pain-relieving ability. Lastly, I sough",
       "relevance_score": 1,
       "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "Natural Language Processing and Graph Methods for Knowledge Graph Applications",
+      "url": "https://doktori.bibl.u-szeged.hu/id/eprint/13202/1/kardospeter_disszertacio.pdf",
+      "openalex_id": "https://openalex.org/W7204678376",
+      "doi": null,
+      "published": "2026-11-26",
+      "summary": "Declaration of the Use of AI v List of Figures 4.1 KG Entity Alignment example in the Star Wars domain.Equivalent entities often appear under different names. . . . . . . . . . . . . . . .40 4.2 Cumulative percentage of gold-standard pairs retrieved at each rank position in SentenceBERT similarity rankings for the Memory Alpha-ST Expanded dataset. . . . . . . . . . . . . . . . . . . . . . . . . . . .42 4.3 Pipeline's dataflow.The brackets indicate which property was used. . .45 5.1 Overview of the proposed sparse entity alignment pipeline.For each anchor entity in the source KG, we: (1) generate textual representations (Dogtags) incorporating node attributes and graph structure, (2) retrieve top-k candidates using embedding similarity, (3) select matches via exact matching, embedding-based reranking, or LLM prompting, and (4) deduplicate to enforce 1:1 alignments.Multiple strategies can be merged using threshold calibration from exact matches. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .56 5.2 Comparison of entity representation strategies (Dogtags): Node-based representations use limited context from attributes and abstracts, while the LLM Summary incorporates rich relational and attribute information from the knowledge graph neighborhood.All four representations serve as input to embedding-based retrieval and matching algorithms. . . . . . . . . . . .",
+      "relevance_score": 1,
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "Dream-Butterfly: Configuring Embodied Conversational Guidance for Public Outdoor Mixed Reality Exhibitions",
+      "url": "https://doi.org/10.1145/3822517.3848728",
+      "openalex_id": "https://openalex.org/W7127999136",
+      "doi": "https://doi.org/10.1145/3822517.3848728",
+      "published": "2026-11-14",
+      "summary": "Public outdoor mixed reality (MR) exhibitions make guidance a spatial interaction problem: visitors need timely explanations while roaming open sites, attending to virtual artworks, hazards, bystanders, and route choices. We present Dream-Butterfly, a field-deployed embodied conversational guide for campus-scale outdoor MR exhibitions. Visitors explicitly summon the lightweight non-humanoid guide; it returns visibly to a hand-relative dialogue position and answers using retrieval-augmented responses scoped by the MR runtime to the artwork currently encountered. Within the resulting mixed guidance ecology, staff remain accountable for safety, wayfinding, device support, and contingencies. Dream-Butterfly was deployed with over 30 spatially anchored artworks across a 26,000 m2 campus site, which we use as a stress case for public MR guidance under walking, field-of-view limits, route choice, bystander exposure, and safety constraints. In an in-the-wild study with 24 visitors, we compared two role arrangements: agent-default, where the embodied guide served as the default channel for artwork interpretation, and docent-default, where staff provided primary narration while the agent remained optional. Agent-default guidance was associated with more available, visitor-timed explanations, higher immersion/engagement, and stronger hedonic quality, while increasing visitors’ self-curati",
+      "relevance_score": 1,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "PrefixFlow: Training-Time KV Caching for Schedule-Level Prefix Reuse in LLM RL Training",
+      "url": "https://doi.org/10.1145/3828523.3857100",
+      "openalex_id": "https://openalex.org/W7163141910",
+      "doi": "https://doi.org/10.1145/3828523.3857100",
+      "published": "2026-11-14",
+      "summary": "In reinforcement learning (RL) post-training, one prompt fans out into N trajectories, yet standard trainers replay the shared prefix’s forward and backward pass N times; in long-context retrieval-augmented generation (RAG) and multimodal workloads, this repetition dominates training compute. Existing designs reuse the prefix within one computation graph (a packed sequence, fused kernel, or tree traversal); under the trainer’s memory limits and parallelism, their compute savings do not reliably become shorter steps. We present PrefixFlow , which takes the prefix out of that graph and into the training schedule through a training-time KV cache : Phase A runs one prefix forward and caches its keys and values ( K / V ); Phase B trains suffixes as ordinary microbatches that read only K / V and write back only their gradients ( gK / gV ); Phase C runs one delayed prefix backward on the accumulated gK / gV . Memory and parallelism then become manageable: dormant prefix activations are offloaded during Phase B to free high-bandwidth memory (HBM) for suffixes, and context, pipeline, and data parallelism each schedule the phases through a local rule while tensor and expert parallelism need no change, so saved compute becomes shorter steps under any microbatch split. On dense models, and on mixture-of-experts (MoE) models under Rollout Routing Replay, PrefixFlow matches full-sequence tra",
+      "relevance_score": 1,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "Artificial intelligence and clinical reasoning - a qualitative study with general practice trainees in Germany",
+      "url": "https://doi.org/10.1186/s12909-026-10736-3",
+      "openalex_id": "https://openalex.org/W7225992105",
+      "doi": "https://doi.org/10.1186/s12909-026-10736-3",
+      "published": "2026-11-14",
+      "summary": "BACKGROUND: General practitioners face high complexity in clinical decision-making. Large language models (LLMs) may support clinical reasoning, but their impact on decision-making processes and postgraduate medical training remains unclear. This qualitative study aims to explore General Practice (GP) trainee's use of LLMs in clinical reasoning and their educational needs. MATERIALS AND METHODS: GP trainees were recruited and interviewed with semi-structured interview-guide. Interviews were transcribed verbatim and analysed qualitatively. RESULTS: Seventeen GP trainees participated (mean interview duration: 38 min; range: 21-63 min). AI was perceived as a tool to augment and accelerate clinical decision-making, while potential risks of deskilling were identified. Participants reported a lack of structured AI education and expressed a need for its integration into postgraduate training. DISCUSSION: Participants perceived AI primarily as a supportive tool that can complement clinical reasoning and improve access to medical knowledge. At the same time, they identified potential risks, including overreliance on AI-generated information and possible effects on the development of clinical expertise. These findings suggest that postgraduate medical training should address AI-related competencies, including critical appraisal, ethical responsibility and appropriate integration of AI in",
+      "relevance_score": 1,
+      "matched_query": "automated AI research experimentation"
     }
   ],
   "paper_count": 30,
