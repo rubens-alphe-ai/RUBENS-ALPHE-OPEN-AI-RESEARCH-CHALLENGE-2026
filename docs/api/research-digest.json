@@ -1,6 +1,6 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-11-17T13:33:26.690728+00:00",
+  "generated_at_utc": "2026-11-18T13:09:30.076312+00:00",
   "source": "OpenAlex public API",
   "queries": [
     "persistent agent memory",
@@ -9,16 +9,6 @@
     "metacognition self-improving AI agents"
   ],
   "papers": [
-    {
-      "title": "VANTAGE-V-AI: Bounded-Memory KV-Cache Compression and Streaming Inference Runtime for Large Language Models",
-      "url": "https://doi.org/10.5281/zenodo.24243286",
-      "openalex_id": "https://openalex.org/W7233542439",
-      "doi": "https://doi.org/10.5281/zenodo.24243286",
-      "published": "2026-11-15",
-      "summary": "Autoregressive generation in Large Language Models (LLMs) deployed within extended multi-turn dialogs and autonomous agentic workflows suffers from an acute memory wall. Because conventional Key-Value (KV) caching retains representations for all preceding tokens, memory consumption scales linearly O(N) with sequence length and batch size, precipitating catastrophic Out-Of-Memory (OOM) failures or massive resource underutilization. In this work, we present VANTAGE-V-AI (v8.2.0), a high-performance inference runtime designed to bound KV-cache memory consumption to a strictly fixed budget O(W) while maintaining numerical parity and stability. VANTAGE integrates three complementary mechanisms: (1) Streaming Attention Sinks, which persistently retain initial anchor tokens to anchor attention distribution scores alongside a recency sliding window, eliminating softmax entropy collapse; (2) 2-Bit Packed Ternary Quantization ({-1, 0, +1}) packing four ternary values per byte, achieving an 8x reduction in KV-cache storage; and (3) a drop-in runtime architecture that wraps standard Hugging Face Transformer decoders in two lines of code without retraining. We empirically benchmark VANTAGE on dual NVIDIA Tesla T4 GPUs across a 1,024-token prompt using Qwen/Qwen2.5-3B-Instruct. Following MLSys asynchronous execution protocols, we report end-to-end wall-clock timing including host-device PCIe",
-      "relevance_score": 9,
-      "matched_query": "persistent agent memory"
-    },
     {
       "title": "Governed Hybrid Agency: A Critical Evidence Map of Cognitive Architectures for Foundation-Model Agents",
       "url": "https://doi.org/10.1613/jair.1.23727",
@@ -40,16 +30,6 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Selective TPM-Based Runtime Firmware Attestation for Smart Energy Meters",
-      "url": "https://doi.org/10.5281/zenodo.24241176",
-      "openalex_id": "https://openalex.org/W7233553557",
-      "doi": "https://doi.org/10.5281/zenodo.24241176",
-      "published": "2026-11-15",
-      "summary": "Code and data for: “Selective TPM-Based Runtime Firmware Attestation for Smart Energy Meters: Randomised Challenge Scheduling, Verifier Appraisal and Prototype Evaluation” (Gaur and Singh). This record contains the complete implementation, raw results and manuscript sources behind the paper. It regenerates every number, table and figure in the paper. What the paper does. Secure boot and authenticated updates protect the firmware a smart energy meter starts with, but not its state hours later. A runtime attack that rewrites a dispatch table, calibration constants or tariff configuration in RAM changes behaviour without changing the stored image. The paper presents a runtime attestation framework built on a TPM 2.0 and aligned with the IETF RATS architecture (RFC 9334) and RFC 9683. It has three parts: a selective monitoring policy that re-measures only small, stable, behaviour-defining RAM regions; a verifier with a fixed appraisal order and handling of authorised configuration updates; and randomised challenge schedules analysed against persistent, transient and schedule-aware adversaries. What is in the package. fw/: Cortex-M3 firmware stand-in for a meter (run on QEMU), with its linker layout. src/: software-TPM backend (swtpm and tpm2-pytss, behind a vendor-neutral interface), measurement agent, verifier and abstract tamper injector. scripts/: trial runner, shard merger, sta",
-      "relevance_score": 5,
-      "matched_query": "persistent agent memory"
-    },
-    {
       "title": "AgentMesh: Toward Redundancy- and Barrier-Free Dataflow in Multi-Agent Systems",
       "url": "https://doi.org/10.1145/3828523.3857023",
       "openalex_id": "https://openalex.org/W7232787172",
@@ -68,6 +48,16 @@
       "summary": "Automation platforms such as GitHub Actions and n8n are increasingly adopting so-called agentic workflows, which integrate Large Language Model (LLM) agents for tasks such as code review and data synchronization. While bringing convenience for developers, this integration exposes a new risk: An adversary may control and craft certain inputs, such as GitHub issue comments, to manipulate the LLM agent for unwanted actions, such as credential exfiltration and arbitrary command execution. To our knowledge, no prior academic work has studied such a risk in agentic workflows. In this paper, we design the first detection and exploitation framework, called JAW, to hijack agentic workflows hosted on automation platforms via a novel approach called Context-Grounded Evolution. Our key idea is to evolve agentic workflow inputs under the contexts derived from hybrid program analysis for hijacking purposes. Specifically, JAW generates agentic workflow contexts through three analyses: (i) static path-feasibility analysis to identify feasible agent-invocation paths and the input constraints required to trigger them, (ii) dynamic prompt-provenance analysis to determine how that input is transformed and embedded into the LLM context, and (iii) capability analysis to identify the actions and restrictions available to the agent at runtime. Our evaluation of JAW on GitHub workflows and n8n template",
       "relevance_score": 5,
       "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "3CBench: a unified benchmarking framework for the computing capacity of heterogeneous AI clusters",
+      "url": "https://doi.org/10.1007/s42514-026-00290-1",
+      "openalex_id": "https://openalex.org/W4415002492",
+      "doi": "https://doi.org/10.1007/s42514-026-00290-1",
+      "published": "2026-11-16",
+      "summary": "Abstract The rapid evolution of Artificial Intelligence has driven the demand for extensivecomputational resources and the deployment of AI tasks across heterogeneouscomputing platforms. However, existing benchmarking systems face several chal-lenges, including limited compatibility with diverse hardware, insufficient supportfor varied deep learning frameworks and tasks, and a lack of comprehensive eval-uation metrics for the computing capacities. To address these issues, we propose3CBench, a unified benchmarking framework designed for heterogeneous AI clus-ters. Featuring a modular architecture encompassing environment management,task execution, and metrics analysis, 3CBench provides automated workflows andensures seamless compatibility with diverse GPU architectures and deep learningframeworks. It provides a comprehensive evaluation metrics system to rigorouslyassess computational performance and stability across both transformer-basedlarge language models and convolutional neural networks, thereby covering dom-inant deep learning architectures. Extensive experiments demonstrate 3CBench’sscalability on heterogeneous AI clusters, compatibility with various deep learningframeworks and tasks, and the support for a wide range of applications. Addition-ally, 3CBench aids in problem diagnosis during the development process of GPUvendors. These features establish 3CBench as a robust",
+      "relevance_score": 4,
+      "matched_query": "automated AI research experimentation"
     },
     {
       "title": "The triadic convergence in Industry 5.0: Orchestrating resilient supply chains, agile project management, and algorithmic Islamic banking through smart contracts and green sukuk",
@@ -100,14 +90,24 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Curriculum-aligned analysis of assessment feedback: a retrieval-augmented large language model approach for revealing fine-grained student error patterns in higher education",
-      "url": "https://doi.org/10.1186/s41239-026-00640-7",
-      "openalex_id": "https://openalex.org/W7165883481",
-      "doi": "https://doi.org/10.1186/s41239-026-00640-7",
-      "published": "2026-11-15",
-      "summary": "Abstract Assessment feedback in higher education provides fine-grained evidence about students’ specific errors but remains underutilized as a data source for teaching improvement. This study proposes a method based on a large language model (LLM) that transforms unstructured feedback into curriculum-aligned error analysis in three steps, deriving an error taxonomy from the feedback, mapping each piece to curriculum content by retrieval-augmented generation, and aggregating the annotations into error patterns with quantified cohort coverage. The method was applied to 6072 pieces of feedback across four cohorts (2022–2025) of an undergraduate engineering course. The feedback resolved into recurring, curriculum-aligned error patterns, dominated by missing content and justification, clustered in identifiable modules and weeks, and more than half recurring across cohorts. The resulting annotations achieved 89.1% agreement with human judgment, substantially higher than the 74.7% obtained when an expert-designed taxonomy was applied to the same data. In a focus group, the teaching team confirmed the patterns against their marking experience, proposed course revisions from them, and set the bound that they serve as a reference and not as a direct measure of teaching quality. The study reports a process account of this team’s use of curriculum-aligned error analytics, built on sensemak",
+      "title": "A flexible agent-based modelling framework of multi-serotype pneumococcal carriage to evaluate vaccine strategies in large populations",
+      "url": "https://doi.org/10.1371/journal.pcbi.1014946",
+      "openalex_id": "https://openalex.org/W4410632968",
+      "doi": "https://doi.org/10.1371/journal.pcbi.1014946",
+      "published": "2026-11-16",
+      "summary": "Streptococcus pneumoniae is a multi-serotype pathogen causing a substantial global burden of pneumonia and invasive bacterial disease. Pneumococcal conjugate vaccines have been implemented worldwide, protecting against colonisation and disease from selected high-burden serotypes, but in many settings short-term effectiveness has been eroded by serotype replacement. Vaccines with broader serotype coverage have been developed, at the cost of immunogenicity against single serotypes. To determine the longer-term impact of these new formulations, we propose a novel modelling framework that evaluates the relationship between serotype-specific vaccine immunogenicity and effectiveness, comprising immunity, carriage and clinical models. Dynamics of individual serotypes are modelled over time, advancing existing modelling paradigms that group all serotypes according to vaccine type. This framework is sufficiently flexible to consider diverse populations, emerging vaccine formulations and implementation strategies. A retrospective analysis of sequential introduction of 7- and 13-valent pneumococcal conjugate vaccines in Australia demonstrates the flexibility of the model.",
       "relevance_score": 3,
-      "matched_query": "automated AI research experimentation"
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "X-SYS: A Reference Architecture for Interactive Explanation Systems",
+      "url": "https://doi.org/10.1007/978-3-032-45467-6_8",
+      "openalex_id": "https://openalex.org/W7129079324",
+      "doi": "https://doi.org/10.1007/978-3-032-45467-6_8",
+      "published": "2026-11-16",
+      "summary": "The explainable AI (XAI) research community has proposed numerous technical methods, yet deploying explainability as systems remains challenging: Interactive explanation systems require both suitable algorithms and system capabilities that maintain explanation usability across repeated queries, evolving models and data, and governance constraints. We argue that operationalizing XAI requires treating explainability as an information systems problem where user interaction demands induce specific system requirements. We introduce X-SYS, a reference architecture for interactive explanation systems, that guides (X)AI researchers, developers and practitioners in connecting interactive explanation user interfaces (XUI) with system capabilities. X-SYS organizes around four quality attributes named STAR (scalability, traceability, responsiveness, and adaptability), and specifies a five-component decomposition (XUI Services, Explanation Services, Model Services, Data Services, Orchestration and Governance). It maps interaction patterns to system capabilities to decouple user interface evolution from backend computation. We implement X-SYS through SemanticLens, a system for semantic search and activation steering in vision-language models. SemanticLens demonstrates how contract-based service boundaries enable independent evolution, offline/online separation ensures responsiveness, and per",
+      "relevance_score": 3,
+      "matched_query": "persistent agent memory"
     },
     {
       "title": "Verifying Reasoning Chains Generated by Large Language Models: A Survey",
@@ -170,12 +170,22 @@
       "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "Deep multimodal K-fold Model for emotion and sentiment analysis in figurative language",
-      "url": "https://doi.org/10.1007/s10772-026-10308-2",
-      "openalex_id": "https://openalex.org/W4391621613",
-      "doi": "https://doi.org/10.1007/s10772-026-10308-2",
-      "published": "2026-11-14",
-      "summary": "Abstract The “Deep multimodal K-fold model” is an approach to machine learning that uses multiple modalities, such as text and audio, to analyze emotion and sentiment in Figurative Language. This model uses a K-fold cross-validation method to test how well it works and ensure it can be used in other situations. Using the CMU-MOSEI (Carnegie Mellon University Multimodal Opinion Sentiment and Emotion Intensity) database, we explore sentiment and emotion, considering various aspects like ironic, sarcastic, and subjective sentences in this study. We have four models in our deep learning analysis approach (audio emotion, text emotion, text sentiment, and audio sentiment). We suggested a single-tasking multimodal framework outperforming others to benefit from the interdependence of two related activities (sentiment and emotion). Our experiment was conducted using CNN and LSTM. Specific experimental findings show that LSTM performs better than CNN for the two emotion models, whereas CNN is slightly better for the two sentiment models. We achieved 99% accuracy in the k-Fold Deep Learning Text Emotion model and 88% in the k-Fold Deep Learning Audio Emotion model with the LSTM technique (85% and 85% with CNN). In text and audio sentiment analysis, we got 94% and 79% with CNN (93% and 78% with LSTM), respectively. All reported figures are accuracies on a single held-out test split rather ",
+      "title": "CliniCIRCA: LLM-powered Clinical Timeline Generation and Summarization from Unstructured EHR Texts for Mental Health Patients",
+      "url": "https://doi.org/10.21203/rs.3.rs-11472328/v1",
+      "openalex_id": "https://openalex.org/W7213609149",
+      "doi": "https://doi.org/10.21203/rs.3.rs-11472328/v1",
+      "published": "2026-11-16",
+      "summary": "Abstract Background: Mental health care often requires clinicians to reason over patient journeys: longitudinal patterns of symptoms, diagnoses, treatments, behaviors, social context, and responses to care. Yet these journeys are rarely documented as readily available, explicit timelines. Clinically important temporal information is often embedded in unstructured discharge narratives, where events may be repeated, narrated out of order, or expressed through vague and relative time references. This makes temporal recovery difficult for clinicians and computational systems, and can limit the reliability of downstream summarization. Methods: We present CliniCIRCA, a multi-stage large language model (LLM) framework for Calendar-anchored, Imprecision-aware Reconstruction of Clinical Annals. CliniCIRCA decomposes patient-journey reconstruction into three stages: extracting atomic clinical events from raw discharge summaries, assigning calendar-grounded temporal labels with explicit uncertainty, and rendering the verified timeline as a date-grouped clinical summary. The framework is designed to make temporal reasoning inspectable rather than hidden inside a single summarization step. Results: From 14,882 MIMIC-III mental-health-coded admissions, we construct a benchmark of 52 discharge summaries on which CliniCIRCA produces 15,891 temporally tagged events. Following clinician-defined ",
+      "relevance_score": 2,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "MyoGen: unified biophysical modeling of human neuromotor activity and resulting signals",
+      "url": "https://doi.org/10.1038/s41467-026-79273-3",
+      "openalex_id": "https://openalex.org/W7118081768",
+      "doi": "https://doi.org/10.1038/s41467-026-79273-3",
+      "published": "2026-11-16",
+      "summary": "Abstract Understanding human motor control requires integrating cortical and spinal activity, muscle mechanics, and electrophysiology, which are typically studied in isolation. We present MyoGen, an open-source framework that unifies spinal circuitry, proprioceptive feedback, musculotendon dynamics, and multimodal electromyography generation. Using data-driven optimization benchmarked against human motor unit recordings, MyoGen produces motor unit population activity matching experimental discharge-rate distributions and variability across muscles. The framework generates decomposable surface and intramuscular electromyography, reproduces beta-band modulation of descending drive and its transformation into force, and implements key sensorimotor loop components. Dimensionality reduction of simulated agonist-antagonist electromyography reveals low-dimensional control manifolds consistent with recordings from able-bodied individuals and those with spinal cord injury. Here, we show that MyoGen provides a physiologically grounded simulation substrate, enabling systematic investigation of motor control principles, benchmarking of signal-processing algorithms, and exploration of experimentally inaccessible sensorimotor interactions.",
       "relevance_score": 2,
       "matched_query": "automated AI research experimentation"
     },
@@ -208,26 +218,6 @@
       "summary": "Online learning in higher education continues to expand, but persistent challenges of student isolation, disconnection, and retention require innovative engagement strategies. Self-regulation and autonomy play a critical role, and the ability to develop skills in planning, managing, and controlling their learning behaviors is critical to student success. Engagement is widely recognized as essential for learner satisfaction and course completion, and research consistently indicates a clear link between instructor engagement, learner engagement, and actual learning. Successful on-ground instruction does not always translate to successful online instruction, and facilitators require appropriate professional development related to online delivery and methodologies. Ensuring online learner success requires a combination of intentional course design, proactive support, and the cultivation of learner self-regulation skills. To facilitate persistence and understand and effectively address the multiple needs of a diverse adult learner population, instructors must implement andragogical strategies that will keep learners motivated and actively engaged. Heutagogy is of particular interest to adult online education, which shares key attributes with it, such as learner autonomy and self-direction, and has roots in adult teaching and learning. This article explores the application of theory ",
       "relevance_score": 2,
       "matched_query": "metacognition self-improving AI agents"
-    },
-    {
-      "title": "Development of DCIRV based on AI-NLP for ed-comm in Asia, Europe and Canada",
-      "url": "https://doi.org/10.54899/iij.v20i4.1102",
-      "openalex_id": "https://openalex.org/W7233566109",
-      "doi": "https://doi.org/10.54899/iij.v20i4.1102",
-      "published": "2026-11-13",
-      "summary": "The development and utilisation of Virtual Community Digital Learning Nusantara products have been successful in Indonesia, Japan, and Korea through experts from Bordeaux, France, and Canada. Furthermore, research from 2025 to 2026 will build a Digital Centre Innovation for Robotics VCDLN (DCIRV) based on artificial intelligence with natural language processing to strengthen and expand future innovation. The research focuses on redesigning DCIRV by implementing APIs for notification communication. Thus, the method that has been used with the mixed method for the development of DCIRV through the ADDIE model (Analysis, Design, Development, Implementation, and Evaluation) is then to test the impact using an explanatory survey with Path Diagram Analysis Statistics. The results of the study show that (1) the redesign and development of DCIRV content was carried out by adding features and APIs for notification of content and new members from the database system to all users; (2) the results of experts from Europe, Asia and Canada were very positive about DCIRV with the implementation of APIs for notifications which were also based on AI-NLP in the form of Chatbot content that could be used in various parts of the world; (3) The development of AI-NP-based DCIRV was carried out through five strategic aspects in supporting the location of the ongoing communication of Educational Technol",
-      "relevance_score": 2,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
-      "title": "TurboRetry: Mitigating Large-Scale QUIC Handshake Floods with Off-the-Shelf DPU Offloading",
-      "url": "https://doi.org/10.1145/3830454.3832585",
-      "openalex_id": "https://openalex.org/W7172433243",
-      "doi": "https://doi.org/10.1145/3830454.3832585",
-      "published": "2026-11-12",
-      "summary": "The modern transport protocol QUIC is designed to enhance network performance and security, but it remains vulnerable to handshake flooding attacks. Such attacks exhaust CPU resources by forcing the server to perform expensive cryptographic operations via a large number of handshaking requests. QUIC provides a built-in defense mechanism, the Retry mechanism, to mitigate these attacks. However, our experiments reveal that it can still become a performance bottleneck under large-scale QUIC handshake floods due to substantial computational overhead. In this paper, we design and implement TurboRetry, a split design, that offloads the Retry mechanism onto DPUs to efficiently mitigate QUIC handshake floods. TurboRetry partitions the tasks of the Retry into two categories, and then assigns them to the DPUs and the host, respectively. To preserve QUIC semantics and reduce the coordination overhead, TurboRetry designs an extended Retry token format and an efficient cooperation scheme. In addition, TurboRetry offloads the connection authorization task to the on-path Data Path Accelerator (DPA) to further improve both performance and security. Our evaluation shows that TurboRetry increases the maximum sustainable attack rate by 10--20× over host QUIC stacks.",
-      "relevance_score": 2,
-      "matched_query": "cross-model handoff language model agents"
     },
     {
       "title": "Video and digital games: Historical controversies, benefits, and risks for children and adolescents",
@@ -280,34 +270,44 @@
       "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "Dream-Butterfly: Configuring Embodied Conversational Guidance for Public Outdoor Mixed Reality Exhibitions",
-      "url": "https://doi.org/10.1145/3822517.3848728",
-      "openalex_id": "https://openalex.org/W7127999136",
-      "doi": "https://doi.org/10.1145/3822517.3848728",
-      "published": "2026-11-14",
-      "summary": "Public outdoor mixed reality (MR) exhibitions make guidance a spatial interaction problem: visitors need timely explanations while roaming open sites, attending to virtual artworks, hazards, bystanders, and route choices. We present Dream-Butterfly, a field-deployed embodied conversational guide for campus-scale outdoor MR exhibitions. Visitors explicitly summon the lightweight non-humanoid guide; it returns visibly to a hand-relative dialogue position and answers using retrieval-augmented responses scoped by the MR runtime to the artwork currently encountered. Within the resulting mixed guidance ecology, staff remain accountable for safety, wayfinding, device support, and contingencies. Dream-Butterfly was deployed with over 30 spatially anchored artworks across a 26,000 m2 campus site, which we use as a stress case for public MR guidance under walking, field-of-view limits, route choice, bystander exposure, and safety constraints. In an in-the-wild study with 24 visitors, we compared two role arrangements: agent-default, where the embodied guide served as the default channel for artwork interpretation, and docent-default, where staff provided primary narration while the agent remained optional. Agent-default guidance was associated with more available, visitor-timed explanations, higher immersion/engagement, and stronger hedonic quality, while increasing visitors’ self-curati",
+      "title": "Phenotypic discovery of GABAA receptor-mediated general anesthetics with analgesic activity",
+      "url": "https://doi.org/10.1038/s41467-026-79384-x",
+      "openalex_id": "https://openalex.org/W7123564350",
+      "doi": "https://doi.org/10.1038/s41467-026-79384-x",
+      "published": "2026-11-16",
+      "summary": "Abstract General anesthetics are essential for invasive medical procedures; however, there remains a need for safer agents. Using a bespoke 96-well-plate format platform enabling high-throughput imaging of larval zebrafish behavior, we screen 12,000 compounds and identify an isoxazole chemotype that phenocopies the intravenous anesthetics etomidate and propofol. Its optimization via medicinal chemistry yields an anesthetic that we call nidradine. This anesthetic is efficacious in both zebrafish and mice and lacks the problematic adrenal suppression characteristic of etomidate. Mechanistic studies using electrophysiology and structural biology reveal that nidradine, like etomidate and propofol, is a positive allosteric modulator of the GABA A receptor. Remarkably, behavioral assays in mice demonstrate that nidradine differs from most general anesthetics in that it also produces analgesia at subsedative doses.",
       "relevance_score": 1,
-      "matched_query": "cross-model handoff language model agents"
+      "matched_query": "persistent agent memory"
     },
     {
-      "title": "PrefixFlow: Training-Time KV Caching for Schedule-Level Prefix Reuse in LLM RL Training",
-      "url": "https://doi.org/10.1145/3828523.3857100",
-      "openalex_id": "https://openalex.org/W7163141910",
-      "doi": "https://doi.org/10.1145/3828523.3857100",
-      "published": "2026-11-14",
-      "summary": "In reinforcement learning (RL) post-training, one prompt fans out into N trajectories, yet standard trainers replay the shared prefix’s forward and backward pass N times; in long-context retrieval-augmented generation (RAG) and multimodal workloads, this repetition dominates training compute. Existing designs reuse the prefix within one computation graph (a packed sequence, fused kernel, or tree traversal); under the trainer’s memory limits and parallelism, their compute savings do not reliably become shorter steps. We present PrefixFlow , which takes the prefix out of that graph and into the training schedule through a training-time KV cache : Phase A runs one prefix forward and caches its keys and values ( K / V ); Phase B trains suffixes as ordinary microbatches that read only K / V and write back only their gradients ( gK / gV ); Phase C runs one delayed prefix backward on the accumulated gK / gV . Memory and parallelism then become manageable: dormant prefix activations are offloaded during Phase B to free high-bandwidth memory (HBM) for suffixes, and context, pipeline, and data parallelism each schedule the phases through a local rule while tensor and expert parallelism need no change, so saved compute becomes shorter steps under any microbatch split. On dense models, and on mixture-of-experts (MoE) models under Rollout Routing Replay, PrefixFlow matches full-sequence tra",
-      "relevance_score": 1,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Artificial intelligence and clinical reasoning - a qualitative study with general practice trainees in Germany",
-      "url": "https://doi.org/10.1186/s12909-026-10736-3",
-      "openalex_id": "https://openalex.org/W7225992105",
-      "doi": "https://doi.org/10.1186/s12909-026-10736-3",
-      "published": "2026-11-14",
-      "summary": "BACKGROUND: General practitioners face high complexity in clinical decision-making. Large language models (LLMs) may support clinical reasoning, but their impact on decision-making processes and postgraduate medical training remains unclear. This qualitative study aims to explore General Practice (GP) trainee's use of LLMs in clinical reasoning and their educational needs. MATERIALS AND METHODS: GP trainees were recruited and interviewed with semi-structured interview-guide. Interviews were transcribed verbatim and analysed qualitatively. RESULTS: Seventeen GP trainees participated (mean interview duration: 38 min; range: 21-63 min). AI was perceived as a tool to augment and accelerate clinical decision-making, while potential risks of deskilling were identified. Participants reported a lack of structured AI education and expressed a need for its integration into postgraduate training. DISCUSSION: Participants perceived AI primarily as a supportive tool that can complement clinical reasoning and improve access to medical knowledge. At the same time, they identified potential risks, including overreliance on AI-generated information and possible effects on the development of clinical expertise. These findings suggest that postgraduate medical training should address AI-related competencies, including critical appraisal, ethical responsibility and appropriate integration of AI in",
+      "title": "Actualizing the external enablement of generative artificial intelligence: evidence from software new ventures",
+      "url": "https://doi.org/10.1108/intr-03-2026-0557",
+      "openalex_id": "https://openalex.org/W4411312361",
+      "doi": "https://doi.org/10.1108/intr-03-2026-0557",
+      "published": "2026-11-16",
+      "summary": "Purpose Generative artificial intelligence (GenAI) tools have been argued to enable entrepreneurial endeavors. Employing the external enablement framework, we examine how, if at all, the venture-level benefits offered by GenAI tools – termed GenAI enablement – are actualized in new ventures. Design/methodology/approach Adopting a qualitative design with 10 entrepreneurs in the software industry and five AI-entrepreneurship experts, we capture instances where entrepreneurs succeed or fail to capitalize on GenAI enablement and analyze the mechanisms underlying these different pathways. Findings Our findings lead to a model that outlines the actualization pathways of GenAI enablement, emphasizing that the properties of enablement (i.e. opacity, agency-intensity and outcome-variability) – beyond the mere availability of GenAI enablement – are crucial in explaining whether and how enablement is actualized. Research limitations/implications Given the small sample and specific research context during the early diffusion of GenAI, our findings warrant further examination across industries, countries and stages of technological diffusion. Future research could test and extend our model by examining the roles of outcome-variability and insufficient enablement in determining whether and how GenAI enablement is actualized, as well as how its actualization relates to venture performance. Or",
       "relevance_score": 1,
       "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "Feedback Actionability in AI-Mediated L2 Interaction: A Repeated-Session Study of Learner Uptake",
+      "url": "https://doi.org/10.5430/elr.v15n2p79",
+      "openalex_id": "https://openalex.org/W7233978526",
+      "doi": "https://doi.org/10.5430/elr.v15n2p79",
+      "published": "2026-11-16",
+      "summary": "AI systems can respond to nearly every learner turn, but how learners use that feedback during an exchange is less well documented. This study followed 48 university EFL learners across eight text-based classroom sessions using GPT-4o (384 learner-session observations), examining participation, words per turn (WPT), and researcher-coded next-turn uptake. Following each session, learners submitted ChatGPT-generated summaries of their messages, while researchers separately coded immediate revisions from the interaction records. Mean learner turns increased from 12.3 to 14.5, WPT from 29.3 to 34.6, and mean learner-session uptake from 0.36 to 0.68. Mixed-effects models showed positive session associations with WPT (B = 0.663, p < .001) and uptake (logit B = 0.181, p < .001). After accounting for the session trend, a supplementary model did not identify a distinct phase-level uptake difference following the midpoint prompt revision (B = 0.153, p = .327). The study documents increasing immediate use of AI feedback during repeated interaction, although the fixed phase order prevents separating prompt refinement from accumulated classroom experience.",
+      "relevance_score": 1,
+      "matched_query": "metacognition self-improving AI agents"
+    },
+    {
+      "title": "Emotionally Aware AI Chatbots for Adolescents: A Review of Psychological Principles for Learning, Calibrated Trust, and Healthy Human–AI Interaction",
+      "url": "https://doi.org/10.54097/kv51qy58",
+      "openalex_id": "https://openalex.org/W7233994626",
+      "doi": "https://doi.org/10.54097/kv51qy58",
+      "published": "2026-11-16",
+      "summary": "Conversational artificial intelligence now belongs to ordinary adolescent life, but the psychological research that should guide its design spreads over fields which seldom cite each other. Research on adolescent development, on misinformation susceptibility, on trust in automation, on chatbot-supported learning and on companion-chatbot overreliance has grown up separately, and each of these areas answers only part of the question of how a general-purpose chatbot should talk to a teenager. This paper brings together twenty-one sources from developmental psychology, human factors, human-computer interaction and educational technology, in order to show what is now known about adolescent chatbot interaction and what this means for conversational design. Three results appear repeatedly in this research. First, adolescence is a design context of its own, not a smaller version of adulthood, since reward sensitivity, social influence and emotional regulation are still developing, while exposure to persuasive conversational systems has already reached almost everyone. Second, trust in a chatbot changes behavior in ways that can be measured; thus, the proper design target is calibrated trust rather than maximal trust. Third, the failure modes that matter most for adolescent users, that is, hallucination, sycophancy and unwarranted confidence, originate in the model; the user is not thei",
+      "relevance_score": 1,
+      "matched_query": "metacognition self-improving AI agents"
     }
   ],
   "paper_count": 30,
