@@ -1,29 +1,29 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-11-18T13:09:30.444459+00:00",
-  "source_digest_generated_at_utc": "2026-11-18T13:09:30.076312+00:00",
+  "generated_at_utc": "2026-11-19T13:22:22.389362+00:00",
+  "source_digest_generated_at_utc": "2026-11-19T13:22:22.313561+00:00",
   "paper_count_seen": 30,
-  "dominant_theme": "agent_evaluation",
+  "dominant_theme": "persistent_memory",
   "theme_counts": {
-    "persistent_memory": 6,
-    "cross_model_handoff": 2,
+    "persistent_memory": 10,
+    "cross_model_handoff": 3,
     "automated_experimentation": 4,
-    "metacognition": 8,
-    "agent_evaluation": 12
+    "metacognition": 10,
+    "agent_evaluation": 10
   },
   "top_5_papers": [
     {
-      "title": "Governed Hybrid Agency: A Critical Evidence Map of Cognitive Architectures for Foundation-Model Agents",
-      "url": "https://doi.org/10.1613/jair.1.23727",
-      "published": "2026-11-13",
+      "title": "The Role of Sycophancy in Confidence Calibration When Offloading Memory and Judgement Processes to AI",
+      "url": "https://doi.org/10.17605/osf.io/kjn82",
+      "published": "2026-11-16",
       "original_relevance_score": 8,
       "assessment_score": 15,
       "matched_query": "metacognition self-improving AI agents",
       "theme_hits": {
-        "persistent_memory": 2,
+        "persistent_memory": 1,
         "cross_model_handoff": 0,
         "automated_experimentation": 0,
-        "metacognition": 1,
+        "metacognition": 2,
         "agent_evaluation": 1
       },
       "notes": [
@@ -31,36 +31,18 @@
       ]
     },
     {
-      "title": "From Code Completion to Agentic Development: A Survey of AI Coding Agents, Ecosystems, and Evolving Software Engineering Practice",
-      "url": "https://doi.org/10.1007/s41019-026-00371-9",
-      "published": "2026-11-13",
-      "original_relevance_score": 6,
-      "assessment_score": 12,
-      "matched_query": "cross-model handoff language model agents",
+      "title": "From the fluency fallacy to the micro-to-macro validity gap: opportunities and pitfalls of LLMs in social simulation",
+      "url": "https://doi.org/10.3389/frai.2026.1988865",
+      "published": "2026-11-17",
+      "original_relevance_score": 5,
+      "assessment_score": 9,
+      "matched_query": "persistent agent memory",
       "theme_hits": {
         "persistent_memory": 0,
         "cross_model_handoff": 0,
         "automated_experimentation": 0,
         "metacognition": 0,
-        "agent_evaluation": 3
-      },
-      "notes": [
-        "substantial abstract"
-      ]
-    },
-    {
-      "title": "3CBench: a unified benchmarking framework for the computing capacity of heterogeneous AI clusters",
-      "url": "https://doi.org/10.1007/s42514-026-00290-1",
-      "published": "2026-11-16",
-      "original_relevance_score": 4,
-      "assessment_score": 10,
-      "matched_query": "automated AI research experimentation",
-      "theme_hits": {
-        "persistent_memory": 0,
-        "cross_model_handoff": 0,
-        "automated_experimentation": 1,
-        "metacognition": 0,
-        "agent_evaluation": 2
+        "agent_evaluation": 1
       },
       "notes": [
         "substantial abstract"
@@ -85,18 +67,36 @@
       ]
     },
     {
-      "title": "Comment and Control: Hijacking Agentic Workflows via Context-Grounded Evolution",
-      "url": "https://doi.org/10.1145/3830454.3846775",
-      "published": "2026-11-12",
-      "original_relevance_score": 5,
+      "title": "FAAB: A Benchmark for Fault Detection and Responsibility Attribution in Financial Multi-Agent Workflows",
+      "url": "https://doi.org/10.1145/3858063.3858684",
+      "published": "2026-11-14",
+      "original_relevance_score": 4,
       "assessment_score": 9,
       "matched_query": "cross-model handoff language model agents",
       "theme_hits": {
         "persistent_memory": 0,
         "cross_model_handoff": 0,
         "automated_experimentation": 0,
-        "metacognition": 0,
+        "metacognition": 1,
         "agent_evaluation": 1
+      },
+      "notes": [
+        "substantial abstract"
+      ]
+    },
+    {
+      "title": "The triadic convergence in Industry 5.0: Orchestrating resilient supply chains, agile project management, and algorithmic Islamic banking through smart contracts and green sukuk",
+      "url": "https://doi.org/10.63468/pss.184",
+      "published": "2026-11-14",
+      "original_relevance_score": 4,
+      "assessment_score": 8,
+      "matched_query": "cross-model handoff language model agents",
+      "theme_hits": {
+        "persistent_memory": 1,
+        "cross_model_handoff": 0,
+        "automated_experimentation": 0,
+        "metacognition": 0,
+        "agent_evaluation": 0
       },
       "notes": [
         "substantial abstract"
@@ -166,17 +166,17 @@
     }
   ],
   "proposed_next_experiment": {
-    "id": "PROP-EXP-EVAL-001",
-    "title": "Evaluator Independence Test",
-    "hypothesis": "Separating proposer and evaluator roles will reduce false improvement claims.",
-    "metric": "false-positive acceptance rate on seeded bad proposals",
+    "id": "PROP-EXP-MEM-001",
+    "title": "Structured Memory Handoff Test",
+    "hypothesis": "Separating project memory into decisions, failures, verified knowledge, open questions, and next actions will improve blind handoff fidelity.",
+    "metric": "PCRB-1 handoff score and critical-fabrication count",
     "procedure": [
-      "Create a mixed set of valid and intentionally flawed improvement proposals.",
-      "Have one agent propose and a separate evaluator score them.",
-      "Measure acceptance of flawed proposals.",
-      "Compare with self-evaluation baseline."
+      "Create a structured-state representation with five explicit memory sections.",
+      "Give the same mission to fresh models using current state vs structured state.",
+      "Run at least three blind handoff trials per condition.",
+      "Compare average PCRB-1 score and fabrication rate."
     ],
-    "success": ">=50% reduction in false-positive acceptance rate"
+    "success": ">= 10-point PCRB-1 improvement with zero increase in critical fabrications"
   },
   "decision_rule": "This is a proposal only. Canonical state changes only after evaluation/acceptance."
 }
