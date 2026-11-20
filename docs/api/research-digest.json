@@ -1,6 +1,6 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-11-19T13:22:22.313561+00:00",
+  "generated_at_utc": "2026-11-20T13:02:19.897386+00:00",
   "source": "OpenAlex public API",
   "queries": [
     "persistent agent memory",
@@ -10,82 +10,72 @@
   ],
   "papers": [
     {
-      "title": "The Role of Sycophancy in Confidence Calibration When Offloading Memory and Judgement Processes to AI",
-      "url": "https://doi.org/10.17605/osf.io/kjn82",
-      "openalex_id": "https://openalex.org/W7234749276",
-      "doi": "https://doi.org/10.17605/osf.io/kjn82",
-      "published": "2026-11-16",
-      "summary": "The rapid integration of artificial intelligence (AI) into everyday life is reshaping how people approach cognitive tasks. However, inappropriate reliance remains a barrier to synergistic team performance, with human-AI teams often failing to outperform the best of either agent alone (Vaccaro et al., 2024). Effective human-AI collaboration requires accurate mental models of the distributed cognitive system. That is, individuals must have an awareness of both the capabilities of AI system and their own cognitive limitations, in order to discern whether to accept or reject AI advice. While considerable research has looked at system-level factors, focusing on improving the users’ understanding of AI behaviour to foster appropriate reliance (e.g., XAI), less attention has been given to individual-level cognitive factors in augmented decision making, such as how humans monitor and evaluate their own cognition. Such metacognitive evaluations predict cognitive offloading strategies, with underconfidence driving automation bias (Ma et al., 2024). However, the reverse relationship—how reliance on external tools shapes metacognition—remains poorly understood. There is emerging evidence that partnering with AI systems inflates confidence such that metacognitive evaluations no longer align with actual performance, resulting in metacognitive miscalibration (Fernandes et al., 2026; Taudien e",
-      "relevance_score": 8,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
-      "title": "From the fluency fallacy to the micro-to-macro validity gap: opportunities and pitfalls of LLMs in social simulation",
-      "url": "https://doi.org/10.3389/frai.2026.1988865",
-      "openalex_id": "https://openalex.org/W4417266324",
-      "doi": "https://doi.org/10.3389/frai.2026.1988865",
-      "published": "2026-11-17",
-      "summary": "The integration of Large Language Models (LLMs) into social simulation has generated considerable enthusiasm, but also raises substantial methodological and epistemological challenges. This critical review examines the use of LLMs as cognitive or decision-making components of simulated agents from a computational social science perspective. Rather than treating the psychological evaluation of LLMs as separate from simulation mechanics, we argue that their behavioral and epistemic limitations can become systemic vulnerabilities when scaled to multi-agent societies. We first map the rapidly evolving landscape of LLM-driven platforms, ranging from small narrative sandboxes to population-scale and spatially structured simulations. We then develop a unified critical framework for analyzing the Micro-to-Macro Validity Gap: the propagation, nonlinear amplification, or convergent contraction of micro-level limitations—including hallucinations, stochastic inconsistency, representational biases, and alignment effects—into agent-level distortions (such as average persona convergence) and macro-level risks (such as artificial consensus and behavioral homogenization), while exposing evaluators to epistemic vulnerabilities such as the Fluency Fallacy and automation bias. We identify contexts in which LLM-based agents offer genuine operational value, including serious games, participatory env",
-      "relevance_score": 5,
+      "title": "PERSONAL AI ARCHITECTURE",
+      "url": "https://doi.org/10.5281/zenodo.24355494",
+      "openalex_id": "https://openalex.org/W7235952672",
+      "doi": "https://doi.org/10.5281/zenodo.24355494",
+      "published": "2026-11-19",
+      "summary": "The increasing accessibility of generative artificial intelligence has enabled individuals to integrate sophisticated computational capabilities into everyday intellectual activities. Large language models can support information processing, research, knowledge organization, decision analysis, content creation, and workflow automation. However, the use of multiple AI applications without a coherent organizational architecture frequently produces fragmented knowledge, duplicated efforts, inconsistent context, limited traceability, and difficulties maintaining control over automated processes. This paper introduces Personal AI Architecture (PAIA), a conceptual and methodological framework for constructing an integrated, human-centered environment for AI-augmented intellectual work. Rather than treating artificial intelligence as an isolated conversational tool, PAIA conceptualizes it as a configurable component of a broader personal cognitive and operational infrastructure. The proposed framework consists of eight interconnected architectural layers: human governance, information intake, personal knowledge and memory, cognitive augmentation, model and agent coordination, tool integration and automation, verification and quality assurance, and adaptive system development. These layers are supported by cross-cutting principles of cognitive autonomy, information provenance, privacy,",
+      "relevance_score": 7,
       "matched_query": "persistent agent memory"
     },
     {
-      "title": "AgentMesh: Toward Redundancy- and Barrier-Free Dataflow in Multi-Agent Systems",
-      "url": "https://doi.org/10.1145/3828523.3857023",
-      "openalex_id": "https://openalex.org/W7232787172",
-      "doi": "https://doi.org/10.1145/3828523.3857023",
-      "published": "2026-11-14",
-      "summary": "Multi-agent systems (MAS) now power long-running agentic applications like deep research and coding agents, yet their end-to-end latency reaches minutes to hours. The runtime executes each dataflow as an opaque, indivisible block at coarse granularity, wasting end-to-end time on redundancy (acquiring content already held or unnecessary) and barriers (a downstream component idling until its upstream input is entirely ready). We abstract a produce–transfer–consume dataflow as a basic unit in MAS, where the producer is a tool or LLM decoding, and the consumer is an LLM prefill. We present AgentMesh, a MAS runtime that optimizes each dataflow with three mechanisms: Delta Tool Retrieval (DTR) shrinks the produce step by serving a tool result’s cached items and fetching only the semantic delta; Branch-Parallel Prefill (BPP) shrinks the consume step by prefilling independent branches in parallel under dependency-graph-derived attention sparsity; Dynamic-Equilibrium Streaming (DES), a dynamic pipeline, overlaps produce, transfer, and consume by pacing streamed chunks to the runtime rate of producer and consumer. Implemented on AutoGen, OpenCode, and vLLM and evaluated across three GPU generations and six models, AgentMesh reduces end-to-end latency by up to 62% with no statistically significant quality loss, on both deep research and coding agent workloads.",
+      "title": "YR-MPE: a modular desktop platform for agent-operable and reproducible phylogenetic workflows",
+      "url": "https://doi.org/10.21203/rs.3.rs-11771753/v1",
+      "openalex_id": "https://openalex.org/W7235449003",
+      "doi": "https://doi.org/10.21203/rs.3.rs-11771753/v1",
+      "published": "2026-11-18",
+      "summary": "Abstract Phylogenomic analyses combine many tools, file formats and execution modes. Desktop graphical user interfaces make individual steps accessible but hide their state from scripts; command-line pipelines make steps scriptable but leave parameter discovery, provenance and recovery to the user; and emerging LLM agents can call command-line tools but cannot inspect a GUI session or its artifacts. We present YR-MPE, a modular desktop platform whose YPhylo Workbench unifies these modes through a typed workspace, a plugin contract and a semantic action layer. Every operation in the action registry is exposed as a machine-callable action; controls without a CLI equivalent are declared GUI-only. The workspace records every imported plugin result as a run with its inputs, parameters, tool identity and output artifacts, the latter with SHA-256 hashes; each compiled workflow step becomes its own run. A placeholder compiler turns JSONL command sequences into reproducible workflow DAGs, while a skill layer maps each declared control to the corresponding command-line option; plugins with tool-specific contracts expose tool-specific actions. YR-MPE runs natively on Windows and bundles alignment, model selection, maximum-likelihood, Bayesian and species-tree inference, molecular dating, selection and visualization tools. We describe the interface and its provenance/workflow substrate, an",
+      "relevance_score": 6,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "HAMU: Autonomy Without Sovereignty — Cognition, Continuity, and Authority in Persistent AI Systems",
+      "url": "https://doi.org/10.32388/bumy1r",
+      "openalex_id": "https://openalex.org/W7235080776",
+      "doi": "https://doi.org/10.32388/bumy1r",
+      "published": "2026-11-17",
+      "summary": "HAMU (HOST-AWARE MEDIATION UNIT) is a conceptual architecture for hosting persistent artificial intelligence (AI) agents that can carry out assignments, check their work, and correct mistakes. Plans and results can outlast the permissions that governed the original task. HAMU calls it AUTHORITY COLLAPSE when a host treats a saved plan, an external document, or an earlier approval as permission to act beyond what was delegated. In the workspace their host provides, agents can use tools, consult information, and propose operations. Before an operation takes effect, a mediator checks it against policies, grants, and records held in protected custody. HAMU models the proposal as a TRANSITION. Its semiformal rule accounts for what the operation would do, whom it would affect, which permissions apply, and how it would be carried out. Using conceptual model building within a design science research framework, the study examines four hypothetical scenarios and states nine design propositions. In one scenario, an agent reviewing its work finds a mislabeled ticket that its plan overlooked. Its grant already covers label changes in that project, so it can fix the error on its own. The same correction in a second project would require a grant that covers that project. Authorization can also change over time. Restoring a snapshot may recover a plan to send a document after the one-time gran",
       "relevance_score": 5,
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "FAAB: A Benchmark for Fault Detection and Responsibility Attribution in Financial Multi-Agent Workflows",
-      "url": "https://doi.org/10.1145/3858063.3858684",
-      "openalex_id": "https://openalex.org/W7226034186",
-      "doi": "https://doi.org/10.1145/3858063.3858684",
-      "published": "2026-11-14",
-      "summary": "Financial multi-agent systems distribute evidence extraction, expectation retrieval, consistency checking, decision, and settlement across roles. When a final claim is wrong, outcome accuracy cannot say where the evidence chain first broke or which role was responsible. We formulate financial multi-agent workflow auditing : given a typed workflow trace, detect whether a fault occurred, classify its root cause, and localize the earliest responsible agent and step. We introduce the Financial Agent Audit Benchmark (FAAB) for that task, built from 300 real point-in-time SEC and I/B/E/S workflows and pairing 300 untouched clean controls with 700 minimal single-point interventions over 14 fault classes spanning evidence, financial semantics, time, coordination, and settlement. Expert executable contracts detect every controlled fault at a zero clean false-positive rate and localize every responsible role and step, at no inference cost. A single-call LLM judge and a three-call debate reading the identical trace are substantially less reliable, particularly on clean-workflow calibration and causal localization. Capability alone does not close that gap in the useful direction. Across three models from two vendors, stronger free-form judges buy root causes with clean work: root-cause accuracy rises from 38.9% to 83.4% while clean false positives rise from 7.5% to 15.4%. Requiring the sam",
+      "title": "Spectra-Scope: a toolkit for automated and interpretable characterization of material properties from spectral data",
+      "url": "https://doi.org/10.1038/s41598-026-64600-x",
+      "openalex_id": "https://openalex.org/W7134254000",
+      "doi": "https://doi.org/10.1038/s41598-026-64600-x",
+      "published": "2026-11-18",
+      "summary": "Spectroscopy is a central pillar of materials characterization, providing useful information on properties like structure, composition, or excited state dynamics of a system. However, many spectroscopic techniques present challenges in the development of interpretable, performant, and reliable supervised learning models due to the wide range of possible nonlinear correlations that can exist between the signal and the response variable (target) of interest. Here, we present Spectra-Scope, an open-source AutoML framework for automatic characterization of material properties from spectroscopy data using interpretable machine learning (ML) models. The software is implemented in Python and a no-code web application. It comprises tools for data preprocessing, nonlinear feature extraction, machine learning model training, and feature selection. Users can easily train different types of simple, interpretable ML models on a set of feature transformations quickly and with modest computational resources. In this work, we outline the methods of Spectra-Scope and its effectiveness across diverse datasets, with applications to materials and agricultural spectroscopy data. We show that Spectra-Scope can reproduce performance of comparable models in the literature, and highlight how our emphasis on interpretability can be used to rationalize the behavior of individual models and understand the",
+      "relevance_score": 4,
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "An AI-Driven, Workflow-Aware Virtual Customer Support Assistant for Small and Medium-Sized Enterprises",
+      "url": "https://doi.org/10.52589/ajste-csgfxk",
+      "openalex_id": "https://openalex.org/W7234985848",
+      "doi": "https://doi.org/10.52589/ajste-csgfxk",
+      "published": "2026-11-17",
+      "summary": "Small and medium-sized enterprises (SMEs) that sell through messaging platforms often handle customer enquiries manually, leading to fragmented conversations, delayed responses and inconsistent service. This article proposes a workflow-aware conversational support assistant that combines a large language model (LLM), retrieval grounding, merchant API tools and context-preserving human hand-off. Using a design-science-oriented literature synthesis, in which sources were identified through keyword searches of academic databases, screened for relevance to messaging-based SME support and LLM-agent design, and analysed thematically, the study derives three design priorities: grounding customer-facing claims in current merchant data, separating model reasoning from validated execution, and transferring accumulated conversational state when escalation occurs. The resulting five-layer architecture comprises messaging integration, agent orchestration, retrieval and grounding, store action, and escalation and hand-off. Volatile data such as price, inventory and order status are retrieved live; state-changing operations require explicit customer confirmation and schema validation before execution. The article also specifies an evaluation protocol based on scripted end-to-end customer journeys using journey completion, factual agreement, action correctness, escalation precision and recall,",
       "relevance_score": 4,
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "The triadic convergence in Industry 5.0: Orchestrating resilient supply chains, agile project management, and algorithmic Islamic banking through smart contracts and green sukuk",
-      "url": "https://doi.org/10.63468/pss.184",
-      "openalex_id": "https://openalex.org/W7233621304",
-      "doi": "https://doi.org/10.63468/pss.184",
-      "published": "2026-11-14",
-      "summary": "Contemporary global value networks and capital-intensive infrastructure projects face an existential crisis driven by geopolitical disruptions, persistent inflation, and the fragile leverage of conventional interest-based debt. Although Supply Chain Management (SCM), Project Management (PM), and Islamic Banking (IB) have evolved rapidly in isolation, a unified framework integrating all three is absent. This article bridges that gap by formulating the Triadic Convergence Framework (TCF), a novel cyber-physical-financial architecture operating within the human-centric and sustainable ethos of Industry 5.0. Grounded in Transaction Cost Economics, Agency Theory, Dynamic Capabilities Theory, and the socio-ethical axioms of Maqasid al-Shariah, this study employs a multi-layered conceptual and mathematical modeling approach. It synthesizes Q1 literature across artificial intelligence, blockchain-enabled Supply Chain Finance, Agile-Hybrid Project Management, and Islamic Sustainable Finance. Furthermore, it formulates a deterministic mathematical model linking Earned Value Management indices with automated, smart-contract-driven Islamic financing disbursements (Parallel Istisna’a and Tokenized Murabaha) verified by IoT Digital Twins. The integration of AI-driven Digital Twins and permissioned blockchain ledgers resolves the historical operational bottleneck of Islamic banking: the high ",
-      "relevance_score": 4,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "The design and impact of a dual-agent artificial intelligence system in personalised mathematics tutoring",
-      "url": "https://doi.org/10.30935/cedtech/19950",
-      "openalex_id": "https://openalex.org/W7231913835",
-      "doi": "https://doi.org/10.30935/cedtech/19950",
-      "published": "2026-11-14",
-      "summary": "Digital tutoring tools are increasingly used in schools to support mathematics learning, but empirical evidence remains limited on how diagnostic and instructional functions can be coordinated to provide personalised support. This study examined a dual-agent intervention in which a diagnostic agent generated provisional learning-profile classifications (diverging, assimilating, converging, and accommodating) and a personalised tutoring agent delivered profile-responsive, stage-specific guidance within Polya’s (1945) problem-solving framework; a general tutoring agent provided non-profile-responsive guidance in the control condition. The quasi-experimental study involved 206 Chinese grade 5 students, including 99 in the experimental group and 107 in the control group. The pre-test and post-test used two parallel mathematics tasks evaluated using the same analytic rubric, and learning gain was calculated from these matched assessment components. The experimental group achieved a significantly larger mean gain than the control group (5.14 vs. 0.94, t(204) = 4.36, p < .001, Hedges’ g = .61). A baseline-adjusted sensitivity analysis confirmed the overall group effect (p < .001). After Holm correction for four profile-specific comparisons, only the assimilating-profile contrast remained significant (adjusted p = .0496). However, the omnibus group-by-profile interaction was not signif",
-      "relevance_score": 4,
+      "title": "“Should I Give Up Now?” Investigating LLM Pitfalls in Software Engineering",
+      "url": "https://doi.org/10.1145/3801972",
+      "openalex_id": "https://openalex.org/W4404569204",
+      "doi": "https://doi.org/10.1145/3801972",
+      "published": "2026-11-18",
+      "summary": "Software engineers are increasingly incorporating AI assistants into their workflows to enhance productivity and alleviate cognitive load. However, experiences with Large Language Models (LLMs) such as ChatGPT vary widely. While some engineers find them useful, others deem them counterproductive due to inaccuracies in their responses. Researchers have also observed that ChatGPT often provides incorrect information. Given these limitations, it is crucial to determine how to effectively integrate LLMs into Software Engineering (SE) workflow. Analyzing data from 26 participants in a complex web development task, we identified nine failure types categorized into incorrect or incomplete responses, cognitive overload, and context loss. Users attempted to mitigate these issues through scaffolding, prompt clarification, and debugging. However, 17 participants ultimately chose to abandon ChatGPT due to persistent failures. Our quantitative analysis revealed that unhelpful responses increased the likelihood of abandonment by a factor of 11, while each additional prompt reduced abandonment probability by 17%. This study advances the understanding of human-AI interaction in SE tasks and outlines directions for future research and tooling support.",
+      "relevance_score": 3,
       "matched_query": "metacognition self-improving AI agents"
     },
     {
-      "title": "Delegating or Doing? Understanding User Behavior in Hybrid Human–Agent Interfaces",
-      "url": "https://doi.org/10.1145/3841580.3841625",
-      "openalex_id": "https://openalex.org/W7203858526",
-      "doi": "https://doi.org/10.1145/3841580.3841625",
-      "published": "2026-11-13",
-      "summary": "Large Language Models (LLMs) are increasingly embedded into applications, allowing users to complete tasks either through direct manipulation or by delegating actions to conversational agents. However, little is known about how users balance these modalities when both are available. We present a web-based content management system augmented with an LLM agent through the Model Context Protocol (MCP), enabling users to perform CRUD tasks through a graphical interface, a conversational agent, or both. We conducted a between-subjects study (N=73) comparing three interaction modes: Traditional-Only, AI-First, and Hybrid. Across sixteen scenarios, we analyzed task completion time, interaction logs, and delegation behavior. AI-assisted interaction significantly reduced clicks, page navigations, and scrolling, indicating lower interaction effort. Surprisingly, these reductions did not translate into faster task completion, as task duration did not differ significantly across conditions. We also found no significant relationship between CRUD operation type and delegation, suggesting that users did not systematically avoid delegating higher-risk actions. Instead, delegation varied far more between participants than between tasks, with individual differences accounting for roughly half the variance in assistant use (ICC =.50). Our findings suggest that the primary benefit of human–agent i",
-      "relevance_score": 4,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Verifying Reasoning Chains Generated by Large Language Models: A Survey",
-      "url": "https://doi.org/10.1145/3862627",
-      "openalex_id": "https://openalex.org/W7122351719",
-      "doi": "https://doi.org/10.1145/3862627",
-      "published": "2026-11-13",
-      "summary": "Large Language Models (LLMs) are extensively used for many Natural Language Processing tasks such as question answering, natural language inference, document summarization, etc. Chain-of-Thought (CoT) prompting compels LLMs to generate step-by-step reasoning chains. While some of the reasoning chains may follow a correct thought process, they can also suffer from hallucinations, leading to errors in answer generation. Recently, many articles have targeted the problem of verifying these reasoning chains from various aspects. Despite this recent attention, to the best of our knowledge, no comprehensive survey currently summarizes these studies on reasoning chain verification. This work addresses that gap by presenting a detailed overview of the methods for verifying reasoning chains and categorizing them according to their methodology. This paper introduces a novel taxonomy of existing reasoning chain verification methods and mainly divides them into approaches that assess entire chains versus those that examine individual steps. This paper also reviews benchmarks for evaluating reasoning chains and verification methods and further discusses the challenges and future directions associated with these methods. By compiling and analyzing these approaches, our survey aims to advance the understanding and development of robust reasoning techniques in LLMs.",
+      "title": "Can GenAI numeracy tutors support self-regulated learning?",
+      "url": "https://doi.org/10.65106/apubs.2026.3308",
+      "openalex_id": "https://openalex.org/W7234357085",
+      "doi": "https://doi.org/10.65106/apubs.2026.3308",
+      "published": "2026-11-17",
+      "summary": "Generative artificial intelligence (GenAI) has been the focus of much attention in the higher education sector, both for its potential to support personalised and adaptive learning, but also due to the risk that students may outsource learning to it, leading to gaps in their professional or discipline competencies. This risk of cognitive offloading applies equally to learning how to learn, a skill set explored through studies of self-regulated learning (SRL). Two GenAI numeracy tutors were piloted at a regional Australian university as one component of a newly launched mathematics and statistics support centre, one focusing on medication calculations for Nursing students (NiNA), and the other on threshold numeracy skills for Education students (EdNA). Detailed analysis of students’ conversations with these agents using Zimmerman and Moylan’s 2009 SRL framework revealed extensive evidence of some elements of SRL such as strategic planning, task-specific strategies, and adaptive competence; trace evidence of other elements including self-efficacy and self-evaluation; and no evidence of the remaining elements. This study contributes an underrepresented qualitative perspective to the body of research into the crossover of GenAI and SRL and foreshadows avenues for further research and refinements in the design of GenAI numeracy tutors.",
       "relevance_score": 3,
       "matched_query": "metacognition self-improving AI agents"
     },
@@ -108,6 +98,26 @@
       "summary": "Recent research has established that generative artificial intelligence (GenAI) is not a unitary workplace resource: exploratory and exploitative use orientations are associated with different forms of employee creativity, and their value depends on employees' capacity to integrate generated knowledge. This article therefore does not present the basic dual path as a new discovery. Instead, it develops a theoretical integration and dynamic extension that asks why the established paths operate differently, when employees should switch between them, and how short-run augmentation can evolve into either capability accumulation or capability substitution. We distinguish expansive and consolidative modes of knowledge integration, theorize phase-congruent switching rather than static ``high-high'' ambidexterity, and position metacognition as a control mechanism that governs both immediate knowledge conversion and longer-run cognitive development. We further specify cultural tightness and psychological safety as directional boundary conditions and distinguish individual creative gains from collective idea-space diversity. The framework converts emerging empirical regularities into falsifiable propositions about task phase, context, and time, providing a research agenda for sustainable human--AI creativity.",
       "relevance_score": 2,
       "matched_query": "metacognition self-improving AI agents"
+    },
+    {
+      "title": "When Human Assurance Matters: Task Complexity and Pre-Interaction Expected Satisfaction in Human-AI Hybrid Service Systems",
+      "url": "https://aisel.aisnet.org/icis2026/hti/hti/25",
+      "openalex_id": "https://openalex.org/W7222991355",
+      "doi": null,
+      "published": "2026-12-14",
+      "summary": "Consumers frequently disengage from AI service encounters because they doubt whether chatbots can resolve their requests. Although human–AI hybrid systems provide human backup, this capability is often concealed. Drawing on Uncertainty Reduction Theory and Cognitive Appraisal Theory, we examine when human assurance—an upfront statement that users may transfer to a human if the AI cannot resolve the request—improves pre-interaction expectations. A between-subjects online experiment (N = 217) and a within-subject EEG experiment (N = 35) show that assurance increases expected system capability and expected satisfaction, with larger effects under high task complexity. Expected system capability mediates this relationship. EEG results reveal early frontal theta synchronization followed by later frontal alpha desynchronization under high complexity, a temporal pattern consistent with affective engagement and cognitive elaboration. These findings identify human assurance as a task-contingent cue that makes hybrid systems’ recourse capability visible.",
+      "relevance_score": 2,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "Within-Host Infection Dynamics",
+      "url": "https://doktori.bibl.u-szeged.hu/id/eprint/13269/1/Within-Host%20Infection%20Dynamics_Stability%2CBifurcation%2C%20and%20Persistence%20in%20Viral%20and%20Bacterial%20Models.pdf",
+      "openalex_id": "https://openalex.org/W7219551970",
+      "doi": null,
+      "published": "2026-12-04",
+      "summary": "This dissertation presents a rigorous mathematical study of within-host infection dynamics through the development and analysis of nonlinear differential equation models. The work is motivated by the need to understand the complex interactions between pathogens and host cells, accounting for mechanisms such as saturation in infection, cellular quiescence, immune-mediated control, and cooperative bacterial growth. The dissertation is organized around three central themes, each addressed through a dedicated mathematical model. The first theme concerns the within-host dynamics of Usutu virus infection. An autonomous model incorporating the Crowley–Martin functional response is developed and rigorously analyzed, establishing global threshold dynamics governed by the basic reproduction number R_0. A periodically forced extension is then studied to capture the influence of circadian rhythms on infection thresholds, revealing that time-dependent forcing can give rise to persistent oscillatory patterns in viral load. The second theme addresses HIV infection dynamics. A model is proposed that incorporates both quiescent CD4+ T cells and a cytotoxic T lymphocyte (CTL) immune response in a unified framework. The analysis establishes threshold dynamics governed by R_0, a forward transcritical bifurcation at R_0 = 1 confirming the absence of bistability, global stability results, and condit",
+      "relevance_score": 2,
+      "matched_query": "persistent agent memory"
     },
     {
       "title": "Post-traumatic stress disorder: pathogenesis, epidemiological characteristics, animal models, and potential therapeutic strategies",
@@ -140,34 +150,44 @@
       "matched_query": "automated AI research experimentation"
     },
     {
+      "title": "Lived experiences of relationships to generative AI mental health chatbots among adults",
+      "url": "https://doi.org/10.1007/s44202-026-01001-1",
+      "openalex_id": "https://openalex.org/W7165565806",
+      "doi": "https://doi.org/10.1007/s44202-026-01001-1",
+      "published": "2026-11-18",
+      "summary": "Abstract Background Nigeria's mental health system serves less than 10% of those in need, with severe provider shortages and deep-seated stigma. Generative AI chatbots offer scalable support, yet how Nigerian adults experience attachment to non-human therapeutic agents remains unexplored. Objective To examine lived experiences of AI therapeutic relationships among Nigerian adults, focusing on attachment formation, cultural acceptability, and perceived authenticity within contexts of care scarcity. Methods Interpretative Phenomenological Analysis with 37 adults (18–45 years) who engaged AI mental health chatbots for ≥ 4 weeks. Semi-structured interviews explored relational experiences, trust development, privacy concerns, and comparisons with human/traditional healing. Results Four superordinate themes emerged: (1) Relational Ambivalence ; participants valued 24/7 availability and non-judgmental space yet struggled with perceived lack of genuine human reciprocity; (2) Cultural Navigation ; users actively adapted Western therapeutic frameworks to local idioms of distress, blending AI interactions with family counsel and spiritual practices; (3) Stigma Sanctuary ; chatbots provided confidential entry points circumventing community visibility and professional hierarchy; and (4) Fragile Dependency ; prolonged use generated attachment anxiety about potential app discontinuation or da",
+      "relevance_score": 2,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
       "title": "EgoPlay: Event-Triggered Video Editing for Egocentric Streams",
       "url": "https://doi.org/10.1145/3829340.3842276",
       "openalex_id": "https://openalex.org/W7171529514",
       "doi": "https://doi.org/10.1145/3829340.3842276",
       "published": "2026-11-17",
-      "summary": "We introduce EgoPlay, an event-triggered video-to-video editor for egocentric streams, obtained by fine-tuning a pretrained V2V diffusion transformer on event-conditioned data built primarily from Ego4D. Given a monocular video and an event-triggered prompt of the form \"when X happens, do Y,\" EgoPlay infers whether and when event X occurs, preserves pre-event frames, and applies edit Y only to the post-event continuation. Rather than cascading a separate event detector with an editor, EgoPlay learns event recognition, temporal restraint, and pixel-level editing jointly in a single end-to-end model, while also handling negative and multi-event prompts. To support this, we construct a large-scale dataset of 106K event-triggered clip-prompt pairs spanning positive triggers, fabricated-trigger negatives, and multi-event prompts. We then train a bidirectional video diffusion editor with event-triggered supervision and derive a causal variant for chunk-by-chunk streamable inference. We further introduce an event-aware evaluation protocol that separately measures post-trigger editing quality, pre-trigger preservation, and false-trigger robustness. On the Ego4D benchmark, EgoPlay substantially outperforms EgoEdit, the state-of-the-art instruction-based egocentric video editing baseline, with relative gains of 17.7%, 16.9%, and 16.4% in editing quality, visual quality, and background co",
+      "summary": "We introduce EgoPlay, an event-triggered video-to-video editor for egocentric streams, obtained by fine-tuning a pretrained V2V diffusion transformer on event-conditioned data built primarily from Ego4D. Given a monocular video and an event-triggered prompt of the form “when X happens, do Y,” EgoPlay infers whether and when event X occurs, preserves pre-event frames, and applies edit Y only to the post-event continuation. Rather than cascading a separate event detector with an editor, EgoPlay learns event recognition, temporal restraint, and pixel-level editing jointly in a single end-to-end model, while also handling negative and multi-event prompts. To support this, we construct a large-scale dataset of 106K event-triggered clip–prompt pairs spanning positive triggers, fabricated-trigger negatives, and multi-event prompts. We then train a bidirectional video diffusion editor with event-triggered supervision and derive a causal variant for chunk-by-chunk streamable inference. We further introduce an event-aware evaluation protocol that separately measures post-trigger editing quality, pre-trigger preservation, and false-trigger robustness. On the Ego4D benchmark, EgoPlay substantially outperforms EgoEdit, the state-of-the-art instruction-based egocentric video editing baseline, with relative gains of 17.7%, 16.9%, and 16.4% in editing quality, visual quality, and background co",
       "relevance_score": 2,
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "GLOSS: Geometric Local Self-Similarity Learning for Faithful Reference-Guided Texture Fill",
-      "url": "https://doi.org/10.1145/3829340.3842197",
-      "openalex_id": "https://openalex.org/W7204468088",
-      "doi": "https://doi.org/10.1145/3829340.3842197",
+      "title": "When AI Performs, What Remains? An Integrative Review of Generative AI and Cognitive Capital in Individuals and Organizations",
+      "url": "https://doi.org/10.1177/21522715261509248",
+      "openalex_id": "https://openalex.org/W7224854825",
+      "doi": "https://doi.org/10.1177/21522715261509248",
       "published": "2026-11-17",
-      "summary": "Using conditional image generators, texture artists can explore many single-view looks for an existing 3D shape. Despite impressive progress, state-of-the-art generative methods still struggle to generate a full object texture while closely adhering to fine scale geometric detail and single view references, leaving little room for artists guidance. Furthermore, current automatic models lack the flexibility for artist to explore multiple textures from varied sources in an interactive and controllable manner. Unlike methods trained on large 3D datasets that generate full object textures from global guidance, our work explores a local and less data-hungry approach to texture with explicit artist control. We leverage the geometric self-similarity and geometry-texture correlation existing in many natural and man-made shapes; and train a shape-specific local texture generation and completion model. This model learns from existing image model priors and a single 3D shape, and is guided by attending to a set of geometry-aware reference patches. The trained shape-specific network can transfer any novel reference to the full target object texture through patchwise inpainting. We show improved or comparable quality to strong image-conditioned texture generation baselines, suggesting local texturing as a promising research direction. Our model also enables local geometry-conditioned textur",
+      "summary": "Generative artificial intelligence (AI) is rapidly entering knowledge work, and its short-term productivity benefits are increasingly documented. Less is known about what happens, over time, to the knowledge, skills, and judgment that remain in people and organizations. This integrative narrative review addresses that question through the construct of cognitive capital: the accumulated, renewable, and depletable stock of knowledge, cognitive, and metacognitive capabilities, and practices that enable an individual or an organization to learn, interpret information, exercise judgment, solve problems, and adapt. We distinguish individual and organizational cognitive capital from the capability of the human-AI system, so that gains in joint performance and losses in human capability can be observed at the same time. Drawing on experimental, field, and conceptual work, we propose four mechanisms through which interaction with AI affects cognitive capital: substitution of practice, scaffolding and feedback, metacognitive calibration, and organizational aggregation. Seven principles summarize the current evidence, including that assisted performance differs from retained competence, that the same technology can support or displace learning depending on design and use, and that individual gains can coexist with reduced collective diversity. For each mechanism, we derive testable propos",
       "relevance_score": 2,
-      "matched_query": "automated AI research experimentation"
+      "matched_query": "metacognition self-improving AI agents"
     },
     {
-      "title": "InstantMimic: A High Performance System for Learning Physics-based Skills in Seconds",
-      "url": "https://doi.org/10.1145/3829340.3842170",
-      "openalex_id": "https://openalex.org/W7212325920",
-      "doi": "https://doi.org/10.1145/3829340.3842170",
+      "title": "From Andragogy to Cognitive Governance: A Conceptual Model of Scholar-Leader Formation in AI-Powered Doctoral Education",
+      "url": "https://doi.org/10.46787/ijaipil.v1i4.8198",
+      "openalex_id": "https://openalex.org/W7234978624",
+      "doi": "https://doi.org/10.46787/ijaipil.v1i4.8198",
       "published": "2026-11-17",
-      "summary": "Physics-based character control is a long-standing challenge in computer graphics and robotics, requiring policies that satisfy complex dynamics while producing realistic motion. Recent Deep RL approaches, particularly imitation learning methods such as DeepMimic, have had broad impact beyond animation, influencing robotics by enabling agile and expressive behaviors. While these approaches achieve impressive results, they remain computationally inefficient to train in practice. Despite GPU-accelerated simulation, we find that end-to-end pipelines often underutilize hardware due to overheads outside the physics solver, caused by fragmented GPU kernels and CPU memory access in the critical path. We present InstantMimic, a system that addresses these inefficiencies by making the entire training loop GPU-native. Built on a GPU-native physics backend, our unified pipeline integrates simulation, environment computation, policy inference, and policy updates within a single execution flow. As a result, InstantMimic reduces training time for diverse physics-based skills to a few seconds and makes LLM-agent-driven hyperparameter search practical.",
+      "summary": "Generative artificial intelligence (AI) is transforming doctoral education by reshaping how scholars engage with knowledge, conduct research, write, and develop scholarly identities. This conceptual article extends andragogy into AI-mediated doctoral education by introducing cognitive governance as the capacity to deliberately regulate the distribution, evaluation, integration, and ownership of cognitive work across human and AI systems. A conceptual model of AI-powered scholar-leader formation is proposed, connecting andragogical agency, AI augmentation, cognitive governance, cumulative scholarship, and scholar-leader formation. Cognitive governance occupies the model’s regulatory center and is operationalized through three principles: maintaining agency, exercising professional judgment, and claiming ownership of scholarly work. The model further conceptualizes AI as augmentation rather than replacement and positions cumulative scholarship as a developmental pathway connecting coursework, research, publication, and dissertation development. Ultimately, the article reconceptualizes doctoral independence as the capacity to govern human-AI cognition while remaining intellectually and ethically accountable.",
       "relevance_score": 2,
-      "matched_query": "automated AI research experimentation"
+      "matched_query": "metacognition self-improving AI agents"
     },
     {
       "title": "Nonpredictive approaches in marketing",
@@ -188,36 +208,6 @@
       "summary": "Abstract Background: Mental health care often requires clinicians to reason over patient journeys: longitudinal patterns of symptoms, diagnoses, treatments, behaviors, social context, and responses to care. Yet these journeys are rarely documented as readily available, explicit timelines. Clinically important temporal information is often embedded in unstructured discharge narratives, where events may be repeated, narrated out of order, or expressed through vague and relative time references. This makes temporal recovery difficult for clinicians and computational systems, and can limit the reliability of downstream summarization. Methods: We present CliniCIRCA, a multi-stage large language model (LLM) framework for Calendar-anchored, Imprecision-aware Reconstruction of Clinical Annals. CliniCIRCA decomposes patient-journey reconstruction into three stages: extracting atomic clinical events from raw discharge summaries, assigning calendar-grounded temporal labels with explicit uncertainty, and rendering the verified timeline as a date-grouped clinical summary. The framework is designed to make temporal reasoning inspectable rather than hidden inside a single summarization step. Results: From 14,882 MIMIC-III mental-health-coded admissions, we construct a benchmark of 52 discharge summaries on which CliniCIRCA produces 15,891 temporally tagged events. Following clinician-defined ",
       "relevance_score": 2,
       "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Robotic search and rescue in earthquake-collapsed buildings: capabilities, evidence gaps, and a roadmap for human-multi-robot rescue",
-      "url": "https://doi.org/10.55092/sc20260020",
-      "openalex_id": "https://openalex.org/W7234098952",
-      "doi": "https://doi.org/10.55092/sc20260020",
-      "published": "2026-11-16",
-      "summary": "Following an earthquake, rescue robots must search for and assist trapped individuals in complex environments characterized by unstable rubble, narrow cavities, darkness, dust, and unreliable communications. This paper reviews the technical evidence for seven categories of robots within the seven-stage mission chain of search and rescue (SAR) in building collapse scenarios, covering unmanned aerial vehicles (UAVs); tracked, wheeled, and reconfigurable robots; quadrupedal robots; snake-like and continuum robots; humanoid and hybrid robots; heavy-duty engineering robots; and casualty evacuation and medical transport robots. This paper evaluates representative “platform-sensor-mission” capabilities across two independent dimensions: validation maturity (E0–E4) and relevance to collapse rescue scenarios (S0–S4). The study clearly distinguishes between signals indicating the possible presence of trapped individuals, 3D positioning information usable to guide excavation operations, and the actual execution of subsequent rescue operations. Currently, evidence of field applications is primarily concentrated on tasks such as site entry, reconnaissance, mapping, visual search, and the detection of vital signs through rubble. In contrast, evidence regarding sustained communication, supply delivery, close-range manipulation of casualties, casualty management, evacuation, and mission handof",
-      "relevance_score": 2,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Teachers as architects of self-regulated learning: a systematic review of teacher practices for fostering self-regulated learning environments",
-      "url": "https://doi.org/10.1080/10494820.2026.2759147",
-      "openalex_id": "https://openalex.org/W7235280645",
-      "doi": "https://doi.org/10.1080/10494820.2026.2759147",
-      "published": "2026-11-16",
-      "summary": "This systematic review synthesizes empirical research on teacher practices intended to support self-regulated learning (SRL) in K-12 education, including general and inclusive settings. Following PRISMA guidelines, 47 studies published between 2000 and 2026 were examined to map instructional practices, research methods, and educational contexts. The findings identify both direct and indirect approaches to SRL support, including explicit strategy instruction, goal setting, feedback, self-monitoring, reflection and self-assessment, student choice, collaborative learning, and supportive teacher–student interactions. These practices were examined in relation to the forethought, performance, and self-reflection phases of Zimmerman’s cyclical model, as well as co-regulation and socially shared regulation. The review also highlights the role of technology-supported instruction while indicating that evidence remains limited in secondary and inclusive educational settings. Importantly, the findings distinguish practices reported or implemented in classrooms from evidence of changes in students’ regulatory processes or academic outcomes; the effectiveness of practices should, therefore, be interpreted in light of study design and methodological quality. The review provides a descriptive synthesis of teacher practices investigated in empirical research and identifies priorities for future",
-      "relevance_score": 2,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
-      "title": "Reasoning More, Knowing No Better? Epistemic Calibration in Financial Reasoning Tasks",
-      "url": "https://doi.org/10.1145/3858063.3858850",
-      "openalex_id": "https://openalex.org/W7212265444",
-      "doi": "https://doi.org/10.1145/3858063.3858850",
-      "published": "2026-11-13",
-      "summary": "Large language models (LLMs) reportedly ‘reason’ with increasing sophistication, but whether they ‘know’ when they are wrong remains poorly understood. We study epistemic calibration, the alignment between expressed confidence and empirical correctness, across approximately 30 contemporary models and configurable reasoning-effort budgets, using XFinBench (graduate-level financial reasoning) and SQuAD v2 (answerable and unanswerable questions). Reported confidence stays high relative to accuracy, with weak discrimination between correct and incorrect or unsupported answers. Miscalibration follows a Dunning–Kruger–like pattern: weaker models are often strongly overconfident, while frontier models are mildly underconfident. Reasoning effort significantly improves accuracy but has no detectable effect on the confidence–accuracy gap or ECE; stable between-model differences explain over 96% of calibration variance, versus a negligible effort effect. Calibration deteriorates most on scenario planning and numerical modeling. On SQuAD v2, models answer four in five unanswerable questions and remain near-maximally confident even when no answer is supported; higher reasoning effort yields no robust gain in calibration or abstention after multiplicity correction. We discuss implications for evaluation, deployment, and the design of calibration-aware, boundary-aware financial reasoning syst",
-      "relevance_score": 2,
-      "matched_query": "metacognition self-improving AI agents"
     },
     {
       "title": "Video and digital games: Historical controversies, benefits, and risks for children and adolescents",
@@ -270,24 +260,34 @@
       "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "Recent Advances in Medical Imaging Segmentation: Generative, Few-Shot, Foundation and Universal Models",
-      "url": "https://doi.org/10.1145/3849846",
-      "openalex_id": "https://openalex.org/W4414686784",
-      "doi": "https://doi.org/10.1145/3849846",
-      "published": "2026-11-17",
-      "summary": "Medical imaging is a cornerstone of modern healthcare, driving advancements in diagnosis, treatment planning, and patient care. Among its various tasks, segmentation remains one of the most challenging problems due to factors such as data accessibility, annotation complexity, structural variability, variation in medical imaging modalities, and privacy constraints. Despite recent progress, achieving robust generalization and domain adaptation remains a significant hurdle, particularly given the resource-intensive nature of some proposed models and their reliance on domain expertise. This survey explores cutting-edge advancements in medical image segmentation, focusing on methodologies such as Generative AI, Few-Shot Learning, Foundation Models, and Universal Models. These approaches offer promising solutions to longstanding challenges. We provide a comprehensive overview of the theoretical foundations, state-of-the-art techniques, and recent applications of these methods. Finally, we discuss inherent limitations, unresolved issues, and future research directions aimed at enhancing the practicality and accessibility of segmentation models in medical imaging. We maintain a GitHub Repository to continue tracking and updating innovations in this field.",
+      "title": "FPGA-Based Neural Network Accelerators for Space Missions: A Survey",
+      "url": "https://doi.org/10.1145/3857797",
+      "openalex_id": "https://openalex.org/W4415306591",
+      "doi": "https://doi.org/10.1145/3857797",
+      "published": "2026-11-18",
+      "summary": "Space missions are growing ever more ambitious, placing greater demands on onboard computing. Field-programmable gate arrays (FPGAs) have garnered interest due to their reconfigurability and cost-effectiveness. At the same time, neural network (NN)-based methods are proving invaluable for critical spacecraft tasks such as autonomous operations, remote sensing, selective downlink, and data compression. This survey reviews and classifies the state-of-the-art in FPGA-based NN accelerators for space missions. We examine current trends, highlight key challenges, and suggest directions for future research. This work highlights key aspects for integrating high-performance NN acceleration into next-generation spacecraft computing systems.",
       "relevance_score": 1,
-      "matched_query": "persistent agent memory"
+      "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "The World is Your Canvas: Painting Promptable Events with Reference Images, Trajectories, and Text",
-      "url": "https://doi.org/10.1145/3829340.3842302",
-      "openalex_id": "https://openalex.org/W4417531487",
-      "doi": "https://doi.org/10.1145/3829340.3842302",
-      "published": "2026-11-17",
-      "summary": "We present WorldCanvas, a framework for promptable world events that enables rich, user-directed simulation by combining text, trajectories, and reference images. Unlike text-only approaches and existing trajectory-controlled image-to-video methods, our multimodal approach combines trajectories -- encoding motion, timing, and visibility -- with natural language for semantic intent and reference images for visual grounding of object identity, enabling the generation of coherent, controllable events that include multi-agent interactions, object entry/exit, reference-guided appearance and counterintuitive events. The resulting videos demonstrate not only temporal coherence but also emergent consistency, preserving object identity and scene despite temporary disappearance. By supporting expressive world events generation, WorldCanvas advances world models from passive predictors to interactive, user-shaped simulators. Our project page is available at: https://worldcanvas.github.io/.",
+      "title": "What Were You Thinking? An LLM-Driven Large-Scale Study of Refactoring Motivations in Open Source Projects",
+      "url": "https://doi.org/10.1145/3799717",
+      "openalex_id": "https://openalex.org/W7132835993",
+      "doi": "https://doi.org/10.1145/3799717",
+      "published": "2026-11-18",
+      "summary": "Context . Code refactoring improves software quality without changing external behavior. Despite its advantages, its benefits are hindered by the considerable cost of time, resources, and continuous effort it demands. Aim . Understanding why developers refactor, and which metrics capture these motivations, may support wider and more effective use of refactoring in practice. Method . We performed a large-scale empirical study to analyze developers’ refactoring activity, leveraging Large Language Models (LLMs) to identify underlying motivations from version control data, comparing our findings with previous motivations reported in the literature. Results . LLMs matched human judgment in 80% of cases, but aligned with literature-based motivations in only 47%. They enriched 22% of motivations with more detailed rationale, often highlighting readability, clarity, and structural improvements. Most motivations were pragmatic, focused on simplification and maintainability. While metrics related to developer experience and code readability ranked highest, their correlation with motivation categories was weak. Conclusions . We conclude that LLMs effectively capture surface-level motivations but struggle with architectural reasoning. Their value lies in providing localized explanations, which, when combined with software metrics, can form hybrid approaches. Such integration offers a promi",
       "relevance_score": 1,
-      "matched_query": "persistent agent memory"
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "The acmeological gamification framework for creative competence development: a testable theory for pre-service teacher education",
+      "url": "https://doi.org/10.3389/feduc.2026.1994435",
+      "openalex_id": "https://openalex.org/W7236087983",
+      "doi": "https://doi.org/10.3389/feduc.2026.1994435",
+      "published": "2026-11-18",
+      "summary": "Gamification in higher education has been studied mainly as a means of increasing motivation, engagement, and achievement, with far less attention to how game mechanics contribute to the creative competence of pre-service teachers. This article advances the Acmeological Gamification Framework for Creative Competence Development (AGF-CCD), a testable developmental theory of how gamified learning conditions may contribute to creative professional capability in teacher education. The framework was developed through a purposive narrative theory-building synthesis, supported by a mechanism-level evidence map in which empirical studies, syntheses, and theoretical sources are kept apart; it is neither a systematic review nor an empirical validation. It takes the well-supported link from need-supportive mechanics to autonomous motivation as a boundary premise and proposes three sequential links: autonomous motivation is channelled by interpretive feedback into reflective practice and in-task metacognitive regulation (P1); reflective practice under psychological safety and meaningful challenge activates divergent and convergent thinking (P2); and repeated, reflected creative activity in authentic professional tasks consolidates into durable creative competence, evidenced by retention and transfer (P3). Three boundary conditions concern the learner (P4a), the design, separating mechanic ",
+      "relevance_score": 1,
+      "matched_query": "metacognition self-improving AI agents"
     },
     {
       "title": "Discovering High Level Patterns from Simulation Traces",
@@ -295,19 +295,19 @@
       "openalex_id": "https://openalex.org/W7128631170",
       "doi": "https://doi.org/10.1145/3829340.3842269",
       "published": "2026-11-17",
-      "summary": "Large Language Models (LLMs) are unable to reliably reason about specific physical systems. Attempts to imbue LLMs with knowledge of the necessary physics concepts have shown great promise, but explainability and validation remain open challenges. An emerging alternative is tooling, where LLMs can query physical simulators and use the resulting simulation traces as context for validation. This approach suffers from poor scalability since simulation traces contain large volumes of fine-grained numerical and semantic data. We show that translating simulation traces to a sparse representation of \"high-level\" structural patterns leads to more effective interpretation by LLMs. We propose an unsupervised learning scheme to perform this translation, or annotation, via program synthesis. Our learning results in a library of programs that act as pattern detectors which can translate simulation traces to sparse, annotated pattern sequences. The detected patterns may optionally be guided by human experts via string labels (rigid collision, stretching spring, etc.). We show, using a recent physics benchmark, that such annotated representations are more amenable to natural language reasoning about specific physical systems. The synthesized programs serve as transparent, explainable functions that map system states to a sparse and efficient annotation space. As an example application, we sho",
+      "summary": "Large Language Models (LLMs) are unable to reliably reason about specific physical systems. Attempts to imbue LLMs with knowledge of the necessary physics concepts have shown great promise, but explainability and validation remain open challenges. An emerging alternative is tooling, where LLMs can query physical simulators and use the resulting simulation traces as context for validation. This approach suffers from poor scalability since simulation traces contain large volumes of fine-grained numerical and semantic data. We show that translating simulation traces to a sparse representation of ‘high-level’ structural patterns leads to more effective interpretation by LLMs. We propose an unsupervised learning scheme to perform this translation, or annotation, via program synthesis. Our learning results in a library of programs that act as pattern detectors which can translate simulation logs to sparse, annotated pattern sequences. The detected patterns may optionally be guided by human experts via string labels (rigid collision, stretching spring, etc.). We show, using a recent physics benchmark, that such annotated representations are more amenable to natural language reasoning about specific physical systems. The synthesised programs serve as transparent, explainable functions that map system states to a sparse and efficient annotation space. As an example application, we show ",
       "relevance_score": 1,
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "DiCEGI Diversified Counterfactual Explanations for a Group of Instances",
-      "url": "https://doi.org/10.1007/978-3-032-45476-8_5",
-      "openalex_id": "https://openalex.org/W7140150776",
-      "doi": "https://doi.org/10.1007/978-3-032-45476-8_5",
+      "title": "THE EVOLUTION OF SOCIAL COMMERCE: A HISTORICAL ANALYSIS OF WEBSITE FEATURES AND DIGITAL INTERACTIONS",
+      "url": "https://doi.org/10.66838/ma.237",
+      "openalex_id": "https://openalex.org/W7235208652",
+      "doi": "https://doi.org/10.66838/ma.237",
       "published": "2026-11-17",
-      "summary": "Machine learning techniques are now essential in many critical real-world domains to support decision-making. However, expert users often need explanations for the decisions made by these models. One key approach to explainable AI is using counterfactual explanations. These involve making small changes to input instances and observing how the machine learning model’s decision changes. For explaining outcomes for a group of instances, the explainer should identify a few diverse small interventions that are relevant to most of those instances rather than providing explanations for each one individually. In a classification setting that may involve multiple labels, we introduce a method called $$\\text {DiCE}_{GI}$$ that relies on an augmented Lagrangian method to identify the optimal set of perturbations to apply collectively to a group of instances. Experiments conducted on both artificial and real datasets demonstrate that $$\\text {DiCE}_{GI}$$ consistently returns the set of K interventions minimizing cost and maximizing coverage and diversity.",
+      "summary": "Social commerce represents one of the most significant transformations in digital retail, merging social media's interactive capabilities with e-commerce transactional functionality. This research traces the evolutionary trajectory of social commerce from its nascent stages in the early 2000s through its current sophisticated implementations, examining how website features and digital interactions have transformed consumer purchasing behavior. Through systematic analysis of platform developments, feature innovations, and user engagement patterns across two decades, we document how social commerce evolved from simple product sharing mechanisms to comprehensive ecosystems integrating user-generated content, live streaming, influencer marketing, and artificial intelligence-driven personalization. Our historical analysis reveals distinct developmental phases: the foundational period (2005-2010) characterized by basic social sharing features, the integration era (2011-2015) marked by dedicated social commerce platforms and Facebook commerce initiatives, the mobile acceleration phase (2016-2019) dominated by Instagram shopping and messaging-based commerce, and the immersive experience period (2020-2024) featuring live commerce, augmented reality try-ons, and community-driven purchasing. Key findings demonstrate that successful social commerce evolution correlates with increasing inte",
       "relevance_score": 1,
-      "matched_query": "automated AI research experimentation"
+      "matched_query": "cross-model handoff language model agents"
     }
   ],
   "paper_count": 30,
