@@ -1,6 +1,6 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-11-20T13:02:19.897386+00:00",
+  "generated_at_utc": "2026-11-21T12:46:04.871284+00:00",
   "source": "OpenAlex public API",
   "queries": [
     "persistent agent memory",
@@ -10,84 +10,94 @@
   ],
   "papers": [
     {
-      "title": "PERSONAL AI ARCHITECTURE",
-      "url": "https://doi.org/10.5281/zenodo.24355494",
-      "openalex_id": "https://openalex.org/W7235952672",
-      "doi": "https://doi.org/10.5281/zenodo.24355494",
+      "title": "Purpose-Bounded Context Exchange in Enterprise Agentic AI Systems: An Inter-Module Information Contract Architecture",
+      "url": "https://doi.org/10.3390/info17111176",
+      "openalex_id": "https://openalex.org/W7224559083",
+      "doi": "https://doi.org/10.3390/info17111176",
       "published": "2026-11-19",
-      "summary": "The increasing accessibility of generative artificial intelligence has enabled individuals to integrate sophisticated computational capabilities into everyday intellectual activities. Large language models can support information processing, research, knowledge organization, decision analysis, content creation, and workflow automation. However, the use of multiple AI applications without a coherent organizational architecture frequently produces fragmented knowledge, duplicated efforts, inconsistent context, limited traceability, and difficulties maintaining control over automated processes. This paper introduces Personal AI Architecture (PAIA), a conceptual and methodological framework for constructing an integrated, human-centered environment for AI-augmented intellectual work. Rather than treating artificial intelligence as an isolated conversational tool, PAIA conceptualizes it as a configurable component of a broader personal cognitive and operational infrastructure. The proposed framework consists of eight interconnected architectural layers: human governance, information intake, personal knowledge and memory, cognitive augmentation, model and agent coordination, tool integration and automation, verification and quality assurance, and adaptive system development. These layers are supported by cross-cutting principles of cognitive autonomy, information provenance, privacy,",
+      "summary": "Enterprise agentic AI systems exchange contextual information across functional modules, creating governance challenges when information crosses operational and organizational boundaries. This study distinguishes organizational governance boundaries from information exchange boundaries and proposes an Inter-Module Information Contract (IMIC) architecture for purpose-bounded context exchange. IMIC evaluates provenance, semantic and temporal validity, permitted information scope, and applicable originating constraints before downstream execution, independently of language-model reasoning. We compare IMIC with full-context sharing, reduced-context sharing, and strengthened structured handoff. In a deterministic benchmark of 32 synthetic conditions, joint correctness is achieved in 3, 10, 28, and 32 cases, respectively. The four differences between strengthened structured handoff and IMIC arise from conditions testing onward-transfer permission, recipient, purpose, and field scope. A downstream integration experiment evaluates 14 selected conditions across four local language models and three seeds, yielding 168 case–model–seed blocks and 672 method-level records. IMIC achieves correct exchange actions and information boundaries in all 168 blocks and joint correctness in 165 across four local LLMs and three seeds. Three permitted executions produce incorrect downstream responses de",
       "relevance_score": 7,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "YR-MPE: a modular desktop platform for agent-operable and reproducible phylogenetic workflows",
-      "url": "https://doi.org/10.21203/rs.3.rs-11771753/v1",
-      "openalex_id": "https://openalex.org/W7235449003",
-      "doi": "https://doi.org/10.21203/rs.3.rs-11771753/v1",
-      "published": "2026-11-18",
-      "summary": "Abstract Phylogenomic analyses combine many tools, file formats and execution modes. Desktop graphical user interfaces make individual steps accessible but hide their state from scripts; command-line pipelines make steps scriptable but leave parameter discovery, provenance and recovery to the user; and emerging LLM agents can call command-line tools but cannot inspect a GUI session or its artifacts. We present YR-MPE, a modular desktop platform whose YPhylo Workbench unifies these modes through a typed workspace, a plugin contract and a semantic action layer. Every operation in the action registry is exposed as a machine-callable action; controls without a CLI equivalent are declared GUI-only. The workspace records every imported plugin result as a run with its inputs, parameters, tool identity and output artifacts, the latter with SHA-256 hashes; each compiled workflow step becomes its own run. A placeholder compiler turns JSONL command sequences into reproducible workflow DAGs, while a skill layer maps each declared control to the corresponding command-line option; plugins with tool-specific contracts expose tool-specific actions. YR-MPE runs natively on Windows and bundles alignment, model selection, maximum-likelihood, Bayesian and species-tree inference, molecular dating, selection and visualization tools. We describe the interface and its provenance/workflow substrate, an",
-      "relevance_score": 6,
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "HAMU: Autonomy Without Sovereignty — Cognition, Continuity, and Authority in Persistent AI Systems",
-      "url": "https://doi.org/10.32388/bumy1r",
-      "openalex_id": "https://openalex.org/W7235080776",
-      "doi": "https://doi.org/10.32388/bumy1r",
-      "published": "2026-11-17",
-      "summary": "HAMU (HOST-AWARE MEDIATION UNIT) is a conceptual architecture for hosting persistent artificial intelligence (AI) agents that can carry out assignments, check their work, and correct mistakes. Plans and results can outlast the permissions that governed the original task. HAMU calls it AUTHORITY COLLAPSE when a host treats a saved plan, an external document, or an earlier approval as permission to act beyond what was delegated. In the workspace their host provides, agents can use tools, consult information, and propose operations. Before an operation takes effect, a mediator checks it against policies, grants, and records held in protected custody. HAMU models the proposal as a TRANSITION. Its semiformal rule accounts for what the operation would do, whom it would affect, which permissions apply, and how it would be carried out. Using conceptual model building within a design science research framework, the study examines four hypothetical scenarios and states nine design propositions. In one scenario, an agent reviewing its work finds a mislabeled ticket that its plan overlooked. Its grant already covers label changes in that project, so it can fix the error on its own. The same correction in a second project would require a grant that covers that project. Authorization can also change over time. Restoring a snapshot may recover a plan to send a document after the one-time gran",
+      "title": "Adaptive Mutual–Human Reflection: A Universal Framework for Multi-LLM Reciprocal Reflection, Human Metacognitive Participation, and Context-Aware Switching",
+      "url": "https://doi.org/10.5281/zenodo.24361773",
+      "openalex_id": "https://openalex.org/W7236854628",
+      "doi": "https://doi.org/10.5281/zenodo.24361773",
+      "published": "2026-11-19",
+      "summary": "Large language models (LLMs) increasingly employ reflection mechanisms to inspect their own outputs, identify potential errors, reconsider intermediate decisions, and improve subsequent responses. Recent research has also demonstrated the potential of multi-agent debate, collaborative critique, and human feedback for improving the quality of artificial intelligence systems. However, reflection in intelligent systems remains substantially fragmented across self-reflection, multi-agent interaction, external evaluation, and human feedback. In particular, an important architectural question remains: should a system rely on reciprocal reflection among multiple LLMs, human reflection, or a dynamically coordinated combination of both, and how should it determine when to transition between these mechanisms? This paper introduces Adaptive Mutual–Human Reflection (AMHR), a theoretical framework developed as a function-specific extension of the Universal Mutual-Human Model (UMHM). AMHR establishes two fundamental reflection dimensions: Mutual Reflection (M), in which two or more distinct LLMs reciprocally examine, challenge, interpret, and revise one another's reasoning and conclusions; and Human Reflection (H), in which human individuals or groups independently examine and reconsider the assumptions, reasoning, evidence, judgments, and outcomes of an intelligent system. These dimensions ",
       "relevance_score": 5,
-      "matched_query": "cross-model handoff language model agents"
+      "matched_query": "metacognition self-improving AI agents"
     },
     {
-      "title": "Spectra-Scope: a toolkit for automated and interpretable characterization of material properties from spectral data",
-      "url": "https://doi.org/10.1038/s41598-026-64600-x",
-      "openalex_id": "https://openalex.org/W7134254000",
-      "doi": "https://doi.org/10.1038/s41598-026-64600-x",
-      "published": "2026-11-18",
-      "summary": "Spectroscopy is a central pillar of materials characterization, providing useful information on properties like structure, composition, or excited state dynamics of a system. However, many spectroscopic techniques present challenges in the development of interpretable, performant, and reliable supervised learning models due to the wide range of possible nonlinear correlations that can exist between the signal and the response variable (target) of interest. Here, we present Spectra-Scope, an open-source AutoML framework for automatic characterization of material properties from spectroscopy data using interpretable machine learning (ML) models. The software is implemented in Python and a no-code web application. It comprises tools for data preprocessing, nonlinear feature extraction, machine learning model training, and feature selection. Users can easily train different types of simple, interpretable ML models on a set of feature transformations quickly and with modest computational resources. In this work, we outline the methods of Spectra-Scope and its effectiveness across diverse datasets, with applications to materials and agricultural spectroscopy data. We show that Spectra-Scope can reproduce performance of comparable models in the literature, and highlight how our emphasis on interpretability can be used to rationalize the behavior of individual models and understand the",
+      "title": "From reproducibility to comparability in computational photochemistry: lessons from the PhotoChem explorer prototype",
+      "url": "https://doi.org/10.1039/d6fd00102e",
+      "openalex_id": "https://openalex.org/W7169779839",
+      "doi": "https://doi.org/10.1039/d6fd00102e",
+      "published": "2027-01-01",
+      "summary": "We present the PhotoChem Explorer (PCE) prototype, a proof-of-concept web-based platform that represents computational photochemistry studies of gas-phase molecules in a structured and queryable form. Rather than treating excited-state dynamics simulations as isolated results reported in heterogeneous formats and across different sources, PCE organizes studies according to their molecular systems, computational workflows, methodological choices, and associated observables, facilitating that relationships and trends can be explored systematically across studies. In this way, the prototype illustrates how structured data representations could support improved findability, comparison, reproducibility, and reuse in computational photochemistry. At a fundamental level, it demonstrates how excited-state dynamics studies could become part of a more connected and cumulative body of knowledge, potentially enabling new modes of investigation. The prototype exposes practical challenges that must be addressed to realize this vision, including the development of shared representations, workflow descriptions, and their integration into scientific practice. More broadly, PCE is intended as a practice-driven experimentation platform to stimulate discussion and iterative community development of standards and representations for excited-state dynamics studies.",
       "relevance_score": 4,
       "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "An AI-Driven, Workflow-Aware Virtual Customer Support Assistant for Small and Medium-Sized Enterprises",
-      "url": "https://doi.org/10.52589/ajste-csgfxk",
-      "openalex_id": "https://openalex.org/W7234985848",
-      "doi": "https://doi.org/10.52589/ajste-csgfxk",
-      "published": "2026-11-17",
-      "summary": "Small and medium-sized enterprises (SMEs) that sell through messaging platforms often handle customer enquiries manually, leading to fragmented conversations, delayed responses and inconsistent service. This article proposes a workflow-aware conversational support assistant that combines a large language model (LLM), retrieval grounding, merchant API tools and context-preserving human hand-off. Using a design-science-oriented literature synthesis, in which sources were identified through keyword searches of academic databases, screened for relevance to messaging-based SME support and LLM-agent design, and analysed thematically, the study derives three design priorities: grounding customer-facing claims in current merchant data, separating model reasoning from validated execution, and transferring accumulated conversational state when escalation occurs. The resulting five-layer architecture comprises messaging integration, agent orchestration, retrieval and grounding, store action, and escalation and hand-off. Volatile data such as price, inventory and order status are retrieved live; state-changing operations require explicit customer confirmation and schema validation before execution. The article also specifies an evaluation protocol based on scripted end-to-end customer journeys using journey completion, factual agreement, action correctness, escalation precision and recall,",
+      "title": "Responsible AI Governance in Iran: A Program-Theory Evaluation of the National Artificial Intelligence Strategy",
+      "url": "https://doi.org/10.61838/jhrlp.389",
+      "openalex_id": "https://openalex.org/W7172329758",
+      "doi": "https://doi.org/10.61838/jhrlp.389",
+      "published": "2027-01-01",
+      "summary": "Artificial intelligence has become a strategic technology whose development requires coordinated institutional, regulatory, ethical, and infrastructural governance. This study evaluated the capacity of Iran’s National Artificial Intelligence Strategy to support responsible AI governance by reconstructing its underlying program theory and examining the coherence of its implementation architecture. The research adopted a qualitative, theory-based case-study design. Data were obtained through documentary analysis of the National Artificial Intelligence Strategy and related policy materials, together with semi-structured interviews with 12 experts from academic, research, policy, and industrial backgrounds. The data were coded and thematically analysed using MAXQDA, after which an integrated theory of change and theory of action was developed and applied to the national strategy. The findings indicated that responsible AI governance in Iran depends on sustained political commitment, a legally empowered and agile coordinating institution, equitable access to high-quality data and computational infrastructure, interdisciplinary human capital, effective university–industry collaboration, risk-based regulation, and continuous policy evaluation. The strategy provides an important normative foundation by emphasizing human dignity, national values, scientific development, priority sectors",
+      "relevance_score": 4,
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "A roadmap for polymer informatics superintelligence",
+      "url": "https://doi.org/10.1557/s43577-026-01200-0",
+      "openalex_id": "https://openalex.org/W7214796055",
+      "doi": "https://doi.org/10.1557/s43577-026-01200-0",
+      "published": "2026-11-19",
+      "summary": "Polymer informatics has matured from isolated property-prediction studies into an integrated discipline that couples data, models, and decision-making across the polymer design cycle. Yet it still falls short of a true intelligent system capable of inverse design on demand, causal reasoning across chemistry, processing, and performance, and closed-loop autonomous experimentation. This article traces a roadmap toward that goal, grounded in experience developing two complementary agentic and informatics platforms. Central to this vision is a modular, agent-directed architecture in which a polymer superintelligence layer interprets a researcher’s design question in natural language and coordinates domain-specialized tools, matched to the available data, for neat polymers, composites and formulations, solvents, and synthesis and processing. The resulting system spans the full chain from molecular design through processing to product-level performance and human perception. Orchestrated together, its generative design, synthesis-feasibility reasoning, and practicality assessment already form the decision-making core of a self-driving polymer laboratory, leaving autonomous, closed-loop experimentation as the principal step that remains. We survey emerging capabilities along this roadmap, including automated extraction of property data from the literature, chemistry-aware representatio",
       "relevance_score": 4,
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "“Should I Give Up Now?” Investigating LLM Pitfalls in Software Engineering",
-      "url": "https://doi.org/10.1145/3801972",
-      "openalex_id": "https://openalex.org/W4404569204",
-      "doi": "https://doi.org/10.1145/3801972",
-      "published": "2026-11-18",
-      "summary": "Software engineers are increasingly incorporating AI assistants into their workflows to enhance productivity and alleviate cognitive load. However, experiences with Large Language Models (LLMs) such as ChatGPT vary widely. While some engineers find them useful, others deem them counterproductive due to inaccuracies in their responses. Researchers have also observed that ChatGPT often provides incorrect information. Given these limitations, it is crucial to determine how to effectively integrate LLMs into Software Engineering (SE) workflow. Analyzing data from 26 participants in a complex web development task, we identified nine failure types categorized into incorrect or incomplete responses, cognitive overload, and context loss. Users attempted to mitigate these issues through scaffolding, prompt clarification, and debugging. However, 17 participants ultimately chose to abandon ChatGPT due to persistent failures. Our quantitative analysis revealed that unhelpful responses increased the likelihood of abandonment by a factor of 11, while each additional prompt reduced abandonment probability by 17%. This study advances the understanding of human-AI interaction in SE tasks and outlines directions for future research and tooling support.",
+      "title": "NeuroImgAgent: a multi-agent platform for cross-species fMRI analysis with evidence-gated quality control",
+      "url": "https://doi.org/10.64898/2026.11.19.767770",
+      "openalex_id": "https://openalex.org/W7236746938",
+      "doi": "https://doi.org/10.64898/2026.11.19.767770",
+      "published": "2026-11-19",
+      "summary": "Cross-species functional MRI analysis requires coordinating specialized workflows and assessing intermediate outputs. We present NeuroImgAgent, a multi-agent platform driven by large language models that translates natural-language requests into workflows for humans, macaques, rats and mice. Quantitative checks and vision-language model assessments determine whether processing continues, enters bounded recovery or stops. Across 268 paired cases, preprocessing metrics were broadly comparable to those of fMRIPrep, AFNI and RABIES. With GPT-5.5, NeuroImgAgent corrected 111 of 120 induced orientation errors and passed all 52 intent-recognition and planning tasks, 8 of 9 recovery tasks and 11 of 14 tool-construction tasks on NeuroAgentBench. In 120 paired challenge cases, the full configuration increased usability from 76.7% to 92.5%, as assessed by blinded experts, and reduced unusable outputs delivered without warning from 18.3% to 4.2% of cases relative to quality-control ablation.",
+      "relevance_score": 4,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "Llama-Polya: Instruction Tuning for Large Language Model Based on Polya’s Problem-Solving",
+      "url": "https://doi.org/10.1007/978-3-032-31657-8_32",
+      "openalex_id": "https://openalex.org/W7128710169",
+      "doi": "https://doi.org/10.1007/978-3-032-31657-8_32",
+      "published": "2027-02-02",
+      "summary": "",
       "relevance_score": 3,
       "matched_query": "metacognition self-improving AI agents"
     },
     {
-      "title": "Can GenAI numeracy tutors support self-regulated learning?",
-      "url": "https://doi.org/10.65106/apubs.2026.3308",
-      "openalex_id": "https://openalex.org/W7234357085",
-      "doi": "https://doi.org/10.65106/apubs.2026.3308",
-      "published": "2026-11-17",
-      "summary": "Generative artificial intelligence (GenAI) has been the focus of much attention in the higher education sector, both for its potential to support personalised and adaptive learning, but also due to the risk that students may outsource learning to it, leading to gaps in their professional or discipline competencies. This risk of cognitive offloading applies equally to learning how to learn, a skill set explored through studies of self-regulated learning (SRL). Two GenAI numeracy tutors were piloted at a regional Australian university as one component of a newly launched mathematics and statistics support centre, one focusing on medication calculations for Nursing students (NiNA), and the other on threshold numeracy skills for Education students (EdNA). Detailed analysis of students’ conversations with these agents using Zimmerman and Moylan’s 2009 SRL framework revealed extensive evidence of some elements of SRL such as strategic planning, task-specific strategies, and adaptive competence; trace evidence of other elements including self-efficacy and self-evaluation; and no evidence of the remaining elements. This study contributes an underrepresented qualitative perspective to the body of research into the crossover of GenAI and SRL and foreshadows avenues for further research and refinements in the design of GenAI numeracy tutors.",
-      "relevance_score": 3,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
-      "title": "Digital-Twin-Driven Predictive Maintenance and Fault-Tolerant Control for Electrified Agricultural Machinery: A Multiphysics and Deep Reinforcement Learning Framework for PMSM In-Wheel Drives",
-      "url": "https://philpapers.org/rec/XIADPM",
-      "openalex_id": "https://openalex.org/W7203455710",
-      "doi": "https://doi.org/10.17613/765dw-e3t58",
+      "title": "",
+      "url": "https://doi.org/10.63808/tcs.v2i2",
+      "openalex_id": "https://openalex.org/W7203466098",
+      "doi": "https://doi.org/10.63808/tcs.v2i2",
       "published": "2026-12-31",
-      "summary": "Electrified agricultural machinery increasingly relies on permanent-magnet synchronous motor drives that must remain dependable under variable traction, terrain-induced vibration, thermal cycling, contamination, and intermittent duty. Existing work offers mature methods for motor fault diagnosis, digital twins, predictive maintenance, and distributed-drive fault-tolerant control, but their health information is often not shared across diagnosis, maintenance, and control. This article develops a multiphysics digital-twin framework in which electrical, thermal, mechanical, and vibrational evidence maintains a probabilistic health belief that constrains both supervisory maintenance decisions and torque redistribution. The framework formalizes observability, uncertainty-aware health factors, deterministic safety shielding, multi-rate fallback logic, and agriculture-specific traction constraints. Reproducible low-fidelity numerical studies provide preliminary support for context-conditioned residual diagnosis and the revised thermal-continuity trade-off underlying health-aware derating, including robustness and sensitivity analyses. They do not validate sim-to-real transfer or the reinforcement-learning policy itself; those hypotheses remain open for dynamometer and hardware-in-the-loop testing. The results are therefore interpreted as mechanism-level evidence rather than field-perf",
-      "relevance_score": 2,
-      "matched_query": "persistent agent memory"
+      "summary": "Research on integrating specialized, language-model-based agents for automated test-case generation remains limited, and the detection criteria under which such systems are evaluated have not been standardized, which makes reported rates difficult to compare across studies.This paper presents a multi-agent testing framework in which requirement analysis, test-case generation, sandboxed execution, and defect detection are delegated to four distinct agents, and in which detection rests on a composite rule combining the execution signal with the semantic judgment of a dedicated diagnostic agent.The framework is evaluated on the QuixBugs dataset of forty Python programs under three criteria of increasing strictness.A two-run differential protocol against the reference implementation, recommended here as the primary indicator, yields a detection rate of 55.0%, against 90.0%under the unconditional criterion conventional in prior work and 5.0% under a strict criterion requiring the suite to pass entirely on correct code.The thirty-five-point gap is traced to language-model test artifacts, of which hallucinated oracle values and signature mismatches account for the majority.An ablation with a same-model single-agent baseline attributes the framework's advantage to role decomposition rather than to the diagnostic agent specifically, and the distribution of detection across the fourteen ",
+      "relevance_score": 3,
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "Independent Learning after Generative AI Support in School Mathematics: A Systematic Review and Assessment-Stratified Meta-Analysis",
+      "url": "https://doi.org/10.21203/rs.3.rs-11766988/v1",
+      "openalex_id": "https://openalex.org/W7236583407",
+      "doi": "https://doi.org/10.21203/rs.3.rs-11766988/v1",
+      "published": "2026-11-19",
+      "summary": "Background and Objective. Generative artificial intelligence (GenAI) solves school math problems on demand. Higher scores during live tool access do not prove retained mathematical competence once that support disappears. Earlier meta-analyses pooled assisted task completion together with unmonitored and closed-book posttests, which obscured whether pupils actually learned to work alone. This PRISMA 2020 systematic review and stratified meta-analysis evaluates K–12 mathematics outcomes by separating test-time resource rules from instructional design. Methods. Two-stream searches across ERIC, APA PsycNet, OpenAlex, Crossref, Semantic Scholar, arXiv, EuropePMC, and bidirectional citation chasing (1 January 2022–8 November 2026) returned 11,061 raw entries and 6,530 unique records. Every sought report was retrieved in full (372 / 372; 0 unretrieved). Eligibility verification and mathematical consistency checks retained 49 K–12 school-mathematics reports across 46 independent cohorts and supplied 36 quantitative contrasts across 20 controlled study families (21 controlled quantitative reports, plus 1 factorial within-AI modality trial synthesized narratively) alongside 28 qualitative, single-arm, observational, and boundary-comparator reports. Random-effects Paule–Mandel and restricted maximum likelihood estimators with classroom cluster adjustments (calibrated intraclass correlati",
+      "relevance_score": 3,
+      "matched_query": "metacognition self-improving AI agents"
     },
     {
       "title": "Exploring or Exploiting Generative AI? A Dual-Path, Dual-Horizon Theory of Employee Incremental and Radical Creativity",
@@ -96,6 +106,16 @@
       "doi": "https://doi.org/10.17613/yh16p-7xe23",
       "published": "2026-12-31",
       "summary": "Recent research has established that generative artificial intelligence (GenAI) is not a unitary workplace resource: exploratory and exploitative use orientations are associated with different forms of employee creativity, and their value depends on employees' capacity to integrate generated knowledge. This article therefore does not present the basic dual path as a new discovery. Instead, it develops a theoretical integration and dynamic extension that asks why the established paths operate differently, when employees should switch between them, and how short-run augmentation can evolve into either capability accumulation or capability substitution. We distinguish expansive and consolidative modes of knowledge integration, theorize phase-congruent switching rather than static ``high-high'' ambidexterity, and position metacognition as a control mechanism that governs both immediate knowledge conversion and longer-run cognitive development. We further specify cultural tightness and psychological safety as directional boundary conditions and distinguish individual creative gains from collective idea-space diversity. The framework converts emerging empirical regularities into falsifiable propositions about task phase, context, and time, providing a research agenda for sustainable human--AI creativity.",
+      "relevance_score": 2,
+      "matched_query": "metacognition self-improving AI agents"
+    },
+    {
+      "title": "Artificial Intelligence: Competencies for design in emerging creative environments",
+      "url": "https://doi.org/10.35429/jti.2026.13.31.2.1.16",
+      "openalex_id": "https://openalex.org/W7143457629",
+      "doi": "https://doi.org/10.35429/jti.2026.13.31.2.1.16",
+      "published": "2026-12-30",
+      "summary": "The study, titled From Artificial Intelligence: Competencies for Design in Emerging Creative Environments, aims to determine the competencies linked to the use of Artificial Intelligence in the training of designers, as well as to examine its impact on the professional environment. The advancement of AI has reconfigured not only the tools for design practice, but also the essential dynamics of the creative process. In emerging human-AI collaboration [HAIC] scenarios, these systems operate as cooperative agents and not merely as support tools. However, even though design students are progressively incorporating these technologies into their practice, a gap persists in the development of fundamental competencies for establishing effective interaction with these systems. Therefore, the need to strengthen disciplinary training through competencies that integrate critical interpretation, collaborative interaction, ethical and metacognitive reflection, in addition to specialized technical mastery is recognized. Based on the above, this research is structured around a comprehensive review of scientific literature, analysing studies retrieved from specialized databases in both design and higher education. The methodology will adopt the PRISMA [2021] systematic review protocol, which will ensure a rigorous process for the identification, selection, and synthesis of emerging competencies",
       "relevance_score": 2,
       "matched_query": "metacognition self-improving AI agents"
     },
@@ -110,44 +130,54 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Within-Host Infection Dynamics",
-      "url": "https://doktori.bibl.u-szeged.hu/id/eprint/13269/1/Within-Host%20Infection%20Dynamics_Stability%2CBifurcation%2C%20and%20Persistence%20in%20Viral%20and%20Bacterial%20Models.pdf",
-      "openalex_id": "https://openalex.org/W7219551970",
-      "doi": null,
-      "published": "2026-12-04",
-      "summary": "This dissertation presents a rigorous mathematical study of within-host infection dynamics through the development and analysis of nonlinear differential equation models. The work is motivated by the need to understand the complex interactions between pathogens and host cells, accounting for mechanisms such as saturation in infection, cellular quiescence, immune-mediated control, and cooperative bacterial growth. The dissertation is organized around three central themes, each addressed through a dedicated mathematical model. The first theme concerns the within-host dynamics of Usutu virus infection. An autonomous model incorporating the Crowley–Martin functional response is developed and rigorously analyzed, establishing global threshold dynamics governed by the basic reproduction number R_0. A periodically forced extension is then studied to capture the influence of circadian rhythms on infection thresholds, revealing that time-dependent forcing can give rise to persistent oscillatory patterns in viral load. The second theme addresses HIV infection dynamics. A model is proposed that incorporates both quiescent CD4+ T cells and a cytotoxic T lymphocyte (CTL) immune response in a unified framework. The analysis establishes threshold dynamics governed by R_0, a forward transcritical bifurcation at R_0 = 1 confirming the absence of bistability, global stability results, and condit",
-      "relevance_score": 2,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "Post-traumatic stress disorder: pathogenesis, epidemiological characteristics, animal models, and potential therapeutic strategies",
-      "url": "https://doi.org/10.1016/j.mmr.2026.100005",
-      "openalex_id": "https://openalex.org/W7140309693",
-      "doi": "https://doi.org/10.1016/j.mmr.2026.100005",
+      "title": "Reconstructing The Concept Of Self Actualisation In Artificial Intelligence Based Learning : An Integrative Literature Review",
+      "url": "https://doi.org/10.64540/k969r880",
+      "openalex_id": "https://openalex.org/W7221700139",
+      "doi": "https://doi.org/10.64540/k969r880",
       "published": "2026-12-01",
-      "summary": "Post-traumatic stress disorder (PTSD) is a complex neurobehavioral disorder that disproportionately affects military service members. The clinical presentation of PTSD is heterogeneous and may overlap with other psychiatric conditions. According to the Fifth Edition of the Diagnostic and Statistical Manual of Mental Disorders (DSM-5), common symptoms include memory loss, mood and personality changes, impulsiveness, aggression, anxiety, and depression. The pathophysiological mechanisms underlying PTSD remain incompletely understood, although research implicates pathways involving the hypothalamic-pituitary-adrenal (HPA) axis, dysfunctional neural circuitry, neurochemical imbalances, neuroinflammatory processes, and genetic and epigenetic factors. Approximately 7% of the U.S. adult population has met the diagnostic criteria for PTSD in their lifetime, with a substantially higher prevalence of 12%-30% among military personnel. Multiple animal models, including single-stressor, intermediate complexity, social interaction, predator stress, and blast exposure paradigms, have been employed to investigate PTSD mechanisms. Current treatment strategies typically integrate pharmacotherapy and psychotherapy. Military service members are at increased risk for blast injuries, which frequently result in traumatic brain injury (TBI). Although some symptoms of TBI may resolve, approximately 20%",
+      "summary": "The development of Generative Artificial Intelligence (GenAI) has transformed the learning ecology by positioning AI as a cognitive partner that supports personalisation, feedback, problem-solving, and creativity. This transformation necessitates a reconstruction of the concept of self-actualisation, as some human cognitive activities can be delegated to AI. This study aims to analyse the transformation of self actualisation, identify the conditions that strengthen or hinder it, and formulate a conceptual framework for self-actualisation in AI-based learning. This study employs a qualitative library research approach using an integrative literature review design. The findings indicate that GenAI is paradoxical in nature: it can serve as a cognitive scaffold that strengthens autonomy, competence, self-regulation, creativity, metacognition, and epistemic agency, while also potentially encouraging cognitive offloading, dependence, and the weakening of cognitive autonomy. This study proposes the Reflective-Relational Self Actualisation Framework in AI Learning Ecologies (RRSA-AILE), which encompasses autonomy, competence, relatedness, epistemic agency, metacognitive reflexivity, generative creativity, and ethical responsibility. Theoretically, RRSA-AILE integrates humanism, Self-Determination Theory, Self-Regulated Learning, and learner agency. Practically, the framework provides a",
       "relevance_score": 2,
-      "matched_query": "persistent agent memory"
+      "matched_query": "metacognition self-improving AI agents"
     },
     {
-      "title": "Can TDD improve the quality of LLM-migrated code? : A pilot study in an industrial context",
-      "url": "https://lup.lub.lu.se/record/27eef6f8-a28f-44f4-87ab-0f4206c0f935",
-      "openalex_id": "https://openalex.org/W7215001135",
-      "doi": null,
-      "published": "2026-12-01",
-      "summary": "The emergence of Large Language Models (LLM) has created new possibilities for automating software development, yet ensuring the quality of AI-generated code remains a major challenge. We aim to investigate if Test-Driven Development (TDD) can improve the quality of code generated by an LLM in a fully autonomous context, within a pilot project at Decerno AB. We added TDD to their pilot workflow, using a design science approach, with continuous refinements to prompt design and workflow structure, based on observed AI behavior. The generated code was evaluated and compared with non-TDD code, using SonarQube for static code analysis. The results indicate that TDD reduced complexity and code duplication, but introduced more quality issues overall, while non-TDD produced fewer, but more severe issues. The generated tests from the TDD workflow focused more on content verification than on behavioral testing, contributing to a lower code coverage per test compared to non-TDD. The findings suggest that TDD involves trade-offs that may favor certain development priorities, in particular where lower complexity and reduced duplication are more beneficial than minimizing total issue count. This indicates that a strict application of TDD may not be optimal in an autonomous AI-driven context, and that exploring more flexible adaptations of the TDD workflow remains interesting for future resea",
+      "title": "EgoPlay: Event-Triggered Video Editing for Egocentric Streams",
+      "url": "https://doi.org/10.1145/3829340.3842276",
+      "openalex_id": "https://openalex.org/W7171529514",
+      "doi": "https://doi.org/10.1145/3829340.3842276",
+      "published": "2026-11-30",
+      "summary": "We introduce EgoPlay, an event-triggered video-to-video editor for egocentric streams, obtained by fine-tuning a pretrained V2V diffusion transformer on event-conditioned data built primarily from Ego4D. Given a monocular video and an event-triggered prompt of the form “when X happens, do Y,” EgoPlay infers whether and when event X occurs, preserves pre-event frames, and applies edit Y only to the post-event continuation. Rather than cascading a separate event detector with an editor, EgoPlay learns event recognition, temporal restraint, and pixel-level editing jointly in a single end-to-end model, while also handling negative and multi-event prompts. To support this, we construct a large-scale dataset of 106K event-triggered clip–prompt pairs spanning positive triggers, fabricated-trigger negatives, and multi-event prompts. We then train a bidirectional video diffusion editor with event-triggered supervision and derive a causal variant for chunk-by-chunk streamable inference. We further introduce an event-aware evaluation protocol that separately measures post-trigger editing quality, pre-trigger preservation, and false-trigger robustness. On the Ego4D benchmark, EgoPlay substantially outperforms EgoEdit, the state-of-the-art instruction-based egocentric video editing baseline, with relative gains of 17.7%, 16.9%, and 16.4% in editing quality, visual quality, and background co",
       "relevance_score": 2,
-      "matched_query": "automated AI research experimentation"
+      "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "From Coding to Creativity: Integrating Design Thinking into IT and Technology Education",
-      "url": "https://ejournal.duniakampus.org/index.php/Jetech/article/view/346",
-      "openalex_id": "https://openalex.org/W7225114276",
-      "doi": "https://doi.org/10.65678/jetech.v2i3.346",
-      "published": "2026-11-25",
-      "summary": "This study examines how the integration of Design Thinking into Information Technology (IT) and technology education can bridge technical programming skills and creative, human-centered problem-solving. Specifically, it explores how the five stages of Design Thinking empathizing, defining, ideating, prototyping, and testing shape students’ creative thinking, active engagement, and collaborative learning experiences. A qualitative research approach was employed, involving teachers, students, and school principals as key informants. Data were collected through in-depth interviews, classroom observations, and documentation of learning activities, then analyzed thematically to identify recurring patterns in teaching practices and student experiences. The findings indicate that Design Thinking creates opportunities for students to move beyond coding procedures toward developing digital solutions that respond to real users’ needs. Through collaborative ideation, iterative prototyping, and feedback-based testing, students demonstrate greater involvement in learning, explore alternative solutions, and communicate their ideas more actively. The approach also provides opportunities to develop empathy, creativity, collaboration, and a willingness to experiment with and revise initial designs. Meanwhile, teachers assume a facilitative role by guiding inquiry, supporting experimentation, an",
+      "title": "The Governance Frontier COBIT-Aligned AI Decision Support and Risk-Adaptive Optimization for Enterprise Technology Modernization",
+      "url": "https://doi.org/10.21203/rs.3.rs-11784311/v1",
+      "openalex_id": "https://openalex.org/W7236666611",
+      "doi": "https://doi.org/10.21203/rs.3.rs-11784311/v1",
+      "published": "2026-11-19",
+      "summary": "Executives deciding enterprise modernization, legacy-system transformation, AI adoption, organizational restructuring, digital-infrastructure change, and cross-functional governance must weigh legal, financial, cybersecurity, procurement, opera-tional, and AI-governance questions that sit in separate functions. The central methods of this paper are GAIM-DF (Governance-Aware Institutional Modernization Decision Framework), a human-gated advisory process for these decisions, and Risk-Adaptive AI Governance Optimization (RA-GO v2), a risk-adaptive optimizer with mandatory governance gates, halt-safe feasibility, distributionally robust evaluation, and preference-information triage for scarce human review; an accountable human decides. As an optional architectural extension, we compu-tationally evaluate a multi-expert coordination layer that convenes specialist capabilities by context and consolidates constraints conservatively. Evidence is staged across four complementary pre-deployment approaches: analytical verification; retrospective historical-data analysis; comparative computational benchmark-ing against strong baselines; and scenario-based stress testing under distributional shift. Together they provide complementary pre-deployment evidence for high-stakes governance analysis. A systematic review of university and public-sector governance, with observational process-log anal",
       "relevance_score": 2,
-      "matched_query": "automated AI research experimentation"
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "Human-first learning: scaffolding reasoning before AI assistance improves diagnostic accuracy",
+      "url": "https://doi.org/10.21203/rs.3.rs-11417031/v1",
+      "openalex_id": "https://openalex.org/W7236727041",
+      "doi": "https://doi.org/10.21203/rs.3.rs-11417031/v1",
+      "published": "2026-11-19",
+      "summary": "Generative AI could improve physicians' clinical performance, yet its use in medical training raises questions about whether trainees can develop the clinical reasoning needed to use AI effectively and independently. We conducted a longitudinal randomised controlled trial involving 496 medical students (389 analysed). Students completed clinical reasoning tasks with virtual standardised patients and were randomised to six conditions: no intervention, an AI assistant alone, AI scaffolding alone, scaffolding followed by the AI assistant, the AI assistant followed by scaffolding, or both simultaneously. AI scaffolding prompted students to reflect on and evaluate their reasoning without providing direct answers; the assistant provided requested information and answers. The study comprised an AI-free baseline, two intervention phases and a final assessment after all AI support was withdrawn. Frontier large language models (LLMs) completed the same tasks as an additional benchmark. Students initially performed below LLMs but later exceeded them following the interventions. Students who began with AI scaffolding achieved higher diagnostic accuracy than those given access to the AI assistant from the outset both during the subsequent intervention phase (75.2% vs 66.0%; OR 1.73, 95% CIs [1.12–2.68]) and after withdrawal (24.6% vs 14.4%; OR 2.19, 95% CIs [1.15–4.14]). After withdrawal, s",
+      "relevance_score": 2,
+      "matched_query": "metacognition self-improving AI agents"
+    },
+    {
+      "title": "From system 1 and system 2 to fast and slow AI: Reflections on human and machine intelligence inspired by Daniel Kahneman",
+      "url": "https://doi.org/10.1002/aaai.70103",
+      "openalex_id": "https://openalex.org/W7237041295",
+      "doi": "https://doi.org/10.1002/aaai.70103",
+      "published": "2026-11-19",
+      "summary": "I first had the privilege of spending time with Daniel Kahneman at the 2017 Asilomar AI conference organized by the Future of Life Institute (Future of Life Institute, 2017b).We immediately liked each other and spent a great deal of time discussing AI and human intelligence.The location itself was deeply symbolic.Asilomar had previously hosted the historic 1975 conference at which genomic researchers gathered to discuss the risks of recombinant DNA technologies and agreed on limits and safeguards for experimentation (Berg et al., 1975).In 2017, AI researchers, entrepreneurs, philosophers, and policymakers met there to debate the future of AI and its implications for human-This is an open access article under the terms of the Creative",
+      "relevance_score": 2,
+      "matched_query": "metacognition self-improving AI agents"
     },
     {
       "title": "Lived experiences of relationships to generative AI mental health chatbots among adults",
@@ -155,79 +185,39 @@
       "openalex_id": "https://openalex.org/W7165565806",
       "doi": "https://doi.org/10.1007/s44202-026-01001-1",
       "published": "2026-11-18",
-      "summary": "Abstract Background Nigeria's mental health system serves less than 10% of those in need, with severe provider shortages and deep-seated stigma. Generative AI chatbots offer scalable support, yet how Nigerian adults experience attachment to non-human therapeutic agents remains unexplored. Objective To examine lived experiences of AI therapeutic relationships among Nigerian adults, focusing on attachment formation, cultural acceptability, and perceived authenticity within contexts of care scarcity. Methods Interpretative Phenomenological Analysis with 37 adults (18–45 years) who engaged AI mental health chatbots for ≥ 4 weeks. Semi-structured interviews explored relational experiences, trust development, privacy concerns, and comparisons with human/traditional healing. Results Four superordinate themes emerged: (1) Relational Ambivalence ; participants valued 24/7 availability and non-judgmental space yet struggled with perceived lack of genuine human reciprocity; (2) Cultural Navigation ; users actively adapted Western therapeutic frameworks to local idioms of distress, blending AI interactions with family counsel and spiritual practices; (3) Stigma Sanctuary ; chatbots provided confidential entry points circumventing community visibility and professional hierarchy; and (4) Fragile Dependency ; prolonged use generated attachment anxiety about potential app discontinuation or da",
+      "summary": "Nigeria’s mental health system serves less than 10% of those in need, with severe provider shortages and deep-seated stigma. Generative AI chatbots offer scalable support, yet how Nigerian adults experience attachment to non-human therapeutic agents remains unexplored. To examine lived experiences of AI therapeutic relationships among Nigerian adults, focusing on attachment formation, cultural acceptability, and perceived authenticity within contexts of care scarcity. Interpretative Phenomenological Analysis with 37 adults (18–45 years) who engaged AI mental health chatbots for ≥ 4 weeks. Semi-structured interviews explored relational experiences, trust development, privacy concerns, and comparisons with human/traditional healing. Four superordinate themes emerged: (1) Relational Ambivalence ; participants valued 24/7 availability and non-judgmental space yet struggled with perceived lack of genuine human reciprocity; (2) Cultural Navigation ; users actively adapted Western therapeutic frameworks to local idioms of distress, blending AI interactions with family counsel and spiritual practices; (3) Stigma Sanctuary ; chatbots provided confidential entry points circumventing community visibility and professional hierarchy; and (4) Fragile Dependency ; prolonged use generated attachment anxiety about potential app discontinuation or data breaches, compounded by absence of human es",
       "relevance_score": 2,
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "EgoPlay: Event-Triggered Video Editing for Egocentric Streams",
-      "url": "https://doi.org/10.1145/3829340.3842276",
-      "openalex_id": "https://openalex.org/W7171529514",
-      "doi": "https://doi.org/10.1145/3829340.3842276",
-      "published": "2026-11-17",
-      "summary": "We introduce EgoPlay, an event-triggered video-to-video editor for egocentric streams, obtained by fine-tuning a pretrained V2V diffusion transformer on event-conditioned data built primarily from Ego4D. Given a monocular video and an event-triggered prompt of the form “when X happens, do Y,” EgoPlay infers whether and when event X occurs, preserves pre-event frames, and applies edit Y only to the post-event continuation. Rather than cascading a separate event detector with an editor, EgoPlay learns event recognition, temporal restraint, and pixel-level editing jointly in a single end-to-end model, while also handling negative and multi-event prompts. To support this, we construct a large-scale dataset of 106K event-triggered clip–prompt pairs spanning positive triggers, fabricated-trigger negatives, and multi-event prompts. We then train a bidirectional video diffusion editor with event-triggered supervision and derive a causal variant for chunk-by-chunk streamable inference. We further introduce an event-aware evaluation protocol that separately measures post-trigger editing quality, pre-trigger preservation, and false-trigger robustness. On the Ego4D benchmark, EgoPlay substantially outperforms EgoEdit, the state-of-the-art instruction-based egocentric video editing baseline, with relative gains of 17.7%, 16.9%, and 16.4% in editing quality, visual quality, and background co",
-      "relevance_score": 2,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "When AI Performs, What Remains? An Integrative Review of Generative AI and Cognitive Capital in Individuals and Organizations",
-      "url": "https://doi.org/10.1177/21522715261509248",
-      "openalex_id": "https://openalex.org/W7224854825",
-      "doi": "https://doi.org/10.1177/21522715261509248",
-      "published": "2026-11-17",
-      "summary": "Generative artificial intelligence (AI) is rapidly entering knowledge work, and its short-term productivity benefits are increasingly documented. Less is known about what happens, over time, to the knowledge, skills, and judgment that remain in people and organizations. This integrative narrative review addresses that question through the construct of cognitive capital: the accumulated, renewable, and depletable stock of knowledge, cognitive, and metacognitive capabilities, and practices that enable an individual or an organization to learn, interpret information, exercise judgment, solve problems, and adapt. We distinguish individual and organizational cognitive capital from the capability of the human-AI system, so that gains in joint performance and losses in human capability can be observed at the same time. Drawing on experimental, field, and conceptual work, we propose four mechanisms through which interaction with AI affects cognitive capital: substitution of practice, scaffolding and feedback, metacognitive calibration, and organizational aggregation. Seven principles summarize the current evidence, including that assisted performance differs from retained competence, that the same technology can support or displace learning depending on design and use, and that individual gains can coexist with reduced collective diversity. For each mechanism, we derive testable propos",
-      "relevance_score": 2,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
-      "title": "From Andragogy to Cognitive Governance: A Conceptual Model of Scholar-Leader Formation in AI-Powered Doctoral Education",
-      "url": "https://doi.org/10.46787/ijaipil.v1i4.8198",
-      "openalex_id": "https://openalex.org/W7234978624",
-      "doi": "https://doi.org/10.46787/ijaipil.v1i4.8198",
-      "published": "2026-11-17",
-      "summary": "Generative artificial intelligence (AI) is transforming doctoral education by reshaping how scholars engage with knowledge, conduct research, write, and develop scholarly identities. This conceptual article extends andragogy into AI-mediated doctoral education by introducing cognitive governance as the capacity to deliberately regulate the distribution, evaluation, integration, and ownership of cognitive work across human and AI systems. A conceptual model of AI-powered scholar-leader formation is proposed, connecting andragogical agency, AI augmentation, cognitive governance, cumulative scholarship, and scholar-leader formation. Cognitive governance occupies the model’s regulatory center and is operationalized through three principles: maintaining agency, exercising professional judgment, and claiming ownership of scholarly work. The model further conceptualizes AI as augmentation rather than replacement and positions cumulative scholarship as a developmental pathway connecting coursework, research, publication, and dissertation development. Ultimately, the article reconceptualizes doctoral independence as the capacity to govern human-AI cognition while remaining intellectually and ethically accountable.",
-      "relevance_score": 2,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
-      "title": "Nonpredictive approaches in marketing",
-      "url": "https://doi.org/10.1007/s11747-026-01228-3",
-      "openalex_id": "https://openalex.org/W7235389345",
-      "doi": "https://doi.org/10.1007/s11747-026-01228-3",
-      "published": "2026-11-17",
-      "summary": "Abstract Much academic research is focused on the application of predictive data, forecasts, and models to inform practical marketing decision-making. Such work offers powerful insights to marketers directing their firms and interacting with the environments in which they operate. The present study is devoted to the smaller, alternative, and equally potent body of work that seeks to enable decision-making without reliance on prediction. We term this category of approaches ‘nonpredictive’ because their operative basis for action does not depend on prior estimation of future states or outcomes. Instead, decision paths are generated and revised through mechanisms of action, interaction, commitment, recombination, experimentation, and imagined direction. This foundation enables nonpredictive approaches to function across a wide variety of marketing decisions, including truly uncertain situations where prediction cannot reliably guide action. Interest in nonpredictive approaches is emerging but has yet to be consolidated. We inventory and synthesize nonpredictive approaches in the marketing literature, contributing to academic discussion at the foundation of marketing decision-making. In the process, we clarify conceptual specifics of nonpredictive approaches, construct a taxonomy that distinguishes among them, and develop a series of propositions to inform future research. The payo",
-      "relevance_score": 2,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
-      "title": "CliniCIRCA: LLM-powered Clinical Timeline Generation and Summarization from Unstructured EHR Texts for Mental Health Patients",
-      "url": "https://doi.org/10.21203/rs.3.rs-11472328/v1",
-      "openalex_id": "https://openalex.org/W7213609149",
-      "doi": "https://doi.org/10.21203/rs.3.rs-11472328/v1",
-      "published": "2026-11-16",
-      "summary": "Abstract Background: Mental health care often requires clinicians to reason over patient journeys: longitudinal patterns of symptoms, diagnoses, treatments, behaviors, social context, and responses to care. Yet these journeys are rarely documented as readily available, explicit timelines. Clinically important temporal information is often embedded in unstructured discharge narratives, where events may be repeated, narrated out of order, or expressed through vague and relative time references. This makes temporal recovery difficult for clinicians and computational systems, and can limit the reliability of downstream summarization. Methods: We present CliniCIRCA, a multi-stage large language model (LLM) framework for Calendar-anchored, Imprecision-aware Reconstruction of Clinical Annals. CliniCIRCA decomposes patient-journey reconstruction into three stages: extracting atomic clinical events from raw discharge summaries, assigning calendar-grounded temporal labels with explicit uncertainty, and rendering the verified timeline as a date-grouped clinical summary. The framework is designed to make temporal reasoning inspectable rather than hidden inside a single summarization step. Results: From 14,882 MIMIC-III mental-health-coded admissions, we construct a benchmark of 52 discharge summaries on which CliniCIRCA produces 15,891 temporally tagged events. Following clinician-defined ",
-      "relevance_score": 2,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Video and digital games: Historical controversies, benefits, and risks for children and adolescents",
-      "url": "https://jcdee.com/index.php/jcdee/article/view/72",
-      "openalex_id": "https://openalex.org/W7213265892",
-      "doi": "https://doi.org/10.5281/zenodo.22768009",
-      "published": "2026-12-30",
-      "summary": "Video and digital games have been the focus of sustained public and scientific debate since their commercial emergence in the late 1970s, particularly regarding their effects on children and adolescents. Early public and scientific discourse frequently portrayed gaming as a source of physical injury, addiction, aggression, social isolation, academic problems, and moral decline. However, subsequent empirical research has produced a substantially more differentiated picture of both the benefits and risks of gaming. This review examines the historical foundations of controversies surrounding video and digital games and synthesizes contemporary evidence concerning their cognitive, emotional, social, therapeutic, and physical effects. . Research indicates that moderate, purposeful gaming may improve visuospatial abilities, attentional control, problem-solving, mood regulation, social connection, and selected educational outcomes. Gaming-based interventions have also demonstrated therapeutic potential, particularly for depressive symptoms and attention-related difficulties among young people. At the same time, important risks remain, especially when gaming becomes excessive, compulsive, or disruptive to everyday functioning. These include repetitive-strain injuries, sleep disruption, problematic gaming, and adverse mental-health and academic outcomes. Evidence concerning violent game",
+      "title": "A Brick in the Creative Wall: The Cultural and Creative Production System Facing the Challenge of Generative Artificial Intelligence",
+      "url": "https://doi.org/10.3917/e.jie.pr2.0219",
+      "openalex_id": "https://openalex.org/W7224091523",
+      "doi": "https://doi.org/10.3917/e.jie.pr2.0219",
+      "published": "2027-01-03",
+      "summary": "Generative artificial intelligence (GenAI) is increasingly transforming cultural and creative industries (CCIs), yet research lacks a structured understanding of how they intervene across production processes. How and where does GenAI reshape value creation activities within the CCI production system? Building on the UNESCO cultural cycle (2009), we develop an analytical framework that maps GenAI applications across three phases of the cultural production value chain: creation, production, and distribution/consumption. It identifies how GenAI reconfigures value creation and value capture mechanisms differently across phases and sectors. Our analysis highlights emerging dynamics, including phase-specific technological dependencies, increasing feedback loops between production and consumption, and a growing technological convergence across CCIs. To illustrate these mechanisms, we present cases from Galleries, Libraries, Archives and Museums (GLAM). Our paper contributes to ongoing debates on digital transformation in cultural production systems, providing insights for researchers, policymakers, and cultural organizations navigating the opportunities and risks of GenAI. JEL Codes: H0, M0, M1, O4",
       "relevance_score": 1,
-      "matched_query": "persistent agent memory"
+      "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "An Assessment of Accessibility and Affordability of Inpatient Psychiatric Care in Tennessee",
-      "url": "https://dc.etsu.edu/etd/4763",
-      "openalex_id": "https://openalex.org/W7203852712",
-      "doi": null,
-      "published": "2026-12-01",
-      "summary": "Introduction: Access to mental health has seen changes over the past decade, but little research and attention have been given to access to inpatient psychiatric facilities. Inpatient psychiatric care is crucial for patients experiencing mental health emergencies who need immediate access to care. Gaps in spatial accessibility, affordability, and the access and assessment process were identified due to a lack of available information in the field. Methods: Secondary data from the Tennessee Department of Health were used to assess financial accessibility through payer source charges and patient encounters, as well as through mapping of inpatient psychiatric facilities and conducting drive time and coverage area analyses. Primary data were collected through interviews with clinicians located in Northeastern Tennessee to gain insight into the assessment process and gather their perceptions of inpatient care. Results: Longitudinal descriptive reviews on the financial accessibility among Tennessee Inpatient Facilities. This showed increased variability among facilities when stratified by region, ownership, and type of operation. Spatial accessibility in ArcGIS showed 82% of counties were not covered within a 30-minute radius of inpatient facilities. Analysis showed that Middle Tennessee had significantly less coverage from inpatient facilities and raised concerns about spatial-socia",
+      "title": "Bridging the intention–behavior gap in psychologically informed musculoskeletal rehabilitation: A con-vergent mixed-methods investigation and the triadic care model",
+      "url": "https://doi.org/10.5267/j.ijdns.2026.12",
+      "openalex_id": "https://openalex.org/W7163888155",
+      "doi": "https://doi.org/10.5267/j.ijdns.2026.12",
+      "published": "2027-01-01",
+      "summary": "While clinical guidelines strongly endorse psychologically informed physiotherapy (PIP) and cognitive-behavioral techniques (CBT) for musculoskeletal pain, routine clinical uptake remains inconsistent.Most implementation research describes clinician attitudes without modeling the cognitive and systemic mechanisms that impede translation into daily practice.This study investigates the \"intention-behavior gap\" in psychologically informed musculoskeletal rehabilitation among Iranian physiotherapists using the COM-B (Capability, Opportunity, and Motivation -Behavior) framework and introduces the Triadic Care Model as an operational solution.A convergent mixed-methods design (QUAN + QUAL) compliant with the Good Reporting of A Mixed Methods Study (GRAMMS) guidelines was conducted between 2023 and 2024.The quantitative phase surveyed 450 licensed physiotherapists using the validated Psychological Practice and Skills Tool (PPST).Structural Equation Modeling (SEM) tested hypothesized paths linking psychological self-efficacy, systemic barriers, postgraduate education, and clinical utilization.The qualitative phase comprised semi-structured, in-depth interviews with 20 practicing physiotherapists analyzed via reflexive thematic analysis.Quantitative and qualitative findings were integrated via a joint display matrix.A pronounced intention-behavior gap was identified: 78.2% (n=352) of cl",
       "relevance_score": 1,
-      "matched_query": "persistent agent memory"
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "Adapting HR Strategies to Enhance CRM in Aviation: A Qualitative Study on Emerging Technologies Grounded in Socio-Technical Systems Theory",
+      "url": "https://doi.org/10.20491/isarder.2025.2124",
+      "openalex_id": "https://openalex.org/W4417525175",
+      "doi": "https://doi.org/10.20491/isarder.2025.2124",
+      "published": "2026-12-19",
+      "summary": "Purpose –This study aims to explore how Human Resource Management (HRM) strategies can enhance Crew Resource Management (CRM) effectiveness in the context of emerging technologies such as artificial intelligence (AI) and augmented reality (AR) in aviation. While these technologies improve operational efficiency, they also highlight the critical need for maintaining human oversight and decision-making processes.Design/methodology/approach –The research employs a qualitative methodology grounded in Socio-Technical Systems (STS) theory. Data were collected through interviews with 15 aviation experts, including pilots, HR professionals, and operations managers, and analyzed using thematic analysis with NVivo software.Results–The findings indicate that while automation significantly enhances operational efficiency, maintaining manual skills and human decision-making remains essential for sustainable operations. The study also identifies the need for HR strategies to adapt to technological change through enhanced training programs, continuous learning initiatives, and revised recruitment practices.Discussion –This study contributes to STS theory by emphasizing the importance of balancing technological and social systems to ensure effective CRM in aviation. Practical recommendations for HR strategies are provided, including improving training programs, fosteringa culture of continuous",
+      "relevance_score": 1,
+      "matched_query": "cross-model handoff language model agents"
     },
     {
       "title": "Pieces Solving a Puzzle: Emerging Roles and Cross-Field Analogies During a Distributed Epistemic Game",
@@ -237,79 +227,94 @@
       "published": "2026-12-01",
       "summary": "In an effort to describe why some problems can’t be solved, a character compared them to a cubic meter of platinum - a block so dense that all the people who could squeeze around it still couldn’t lift it off the ground. In the same way, these problems simply can’t have enough people gathered around and communicating about them - and so they remain unsolved. This research looks at the first Polymath Project (2009) as an example of a distributed epistemic game to examine how groups engage with complex problems. and without a locally omniscient individual. In this setting of epistemic uncertainty, interactions between individuals reveal patterns of participation, and an analogy opens a new solution pathway by introducing a problem-solving approach from another field. These insights answer the initial question of the Polymath Project - ‘Is massively collaborative mathematics possible?’ - and offer hope for lifting the cubic meter of other unsolvable problems.",
       "relevance_score": 1,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "Sex-Dependent Modulation of the Endocannabinoid System in Pain Processing",
-      "url": "https://digitalcommons.usu.edu/etd2023/959",
-      "openalex_id": "https://openalex.org/W7225844876",
-      "doi": null,
-      "published": "2026-12-01",
-      "summary": "Medical cannabis, also known as medical marijuana, is becoming a more popular treatment for many diseases, including chronic pain. Chronic pain is difficult to treat, and current pain relievers are less effective in women. Medical cannabis may be a useful alternative to the medications that are currently available, but more research is needed to determine how safe and effective it is. Cannabis belongs to a class of drugs known as cannabinoids, which act on the body’s own endocannabinoid system to produce its effects. Cannabinoids affect the sexes differently, but it is not clear what causes these differences. Our research explored how sex hormones like estrogen and testosterone affect the efficacy of cannabinoids. To do this, I first examined whether removing these hormones would affect the brain’s response to THC, the main ingredient in cannabis. I found that THC affected brain regions differently in mice with depleted hormones. Additionally, THC affected brain regions differently in males and females. Next, I tested whether testosterone and estrogen affected how well cannabinoids worked as pain relievers. I found that testosterone reduced the drug’s efficacy in females, while estrogens reduced its efficacy in males. This would suggest that hormones have a different effect on males and females, leading to differences in the cannabinoid’s pain-relieving ability. Lastly, I sough",
-      "relevance_score": 1,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "Natural Language Processing and Graph Methods for Knowledge Graph Applications",
-      "url": "https://doktori.bibl.u-szeged.hu/id/eprint/13202/1/kardospeter_disszertacio.pdf",
-      "openalex_id": "https://openalex.org/W7204678376",
-      "doi": null,
-      "published": "2026-11-26",
-      "summary": "Declaration of the Use of AI v List of Figures 4.1 KG Entity Alignment example in the Star Wars domain.Equivalent entities often appear under different names. . . . . . . . . . . . . . . .40 4.2 Cumulative percentage of gold-standard pairs retrieved at each rank position in SentenceBERT similarity rankings for the Memory Alpha-ST Expanded dataset. . . . . . . . . . . . . . . . . . . . . . . . . . . .42 4.3 Pipeline's dataflow.The brackets indicate which property was used. . .45 5.1 Overview of the proposed sparse entity alignment pipeline.For each anchor entity in the source KG, we: (1) generate textual representations (Dogtags) incorporating node attributes and graph structure, (2) retrieve top-k candidates using embedding similarity, (3) select matches via exact matching, embedding-based reranking, or LLM prompting, and (4) deduplicate to enforce 1:1 alignments.Multiple strategies can be merged using threshold calibration from exact matches. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .56 5.2 Comparison of entity representation strategies (Dogtags): Node-based representations use limited context from attributes and abstracts, while the LLM Summary incorporates rich relational and attribute information from the knowledge graph neighborhood.All four representations serve as input to embedding-based retrieval and matching algorithms. . . . . . . . . . . .",
-      "relevance_score": 1,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "FPGA-Based Neural Network Accelerators for Space Missions: A Survey",
-      "url": "https://doi.org/10.1145/3857797",
-      "openalex_id": "https://openalex.org/W4415306591",
-      "doi": "https://doi.org/10.1145/3857797",
-      "published": "2026-11-18",
-      "summary": "Space missions are growing ever more ambitious, placing greater demands on onboard computing. Field-programmable gate arrays (FPGAs) have garnered interest due to their reconfigurability and cost-effectiveness. At the same time, neural network (NN)-based methods are proving invaluable for critical spacecraft tasks such as autonomous operations, remote sensing, selective downlink, and data compression. This survey reviews and classifies the state-of-the-art in FPGA-based NN accelerators for space missions. We examine current trends, highlight key challenges, and suggest directions for future research. This work highlights key aspects for integrating high-performance NN acceleration into next-generation spacecraft computing systems.",
-      "relevance_score": 1,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "What Were You Thinking? An LLM-Driven Large-Scale Study of Refactoring Motivations in Open Source Projects",
-      "url": "https://doi.org/10.1145/3799717",
-      "openalex_id": "https://openalex.org/W7132835993",
-      "doi": "https://doi.org/10.1145/3799717",
-      "published": "2026-11-18",
-      "summary": "Context . Code refactoring improves software quality without changing external behavior. Despite its advantages, its benefits are hindered by the considerable cost of time, resources, and continuous effort it demands. Aim . Understanding why developers refactor, and which metrics capture these motivations, may support wider and more effective use of refactoring in practice. Method . We performed a large-scale empirical study to analyze developers’ refactoring activity, leveraging Large Language Models (LLMs) to identify underlying motivations from version control data, comparing our findings with previous motivations reported in the literature. Results . LLMs matched human judgment in 80% of cases, but aligned with literature-based motivations in only 47%. They enriched 22% of motivations with more detailed rationale, often highlighting readability, clarity, and structural improvements. Most motivations were pragmatic, focused on simplification and maintainability. While metrics related to developer experience and code readability ranked highest, their correlation with motivation categories was weak. Conclusions . We conclude that LLMs effectively capture surface-level motivations but struggle with architectural reasoning. Their value lies in providing localized explanations, which, when combined with software metrics, can form hybrid approaches. Such integration offers a promi",
-      "relevance_score": 1,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "The acmeological gamification framework for creative competence development: a testable theory for pre-service teacher education",
-      "url": "https://doi.org/10.3389/feduc.2026.1994435",
-      "openalex_id": "https://openalex.org/W7236087983",
-      "doi": "https://doi.org/10.3389/feduc.2026.1994435",
-      "published": "2026-11-18",
-      "summary": "Gamification in higher education has been studied mainly as a means of increasing motivation, engagement, and achievement, with far less attention to how game mechanics contribute to the creative competence of pre-service teachers. This article advances the Acmeological Gamification Framework for Creative Competence Development (AGF-CCD), a testable developmental theory of how gamified learning conditions may contribute to creative professional capability in teacher education. The framework was developed through a purposive narrative theory-building synthesis, supported by a mechanism-level evidence map in which empirical studies, syntheses, and theoretical sources are kept apart; it is neither a systematic review nor an empirical validation. It takes the well-supported link from need-supportive mechanics to autonomous motivation as a boundary premise and proposes three sequential links: autonomous motivation is channelled by interpretive feedback into reflective practice and in-task metacognitive regulation (P1); reflective practice under psychological safety and meaningful challenge activates divergent and convergent thinking (P2); and repeated, reflected creative activity in authentic professional tasks consolidates into durable creative competence, evidenced by retention and transfer (P3). Three boundary conditions concern the learner (P4a), the design, separating mechanic ",
-      "relevance_score": 1,
-      "matched_query": "metacognition self-improving AI agents"
+      "matched_query": "cross-model handoff language model agents"
     },
     {
       "title": "Discovering High Level Patterns from Simulation Traces",
       "url": "https://doi.org/10.1145/3829340.3842269",
       "openalex_id": "https://openalex.org/W7128631170",
       "doi": "https://doi.org/10.1145/3829340.3842269",
-      "published": "2026-11-17",
+      "published": "2026-11-30",
       "summary": "Large Language Models (LLMs) are unable to reliably reason about specific physical systems. Attempts to imbue LLMs with knowledge of the necessary physics concepts have shown great promise, but explainability and validation remain open challenges. An emerging alternative is tooling, where LLMs can query physical simulators and use the resulting simulation traces as context for validation. This approach suffers from poor scalability since simulation traces contain large volumes of fine-grained numerical and semantic data. We show that translating simulation traces to a sparse representation of ‘high-level’ structural patterns leads to more effective interpretation by LLMs. We propose an unsupervised learning scheme to perform this translation, or annotation, via program synthesis. Our learning results in a library of programs that act as pattern detectors which can translate simulation logs to sparse, annotated pattern sequences. The detected patterns may optionally be guided by human experts via string labels (rigid collision, stretching spring, etc.). We show, using a recent physics benchmark, that such annotated representations are more amenable to natural language reasoning about specific physical systems. The synthesised programs serve as transparent, explainable functions that map system states to a sparse and efficient annotation space. As an example application, we show ",
       "relevance_score": 1,
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "THE EVOLUTION OF SOCIAL COMMERCE: A HISTORICAL ANALYSIS OF WEBSITE FEATURES AND DIGITAL INTERACTIONS",
-      "url": "https://doi.org/10.66838/ma.237",
-      "openalex_id": "https://openalex.org/W7235208652",
-      "doi": "https://doi.org/10.66838/ma.237",
-      "published": "2026-11-17",
-      "summary": "Social commerce represents one of the most significant transformations in digital retail, merging social media's interactive capabilities with e-commerce transactional functionality. This research traces the evolutionary trajectory of social commerce from its nascent stages in the early 2000s through its current sophisticated implementations, examining how website features and digital interactions have transformed consumer purchasing behavior. Through systematic analysis of platform developments, feature innovations, and user engagement patterns across two decades, we document how social commerce evolved from simple product sharing mechanisms to comprehensive ecosystems integrating user-generated content, live streaming, influencer marketing, and artificial intelligence-driven personalization. Our historical analysis reveals distinct developmental phases: the foundational period (2005-2010) characterized by basic social sharing features, the integration era (2011-2015) marked by dedicated social commerce platforms and Facebook commerce initiatives, the mobile acceleration phase (2016-2019) dominated by Instagram shopping and messaging-based commerce, and the immersive experience period (2020-2024) featuring live commerce, augmented reality try-ons, and community-driven purchasing. Key findings demonstrate that successful social commerce evolution correlates with increasing inte",
+      "title": "AdapTest: Supporting Designers in Authoring and Evaluating Environmentally Responsive User Interfaces for Extended Reality",
+      "url": "https://doi.org/10.1145/3859325",
+      "openalex_id": "https://openalex.org/W7222586795",
+      "doi": "https://doi.org/10.1145/3859325",
+      "published": "2026-11-20",
+      "summary": "Extended Reality (XR) headsets increasingly host familiar 2D user interfaces as windows floating in physical environments. However, their usability depends on environmental conditions that designers cannot fully control. Current design workflows often separate how a variant is designed from how it actually looks in the target environment. We present AdapTest , an in-situ authoring and testing tool that lets designers select interface elements, define when and how they change, compare the resulting variations, and test their activation without coding. Based on prior research and a formative study with 12 interface designers, the system targets three key environmental variables: distance, lighting, and occlusion. We evaluated AdapTest against a desktop design and in-headset preview workflow in a within-subjects study with 12 designers. Compared with the baseline, designers accounted for a wider range of environmental factors, addressed more overlapping conditions, and repeatedly tested and revised their designs in place; there were no significant differences in workload or usability despite longer sessions. Our work contributes an integrated, designer-centered approach to adapting, comparing, and validating environmentally responsive XR user interfaces.",
       "relevance_score": 1,
       "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "Support systems used by students at an open distance e-learning university",
+      "url": "https://doi.org/10.3389/feduc.2026.2015204",
+      "openalex_id": "https://openalex.org/W7236632499",
+      "doi": "https://doi.org/10.3389/feduc.2026.2015204",
+      "published": "2026-11-19",
+      "summary": "Introduction The problem and purpose of the study. Student support and wellbeing remain understudied in South African higher education distance e-learning. Distance e-learning students are socially, academically, and geographically isolated and often have limited access to wellbeing support. As a result, students may rely on external support to manage their wellbeing. Methods Design, participants, data collection and analysis. Guided by the Socioecological model, this paper examines the support systems that distance e-learning students use to manage their wellbeing. A qualitative descriptive research design was employed, using semi-structured interviews with students enrolled at a distance-learning institution in South Africa, recruited through purposive sampling. Results The main findings. Using reflexive thematic analysis, a multidimensional support for wellbeing was identified among students in a distance e-learning context. Five support elements were derived from the findings: family support for emotional wellbeing; peer relationships for wellbeing; spiritual support through religious institutions and meaning-making; institutional support for wellbeing; and community health system support and physical activity. The integration of these five elements of support was critical for the wellbeing of distance e-learning students. Discussion What the findings mean and their implica",
+      "relevance_score": 1,
+      "matched_query": "metacognition self-improving AI agents"
+    },
+    {
+      "title": "From Algorithmic Control to Learner-Driven Personalisation: Rethinking AI in Education",
+      "url": "https://doi.org/10.59232/dsm-v3i2p103",
+      "openalex_id": "https://openalex.org/W7236636492",
+      "doi": "https://doi.org/10.59232/dsm-v3i2p103",
+      "published": "2026-11-19",
+      "summary": "AI-driven personalised learning now shapes the pace, practice, and feedback of millions of learners. Most systems, however, personalise learning for the learner through opaque algorithmic decisions instead of equipping learners to personalise their own study. This review examines that asymmetry. Twenty-five studies published between 2017 and 2026, retrieved from Google Scholar, ERIC, and Scopus, are synthesised thematically around learner agency, self-regulated learning, and system design. The synthesis identifies an illusion of autonomy: surface-level choices sit alongside algorithmic authority over goals, sequencing, and mastery criteria, which narrows the room learners have to practise goal setting, strategic monitoring, and reflective evaluation. Duolingo and two platforms used in Vietnam serve as illustrative cases showing how gamified metrics and default pathways can redirect attention from meaningful goals towards externally driven engagement. The paper answers with a learner-driven personalisation framework resting on three principles: shared control, design that activates self-regulated learning, and algorithmic transparency coupled with AI literacy. A three-item rubric operationalises the framework so that schools can detect illusion-of-autonomy risks before adoption. The analysis extends to equity, since learners with limited devices, connectivity, or AI literacy gai",
+      "relevance_score": 1,
+      "matched_query": "metacognition self-improving AI agents"
+    },
+    {
+      "title": "Beyond the Pyramid: Bloom’s Taxonomy Meets Generative AI",
+      "url": "https://doi.org/10.1007/s42438-026-00721-w",
+      "openalex_id": "https://openalex.org/W7236739764",
+      "doi": "https://doi.org/10.1007/s42438-026-00721-w",
+      "published": "2026-11-19",
+      "summary": "Generative AI (Gen AI) has exposed and intensified a long-standing gap between academic products, such as papers and presentations, and the learning processes those products are often assumed to represent. The gap between process and product was always there, and had been widening for a while. This article examines how several pre-AI frameworks no longer adequately account for this shift. We first review earlier efforts to expand Bloom’s cognitive focus, including the models of Marzano and Kendall and L. Dee Fink. We then examine post-AI frameworks such as Michelle Kassorla’s Inverted Bloom’s Taxonomy and Tina Austin’s UnBlooms™ framework. Together, these frameworks suggest that GenAI exposes fundamental weaknesses in existing assessment structures and necessitates a rethinking of how evidence of learning is defined in AI-mediated contexts. How should learning taxonomies and assessment frameworks be reconfigured when GenAI weakens the traditional assumption that academic products reliably demonstrate student learning? Through a conceptual/theoretical analysis of pre-AI and post-AI learning frameworks, we examine how Bloom’s Taxonomy, Marzano and Kendall’s New Taxonomy, Fink’s Significant Learning, Inverted Bloom’s, and UnBlooms™ account for process, product, agency, and metacognition in Higher Education.",
+      "relevance_score": 1,
+      "matched_query": "metacognition self-improving AI agents"
+    },
+    {
+      "title": "Classifying Histopathologic Glioblastoma Sub-regions with EfficientNet",
+      "url": "https://doi.org/10.1007/978-3-032-31709-4_42",
+      "openalex_id": "https://openalex.org/W4416235617",
+      "doi": "https://doi.org/10.1007/978-3-032-31709-4_42",
+      "published": "2027-02-02",
+      "summary": "",
+      "relevance_score": 0,
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "MuTSE: A Human-in-the-Loop Multi-use Text Simplification Evaluator",
+      "url": "https://doi.org/10.1007/978-3-032-31657-8_36",
+      "openalex_id": "https://openalex.org/W7154116156",
+      "doi": "https://doi.org/10.1007/978-3-032-31657-8_36",
+      "published": "2027-02-02",
+      "summary": "",
+      "relevance_score": 0,
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "A Hybrid Deep Learning Framework Based on ResNet and Vision Transformer for Pneumonia Detection from Chest X-ray Images",
+      "url": "https://doi.org/10.5829/ije.2027.40.02b.06",
+      "openalex_id": "https://openalex.org/W7169881729",
+      "doi": "https://doi.org/10.5829/ije.2027.40.02b.06",
+      "published": "2027-01-01",
+      "summary": "Pneumonia continues to pose a serious threat to global health, particularly in low-resource settings where timely diagnosis is challenging. To address limitations in both feature extraction and contextual understanding of chest X-ray (CXR) images, we propose a novel hybrid deep learning framework that integrates a customized Residual Neural Network (ResNet) with a Vision Transformer (ViT). Unlike prior works that merely fuse convolutional neural networks (CNNs) and transformers, our architecture introduces a feature fusion strategy that leverages the local spatial encoding capabilities of ResNet and the global self-attention mechanism of ViT in a complementary and optimized manner. Evaluated on benchmark CXR datasets, the proposed ResNet-ViT model achieves an accuracy of 97.03%, with marked improvements in sensitivity and specificity compared to standalone CNN or transformer models. Furthermore, attention visualization highlights critical pneumonia-affected regions, offering clinical interpretability. This hybrid model not only enhances diagnostic performance but also shows potential for deployment in real-world clinical decision support systems, especially in resource-constrained environments.",
+      "relevance_score": 0,
+      "matched_query": "automated AI research experimentation"
     }
   ],
   "paper_count": 30,
-  "errors": []
+  "errors": [
+    {
+      "query": "persistent agent memory",
+      "error": "HTTPError: HTTP Error 429: Too Many Requests"
+    }
+  ]
 }
