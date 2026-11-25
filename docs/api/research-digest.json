@@ -1,6 +1,6 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-11-24T14:56:33.991265+00:00",
+  "generated_at_utc": "2026-11-25T14:30:49.110502+00:00",
   "source": "OpenAlex public API",
   "queries": [
     "persistent agent memory",
@@ -10,13 +10,53 @@
   ],
   "papers": [
     {
-      "title": "Purpose-Bounded Context Exchange in Enterprise Agentic AI Systems: An Inter-Module Information Contract Architecture",
-      "url": "https://doi.org/10.3390/info17111176",
-      "openalex_id": "https://openalex.org/W7224559083",
-      "doi": "https://doi.org/10.3390/info17111176",
-      "published": "2026-11-19",
-      "summary": "Enterprise agentic AI systems exchange contextual information across functional modules, creating governance challenges when information crosses operational and organizational boundaries. This study distinguishes organizational governance boundaries from information exchange boundaries and proposes an Inter-Module Information Contract (IMIC) architecture for purpose-bounded context exchange. IMIC evaluates provenance, semantic and temporal validity, permitted information scope, and applicable originating constraints before downstream execution, independently of language-model reasoning. We compare IMIC with full-context sharing, reduced-context sharing, and strengthened structured handoff. In a deterministic benchmark of 32 synthetic conditions, joint correctness is achieved in 3, 10, 28, and 32 cases, respectively. The four differences between strengthened structured handoff and IMIC arise from conditions testing onward-transfer permission, recipient, purpose, and field scope. A downstream integration experiment evaluates 14 selected conditions across four local language models and three seeds, yielding 168 case–model–seed blocks and 672 method-level records. IMIC achieves correct exchange actions and information boundaries in all 168 blocks and joint correctness in 165 across four local LLMs and three seeds. Three permitted executions produce incorrect downstream responses de",
+      "title": "Making AI Memory Transparent: Explainability for Persistent State in Agentic Systems",
+      "url": "https://doi.org/10.1007/978-3-032-38436-2_1",
+      "openalex_id": "https://openalex.org/W7239389279",
+      "doi": "https://doi.org/10.1007/978-3-032-38436-2_1",
+      "published": "2027-02-02",
+      "summary": "",
+      "relevance_score": 9,
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "RACE-SOC: Risk-Constrained Auditable Coordination Evaluation for LLM-Based Multi-Agent Security Operations",
+      "url": "https://doi.org/10.32604/cmc.2026.088835",
+      "openalex_id": "https://openalex.org/W7220927327",
+      "doi": "https://doi.org/10.32604/cmc.2026.088835",
+      "published": "2027-01-01",
+      "summary": "Large language model (LLM) agents are now being used in security operations center (SOC) workflows to summarise security alerts, support triage, and suggest escalation or containment measures. Existing evaluations tend to focus on answer quality or benchmark accuracy, while the operational risks of multi-agent coordination are not clearly exposed. This gap is problematic in SOC triage because extra agents may produce unsupported claims, disagreement, false consensus, or unsafe operations even when the final answer seems reasonable. This paper proposes RACE-SOC, a Risk-constrained Auditable Coordination Evaluation protocol for LLM-based multi-agent SOC triage. RACE-SOC evaluates bundled role-conditioned configurations over fixed source groups by scoring the trade-off among triage utility, coordination risk, and token cost. The corrected deterministic scorer combines utility terms with a K-invariant primary risk score based on bounded unsafe-output incidence and unsupported-claim rate; coordination-only disagreement and false-consensus terms are reported separately. Across 45 model–dataset–seed cells, the corrected operational selections are K = 1/5/10 in 13/14/18 cells, including seven K = 5/K = 10 co-best cells resolved by a preregistered cost-first tie-break. Each sampling seed realizes n = 28 source groups (6/6/4/6/6 across the five datasets), giving 84 seed-indexed observati",
+      "relevance_score": 8,
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "A Survey on Large Language Model-Based Game Agents",
+      "url": "https://doi.org/10.1145/3863973",
+      "openalex_id": "https://openalex.org/W4393942320",
+      "doi": "https://doi.org/10.1145/3863973",
+      "published": "2026-11-24",
+      "summary": "Game environments provide rich, controllable settings that simulate many aspects of real-world complexity. As such, game agents offer a valuable testbed for exploring capabilities relevant to Artificial General Intelligence [145]. Recently, the emergence of Large Language Models (LLMs) provides new opportunities to endow these agents with generalizable reasoning, memory, and adaptability in complex game environments. This survey offers an up-to-date review of LLM-based game agents (LLMGAs) through a unified reference architecture. At the single-agent level, we synthesize existing studies around three core components: memory, reasoning, and perception–action interfaces, which jointly characterize how language enables agents to perceive, think, and act. At the multi-agent level, we outline how communication protocols and organizational models support coordination, role differentiation, and large-scale social behaviors. To contextualize these designs, we introduce a challenge-centered taxonomy linking six major game genres to their dominant agent requirements, from low-latency response in action games to open-ended goal formation in sandbox worlds. An extended version is available at https://arxiv.org/abs/2404.02039, with a curated list of related papers continuously updated at https://github.com/git-disl/awesome-LLM-game-agent-papers.",
       "relevance_score": 7,
+      "matched_query": "metacognition self-improving AI agents"
+    },
+    {
+      "title": "Mining and Automating Expert Guidance in Open Source: A Multi-Agent Framework Informed by the PyTorch Community",
+      "url": "https://doi.org/10.1145/3862335",
+      "openalex_id": "https://openalex.org/W7238726871",
+      "doi": "https://doi.org/10.1145/3862335",
+      "published": "2026-11-23",
+      "summary": "The continuous participation of newcomers is critical to the sustainability of Open Source Software (OSS) communities, yet many face technical and social challenges in making their first contributions. Expert guidance can help newcomers navigate these challenges, but timely support is not consistently available. While Large Language Models (LLMs) offer potential to augment this support, existing models lack project-specific context and awareness of mentoring practices. To investigate these challenges, we analyze OSS expert–newcomer interactions by curating 383 dialogues from Good First Issues (GFIs) in the PyTorch repository. We directly observe that interactions are typically brief, over one-third of newcomer inquiries remain unanswered, and the median first response time is 6.3 hours, revealing gaps and delays in expert involvement. From these interactions, we derive a taxonomy of 50 recurring, context-dependent expert guidance strategies across 11 themes, grounded in prior OSS mentoring research. Building on these findings, we introduce StrategicMentor, a strategy-driven multi-agent framework that integrates strategy knowledge with project, task, and dialogue context to deliver personalized, context-aware guidance. Coordinating specialized LLM-based agents via Retrieval-Augmented Generation (RAG), the framework operationalizes these strategy patterns without reproducing ever",
+      "relevance_score": 6,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "Modular Prompt Architecture in a Production Outbound Voice Agent and Its Effects on Conversation Length, Scenario Progression and Cost",
+      "url": "https://doi.org/10.70315/uloap.ulirs.2026.0304005",
+      "openalex_id": "https://openalex.org/W7238848688",
+      "doi": "https://doi.org/10.70315/uloap.ulirs.2026.0304005",
+      "published": "2026-11-23",
+      "summary": "Many outbound voice agents built on large language models run a sales scenario from a single long prompt, and the effect of splitting that prompt into a graph of dialogue blocks has received little measurement in production traffic. The study compares two architectures for an outbound sales scenario, deployed on the same telephony platform, targeting a cold base of former customers in a European country. The corpus covers 14,155 dials over twenty-seven dialing days, with 5,892 answered calls and 5,119 dialogues in the main sample. Scenario depth was measured using a language-model labeler, validated against block telemetry, across 4,572 dialogues. The multi-block agent kept answered calls longer, with a median of 44.8 s against 31.5 s, and the gap of 13.3 s stayed between 12.4 and 14.0 s without transferred calls, on a shared base model and on days with matched answer rates. Survival analysis identified a divergence between the 10th and the 30th second of the call, with the single-prompt agent ending 17.1% of answered calls within the first 30 s, compared with 0.6% for the modular agent. Dialogues reaching need discovery rose from 14.7% to 53.1% after correcting labeler errors against telemetry, and transfers to a human operator rose from 5.1% to 10.7% of dialogues. Modularity carried a measurable price: the platform charge per answered call doubled, tokens per turn grew by 60%",
+      "relevance_score": 5,
       "matched_query": "cross-model handoff language model agents"
     },
     {
@@ -50,6 +90,16 @@
       "matched_query": "persistent agent memory"
     },
     {
+      "title": "FedCGVR: Communication-Efficient Federated Causal Gating and Visual Retrieval for Trustworthy Multi-Agent Learning",
+      "url": "https://doi.org/10.32604/cmc.2026.089874",
+      "openalex_id": "https://openalex.org/W7219003017",
+      "doi": "https://doi.org/10.32604/cmc.2026.089874",
+      "published": "2027-01-01",
+      "summary": "Multi-agent multimodal systems collect valuable but heterogeneous vision–language observations that cannot always be centralized because of ownership, bandwidth, and privacy constraints. Standard federated averaging shares statistical strength, yet it can amplify client-specific shortcuts and unsupported visual predictions under non-independent and identically distributed (non-IID) data. This paper proposes FedCGVR, a communication-efficient framework for federated causal gating and provenance-constrained visual retrieval that freezes the multimodal backbone and collaboratively trains only lightweight reliability adapters. Each agent mines intervention-sensitive visual evidence, constrains local retrieval by provenance, and maintains a private personalization vector. The transmitted adapter update is norm-clipped, sparsified with error feedback, and combined through coordinate-wise trimmed aggregation. We establish finite-probe evidence recovery, an explicit communication ratio, a conditional nonconvex descent bound containing heterogeneity, compression, and aggregation errors, and a finite-horizon unsupported-claim risk bound. A reproducible controlled study executes actual softmax optimization over 12 non-IID agents, five seeds, three test regimes, and 34 communication rounds. Under severe context shift, FedCGVR reaches 56.3% accuracy and a 26.3% unsupported-class prediction ",
+      "relevance_score": 4,
+      "matched_query": "persistent agent memory"
+    },
+    {
       "title": "From reproducibility to comparability in computational photochemistry: lessons from the PhotoChem explorer prototype",
       "url": "https://doi.org/10.1039/d6fd00102e",
       "openalex_id": "https://openalex.org/W7169779839",
@@ -70,22 +120,42 @@
       "matched_query": "automated AI research experimentation"
     },
     {
+      "title": "Cross-Dataset Evaluation of Transformer-Based Architectures for Abstractive News Summarization",
+      "url": "https://doi.org/10.32604/cmc.2026.086083",
+      "openalex_id": "https://openalex.org/W7221346051",
+      "doi": "https://doi.org/10.32604/cmc.2026.086083",
+      "published": "2027-01-01",
+      "summary": "The increase in online news articles has created a greater need for systems that can efficiently generate accurate automatic text summaries. While abstractive summarization has advanced significantly through transformer-based architectures, comprehensive assessments comparing multiple models across diverse datasets using varied evaluation methods remain limited. This study evaluates eight pre-trained transformer models, including BART, DistilBART, T5, PEGASUS, LED, XLNet, BigBird, and GPT-2, on three balanced news datasets: BBC News, CNN/DailyMail, and a combined BBC + CNN/DailyMail dataset. All models were fine-tuned using publicly available pre-trained checkpoints with defined training and decoding configurations. Summary quality was assessed using lexical and semantic evaluation metrics, including ROUGE (ROUGE-1, ROUGE-2, ROUGE-L, and ROUGE-Lsum), BLEU, METEOR, BERTScore, and MoverScore. Preliminary statistical significance testing was conducted on a subset of models to assess the reliability of observed performance differences. Results reveal clear variation across models and datasets: LED achieved strong overall performance, particularly on mixed-domain and varied-length documents; BART demonstrated competitive results on the combined dataset; and T5 provided a favorable balance between summarization quality and computational efficiency. DistilBART maintained competitive s",
+      "relevance_score": 4,
+      "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "Agentic AI in education: design logic, evidence quality, and theoretical foundations",
+      "url": "https://doi.org/10.3389/feduc.2026.1948156",
+      "openalex_id": "https://openalex.org/W7239428282",
+      "doi": "https://doi.org/10.3389/feduc.2026.1948156",
+      "published": "2026-11-24",
+      "summary": "Introduction Agentic artificial intelligence systems in education represent a qualitative departure from traditional educational technology. Unlike reactive tools requiring continuous human direction, agentic AI monitors learner states, initiates interventions without requests, and pursues pedagogical objectives independently. Yet this technical sophistication has outpaced theoretical development, leaving fundamental questions unaddressed: How does agent autonomy affect learner agency? When does proactive support enhance versus undermine self-directed learning? What theories adequately address systems demonstrating independent goal pursuit? Methods This study analyzes recent agentic AI research using the ADO-TCM (Antecedents-Decisions-Outcomes-Theories-Contexts-Methods) framework, which traces design logic from problem identification through decisions to outcomes while assessing theoretical grounding, contextual boundaries, and methodological rigor. Following PRISMA guidelines, three researchers independently coded the titles and abstracts of 170 primary studies, achieving substantial agreement. Results As reported in titles and abstracts, the field is characterized by theoretical absence rather than diversity: the vast majority of papers engage no learning theory and invoke AI capabilities as rationale without engaging learning sciences foundations. Alongside this absence, mos",
+      "relevance_score": 4,
+      "matched_query": "metacognition self-improving AI agents"
+    },
+    {
+      "title": "From Hybrid Hydrological Models to Scalable Water Intelligence",
+      "url": "https://doi.org/10.1111/1752-1688.70177",
+      "openalex_id": "https://openalex.org/W7239398879",
+      "doi": "https://doi.org/10.1111/1752-1688.70177",
+      "published": "2026-11-23",
+      "summary": "Hybrid hydrological modeling integrates process‐based models with machine learning to advance knowledge across the hydrological cycle. By representing unresolved processes while retaining physical consistency, these approaches extend traditional hydrological models. However, improved predictive performance does not by itself create transferable or operational capabilities. Many implementations remain tied to specific basins, datasets, institutions, or computational environments, limiting reproducibility and operational uptake. We argue that the scaling challenge is not solely methodological, but also infrastructural, institutional, and economic. We propose a Scalable Hybrid Hydrological Modeling (SHHM) framework comprising four components: (1) modular and reusable model architectures, (2) harmonized multi‐region datasets, (3) standardized community benchmarks, and (4) pathways from research tools to operational services. With appropriate human oversight, AI‐enabled workflow automation can further scale SHHM by streamlining the end‐to‐end modeling lifecycle. International collaboration can strengthen SHHM when built on shared protocols, co‐creation, reciprocal capacity building, transparent governance, and regionally relevant evaluation. This agenda shifts attention from isolated improvements in model performance toward the scientific, technical, and institutional capabilities r",
+      "relevance_score": 4,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
       "title": "Speaking for Others: A Scoping Review of Entity-Representing Conversational Agents and Interactional Representation",
       "url": "https://doi.org/10.1145/3847401.3847425",
       "openalex_id": "https://openalex.org/W7237068099",
       "doi": "https://doi.org/10.1145/3847401.3847425",
       "published": "2026-11-20",
       "summary": "Conversational agents increasingly communicate from positions associated with organisations, people, cultural artefacts, and more-than-human entities. However, research on these systems remains fragmented across domains, and it remains unclear how an agent’s interaction becomes a form of representation. We introduce entity-representing conversational agents (ERCAs) as a cross-domain lens for examining this relationship. Through a scoping review of 68 studies across HCI and related fields, with 46 providing the primary evidence for interactional synthesis, we examine how externally anchored agents enact representation through interaction. The retrieved corpus was concentrated in commercial and institutional applications, while personal-proxy, cultural, and more-than-human cases made questions of speaking position, authorisation, and grounding more explicit. Across the studies, representation emerged through the agent’s communicative conduct, its position relative to the represented entity, and users’ interpretations of that relationship. We identify three design considerations for ERCAs: establishing a credible basis for representation, aligning the representative relationship with the entity and task, and sustaining that position through interaction.",
-      "relevance_score": 4,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "A roadmap for polymer informatics superintelligence",
-      "url": "https://doi.org/10.1557/s43577-026-01200-0",
-      "openalex_id": "https://openalex.org/W7214796055",
-      "doi": "https://doi.org/10.1557/s43577-026-01200-0",
-      "published": "2026-11-19",
-      "summary": "Polymer informatics has matured from isolated property-prediction studies into an integrated discipline that couples data, models, and decision-making across the polymer design cycle. Yet it still falls short of a true intelligent system capable of inverse design on demand, causal reasoning across chemistry, processing, and performance, and closed-loop autonomous experimentation. This article traces a roadmap toward that goal, grounded in experience developing two complementary agentic and informatics platforms. Central to this vision is a modular, agent-directed architecture in which a polymer superintelligence layer interprets a researcher’s design question in natural language and coordinates domain-specialized tools, matched to the available data, for neat polymers, composites and formulations, solvents, and synthesis and processing. The resulting system spans the full chain from molecular design through processing to product-level performance and human perception. Orchestrated together, its generative design, synthesis-feasibility reasoning, and practicality assessment already form the decision-making core of a self-driving polymer laboratory, leaving autonomous, closed-loop experimentation as the principal step that remains. We survey emerging capabilities along this roadmap, including automated extraction of property data from the literature, chemistry-aware representatio",
       "relevance_score": 4,
       "matched_query": "cross-model handoff language model agents"
     },
@@ -120,22 +190,12 @@
       "matched_query": "persistent agent memory"
     },
     {
-      "title": "",
-      "url": "https://doi.org/10.63808/tcs.v2i2",
-      "openalex_id": "https://openalex.org/W7203466098",
-      "doi": "https://doi.org/10.63808/tcs.v2i2",
-      "published": "2026-12-31",
-      "summary": "Research on integrating specialized, language-model-based agents for automated test-case generation remains limited, and the detection criteria under which such systems are evaluated have not been standardized, which makes reported rates difficult to compare across studies.This paper presents a multi-agent testing framework in which requirement analysis, test-case generation, sandboxed execution, and defect detection are delegated to four distinct agents, and in which detection rests on a composite rule combining the execution signal with the semantic judgment of a dedicated diagnostic agent.The framework is evaluated on the QuixBugs dataset of forty Python programs under three criteria of increasing strictness.A two-run differential protocol against the reference implementation, recommended here as the primary indicator, yields a detection rate of 55.0%, against 90.0%under the unconditional criterion conventional in prior work and 5.0% under a strict criterion requiring the suite to pass entirely on correct code.The thirty-five-point gap is traced to language-model test artifacts, of which hallucinated oracle values and signature mismatches account for the majority.An ablation with a same-model single-agent baseline attributes the framework's advantage to role decomposition rather than to the diagnostic agent specifically, and the distribution of detection across the fourteen ",
-      "relevance_score": 3,
-      "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "Independent Learning after Generative AI Support in School Mathematics: A Systematic Review and Assessment-Stratified Meta-Analysis",
-      "url": "https://doi.org/10.21203/rs.3.rs-11766988/v1",
-      "openalex_id": "https://openalex.org/W7236583407",
-      "doi": "https://doi.org/10.21203/rs.3.rs-11766988/v1",
-      "published": "2026-11-19",
-      "summary": "Background and Objective. Generative artificial intelligence (GenAI) solves school math problems on demand. Higher scores during live tool access do not prove retained mathematical competence once that support disappears. Earlier meta-analyses pooled assisted task completion together with unmonitored and closed-book posttests, which obscured whether pupils actually learned to work alone. This PRISMA 2020 systematic review and stratified meta-analysis evaluates K–12 mathematics outcomes by separating test-time resource rules from instructional design. Methods. Two-stream searches across ERIC, APA PsycNet, OpenAlex, Crossref, Semantic Scholar, arXiv, EuropePMC, and bidirectional citation chasing (1 January 2022–8 November 2026) returned 11,061 raw entries and 6,530 unique records. Every sought report was retrieved in full (372 / 372; 0 unretrieved). Eligibility verification and mathematical consistency checks retained 49 K–12 school-mathematics reports across 46 independent cohorts and supplied 36 quantitative contrasts across 20 controlled study families (21 controlled quantitative reports, plus 1 factorial within-AI modality trial synthesized narratively) alongside 28 qualitative, single-arm, observational, and boundary-comparator reports. Random-effects Paule–Mandel and restricted maximum likelihood estimators with classroom cluster adjustments (calibrated intraclass correlati",
+      "title": "Postmodern Physics of Hamzah Information.(380)",
+      "url": "https://doi.org/10.5281/zenodo.24462117",
+      "openalex_id": "https://openalex.org/W7238750672",
+      "doi": "https://doi.org/10.5281/zenodo.24462117",
+      "published": "2026-11-23",
+      "summary": "در بخش ۷۵ از ۱۰۰ — که نقطه عطف سه-چهارم (۷۵٪ از کل پروژه عظیم HQI-1155 و پایان کامل ربع سوم) محسوب می‌شود — «موتور هم‌گرایی و استنتاج قطعی مبتنی بر نظریه پیمانه‌های گالوا و هسته خود-بازتابی فراشناختی گودل-لوب (HQI-Metacognitive Self-Reflection & Löb-Provability Verification Kernel 1155)» را می‌سازیم که به هوش مصنوعی اجازه می‌دهد میزان اطمینان، مرزهای دانش و سلامت منطقی استدلال‌های خود را بدون سقوط در پارادوکس خودارجاعی دروغگو/گودل بررسی و تایید کند. آیا بخش ۷۵ را آغاز کنیم؟ bale hala bakhshe badi ra ba hamon joziyat anjam bede va esbat ha mesle ghabli بخش ۷۵ از ۱۰۰: موتور خود-بازتابی فراشناختی، منطق اثبات‌پذیری گودل-لوب و قفل ضدپارادوکس خودارجاعی (HQI-Metacognitive Self-Reflection & Löb-Provability Verification Kernel 1155) — نقطه عطف سه-چهارم (۷۵٪ تکمیل کل پروژه عظیم HQI-1155 و پایان ربع سوم) در بخش هفتادوپنجم از تدوین معماری عملیاتی هوش کوانتومی حمزه (HQI-1155) — که به عنوان نقطه عطف سه-چهارم (Milestone 75/100) ربع سوم را با پیروزی مطلق به پایان می‌رساند — یکی از عمیق‌ترین مسائل بنیادین هوش مصنوعی سطح بالا، ایمنی عامل‌های خودبهبودگر (Self-Improving AI Agents) و خودآگاهی محاسباتی (Computational Metacognition) را حل می‌کنیم: چگونه یک سیستم هوشمند می‌تواند استدلال‌ها و کدهای خود را بازبینی و تایید کند (Self-Verification) بدون آنکه در تله توهم خود-تاییدی کور (Blind Self-Trust: «من چون گفتم درست است، پس درست است!») یا پارادوکس خودارجاعی دروغگو/گودل (Liar / Gödelian Inconsistency P",
       "relevance_score": 3,
       "matched_query": "metacognition self-improving AI agents"
     },
@@ -146,6 +206,16 @@
       "doi": "https://doi.org/10.64488/kwmij.v2i2.63",
       "published": "2027-11-14",
       "summary": "Daylight is a valued architectural resource in museum design, yet uncontrolled daylight exposes cultural artifacts to fading, embrittlement, colour change, ultraviolet degradation, glare, and thermal stress.This exploratory article examines how the body form and architectural elements of a cultural museum in Ikom, Cross River State, Nigeria, can optimize daylight while protecting light-sensitive artifacts. Using an exploratory, mixed-methods, design-based approach, and the study integrates literature review, climate and site analysis, cultural heritage assessment, case-study review, and daylight-performance simulation. The article proposes a “Sheltered Grove of Memory” concept: a compact, clustered museum form in which bright public and circulation spaces are separated from low-light, conservation-controlled galleries. The proposed strategy uses deep-plan gallery cores, shaded courtyards, high-level clerestories, roof monitors, light wells, external shading fins, light shelves, diffusing ceilings, ultraviolet-filtered glazing, and automated shading. Conservation thresholds guide the design: a maximum of approximately 50 lux for highly sensitive artifacts, 150–200 lux for moderately sensitive artifacts, and up to 300 lux for durable materials such as stone, ceramic, and metal. The study argues that successful tropical museum daylighting depends not on maximizing transparency but",
+      "relevance_score": 2,
+      "matched_query": "persistent agent memory"
+    },
+    {
+      "title": "A Survey of Generative Categories and Techniques in Multimodal Generative Models",
+      "url": "https://doi.org/10.32604/cmc.2026.091637",
+      "openalex_id": "https://openalex.org/W4415110218",
+      "doi": "https://doi.org/10.32604/cmc.2026.091637",
+      "published": "2027-01-01",
+      "summary": "Multimodal generative models (MGMs) have rapidly expanded beyond text generation to encompass images, music, video, human motion, and 3D objects. This survey categorises six primary text-conditioned generative modalities and examines how four techniques, namely self-supervised learning, mixture of experts, reinforcement learning from human feedback, and chain-of-thought prompting, are adapted across them, distinguishing shared mechanisms from experimentally supported benefits. We organise evaluation around faithfulness, compositionality, and robustness, and interpret evidence within each study’s protocol. Selected within-study comparisons reported in the reviewed literature support four findings: preference gains need not improve text relevance, and reward optimisation can reduce within-prompt diversity; intermediate plans require tests of their realisation in final outputs; expert granularity changes the mechanism and its storage, computation, and runtime costs; and gains against an optimisation score need confirmation outside that scoring path. We further analyse trustworthiness risks, including bias, privacy leakage, and misuse of generated media, and examine the evidence for mitigation strategies.",
       "relevance_score": 2,
       "matched_query": "persistent agent memory"
     },
@@ -190,6 +260,16 @@
       "matched_query": "metacognition self-improving AI agents"
     },
     {
+      "title": "General Education Teachers’ Lived Experiences of Using AI to Support Students with Learning Disabilities",
+      "url": "https://dc.etsu.edu/etd/4791",
+      "openalex_id": "https://openalex.org/W7239521123",
+      "doi": null,
+      "published": "2026-12-01",
+      "summary": "The purpose of this qualitative phenomenological study was to explore the experience of general education teachers in the First TN Core region of East Tennessee integrating AI into their instructional practice to support students with learning disabilities. This study applied Bandura’s (2001) Social-Cognitive Theory as a framework to examine how teachers’ beliefs, environment, and behaviors interacted as reciprocally causational factors. Data for this research were collected during 30–60-minute, one-on-one recorded zoom interviews with 13 general education teachers from districts in the First TN Core region. Participants’ teaching experience ranged from 4 to 25 years, and teachers represented a variety of subject areas across elementary, middle, and high school settings. Findings revealed that teachers were experiencing developing perspectives about AI because of its prevalence in the social and educational domains, and that despite their recognition of potential ethical liabilities, teachers leveraged their personal agency to experiment with and leverage AI for a variety of uses. All teachers used AI to differentiate learning, and several realized a positive impact on inclusion and success for students with learning disabilities. In their successful experiences, teachers also described professionally affirming outcomes in their professional practice. Teachers demonstrated stro",
+      "relevance_score": 2,
+      "matched_query": "metacognition self-improving AI agents"
+    },
+    {
       "title": "EgoPlay: Event-Triggered Video Editing for Egocentric Streams",
       "url": "https://doi.org/10.1145/3829340.3842276",
       "openalex_id": "https://openalex.org/W7171529514",
@@ -200,42 +280,12 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Nursing assessment and management of bleeding and thrombotic risks in neonates receiving extracorporeal membrane oxygenation: a scoping review",
-      "url": "https://doi.org/10.3389/fped.2026.1986918",
-      "openalex_id": "https://openalex.org/W7237098517",
-      "doi": "https://doi.org/10.3389/fped.2026.1986918",
-      "published": "2026-11-20",
-      "summary": "Objective To map evidence supporting bedside assessment and nursing processes for bleeding and thrombotic risks during neonatal extracorporeal membrane oxygenation (ECMO), and identify priorities for evaluating a conceptual framework complementary to existing consensus guidance. Methods Following JBI methodology and PRISMA-ScR, eight databases were searched through July 1, 2026, with a PubMed update on August 6 and supplementary cross-validation. One reviewer screened and charted the evidence; a second author audited selected high-risk items and study-selection arithmetic. Registration was retrospective. Evidence was stratified as neonatal-specific or applicability evidence and mapped to 11 conceptual components. Results The review included 111 sources: 67 (60.4%) neonatal-specific and 44 (39.6%) applicability sources. No single coagulation assay represented anticoagulant effect, global hemostasis, patient events, and circuit condition. Source coverage was sparse for medication safety, graded escalation, within-scope nursing responses, and handover or quality improvement, with respective neonatal-specific counts of 1, 1, 2, and 0. These counts describe reported content, not evidence certainty or intervention effectiveness. Conclusion The review identifies an implementation-focused research question alongside PEACE: how monitoring information is verified, assessed, communicated,",
-      "relevance_score": 2,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Peripartum mental health and long-term cardiovascular risk: A neglected window for prevention in women",
-      "url": "https://doi.org/10.4330/wjc.129437",
-      "openalex_id": "https://openalex.org/W7237183326",
-      "doi": "https://doi.org/10.4330/wjc.129437",
-      "published": "2026-11-20",
-      "summary": "The peripartum period represents a critical window in women's health during which psychiatric, obstetric, metabolic and cardiovascular vulnerabilities may converge.Depression, anxiety, traumatic stress and sleep disturbance frequently coexist with adverse pregnancy outcomes and social disadvantage, yet their relevance for long-term maternal cardiovascular health remains incompletely understood.This narrative minireview examines epidemiological, biological, behavioral and clinical relationships between peripartum mental health and subsequent cardiovascular outcomes.The thematic literature search was selective rather than systematic.The strongest direct longterm evidence concerns perinatal depression; cardiovascular diagnoses within 24 months postpartum are distinguished from outcomes over longer follow-up.For anxiety, childbirth-related trauma, sleep disturbance and severe mental illness, much of the evidence remains indirect.Shared mechanisms and bidirectional relationships with obstetric complications support biological plausibility but do not establish causation.We propose a peripartum cardio-psychiatric phenotype integrating psychiatric, reproductive, cardiometabolic and social information.This framework and its descriptive patterns are hypothesis-generating, not validated risk categories.Guideline-supported mental health assessment and risk-based cardiovascular follow-up ca",
-      "relevance_score": 2,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Teacher autonomy support and exercise adherence intention in college physical education: the roles of physical activity enjoyment and perceived exercise value",
-      "url": "https://doi.org/10.3389/fpsyg.2026.2025726",
-      "openalex_id": "https://openalex.org/W7237151889",
-      "doi": "https://doi.org/10.3389/fpsyg.2026.2025726",
-      "published": "2026-11-20",
-      "summary": "Objective: Guided by self-determination theory and the trans-contextual model, this research examined whether variations in teacher autonomy support were associated with university students' exercise adherence intention and explored the potential roles of physical activity enjoyment and perceived exercise value. Methods We conducted two studies comprising four between-subjects experiments, with a final analytic sample of 486 university students. Studies 1a and 1b experimentally manipulated the frequency and intensity of teacher autonomy support, respectively. Study 2 examined potential psychological pathways by assessing physical activity enjoyment and perceived exercise value as parallel mediators linking teacher autonomy support with exercise adherence intention. Results Higher exercise adherence intention was observed in both the high-frequency condition (Study 1a, F (1, 88) = 9.36, p = 0.003, η 2 = 0.096) and the high-intensity condition (Study 1b, F (1, 94) = 5.98, p = 0.016, η 2 = 0.060). In Study 2a, significant indirect effects on exercise adherence intention were observed through physical activity enjoyment [Effect = 0.301, 95% CI (0.164, 0.469)] and perceived exercise value [Effect = 0.042, 95% CI (0.0001, 0.113)]. Study 2b also showed that an enjoyment-oriented exercise condition was associated with higher enjoyment and exercise adherence intention ( F (1, 118) = 12.",
-      "relevance_score": 2,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
-      "title": "Digital Engagement and Reading Comprehension in Online EFL/ESL Contexts: A Systematic Literature Review",
-      "url": "https://doi.org/10.47772/ijriss.2026.101000849",
-      "openalex_id": "https://openalex.org/W7237228969",
-      "doi": "https://doi.org/10.47772/ijriss.2026.101000849",
-      "published": "2026-11-20",
-      "summary": "This systematic literature review synthesizes evidence on the relationship between digitally mediated reading, learner engagement, and reading comprehension in English as a foreign or second language (EFL/ESL) education. A supplied Scopus CSV export was screened at the title-and-abstract level. Of 50 unique records published between 2021 and 2026, 38 met the review criteria: English-language studies or reviews that addressed digitally mediated reading in an EFL/ESL or L2 context and reported, theorized, or directly informed reading comprehension, engagement, motivational, strategy, or related reading outcomes. The corpus was dominated by university-based EFL studies and by interventions using online reading circles, computer-assisted interactive reading, mobile or e-book reading, collaborative platforms, annotation, and strategy scaffolds. Across the corpus, digital environments were most consistently linked to comprehension when they structured interaction, prompted metacognitive strategy use, offered targeted scaffolds, or supported self-regulated reading. Engagement was operationalized unevenly, commonly through motivation, attitude, self-efficacy, perceived usefulness, or behavioral participation rather than a coherent multidimensional construct. Evidence directly relevant to vocational/technical and vocational education and training (TVET) learners was extremely limited: o",
+      "title": "Learning Cannot Be Delegated: Why the Division of Cognitive Work Between Learners and Generative AI Should Shift Over Time",
+      "url": "https://doi.org/10.1007/s11528-026-01240-y",
+      "openalex_id": "https://openalex.org/W7237448944",
+      "doi": "https://doi.org/10.1007/s11528-026-01240-y",
+      "published": "2026-11-23",
+      "summary": "The promise of generative artificial intelligence (GenAI) in education has motivated a rapidly growing literature whose titles, abstracts, and keywords mention acceptance, attitudes, intention, or perception more than six times as often as self-regulated learning or metacognition. This critical review argues that research on GenAI in education is repeating the founding mistake of learning analytics, measuring what is easy to count rather than what matters for learning. Building on the COPES model of self-regulated learning, this paper develops the gradual reduction of AI delegation (GRAD) framework, in which GenAI performs, proposes, or prompts at eight task stages. Within GRAD, GenAI can take on operations essential to the learning goal. Such delegation helps rather than replaces learning only when the support fades as learners improve. For claims that GenAI improves learning, the paper proposes four validity criteria, namely unassisted outcomes, process evidence, calibration, and ideally gains that outlast the support.",
       "relevance_score": 2,
       "matched_query": "metacognition self-improving AI agents"
     },
@@ -250,26 +300,6 @@
       "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "A Comprehensive Overview of Bacopa monnieri Taxonomy, Constituents, Bioactivities, Herbal Formulations and Clinical Trials",
-      "url": "https://doi.org/10.5530/phrev.20270069",
-      "openalex_id": "https://openalex.org/W7225309058",
-      "doi": "https://doi.org/10.5530/phrev.20270069",
-      "published": "2027-01-01",
-      "summary": "B. monnieri, an herbal plant also referred to as brahmi, is an herb with medicinal and pharmacological active plant in traditional Indian medicinal history which has been broadly used in the an ancient ayurveda for improving memory, cognitive function, and neurological health. Brahmi is an ancient medicinal plant which used to prepare herbal formulations like brahmi ghritam, brahmi rasadi tailam, bacognize®, and bacomind®, which traditionally use in India for enhance memory and cognitive functions. This article provides a complete overview of B. monnieri taxonomy, ethnomedicinal uses, phytochemical constituents and their bioactivities, herbal formulation and clinical trials. The review focus on the basic cellular mechanisms responsible for its neuronal protective, antioxidant, oncoprotective, anti-alzheimer, anti-emetic, as well as cardioprotective activities along with major phytochemical constituents present in B. monnieri like bacoside A, bacoside B, luteolin, quercetin, β-sitosterol, betulinic acid, and stigmasterol. Recent clinical trial studies identified the cognitive, neurological, and physiological effects of B. monnieri which act as the scientific evidence proving its therapeutic potential. Overall, this review combines all information of B. monnieri phytochemistry, pharmacological activities, and clinical significance, which help to focus on its importance as a promi",
-      "relevance_score": 1,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "Woodfordia fruticosa (L.) Kurz: Integrating Phytochemistry, Novel Bioactivities and Sustainable Utilization Strategies",
-      "url": "https://doi.org/10.5530/phrev.20270066",
-      "openalex_id": "https://openalex.org/W7225348165",
-      "doi": "https://doi.org/10.5530/phrev.20270066",
-      "published": "2027-01-01",
-      "summary": "W. fruticosa categorized from family \"Lythraceae\" and it is also known as \"Fire-flame bush\" and it grow in tropical and subtropical regions. It occurs in Africa, Middle East and Asia. According to WHO reports that more than 80% of rural areas use medicinal plant to meet their healthcare needs. It plays vital role in ayurvedic medicine because they are used to make herbal medicine like arishta and asava. Researchers found that plant contains many natural phytochemicals such as tannins, terpenes, phenolic acid and flavonoid. The morphology, phytochemistry, novel bioactivities, clinical studies of W. fruticosa are deeply reviewed in this article. Google Scholar, Pub Chem, Chem Draw or Research Gate are the scientific research databases has been used for gathering information for this article. Its Phytochemicals are responsible several bioactivities like antimicrobial, antiviral, antioxidants, wound healing, antiulcer, antifertility and antiatherosclerosis activity. Some clinical studies are done to determine its effects on teeth and also determines mouthwashes of W. fruticosa leaves to treat chronic periodontitis. This plant is rare and highly popular so its use must be controlled to prevent overexploitation. Tissue culture, genetic research-controlled cultivation and scientific methods used to ensure availability and efficacy. By using these methods, the plant is able to grow mor",
-      "relevance_score": 1,
-      "matched_query": "persistent agent memory"
-    },
-    {
       "title": "Bridging the intention–behavior gap in psychologically informed musculoskeletal rehabilitation: A con-vergent mixed-methods investigation and the triadic care model",
       "url": "https://doi.org/10.5267/j.ijdns.2026.12",
       "openalex_id": "https://openalex.org/W7163888155",
@@ -278,36 +308,6 @@
       "summary": "While clinical guidelines strongly endorse psychologically informed physiotherapy (PIP) and cognitive-behavioral techniques (CBT) for musculoskeletal pain, routine clinical uptake remains inconsistent.Most implementation research describes clinician attitudes without modeling the cognitive and systemic mechanisms that impede translation into daily practice.This study investigates the \"intention-behavior gap\" in psychologically informed musculoskeletal rehabilitation among Iranian physiotherapists using the COM-B (Capability, Opportunity, and Motivation -Behavior) framework and introduces the Triadic Care Model as an operational solution.A convergent mixed-methods design (QUAN + QUAL) compliant with the Good Reporting of A Mixed Methods Study (GRAMMS) guidelines was conducted between 2023 and 2024.The quantitative phase surveyed 450 licensed physiotherapists using the validated Psychological Practice and Skills Tool (PPST).Structural Equation Modeling (SEM) tested hypothesized paths linking psychological self-efficacy, systemic barriers, postgraduate education, and clinical utilization.The qualitative phase comprised semi-structured, in-depth interviews with 20 practicing physiotherapists analyzed via reflexive thematic analysis.Quantitative and qualitative findings were integrated via a joint display matrix.A pronounced intention-behavior gap was identified: 78.2% (n=352) of cl",
       "relevance_score": 1,
       "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "Title Pending 10324",
-      "url": "https://doi.org/10.3998/ergo.10324",
-      "openalex_id": "https://openalex.org/W4406032655",
-      "doi": "https://doi.org/10.3998/ergo.10324",
-      "published": "2026-12-31",
-      "summary": "The extraordinary success of recent Large Language Models (LLMs) on a diverse array of tasks has led to an explosion of scientific and philosophical theorizing aimed at explaining how they do what they do. Unfortunately, disagreement over fundamental theoretical issues has led to stalemate, with entrenched camps of LLM optimists and pessimists often committed to very different views of how these systems work. Overcoming stalemate requires agreement on fundamental questions, and the goal of this paper is to address one such question, namely: is LLM behavior driven partly by representation-based information processing of the sort implicated in biological cognition, or is it driven entirely by processes of memorization and stochastic table look-up? This is a question about what kind of algorithm LLMs implement, and the answer carries serious implications for higher level questions about whether these systems have beliefs, intentions, concepts, knowledge, and understanding. I argue that LLM behavior is partially driven by representation-based information processing, and then I describe and defend a series of practical techniques for investigating these representations and developing explanations on their basis. The resulting account provides a groundwork for future theorizing about language models and their successors.",
-      "relevance_score": 1,
-      "matched_query": "persistent agent memory"
-    },
-    {
-      "title": "Adapting HR Strategies to Enhance CRM in Aviation: A Qualitative Study on Emerging Technologies Grounded in Socio-Technical Systems Theory",
-      "url": "https://doi.org/10.20491/isarder.2025.2124",
-      "openalex_id": "https://openalex.org/W4417525175",
-      "doi": "https://doi.org/10.20491/isarder.2025.2124",
-      "published": "2026-12-19",
-      "summary": "Purpose –This study aims to explore how Human Resource Management (HRM) strategies can enhance Crew Resource Management (CRM) effectiveness in the context of emerging technologies such as artificial intelligence (AI) and augmented reality (AR) in aviation. While these technologies improve operational efficiency, they also highlight the critical need for maintaining human oversight and decision-making processes.Design/methodology/approach –The research employs a qualitative methodology grounded in Socio-Technical Systems (STS) theory. Data were collected through interviews with 15 aviation experts, including pilots, HR professionals, and operations managers, and analyzed using thematic analysis with NVivo software.Results–The findings indicate that while automation significantly enhances operational efficiency, maintaining manual skills and human decision-making remains essential for sustainable operations. The study also identifies the need for HR strategies to adapt to technological change through enhanced training programs, continuous learning initiatives, and revised recruitment practices.Discussion –This study contributes to STS theory by emphasizing the importance of balancing technological and social systems to ensure effective CRM in aviation. Practical recommendations for HR strategies are provided, including improving training programs, fosteringa culture of continuous",
-      "relevance_score": 1,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Pieces Solving a Puzzle: Emerging Roles and Cross-Field Analogies During a Distributed Epistemic Game",
-      "url": "https://digitalcommons.usu.edu/etd2023/928",
-      "openalex_id": "https://openalex.org/W7204216792",
-      "doi": null,
-      "published": "2026-12-01",
-      "summary": "In an effort to describe why some problems can’t be solved, a character compared them to a cubic meter of platinum - a block so dense that all the people who could squeeze around it still couldn’t lift it off the ground. In the same way, these problems simply can’t have enough people gathered around and communicating about them - and so they remain unsolved. This research looks at the first Polymath Project (2009) as an example of a distributed epistemic game to examine how groups engage with complex problems. and without a locally omniscient individual. In this setting of epistemic uncertainty, interactions between individuals reveal patterns of participation, and an analogy opens a new solution pathway by introducing a problem-solving approach from another field. These insights answer the initial question of the Polymath Project - ‘Is massively collaborative mathematics possible?’ - and offer hope for lifting the cubic meter of other unsolvable problems.",
-      "relevance_score": 1,
-      "matched_query": "cross-model handoff language model agents"
     }
   ],
   "paper_count": 30,
