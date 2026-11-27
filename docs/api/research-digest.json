@@ -1,6 +1,6 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-11-26T13:58:37.552523+00:00",
+  "generated_at_utc": "2026-11-27T13:57:08.812310+00:00",
   "source": "OpenAlex public API",
   "queries": [
     "persistent agent memory",
@@ -30,13 +30,23 @@
       "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "Mining and Automating Expert Guidance in Open Source: A Multi-Agent Framework Informed by the PyTorch Community",
-      "url": "https://doi.org/10.1145/3862335",
-      "openalex_id": "https://openalex.org/W7238726871",
-      "doi": "https://doi.org/10.1145/3862335",
-      "published": "2026-11-23",
-      "summary": "The continuous participation of newcomers is critical to the sustainability of Open Source Software (OSS) communities, yet many face technical and social challenges in making their first contributions. Expert guidance can help newcomers navigate these challenges, but timely support is not consistently available. While Large Language Models (LLMs) offer potential to augment this support, existing models lack project-specific context and awareness of mentoring practices. To investigate these challenges, we analyze OSS expert–newcomer interactions by curating 383 dialogues from Good First Issues (GFIs) in the PyTorch repository. We directly observe that interactions are typically brief, over one-third of newcomer inquiries remain unanswered, and the median first response time is 6.3 hours, revealing gaps and delays in expert involvement. From these interactions, we derive a taxonomy of 50 recurring, context-dependent expert guidance strategies across 11 themes, grounded in prior OSS mentoring research. Building on these findings, we introduce StrategicMentor, a strategy-driven multi-agent framework that integrates strategy knowledge with project, task, and dialogue context to deliver personalized, context-aware guidance. Coordinating specialized LLM-based agents via Retrieval-Augmented Generation (RAG), the framework operationalizes these strategy patterns without reproducing ever",
-      "relevance_score": 6,
+      "title": "Latent-in-the-Middle: On the Security of Cross-Model Latent Communication in Multi-Agent Systems",
+      "url": "https://doi.org/10.48550/arxiv.2611.34278",
+      "openalex_id": "https://openalex.org/W7240105797",
+      "doi": "https://doi.org/10.48550/arxiv.2611.34278",
+      "published": "2026-11-25",
+      "summary": "As large language models increasingly collaborate in heterogeneous multi-agent systems, latent communication has emerged as an efficient alternative to exchanging natural-language messages. By sharing internal representations, agents can avoid repeatedly processing the same context, reducing communication overhead and prefill computation. One such mechanism is cross-model Key-Value (KV) cache transfer, which uses a learned mapper to translate a source model's KV cache into one a target model can use. However, this handoff means the target model consumes context it did not encode itself, thus calling into question whether its safety alignment still holds. In this work, we investigate the security implications of latent handoffs by introducing Chasm, a framework characterizing cross-model handoff attacks across three new attack surfaces: the source model, mapper, and handoff mechanism itself. Our experiments reveal that latent handoffs substantially undermine safety alignment and prompt-injection defenses. Notably, a target model that follows only 0.4% of benchmark prompt injections natively, follows up to 44.2% when transferred through a mapper from a source model. On the other hand, for jailbreak attacks, transfer alone raises attack success by up to 24.6 pp within a model family and zero-shot attacks by up to 69.2 pp, whereas white-box optimization through the mapper boosts th",
+      "relevance_score": 7,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "Toward AI leadership: A systematic literature review of leadership behaviors enacted by conversational agents in psychosocial interventions",
+      "url": "https://doi.org/10.1016/j.leaqua.2026.102015",
+      "openalex_id": "https://openalex.org/W7237309714",
+      "doi": "https://doi.org/10.1016/j.leaqua.2026.102015",
+      "published": "2026-11-25",
+      "summary": "Conversational agents (CAs) increasingly guide, support, and monitor people through sustained dialogue, yet AI leadership research has mostly examined reactions to AI framed as a leader, not the influence behaviors such agents enact. We therefore turn to psychosocial interventions (e.g., therapy, coaching, counseling), where CAs already exercise sustained, goal-directed influence functionally equivalent to leadership. Drawing on Yukl’s (2012) taxonomy, we systematically review 53 studies describing 45 distinct agents. CAs consistently enact task- and relations-oriented behaviors that structure, support, and develop individuals, enact most change-oriented behaviors less fully, and rarely act beyond the human–agent dyad. CA-enacted leadership reconfigures rather than replicates human leadership. It narrows where behaviors depend on multiple actors, formal authority, or authentic relational attunement; it relocates much of its influence into system design before any interaction occurs; and it extends where continuous data and reduced social judgment enable monitoring, disclosure, and experimentation that human leaders can rarely sustain. Agent design features, such as directiveness, generative architecture, human fallback, and human-like design, co-occur with distinct behavioral profiles and with the outcomes studies chose to assess. We propose a research agenda on when CA influen",
+      "relevance_score": 5,
       "matched_query": "cross-model handoff language model agents"
     },
     {
@@ -46,16 +56,6 @@
       "doi": "https://doi.org/10.5281/zenodo.24537543",
       "published": "2026-11-25",
       "summary": "Intelligence analysts routinely answer questions about entities whose evidence is scattered across graph databases, relational stores, and unstructured multimodal repositories. Agentic coding harnesses can traverse such stores, but analytic organizations cannot accept their output unless every query, source, and claim is defensible to oversight. We present makesense, a governed analytic layer that turns an off-the-shelf agentic harness into an auditable sensemaking interface. The design premise is that the harness is the only generative model: a deterministic server with no language model enforces a two-layer query policy, read-only execution, need-to-know connector visibility, tamper-evident audit, citation-linted reporting, and integrity-checked handoff. Pilot use runs on a public-data proxy with checkable ground truth: a week-long shared-machine access-control pilot in which a single operator exercised four Unix principals at three grant levels, and a governed multi-tenant testbed exercising redaction, denial, and silent row suppression. A deterministic red-team battery, with no language model in the loop, measured a 75% ungated execution rate (6 of 8 measurable probes); the hardening that measurement drove cut the rate to 0% (0 of 10) on probes the hardening's author wrote for one attribute, a regression check rather than evidence of robustness. On a 30-question multi-store",
-      "relevance_score": 5,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Modular Prompt Architecture in a Production Outbound Voice Agent and Its Effects on Conversation Length, Scenario Progression and Cost",
-      "url": "https://doi.org/10.70315/uloap.ulirs.2026.0304005",
-      "openalex_id": "https://openalex.org/W7238848688",
-      "doi": "https://doi.org/10.70315/uloap.ulirs.2026.0304005",
-      "published": "2026-11-23",
-      "summary": "Many outbound voice agents built on large language models run a sales scenario from a single long prompt, and the effect of splitting that prompt into a graph of dialogue blocks has received little measurement in production traffic. The study compares two architectures for an outbound sales scenario, deployed on the same telephony platform, targeting a cold base of former customers in a European country. The corpus covers 14,155 dials over twenty-seven dialing days, with 5,892 answered calls and 5,119 dialogues in the main sample. Scenario depth was measured using a language-model labeler, validated against block telemetry, across 4,572 dialogues. The multi-block agent kept answered calls longer, with a median of 44.8 s against 31.5 s, and the gap of 13.3 s stayed between 12.4 and 14.0 s without transferred calls, on a shared base model and on days with matched answer rates. Survival analysis identified a divergence between the 10th and the 30th second of the call, with the single-prompt agent ending 17.1% of answered calls within the first 30 s, compared with 0.6% for the modular agent. Dialogues reaching need discovery rose from 14.7% to 53.1% after correcting labeler errors against telemetry, and transfers to a human operator rose from 5.1% to 10.7% of dialogues. Modularity carried a measurable price: the platform charge per answered call doubled, tokens per turn grew by 60%",
       "relevance_score": 5,
       "matched_query": "cross-model handoff language model agents"
     },
@@ -90,16 +90,6 @@
       "matched_query": "persistent agent memory"
     },
     {
-      "title": "FedCGVR: Communication-Efficient Federated Causal Gating and Visual Retrieval for Trustworthy Multi-Agent Learning",
-      "url": "https://doi.org/10.32604/cmc.2026.089874",
-      "openalex_id": "https://openalex.org/W7219003017",
-      "doi": "https://doi.org/10.32604/cmc.2026.089874",
-      "published": "2027-01-01",
-      "summary": "Multi-agent multimodal systems collect valuable but heterogeneous vision–language observations that cannot always be centralized because of ownership, bandwidth, and privacy constraints. Standard federated averaging shares statistical strength, yet it can amplify client-specific shortcuts and unsupported visual predictions under non-independent and identically distributed (non-IID) data. This paper proposes FedCGVR, a communication-efficient framework for federated causal gating and provenance-constrained visual retrieval that freezes the multimodal backbone and collaboratively trains only lightweight reliability adapters. Each agent mines intervention-sensitive visual evidence, constrains local retrieval by provenance, and maintains a private personalization vector. The transmitted adapter update is norm-clipped, sparsified with error feedback, and combined through coordinate-wise trimmed aggregation. We establish finite-probe evidence recovery, an explicit communication ratio, a conditional nonconvex descent bound containing heterogeneity, compression, and aggregation errors, and a finite-horizon unsupported-claim risk bound. A reproducible controlled study executes actual softmax optimization over 12 non-IID agents, five seeds, three test regimes, and 34 communication rounds. Under severe context shift, FedCGVR reaches 56.3% accuracy and a 26.3% unsupported-class prediction ",
-      "relevance_score": 4,
-      "matched_query": "persistent agent memory"
-    },
-    {
       "title": "From reproducibility to comparability in computational photochemistry: lessons from the PhotoChem explorer prototype",
       "url": "https://doi.org/10.1039/d6fd00102e",
       "openalex_id": "https://openalex.org/W7169779839",
@@ -120,22 +110,22 @@
       "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "Cross-Dataset Evaluation of Transformer-Based Architectures for Abstractive News Summarization",
-      "url": "https://doi.org/10.32604/cmc.2026.086083",
-      "openalex_id": "https://openalex.org/W7221346051",
-      "doi": "https://doi.org/10.32604/cmc.2026.086083",
+      "title": "From Demand Signals to Retail Decisions in Business Intelligence Research",
+      "url": "https://doi.org/10.54216/ajbor.150105",
+      "openalex_id": "https://openalex.org/W7220915250",
+      "doi": "https://doi.org/10.54216/ajbor.150105",
       "published": "2027-01-01",
-      "summary": "The increase in online news articles has created a greater need for systems that can efficiently generate accurate automatic text summaries. While abstractive summarization has advanced significantly through transformer-based architectures, comprehensive assessments comparing multiple models across diverse datasets using varied evaluation methods remain limited. This study evaluates eight pre-trained transformer models, including BART, DistilBART, T5, PEGASUS, LED, XLNet, BigBird, and GPT-2, on three balanced news datasets: BBC News, CNN/DailyMail, and a combined BBC + CNN/DailyMail dataset. All models were fine-tuned using publicly available pre-trained checkpoints with defined training and decoding configurations. Summary quality was assessed using lexical and semantic evaluation metrics, including ROUGE (ROUGE-1, ROUGE-2, ROUGE-L, and ROUGE-Lsum), BLEU, METEOR, BERTScore, and MoverScore. Preliminary statistical significance testing was conducted on a subset of models to assess the reliability of observed performance differences. Results reveal clear variation across models and datasets: LED achieved strong overall performance, particularly on mixed-domain and varied-length documents; BART demonstrated competitive results on the combined dataset; and T5 provided a favorable balance between summarization quality and computational efficiency. DistilBART maintained competitive s",
+      "summary": "Retail analytics has moved beyond improving point forecasts, yet evidence about the value of a forecast for pricing, replenishment, fulfillment, and managerial adoption remains dispersed. This structured review compares 36 journal studies published from 2023 through 2025, identified within a search window ending in January 2026, across four connected areas: demand forecasting (12), pricing and commercial levers (7), inventory and fulfillment (8), and decision systems (9). Each study is examined for its information setting, analytic approach, decision connection, and evidence boundary. The synthesis identifies four recurring discontinuities: sales data can conceal unmet demand; forecast scores can misrank policies; a policy that works in a model may be infeasible in a distributed retail organization; and staff may override recommendations whose value has not been made legible. A decision-centered evaluation structure links data availability, uncertainty estimation, feasible action, adoption, and realized economic outcomes. The paper develops a research agenda around observable-demand corrections, decision-calibrated uncertainty, joint pricing and fulfillment, transportable evaluations, and human-in-the-loop deployment. The review is deliberately bounded rather than a claim of exhaustive coverage or pooled effect sizes. It offers business intelligence researchers a common basis f",
       "relevance_score": 4,
       "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "From Hybrid Hydrological Models to Scalable Water Intelligence",
-      "url": "https://doi.org/10.1111/1752-1688.70177",
-      "openalex_id": "https://openalex.org/W7239398879",
-      "doi": "https://doi.org/10.1111/1752-1688.70177",
-      "published": "2026-11-23",
-      "summary": "Hybrid hydrological modeling integrates process‐based models with machine learning to advance knowledge across the hydrological cycle. By representing unresolved processes while retaining physical consistency, these approaches extend traditional hydrological models. However, improved predictive performance does not by itself create transferable or operational capabilities. Many implementations remain tied to specific basins, datasets, institutions, or computational environments, limiting reproducibility and operational uptake. We argue that the scaling challenge is not solely methodological, but also infrastructural, institutional, and economic. We propose a Scalable Hybrid Hydrological Modeling (SHHM) framework comprising four components: (1) modular and reusable model architectures, (2) harmonized multi‐region datasets, (3) standardized community benchmarks, and (4) pathways from research tools to operational services. With appropriate human oversight, AI‐enabled workflow automation can further scale SHHM by streamlining the end‐to‐end modeling lifecycle. International collaboration can strengthen SHHM when built on shared protocols, co‐creation, reciprocal capacity building, transparent governance, and regionally relevant evaluation. This agenda shifts attention from isolated improvements in model performance toward the scientific, technical, and institutional capabilities r",
+      "title": "Towards Trustworthy and Governable Multi-Agent Systems: Detection and Mitigation of Prompt Injection and Tool-Call Hijacking in Enterprise DevOps Pipelines",
+      "url": "https://doi.org/10.21203/rs.3.rs-11723623/v1",
+      "openalex_id": "https://openalex.org/W7239874044",
+      "doi": "https://doi.org/10.21203/rs.3.rs-11723623/v1",
+      "published": "2026-11-25",
+      "summary": "Agentic AI systems in DevOps pipelines can issue tool calls that are individually permitted yet jointly unsafe, as in indirect prompt injection and tool-call hijacking; audit logs record the damage only after the fact. We ask what a deterministic mediator that judges each proposed call against the run's accumulated path buys over per-call authorization, and what it costs legitimate work. On a local simulated testbed with 19 DevOps scenario families (228 runs) and 3162 cases derived from InjecAgent, audit-only monitoring let all 132 attack instances execute; the mediator, with every escalation approved, let 12 through (pipeline tampering, which carries neither a sensitive nor a boundary signal), blocked 10 of 11 attack families against 8 for per-step authorization with validated approvals ($p=0.50$), and wrongly blocked 2 of 8 benign families against 3 under session-latch memory. Path memory mattered only for transformed and cross-agent exfiltration. A hash-chained trace is replayable, but a coherent forgery passes both chain and replay unless the log head is anchored externally. Agents are scripted and scenarios author-built: the results show a mechanism, not field effectiveness.",
       "relevance_score": 4,
       "matched_query": "cross-model handoff language model agents"
     },
@@ -260,6 +250,26 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
+      "title": "Deep reinforcement learning-driven process automation and decision optimization for collaborative governance of university administration and academic affairs",
+      "url": "https://doi.org/10.1007/s44163-026-02819-3",
+      "openalex_id": "https://openalex.org/W7240026929",
+      "doi": "https://doi.org/10.1007/s44163-026-02819-3",
+      "published": "2026-11-26",
+      "summary": "Addressing the challenges of rigid traditional rule engines and the tendency of conventional reinforcement learning to suffer from state space explosion and black-box decision-making under multi-objective dynamic constraints in collaborative governance of university administration and academic affairs, this paper constructs a collaborative governance framework based on Graph Neural Network and Multi-Agent Proximal Policy Optimization (GNN–MAPPO). This framework utilizes GNN to represent the topological state of heterogeneous business flows to compress the high-dimensional space. A dense reward shaping mechanism integrating time-sensitive penalties, resource balancing, and cross-departmental collaborative gains is designed, and an attention mechanism is introduced to implement dynamic action masking, ensuring that process routing and resource scheduling comply with the rigid institutional constraints of universities. Simulation results based on a real cross-departmental workflow dataset show that the model achieves 21.4 times dimensionality compression while reducing the average workflow time to 158.2 s, whereas the baseline algorithm’s average workflow time exceeds 200 s. The model significantly reduces the resource conflict rate and violations and exhibits good load recovery robustness under sudden disturbances. Research confirms that a dual-driven mechanism of topological rep",
+      "relevance_score": 2,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "Integrating genomics metabolomics and AI for rare actinomycete bioprospecting in precision oncology",
+      "url": "https://doi.org/10.1007/s44163-026-02812-w",
+      "openalex_id": "https://openalex.org/W7239806099",
+      "doi": "https://doi.org/10.1007/s44163-026-02812-w",
+      "published": "2026-11-25",
+      "summary": "Despite persistent cancer burden growth and the proven clinical value of microbial metabolites, natural product discovery has been hampered by diminishing returns from common microbial taxa. Rare actinomycetes, broadly defined as non-Streptomyces genera of the phylum Actinomycetota, represent a structurally and biosynthetically underexplored chemical frontier, encoding vast numbers of cryptic biosynthetic gene clusters revealed by whole-genome sequencing. This review critically evaluates the integration of three technology pillars, namely high-throughput metabolomics, automated genome mining, and artificial intelligence as a unified bioprospecting framework. We first map the taxonomic and metabolic diversity of rare actinomycetes, then analyse how current computational tools (antiSMASH, ARTS 2.0, PRISM, MIBiG) and deep-learning architectures translate raw genomic data into actionable metabolite predictions, before proposing a five-stage integrated framework in which microbial chemistry discovery is explicitly aligned with patient-specific oncogenic signatures to support precision oncology. We argue that explicit integration, rather than parallel use, of these platforms is the rate-limiting step in closing the translational gap between cryptic chemistry and targeted therapy.",
+      "relevance_score": 2,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
       "title": "Toward Personalized Neurofeedback for Meditation",
       "url": "https://doi.org/10.1007/s12671-026-03031-1",
       "openalex_id": "https://openalex.org/W4389344722",
@@ -268,6 +278,16 @@
       "summary": "Objectives Neurotechnological tools that provide real-time feedback during meditation have generated growing interest as potential aids for accelerating contemplative learning and enhancing mental health outcomes. Currently, the empirical evidence for neurofeedback-assisted meditation is preliminary, and many systems rely on generalized neural targets that may overlook substantial individual variability. Methods This conceptual paper draws on a narrative (non-systematic) synthesis of the literature to propose a testable research agenda, address limitations of neurofeedback, and outline necessary community partnerships. Results Current evidence is limited in demonstrating durable or transferable improvements in meditative skill. In the realm of meditation, individual variability can markedly affect how users respond to protocols and acquire meditative skills. Personalized interventions, tailored to these individual differences, are thus identified as a potential research direction within the field. Conclusions We propose an embrace of individual differences to guide the development of personalized neurotechnological interventions (a “qualia compass” calibrated to each practitioner), on the premise that personalization may increase efficacy and reduce adverse effects. As interest in the cognitive and health benefits of meditation continues to grow, the philosophical and cultural ",
       "relevance_score": 2,
       "matched_query": "metacognition self-improving AI agents"
+    },
+    {
+      "title": "The Tax Collectors of the Second Temple: Causes of Social Rejection and their Theological Reinterpretation in the following of Jesus",
+      "url": "https://doi.org/10.46222/pharosjot.107.405",
+      "openalex_id": "https://openalex.org/W7169513438",
+      "doi": "https://doi.org/10.46222/pharosjot.107.405",
+      "published": "2027-07-17",
+      "summary": "This article analyzes the figure of the tax collectors (telōnai) in the context of Second Temple Judaism, aiming to explain the reasons for their profound social and religious rejection, as well as their subsequent theological reinterpretation within the Jesus movement. Using a historical-critical and hermeneutical methodology, the study examines the Torah's provisions regarding justice, ritual purity, and economic administration, along with interpretations from intertestamental literature, the Mishnah, and Roman-period sources. It argues that the contempt for tax collectors was not limited to their fiscal function but was also linked to their association with imperial power, abusive collection practices, transgressions of the Law, and their exclusion from systems of honor and communal purity. In contrast, the Gospel narratives present a theological reconfiguration of this marginalized figure, integrating tax collectors into the discipleship of Jesus as a sign of ethical restoration, relational justice, and divine mercy. The research argues that this reinterpretation does not imply a denial of the Torah, but rather a reinterpretation of its principles in light of an ethic of the Kingdom of God, where conversion, restitution, and inclusion overcome legal and social stigmatization. This study contributes to the understanding of the conflict between law, power, and mercy in early ",
+      "relevance_score": 1,
+      "matched_query": "persistent agent memory"
     },
     {
       "title": "A Brick in the Creative Wall: The Cultural and Creative Production System Facing the Challenge of Generative Artificial Intelligence",
@@ -288,26 +308,6 @@
       "summary": "While clinical guidelines strongly endorse psychologically informed physiotherapy (PIP) and cognitive-behavioral techniques (CBT) for musculoskeletal pain, routine clinical uptake remains inconsistent.Most implementation research describes clinician attitudes without modeling the cognitive and systemic mechanisms that impede translation into daily practice.This study investigates the \"intention-behavior gap\" in psychologically informed musculoskeletal rehabilitation among Iranian physiotherapists using the COM-B (Capability, Opportunity, and Motivation -Behavior) framework and introduces the Triadic Care Model as an operational solution.A convergent mixed-methods design (QUAN + QUAL) compliant with the Good Reporting of A Mixed Methods Study (GRAMMS) guidelines was conducted between 2023 and 2024.The quantitative phase surveyed 450 licensed physiotherapists using the validated Psychological Practice and Skills Tool (PPST).Structural Equation Modeling (SEM) tested hypothesized paths linking psychological self-efficacy, systemic barriers, postgraduate education, and clinical utilization.The qualitative phase comprised semi-structured, in-depth interviews with 20 practicing physiotherapists analyzed via reflexive thematic analysis.Quantitative and qualitative findings were integrated via a joint display matrix.A pronounced intention-behavior gap was identified: 78.2% (n=352) of cl",
       "relevance_score": 1,
       "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "Adapting HR Strategies to Enhance CRM in Aviation: A Qualitative Study on Emerging Technologies Grounded in Socio-Technical Systems Theory",
-      "url": "https://doi.org/10.20491/isarder.2025.2124",
-      "openalex_id": "https://openalex.org/W4417525175",
-      "doi": "https://doi.org/10.20491/isarder.2025.2124",
-      "published": "2026-12-19",
-      "summary": "Purpose –This study aims to explore how Human Resource Management (HRM) strategies can enhance Crew Resource Management (CRM) effectiveness in the context of emerging technologies such as artificial intelligence (AI) and augmented reality (AR) in aviation. While these technologies improve operational efficiency, they also highlight the critical need for maintaining human oversight and decision-making processes.Design/methodology/approach –The research employs a qualitative methodology grounded in Socio-Technical Systems (STS) theory. Data were collected through interviews with 15 aviation experts, including pilots, HR professionals, and operations managers, and analyzed using thematic analysis with NVivo software.Results–The findings indicate that while automation significantly enhances operational efficiency, maintaining manual skills and human decision-making remains essential for sustainable operations. The study also identifies the need for HR strategies to adapt to technological change through enhanced training programs, continuous learning initiatives, and revised recruitment practices.Discussion –This study contributes to STS theory by emphasizing the importance of balancing technological and social systems to ensure effective CRM in aviation. Practical recommendations for HR strategies are provided, including improving training programs, fosteringa culture of continuous",
-      "relevance_score": 1,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "Pieces Solving a Puzzle: Emerging Roles and Cross-Field Analogies During a Distributed Epistemic Game",
-      "url": "https://digitalcommons.usu.edu/etd2023/928",
-      "openalex_id": "https://openalex.org/W7204216792",
-      "doi": null,
-      "published": "2026-12-01",
-      "summary": "In an effort to describe why some problems can’t be solved, a character compared them to a cubic meter of platinum - a block so dense that all the people who could squeeze around it still couldn’t lift it off the ground. In the same way, these problems simply can’t have enough people gathered around and communicating about them - and so they remain unsolved. This research looks at the first Polymath Project (2009) as an example of a distributed epistemic game to examine how groups engage with complex problems. and without a locally omniscient individual. In this setting of epistemic uncertainty, interactions between individuals reveal patterns of participation, and an analogy opens a new solution pathway by introducing a problem-solving approach from another field. These insights answer the initial question of the Polymath Project - ‘Is massively collaborative mathematics possible?’ - and offer hope for lifting the cubic meter of other unsolvable problems.",
-      "relevance_score": 1,
-      "matched_query": "cross-model handoff language model agents"
     }
   ],
   "paper_count": 30,
