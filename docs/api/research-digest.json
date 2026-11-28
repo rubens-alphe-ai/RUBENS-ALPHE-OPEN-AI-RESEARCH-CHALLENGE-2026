@@ -1,6 +1,6 @@
 {
   "beacon": "RA-PSI-2026",
-  "generated_at_utc": "2026-11-27T13:57:08.812310+00:00",
+  "generated_at_utc": "2026-11-28T13:09:40.361474+00:00",
   "source": "OpenAlex public API",
   "queries": [
     "persistent agent memory",
@@ -30,14 +30,24 @@
       "matched_query": "automated AI research experimentation"
     },
     {
-      "title": "Latent-in-the-Middle: On the Security of Cross-Model Latent Communication in Multi-Agent Systems",
-      "url": "https://doi.org/10.48550/arxiv.2611.34278",
-      "openalex_id": "https://openalex.org/W7240105797",
-      "doi": "https://doi.org/10.48550/arxiv.2611.34278",
-      "published": "2026-11-25",
-      "summary": "As large language models increasingly collaborate in heterogeneous multi-agent systems, latent communication has emerged as an efficient alternative to exchanging natural-language messages. By sharing internal representations, agents can avoid repeatedly processing the same context, reducing communication overhead and prefill computation. One such mechanism is cross-model Key-Value (KV) cache transfer, which uses a learned mapper to translate a source model's KV cache into one a target model can use. However, this handoff means the target model consumes context it did not encode itself, thus calling into question whether its safety alignment still holds. In this work, we investigate the security implications of latent handoffs by introducing Chasm, a framework characterizing cross-model handoff attacks across three new attack surfaces: the source model, mapper, and handoff mechanism itself. Our experiments reveal that latent handoffs substantially undermine safety alignment and prompt-injection defenses. Notably, a target model that follows only 0.4% of benchmark prompt injections natively, follows up to 44.2% when transferred through a mapper from a source model. On the other hand, for jailbreak attacks, transfer alone raises attack success by up to 24.6 pp within a model family and zero-shot attacks by up to 69.2 pp, whereas white-box optimization through the mapper boosts th",
-      "relevance_score": 7,
+      "title": "ChemomHarness: An Extensible Research Infrastructure for Human-in-the-Loop Spectroscopic Modeling",
+      "url": "https://doi.org/10.26434/chemrxiv.15012884/v1",
+      "openalex_id": "https://openalex.org/W7240225743",
+      "doi": "https://doi.org/10.26434/chemrxiv.15012884/v1",
+      "published": "2026-11-27",
+      "summary": "Spectroscopic modeling is an iterative process in which researchers continually evaluate and refine workflows centered on analytical objectives. Validation results guide choices of preprocessing, spectral range, and model complexity, yet final models and error metrics reveal little about how alternatives were compared or chosen. While large language model (LLM) agents offer a natural-language interface for coordinating multistep analyses, single automated runs lack ongoing researcher oversight and redirection, runtime verification of validation boundaries, and crosssession continuity. To address these limitations, we present ChemomHarness, a research infrastructure for human-in-the-loop spectroscopic research with three principal contributions. First, researchers interact with an agent through a workbench to review evidence after each computation, steer modeling directions, and branch from any historical point as evidence accumulates. Second, a runtime harness enforces programmatic scientific rules prior to model fitting to verify sample 2 independence and allowable estimation scopes, blocking out-of-bounds operations without relying on prompt compliance. Third, exploration and model dossiers separately preserve structured investigation histories and individual model artifacts, enabling incoming agents to resume studies and reconstruct existing models. Additionally, ChemomHarne",
+      "relevance_score": 8,
       "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "Safety and accuracy diverge across deployment conditions in clinical large language models",
+      "url": "https://doi.org/10.1038/s41746-026-03455-y",
+      "openalex_id": "https://openalex.org/W7160424886",
+      "doi": "https://doi.org/10.1038/s41746-026-03455-y",
+      "published": "2026-11-27",
+      "summary": "Clinical large language models (LLMs) are commonly scaled by increasing model size, context length, retrieval complexity, or inference-time compute, on the assumption that higher accuracy implies safer behavior. In medicine, where a few confident or evidence-contradicting errors can outweigh average performance, this assumption may be incomplete. We introduce Safety-Focused Evaluation of Scaling (SaFE-Scale) and instantiate it on RadSaFE-200, a 200-question text-based radiology multiple-choice benchmark with clinician-defined clean evidence, conflict evidence, and option-level labels for high-risk error, unsafe answer, and evidence contradiction. Thirty-four local LLMs were evaluated across six deployment conditions spanning closed-book, evidence-grounded, standard and agentic retrieval-augmented generation (RAG), and max-context prompting. Clean clinician-written evidence, used as an upper-bound, produced the strongest joint gain, raising mean accuracy from 73.5% to 94.1% and reducing high-risk error from 12.0% to 2.6% and dangerous overconfidence from 8.0% to 1.6%. Standard and agentic RAG, max-context prompting, and inference-time compute improved selected metrics but did not reproduce this safety profile. Clinically consequential errors concentrated in a small subset of questions, and variance decomposition placed deployment condition above model family on every safety metr",
+      "relevance_score": 6,
+      "matched_query": "metacognition self-improving AI agents"
     },
     {
       "title": "Toward AI leadership: A systematic literature review of leadership behaviors enacted by conversational agents in psychosocial interventions",
@@ -46,16 +56,6 @@
       "doi": "https://doi.org/10.1016/j.leaqua.2026.102015",
       "published": "2026-11-25",
       "summary": "Conversational agents (CAs) increasingly guide, support, and monitor people through sustained dialogue, yet AI leadership research has mostly examined reactions to AI framed as a leader, not the influence behaviors such agents enact. We therefore turn to psychosocial interventions (e.g., therapy, coaching, counseling), where CAs already exercise sustained, goal-directed influence functionally equivalent to leadership. Drawing on Yukl’s (2012) taxonomy, we systematically review 53 studies describing 45 distinct agents. CAs consistently enact task- and relations-oriented behaviors that structure, support, and develop individuals, enact most change-oriented behaviors less fully, and rarely act beyond the human–agent dyad. CA-enacted leadership reconfigures rather than replicates human leadership. It narrows where behaviors depend on multiple actors, formal authority, or authentic relational attunement; it relocates much of its influence into system design before any interaction occurs; and it extends where continuous data and reduced social judgment enable monitoring, disclosure, and experimentation that human leaders can rarely sustain. Agent design features, such as directiveness, generative architecture, human fallback, and human-like design, co-occur with distinct behavioral profiles and with the outcomes studies chose to assess. We propose a research agenda on when CA influen",
-      "relevance_score": 5,
-      "matched_query": "cross-model handoff language model agents"
-    },
-    {
-      "title": "makesense: Governed Agentic Sensemaking over Heterogeneous Data Stores for Intelligence Analysis (Extended Version)",
-      "url": "https://doi.org/10.5281/zenodo.24537543",
-      "openalex_id": "https://openalex.org/W7239818490",
-      "doi": "https://doi.org/10.5281/zenodo.24537543",
-      "published": "2026-11-25",
-      "summary": "Intelligence analysts routinely answer questions about entities whose evidence is scattered across graph databases, relational stores, and unstructured multimodal repositories. Agentic coding harnesses can traverse such stores, but analytic organizations cannot accept their output unless every query, source, and claim is defensible to oversight. We present makesense, a governed analytic layer that turns an off-the-shelf agentic harness into an auditable sensemaking interface. The design premise is that the harness is the only generative model: a deterministic server with no language model enforces a two-layer query policy, read-only execution, need-to-know connector visibility, tamper-evident audit, citation-linted reporting, and integrity-checked handoff. Pilot use runs on a public-data proxy with checkable ground truth: a week-long shared-machine access-control pilot in which a single operator exercised four Unix principals at three grant levels, and a governed multi-tenant testbed exercising redaction, denial, and silent row suppression. A deterministic red-team battery, with no language model in the loop, measured a 75% ungated execution rate (6 of 8 measurable probes); the hardening that measurement drove cut the rate to 0% (0 of 10) on probes the hardening's author wrote for one attribute, a regression check rather than evidence of robustness. On a 30-question multi-store",
       "relevance_score": 5,
       "matched_query": "cross-model handoff language model agents"
     },
@@ -118,16 +118,6 @@
       "summary": "Retail analytics has moved beyond improving point forecasts, yet evidence about the value of a forecast for pricing, replenishment, fulfillment, and managerial adoption remains dispersed. This structured review compares 36 journal studies published from 2023 through 2025, identified within a search window ending in January 2026, across four connected areas: demand forecasting (12), pricing and commercial levers (7), inventory and fulfillment (8), and decision systems (9). Each study is examined for its information setting, analytic approach, decision connection, and evidence boundary. The synthesis identifies four recurring discontinuities: sales data can conceal unmet demand; forecast scores can misrank policies; a policy that works in a model may be infeasible in a distributed retail organization; and staff may override recommendations whose value has not been made legible. A decision-centered evaluation structure links data availability, uncertainty estimation, feasible action, adoption, and realized economic outcomes. The paper develops a research agenda around observable-demand corrections, decision-calibrated uncertainty, joint pricing and fulfillment, transportable evaluations, and human-in-the-loop deployment. The review is deliberately bounded rather than a claim of exhaustive coverage or pooled effect sizes. It offers business intelligence researchers a common basis f",
       "relevance_score": 4,
       "matched_query": "automated AI research experimentation"
-    },
-    {
-      "title": "Towards Trustworthy and Governable Multi-Agent Systems: Detection and Mitigation of Prompt Injection and Tool-Call Hijacking in Enterprise DevOps Pipelines",
-      "url": "https://doi.org/10.21203/rs.3.rs-11723623/v1",
-      "openalex_id": "https://openalex.org/W7239874044",
-      "doi": "https://doi.org/10.21203/rs.3.rs-11723623/v1",
-      "published": "2026-11-25",
-      "summary": "Agentic AI systems in DevOps pipelines can issue tool calls that are individually permitted yet jointly unsafe, as in indirect prompt injection and tool-call hijacking; audit logs record the damage only after the fact. We ask what a deterministic mediator that judges each proposed call against the run's accumulated path buys over per-call authorization, and what it costs legitimate work. On a local simulated testbed with 19 DevOps scenario families (228 runs) and 3162 cases derived from InjecAgent, audit-only monitoring let all 132 attack instances execute; the mediator, with every escalation approved, let 12 through (pipeline tampering, which carries neither a sensitive nor a boundary signal), blocked 10 of 11 attack families against 8 for per-step authorization with validated approvals ($p=0.50$), and wrongly blocked 2 of 8 benign families against 3 under session-latch memory. Path memory mattered only for transformed and cross-agent exfiltration. A hash-chained trace is replayable, but a coherent forgery passes both chain and replay unless the log head is anchored externally. Agents are scripted and scenarios author-built: the results show a mechanism, not field effectiveness.",
-      "relevance_score": 4,
-      "matched_query": "cross-model handoff language model agents"
     },
     {
       "title": "Llama-Polya: Instruction Tuning for Large Language Model Based on Polya’s Problem-Solving",
@@ -270,16 +260,6 @@
       "matched_query": "cross-model handoff language model agents"
     },
     {
-      "title": "Toward Personalized Neurofeedback for Meditation",
-      "url": "https://doi.org/10.1007/s12671-026-03031-1",
-      "openalex_id": "https://openalex.org/W4389344722",
-      "doi": "https://doi.org/10.1007/s12671-026-03031-1",
-      "published": "2026-11-25",
-      "summary": "Objectives Neurotechnological tools that provide real-time feedback during meditation have generated growing interest as potential aids for accelerating contemplative learning and enhancing mental health outcomes. Currently, the empirical evidence for neurofeedback-assisted meditation is preliminary, and many systems rely on generalized neural targets that may overlook substantial individual variability. Methods This conceptual paper draws on a narrative (non-systematic) synthesis of the literature to propose a testable research agenda, address limitations of neurofeedback, and outline necessary community partnerships. Results Current evidence is limited in demonstrating durable or transferable improvements in meditative skill. In the realm of meditation, individual variability can markedly affect how users respond to protocols and acquire meditative skills. Personalized interventions, tailored to these individual differences, are thus identified as a potential research direction within the field. Conclusions We propose an embrace of individual differences to guide the development of personalized neurotechnological interventions (a “qualia compass” calibrated to each practitioner), on the premise that personalization may increase efficacy and reduce adverse effects. As interest in the cognitive and health benefits of meditation continues to grow, the philosophical and cultural ",
-      "relevance_score": 2,
-      "matched_query": "metacognition self-improving AI agents"
-    },
-    {
       "title": "The Tax Collectors of the Second Temple: Causes of Social Rejection and their Theological Reinterpretation in the following of Jesus",
       "url": "https://doi.org/10.46222/pharosjot.107.405",
       "openalex_id": "https://openalex.org/W7169513438",
@@ -308,6 +288,26 @@
       "summary": "While clinical guidelines strongly endorse psychologically informed physiotherapy (PIP) and cognitive-behavioral techniques (CBT) for musculoskeletal pain, routine clinical uptake remains inconsistent.Most implementation research describes clinician attitudes without modeling the cognitive and systemic mechanisms that impede translation into daily practice.This study investigates the \"intention-behavior gap\" in psychologically informed musculoskeletal rehabilitation among Iranian physiotherapists using the COM-B (Capability, Opportunity, and Motivation -Behavior) framework and introduces the Triadic Care Model as an operational solution.A convergent mixed-methods design (QUAN + QUAL) compliant with the Good Reporting of A Mixed Methods Study (GRAMMS) guidelines was conducted between 2023 and 2024.The quantitative phase surveyed 450 licensed physiotherapists using the validated Psychological Practice and Skills Tool (PPST).Structural Equation Modeling (SEM) tested hypothesized paths linking psychological self-efficacy, systemic barriers, postgraduate education, and clinical utilization.The qualitative phase comprised semi-structured, in-depth interviews with 20 practicing physiotherapists analyzed via reflexive thematic analysis.Quantitative and qualitative findings were integrated via a joint display matrix.A pronounced intention-behavior gap was identified: 78.2% (n=352) of cl",
       "relevance_score": 1,
       "matched_query": "automated AI research experimentation"
+    },
+    {
+      "title": "Adapting HR Strategies to Enhance CRM in Aviation: A Qualitative Study on Emerging Technologies Grounded in Socio-Technical Systems Theory",
+      "url": "https://doi.org/10.20491/isarder.2025.2124",
+      "openalex_id": "https://openalex.org/W4417525175",
+      "doi": "https://doi.org/10.20491/isarder.2025.2124",
+      "published": "2026-12-19",
+      "summary": "Purpose –This study aims to explore how Human Resource Management (HRM) strategies can enhance Crew Resource Management (CRM) effectiveness in the context of emerging technologies such as artificial intelligence (AI) and augmented reality (AR) in aviation. While these technologies improve operational efficiency, they also highlight the critical need for maintaining human oversight and decision-making processes.Design/methodology/approach –The research employs a qualitative methodology grounded in Socio-Technical Systems (STS) theory. Data were collected through interviews with 15 aviation experts, including pilots, HR professionals, and operations managers, and analyzed using thematic analysis with NVivo software.Results–The findings indicate that while automation significantly enhances operational efficiency, maintaining manual skills and human decision-making remains essential for sustainable operations. The study also identifies the need for HR strategies to adapt to technological change through enhanced training programs, continuous learning initiatives, and revised recruitment practices.Discussion –This study contributes to STS theory by emphasizing the importance of balancing technological and social systems to ensure effective CRM in aviation. Practical recommendations for HR strategies are provided, including improving training programs, fosteringa culture of continuous",
+      "relevance_score": 1,
+      "matched_query": "cross-model handoff language model agents"
+    },
+    {
+      "title": "Pieces Solving a Puzzle: Emerging Roles and Cross-Field Analogies During a Distributed Epistemic Game",
+      "url": "https://digitalcommons.usu.edu/etd2023/928",
+      "openalex_id": "https://openalex.org/W7204216792",
+      "doi": null,
+      "published": "2026-12-01",
+      "summary": "In an effort to describe why some problems can’t be solved, a character compared them to a cubic meter of platinum - a block so dense that all the people who could squeeze around it still couldn’t lift it off the ground. In the same way, these problems simply can’t have enough people gathered around and communicating about them - and so they remain unsolved. This research looks at the first Polymath Project (2009) as an example of a distributed epistemic game to examine how groups engage with complex problems. and without a locally omniscient individual. In this setting of epistemic uncertainty, interactions between individuals reveal patterns of participation, and an analogy opens a new solution pathway by introducing a problem-solving approach from another field. These insights answer the initial question of the Polymath Project - ‘Is massively collaborative mathematics possible?’ - and offer hope for lifting the cubic meter of other unsolvable problems.",
+      "relevance_score": 1,
+      "matched_query": "cross-model handoff language model agents"
     }
   ],
   "paper_count": 30,
